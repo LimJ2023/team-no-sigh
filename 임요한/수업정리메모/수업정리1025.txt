@@ -1,0 +1,49 @@
+
+**** 초기 세팅법 *******
+
+JAVA JDK 
+https://www.oracle.com/kr/java/technologies/downloads/archive/
+Java SE Development Kit 11.0.17설치
+
+환경 변수
+시스템 변수 
+JAVA_HOME(C:\Program Files\Java\jdk-11.0.17 변수값설정)
+PATH를 편집->새로만들기->%JAVA_HOME%\bin
+CLASSPATH(%JAVA_HOME%\lib 적용)
+
+설정확인 
+cmd(관리자)-> java -version, javac 확인
+
+이클립스
+설치후 c:JAVA폴더 안에 정리
+이클립스 실행후 JAVA_23XXXX 워크스페이스
+Preferences-> 인코딩 utf-8로 설정, general-> web browser-> chrome 설정
+
+
+톰캣
+https://tomcat.apache.org/download-90.cgi
+9버전 인스톨러 다운로드
+포트번호 9XXX, 9XXX 설정
+
+이클립스 프로젝트 생성
+Dynamic Web project -> 아파치 9버전 -> C:\Program Files\Apache Software Foundation\Tomcat 9.0 폴더선택
+
+
+help -> new software설치
+http://download.emmet.io/eclipse/updates/
+
+
+
+
+시맨틱 태그 : 의미론적인 의미를 부여한 태그 html5
+<div> : 
+<header>
+<footer> 등...
+
+ctrl + alt + 클릭 : 이클립스에서 동시 커서
+
+_blank : 연결문서에서 새 창에서 엶
+_self : 연결문서를 클릭한 창에서 엶
+_parent : 부모창에서 엶 없으면 self처럼
+_top : 가장 최상위 창에서 엶
+

@@ -1,0 +1,40 @@
+ swith () {
+	case :
+	break;
+}
+
+for(초기화;조건식;증감식) {}
+
+while(조건식) {}
+
+do { } 
+ while(조건식)
+
+break; <- 반복문 제어기능 
+continue <- 현재 순회를 중단(다음순회 시작)
+
+if else에서 한줄 코드는 중괄호 생략 가능
+
+중괄호 바로옆을 더블클릭하면 메소드 전체 범위 가능;
+
+
+
+문자열에서 정수로 변환
+dat = Integer.parseInt(JOptionPane.showInputDialog("값을 입력하세요."));
+JOptionPane.showInputDialog <- 문자열을 정수로 변환하여 dat 변수에 대입
+ Integer.parseInt <- 문자열에서 정수로 변환
+
+
+문자열을 비교할땐 equals()함수 사용
+
+
+**** main(혹은 메서드)이 닫히는 곳에 표시해주기 ****
+
+
+char 타입을 받는 스캐너
+ char gender = scanner.nextLine().charAt(0);
+ scanner.nextLine()으로 String 타입도 받기 가능
+
+
+
+

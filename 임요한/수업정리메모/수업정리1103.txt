@@ -1,0 +1,14 @@
+ deg 사용시 - 는 반시계 방향으로 회전
+
+transform -> translate : x y축으로 이동 rotate(deg) 회전 scale()배율축소확대
+
+transition-timing-function : 
+
+linear : 동일한 속도
+ease : 로우 하이 로우
+ease-in : 로우 하이
+ease-out : 하이 로우
+ease-in-out : 하이 로우 하이
+
+animation: 사용시 @keyframes 속성명{}도 사용
+

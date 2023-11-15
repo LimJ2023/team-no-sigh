@@ -1,0 +1,42 @@
+
+
+cnt <- 카운트 하는 용도
+
+
+*** 변수명을 항상 생각하기 (어떤 의도인지,의미인지) ***
+
+	//변수명을 명확하게
+	input; <- 보다  inputString; <- 더 명확하게
+
+
+
+계산 단계에서 실수형으로 출력하도록 형변환하기
+totalAvg = (double) totalScore / studentNumber;
+
+
+난수 만드는 법
+(int)(Math.random()*6)+1;  //1에서 6까지 난수
+
+'A' = 65
+
+do{
+} while (guessNumber != targetNumber); 
+// 두번의 참/거짓 판별. 
+//1.while의 동작 o x 판별
+//2.guess와 target의 동일함 판별
+// 논리연산자 != 는 두개를 비교해 다르면 true, 같으면 false를 반환( == 는 그 반대)
+// 목표숫자와 입력숫자가 다르면 true -> while(o/x)에도 true 작동 -> do를 다시 실행
+// 목표숫자와 입력숫자가 같다면 false -> while(o/x)에도 false작동 do while()을 탈출
+
+// nextInt()와nextLine()을 동시에 사용시 
+// nextLine()이 스킵될 때 scan.nextLine();을 한번 더 사용
+// scan.nextLine() 대신 scan.next();를 사용해도 해결 가능.
+//cnt = Integer.parseInt(scan.nextLine());를 사용해도 해결 가능.
+
+
+Alt + Shift + R
+엔터를 누르면 다음과 같이 일괄적으로 변경된다. 
+어떤 변수명을 한번에 바꿀때 사용하면 매우 편리
+
+
+

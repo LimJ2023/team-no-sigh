@@ -1,0 +1,27 @@
+    
+
+
+다차원 배열
+
+int[][] arr 의 arr.length(길이)는 6이 아닌 2.
+행 안의 열 길이를 구할땐 arr[n].length ->  3
+
+println)arr.length);
+println)arr[0].length);
+
+
+*******세미콜론 오류가 날땐 다음줄에서 빨간줄이 뜸***********
+
+평균(반올림)
+Math.round(average)
+
+//printf 명령문 사용 %f -> 실수형
+// %.3f < -소수점 셋째자리까지 출력
+
+ 
+
+
+if(selectNo == 4){
+int max =0;
+int sum =0;
+double avg=0.0;
