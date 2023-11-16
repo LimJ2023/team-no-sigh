@@ -1,0 +1,119 @@
+//<ITEM>>
+package prac1116;
+
+public class Item {
+
+	//멤버변수는 클래스 외부에서 직접 변경할 수 없도록//
+	private String itemName;
+	private int price;
+
+	
+	//생성자 오버로딩 : 모든 멤버 변수 다 받도록 ( + 원하는 거 추가해도 됨)
+	
+	public Item(String itemName, int price) {
+		this.itemName = itemName;
+		this.price = price;
+	}
+
+
+	public String getItemName() {
+		return itemName;
+	}
+
+
+	public int getPrice() {
+		return price;
+	}
+	
+	
+	
+}
+
+//<<ORDER>>
+package prac1116;
+
+public class Order {
+
+	//멤버변수는 클래스 외부에서 직접 변경할 수 없도록//
+	private int orderNumber;
+	private Item[] items;
+	private int orderDate;
+
+	
+	//생성자 오버로딩 : 모든 멤버변수 다 받도록( + 원하는 거 추가해도 됨)
+	
+	public Order(int orderNumber, Item[] items, int orderDate) {
+		this.orderNumber = orderNumber;
+		this.items = items;
+		this.orderDate = orderDate;
+		init();
+	}
+
+	public void init() {
+		items[0] = new Item("음료수", 1000);
+		items[1] = new Item("레몬", 2000);
+		items[2] = new Item("코코넛", 3000);
+	}
+	
+
+	public int getOrderNumber() {
+		return orderNumber;
+	}
+
+
+	public Item[] getItems() {
+		return items;
+	}
+
+
+	public int getOrderDate() {
+		return orderDate;
+	}
+
+	
+	public void receipt() {
+		System.out.println("Order Number : " + getOrderNumber());
+		System.out.println("Order Date : " + getOrderDate());
+		System.out.println("====Items====");
+		for (int i = 0; i < items.length; i++) {
+			System.out.println(items[i].getItemName() + " " + items[i].getPrice() + "원");
+		}
+	}
+	
+}
+
+
+//<<ITEMORDERMAIN
+package prac1116;
+
+public class ItemOrderMain {
+	/*
+	 * Order Number : 12345
+	 * Order date : 231116
+	 * ====Items====
+	 * 음료수 1000원
+	 * 레몬 2000원
+	 * 코코넛 3000원
+	 */
+	public static void main(String[] args) {
+		
+		Order order1 = new Order(12345, new Item[3], 231116);
+		
+		
+		
+		
+		order1.receipt();
+		
+	}
+	
+}
+
+/* 오답1)
+Order 클래스에서 public void init 메서드 ->
+	여기서 Item[] items = new Item[3] 를 적었음
+	아마 오류 이유는:
+		ItemOrderMain 클래스에서 Order1 객체 생성 시
+			new Order(orderNumber, new Item[3], orderDate)를 적는데
+			여기에 new Item[3]를 선언하면서, Order 클래스에도 이게 명시되어있으면 겹치니까
+	해결은: Order 클래스의 Item[] items = new Item[3] 를 삭제
+*/
