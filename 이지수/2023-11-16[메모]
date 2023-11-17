@@ -1,0 +1,122 @@
+07 - Korean/KoreanMain
+멤버변수를 선언하면서 같이 값을 할당(초기화) 하면, 자동으로 공통적으로 할당이 됨
+	ex)String nation = "대한민국"; 
+		으로 멤버변수에서 지정해주면, 이후 별도로 값을 넣어주지 않는 경우 기본적으로 대한민국임
+		(Korean k2 = new Korean("국국한", "010-1234-5678")
+		(Korean k3 = new Korean("한국한", "010-9876-5432");
+		(k3.nation = "미국";)
+			으로 했을 경우, k2의 nation은 대한민국, k3의 nation은 미국
+(반복) 매개변수가 없고, 클래스와 같은 이름인 경우 = 기본 생성자
+		매개변수가 있으면 기본 생성자 아님.
+(반복) 객체를 만들 때 = 생성자를 부름 
+			생성자 오버로드 시 = 어떤 생성자를 호출할지 직접 선택할 수 있음
+						=>매개변수를 통해(시그니처)
+		객체는 다른 특성을 주어서 다른 객체를 만들 수 있음
+		ex) Korean k1 = new Korean("한한국", "010-1234-5678");
+		     Korean k2 = new Korean("국국한", "010-9876-5432");
+			k1과 k2는 둘 다 같은 클래스(Korean)을 사용해서 만들었지만, 
+				특성(이름/전화번호)가 다름 = 서로 다른 객체임
+===================
+07 - Person/PersonMain
+멤버변수 : float height;
+객체 생성: Person person3 = new Person("이사람", 165, 60)
+	↑float지만 f 붙이지 않아도 작동 됨(b/c int는 float보다 작아서 자동형변환이 되기 때문)
+===================
+07 - Overload/OverloadMain
+생성자 = 생성자 메서드
+	=대괄호 안에(생성자 메서드 안에) 설정된 내용이 수행됨
+		=생성자 메서드 안에 내용을 지정할 경우, 객체 생성시 객체를 만들면서
+			동시에 대괄호 안 메서드 내용이 실행됨
+	ex) public Overload(){
+		name = "익명";
+		age = 40;
+		height = 180;
+	}
+		을 했을 경우, Overload obj1 = new Overload();
+			해서 객체 생성시, obj1에는 "익명", 40, 180 의 값이 들어감
+생성자 오버로드 된 상태에서 객체를 생성할 시, 매개변수 타입의 순서를 바꿔 입력하면 오류 발생함
+	(시그니처가 맞지 않음)
+	ex) public Overload(int age, float height, String name){
+		인 생성자에,
+		Overload obj3 = new Overload("이름", 22, 178);
+			을 생성하려고 하면 오류 발생함
+========================
+07 - Student/StudentMain
+(반복) private 사용시, Getter/Setter를 사용
+========================
+07 - Encapsulation/EncapsulationMain
+(반복) 객체를 만들 때, 디폴트 생성자여도 (생성자)메소드 안에 내용이 있다면 호출과 함께 내용이 실행
+	ex) public Encapsulation(){
+		side = 0;
+		height = 0;
+	}
+		Encapsulation obj = new Encapsulation();
+			실행시, obj 에는 side =0, height = 0 가 들어감
+
+public class Encapsulation(){
+	int side;
+	int height;
+}	↑이것은 멤버변수
+public static void main(String[] args) {
+	int side;
+	int height;
+}	↑이것은 멤버변수아님. "그냥 그릇"
+
+JOptionPane으로 결과값 보여주고 싶은 경우:
+	JOptionPane.showMessageDialog(Component parentComponent , Object message);
+		↑여기서 Component parentComponent 는null, (아직 뭔지 모름...)
+			Object message에 보여주고 싶은 값 입력(ex. area)
+		JOptionPane.showInputDialog("말"); ->이거는 입력받는 칸이 있는 창
+=====================
+07 - CallAnotherConst
+<<생성자 체인/체이닝>>
+디폴트 생성자{
+	this(오버로드 생성자의 매개변수1, 매개변수2, ...)
+}
+오버로드 생성자(매개변수 1, 매개변수 2){
+	this.멤버변수1 = 매개변수1
+	this.멤버변수2 = 매개변수2
+}
+  =>파라미터(=매개변수)가 없이 호출될 때 내부에서 this(오버로드 생성자의 매개변수1, 매개변수2); 를 호출하며, 이는 오버로드 생성자를 호출
+ex.
+	public Person2() {
+		this("이지수", 29)
+	}
+	public Person2(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+  =>이것은 this의 사용 용도 중 2번째(according to 교재), "생성자에서 다른 생성자를 호출하는" 용도로 this가 사용된 것
+
+객체 자기 자신의 주소를 반환하기:
+	ex. Person2 returnSelf() {
+		return this;
+	}
+		여기서 returnSelf는 그냥 지정해준 명칭. hello등 아무거나 적어도 됨
+			중요한 건 "return this".
+생성자 체이닝을 했을 경우, 디폴트 생성자를 호출해도 내부에서는 연결된 (두번째)생성자를 호출
+	ex. Person2 p1 = new Person2();
+		를 하면, 매개변수가 없기 때문에 디폴트 생성자를 호출한 거지만,
+		디폴트 생성자는 this를 통해 생성자 체이닝이 되어있기때문에,
+		!!내부에서는!! 두 번째 생성자가 호출된 것
+같은 Class로 객체를 생성했어도, 생성되는 각 객체는 서로 다른 곳으로 할당됨 (= 주소가 다름)
+->생성할 때마다 다른 주소 할당됨
+	같은 주소 할당하려면:
+	Person2 p3 = p1.returnSelf(); <- p3에 p1의 주소 대입 -> 확인 시 p3주소와 p1주소 동일하게 나옴
+======================
+07 - ThisExam
+System.out.println(this); =>나 자신(의 주소)을 출력하는 메서드
+생성자한테 전달한 값이 잘 전달 되었는지 Getter/Setter로 확인할 수 있음
+
+디폴트 생성자 호출 시 멤버변수들은 다 텅 비어있는 상태 -> 세터 메서드로 값을 넣어줄 수 있음
+======================
+07 - Robot/RobotMain
+초기화를 해주지 않은 멤버변수들은 디폴트 값에서 시작함
+	(ex. int면 0)
+String을 JOption으로 받을 경우에는, Integer.parseInt 필요 없음
+	(JOptionPane.showInputDialog는 문자열로 값을 받는 것.
+		Integer.parseInt 로 받은 문자열을 int 해주는거니까
+			String은 바꿀 필요 없으니 그대로 사용.)
+======================
+07 - Item/Order/ItemOrderMain
+(반복)private는 접근이 제한되어있어 접근할 수 없으니 게터로 접근해줌.
