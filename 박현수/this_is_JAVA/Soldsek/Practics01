@@ -1,0 +1,24 @@
+public class A_Chapter05_Practics {
+
+	public void sum(int num1 , double num2) {  //숫자에 해당하는 sum 메소드
+		double total = num1 + num2;
+		System.out.println(total);
+	}
+	
+	public static void sum(String ch1, String ch2) {  //문자열에 해당하는 sum 메소드
+		System.out.println(ch1 + ch2);
+	}
+	
+	public static void main(String[] args) {
+		
+		int a;            //정수, 실수 변수 선언
+		float b;
+		a=Integer.parseInt(JOptionPane.showInputDialog("값1"));    //정수 입력
+		b=Float.parseFloat(JOptionPane.showInputDialog("값2"));    //실수 입력
+		
+		A_Chapter05_Practics Obj = new A_Chapter05_Practics();    //생성자
+		Obj.sum(a, b);                                            //a, b값으로 sum 메소드 호출
+		sum("고정", "메소드");                                     //"고정". "메소드" 값으로 sum 메소드 호출
+		
+	}
+}
