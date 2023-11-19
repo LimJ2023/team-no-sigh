@@ -1,0 +1,26 @@
+public class KoreanExample {
+
+	public static void main(String[] args) {
+		Korean k1 = new Korean("박자바", "011225-1234567");  //Korean 클래스로 객체 생성 및 정보 전달
+		System.out.println("k1.name : " + k1.name);
+		System.out.println("k1.ssn : " + k1.ssn);
+		
+		Korean k2 = new Korean("김자바", "930525-0654321");  //Korean 클래스로 객체 생성 정보 전달
+		System.out.println("k2.name : " + k2.name);
+		System.out.println("k2.ssn : " + k2.ssn);
+		
+	}
+
+}
+//생성자(constructor)
+public class Korean {
+  //필드
+	String nation = "대한민국";
+	String name;
+	String ssn;
+	
+	public Korean(String n, String s) {  //Example의 객체를 생성하면서 받은 정보를 필드에 저장
+		name = n;
+		ssn = s;
+	}
+}
