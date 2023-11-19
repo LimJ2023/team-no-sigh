@@ -1,0 +1,25 @@
+public class Car {
+	//필드
+  String color;
+	int cc;
+
+  
+	Car(String color, int cc){
+		this.color = color;
+		this.cc = cc;        //명시적으로 받은 데이터를 Car생성자를 통해 필드에 저장.
+	}
+}
+
+public class CarMain {
+
+	public static void main(String[] args) {
+		Car myCar = new Car("검정", 3000);	//명시적
+		
+		Car myCar = new Car();	//명시적으로 호출할 경우 기본 생성자를 호출할 수 없다.
+		System.out.println("자동차 색상 : " + myCar.color);
+		System.out.println("숫자 : " + myCar.cc);
+	}
+
+}
+//일부러 오류를 발생 시킴
+//Car myCar = new Car();을 주석처리 시 정상 작동.
