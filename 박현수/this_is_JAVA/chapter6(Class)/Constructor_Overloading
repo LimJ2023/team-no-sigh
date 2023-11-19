@@ -1,0 +1,62 @@
+public class Car {
+	//필드 = 멤버변수
+	String company = "현대자동차";
+	String model;
+	String color;
+	int maxSpeed;
+	
+	//생성자
+	Car(){	//생성자(1)    기본생성자
+		
+	}
+
+	Car(String model) {	//생성자(2)    생성자 오버로딩
+		this.model = model;
+	}
+
+	Car(String model, String color) {	//생성자(3)  생성자 오버로딩
+		this.model = model;
+		this.color = color;
+	}
+
+	Car(String model, String color, int maxSpeed) {	//생성자(4)    생성자 오버로딩
+		this.model = model;
+		this.color = color;
+		this.maxSpeed = maxSpeed;
+	}
+	
+}
+
+=====================================================================
+
+public class CarMain {
+
+	public static void main(String[] args) {	//생성자(1) 선택
+		Car car1 = new Car();
+		System.out.println("car1.conpany : " + car1.company);
+		System.out.println();
+		
+		Car car2 = new Car("자가용");		//생성자(2) 선택
+		System.out.println("car2.conpany : " + car2.company);
+		System.out.println("car2.model : " + car2.model);
+		System.out.println();
+		
+		Car car3 = new Car("자가용", "빨강");		//생성자(3) 선택
+		System.out.println("car3.conpany : " + car3.company);
+		System.out.println("car3.model : " + car3.model);
+		System.out.println("car3.color : " + car3.color);
+		System.out.println();
+		
+		Car car4 = new Car("자가용", "검정", 300);		//생성자(4) 선택
+		System.out.println("car4.conpany : " + car4.company);
+		System.out.println("car4.model : " + car4.model);
+		System.out.println("car4.color : " + car4.color);
+		System.out.println("car4.maxSpeed : " + car4.maxSpeed);
+	}
+
+}
+
+//Overloading
+//매개 변수를 달리하는 생성자를 여러 개 선언하는 것.
+//Car 클래스안의 생성자를 같은 이름에 다른 매개 변수로 여러 개를 생성가능.
+//"매개 변수"의 "타입"과 "개수", "선언된 순서"가 똑같을 경우, 매개 변수 이름만 바꾼 것은 생성자 오버로딩이라 볼 수 없음.
