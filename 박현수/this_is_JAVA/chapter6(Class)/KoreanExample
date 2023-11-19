@@ -2,8 +2,9 @@ public class KoreanExample {
 
 	public static void main(String[] args) {
 		Korean k1 = new Korean("박자바", "011225-1234567");  //Korean 클래스로 객체 생성 및 정보 전달
-		System.out.println("k1.name : " + k1.name);
-		System.out.println("k1.ssn : " + k1.ssn);
+		System.out.println("k1.name : " + k1.name);	//Korean 클래스에 전달해서 필드에 저장한 name 값을 출력
+		System.out.println("k1.ssn : " + k1.ssn);	//Korean 클래스에 전달해서 필드에 저장한 ssn 값을 출력
+		System.out.println("k1.nation : " + k1.nation); //Korean 클래스에 원래 저장되어 있던 nation 값을 출력
 		
 		Korean k2 = new Korean("김자바", "930525-0654321");  //Korean 클래스로 객체 생성 정보 전달
 		System.out.println("k2.name : " + k2.name);
