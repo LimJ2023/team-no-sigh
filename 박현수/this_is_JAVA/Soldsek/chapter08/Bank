@@ -1,0 +1,37 @@
+public class Bank {
+	
+	//필드
+	private String name;
+	private String tel;
+	static float interest;	//Bank 클래스의 모든 객체가 공유하는 변수(static)
+	
+	//생성자
+	public Bank(String name, String tel) {
+		this.name = name;
+		this.tel = tel;
+	}
+	
+	//메소드
+	public void getbank() {
+		System.out.println("지점 : " + name + "\n" + "전화번호 : " + tel + "\n" + "은행이자 : " + interest);
+	}
+	
+}
+
+public class BankMain {
+
+	public static void main(String[] args) {
+		
+  Bank bk1 = new Bank("강남점", "02-123-4567");  //클래스 객체 생성
+  Bank.interest = 0.3f;    //Bank클래스 자체의 interest 값 변경.
+
+  bk1.getbank();          //Bank 객체의 메소드 출력
+
+  Bank bk2 = new Bank("일산점", "031-123-4567")  //클래스 객체 생성
+  bk2.getbank();          //Bank 객체의 메소드 출력
+  
+	}
+
+}
+
+//static을 사용하면 다른 값을 사용하지 않는 한 모든 객체가 공통적으로 사용한다.
