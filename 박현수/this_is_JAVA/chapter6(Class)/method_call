@@ -1,0 +1,35 @@
+public class Calculator {
+	
+	//메소드
+	int plus(int x, int y) {
+		int result = x + y;  //4.avg -> puls로 넘어온 7, 10을 더해서 17이 되고 이를 리턴
+		return result;
+	}
+	
+	double avg(int x, int y) {
+		double sum = plus(x, y);  //3.plus 메소드에서 더하는 계산을 함.(값은 execute의 7과 10)
+		double result = sum / 2;  //5.puls에서 리턴된 17을 2로 나눔으로서 8.5가 되며 이를 리턴
+		return result;
+	}
+	
+	void execute() {  //
+		double result = avg(7, 10);    //2.avg 메소드에서 평균 계산함
+		println("실행결과: " + result); //6.execute로 돌아와서 println 메소드 사용
+	}
+	
+	void println(String message) {
+		System.out.println(message);  //7.println 메소드에서 "실행결과: " + result 라는 문자열 값을 문자열 String message로 받은 후 이를 출력
+	}
+}
+============================================================
+public class CalculatorExample {
+
+	public static void main(String[] args) {
+		
+		Calculator myCalc = new Calculator();  //Calculator 클래스 객체 생성
+		myCalc.execute();  //1.Calculator의 execute메소드 호출
+				
+
+	}
+
+}
