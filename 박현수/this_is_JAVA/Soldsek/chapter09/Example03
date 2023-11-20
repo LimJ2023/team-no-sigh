@@ -15,8 +15,8 @@
 public class Example03 {    실행 클래스
 
 	public static void main(String[] args) {
-		Stu stu1 = new Stu("홍길동", 12, 12345);
-		Teacher tea1 = new Teacher("김선생", 50, "수학");
+		Stu stu1 = new Stu("홍길동", 12, 12345);		//Pe 하위 클래스	stu로 데이터 정의
+		Teacher tea1 = new Teacher("김선생", 50, "수학");	//Pe 하위 클래스	Teacher로 데이터 정의
 		
 		stu1.showInfo();
 		tea1.showInfo();
@@ -27,49 +27,49 @@ public class Pe {    //상위클래스
 	String name;
 	int age;
 	
-	public Pe(String name, int age) {
+	public Pe(String name, int age) {	//데이터를 받기 위한 생성자
 		this.name = name;
 		this.age = age;
 	}
 	
-	public void showInfo() {
+	public void showInfo() {		//받은 데이터를 출력하기 위한 메소드
 		System.out.println(name);
 		System.out.println(age);
 	}
 	
 }
 ===========================================================
-public class Stu extends Pe{  //하위클래스
+public class Stu extends Pe{  //하위클래스	Pe 클래스의 데이터를 상속받아 사용함.
 	
 	int stuNum;
 	public Stu(String name, int age, int stuNum) {
-		super(name, age);
+		super(name, age);		//super로 Pe 클래스의 name, age값 상속
 		this.stuNum = stuNum;
 	}
 	@Override
-	public void showInfo() {
-		super.showInfo();
+	public void showInfo() {		
+		super.showInfo();		//super로 Pe 클래스의 showInfo 메소드 사용
 		System.out.println("학번: " + stuNum);
 	}
 	
 }
 ===========================================================
-  public class Teacher extends Pe{  하위클래스
+  public class Teacher extends Pe{  하위클래스	Pe 클래스의 데이터를 상속받아 사용함.
 
-	String subject;
+	String subject;				
 	public Teacher(String name, int age, String subject) {
-		super(name, age);
+		super(name, age);		//super로 Pe 클래스의 name, age값 상속
 		this.subject = subject;
 	}
 	@Override
 	public void showInfo() {
-		super.showInfo();
+		super.showInfo();		//super로 Pe 클래스의 showInfo 메소드 사용
 		System.out.println("담당과목 : " + subject);
 	}
 	
 }
 
-
+//일일이 치기 전에 Ctrl + space를 해보는 걸 숙지했다.
 
 
 
