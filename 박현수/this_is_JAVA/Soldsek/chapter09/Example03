@@ -1,0 +1,80 @@
+/*부모 클래스 Pe(Person) 과 자식클래스 Stu(Student), Teacher를 생성하세요.
+ * Pe 클래스에는 "이름"과 "나이"를 저장하는 멤버변수와 출력하는 메서드가 있습니다.
+ * Stu 클래스와 Teacher 클래스에는 각각 "학번"과 "과목"을 추가로 저장하고 출력하는 메서드를 추가하세요.
+ * 
+ * 구현화면
+ * 이름: 홍길동
+ * 나이:12
+ * 학번: 12345
+ * 
+ * 이름: 김선생
+ * 나이: 50
+ * 담당과목 : 수학
+ * */
+
+public class Example03 {    실행 클래스
+
+	public static void main(String[] args) {
+		Stu stu1 = new Stu("홍길동", 12, 12345);
+		Teacher tea1 = new Teacher("김선생", 50, "수학");
+		
+		stu1.showInfo();
+		tea1.showInfo();
+	}
+}
+==========================================================
+public class Pe {    //상위클래스
+	String name;
+	int age;
+	
+	public Pe(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+	
+	public void showInfo() {
+		System.out.println(name);
+		System.out.println(age);
+	}
+	
+}
+===========================================================
+public class Stu extends Pe{  //하위클래스
+	
+	int stuNum;
+	public Stu(String name, int age, int stuNum) {
+		super(name, age);
+		this.stuNum = stuNum;
+	}
+	@Override
+	public void showInfo() {
+		super.showInfo();
+		System.out.println("학번: " + stuNum);
+	}
+	
+}
+===========================================================
+  public class Teacher extends Pe{  하위클래스
+
+	String subject;
+	public Teacher(String name, int age, String subject) {
+		super(name, age);
+		this.subject = subject;
+	}
+	@Override
+	public void showInfo() {
+		super.showInfo();
+		System.out.println("담당과목 : " + subject);
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
