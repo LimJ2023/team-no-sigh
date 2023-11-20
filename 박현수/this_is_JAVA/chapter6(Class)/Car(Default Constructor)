@@ -13,7 +13,7 @@ public class Car {
 public class CarMain {
 
 	public static void main(String[] args) {
-		Car myCar = new Car("검정", 3000);	//명시적
+		Car myCar = new Car("검정", 3000);	//명시적으로 Car 클래스 객체에 "검정", 3000 값 필드로 저장
 		
 		Car myCar = new Car();	//명시적으로 호출할 경우 기본 생성자를 호출할 수 없다.
 		System.out.println("자동차 색상 : " + myCar.color);
