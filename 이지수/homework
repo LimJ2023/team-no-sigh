@@ -1,6 +1,6 @@
 package homework;
 
-public class Item {
+public class Item {//"Item 클래스는 제품명과 가격을 가지고 있습니다."
 
 	private String itemName;
 	private int price;
@@ -32,17 +32,17 @@ public class Item {
 //==========================================
 package homework;
 
-public class Store {
+public class Store {//"Store 클래스는 제품들의 배열, 오늘의매출, 총매출을 가지고 있습니다."
 
 	
 	Item[] items;
-	int todaySale;
-	double baseTotal;
-	double totalSale;
+	int todaySale; //오늘의 매출 
+	double baseTotal; //초기 매출
+	double totalSale; //매출 총액
 		
 	
 
-	public void init() { //init 을 걸어서 돌아가는가 확인을 해보는
+	public void init() { //초기화
 		items = new Item[5];
 		items[0] = new Item("신선품", 5000);
 		items[1] = new Item("고기", 8000);
@@ -52,13 +52,13 @@ public class Store {
 		baseTotal = 2000000;
 	}//init
 	
-	public void showInventory() {
+	public void showInventory() { //재고 목록 출력
 		for (int i = 0; i < items.length; i++) {
 			System.out.println( (i+1) + ". " + items[i].getItemName() + ", " + items[i].getPrice() + "원");
 		}//for
 	}//showInventory
 
-	public void showTodaySales() {
+	public void showTodaySales() { //오늘의 매출 출력
 		for (int i = 0; i < items.length; i++) {
 			todaySale += items[i].getPrice();
 		}//for
@@ -66,7 +66,7 @@ public class Store {
 		System.out.println("오늘의 매출은 " + todaySale + "원 입니다.");
 	}//showTodaySales
 	
-	public void showTotalSale() {
+	public void showTotalSale() { //총 매출액 출력
 		totalSale = baseTotal + todaySale;
 		
 		System.out.println("총 매출액은 " + totalSale + "원 입니다.");
