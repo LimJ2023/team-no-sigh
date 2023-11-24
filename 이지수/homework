@@ -1,0 +1,94 @@
+package homework;
+
+public class Item {
+
+	private String itemName;
+	private int price;
+	
+	
+	public Item(String itemName, int price) {
+		this.itemName = itemName;
+		this.price = price;
+	}
+	
+	
+	public String getItemName() {
+		return itemName;
+	}
+	public void setItemName(String itemName) {
+		this.itemName = itemName;
+	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	} 
+	
+	
+	
+	
+}//classItem
+//==========================================
+package homework;
+
+public class Store {
+
+	
+	Item[] items;
+	int todaySale;
+	double baseTotal;
+	double totalSale;
+		
+	
+
+	public void init() { //init 을 걸어서 돌아가는가 확인을 해보는
+		items = new Item[5];
+		items[0] = new Item("신선품", 5000);
+		items[1] = new Item("고기", 8000);
+		items[2] = new Item("의류", 10000);
+		items[3] = new Item("전자제품", 20000);
+		items[4] = new Item("가구", 50000);
+		baseTotal = 2000000;
+	}//init
+	
+	public void showInventory() {
+		for (int i = 0; i < items.length; i++) {
+			System.out.println( (i+1) + ". " + items[i].getItemName() + ", " + items[i].getPrice() + "원");
+		}//for
+	}//showInventory
+
+	public void showTodaySales() {
+		for (int i = 0; i < items.length; i++) {
+			todaySale += items[i].getPrice();
+		}//for
+		
+		System.out.println("오늘의 매출은 " + todaySale + "원 입니다.");
+	}//showTodaySales
+	
+	public void showTotalSale() {
+		totalSale = baseTotal + todaySale;
+		
+		System.out.println("총 매출액은 " + totalSale + "원 입니다.");
+	}//showTotalSale
+	
+}classStore
+
+//=================================
+package homework;
+
+public class StoreMain {
+
+	public static void main(String[] args) {
+
+		Store store = new Store();
+		
+		System.out.println("=========재고 목록========");
+		store.init();//초기화
+		store.showInventory();//재고 목록 출력
+		store.showTodaySales(); //오늘의 매출 출력
+		store.showTotalSale(); //총 매출액 출력 (초기 매출 + 오늘의 매출)
+
+	}//main
+	
+}//Storemain
