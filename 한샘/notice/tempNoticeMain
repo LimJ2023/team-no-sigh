@@ -1,0 +1,12 @@
+//공지 Main(임시) - 나중에 Swing 사용 시 변경할...듯
+//Notice 로 할지 newsletter로 할지도 미정(실제 입력 내용에 따라 바꿀 예정)
+
+public class NoticeMain {
+
+	public static void main(String[] args) {
+		
+		NoticeManager nMgr = new NoticeManager();
+		nMgr.noticeManage();
+	}
+	
+}
