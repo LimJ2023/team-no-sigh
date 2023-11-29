@@ -4,9 +4,9 @@
 
 public class Info {
 
-	private String schoolName = "한샘유치원"; //유치원 이름/고정
-	private String schoolTel;
-	private String schoolAdd;
+	public String schoolName = "한샘유치원"; //유치원 이름/고정
+	public String schoolTel;
+	public String schoolAdd;
 	
 	
 	
