@@ -1,0 +1,22 @@
+수업정리 1201
+
+프로젝트 -> 우클릭 -> 리프레시
+
+메인스트림, 보조스트림
+
+//파일리더로 한꺼번에 읽기 <- 
+
+
+//Frame을 사용할 때 종료키 만드는 법
+
+f.addWindowListener(new WindowAdapter() {
+
+			@Override
+			public void windowClosing(WindowEvent e) {
+				System.exit(0);
+			}
+		});
+
+
+
+ctrl + shift + O : 한꺼번에 임포트

@@ -1,0 +1,262 @@
+프로젝트 수정,추가사항 정리
+
+
+//////////각종 패널 사이즈 정보들
+
+//홈버튼 눌렀을 때 나오는 프레임
+Frame_Home : setBounds(((int) tk.getScreenSize().getWidth()) / 2 - 300, ((int) tk.getScreenSize().getHeight()) / 2 - 400,
+				450, 600);
+// 홈화면 기본 패널
+Home_DefaultPanel, Home_IntroPanel,Home_RegistPanel  : setBounds(0, 74, 434, 387);
+
+//물건구매 버튼을 눌렀을 때 보이는 프레임
+Frame_Buy : setBounds(((int) tk.getScreenSize().getWidth()) / 2 - 300, ((int) tk.getScreenSize().getHeight()) / 2 - 400,
+				450, 500);
+
+//Frame_Buy 안의 물건들 버튼을 누르면 나오는 물건의 상세정보 프레임
+Frame_ItemInfo : setBounds(((int) tk.getScreenSize().getWidth()) / 2 - 300, ((int) tk.getScreenSize().getHeight()) / 2 - 400,
+				251, 251);
+
+
+//장바구니에 추가한 아이템들,총 가격,결제버튼이 보이는 프레임
+Baskets : setBounds(((int) tk.getScreenSize().getWidth()) / 2 - 300, ((int) tk.getScreenSize().getHeight()) / 2 - 400,450,460);
+
+//Baskets에 들어가는 물건 각자의 패널
+PInfo : setBounds(0, 0, 350, 70);
+
+
+//마이페이지 화면에서 기본으로 보이는 패널
+Mypage_Default : setBounds(0, 0, 434, 471);
+
+//편집버튼을 눌렀을 때 보이는 프레임
+ChangeInfo : setSize(400, 300);
+		setLocation(700, 200);
+
+
+//공지사항 버튼을 눌렀을 때 기본으로 보이는 패널
+Notice_DefaultPanel : setBounds(0, 74, 434, 525);
+
+//글을 눌렀을 때 상세내용이 보이는 프레임
+Notice1 : setBounds(((int) tk.getScreenSize().getWidth()) / 2 - 300, ((int) tk.getScreenSize().getHeight()) / 2 - 400,450,600);
+
+
+
+//로그인 시도시 보이는 프레임
+Frame_Login : setBounds(((int) tk.getScreenSize().getWidth()) / 2 - 300, ((int) tk.getScreenSize().getHeight()) / 2 - 400,
+				450, 600);
+
+
+
+
+
+
+
+
+//////////로그인단 
+
+static String filename = "회원명단.txt";
+	static ArrayList<Member> memberList = new ArrayList<>();
+
+	public ArrayList<Member> readFile(String filename) {
+
+		try {
+			//DataInputStream dis = new DataInputStream(new FileInputStream(filename));
+			
+			BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(filename), StandardCharsets.UTF_8));
+
+				while(true) {
+					String text = br.readLine(); // 텍스트 파일 내 데이터를 한 줄 씪 읽음
+					
+					// 텍스트 내 데이터가 없으면 끝내도록
+					if (text == null) {
+						break;
+					}
+					
+					String[] strArray = text.split("/");	
+					memberList.add(new Member(strArray[0], strArray[1], strArray[2], strArray[3]));
+					System.out.println(strArray[0] + ", " + strArray[2]);
+				}
+
+
+이거 써볼만한듯
+
+
+회원명단.txt
+
+g/g/김지지/010-2222-5555
+soldesk/1234/김솔기/010-5555-8888
+sbc_soldesk/1234/김길동/010-2222-3333
+
+
+
+///////////////패널 온오프
+
+//로그인 버튼 
+		btnLogin.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+
+				panel.removeAll();
+				panel.add(new FrameLogin(panel));
+				panel.revalidate();
+				panel.repaint();
+
+			}
+		});
+
+이거괜찮
+
+
+////////////////로그아웃 버튼
+
+logoutBtn.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				int result = JOptionPane.showConfirmDialog(null, "로그아웃 하시겠습니까?", "Confirm", JOptionPane.YES_NO_OPTION);
+				if (result == JOptionPane.YES_OPTION) {
+					dispose();
+					new Home();
+				}
+			}
+		});
+
+
+//////////////////////버튼 이미지 조절법
+
+button.setOpaque(false);
+button.setContentAreaFilled(false);
+button.setBorderPainted(false);
+
+
+
+///////////////레이아웃 패널 사용법
+
+레이아웃 패널 추가, 패널1,2,3,4,5를 안에 추가
+
+switchPanels(Jpanel pan)
+{
+	layerdpane.removeAll();
+	layerdpane.add(pan);
+	layerdpane.repaint();
+	layerdpane.revalidate(); //재검증하다
+}
+
+버튼마다 스위치패널 추가
+
+
+
+/////////Frame 단위로 할때
+
+frame.dispose();
+Frame(머시기) window = new Frame();
+window.setvisible(true);
+
+
+
+
+
+//커넥션 개체를 생성하여 연결 구현해보기
+
+가능? 할지도
+
+
+
+///////////////자동 이미지 변경 기능
+
+
+class homeImageThread extends Thread {
+		public void run() {
+			String[] imgs = { "./img/img1.jpg", "./img/img2.png", "./img/img3.jpg", "./img/img4.jpg", "./img/img5.jpeg" };
+			while (true) {
+				for (int i = 0; i < imgs.length; i++) {
+					try {
+						Thread.sleep(1500);
+						ImageIcon icon = new ImageIcon(imgs[i]);
+						homeImg.setIcon(icon);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}
+			}
+		}
+	}
+JLabel homeImg; //필드에 선언
+
+//생성자 안에서
+homeImg = new JLabel("");
+		homeImg.setIcon(new ImageIcon("./img/img1.jpg"));
+		homeImg.setBounds(12, 61, 410, 222);
+		add(homeImg);
+		(new homeImageThread()).start();
+
+
+
+
+//////////이전, 다음버튼 만들기
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class PageNavigationExample extends JFrame {
+
+    private int currentPage = 1; // 현재 페이지 변수
+
+    public PageNavigationExample() {
+        super("Page Navigation Example");
+
+        JButton previousButton = new JButton("이전 페이지");
+        JButton nextButton = new JButton("다음 페이지");
+        JLabel pageLabel = new JLabel("현재 페이지: " + currentPage);
+
+        // 이전 페이지 버튼에 대한 이벤트 처리
+        previousButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (currentPage > 1) {
+                    currentPage--;
+                    pageLabel.setText("현재 페이지: " + currentPage);
+                    // 이전 페이지에 대한 로직 추가
+                    // ex) showPage(currentPage);
+                }
+            }
+        });
+
+        // 다음 페이지 버튼에 대한 이벤트 처리
+        nextButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // 다음 페이지로 이동 가능한 조건 추가
+                if (currentPage < maxPageNumber) { // maxPageNumber는 최대 페이지 번호로 대체해야 합니다.
+                    currentPage++;
+                    pageLabel.setText("현재 페이지: " + currentPage);
+                    // 다음 페이지에 대한 로직 추가
+                    // ex) showPage(currentPage);
+                }
+            }
+        });
+
+        // 레이아웃 설정
+        setLayout(new FlowLayout());
+        add(previousButton);
+        add(nextButton);
+        add(pageLabel);
+
+        setSize(300, 100);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new PageNavigationExample();
+            }
+        });
+    }
+}

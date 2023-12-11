@@ -1,0 +1,16 @@
+수업정리 1204
+
+
+DAO의 멤버변수(arrayList 등)는 static 사용
+
+(초기화 과정도 겸함)
+
+//화면 크기 얻기
+      Toolkit tk = Toolkit.getDefaultToolkit();
+
+      //기본 JFrame 구조
+      setTitle(" ");
+      setLayout(null);
+      setBounds(((int) tk.getScreenSize().getWidth()) / 2 - 300, 
+            ((int) tk.getScreenSize().getHeight()) / 2 - 400,
+            600, 800);

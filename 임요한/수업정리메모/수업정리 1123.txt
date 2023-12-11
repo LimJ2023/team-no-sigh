@@ -1,0 +1,87 @@
+수업정리 1123
+
+
+문자열 상수 풀은 Java의 힙 영역에 존재하는 특수한 공간으로 문자열 리터럴을 저장하는 용도
+
+문자열 상수 풀에 해당 문자열이 존재하지 않으면, 해당 문자열을 문자열 상수 풀에 저장하고 존재하면 저장하지 않습니다
+
+
+객체의 논리적 동일성
+equals() 함수로 확인
+
+
+
+hashCode() 객체의 해시코드 값 반환
+
+equals() 메서드를 재정의했다면 hashCode() 메서드도 재정의 해야함
+
+
+
+문자열과 정수 클래스는 hashCode()가 재정의 되어있음.
+
+
+Wrapper 클래스 : java.lang 패키지에 포함되어 제공
+감싸다
+
+기본타입을 객체로 감싸주는 클래스 
+정수 int  | Integer
+byte | Byte
+double | Double
+float | Float
+long | Long
+short | Short
+
+문자 char | Character
+
+
+박싱 <->언박싱
+
+박싱 : 기본타입을 래퍼클래스의 객체로 변환
+언박싱 : 래퍼클래스 객체에 저장된 값을 기본타입의 데이터로 꺼냄
+
+왜 래퍼클래스를 쓸까?
+
+int를 객체처럼 쓰기 위해서.
+
+혹은 문자열을 받아와 기본타입의 데이터로 반환시키기 위해.
+
+
+Integer 객체의 값이 byte 범위 안(-128~128) 일 경우
+같은 메모리를 참조함.
+
+처음 Integer 이 호출되는 순간, IntegerCahe 는 -128 ~ 127 사이의 값을 미리 생성해 캐시 배열에 저장해둡니다.
+그리고 이후 범위 내의 값을 호출할 시, 캐시된 값을 돌려줍니다.
+
+
+String 변수를 만들고 값을 할당하면 JVM이 String Pool에서 동일한 값의 String을 검색한다. 발견되면 Java 컴파일러는 추가 메모리를 할당하지 않고 메모리 주소값을 반환한다. 찾을 수 없으면 풀에 추가하고(interning) 해당 주소값을 반환
+
+
+#1 = Methodref          #6.#16         // java/lang/Object."<init>":()V
+   #2 = Fieldref           #17.#18        // java/lang/System.out:Ljava/io/PrintStream;
+   #3 = String             #19            // Hello from Hello.main!
+   #4 = Methodref          #20.#21        // java/io/PrintStream.println:(Ljava/lang/String;)V
+   #5 = Class              #22            // Hello
+   #6 = Class              #23            // java/lang/Object
+   #7 = Utf8               <init>
+   #8 = Utf8               ()V
+   #9 = Utf8               Code
+  #10 = Utf8               LineNumberTable
+  #11 = Utf8               main
+  #12 = Utf8               ([Ljava/lang/String;)V
+  #13 = Utf8               StackMapTable
+  #14 = Utf8               SourceFile
+  #15 = Utf8               Hello.java
+  #16 = NameAndType        #7:#8          // "<init>":()V
+  #17 = Class              #24            // java/lang/System
+  #18 = NameAndType        #25:#26        // out:Ljava/io/PrintStream;
+  #19 = Utf8               Hello from Hello.main!
+  #20 = Class              #27            // java/io/PrintStream
+  #21 = NameAndType        #28:#29        // println:(Ljava/lang/String;)V
+  #22 = Utf8               Hello
+  #23 = Utf8               java/lang/Object
+  #24 = Utf8               java/lang/System
+  #25 = Utf8               out
+  #26 = Utf8               Ljava/io/PrintStream;
+  #27 = Utf8               java/io/PrintStream
+  #28 = Utf8               println
+  #29 = Utf8               (Ljava/lang/String;)

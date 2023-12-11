@@ -1,0 +1,31 @@
+수업정리 1206
+
+행번호 토글 기능 있음(환경설정 가능)
+
+-- : 디비 주석
+
+
+--디비 주석. 18c 계정 등록 권한
+ALTER SESSION SET "_ORACLE_SCRIPT"=true;
+
+--계정생성(madang)
+CREATE USER madang IDENTIFIED BY 12345;
+
+--등록할 수 있는 권한
+grant connect, resource to madang;
+
+--추가 권한
+grant create view, create sequence, create procedure to madang;
+
+--계정 삭제
+--drop user madang;
+
+
+CREATE TABLE newbook(
+bookid number(10),
+bookname VARCHAR2(40) not null,
+publisher VARCHAR2(40) UNIQUE, --중복 데이터 입력 불가능
+--DEFAULT : 입력값 없을경우. CHECK:직접입력시 조건
+price NUMBER(10) DEFAULT 100 CHECK(price>3000)
+);
+

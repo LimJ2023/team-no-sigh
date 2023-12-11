@@ -1,0 +1,35 @@
+수업정리1127
+
+컬렉션 : 자료구조 객체들을 저장하고 관리하기 위해 사용
+
+배열의 단점 극복. 동적 할당 가능
+
+
+컬렉션 사용시 객체타입으로 사용
+
+
+ArrayList, HashMap
+
+List : ArrayList, LinkedList, Vector, 
+	/ Stack, Queue : 순서있음,중복가능.
+
+Set : HashSet(정렬x,중복x), TreeSet(오름차순 정렬 가능,중복x) //
+
+Map : Hashtable, HashMap(정렬안됨), TreeMap
+
+Key, Value(키 값) - 하나가 아닌 쌍으로 연결
+
+전화번호부, 마라톤 완주자 찾기 등 문제에도 사용
+
+
+Arrays 클래스는 항목 정렬, 검색, 비교에 관한 메서드 사용하기 위함
+
+ArrayList, Vector 차이는 동기화 여부.  (Thread)
+작업단위가 2개이상일 떄 Vector가 유효
+
+벡터는 용량을 자동으로 늘려서 저장
+
+
+
+
+

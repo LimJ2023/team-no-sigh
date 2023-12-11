@@ -1,0 +1,90 @@
+수업정리 1129
+
+해시맵 : HashMap<K, V> 형태로 시작
+
+map.get(key) <- 키 값으로 밸류를 반환
+
+HashMap : 동기화 되지 않은 컬렉션
+Hashtable : 동기화
+
+멀티 쓰레드인 경우 안전
+
+
+해시맵에 key를 덮어쓰기 가능함
+
+(중복이 안되기 때문)
+
+
+//프로그램 종료시 넣을 코드들
+
+System.out.println("프로그램을 종료합니다.");
+scanner.close();
+System.exit(0);
+
+
+람다식 : 
+
+함수 이름이 없는 익명함수
+
+
+스트림
+
+자료를 일관성있게 처리해주는 메서드 제공
+스트림은 재사용 불가
+스트림 연산은 기존 자료를 변경하지 않음
+중간연산, 최종 연산이 있음
+
+중간 연산 : 자료를 변경하거나 또 다른 자료 내부적으로 생성
+filter(), map()
+
+최종 연산 : 생성된 자료를 소모하여 연산 수행, 마지막에 1번만 호출
+
+
+
+
+
+
+
+
+
+
+
+
+우선 기본적으로 Hash종류는 순서가 없습니다. 
+따라서 배열에서 사용한 0번~배열 끝까지 확인하는 for문을 돌릴수가 없어요.
+
+첫째로 Set을 사용한건  hashMap map <-요녀석의 key,value값이
+<Student, Integer> 타입인데,
+key값. 즉 map에 하나씩 넣어준 Student 객체들을 전부 불러오기 위함입니다.
+이렇게 하지 않으면 map에 들어있는 Student들을 꺼낼수가 없어요.
+
+
+//keySet 안에  		map에 있는 key들을 전부 꺼내온다.
+Set<Student> keySet=map.keySet();
+
+//반복자를 이용하여 keySet안에 넣어놨던 정보들을 반복합니다.
+Iterator<Student> keyIterator=keySet.iterator();
+		
+
+	//이제 반복자 안에 들어간 요소들을 하나씩 검사합니다.
+	while(keyIterator.hasNext()) { 
+		Student key=keyIterator.next(); 
+		//여기가 좀 헷갈리실텐데요 map.get을 할 때
+		//Student 타입을 넣어야겠지요? 
+	//(map의 key,value가 <Student, Integer> 라서 그렇습니다.)
+	// 학생들이 저장된 map에서 Student를 넣어주면
+		Integer value=map.get(key);
+		//Integer가 나옵니다.<- 
+		System.out.println("\t"+key + " : "+value);
+		}
+
+WAS
+
+요청, 응답 객체
+
+요청하기 위해선 req / 데이터를 전달하는 쪽 : 사용자. 서블릿이 받음
+응답하기 위해선 res / 서버가 브라우저에 데이터를 알려줄때, 사용자에게 줄 때.
+
+
+
+

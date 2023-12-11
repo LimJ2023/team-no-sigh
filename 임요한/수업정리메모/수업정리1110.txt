@@ -25,3 +25,5 @@ if(selectNo == 4){
 int max =0;
 int sum =0;
 double avg=0.0;
+
+
