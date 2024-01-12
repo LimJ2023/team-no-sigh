@@ -12,4 +12,4 @@ create user streamer IDENTIFIED By 12345;
 grant connect, resource to streamer;
 grant create view, create sequence, create procedure to streamer;
 ALTER USER streamer DEFAULT TABLESPACE USERS QUOTA UNLIMITED ON USERS;
-------------
+
