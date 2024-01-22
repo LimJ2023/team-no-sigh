@@ -1,3 +1,4 @@
+
 :root{
     --color-primary: #6C9BCF;
     --color-danger: #FF0060;
@@ -125,19 +126,44 @@
 .reviews_container .streaming_list .streaming_item{
     margin: 1rem;
     padding: 0.5rem;
-    height: 13.5rem;
+    height: 14rem;
     width: 20rem;
     box-shadow: var(--box-shadow);
-    overflow: hidden;
-    cursor: pointer;
     transition: all 0.2s linear;
+    border-radius: 0.5rem;
+    background-color: var(--color-primary);
+    color: #0f0f0f;
 }
-.reviews_container .streaming_list .streaming_item img{
+.bx {
+    cursor: pointer;
+}
+.streaming_info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.streaming_cont i{
+    margin-top: 1.5rem;
+}
+.streaming_img{
+    width: 380px;
+    height: 220px;
+    overflow: hidden;
+}
+.streaming_img img{
     width: 100%;
-    object-fit: cover;
-    
+}
+.streaming_info_right{
+    display: flex;
+}
+.reviews_container .streaming_list .streaming_item:hover{
+    transform: scale(1.1);
 }
 
-.reviews_container .streaming_list .streaming_item:hover{
-    transform: scale(1.2);
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: medium;
 }
