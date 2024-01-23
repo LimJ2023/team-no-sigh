@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>게시판 실험 중</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- 사이드 바 시작 -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="images/logo.webp">
+                    <h2>메인<span class="danger">화면</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <div class="material-icons-sharp">
+                        close
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        dashboard
+                    </span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        person_outline
+                    </span>
+                    <h3>Users</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        receipt_long
+                    </span>
+                    <h3>History</h3>
+                </a>
+                <a href="#" class="active">
+                    <span class="material-icons-sharp">
+                        insights
+                    </span>
+                    <h3>Analytics</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        mail_outline
+                    </span>
+                    <h3>Tickets</h3>
+                    <span class="message-count">27</span>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <h3>Sale List</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        report_gmailerrorred
+                    </span>
+                    <h3>Reports</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        settings
+                    </span>
+                    <h3>Settings</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        add
+                    </span>
+                    <h3>new Login</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- 사이드 바 끝 -->
+
+        <!-- 게시판 화면 시작 -->
+        <main>
+            
+            <!-- 게시판 설정 시작 영역-->
+            <h1>게시판</h1>
+            <div class="board-list">
+                <div>
+                    <select class="selectList">
+                    <option>최신글순</option>
+                    <option>최신댓글순</option>
+                    <option>많은댓글순</option>
+                    <option>좋아요순</option>
+                    </select>
+                </div>
+                
+                <div class="wrapper">
+                    <div class="input-data">
+                        <input type="text" required>
+                        <div class="underline"></div>
+                        <label>검색</label>
+                    </div>
+                </div>
+
+                <!--
+                <div class="search-input">
+                    <label for="innerSearch" class="blind locales_enter_search_keyword">
+                        검색어 입력
+                    </label>
+                    <input type="text" id="innerSearch" name="innerSearch">
+                    <button type="button" id="btnInnerSearch" class="btn-search locales_enter_search_keyword">
+                        검색어 입력
+                    </button>
+                </div>-->
+                <!--<p class="count"><span class="locales_search_results">검색 결과</span> - <span class="key-color"></span></p>-->
+                <div class="noteboard">
+                    <div class="board_title">
+                        <strong>공지사항</strong>
+                        <p>공지사항을 빠르고 정확하게 안내해드립니다.</p>
+                    </div>
+                    <div class="board_list_wrap">
+                        <div class="board_list">
+                            <div class="top">
+                                <div class="num">번호</div>
+                                <div class="title">제목</div>
+                                <div class="writer">글쓴이</div>
+                                <div class="date">작성일</div>
+                                <div class="count">조회</div>  
+                            </div>
+                            <div>
+                                <div class="num">5</div>
+                                <div class="title"><a href="#">글 제목이 들어갑니다.</a></div>
+                                <div class="writer">김이름</div>
+                                <div class="date">2024.01.14</div>
+                                <div class="count">33</div>  
+                            </div>
+                            <div>
+                                <div class="num">4</div>
+                                <div class="title"><a href="#">글 제목이 들어갑니다.</a></div>
+                                <div class="writer">김이름</div>
+                                <div class="date">2024.01.14</div>
+                                <div class="count">33</div>  
+                            </div>
+                            <div>
+                                <div class="num">3</div>
+                                <div class="title"><a href="#">글 제목이 들어갑니다.</a></div>
+                                <div class="writer">김이름</div>
+                                <div class="date">2024.01.14</div>
+                                <div class="count">33</div>  
+                            </div>
+                            <div>
+                                <div class="num">2</div>
+                                <div class="title"><a href="#">글 제목이 들어갑니다.</a></div>
+                                <div class="writer">김이름</div>
+                                <div class="date">2024.01.14</div>
+                                <div class="count">33</div>  
+                            </div>
+                            <div>
+                                <div class="num">1</div>
+                                <div class="title"><a href="#">글 제목이 들어갑니다.</a></div>
+                                <div class="writer">김이름</div>
+                                <div class="date">2024.01.14</div>
+                                <div class="count">33</div>  
+                            </div>
+                        </div>
+                        <div class="board_page">
+                            <a href="#" class="bt first"><<</a>
+                            <a href="#" class="bt prev"><</a>
+                            <a href="#" class="num">1</a>
+                            <a href="#" class="num">2</a>
+                            <a href="#" class="num">3</a>
+                            <a href="#" class="num">4</a>
+                            <a href="#" class="num">5</a>
+                            <a href="#" class="bt next">></a>
+                            <a href="#" class="bt last">>></a>
+                        </div>
+                        <div class="bt_wrap">
+                            <a href="write.html" class="on">등록</a>
+                            <!--<a href="#">수정</a>-->
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            
+            <!-- 게시판 설정 끝 영역-->
+
+        </main>
+        <!-- 게시판 화면 끝-->
+    </div>
+
+    <script src="orders.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
