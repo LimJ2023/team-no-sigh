@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jumanji:welcome</title>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Fav icon -->
+    <link rel="shortcut icon" href="img/fav-icon.png" type="image/x-icon">
+    <!-- box icons -->
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+</head>
+<!-- 안에 사진부분은 모두 제대로 다시 찾아서 넣어야함 그리고 타이틀이랑 -->
+<body>
+    <!-- header -->
+    <header>
+        <div class="nav container">
+            <!-- logo -->
+            <a href="index.html" class="logo">
+                Streamer<span>Sensor</span>
+            </a>
+            <!-- search box -->
+            <div class="search-box">
+                <input type="search" name="" id="search-input" placeholder="Search streamer">
+                <i class='bx bx-search' ></i>
+            </div>
+            <!-- user 사진 제대로 찾아서 넣어야함 -->
+            <a href="#" class="user">
+                <img src="img/images.png" alt="" class="user-img">
+            </a>
+            <!-- navbar -->
+            <div class="navbar">
+                <!-- index.html과 연결 -->
+                <a href="index.html" class="nav-link nav-active">
+                    <i class='bx bx-home' ></i>
+                    <span class="nav-link-title">home</span>
+                </a>
+                <a href="#home" class="nav-link">
+                    <i class='bx bxs-hot' ></i>
+                    <span class="nav-link-title">trending</span>
+                </a>
+                <a href="#home" class="nav-link">
+                    <i class='bx bx-compass' ></i>
+                    <span class="nav-link-title">explore</span>
+                </a>
+                <a href="#home" class="nav-link">
+                    <i class='bx bx-tv' ></i>
+                    <span class="nav-link-title">video</span>
+                </a>
+                <a href="#home" class="nav-link">
+                    <i class='bx bx-heart' ></i>
+                    <span class="nav-link-title">favorite</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- play movie container -->
+    <div class="play-container container">
+        <!-- play image -->
+        <img src="img/감스트.jpg" alt="" class="play-img">
+        <!-- play text -->
+        <div class="play-text">
+            <h2>감스트</h2>
+            <!-- ratings -->
+            <div class="rating">
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star-half' ></i>
+            </div>
+            <!-- tags -->
+            <div class="tags">
+                <span>스포츠</span>
+                <span>게임</span>
+                <span>보이는라디오</span>
+            </div>
+            <!-- trailer button -->
+            <a href="#" class="watch-btn">
+                <i class='bx bx-right-arrow' ></i>
+                <span>홈페이지 바로가기</span>
+            </a>
+        </div>
+        <!-- play btn -->
+        <i class='bx bx-right-arrow play-movie' ></i>
+        <!-- video container -->
+        <div class="video-container">
+            <!-- video box 비디오 넣기-->
+            <div class="video-box">
+                <video id="myvideo" src="play-page/jumanji" controls></video>
+                <!-- close video icon -->
+                <i class='bx bx-x close-video' ></i>
+            </div>
+        </div>
+        
+    </div>
+    <!-- about -->
+    <div class="about-movie container">
+        <h2>감스트</h2>
+        <p>아프리카,유튜브</p>
+        <!-- movie cast -->
+        <h2 class="cast-heading">연관스트리머</h2>
+        <div class="cast">
+            <div class="cast-box">
+                <img src="play-page/cast1.jpg" alt="" class="cast-ing">
+                <span class="cast-title">이름이름이름</span>
+            </div>
+            <div class="cast-box">
+                <img src="play-page/cast1.jpg" alt="" class="cast-ing">
+                <span class="cast-title">이름이름이름</span>
+            </div>
+            <div class="cast-box">
+                <img src="play-page/cast1.jpg" alt="" class="cast-ing">
+                <span class="cast-title">이름이름이름</span>
+            </div>
+            <div class="cast-box">
+                <img src="play-page/cast1.jpg" alt="" class="cast-ing">
+                <span class="cast-title">이름이름이름</span>
+            </div>
+            <div class="cast-box">
+                <img src="play-page/cast1.jpg" alt="" class="cast-ing">
+                <span class="cast-title">이름이름이름</span>
+            </div>
+        </div>
+    </div>
+    <!-- download -->
+    <div class="download">
+        <h2 class="download-title">방송국 바로가기?(구상중)</h2>
+        <div class="download-links">
+            <a href="" download>아프리카</a>
+            <a href="" download>유튜브</a>
+            <a href="" download>구상중</a>
+        </div>
+    </div>
+    <!-- copyright -->
+    <div class="copyright">
+        <p>&#169; StreamSensor</p>
+    </div>
+
+   <!-- link swiper js -->
+   <script src="swiper-bundle.min.js"></script>
+    <!-- link to js -->
+    <script src="main.js"></script>
+</body>
+</html>
