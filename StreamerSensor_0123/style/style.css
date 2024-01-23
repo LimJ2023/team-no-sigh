@@ -1,0 +1,351 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+}
+/*some varibles(색깔)*/
+:root{
+    --main-color: #00ff9f;
+    --hover-color: hsl(37, 94%, 57%);
+    --body-color: #2c2c2c;
+
+    --container-color: #566078;
+    --text-color:#fcfeff;
+}
+
+/* 커스텀 스크롤 바 */
+html::-webkit-scrollbar{
+    width: 0.5rem;
+    background: transparent;
+}
+.html::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+}
+/* 선택 색깔 */
+::selection{
+    background: var(--main-color);
+    color: var(--text-color);
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+section{
+    padding: 3rem 0 2rem;
+}
+img{
+    width: 100%;
+}
+.bx{
+    cursor: pointer;
+}
+body{
+    background: var(--body-color);
+    color: var(--text-color);
+}
+.container{
+    max-width: 1060px;
+    margin: auto;
+    width: 100%;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--body-color);
+    z-index: 100;
+}
+/* nav 시작*/
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+/* logo 시작*/
+.logo{
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 auto 0 0;
+}
+.logo span{
+    color: var(--main-color);
+}
+/* search box(검색) 시작*/
+.search-box{
+    max-width: 240px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 0.7rem;
+    padding: 8px 15px;
+    background: var(--container-color);
+    border-radius: 4rem;
+    margin-right: 1rem;
+}
+.search-box .bx{
+    font-size: 1.1rem;
+}
+.search-box .bx:hover{
+    color: var(--main-color);
+}
+#search-input{
+    width: 100%;
+    border: none;
+    outline: none;
+    color: var(--text-color);
+    background: transparent;
+    font-size: 0.938rem;
+}
+
+/* user 시작*/
+.user{
+    display: flex;
+}
+.user-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+/* navbar 시작*/
+.navbar{
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 18px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.1rem;
+}
+/* 버튼의 색깔이 회색빛 */
+.nav-link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #b7b7b7;
+}
+/* nav-active를 줌으로서 첫번째 버튼이 색이 진하게 된것을 알수 있다 */
+.nav-link:hover,
+.nav-active{
+    color: var(--text-color);
+    transition: 0.3s all linear;
+    transform: scale(1.1);
+}
+.nav-link .bx{
+    font-size: 1.6rem;
+}
+.nav-link-title{
+    font-size: 0.7rem;
+}
+
+.sugg-content{
+	width: 50%;
+	height: 30vh;
+/*	background-color: red;*/
+	margin-top: 15vh;
+	margin-left: auto;
+	margin-right: auto;
+	align-items: center;
+	text-align: center;
+}
+
+
+
+
+/* 스트리머 정보  출력*/
+
+.watch-btn{
+  margin: 20px 10px;
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--text-color);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: var(--container-color);
+}
+
+.play-btn{
+  cursor: pointer;
+}
+
+
+/*====================================================*/
+
+/* Events */
+.events{
+	width: 80%;
+	height: auto;
+	margin: 15px auto;
+	margin-top: 30px;
+	
+}
+
+.title{
+	text-align: center;
+	font-size: 2vmin;
+	color: white;
+}
+
+.row{
+	display: flex;
+	align-items: center;
+	width: 80%;
+	justify-content: space-between;
+	margin: auto;
+	margin-top: 0;
+}
+
+.row .col {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: rgb(39, 159, 252);
+	/*background: transparent;*/
+/*	background: #A2CDE3;*/
+	justify-content: space-between;
+	border-radius: 10px;
+	margin-right: 20px;
+	width: 100px;
+	height: 170px;
+	text-align: center;
+	box-sizing: border-box;
+	border: 3px solid transparent;
+/*	border: 3px solid black;*/
+	cursor: pointer;
+}
+
+.col .humanIcon{
+	max-width: 70%;	
+	height: auto;
+	margin-top: 5px;
+}
+
+.youtubeLogo{
+	width: 30px;
+	height: 30px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+/*.col > figure > .humanIcon{
+	max-width: 70%;
+	height: auto;
+	margin-top: 5px;
+}*/
+
+.chzzkLogo{
+	width: 30px;
+	height: 30px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+.col .streamerName{
+	margin: 3px
+}
+
+.events .row{
+	margin-top: 5px;
+}
+
+h4{
+	font-size: 3vmin;
+	color: white;
+	margin: 20px auto;
+}
+
+p{
+	color: #7c7c7c;
+	padding: 0px 40px;
+}
+
+.colTop{
+	border: 3px solid gold;
+	width: 120px;
+}
+
+
+.col:hover {
+
+  border-radius: 3px;
+   border-style: solid;
+ border-image: linear-gradient(180deg, rgb(64, 255, 244),  rgb(64, 186, 255))1;;
+ /*  border-color: hotpink;*/
+ border-radius: 10px;
+}
+
+.events .ctn{
+	margin-top: 30px;
+}
+
+/* 이런 방송은 어떠세요 */
+.expolore{
+	width: 80%;
+	height: 80vh;
+/*	background-image: url('../img/bg2.png');
+	background-position: center;*/
+	/*background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: center;*/
+}
+
+.explore-content{
+	width: 100%;
+	padding: 50px;
+	color: white;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.explore-content h1{
+	font-size: 7vmin;
+	margin: 50px;
+}
+
+.explore-content .line{
+	margin-bottom:10px;
+}
+
+.explore-content p{
+	color: white;
+}
+
+.explore-content .ctn{
+	margin-top: 40px;
+}
+
+.suggestBox{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 10px;
+	width: 350px;
+	height: auto;
+	background-color: #4163AE;
+	align-items: center;
+	text-align: center;
+	color: white;
+}
+
+.suggest_Img{
+	width: 50%;
+	height: auto;
+}
