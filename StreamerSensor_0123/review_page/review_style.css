@@ -89,6 +89,24 @@ body {
     border-top: 3px solid #2e6969af;
 }
 
+.reviews_header .related_streamers{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+
+}
+.reviews_header .related_streamers .streamer_icon{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0.5rem;
+}
+.reviews_header .related_streamers .streamer_icon img{
+    width: 100%;
+}
+
 .cmt_wrap{
     display: flex;
     margin: 1rem;
@@ -113,6 +131,35 @@ body {
     text-align: left;
 }
 
+/* 별점 */
+.star-container{
+    text-align: center;
+}
+.star-widget input{
+    display: none;
+}
+.star-widget label{
+    font-size: 10px;
+    color: #444;
+    padding: 10px;
+    transition: all 0.2s ease;
+    float: right;
+}
+.star-widget input:not(:checked) ~ label:hover,
+.star-widget input:not(:checked) ~ label:hover ~ label{
+    color: #fd4;
+}
+.stars{
+    display: inline-block;
+}
+
+input:checked ~ label{
+    color: #fd4;
+}
+input#rate-5:checked ~ label{
+    color: #fe7;
+    text-shadow: 0 0 20px #952;
+}
 
 
 /* 방송 썸네일 목록 */
