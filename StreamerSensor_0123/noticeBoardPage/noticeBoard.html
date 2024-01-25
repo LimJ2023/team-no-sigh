@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>공지 사항 게시판</title>
 </head>
@@ -170,292 +170,26 @@
                         </li>
                     </ul>
                 </div>
-                <div class="controller">
-                    <div class="paging swiper-pagination-fraction"><span class="swiper-pagination-current">1</span> /
-                        <span class="swiper-pagination-total">5</span>
-                    </div>
-                    <div class="arrow">
-                        <div class="arrow"><button type="button"
-                                class="btn-prev swiper-button-disabled">prev</button><button type="button"
-                                class="btn-next">next</button></div>
-                    </div>
+        </header>
+    
+        <div class="left">
+                <div class="navborad">
+                        <div>공지사항</div>
+                        <div>스트리머공지</div>
                 </div>
-            </div>
+                <div class="Notices">
+                        <div class="recentList">
+                                최근 내용
+                        </div>
+                        <hr>
+                        <div class="NoticeList">
+                                게시된 내용
+                        </div>
+                </div>
         </div>
-        <div class="search-area">
-            <div class="select-box"></div>
-            <div class="search-select"><button type="button" id="selectCategory" class="sel-txt"
-                    data-category="THREAD_TITLE_AND_CONTENT"><span class="locales_title">제목</span>+<span
-                        class="locales_content" "="">내용</span></button><ul class=" custom-select category">
-                        <li><button type="button" data-category="THREAD_TITLE_AND_CONTENT" class="key-color"><span
-                                    class="locales_title">제목</span>+<span
-                                    class="locales_content" "="">내용</span></button></li><li><button type=" button"
-                                    data-category="THREAD_TITLE" class="locales_title">제목</button></li>
-                        <li><button type="button" data-category="THREAD_CONTENT" class="locales_content">내용</button>
-                        </li>
-                        <li><button type="button" data-category="COMMENT_CONTENT" class="locales_comment_content">댓글
-                                내용</button></li>
-                        <li><button type="button" data-category="THREAD_TAGS" class="locales_tags">태그</button></li>
-                        <li><button type="button" data-category="THREAD_USER" class="locales_author">글 작성자</button></li>
-                        <li><button type="button" data-category="COMMENT_USER" class="locales_commenter">댓글 작성자</button>
-                        </li>
-                        </ul>
-            </div>
-            <div class="headline-box"><button type="button" id="selectHeadline" data-headline-id="0"
-                    class="sel-txt disabled" disabled="">말머리 없음</button></div>
-            <div class="filter-box" style=""><button type="button" id="selectDirection"
-                    class="sel-txt locales_order_recent_post" data-direction="DEFAULT">최신글순</button>
-                <ul class="custom-select direction">
-                    <li><button type="button" data-direction="DEFAULT"
-                            class=" key-color locales_order_recent_post">최신글순</button></li>
-                    <li><button type="button" data-direction="RECENT_REPLY"
-                            class=" locales_order_recent_comment">최신댓글순</button></li>
-                    <li><button type="button" data-direction="REPLY" class=" locales_order_many_comment">많은댓글순</button>
-                    </li>
-                    <li><button type="button" data-direction="LIKE" class=" locales_order_like">좋아요순</button></li>
-                </ul>
-            </div>
-            <div class="search-input"> <label for="innerSearch" class="blind locales_enter_search_keyword">검색어
-                    입력</label> <input type="text" id="innerSearch" name="innerSearch"> <button type="button"
-                    id="btnInnerSearch" class="btn-search locales_enter_search_keyword">검색어 입력</button> </div>
-            <p class="count"><span class="locales_search_results">검색 결과</span> - <span class="key-color"></span></p>
-        </div>
-        <div class="section-bot">
-            <div class="list-box">
-                <ul class="type-list">
-                    <li><a href="board_view?board=1018&amp;thread=2477543">
-                            <div class="list-thumb"><img
-                                    src="https://dszw1qtcnsa5e.cloudfront.net/community/20240124/757cd90d-8d37-4a31-be80-662daa5ab560/%EC%8D%B8%EB%84%A4%EC%9D%BC%EC%95%88%EB%82%B4.jpg"
-                                    alt=""></div>
-                            <h3 class=""><span>‘아비도스 리조트 복구 대책위원회’ 연합 작전 티켓 사전 구매 관련 안내드립니다.</span><span
-                                    class="icon-new"></span></h3>
-                        </a>
-                        <dl class="article-info">
-                            <dt class="blind">writer</dt>
-                            <dd class="writer">GM샬레운영사무국</dd>
-                            <dt class="blind">etc</dt>
-                            <dd><span class="date">12:30</span><span class="count-likes">2</span><span
-                                    class="count-comment">3</span></dd>
-                        </dl>
-                    </li>
-                    <li><a href="board_view?board=1018&amp;thread=2465648">
-                            <div class="list-thumb"><img
-                                    src="https://dszw1qtcnsa5e.cloudfront.net/community/20240109/f06cb342-9b1c-4a08-8e81-bcbbfc9bc1b4/%EC%8D%B8%EB%84%A4%EC%9D%BC%EC%95%88%EB%82%B4.jpg"
-                                    alt=""></div>
-                            <h3 class=""><span>1/23(화) 시로코(수영복), 노노미(수영복), 와카모(수영복) 픽업 모집 안내</span><span
-                                    class="icon-new"></span></h3>
-                        </a>
-                        <dl class="article-info">
-                            <dt class="blind">writer</dt>
-                            <dd class="writer">GM샬레운영사무국</dd>
-                            <dt class="blind">etc</dt>
-                            <dd><span class="date">2024.01.22</span><span class="count-likes">8</span><span
-                                    class="count-comment">9</span></dd>
-                        </dl>
-                    </li>
-                    <li><a href="board_view?board=1018&amp;thread=2470634">
-                            <div class="list-thumb"><img
-                                    src="https://dszw1qtcnsa5e.cloudfront.net/community/20240115/71f54f8d-3d86-4a59-80bf-37060919f2f5/%EC%8D%B8%EB%84%A4%EC%9D%BC%EC%95%88%EB%82%B4.jpg"
-                                    alt=""></div>
-                            <h3 class=""><span>Galaxy S24 Ultra Accessory Blue Archive Edition 출시 사전 안내</span></h3>
-                        </a>
-                        <dl class="article-info">
-                            <dt class="blind">writer</dt>
-                            <dd class="writer">GM샬레운영사무국</dd>
-                            <dt class="blind">etc</dt>
-                            <dd><span class="date">2024.01.19</span><span class="count-likes">23</span><span
-                                    class="count-comment">48</span></dd>
-                        </dl>
-                    </li>
-                    <li><a href="board_view?board=1018&amp;thread=2473180">
-                            <div class="list-thumb"><img
-                                    src="https://dszw1qtcnsa5e.cloudfront.net/community/20240118/5d39f9b7-18e6-432c-a3e0-e74aef6c1709/%EC%8D%B8%EB%84%A4%EC%9D%BC%EC%95%88%EB%82%B4.jpg"
-                                    alt=""></div>
-                            <h3 class=""><span>블루 아카이브 X 이디야커피 제휴 이벤트 사전 안내</span></h3>
-                        </a>
-                        <dl class="article-info">
-                            <dt class="blind">writer</dt>
-                            <dd class="writer">GM샬레운영사무국</dd>
-                            <dt class="blind">etc</dt>
-                            <dd><span class="date">2024.01.18</span><span class="count-likes">46</span><span
-                                    class="count-comment">94</span></dd>
-                        </dl>
-                    </li>
-                    <li><a href="board_view?board=1018&amp;thread=2471252">
-                            <div class="list-thumb"><img
-                                    src="https://dszw1qtcnsa5e.cloudfront.net/community/20240116/df438459-749d-4ccb-b35a-16f8d835b0dd/%EC%8D%B8%EB%84%A4%EC%9D%BC%EC%95%88%EB%82%B4.jpg"
-                                    alt=""></div>
-                            <h3 class=""><span>(종료 안내) 와디즈 단독! ‘아로나 오르골’ 크라우드 펀딩 사전 안내</span></h3>
-                        </a>
-                        <dl class="article-info">
-                            <dt class="blind">writer</dt>
-                            <dd class="writer">GM샬레운영사무국</dd>
-                            <dt class="blind">etc</dt>
-                            <dd><span class="date">2024.01.16</span><span class="count-likes">12</span><span
-                                    class="count-comment">108</span></dd>
-                        </dl>
-                    </li>
-                    <li><a href="board_view?board=1018&amp;thread=2465645">
-                            <div class="list-thumb"><img
-                                    src="https://dszw1qtcnsa5e.cloudfront.net/community/20240109/d9188f37-6bcb-4cc6-8a47-18891f524e9a/%EC%8D%B8%EB%84%A4%EC%9D%BC%EC%95%88%EB%82%B4.jpg"
-                                    alt=""></div>
-                            <h3 class=""><span>1/16(화) 슌(어린이)&amp;키리노, 사야(사복), 코코나 픽업 모집 안내</span></h3>
-                        </a>
-                        <dl class="article-info">
-                            <dt class="blind">writer</dt>
-                            <dd class="writer">GM샬레운영사무국</dd>
-                            <dt class="blind">etc</dt>
-                            <dd><span class="date">2024.01.15</span><span class="count-likes">4</span><span
-                                    class="count-comment">8</span></dd>
-                        </dl>
-                    </li>
-                    <li><a href="board_view?board=1018&amp;thread=2465751">
-                            <div class="list-thumb"><img
-                                    src="https://dszw1qtcnsa5e.cloudfront.net/community/20240109/e3b9de30-b7de-44a1-9be9-7b757c8acdad/%EC%8D%B8%EB%84%A4%EC%9D%BC%EC%98%A4%EB%A5%98.jpg"
-                                    alt=""></div>
-                            <h3 class=""><span>현재까지 확인된 오류 안내</span></h3>
-                        </a>
-                        <dl class="article-info">
-                            <dt class="blind">writer</dt>
-                            <dd class="writer">GM샬레운영사무국</dd>
-                            <dt class="blind">etc</dt>
-                            <dd><span class="date">2024.01.09</span><span class="count-likes">8</span><span
-                                    class="count-comment">3</span></dd>
-                        </dl>
-                    </li>
-                    <li><a href="board_view?board=1018&amp;thread=2462784">
-                            <div class="list-thumb"><img
-                                    src="https://dszw1qtcnsa5e.cloudfront.net/community/20240105/f245946e-bd96-4d88-a15e-7e7c4db51fba/%EC%8D%B8%EB%84%A4%EC%9D%BC%EC%95%88%EB%82%B4.jpg"
-                                    alt=""></div>
-                            <h3 class=""><span>1/9(화) 히나(수영복), 이오리(수영복) 특별 픽업 모집 안내</span></h3>
-                        </a>
-                        <dl class="article-info">
-                            <dt class="blind">writer</dt>
-                            <dd class="writer">GM샬레운영사무국</dd>
-                            <dt class="blind">etc</dt>
-                            <dd><span class="date">2024.01.08</span><span class="count-likes">7</span><span
-                                    class="count-comment">6</span></dd>
-                        </dl>
-                    </li>
-                    <li><a href="board_view?board=1018&amp;thread=2455975">
-                            <div class="list-thumb"><img
-                                    src="https://dszw1qtcnsa5e.cloudfront.net/community/20231228/4ebff5e7-77e5-4511-b1d8-b128d0d1b6f8/%EC%8D%B8%EB%84%A4%EC%9D%BC%EC%95%88%EB%82%B4.jpg"
-                                    alt=""></div>
-                            <h3 class=""><span>안녕하세요. 총괄PD 김용하입니다. 외주 홍보물 관련 대응 현황에 대해 말씀드립니다.</span></h3>
-                        </a>
-                        <dl class="article-info">
-                            <dt class="blind">writer</dt>
-                            <dd class="writer">GM샬레운영사무국</dd>
-                            <dt class="blind">etc</dt>
-                            <dd><span class="date">2023.12.28</span><span class="count-likes">130</span><span
-                                    class="count-comment">112</span></dd>
-                        </dl>
-                    </li>
-                    <li><a href="board_view?board=1018&amp;thread=2442408">
-                            <div class="list-thumb"><img
-                                    src="https://dszw1qtcnsa5e.cloudfront.net/community/20231215/c750a33b-8503-4e45-9c2f-a44a3d47bbc3/%EC%8D%B8%EB%84%A4%EC%9D%BC%EC%95%88%EB%82%B4.jpg"
-                                    alt=""></div>
-                            <h3 class=""><span>12/26(화) 미야코(수영복), 사키(수영복) 픽업 모집 안내</span></h3>
-                        </a>
-                        <dl class="article-info">
-                            <dt class="blind">writer</dt>
-                            <dd class="writer">GM샬레운영사무국</dd>
-                            <dt class="blind">etc</dt>
-                            <dd><span class="date">2023.12.25</span><span class="count-likes">4</span><span
-                                    class="count-comment">10</span></dd>
-                        </dl>
-                    </li>
-                    <li><a href="board_view?board=1018&amp;thread=2449271">
-                            <div class="list-thumb"><img
-                                    src="https://dszw1qtcnsa5e.cloudfront.net/community/20231221/02e2d274-637a-4ec7-87be-854c01ecdc79/%EC%8D%B8%EB%84%A4%EC%9D%BC%EC%95%88%EB%82%B4.jpg"
-                                    alt=""></div>
-                            <h3 class=""><span>‘사운드 아카이브 디 오케스트라’ Full Ver 크리스마스 기념 특별 공개</span></h3>
-                        </a>
-                        <dl class="article-info">
-                            <dt class="blind">writer</dt>
-                            <dd class="writer">GM샬레운영사무국</dd>
-                            <dt class="blind">etc</dt>
-                            <dd><span class="date">2023.12.22</span><span class="count-likes">27</span><span
-                                    class="count-comment">34</span></dd>
-                        </dl>
-                    </li>
-                    <li><a href="board_view?board=1018&amp;thread=2448784">
-                            <div class="list-thumb"><img
-                                    src="https://dszw1qtcnsa5e.cloudfront.net/community/20231221/543e1440-a7eb-4a17-9fae-b2a2cb7024eb/%EC%8D%B8%EB%84%A4%EC%9D%BC%EC%95%88%EB%82%B4.jpg"
-                                    alt=""></div>
-                            <h3 class=""><span>12/21(목) ‘키보토스에서 메리 크리스마스! 구호기사단의 특별 선물’ 이벤트 보상 지급 안내</span></h3>
-                        </a>
-                        <dl class="article-info">
-                            <dt class="blind">writer</dt>
-                            <dd class="writer">GM샬레운영사무국</dd>
-                            <dt class="blind">etc</dt>
-                            <dd><span class="date">2023.12.21</span><span class="count-likes">10</span><span
-                                    class="count-comment">28</span></dd>
-                        </dl>
-                    </li>
-                    <li><a href="board_view?board=1018&amp;thread=2447133">
-                            <div class="list-thumb"><img
-                                    src="https://dszw1qtcnsa5e.cloudfront.net/community/20231220/fbde0c6f-8b24-4d77-8743-dfb78c746069/%EC%8D%B8%EB%84%A4%EC%9D%BC%EC%95%88%EB%82%B4.jpg"
-                                    alt=""></div>
-                            <h3 class=""><span>12/20(수) 블루 아카이브 게임 이용 제한</span></h3>
-                        </a>
-                        <dl class="article-info">
-                            <dt class="blind">writer</dt>
-                            <dd class="writer">GM샬레운영사무국</dd>
-                            <dt class="blind">etc</dt>
-                            <dd><span class="date">2023.12.20</span><span class="count-likes">7</span><span
-                                    class="count-comment">6</span></dd>
-                        </dl>
-                    </li>
-                    <li><a href="board_view?board=1018&amp;thread=2446335">
-                            <div class="list-thumb"><img
-                                    src="https://dszw1qtcnsa5e.cloudfront.net/community/20231219/8eb2605d-9572-45e3-bd40-36bfec0e015b/%EC%8D%B8%EB%84%A4%EC%9D%BC%EC%98%A4%EB%A5%98.jpg"
-                                    alt=""></div>
-                            <h3 class=""><span>(1/2 추가) 현재까지 확인된 오류 안내</span></h3>
-                        </a>
-                        <dl class="article-info">
-                            <dt class="blind">writer</dt>
-                            <dd class="writer">GM샬레운영사무국</dd>
-                            <dt class="blind">etc</dt>
-                            <dd><span class="date">2023.12.19</span><span class="count-likes">7</span><span
-                                    class="count-comment">22</span></dd>
-                        </dl>
-                    </li>
-                    <li><a href="board_view?board=1018&amp;thread=2446176">
-                            <div class="list-thumb"><img
-                                    src="https://dszw1qtcnsa5e.cloudfront.net/community/20231219/68eb6fcf-5867-4d87-b4b9-d26470b46b8d/%EC%8D%B8%EB%84%A4%EC%9D%BC%EC%95%88%EB%82%B4.jpg"
-                                    alt=""></div>
-                            <h3 class=""><span>블루 아카이브 X 카카오페이지 웹소설 &amp; 웹툰 총력전이 시작됩니다!</span></h3>
-                        </a>
-                        <dl class="article-info">
-                            <dt class="blind">writer</dt>
-                            <dd class="writer">GM샬레운영사무국</dd>
-                            <dt class="blind">etc</dt>
-                            <dd><span class="date">2023.12.19</span><span class="count-likes">5</span><span
-                                    class="count-comment">7</span></dd>
-                        </dl>
-                    </li>
-                </ul>
-                <div class="list-paging"><button type="button" id="1" class="on">1</button><button type="button"
-                        id="2">2</button><button type="button" id="3">3</button><button type="button"
-                        id="4">4</button><button type="button" id="5">5</button><button type="button" id="next"
-                        class="next">next</button></div>
-            </div>
-        </div>
-        <div class="list-paging"><button type="button" id="1" class="on">1</button><button type="button"
-                id="2">2</button><button type="button" id="3">3</button><button type="button" id="4">4</button><button
-                type="button" id="5">5</button><button type="button" id="next" class="next">next</button></div>
-        <div id="footer">
-            <div class="tospp"> <a href="https://member.nexon.com/policy/stipulation.aspx" target="_blank"
-                    class="locales_legal_documentation">이용약관</a> <i>|</i> <a
-                    href="https://member.nexon.com/policy/privacy.aspx" target="_blank"
-                    class="locales_privacy_policy">개인정보 처리방침</a></div>
-            <div class="logo-nexon"> <img
-                    src="https://dszw1qtcnsa5e.cloudfront.net/bin/alpha/console-community-view/assets/web/pc/footer-logo-test.png">
-                <span>© NEXON Korea Corp. All Right Reserved.</span>
-            </div>
-        </div>
-    </div>
+        
+        
+        
 
 </body>
 
