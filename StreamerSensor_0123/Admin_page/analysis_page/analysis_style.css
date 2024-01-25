@@ -277,10 +277,47 @@ main {
     background: #fff;
     padding: 20px;
     width: 1260px;
-    height: 600px;
+    height: 540px;
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
 }
+
+.tab {
+    overflow: hidden;
+    float: left;
+    border-radius: 20px 0 0 20px;
+  }
+
+  .tab button {
+    background-color: #727272;
+    display: block;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+  }
+
+  .tab button.active {
+    background-color: #303030;
+    color: #fff;
+  }
+
+  .tabcontent {
+    height: 500px;
+    display: none;
+    padding: 6px 12px;
+    border: none;
+    border-left: none;
+    background-color: #303030;
+    color: #fff;
+    margin-left: 100px;
+    border-radius: 0 20px 20px 0;
+  }
 
 .right-section{
     margin-top: 1.4rem;

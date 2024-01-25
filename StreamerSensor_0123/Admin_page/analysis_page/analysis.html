@@ -61,9 +61,40 @@
         </div>
         <div class="categoryBox1">
           <div class="category-chart">
+            <div class="tab">
+              <button class="tablinks" id="tab1" onclick="openTab(event, 'Tab1')">Game</button>
+              <button class="tablinks" onclick="openTab(event, 'Tab2')">Real Life</button>
+              <button class="tablinks" onclick="openTab(event, 'Tab3')">Music</button>
+              <button class="tablinks" onclick="openTab(event, 'Tab4')">eSports</button>
+              <button class="tablinks" onclick="openTab(event, 'Tab5')">Creative</button>
+            </div>
+            
+            <div id="Tab1" class="tabcontent">
+              <h3>Game</h3>
+              <p>This is the 'Game chart' area</p>
+            </div>
+            
+            <div id="Tab2" class="tabcontent">
+              <h3>Real Life</h3>
+              <p>This is the 'Real Life chart' area</p>
+            </div>
+            
+            <div id="Tab3" class="tabcontent">
+              <h3>Music</h3>
+              <p>This is the 'Music chart' area</p>
+            </div>
+            
+            <div id="Tab4" class="tabcontent">
+              <h3>eSports</h3>
+              <p>This is the 'eSports chart' area<p>
+            </div>
+            
+            <div id="Tab5" class="tabcontent">
+              <h3>Creative</h3>
+              <p>This is the 'Creative chart' area</p>
+            </div>
           </div>
         </div>
-      </main>
       </main>
       <!-- 메인 종료 -->
 
@@ -151,5 +182,26 @@
     <script src="index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
     <script src="my_chart.js"></script>
+    <script>
+      window.onload = function () {
+        document.getElementById('tab1').click();
+      };
+    
+      function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+    
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+    
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+    </script>
   </body>
 </html>
