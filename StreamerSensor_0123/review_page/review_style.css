@@ -89,6 +89,24 @@ body {
     border-top: 3px solid #2e6969af;
 }
 
+.reviews_header .related_streamers{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+
+}
+.reviews_header .related_streamers .streamer_icon{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0.5rem;
+}
+.reviews_header .related_streamers .streamer_icon img{
+    width: 100%;
+}
+
 .cmt_wrap{
     display: flex;
     margin: 1rem;
