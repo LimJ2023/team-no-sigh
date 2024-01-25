@@ -48,113 +48,111 @@
 			<div class="search">
 				<input type="text" placeholder="검색..." />
 				<a href=""><span class="material-symbols-outlined"> search </span></a>
-				<select name="" id="category">
-					<option value="Game">Game</option>
-					<option value="Music/Radio">Music/Radio</option>
-					<option value="JustChatting">JustChatting</option>
-					<option value="Vtuber">Vtuber</option>
-				</select>
 			</div>
+      <div class="select">
+        <select name="" id="category" onchange="onchangeSelect()">
+					<option value="All">전체 보기</option>
+          <option value="Subscrip">Subscrip</option>
+					<option value="UnSubscrip">UnSubscrip</option>
+				</select>
+      </div>
 			<div class="user-profile">
 				<div class="user">
-					<p id="id">
+					<p class="id">
 						<img src="imgFile/profile1.png" /> &nbsp;
 						아이디: dmstn4626
 					</p>
 					<br />
 					<br />
-					<p>
-						구독 상태: Subscripted
-						가입 날짜: 2000.00.00
+					<p class="subscription-status">
+						구독 상태: Subscrips
 					</p>
-
+          <p>가입 날짜: 2000.00.00</p>
 				</div>
 				<div class="user">
-					<p id="id">
+					<p class="id">
 						<img src="imgFile/profile2.png" />&nbsp;
 						아이디: dmstn4626
 					</p>
 					<br />
 					<br />
-					<p>
-						구독 상태: Subscripted
-						가입 날짜: 2000.00.00
+					<p class="subscription-status">
+						구독 상태: Subscrips
 					</p>
+          <p>가입 날짜: 2000.00.00</p>
 				</div>
 				<div class="user">
-					<p id="id">
+					<p class="id">
 						<img src="imgFile/profile3.png" />&nbsp;
 						아이디: dmstn4626
 					</p>
 					<br />
 					<br />
-					<p>
-						구독 상태: Subscripted
-						가입 날짜: 2000.00.00
+					<p class="subscription-status">
+						구독 상태: Subscrips
 					</p>
+          <p>가입 날짜: 2000.00.00</p>
 				</div>
 				<div class="user">
-					<p id="id">
+					<p class="id">
 						<img src="imgFile/profile4.png" />&nbsp;
-						아이디: dmstn4626
+						아이디: asdf1234
 					</p>
 					<br />
 					<br />
-					<p>
-						구독 상태: Subscripted
-						가입 날짜: 2000.00.00
+					<p class="subscription-status">
+						구독 상태: Subscrips
 					</p>
+          <p>가입 날짜: 2000.00.00</p>
 				</div>
 				<div class="user">
-					<p id="id">
+					<p class="id">
 						<img src="imgFile/profile1.png" />&nbsp;
 						아이디: dmstn4626
 					</p>
 					<br />
 					<br />
-					<p>
-						구독 상태: Subscripted
-						가입 날짜: 2000.00.00
+					<p class="subscription">
+						구독 상태: Subscrips
 					</p>
+          <p>가입 날짜: 2000.00.00</p>
 				</div>
         <div class="user">
-					<p id="id">
+					<p class="id">
 						<img src="imgFile/profile1.png" />&nbsp;
 						아이디: dmstn4626
 					</p>
 					<br />
 					<br />
-					<p>
-						구독 상태: Subscripted
-						가입 날짜: 2000.00.00
+					<p class="subscription-status">
+						구독 상태: UnSubscrips
 					</p>
+          <p>가입 날짜: 2000.00.00</p>
 				</div>
         <div class="user">
-					<p id="id">
+					<p class="id">
 						<img src="imgFile/profile1.png" />&nbsp;
-						아이디: dmstn4626
+						아이디: dmstn3973
 					</p>
 					<br />
 					<br />
-					<p>
-						구독 상태: Subscripted
-						가입 날짜: 2000.00.00
+					<p class="unsubscription">
+						구독 상태: UnSubscrips
 					</p>
+          <p>가입 날짜: 2000.00.00</p>
 				</div>
         <div class="user">
-					<p id="id">
-						<img src="imgFile/profile1.png" />&nbsp;
-						아이디: dmstn4626
+					<p class="id">
+						<img src="imgFile/profile2.png" />&nbsp;
+						아이디: dmstn1092
 					</p>
 					<br />
 					<br />
-					<p>
-						구독 상태: Subscripted
-						가입 날짜: 2000.00.00
+					<p class="subscription-status">
+						구독 상태: Subscrips
 					</p>
+          <p>가입 날짜: 2000.00.00</p>
 				</div>
-        
-				
 			</div>
 		</main>
 		<!-- 메인 종료 -->
@@ -237,5 +235,6 @@
     <!-- 컨테이너 종료 -->
     <script src="order.js"></script>
     <script src="index.js"></script>
+    <script src="filter.js"></script>
   </body>
 </html>
