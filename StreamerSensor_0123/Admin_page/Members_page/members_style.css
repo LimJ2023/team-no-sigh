@@ -229,27 +229,33 @@ main .user-profile {
 	position: relative;
 	bottom: -100px;
 	display: grid;
-	grid-template-columns: repeat(5, 1fr);
+	grid-template-columns: repeat(7, 1fr);
 	gap: 1.6rem;
 }
 
-main .search select {
+main .select{
+    position: absolute;
+    top: 100px;
+    left: 250px;
+}
+
+main .select select{
 	border: 1px solid var(--color-text);
 	border-radius: 20px;
 	margin-left: 10px;
-	position: relative;
-	top: auto;
+    position: relative;
+    text-align: center;
 	right: -20px;
 }
 
-main .user-profile #id {
+main .user-profile .id {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	text-align: right;
 }
 
-main #id:hover{
+main .id:hover{
 	cursor: pointer;
 }
 
