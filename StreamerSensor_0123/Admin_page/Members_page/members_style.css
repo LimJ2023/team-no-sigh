@@ -224,10 +224,6 @@ main .search a{
 	color: var(--color-text);
 }
 
-.list-user{
-    
-}
-
 main .user-profile {
 	border-radius: 20px;
 	position: relative;

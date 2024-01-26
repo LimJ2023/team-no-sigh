@@ -7,11 +7,11 @@ const userDataList = [
     {
         id: 1,
         userid: "dmstn4626",
-        img: 'StreamerSensor_0123/Admin_page/Members_page/imgFile/KITA2.JPG'
+        avatar: "./imgFile/profile2.png"
     }, {
         id: 2,
         userid: "asdf1234",
-        img: "StreamerSensor_0123/Admin_page/Members_page/imgFile/profile1.png"
+        avatar: "./imgFile/profile4.png"
     }
 ];
 
@@ -33,14 +33,13 @@ function searchId(){
             searchedUserList.innerHTML = searchedDataList
             .map((data) => {
                 return `
-                <li>
-                <div class='box-user'>
+                <li style="list-style: none;">
+                <div class='box-user' style= "display:flex; justify-content:center;">
                   <span class='thumb-img'>
-                    <img src='./img/img-thumbnail.jpeg' alt='' />
+                    <img src='${data.avatar}' alt='' style="width:50px; height: 50px; border-radius:50%;"  />
                   </span>
-                  <span class='box-cont'>
+                  <span class='box-cont' style="display:flex; align-items:center;">
                     <strong class='tit-user'>${data.userid}</strong>
-                    <span class='cont-info'>${data.username}</span>
                   </span>
                 </div>
                 </li>`;
