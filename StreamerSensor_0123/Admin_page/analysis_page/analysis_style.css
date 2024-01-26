@@ -319,6 +319,19 @@ main {
     border-radius: 0 20px 20px 0;
   }
 
+  .tabcontent h1{
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .tabcontent table{
+    width: 1100px;
+    text-align: center;
+    height: 430px;
+    font-size: 16px;
+    margin-top: 15px;
+  }
+
 .right-section{
     margin-top: 1.4rem;
     width: 100px;
