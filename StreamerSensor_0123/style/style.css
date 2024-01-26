@@ -227,7 +227,7 @@ header{
 	justify-content: space-between;
 	border-radius: 10px;
 	margin-right: 20px;
-	width: 100px;
+	width: 200px;
 	height: 170px;
 	text-align: center;
 	box-sizing: border-box;
@@ -237,7 +237,7 @@ header{
 }
 
 .col .humanIcon{
-	max-width: 70%;	
+	max-width: 90%;
 	height: auto;
 	margin-top: 5px;
 }
