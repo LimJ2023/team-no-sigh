@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="rankPage.css" />
+	<!-- link swiper css -->
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+    <!-- Fav icon -->
+    <link rel="shortcut icon" href="../img/fav-icon.png" type="image/x-icon">
+    <!-- box icons -->
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style/carousel.css">
+<title>Streamer Sensor</title>
+</head>
+<body>
+    <p>test 03</p>
+	<!-- header -->
+    <header>
+        <!-- nav -->
+        <div class="nav container">
+            <!-- logo -->
+            <a href="../index.html" class="logo">
+                Streamer<span>Sensor</span>
+            </a>
+            <!-- search box (검색)-->
+            <div class="search-box">
+                <input type="search" name="" id="search-input" placeholder="Search streamer">
+                <i class='bx bx-search' ></i>
+            </div>
+            <!-- user 사진 제대로 찾아서 넣어야함 (여기는 마이페이지랑 로그인되는 버튼구현)-->
+            <a href="login/html.html" class="user">
+                <img src="../img/Person_Icon.png" alt="" class="user-img">
+            </a>
+            <!-- navbar (각각 달아줘야함)-->
+            <div class="navbar">
+                <a href="./index.html" class="nav-link nav-active">
+                    <i class='bx bx-home' ></i>
+                    <span class="nav-link-title">home</span>
+                </a>
+                <a href="#trending" class="nav-link">
+                    <i class='bx bxs-hot' ></i>
+                    <span class="nav-link-title">trending</span>
+                </a>
+                <a href="./rankPage/rankPage.html" class="nav-link">
+                    <i class='bx bx-bar-chart-alt-2'></i>
+                    <span class="nav-link-title">readerBoard</span>
+                </a>
+                <a href="./noticeBoardPage/noticeBoard.html" class="nav-link">
+                    <i class='bx bx-message-detail'></i>
+                    <span class="nav-link-title">community</span>
+                </a>
+                <a href="#home" class="nav-link">
+                    <i class='bx bx-news' ></i>
+                    <span class="nav-link-title">news</span>
+                </a>
+                <a href="../Admin_page/dashBoard.html" class="nav-link">
+                    <i class='bx bx-wrench'></i>
+                    <span class="nav-link-title">관리자페이지 진입 버튼1</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="rankContainer">
+        <div class="rankContents">
+            <h2 class="tableH2">시청자 수 순위</h2>
+            <div class="table-responsive">
+                <table class="table rank-table">
+                    <thead>
+                        <tr class="rank-table-tr">
+                            <th scope="col">순위</th>
+                            <th scope="col" colspan="1">스트리머</th>
+                            <th scope="col">총시청자</th>
+                            <th scope="col">최고시청자</th>
+                            <th scope="col">평균시청자</th>
+                            <th scope="col">팔로워 수</th>
+                            <th scope="col">Live On</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        
+                        <tr class="rank-table-tr">
+                            <td>1</td>
+                            <td>
+                                <div class="rank-streamer">
+                                    <div class="rank-streamer-info rank-streamer-info-img"><img src="../img/Person_Icon.png" class="table-icon">
+                                            <img src="../img/6-10.png" class="rank-streamer-info-logo"></div>
+                                    <div class="rank-streamer-info rank-streamer-info-name">스트리머1</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="rank-viewer rank-viewer-total">
+                                    <div class="rank-viewer-total-graph">
+                                            <div class="rank-viewer-total-graph rank-bar" style="width: 90%;"></div>
+                                    </div>
+                                    <div class="rank-total-views">13,294</div>
+                                </div>
+                            </td>
+                            <td>8,213</td>
+                            <td>4,520</td>
+                            <td>14,520</td>
+                            <td>2시간 전</td>
+                        </tr>
+                        <tr class="rank-table-tr">
+                            <td>2</td>
+                            <td>
+                                <div class="rank-streamer">
+                                    <div class="rank-streamer-info rank-streamer-info-img"><img src="../img/Person_Icon.png" class="table-icon">
+                                        <img src="../img/chhzk.png" class="rank-streamer-info-logo"></div>
+                                    <div class="rank-streamer-info rank-streamer-info-name">스트리머2</div>
+                                </div>
+                            </td>
+                            
+                                <td>
+                                    <div class="rank-viewer rank-viewer-total">
+                                        <div class="rank-viewer-total-graph">
+                                                <div class="rank-viewer-total-graph rank-bar2" style="width: 70%;"></div>
+                                        </div>
+                                        <div class="rank-total-views">7,852</div>
+                                    </div>
+                                </td>
+                                <td>6,542</td>
+                                <td>2,178</td>
+                                <td>7,603</td>
+                                <td>LIVE중</td>
+                            
+                            
+                        </tr>
+
+                        <tr class="rank-table-tr">
+                            <td>3</td>
+                            <td>
+                                <div class="rank-streamer">
+                                    <div class="rank-streamer-info rank-streamer-info-img"><img src="../img/Person_Icon.png" class="table-icon">
+                                        <img src="../img/6-10.png" class="rank-streamer-info-logo"></div>
+                                    <div class="rank-streamer-info rank-streamer-info-name">스트리머3</div>
+                                </div>
+                            </td>
+                            
+                                <td>
+                                    <div class="rank-viewer rank-viewer-total">
+                                        <div class="rank-viewer-total-graph">
+                                                <div class="rank-viewer-total-graph rank-bar3" style="width: 50%;"></div>
+                                        </div>
+                                        <div class="rank-total-views">5,214</div>
+                                    </div>
+                                </td>
+                                <td>3,120</td>
+                                <td>1,875</td>
+                                <td>4,625</td>
+                                <td>30분 전</td>
+                            
+                            
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </section>
+
+
+	<script src="scripts/script.js"></script>
+</body>
+</html>

@@ -138,10 +138,9 @@ header{
     color: #b7b7b7;
 }
 /* nav-active를 줌으로서 첫번째 버튼이 색이 진하게 된것을 알수 있다 */
-.nav-link:hover,
-.nav-active{
+.nav-link:hover{
     color: var(--text-color);
-    transition: 0.5s all linear;
+    transition: 0.3s all ease;
     transform: scale(1.6);
 }
 .nav-link .bx{
@@ -160,6 +159,13 @@ header{
 	margin-right: auto;
 	align-items: center;
 	text-align: center;
+}
+
+
+
+
+.carousel{
+    user-select: none;
 }
 
 
