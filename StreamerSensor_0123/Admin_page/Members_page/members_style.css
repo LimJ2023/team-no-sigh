@@ -224,6 +224,10 @@ main .search a{
 	color: var(--color-text);
 }
 
+.list-user{
+    
+}
+
 main .user-profile {
 	border-radius: 20px;
 	position: relative;
@@ -234,9 +238,9 @@ main .user-profile {
 }
 
 main .select{
-    position: absolute;
-    top: 100px;
-    left: 250px;
+    display: flex;
+    padding: 1.6rem;
+    padding-bottom: 0;
 }
 
 main .select select{
