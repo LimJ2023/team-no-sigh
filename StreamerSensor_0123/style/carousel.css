@@ -8,6 +8,7 @@
     grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
     align-items: center;
     justify-items: center;
+    margin-bottom: 30px;
   }
   
   .carousel {
@@ -47,27 +48,56 @@
   div.item:nth-of-type(1) {
     --offset: 1;
     background-color: #1F1E20;
-    border: 10px solid #90f1ef;
+    border: 10px solid #90f1ef; 
+   /*border-style: solid;
+   border-width: 10px;*/
+   /*border-image: linear-gradient(90deg, rgb(247, 60, 60), rgb(247, 153, 60)) 1;*/
+   /*border-image: linear-gradient(90deg, #7B33FF,#338FFF) 1;*/
+   /*border-image: linear-gradient(90deg, #00e7ff,#00e7ff) 1;*/
+   /*border-image: linear-gradient(90deg, #00e7ff,#00fdb6) 1;*/
   }
   div.item:nth-of-type(2) {
     --offset: 2;
     background-color: #1F1E20;
     border: 10px solid #FF6363;
+    /*border-style: solid;
+   border-width: 10px;*/
+   /*border-image: linear-gradient(90deg, rgb(247, 153, 60), rgb(247, 236, 60)) 1;*/
+   /*border-image: linear-gradient(90deg, #338FFF , #33FFBA) 1;*/
+   /*border-image: linear-gradient(90deg, #00fdb6,#00ff32) 1;*/
+   /*border-image: linear-gradient(90deg, #00fdb6,#00ff32) 1;*/
   }
   div.item:nth-of-type(3) {
     --offset: 3;
     background-color: #1F1E20;
     border: 10px solid #C463FF;
+    /*border-style: solid;
+    border-width: 10px;*/
+    /*border-image: linear-gradient(90deg, rgb(247, 236, 60), rgb(93, 247, 60)) 1;*/
+    /*border-image: linear-gradient(90deg, #33FFBA, #9bff59) 1;*/
+    /*border-image: linear-gradient(90deg, #00ff32,#00fdb6) 1;*/
+    /*border-image: linear-gradient(90deg, #00ff32,#00ff32) 1;*/
   }
   div.item:nth-of-type(4) {
     --offset: 4;
     background-color: #1F1E20;
     border: 10px solid #F6FF63;
+    /*border-style: solid;
+    border-width: 10px;*/
+    /*border-image: linear-gradient(90deg, rgb(93, 247, 60), rgb(60, 198, 247)) 1;*/
+    /*border-image: linear-gradient(90deg, #9bff59, #33FFBA) 1;*/
+    /*border-image: linear-gradient(90deg, #00fdb6,#00e7ff) 1;*/
+    /*border-image: linear-gradient(90deg, #00ff32,#00fdb6) 1;*/
   }
   div.item:nth-of-type(5) {
     --offset: 5;
     background-color: #1F1E20;
     border:10px solid #65FF63;
+    /*border-style: solid;
+    border-width: 10px;*/
+    /*border-image: linear-gradient(90deg, rgb(60, 198, 247), rgb(88, 60, 247)) 1;*/
+    /*border-image: linear-gradient(90deg, #00e7ff,#00e7ff) 1;*/
+    /*border-image: linear-gradient(90deg, #00fdb6,#00e7ff) 1;*/
   }
   
   input:nth-of-type(1) {
