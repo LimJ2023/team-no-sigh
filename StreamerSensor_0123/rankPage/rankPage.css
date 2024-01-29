@@ -162,16 +162,29 @@ header{
 }
 
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 /*====================================================*/
 
 
+.rankHead{
+    background-color: transparent;
+    border: 2px solid #00e7ff;
+    width: 1200px;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 300px;
+    margin-left: 20%;
+
+}
 
 .rankContents{
     width: 1200px;
     background-color: transparent;
     margin: auto;
-    margin-top: 400px;
+    margin-top: 10px;
     margin-left: 20%;
     margin-right: 10%;
     text-align: center;
@@ -278,3 +291,91 @@ header{
     height: 5px;
     float: right;
 }
+
+
+
+/*=========footerTest===========*/
+
+.footerIcon{
+    width: 30px;
+    height: 30px;
+
+}
+
+.footerContainer{
+    padding: 70px 0;
+    box-sizing: border-box;
+    max-width: 1170px;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.footerRow{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 200px;
+}
+
+.footerCol{
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 0;
+}
+
+.footerCol h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footerCol h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #00ff32;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footerCol ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footerCol ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footerCol ul li a:hover{
+    color: #00ff32;
+    padding-left: 8px;
+}
+
+.footerCol .linkIcons a{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footerCol .linkIcons a:hover{
+    color: #00e7ff;
+    background-color: #ffffff;
+}
+
