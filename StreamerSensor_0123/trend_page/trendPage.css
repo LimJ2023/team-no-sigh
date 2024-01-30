@@ -51,7 +51,7 @@ body{
     color: var(--text-color);
 }
 .container{
-    max-width: 2000px;
+    max-width: 1060px;
     margin: auto;
     width: 100%;
 }
@@ -122,8 +122,8 @@ header{
 /* navbar 시작*/
 .navbar{
     position: fixed;
-    top: 40%;
-    transform: translateY(-40%);
+    top: 50%;
+    transform: translateY(-50%);
     left: 18px;
     display: flex;
     flex-direction: column;
@@ -132,7 +132,6 @@ header{
 /* 버튼의 색깔이 회색빛 */
 .nav-link{
     display: flex;
-    margin: 10px;
     flex-direction: column;
     align-items: center;
     color: #b7b7b7;
@@ -144,7 +143,7 @@ header{
     transform: scale(1.6);
 }
 .nav-link .bx{
-    font-size: 2.2rem;
+    font-size: 1.6rem;
 }
 .nav-link-title{
     font-size: 0.7rem;
@@ -162,29 +161,37 @@ header{
 }
 
 
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
+
+/* 스트리머 정보  출력*/
+
+.watch-btn{
+  margin: 20px 10px;
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--text-color);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: var(--container-color);
+}
+
+.play-btn{
+  cursor: pointer;
+}
+
+
 /*====================================================*/
 
 
-.rankHead{
-    background-color: transparent;
-    border: 2px solid #00e7ff;
-    width: 1200px;
-    max-width: 1200px;
-    margin: auto;
-    margin-top: 300px;
-    margin-left: 20%;
-
-}
 
 .rankContents{
     width: 1200px;
     background-color: transparent;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 400px;
     margin-left: 20%;
     margin-right: 10%;
     text-align: center;
@@ -294,88 +301,55 @@ header{
 
 
 
-/*=========footerTest===========*/
-
-.footerIcon{
-    width: 30px;
-    height: 30px;
-
-}
-
-.footerContainer{
-    padding: 70px 0;
-    box-sizing: border-box;
-    max-width: 1170px;
-    margin: auto;
-    justify-content: space-between;
-}
-
-.footerRow{
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 200px;
-}
-
-.footerCol{
-    justify-content: space-between;
-    margin: auto;
-    margin-top: 0;
-}
-
-.footerCol h4{
-    font-size: 18px;
-    color: #ffffff;
-    text-transform: capitalize;
-    margin-bottom: 35px;
-    font-weight: 500;
-    position: relative;
-}
-
-.footerCol h4::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    background-color: #00ff32;
-    height: 2px;
-    box-sizing: border-box;
-    width: 50px;
-}
-
-.footerCol ul li:not(:last-child){
-    margin-bottom: 10px;
-}
-
-.footerCol ul li a{
-    font-size: 16px;
-    text-transform: capitalize;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 300;
-    color: #bbbbbb;
-    display: block;
-    transition: all 0.3s ease;
-}
-
-.footerCol ul li a:hover{
-    color: #00ff32;
-    padding-left: 8px;
-}
-
-.footerCol .linkIcons a{
-    display: inline-block;
-    height: 30px;
-    width: 30px;
-    margin: 0 10px 10px 0;
+/* ================================= */
+.trend-section{
     text-align: center;
-    line-height: 40px;
-    border-radius: 50%;
-    color: #ffffff;
-    transition: all 0.5s ease;
+}
+.trend-section .rank-content-vertical{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.trend-section .rank-ver-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.footerCol .linkIcons a:hover{
-    color: #00e7ff;
-    background-color: #ffffff;
+.trend-section .rank-img {
+    width: 200px;
 }
+
+.trend-section .rank-img img{
+    width: 100%;
+}
+
+.trend-section .rank-content-horizon{
+    margin-top: 10px;
+}
+.trend-section .rank-info{
+    margin: 10px 70px;
+
+}
+.trend-section .rank-info-foot{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: large;
+}
+.bx-right-top-arrow-circle{
+    color: #e08013;
+}
+.bx-up-arrow-circle {
+    color: red;
+}
+.bx-down-arrow-circle{
+    color: blue;
+}
+.bx-right-down-arrow-circle{
+    color: #1b9dd4;
+}
+
 
