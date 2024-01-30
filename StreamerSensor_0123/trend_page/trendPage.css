@@ -51,7 +51,7 @@ body{
     color: var(--text-color);
 }
 .container{
-    max-width: 1060px;
+    max-width: 2000px;
     margin: auto;
     width: 100%;
 }
@@ -122,8 +122,8 @@ header{
 /* navbar 시작*/
 .navbar{
     position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 40%;
+    transform: translateY(-40%);
     left: 18px;
     display: flex;
     flex-direction: column;
@@ -132,6 +132,7 @@ header{
 /* 버튼의 색깔이 회색빛 */
 .nav-link{
     display: flex;
+    margin: 10px;
     flex-direction: column;
     align-items: center;
     color: #b7b7b7;
@@ -143,7 +144,7 @@ header{
     transform: scale(1.6);
 }
 .nav-link .bx{
-    font-size: 1.6rem;
+    font-size: 2.2rem;
 }
 .nav-link-title{
     font-size: 0.7rem;
@@ -152,7 +153,6 @@ header{
 .sugg-content{
 	width: 50%;
 	height: 30vh;
-/*	background-color: red;*/
 	margin-top: 15vh;
 	margin-left: auto;
 	margin-right: auto;
