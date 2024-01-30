@@ -1,0 +1,82 @@
+@import url('https://fonts.goolgleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root{
+    --color-primary: #00ff32;
+    --color-primary2: #00e7ff;
+    --color-primary3: #2e6969af;
+    --color-danger: #FF0060;
+    --color-success: #1B9C85;
+    --color-warning: #F7D060;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-dark: #363949;
+    --color-dark-font: #edeffd;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-dark-variant: #677483;
+    --color-background: #2c2c2c;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+.dark-mode-variables{
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+    margin: 0;
+    outline: 0;
+    border: 0;
+.navContainer{
+    background-color: var(--color-dark);
+    align-items: center;
+    padding: 25px;
+    text-align: center;
+}
+
+.navborad{
+    width: 100px;
+    height: 100%;
+    padding: 25px;
+    background-color: var(--color-primary);
+}
+    
+.navborad div{
+    width: 75px;
+    height: 100px;
+    padding: 0;
+    margin: 5px;
+    border: #181a1e solid 1px;
+    
+}
+
+.Notices{
+    align-items: center;
+    width: 600px;
+    height: 500px;
+    background-color: #677483;
+}
+
+.recentList{
+    background-color: #00e7ff;
+    width: 100px;
+    padding: 25px;
+    margin: 0 auto;
+}
+
+.NoticeList{
+    width: 400px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: #452324;
+}

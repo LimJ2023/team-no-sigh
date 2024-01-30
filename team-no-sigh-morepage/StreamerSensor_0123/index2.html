@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/style.css" />
+    <!-- link swiper css -->
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+    <!-- Fav icon -->
+    <link rel="shortcut icon" href="img/fav-icon.png" type="image/x-icon">
+    <!-- box icons -->
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style/carousel.css">
+    <title>Streamer Sensor</title>
+</head>
+
+<body>
+    <!-- scroll progress bar -->
+    <div id="progress">
+        <span id="progress-value"></span>
+    </div>
+    <!-- header -->
+    <header>
+        <!-- nav -->
+        <div class="nav container">
+            <!-- logo -->
+            <a href="index.html" class="logo">
+                Streamer<span>Sensor</span>
+            </a>
+            <!-- search box (검색)-->
+            <div class="search-box">
+                <input type="search" name="" id="search-input" placeholder="Search streamer">
+                <i class='bx bx-search'></i>
+            </div>
+            <!-- user 사진 제대로 찾아서 넣어야함 (여기는 마이페이지랑 로그인되는 버튼구현)-->
+            <a href="login/html.html" class="user">
+                <img src="img/Person_Icon.png" alt="" class="user-img">
+            </a>
+            <!-- navbar (각각 달아줘야함)-->
+            <div class="navbar">
+                <a href="#home" class="nav-link nav-active">
+                    <i class='bx bx-home'></i>
+                    <span class="nav-link-title">home</span>
+                </a>
+                <a href="#trending" class="nav-link">
+                    <i class='bx bxs-hot'></i>
+                    <span class="nav-link-title">trending</span>
+                </a>
+                <a href="#explore" class="nav-link">
+                    <i class='bx bx-compass'></i>
+                    <span class="nav-link-title">explore</span>
+                </a>
+                <a href="#noticeboard" class="nav-link">
+                    <i class='bx bx-book-open'></i>
+                    <span class="nav-link-title">notice board</span>
+                </a>
+                <a href="#home" class="nav-link">
+                    <i class='bx bx-heart'></i>
+                    <span class="nav-link-title">favourite</span>
+                </a>
+                <a href="./Admin_page/dashBoard.html" class="nav-link">
+                    <i class='bx bx-wrench'></i>
+                    <span class="nav-link-title">관리자페이지 진입 버튼1</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+
+    <div class="sugg-content">
+
+        <!-- streamers section start(주간 스트리머) -->
+        <section class="streamers container" id="popular">
+            <!-- heading -->
+            <div class="heading">
+                <form action="#">
+                    <h2 class="heading-title">스트리머</h2>
+                    <label for="lang">카테고리</label>
+                    <select name="category" id="lang">
+                        <option value="game">게임</option>
+                        <option value="sports">스포츠</option>
+                        <option value="bora">보라</option>
+                        <option value="butu">버튜버</option>
+                        <option value="esports">e스포츠</option>
+                        <option value="music">음악</option>
+                        <option value="trip">여행</option>
+                        <option value="yabang">야방</option>
+                    </select>
+                    <input type="submit" value="Submit" />
+                </form>
+                
+            </div>
+            <!-- streamers content -->
+            <div class="streamers-content">
+                <!-- streamer box 1 -->
+                <div class="streamer-box">
+                    <img src="./img/img1.png" alt="" class="streamer-box-img">
+                    <div class="box-text">
+                        <h2 class="streamer-title">감스트</h2>
+                        <span class="streamer-type">게임</span>
+                        <!-- 여기에 2번째 html -->
+                        <a href="play-page.html" class="watch-btn play-btn">
+                            <i class='bx bx-right-arrow'></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- streamer box 2 -->
+                <div class="streamer-box">
+                    <img src="./img/img1.png" alt="" class="streamer-box-img">
+                    <div class="box-text">
+                        <h2 class="streamer-title">감스트</h2>
+                        <span class="streamer-type">게임</span>
+                        <!-- 여기에 2번째 html -->
+                        <a href="play-page.html" class="watch-btn play-btn">
+                            <i class='bx bx-right-arrow'></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- streamer box 3 -->
+                <div class="streamer-box">
+                    <img src="./img/img1.png" alt="" class="streamer-box-img">
+                    <div class="box-text">
+                        <h2 class="streamer-title">감스트</h2>
+                        <span class="streamer-type">게임</span>
+                        <!-- 여기에 2번째 html -->
+                        <a href="play-page.html" class="watch-btn play-btn">
+                            <i class='bx bx-right-arrow'></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- streamer box 4 -->
+                <div class="streamer-box">
+                    <img src="./img/img1.png" alt="" class="streamer-box-img">
+                    <div class="box-text">
+                        <h2 class="streamer-title">감스트</h2>
+                        <span class="streamer-type">게임</span>
+                        <!-- 여기에 2번째 html -->
+                        <a href="play-page.html" class="watch-btn play-btn">
+                            <i class='bx bx-right-arrow'></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- streamer box 5 -->
+                <div class="streamer-box">
+                    <img src="./img/img1.png" alt="" class="streamer-box-img">
+                    <div class="box-text">
+                        <h2 class="streamer-title">감스트</h2>
+                        <span class="streamer-type">게임</span>
+                        <!-- 여기에 2번째 html -->
+                        <a href="play-page.html" class="watch-btn play-btn">
+                            <i class='bx bx-right-arrow'></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- streamer box 6 -->
+                <div class="streamer-box">
+                    <img src="./img/img1.png" alt="" class="streamer-box-img">
+                    <div class="box-text">
+                        <h2 class="streamer-title">감스트</h2>
+                        <span class="streamer-type">게임</span>
+                        <!-- 여기에 2번째 html -->
+                        <a href="play-page.html" class="watch-btn play-btn">
+                            <i class='bx bx-right-arrow'></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- streamer box 7 -->
+                <div class="streamer-box">
+                    <img src="./img/img1.png" alt="" class="streamer-box-img">
+                    <div class="box-text">
+                        <h2 class="streamer-title">감스트</h2>
+                        <span class="streamer-type">게임</span>
+                        <!-- 여기에 2번째 html -->
+                        <a href="play-page.html" class="watch-btn play-btn">
+                            <i class='bx bx-right-arrow'></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- streamer box 8 -->
+                <div class="streamer-box">
+                    <img src="./img/img1.png" alt="" class="streamer-box-img">
+                    <div class="box-text">
+                        <h2 class="streamer-title">감스트</h2>
+                        <span class="streamer-type">게임</span>
+                        <!-- 여기에 2번째 html -->
+                        <a href="play-page.html" class="watch-btn play-btn">
+                            <i class='bx bx-right-arrow'></i>
+                        </a>
+                    </div>
+                </div>
+                 <!-- streamer box 9 -->
+            <div class="streamer-box">
+                <img src="./img/img1.png" alt="" class="streamer-box-img">
+                <div class="box-text">
+                    <h2 class="streamer-title">감스트</h2>
+                    <span class="streamer-type">게임</span>
+                    <!-- 여기에 2번째 html -->
+                    <a href="play-page.html" class="watch-btn play-btn">
+                        <i class='bx bx-right-arrow' ></i>
+                    </a>
+                </div>
+            </div>
+            <!-- streamer box 10 -->
+            <div class="streamer-box">
+                <img src="./img/img1.png" alt="" class="streamer-box-img">
+                <div class="box-text">
+                    <h2 class="streamer-title">감스트</h2>
+                    <span class="streamer-type">게임</span>
+                    <!-- 여기에 2번째 html -->
+                    <a href="play-page.html" class="watch-btn play-btn">
+                        <i class='bx bx-right-arrow' ></i>
+                    </a>
+                </div>
+            </div>
+            <!-- streamer box 11 -->
+            <div class="streamer-box">
+                <img src="./img/img1.png" alt="" class="streamer-box-img">
+                <div class="box-text">
+                    <h2 class="streamer-title">감스트</h2>
+                    <span class="streamer-type">게임</span>
+                    <!-- 여기에 2번째 html -->
+                    <a href="play-page.html" class="watch-btn play-btn">
+                        <i class='bx bx-right-arrow' ></i>
+                    </a>
+                </div>
+            </div>
+            <!-- streamer box 12 -->
+            <div class="streamer-box">
+                <img src="./img/img1.png" alt="" class="streamer-box-img">
+                <div class="box-text">
+                    <h2 class="streamer-title">감스트</h2>
+                    <span class="streamer-type">게임</span>
+                    <!-- 여기에 2번째 html -->
+                    <a href="play-page.html" class="watch-btn play-btn">
+                        <i class='bx bx-right-arrow' ></i>
+                    </a>
+                </div>
+            </div>
+            </div>
+        </section>
+    </div>
+
+
+
+
+
+    <!-- more page -->
+
+    <script src="scripts/script.js"></script>
+    <script>
+        /* =========scroll progress bar(오른쪽 아래 스크롤 내리면 원형) =========== */
+
+        let scrollPrecentage = () => {
+            let scrollProgress = document.getElementById("progress");
+            let progressValue = document.getElementById('progress-value');
+            let pos = document.documentElement.scrollTop;
+            let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrollValue = Math.round(pos * 100 / calcHeight);
+            scrollProgress.style.background = `conic-gradient(#e70634 ${scrollValue}%, #2b2f38 ${scrollValue}%)`;
+        }
+        window.onscroll = scrollPrecentage;
+        window.onload = scrollPrecentage;
+    </script>
+</body>
+</body>
+
+</html>
