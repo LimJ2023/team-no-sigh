@@ -1,46 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>공지 사항 게시판</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="BoardStyle.css" />
+	<!-- link swiper css -->
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+    <!-- Fav icon -->
+    <link rel="shortcut icon" href="img/fav-icon.png" type="image/x-icon">
+    <!-- box icons -->
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style/carousel.css">
+<title>Streamer Sensor</title>
 </head>
-
 <body>
-        <header>
-                <div class="header">
-                        헤더 항목
-                </div>
-                <div class="headerSearch">
-                        <textarea name="" id="" cols="30" rows="2"></textarea>
-                </div>
-        </header>
-    
-        <div class="container">
-                <div class="navborad">
-                        <div>공지사항</div>
-                        <div>스트리머공지</div>
-                </div>
-
-                <div class="Notices">
-                        <div class="recentList">
-                                최근 내용
-                        </div>
-                        <hr>
-                        <div class="NoticeList">
-                                <div>번호 - 작성자 - 제목 - 조회수 - 이미지</div>
-                                <div>1</div>
-                                <div>2</div>
-                                <div>3</div>
-                                <div>4</div>
-                                <div>5</div>
-                        </div>
-                </div>
+    <p>test 03</p>
+	<!-- header -->
+    <header>
+        <!-- nav -->
+        <div class="nav container">
+            <!-- logo -->
+            <a href="index.html" class="logo">
+                Streamer<span>Sensor</span>
+            </a>
+            <!-- search box (검색)-->
+            <div class="search-box">
+                <input type="search" name="" id="search-input" placeholder="Search streamer">
+                <i class='bx bx-search' ></i>
+            </div>
+            <!-- user 사진 제대로 찾아서 넣어야함 (여기는 마이페이지랑 로그인되는 버튼구현)-->
+            <a href="login/html.html" class="user">
+                <img src="img/Person_Icon.png" alt="" class="user-img">
+            </a>
+            <!-- navbar (각각 달아줘야함)-->
+            <div class="navbar">
+                <a href="./index.html" class="nav-link nav-active">
+                    <i class='bx bx-home' ></i>
+                    <span class="nav-link-title">home</span>
+                </a>
+                <a href="./trend_page/trendPage.html" class="nav-link">
+                    <i class='bx bxs-hot' ></i>
+                    <span class="nav-link-title">trending</span>
+                </a>
+                <a href="./rankPage/rankPage.html" class="nav-link">
+                    <i class='bx bx-bar-chart-alt-2'></i>
+                    <span class="nav-link-title">leaderBoard</span>
+                </a>
+                <a href="./noticeBoardPage/noticeBoard.html" class="nav-link">
+                    <i class='bx bx-message-detail'></i>
+                    <span class="nav-link-title">community</span>
+                </a>
+                <a href="#home" class="nav-link">
+                    <i class='bx bx-news' ></i>
+                    <span class="nav-link-title">news</span>
+                </a>
+                <a href="./Admin_page/dashBoard.html" class="nav-link">
+                    <i class='bx bx-wrench'></i>
+                    <span class="nav-link-title">관리자페이지 진입 버튼1</span>
+                </a>
+            </div>
         </div>
+    </header>
+    <section class="noticeBoardArea">
+        <div class="container">
+            <div class=""><a href=""></a></div>
+            <div class="BoardList">
+                <div class="BoardNumber">번호</div>
+                <div class="Boardtitle">제목</div>
+                <div class="BoardWriter">작성자</div>
+                <div class="BoardDate">작성일</div>
+                <div class="BoardCount">조회</div>
+            </div>
+        </div>
+    </section>
+    
 
+	<script src="scripts/script.js"></script>
 </body>
-
 </html>
