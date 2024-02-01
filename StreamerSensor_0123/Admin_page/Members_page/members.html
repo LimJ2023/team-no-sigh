@@ -1,242 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="members_style.css" />
-    <title>관리자 페이지 1</title>
-  </head>
-  <body>
-    <div class="container">
-      <aside>
-        <div class="toggle">
-          <div class="logo">
-            <h2>관리자</h2>
-          </div>
-          <div class="close" id="close-btn">
-            <span class="material-symbols-outlined"> close </span>
-          </div>
-        </div>
-        <!--           사이드바             -->
-        <div class="sidebar">
-          <a href="../dashBoard.html">
-            <span class="material-symbols-outlined"> empty_dashboard </span>
-            <h3>대시보드</h3>
-          </a>
-          <a href="#" class="active">
-            <span class="material-symbols-outlined"> group </span>
-            <h3>회원 관리</h3>
-          </a>
-          <a href="../analysis_page/analysis.html">
-            <span class="material-symbols-outlined"> insights </span>
-            <h3>분석</h3>
-          </a>
-          <a href="..\../index.html">
-            <span class="material-symbols-outlined"> logout </span>
-            <h3>로그아웃</h3>
-          </a>
-        </div>
-        <!-- 사이드바 종료 -->
-      </aside>
 
-      <!-- 메인 컨텐츠 -->
-		<main>
-			<div class="search">
-				<input type="text" placeholder="검색..." id="searchInput"/>
-				<a href=""><span class="material-symbols-outlined"> search </span></a>
-			</div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="members_style.css" />
+  <title>관리자 페이지 1</title>
+</head>
+
+<body>
+  <div class="container">
+    <aside>
+      <div class="toggle">
+        <div class="logo">
+          <h2>관리자</h2>
+        </div>
+        <div class="close" id="close-btn">
+          <span class="material-symbols-outlined"> close </span>
+        </div>
+      </div>
+      <!--           사이드바             -->
+      <div class="sidebar">
+        <a href="../dashBoard.html">
+          <span class="material-symbols-outlined"> empty_dashboard </span>
+          <h3>대시보드</h3>
+        </a>
+        <a href="#" class="active">
+          <span class="material-symbols-outlined"> group </span>
+          <h3>회원 관리</h3>
+        </a>
+        <a href="../analysis_page/analysis.html">
+          <span class="material-symbols-outlined"> insights </span>
+          <h3>분석</h3>
+        </a>
+        <a href="..\../index.html">
+          <span class="material-symbols-outlined"> logout </span>
+          <h3>로그아웃</h3>
+        </a>
+      </div>
+      <!-- 사이드바 종료 -->
+    </aside>
+
+    <!-- 메인 컨텐츠 -->
+    <main>
+      <div class="search">
+        <input type="text" placeholder="검색..." id="searchInput" />
+        <a href=""><span class="material-symbols-outlined"> search </span></a>
+      </div>
       <ul id="searchedUserList" class="list-users"></ul>
       <div class="select">
         <select name="" id="category" onchange="onchangeSelect()">
-					<option value="All">전체 보기</option>
+          <option value="All">전체 보기</option>
           <option value="Subscrip">Subscrip</option>
-					<option value="Cancel">Cancel</option>
-				</select>
+          <option value="Cancel">Cancel</option>
+        </select>
       </div>
-			<div class="user-profile">
-				<div class="user">
-					<p class="id">
-						<img src="imgFile/profile1.png" /> &nbsp;
-						아이디: dmstn4626
-					</p>
-					<br />
-					<br />
-					<p class="subscription">
-						구독 상태: Subscrip
-					</p>
-          <p>가입 날짜: 2000.00.00</p>
-				</div>
-				<div class="user">
-					<p class="id">
-						<img src="imgFile/profile2.png" />&nbsp;
-						아이디: dmstn4626
-					</p>
-					<br />
-					<br />
-					<p class="subscription">
-						구독 상태: Subscrip
-					</p>
-          <p>가입 날짜: 2000.00.00</p>
-				</div>
-				<div class="user">
-					<p class="id">
-						<img src="imgFile/profile3.png" />&nbsp;
-						아이디: dmstn4626
-					</p>
-					<br />
-					<br />
-					<p class="subscription">
-						구독 상태: Subscrip
-					</p>
-          <p>가입 날짜: 2000.00.00</p>
-				</div>
-				<div class="user">
-					<p class="id">
-						<img src="imgFile/profile4.png" />&nbsp;
-						아이디: asdf1234
-					</p>
-					<br />
-					<br />
-					<p class="subscription">
-						구독 상태: Cancel
-					</p>
-          <p>가입 날짜: 2000.00.00</p>
-				</div>
-				<div class="user">
-					<p class="id">
-						<img src="imgFile/profile1.png" />&nbsp;
-						아이디: dmstn4626
-					</p>
-					<br />
-					<br />
-					<p class="subscription">
-						구독 상태: Subscrip
-					</p>
-          <p>가입 날짜: 2000.00.00</p>
-				</div>
+      <div class="user-profile">
         <div class="user">
-					<p class="id">
-						<img src="imgFile/profile4.png" />&nbsp;
-						아이디: dmstn4626
-					</p>
-					<br />
-					<br />
-					<p class="subscription">
-						구독 상태: Cancel
-					</p>
-          <p>가입 날짜: 2000.01.00</p>
-				</div>
-        <div class="user">
-					<p class="id">
-						<img src="imgFile/profile3.png" />&nbsp;
-						아이디: dmstn3973
-					</p>
-					<br />
-					<br />
-					<p class="subscription">
-						구독 상태: Cancel
-					</p>
-          <p>가입 날짜: 2000.02.00</p>
-				</div>
-        <div class="user">
-					<p class="id">
-						<img src="imgFile/profile2.png" />&nbsp;
-						아이디: dmstn1092
-					</p>
-					<br />
-					<br />
-					<p class="subscription">
-						구독 상태: Subscrip
-					</p>
-          <p>가입 날짜: 2000.00.00</p>
-				</div>
-			</div>
-		</main>
-		<!-- 메인 종료 -->
-
-      <!-- 오른쪽 섹션 시작 -->
-      <div class="right-section">
-        <div class="nav">
-          <button class="menu-btn">
-            <span class="material-symbols-outlined"> menu </span>
-          </button>
-
-          <div class="profile">
-            <div class="info">
-              <b>요한</b>
-              <small class="text-muted">Admin</small>
-            </div>
-            <div class="profile-photo">
-              <img src="images/kitang.jpg" />
-            </div>
-          </div>
-        </div>
-        <!-- 오른쪽 nav 종료 -->
-
-        <!-- 어드민 기능 시작 -->
-        <div class="user-profile">
-          <div class="logo">
-            <img src="./images/KITA2.JPG" />
-            <h2>회기사천왕임요한</h2>
-            <p>Web Developer</p>
-          </div>
-        </div>
-
-        <div class="reminders">
-          <div class="header">
-            <h2>알림</h2>
-              <button>
-                <span class="message-count">30</span>
-                <span class="material-symbols-outlined"> notifications_none </span>
-              </button>
-              
-          </div>
-
-          <button class="notification">
-            <div class="icon">
-              <span class="material-symbols-outlined"> volume_up </span>
-            </div>
-            <div class="content">
-              <div class="info">
-                <h3>호출</h3>
-                <small class="text_muted"> 새 알림 3 건 </small>
-              </div>
-              <span class="material-symbols-outlined"> more_vert </span>
-            </div>
-          </button>
-
-          <div class="notification deactive">
-            <div class="icon">
-              <span class="material-symbols-outlined"> edit </span>
-            </div>
-            <div class="content">
-              <div class="info">
-                <h3>공지사항 쓰기</h3>
-                <small class="text_muted"> 최근 1개 등록함 </small>
-              </div>
-              <span class="material-symbols-outlined"> more_vert </span>
-            </div>
-          </div>
-
-          <div class="notification add-reminders">
+          <p class="id">
+            <img src="imgFile/profile1.png" /> &nbsp;
+            아이디: dmstn4626
+          </p>
+          <br />
+          <input type="checkbox" id="popup">
+          <label for="popup" class="material-symbols-outlined">settings</label>
+          <div>
             <div>
-              <span class="material-symbols-outlined"> add </span>
-              <h3>새 기능 추가</h3>
+              <div class="name">
+                <span>아이디: dmstn4626</span> <br>
+                <span>구독 상태: Subscrip</span>
+                <br>
+              </div>
             </div>
+            <label for="popup"></label>
+          </div>
+          <p class="subscription">
+            구독 상태: Subscrip
+          </p>
+          <p>가입 날짜: 2000.00.00</p>
+        </div>
+        <div class="user">
+          <p class="id">
+            <img src="imgFile/profile2.png" />&nbsp;
+            아이디: dmstn4626
+          </p>
+          <br />
+          <input type="checkbox" id="popup">
+          <label for="popup" class="material-symbols-outlined">settings</label>
+          <div>
+            <div>
+
+            </div>
+            <label for="popup"></label>
+          </div>
+          <p class="subscription">
+            구독 상태: Subscrip
+          </p>
+          <p>가입 날짜: 2000.00.00</p>
+        </div>
+        <div class="user">
+          <p class="id">
+            <img src="imgFile/profile3.png" />&nbsp;
+            아이디: dmstn4626
+          </p>
+          <br />
+          <input type="checkbox" id="popup">
+          <label for="popup" class="material-symbols-outlined">settings</label>
+          <div>
+            <div>
+
+            </div>
+            <label for="popup"></label>
+          </div>
+          <p class="subscription">
+            구독 상태: Subscrip
+          </p>
+          <p>가입 날짜: 2000.00.00</p>
+        </div>
+        <div class="user">
+          <p class="id">
+            <img src="imgFile/profile4.png" />&nbsp;
+            아이디: asdf1234
+          </p>
+          <br />
+          <input type="checkbox" id="popup">
+          <label for="popup" class="material-symbols-outlined">settings</label>
+          <div>
+            <div>
+
+            </div>
+            <label for="popup"></label>
+          </div>
+          <p class="subscription">
+            구독 상태: Cancel
+          </p>
+          <p>가입 날짜: 2000.00.00</p>
+        </div>
+        <div class="user">
+          <p class="id">
+            <img src="imgFile/profile1.png" />&nbsp;
+            아이디: dmstn4626
+          </p>
+          <br />
+          <input type="checkbox" id="popup">
+          <label for="popup" class="material-symbols-outlined">settings</label>
+          <div>
+            <div>
+
+            </div>
+            <label for="popup"></label>
+          </div>
+          <p class="subscription">
+            구독 상태: Subscrip
+          </p>
+          <p>가입 날짜: 2000.00.00</p>
+        </div>
+        <div class="user">
+          <p class="id">
+            <img src="imgFile/profile4.png" />&nbsp;
+            아이디: dmstn4626
+          </p>
+          <br />
+          <input type="checkbox" id="popup">
+          <label for="popup" class="material-symbols-outlined">settings</label>
+          <div>
+            <div>
+
+            </div>
+            <label for="popup"></label>
+          </div>
+          <p class="subscription">
+            구독 상태: Cancel
+          </p>
+          <p>가입 날짜: 2000.01.00</p>
+        </div>
+        <div class="user">
+          <p class="id">
+            <img src="imgFile/profile3.png" />&nbsp;
+            아이디: dmstn3973
+          </p>
+          <br />
+          <input type="checkbox" id="popup">
+          <label for="popup" class="material-symbols-outlined">settings</label>
+          <div>
+            <div>
+
+            </div>
+            <label for="popup"></label>
+          </div>
+          <p class="subscription">
+            구독 상태: Cancel
+          </p>
+          <p>가입 날짜: 2000.02.00</p>
+        </div>
+        <div class="user">
+          <p class="id">
+            <img src="imgFile/profile2.png" />&nbsp;
+            아이디: dmstn1092
+          </p>
+          <br />
+          <input type="checkbox" id="popup">
+          <label for="popup" class="material-symbols-outlined">settings</label>
+          <div>
+            <div>
+
+            </div>
+            <label for="popup"></label>
+          </div>
+          <p class="subscription">
+            구독 상태: Subscrip
+          </p>
+          <p>가입 날짜: 2000.00.00</p>
+        </div>
+      </div>
+    </main>
+    <!-- 메인 종료 -->
+
+    <!-- 오른쪽 섹션 시작 -->
+    <div class="right-section">
+      <div class="nav">
+        <button class="menu-btn">
+          <span class="material-symbols-outlined"> menu </span>
+        </button>
+
+        <div class="profile">
+          <div class="info">
+            <b>요한</b>
+            <small class="text-muted">Admin</small>
+          </div>
+          <div class="profile-photo">
+            <img src="images/kitang.jpg" />
           </div>
         </div>
-        <!-- 리마인더 종료 -->
       </div>
-      <!-- 오른쪽 섹션 종료 -->
+      <!-- 오른쪽 nav 종료 -->
+
+      <!-- 어드민 기능 시작 -->
+      <div class="user-profile">
+        <div class="logo">
+          <img src="./images/KITA2.JPG" />
+          <h2>회기사천왕임요한</h2>
+          <p>Web Developer</p>
+        </div>
+      </div>
+
+      <div class="reminders">
+        <div class="header">
+          <h2>알림</h2>
+          <button>
+            <span class="message-count">30</span>
+            <span class="material-symbols-outlined"> notifications_none </span>
+          </button>
+
+        </div>
+
+        <button class="notification">
+          <div class="icon">
+            <span class="material-symbols-outlined"> volume_up </span>
+          </div>
+          <div class="content">
+            <div class="info">
+              <h3>호출</h3>
+              <small class="text_muted"> 새 알림 3 건 </small>
+            </div>
+            <span class="material-symbols-outlined"> more_vert </span>
+          </div>
+        </button>
+
+        <div class="notification deactive">
+          <div class="icon">
+            <span class="material-symbols-outlined"> edit </span>
+          </div>
+          <div class="content">
+            <div class="info">
+              <h3>공지사항 쓰기</h3>
+              <small class="text_muted"> 최근 1개 등록함 </small>
+            </div>
+            <span class="material-symbols-outlined"> more_vert </span>
+          </div>
+        </div>
+
+        <div class="notification add-reminders">
+          <div>
+            <span class="material-symbols-outlined"> add </span>
+            <h3>새 기능 추가</h3>
+          </div>
+        </div>
+      </div>
+      <!-- 리마인더 종료 -->
     </div>
-    <!-- 컨테이너 종료 -->
-    <script src="order.js"></script>
-    <script src="index.js"></script>
-    <script src="filter.js"></script>
-    <script src="searchUser.js"></script>
-  </body>
+    <!-- 오른쪽 섹션 종료 -->
+  </div>
+  <!-- 컨테이너 종료 -->
+  <script src="order.js"></script>
+  <script src="index.js"></script>
+  <script src="filter.js"></script>
+  <script src="searchUser.js"></script>
+</body>
+
 </html>
