@@ -433,8 +433,6 @@ p{
     100%{
         box-shadow: 0 0 0 rgb(255, 193, 7, 0);
     }
-<<<<<<< Updated upstream
-=======
 }
 /* progress-bar */
 #progress{
@@ -463,5 +461,4 @@ p{
 
 .bxs-hot{
     color: red;
->>>>>>> Stashed changes
 }
