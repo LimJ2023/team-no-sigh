@@ -14,9 +14,9 @@ public class RootAppContext {
 	public BasicDataSource source() {
 		BasicDataSource source = new BasicDataSource();
 		source.setDriverClassName("oracle.jdbc.OracleDriver");
-		//source.setUrl("jdbc:oracle:thin:@localhost:1521:xe");
+		source.setUrl("jdbc:oracle:thin:@localhost:1521:xe");
 		
-		source.setUrl("jdbc:oracle:thin:@192.168.123.141:1521:xe");
+		//source.setUrl("jdbc:oracle:thin:@192.168.123.141:1521:xe");
 		
 		source.setUsername("streamer");
 		source.setPassword("12345");
