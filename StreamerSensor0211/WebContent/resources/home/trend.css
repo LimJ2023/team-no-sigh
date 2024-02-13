@@ -186,9 +186,12 @@ header{
 /*====================================================*/
 
 
+.rank-container {
+	
+	margin-top: 50px;
+}
 
 .rankContents{
-    width: 1200px;
     background-color: transparent;
     margin: auto;
     margin-top: 400px;
@@ -217,7 +220,12 @@ header{
 
 
 .rankContents{
+	margin-top: 10px;
     align-items: center;
+}
+.rank-content-horizon {
+	height: 100px;
+	margin-top: 10px;
 }
 
 .rankContents>H2{
@@ -306,7 +314,7 @@ header{
     text-align: center;
 }
 .trend-section .rank-content-vertical{
-    margin-top: 20px;
+    margin-top: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -327,7 +335,26 @@ header{
 }
 
 .trend-section .rank-content-horizon{
-    margin-top: 10px;
+    margin-top: 100px;
+}
+.horizon-buttons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 150px;
+}
+.horizon-buttons button{
+	width: 100px;
+	height: 70px;
+	margin: 20px 40px;
+	background-color: #566078;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.horizon-buttons button:hover{
+	background-color: var(--hover-color);
 }
 .trend-section .rank-info{
     margin: 10px 70px;

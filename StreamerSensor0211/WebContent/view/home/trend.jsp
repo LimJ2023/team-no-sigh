@@ -5,8 +5,6 @@
 <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="home/trend.css" />
-    <!-- link swiper css -->
-    <link rel="stylesheet" href="swiper-bundle.min.css" />
     <!-- Fav icon -->
     <link rel="shortcut icon" href="img/fav-icon.png" type="image/x-icon" />
     <!-- box icons -->
@@ -70,7 +68,14 @@
 
     <section class="trend-section">
       <div class="rank-container">
-        <div class="rank-content-horizon">가장 인기있는 방송 목록</div>
+        <div class="rank-content-horizon">
+        	<h2>가장 있기있는 방송 목록</h2>
+        	<div class="horizon-buttons">
+        		<button>연령대별</button>
+        		<button>국적별</button>
+        		<button>추세별</button>
+        	</div>
+        </div>
         <div class="rank-content-vertical">
           <div class="rank-ver-list">
             <div class="list-category">
