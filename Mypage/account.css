@@ -98,14 +98,14 @@ small{
 }
 
 .bg-dark{
-    background: #27282f;
+    background: #2c2c2c;
     box-shadow: 0 0.8rem 0.8rem rgba(0, 0, 0, 0.2) ;
 }
 
 /* ==============nav bar============ */
 nav{
     width: 100%;
-    background: var(--color-white);
+    background: #2c2c2c;
     padding: 1rem 0;
 }
 nav .container{
@@ -115,7 +115,7 @@ nav .container{
     position: relative;
     width: 96%;
     margin: 0 auto;
-    background: black;
+    background: #2c2c2c;
 }
 
 nav img.logo{
