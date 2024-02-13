@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.domain.Admin;
+import com.domain.SiteInfo;
 import com.service.AdminService;
 
 @Controller
@@ -17,7 +18,9 @@ public class AdminController {
 	@RequestMapping(value = "/admin")
 	public String adminPage(Model model) {
 		Admin admin = adminService.getAdmin();
+		SiteInfo info = adminService.getSiteInfo();
 		model.addAttribute("admin", admin);
+		model.addAttribute("info",info);
 		return "/admin/dashBoard";
 	}
 }
