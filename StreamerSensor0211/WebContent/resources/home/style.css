@@ -193,18 +193,14 @@ header{
 
 /*====================================================*/
 
-/* Events */
+/* 오늘의 최고 시청 방송 */
 
 
 
-.events{
-	max-width: 1200px;
-    /*width: 100%;*/
-    /*width: 80%;*/
+.todays{
+	width: 1100px;
 	height: auto;
-	/*margin: 15px auto;*/
-	/*margin-top: 30px;*/
-    margin-left: 400px;
+    margin: auto;
     align-items: center;
     text-align: center;
     margin-top: 210px;
@@ -217,41 +213,30 @@ header{
 	color: white;
 }
 
-/*
-.carouselBody{
-    width: 100%;
-    height: auto;
-}
-*/
 
-.row{
+.todays_row{
+	width: 100%;
     display: flex;
 	align-items: center;
-	/*width: 100%;*/
-	justify-content: space-between;
-	/*margin: auto;*/
+	justify-content: center;
 }
 
-.row .col {
-	/*display: flex;*/
-	/*flex-direction: column;*/
+.todays_row .todays_col {
 	align-items: center;
-	background-color: rgb(39, 159, 252);
-	/*background: transparent;*/
-/*	background: #A2CDE3;*/
+	/*background-color: rgb(39, 159, 252);*/
 	justify-content: space-between;
 	border-radius: 10px;
 	margin-right: 20px;
-	width: 200px;
-	height: 170px;
+	width: 190px;
+	height: 190px;
 	text-align: center;
 	box-sizing: border-box;
-	border: 3px solid transparent;
-/*	border: 3px solid black;*/
+	border: 3px solid rgb(39,159,252);
+	background-color: transparent;
 	cursor: pointer;
 }
 
-.col .humanIcon{
+.todays_col .humanIcon{
 	max-width: 90%;
 	height: auto;
 	margin-top: 5px;
@@ -265,11 +250,6 @@ header{
 	cursor: pointer;
 }
 
-/*.col > figure > .humanIcon{
-	max-width: 70%;
-	height: auto;
-	margin-top: 5px;
-}*/
 
 .chzzkLogo{
 	width: 30px;
@@ -279,11 +259,11 @@ header{
 	cursor: pointer;
 }
 
-.col .streamerName{
+.todays_col .streamerName{
 	margin: 3px
 }
 
-.events .row{
+.events .todays_row{
 	margin-top: 5px;
 }
 
@@ -299,34 +279,33 @@ p{
 }
 
 .colTop{
-	border: 3px solid gold;
-	width: 120px;
+	width: 100%;
+	height:100%;
 }
 
 
-.col:hover {
+.todays_col:hover {
 
-  border-radius: 3px;
-   border-style: solid;
- border-image: linear-gradient(180deg, rgb(64, 255, 244),  rgb(64, 186, 255))1;;
- /*  border-color: hotpink;*/
+ border-radius: 3px;
+ border-style: solid;
  border-radius: 10px;
+ border-color : #00ff9f;
 }
 
-.events .ctn{
+.todays .ctn{
 	margin-top: 30px;
+}
+
+.todays_col figure{
+	width: 160px;
+	height: 180px;
 }
 
 /* 이런 방송은 어떠세요 */
 .expolore{
 	width: 80%;
 	height: 80vh;
-/*	background-image: url('../img/bg2.png');
-	background-position: center;*/
-	/*background-size: cover;
-	background-repeat: no-repeat;
-	display: flex;
-	align-items: center;*/
+
 }
 
 .explore-content{
@@ -339,7 +318,6 @@ p{
 }
 
 .explore-content h1{
-	font-size: 7vmin;
 	margin: 50px;
 }
 
@@ -361,7 +339,8 @@ p{
 	border-radius: 10px;
 	width: 350px;
 	height: auto;
-	background-color: #4163AE;
+	border: 3px solid rgb(39,159,252);
+	background-color: transparent;
 	align-items: center;
 	text-align: center;
 	color: white;
