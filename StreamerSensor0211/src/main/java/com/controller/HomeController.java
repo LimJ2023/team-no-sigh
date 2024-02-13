@@ -11,4 +11,12 @@ public class HomeController {
 	public String home() {
 		return "/home/index";
 	}
+
+	// home 링크를 누르면 index
+	@RequestMapping(value = "/home", method = RequestMethod.GET)
+	public String home2() {
+		return "/home/index";
+	}
+
+	
 }

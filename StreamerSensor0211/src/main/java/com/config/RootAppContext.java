@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 @Configuration
-@ComponentScan(basePackages = {"main.java.com.service", "main.java.com.mapper"})
+@ComponentScan(basePackages = {"com.service", "com.mapper"})
 public class RootAppContext {
 	
 	@Bean

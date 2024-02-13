@@ -7,7 +7,6 @@
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
                 
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
                 
         <property name="java-output-path" value="/SetreamerSensor0208/build/classes"/>
         <property name="context-root" value="StreamerSensor0211"/>

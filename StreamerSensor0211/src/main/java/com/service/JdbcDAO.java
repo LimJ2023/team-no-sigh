@@ -7,7 +7,9 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
 import com.domain.Admin;
+import com.domain.SiteInfo;
 import com.mapper.AdminMapper;
+import com.mapper.SiteInfoMapper;
 
 @Component
 public class JdbcDAO {
@@ -16,6 +18,8 @@ public class JdbcDAO {
 	private JdbcTemplate db;
 	@Autowired
 	AdminMapper adMapper;
+	@Autowired
+	SiteInfoMapper siteInfoMapper;
 
 	public List<Admin> select_adminYohan() {
 
@@ -38,6 +42,12 @@ public class JdbcDAO {
 		String name = db.queryForObject(sql, String.class);
 		bean.setAdmin_name(name);
 		return bean;
+	}
+	
+	public List<SiteInfo> select_SiteInfo() {
+		String sql = "select stat_id, total_revenue, visit_count from site_stat";
+		List<SiteInfo> info = db.query(sql, siteInfoMapper);
+		return info;
 	}
 
 	/*
