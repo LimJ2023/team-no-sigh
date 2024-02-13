@@ -1,4 +1,4 @@
-package main.java.com.service;
+package com.service;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
-import main.java.com.domain.Users;
-import main.java.com.mapper.UsersMapper;
+import com.domain.Users;
+import com.mapper.UsersMapper;
 
 @Component
 public class UsersDAO {

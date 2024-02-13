@@ -1,4 +1,4 @@
-package main.java.com.domain;
+package com.domain;
 
 public class Admin {
 	
