@@ -443,15 +443,18 @@ INSERT INTO streaming_preference VALUES(25, 57, 85, 47, 14);
 INSERT INTO streaming_preference VALUES(23, 55, 80, 45, 16);
 INSERT INTO streaming_preference VALUES(20, 50, 70, 40, 15);
 
+SELECT * FROM users;
 
 ALTER TABLE users ADD subscription VARCHAR2(1);
 
 UPDATE users SET subscription = 'y' WHERE user_num = 1;
 
 --2~4 짝수 subscription n
+UPDATE users SET subscription = 'n' WHERE user_num = 2;
 UPDATE users SET subscription = 'n' WHERE user_num = 4;
 
 --2~5 홀수 subscription y
+UPDATE users SET subscription = 'y' WHERE user_num = 3;
 UPDATE users SET subscription = 'y' WHERE user_num = 5;
 
 

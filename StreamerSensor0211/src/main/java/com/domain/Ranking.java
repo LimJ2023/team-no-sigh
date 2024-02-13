@@ -1,5 +1,7 @@
 package com.domain;
 
+import java.text.SimpleDateFormat;
+
 public class Ranking {
 
 	private int ranking_id;
@@ -128,6 +130,7 @@ public class Ranking {
 		this.streaming_date = streaming_date;
 	}
 	
+
 	
 	
 }

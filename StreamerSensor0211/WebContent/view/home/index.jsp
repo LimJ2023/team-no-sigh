@@ -140,70 +140,78 @@
         </div>
     </div>
 </div>
-<!-- == Events == -->
-<section class="events">
+
+
+
+<!-- == 오늘의 최고 시청 방송 == -->
+<section class="todays">
     <div class="title">
         <h3>오늘의 최고 시청 방송</h3>
-        <div class="line"></div>
     </div>
-    <div class="row">
-        <div class="col colTop">
+    <div class="todays_row">
+        <div class="todays_col colTop">
             <figure>
                 <img src="./img/0101.png" class="humanIcon"/>
                 <figcaption class="humanIconCap">방송1</figcaption>
                 <figcaption>view: 12k</figcaption>
+                <img src="./img/6-10.png" class="youtubeLogo"
+                    onclick="javascript:window.location='https://www.youtube.com/';"/>
             </figure>
-            <p><img src="./img/6-10.png" class="youtubeLogo"
-                    onclick="javascript:window.location='https://www.youtube.com/';"/></p>
+            
         </div>
 
-        <div class="col">
+        <div class="todays_col">
             <figure>
                 <img src="./img/0102.png" class="humanIcon"/>
                 <figcaption class="humanIconCap">방송2</figcaption>
                 <figcaption>view: 10k</figcaption>
+                <img src="./img/6-10.png" class="youtubeLogo"
+                    onclick="javascript:window.location='https://www.youtube.com/watch?v=d-p4mMGYI7o';"/>
             </figure>
-            <p><img src="./img/6-10.png" class="youtubeLogo"
-                    onclick="javascript:window.location='https://www.youtube.com/watch?v=d-p4mMGYI7o';"/></p>
+            
         </div>
 
-        <div class="col">
+        <div class="todays_col">
             <figure>
                 <img src="./img/0103.png" class="humanIcon"/>
                 <figcaption class="humanIconCap">방송3</figcaption>
                 <figcaption>view: 4.5k</figcaption>
+                <img src="./img/6-10.png" class="youtubeLogo"
+                    onclick="javascript:window.location='https://www.youtube.com/watch?v=ZdJSHEczi_0';"/>
             </figure>
-            <p><img src="./img/6-10.png" class="youtubeLogo"
-                    onclick="javascript:window.location='https://www.youtube.com/watch?v=ZdJSHEczi_0';"/></p>
+            
         </div>
 
-        <div class="col">
+        <div class="todays_col">
             <figure>
                 <img src="./img/0104.png" class="humanIcon"/>
                 <figcaption class="humanIconCap">방송4</figcaption>
                 <figcaption>view: 3k</figcaption>
+                <img src="./img/chhzk.png" class="chzzkLogo"
+                    onclick="javascript:window.location='https://chzzk.naver.com/';"/>
             </figure>
-            <p><img src="./img/chhzk.png" class="chzzkLogo"
-                    onclick="javascript:window.location='https://chzzk.naver.com/';"/></p>
+            
         </div>
 
-        <div class="col">
+        <div class="todays_col">
             <figure>
                 <img src="./img/0105.png" class="humanIcon"/>
                 <figcaption class="humanIconCap">방송5</figcaption>
                 <figcaption>view: 1.2k</figcaption>
+                <img src="./img/6-10.png" class="youtubeLogo"
+                    onclick="javascript:window.location='https://www.youtube.com/watch?v=ZdJSHEczi_0';"/>
             </figure>
-            <p><img src="./img/6-10.png" class="youtubeLogo"
-                    onclick="javascript:window.location='https://www.youtube.com/watch?v=ZdJSHEczi_0';"/></p>
+            
         </div>
-        <div class="col">
+        <div class="todays_col">
             <figure>
                 <img src="./img/0106.png" class="humanIcon"/>
                 <figcaption class="humanIconCap">방송6</figcaption>
                 <figcaption>view: 3k</figcaption>
+                <img src="./img/chhzk.png" class="chzzkLogo"
+                    onclick="javascript:window.location='https://chzzk.naver.com/';"/>
             </figure>
-            <p><img src="./img/chhzk.png" class="chzzkLogo"
-                    onclick="javascript:window.location='https://chzzk.naver.com/';"/></p>
+            
         </div>
     </div>
 </section>
@@ -221,8 +229,6 @@
             </figure>
         </div>
 
-        <a href="#" class="ctn">자세히 보기 zz</a>
-        <img src="" alt=""/>
     </div>
 
 </section>
