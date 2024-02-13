@@ -20,7 +20,7 @@
     <!-- nav -->
     <div class="nav container">
         <!-- logo -->
-        <a href="index.html" class="logo">
+        <a href="home" class="logo">
             Streamer<span>Sensor</span>
         </a>
         <!-- search box (검색)-->
@@ -34,7 +34,7 @@
         </a>
         <!-- navbar (각각 달아줘야함)-->
         <div class="navbar">
-            <a href="./index.html" class="nav-link nav-active">
+            <a href="home" class="nav-link nav-active">
                 <i class='bx bx-home'></i>
                 <span class="nav-link-title">home</span>
             </a>

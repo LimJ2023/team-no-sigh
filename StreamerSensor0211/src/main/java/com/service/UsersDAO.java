@@ -20,7 +20,7 @@ public class UsersDAO {
 	
 	
 	public List<Users> select_user(){
-			String sql = "SELECT * FROM users WHERE user_num = 1";
+			String sql = "SELECT * FROM users WHERE user_num = 2";
 		//String sql = "SELECT * FROM users WHERE user_num = 2";
 		List<Users> users = db.query(sql, uMapper);
 		return users;
