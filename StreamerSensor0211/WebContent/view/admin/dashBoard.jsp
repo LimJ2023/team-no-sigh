@@ -54,14 +54,14 @@
             <div class="status">
               <div class="info">
                 <h3>총 매출</h3>
-                <h1>$65,024</h1>
+                <h1>${info.total_revenue}</h1>
               </div>
               <div class="progress">
                 <svg>
                   <circle cx="38" cy="38" r="36"></circle>
                 </svg>
                 <div class="percentage">
-                  <p>+81%</p>
+                  <p>${info.increase_revenue }%</p>
                 </div>
               </div>
             </div>
@@ -70,14 +70,14 @@
             <div class="status">
               <div class="info">
                 <h3>사이트 방문수</h3>
-                <h1>24,984</h1>
+                <h1>${info.visit_count}</h1>
               </div>
               <div class="progress">
                 <svg>
                   <circle cx="38" cy="38" r="36"></circle>
                 </svg>
                 <div class="percentage">
-                  <p>-48%</p>
+                  <p>${info.increase_visit }%</p>
                 </div>
               </div>
             </div>
