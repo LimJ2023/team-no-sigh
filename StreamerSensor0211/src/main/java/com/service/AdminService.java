@@ -21,6 +21,7 @@ public class AdminService {
 	}
 	
 	public SiteInfo getSiteInfo() {
+		
 		SiteInfo info1 = new SiteInfo();
 		SiteInfo info2 = new SiteInfo();
 		SiteInfo result_info = new SiteInfo();

@@ -163,6 +163,31 @@ CREATE TABLE admin(
     last_login TIMESTAMP
 );
 
+--사이트 운영 통계 테이블--
+DROP TABLE site_stat;
+CREATE TABLE site_stat (
+    stat_id NUMBER PRIMARY KEY,
+    visit_count NUMBER,
+    page_views NUMBER,
+    day_revenue NUMBER,
+    total_revenue NUMBER,
+    new_members NUMBER,
+    total_members NUMBER,
+    browser_stats VARCHAR2(255),
+    security_events VARCHAR2(255),
+    server_monitoring VARCHAR2(255),
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-----------사이트 운영 통계 인설트--------------
+INSERT INTO site_stat (stat_id,visit_count,page_views,day_revenue,total_revenue,new_members,total_members)
+    VALUES(1,100,5000,30000,100000,3,10);
+    
+INSERT INTO site_stat (stat_id,visit_count,page_views,day_revenue,total_revenue,new_members,total_members)
+    VALUES(2,240,8000,32000,182000,1,11);
+
+select * from site_stat;
+
 
 ----------------------------------------------------------------------
 

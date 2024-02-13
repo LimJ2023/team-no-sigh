@@ -71,7 +71,7 @@
         <div class="rank-content-horizon">
         	<h2>가장 있기있는 방송 목록</h2>
         	<div class="horizon-buttons">
-        		<button>연령대별</button>
+        		<button id="age">연령대별</button>
         		<button>국적별</button>
         		<button>추세별</button>
         	</div>
