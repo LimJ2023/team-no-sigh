@@ -21,7 +21,7 @@
       <!-- nav -->
       <div class="nav container">
         <!-- logo -->
-        <a href="../index.html" class="logo"> Streamer<span>Sensor</span> </a>
+        <a href="home" class="logo"> Streamer<span>Sensor</span> </a>
         <!-- search box (검색)-->
         <div class="search-box">
           <input
@@ -46,9 +46,9 @@
             <i class="bx bxs-hot"></i>
             <span class="nav-link-title">trending</span>
           </a>
-          <a href="../rankPage/rankPage.html" class="nav-link">
+          <a href="leaderBoard" class="nav-link">
             <i class="bx bx-bar-chart-alt-2"></i>
-            <span class="nav-link-title">readerBoard</span>
+            <span class="nav-link-title">leaderBoard</span>
           </a>
           <a href="../noticeBoardPage/noticeBoard.html" class="nav-link">
             <i class="bx bx-message-detail"></i>

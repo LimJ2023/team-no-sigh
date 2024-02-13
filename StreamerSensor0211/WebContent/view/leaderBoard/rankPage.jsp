@@ -23,7 +23,7 @@
 		<!-- nav -->
 		<div class="nav container">
 			<!-- logo -->
-			<a href="${pageContext.request.contextPath}/home" class="logo"> Streamer<span>Sensor</span>
+			<a href="home" class="logo"> Streamer<span>Sensor</span>
 			</a>
 			<!-- search box (검색)-->
 			<div class="search-box">
@@ -36,9 +36,9 @@
 			</a>
 			<!-- navbar (각각 달아줘야함)-->
 			<div class="navbar">
-				<a href="#" class="nav-link nav-active"> <i
+				<a href="home" class="nav-link nav-active"> <i
 					class='bx bx-home'></i> <span class="nav-link-title">home</span>
-				</a> <a href="../trend_page/trendPage.html" class="nav-link"> <i
+				</a> <a href="trend" class="nav-link"> <i
 					class='bx bxs-hot'></i> <span class="nav-link-title">trending</span>
 				</a> <a href="leaderBoard" class="nav-link"> <i
 					class='bx bx-bar-chart-alt-2'></i> <span class="nav-link-title">leaderBoard</span>
@@ -74,9 +74,12 @@
 			<h1 style= color:red> 구독o 계정 테스트 시 UsersDAO 에서 sql문 1번 선택하기</h1>
 
 			
-			<!-- <select class="categoryFilter form-control">
-				<option value="">Show All</option>
-			</select> <br /> <a href="past/rankPagePast1.jsp">과거순위확인(임시)</a> -->
+			
+			
+			
+			
+			
+		
 
 		</div>
 
@@ -94,13 +97,33 @@
 							<th scope="col">카테고리</th>
 							
 						</tr>
+						
+						<tr class="rank-table-filters">
+							<td class="td_filter">
+							</td>
+							<td class="td_filter">
+								<input type="text" id="myInput" onkeyup="filterFunction()" placeholder="스트리머 검색" class="searchInput"/>
+							</td>
+							<td class="td_filter">
+								<input type="text" id="titleInput" onkeyup="filterTitleFunction()" placeholder="제목 검색" class="searchInput"/>
+							</td>
+							<td class="td_filter"></td>
+							<td class = "td_filter">
+								<select name="categorySelect" id="categorySelect"
+									onchange="selectFunction()" class="categorySelect">
+									<option value="" class="categoryOption">Category</option>
+									<option value="게임" class="categoryOption">게임</option>
+									<option value="수다" class="categoryOption">수다</option>
+								</select>
+							</td>
+					</tr>
 					</thead>
 
 					<tbody class="tbody">
 					
 					<c:forEach var="ranking" items="${rankings}">
 						
-					<tr>
+					<tr id = "table_row">
 						<c:if test="${users.subscription eq 'y'}">
 						<td>${ranking.rank_place }</td>
 						<td>
@@ -219,4 +242,5 @@
 		</div>
 	</footer>
 </body>
+<script src="leaderBoard/filter.js"></script>
 </html>

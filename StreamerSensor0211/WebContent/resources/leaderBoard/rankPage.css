@@ -162,6 +162,36 @@ header{
 }
 
 
+/*====================================================*/
+
+/*---------------검색-------------------------*/
+
+.searchInput{
+	background-color: transparent;
+	border:none;
+	border-bottom: 2px solid #00e7ff;
+	border-radius: 2px;
+	color: white;
+	
+}
+
+.searchInput:focus{
+	outline: 2px solid orange;
+	border: 2px solid transparent;
+}
+
+
+.categorySelect{
+	background-color:transparent;
+	color: white;
+	border: none;
+	border-bottom: 2px solid #00e7ff;
+}
+
+.categorySelect .categoryOption{
+	background-color:black;
+}
+
 
 /*====================================================*/
 
@@ -321,6 +351,9 @@ header{
 .rankHead a:visited{
 	color: blue;
 }
+
+
+
 
 
 
