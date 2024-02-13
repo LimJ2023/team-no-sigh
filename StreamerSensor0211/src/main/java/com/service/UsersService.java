@@ -1,9 +1,9 @@
-package com.service;
+package main.java.com.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.domain.Users;
+import main.java.com.domain.Users;
 
 @Service
 public class UsersService {

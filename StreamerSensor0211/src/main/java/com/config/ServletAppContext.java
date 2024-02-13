@@ -1,4 +1,4 @@
-package com.config;
+package main.java.com.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -9,7 +9,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "com.controller")
+@ComponentScan(basePackages = "main.java.com.controller")
 public class ServletAppContext implements WebMvcConfigurer{
 	
 	//Controller 메서드가 반환하는 jsp 이름 앞뒤에 경로, 확장자 설정

@@ -1,4 +1,4 @@
-package com.domain;
+package main.java.com.domain;
 
 
 public class Users {

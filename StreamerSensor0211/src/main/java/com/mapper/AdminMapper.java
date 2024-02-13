@@ -1,4 +1,4 @@
-package com.mapper;
+package main.java.com.mapper;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
 
-import com.domain.Admin;
+import main.java.com.domain.Admin;
 
 @Component
 public class AdminMapper implements RowMapper<Admin>{

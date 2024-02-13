@@ -1,4 +1,4 @@
-package com.config;
+package main.java.com.config;
 
 import javax.servlet.FilterRegistration;
 import javax.servlet.ServletContext;

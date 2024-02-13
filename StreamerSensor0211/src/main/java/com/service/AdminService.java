@@ -1,9 +1,9 @@
-package com.service;
+package main.java.com.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.domain.Admin;
+import main.java.com.domain.Admin;
 
 @Service
 public class AdminService {

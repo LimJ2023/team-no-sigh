@@ -1,4 +1,4 @@
-package com.mapper;
+package main.java.com.mapper;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
 
-import com.domain.Users;
+import main.java.com.domain.Users;
 
 @Component
 public class UsersMapper implements RowMapper<Users>{

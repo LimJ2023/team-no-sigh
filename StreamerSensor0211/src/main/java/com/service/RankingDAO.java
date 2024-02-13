@@ -1,4 +1,4 @@
-package com.service;
+package main.java.com.service;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
-import com.domain.Ranking;
-import com.mapper.RankingMapper;
+import main.java.com.domain.Ranking;
+import main.java.com.mapper.RankingMapper;
 
 @Component
 public class RankingDAO {
