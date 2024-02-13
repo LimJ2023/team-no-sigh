@@ -17,6 +17,7 @@ public class AdminMapper implements RowMapper<Admin>{
 		Admin admin = new Admin();
 		admin.setAdmin_name(rs.getString("admin_name"));
 		admin.setEmail(rs.getString("email"));
+		
 		return admin;
 	}
 

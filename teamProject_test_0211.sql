@@ -480,6 +480,23 @@ UPDATE users SET subscription = 'n' WHERE user_num = 4;
 UPDATE users SET subscription = 'y' WHERE user_num = 5;
 
 
+--스트리머 레코드를 추가할 때마다 strm_num 값이 1 늘어나게 하는 시퀀스와 트리거
+-- Create a sequence
+CREATE SEQUENCE record_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NOCACHE;
+
+-- Create a trigger
+CREATE OR REPLACE TRIGGER increase_id_trigger
+BEFORE INSERT ON streamer
+FOR EACH ROW
+BEGIN
+    :NEW.strm_num := record_id_seq.NEXTVAL;
+END;
+/
+
+
 --------------------------------------------------------------------
 
 
