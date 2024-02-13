@@ -18,9 +18,5 @@ public class HomeController {
 		return "/home/index";
 	}
 
-	// 트렌드 화면
-	@RequestMapping(value = "/trend", method = RequestMethod.GET)
-	public String trend() {
-		return "/home/trend";
-	}
+	
 }
