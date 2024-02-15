@@ -37,7 +37,7 @@
             <span class="material-symbols-outlined"> insights </span>
             <h3>분석</h3>
           </a>
-          <a href="../index.html">
+          <a href="/home">
             <span class="material-symbols-outlined"> logout </span>
             <h3>로그아웃</h3>
           </a>
@@ -198,10 +198,9 @@
                 <span class="message-count">30</span>
                 <span class="material-symbols-outlined"> notifications_none </span>
               </button>
-              
           </div>
 
-          <button class="notification">
+          <div class="notification">
             <div class="icon">
               <span class="material-symbols-outlined"> volume_up </span>
             </div>
@@ -212,7 +211,7 @@
               </div>
               <span class="material-symbols-outlined"> more_vert </span>
             </div>
-          </button>
+          </div>
 
           <div class="notification deactive">
             <div class="icon">
@@ -222,6 +221,19 @@
               <div class="info">
                 <h3>공지사항 쓰기</h3>
                 <small class="text_muted"> 최근 1개 등록함 </small>
+              </div>
+              <span class="material-symbols-outlined"> more_vert </span>
+            </div>
+          </div>
+
+          <div class="notification deactive">
+            <div class="icon">
+              <span class="material-symbols-outlined"> edit </span>
+            </div>
+            <div class="content">
+              <div class="info">
+                <h3>유튜브 api 가져오기</h3>
+                <small class="text_muted"> 최근 1개 가져옴 </small>
               </div>
               <span class="material-symbols-outlined"> more_vert </span>
             </div>
@@ -237,9 +249,12 @@
         <!-- 리마인더 종료 -->
       </div>
       <!-- 오른쪽 섹션 종료 -->
+      
     </div>
     <!-- 컨테이너 종료 -->
+    <script src="https://apis.google.com/js/api.js"></script>
+	<script src="admin/youtube_api.js"></script>
     <script src="admin/order.js"></script>
-    <script src="admin/index.js"></script>
+    <script src="admin/admin.js"></script>
   </body>
 </html>
