@@ -116,23 +116,23 @@
           <div class="user-list">
             <div class="user">
               <img src="img/admin/profile1.png" />
-              <h2>Bocchi</h2>
-              <p>55 Min Ago</p>
+              <h2>${user.user_name}</h2>
+              <p>${user.user_age} </p>
             </div>
             <div class="user">
               <img src="img/admin/profile2.png" />
-              <h2>Nijika</h2>
-              <p>50 Min Ago</p>
+              <h2>${user.user_name}</h2>
+              <p>${user.user_age}</p>
             </div>
             <div class="user">
               <img src="img/admin/profile3.png" />
-              <h2>Ryo</h2>
-              <p>30 Min Ago</p>
+              <h2>${users.user_name}</h2>
+              <p>${users.user_age}</p>
             </div>
             <div class="user">
               <img src="img/admin/profile4.png" />
-              <h2>Kita</h2>
-              <p>10 Min Ago</p>
+              <h2>${users.user_name}</h2>
+              <p>${users.user_age}</p>
             </div>
           </div>
         </div>
