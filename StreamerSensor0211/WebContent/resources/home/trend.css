@@ -310,6 +310,7 @@ header{
 
 
 /* ================================= */
+
 .trend-section{
     text-align: center;
 }
@@ -361,10 +362,16 @@ header{
 
 }
 .trend-section .rank-info-foot{
+    width: 120px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: large;
+    font-size: medium;
+    overflow: hidden;
+}
+.rank-info-foot .rank-name{
+    width: 100px;
+    overflow: hidden;
 }
 .bx-right-top-arrow-circle{
     color: #e08013;
