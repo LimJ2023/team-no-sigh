@@ -187,6 +187,9 @@
       </div>
     </section>
 
-    <script src="scripts/script.js"></script>
+
+    <script src="home/list.js"></script>
+	<script src="home/trend.js"></script>
+    
   </body>
 </html>
