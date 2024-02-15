@@ -46,10 +46,14 @@
                 <i class='bx bx-bar-chart-alt-2'></i>
                 <span class="nav-link-title">leaderBoard</span>
             </a>
-            <a href="./noticeBoardPage/noticeBoard.html" class="nav-link">
+             <a href="board" class="nav-link">
                 <i class='bx bx-message-detail'></i>
                 <span class="nav-link-title">community</span>
             </a>
+           <!--  <a href="./noticeBoardPage/noticeBoard.html" class="nav-link">
+                <i class='bx bx-message-detail'></i>
+                <span class="nav-link-title">community</span>
+            </a> -->
             <a href="#home" class="nav-link">
                 <i class='bx bx-news'></i>
                 <span class="nav-link-title">news</span>
