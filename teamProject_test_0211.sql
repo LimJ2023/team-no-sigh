@@ -445,6 +445,8 @@ INSERT INTO admin (admin_id, admin_name, admin_pw, email)
     VALUES(2,'이지수','12345','sol@soldesk.com');
 INSERT INTO admin (admin_id, admin_name, admin_pw, email) 
     VALUES(3,'김진훈','12345','injik@naver.com');
+INSERT INTO admin (admin_id, admin_name, admin_pw, email) 
+    VALUES(4,'박현수','12345','darkside@naver.com');
     
     
     
@@ -495,8 +497,24 @@ BEGIN
     :NEW.strm_num := record_id_seq.NEXTVAL;
 END;
 /
+--------------------------------------------------------------------
+--20240216 박현수 더미데이터 추가
+INSERT INTO users VALUES(26, 'houno', 'pw26', '시라누이 메이', '여', 20, '일본', null);
+INSERT INTO users VALUES(27, 'spamberger', 'pw27', '맥스 테일러', '남', 33, '미국', null);
+INSERT INTO users VALUES(28, 'sygong', 'pw28', '꾸지앙', '남', 25, '베트남', null);
+INSERT INTO users VALUES(29, 'chocomaster', 'pw29', '월리 티거', '남', 24, '가나', null);
+INSERT INTO users VALUES(30, 'ultracute', 'pw30', '웰 쵸이', '여', 19, '캐나다', null);
 
+INSERT INTO streaming_info VALUES(17, '추억의 플래시 게임 고향만두', 'youtube.com', '1시간 30분', '게임', '24/02/09','더 월드');
 
+INSERT INTO review VALUES(101,'지존짤',16,'내가 저거보다는 잘함',55,12,'2024-02-01');
+INSERT INTO review VALUES(102,'뭉탱교',16,'저거보다 잘한다는 사람 90% 못함',60,11,'2024-02-01');
+INSERT INTO review VALUES(103,'공략좀',16,'이거 레전드',30,13,'2024-02-02');
+
+SELECT * FROM review;
+SELECT * FROM streaming_info;
+SELECT * FROM users;
+SELECT * FROM user_review_relation;
 --------------------------------------------------------------------
 
 
@@ -521,3 +539,10 @@ INSERT INTO Preferences VALUES(1,100,1,10,1000,1);
 insert into Streaming_preference VALUES(5,3,1,10,15,1);
 
 INSERT INTO ranking VALUES(1,'2024-01-11',1,'평균시청자수',100);
+
+--------------------------------------------------------------------------------
+
+SELECT user_name, user_age FROM users;
+SELECT * FROM admin;
+
+SELECT * FROM users;
