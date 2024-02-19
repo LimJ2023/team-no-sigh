@@ -13,6 +13,7 @@ public class RankingService {
 	@Autowired
 	RankingDAO rankingDAO;
 	
+	/*
 	public Ranking getRanking() {
 		
 		Ranking rankingBean = new Ranking();
@@ -20,6 +21,7 @@ public class RankingService {
 		return rankingBean;
 		
 	}
+	*/
 	
 	public List<Ranking> getRankings() {
 		return rankingDAO.select_ranking();
