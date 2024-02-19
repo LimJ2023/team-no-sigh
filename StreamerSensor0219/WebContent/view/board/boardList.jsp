@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var='root' value="${pageContext.request.contextPath }/"/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,38 +20,10 @@
 <body>
 	<!-- header -->
 	<header>
-		<!-- nav -->
-		<div class="nav container">
-			<!-- logo -->
-			<a href="home" class="logo"> Streamer<span>Sensor</span>
-			</a>
-			<!-- search box (검색)-->
-			<div class="search-box">
-				<input type="search" name="" id="search-input"
-					placeholder="Search streamer"> <i class='bx bx-search'></i>
-			</div>
-			<!-- user 사진 제대로 찾아서 넣어야함 (여기는 마이페이지랑 로그인되는 버튼구현)-->
-			<a href="../login/html.html" class="user"> <img
-				src="img/Person_Icon.png" alt="" class="user-img">
-			</a>
-
-
-			<div class="navbar">
-				<a href="home" class="nav-link nav-active"> <i
-					class='bx bx-home'></i> <span class="nav-link-title">home</span>
-				</a> <a href="trend" class="nav-link"> <i class='bx bxs-hot'></i> <span
-					class="nav-link-title">trending</span>
-				</a> <a href="leaderBoard" class="nav-link"> <i
-					class='bx bx-bar-chart-alt-2'></i> <span class="nav-link-title">leaderBoard</span>
-				</a> <a href="board" class="nav-link">
-					<i class='bx bx-message-detail'></i> <span class="nav-link-title">community</span>
-				</a> <a href="#home" class="nav-link"> <i class='bx bx-news'></i> <span
-					class="nav-link-title">news</span>
-				</a> <a href="admin" class="nav-link"> <i class='bx bx-wrench'></i>
-					<span class="nav-link-title">관리자페이지 진입 버튼1</span>
-				</a>
-			</div>
-		</div>
+		    <!-- nav container(위쪽 로고부터 검색창, 회원이미지까지) home_include 안의 logo_include로 뺴냄 -->
+    <c:import url="/view/home_include/logo_include.jsp"/>
+    <!-- navbar (왼쪽 사이드바) home_include 안의 left_include로 빼냄 -->
+    <c:import url="/view/home_include/left_sideBar.jsp"/>
 	</header>
 
 
@@ -129,6 +103,7 @@
                     </div>
                     
                     <div class="board_write">
+                    	<a href="board/boardWrite" class="board-write-button">글쓰기</a>
                         <button class="board-write-button">글쓰기</button>
                     </div>
                 </div>

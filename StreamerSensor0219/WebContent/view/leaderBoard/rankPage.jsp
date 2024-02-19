@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -20,38 +20,10 @@
 	<p>test 03</p>
 	<!-- header -->
 	<header>
-		<!-- nav -->
-		<div class="nav container">
-			<!-- logo -->
-			<a href="home" class="logo"> Streamer<span>Sensor</span>
-			</a>
-			<!-- search box (검색)-->
-			<div class="search-box">
-				<input type="search" name="" id="search-input"
-					placeholder="Search streamer"> <i class='bx bx-search'></i>
-			</div>
-			<!-- user 사진 제대로 찾아서 넣어야함 (여기는 마이페이지랑 로그인되는 버튼구현)-->
-			<a href="../login/html.html" class="user"> <img
-				src="img/Person_Icon.png" alt="" class="user-img">
-			</a>
-			<!-- navbar (각각 달아줘야함)-->
-			<div class="navbar">
-				<a href="home" class="nav-link nav-active"> <i
-					class='bx bx-home'></i> <span class="nav-link-title">home</span>
-				</a> <a href="trend" class="nav-link"> <i
-					class='bx bxs-hot'></i> <span class="nav-link-title">trending</span>
-				</a> <a href="leaderBoard" class="nav-link"> <i
-					class='bx bx-bar-chart-alt-2'></i> <span class="nav-link-title">leaderBoard</span>
-				</a> <a href="../noticeBoardPage/noticeBoard.html" class="nav-link">
-					<i class='bx bx-message-detail'></i> <span class="nav-link-title">community</span>
-				</a> <a href="#home" class="nav-link"> <i class='bx bx-news'></i> <span
-					class="nav-link-title">news</span>
-				</a> <a href="admin" class="nav-link"> <i
-					class='bx bx-wrench'></i> <span class="nav-link-title">관리자페이지
-						진입 버튼1</span>
-				</a>
-			</div>
-		</div>
+		    <!-- nav container(위쪽 로고부터 검색창, 회원이미지까지) home_include 안의 logo_include로 뺴냄 -->
+    <c:import url="/view/home_include/logo_include.jsp"/>
+    <!-- navbar (왼쪽 사이드바) home_include 안의 left_include로 빼냄 -->
+    <c:import url="/view/home_include/left_sideBar.jsp"/>
 	</header>
 
 
@@ -74,31 +46,8 @@
 			<h1 style= color:red> 구독o 계정 테스트 시 UsersDAO 에서 sql문 1번 선택하기</h1>
 
 			
-			
-			
-			
-			
-			
-		
-
-		</div>
-
-
-		<div class="rankContents" style="border-radius: 1rem">
-			<h2 class="tableH2">${ranking.rank_date } 순위</h2>
-			<div class="table-responsive">
-				<table class="table rank-table filterTable">
-					<thead>
-						<tr class="rank-table-tr">
-							<th scope="col">순위</th>
-							<th scope="col" colspan="1">스트리머</th>
-							<th scope="col">방송이름</th>
-							<th scope="col">팔로워 수</th>
-							<th scope="col">카테고리</th>
-							
-						</tr>
-						
-						<tr class="rank-table-filters">
+			<table class="table filterTable">
+				<tr class="rank-table-filters">
 							<td class="td_filter">
 							</td>
 							<td class="td_filter">
@@ -111,12 +60,40 @@
 							<td class = "td_filter">
 								<select name="categorySelect" id="categorySelect"
 									onchange="selectFunction()" class="categorySelect">
-									<option value="" class="categoryOption">Category</option>
-									<option value="게임" class="categoryOption">게임</option>
-									<option value="수다" class="categoryOption">수다</option>
-								</select>
-							</td>
+								<option value="" class="categoryOption">Category</option>
+								<option value="게임" class="categoryOption">게임</option>
+								<option value="수다" class="categoryOption">수다</option>
+							</select>
+						</td>
 					</tr>
+			
+			</table>
+			
+			
+			
+			
+		
+
+		</div>
+
+
+		<div class="rankContents" style="border-radius: 1rem">
+			<h2 class="tableH2">${ranking.rank_date } 순위</h2>
+			<div class="table-responsive">
+				<table class="table rank-table">
+					<thead>
+						<tr class="rank-table-tr">
+							<th scope="col">순위</th>
+							<th scope="col" colspan="1">스트리머</th>
+							<th scope="col">방송이름</th>
+							<th scope="col">팔로워 수</th>
+							<th scope="col">카테고리</th>
+							
+						</tr>
+						
+						
+						
+						
 					</thead>
 
 					<tbody class="tbody">

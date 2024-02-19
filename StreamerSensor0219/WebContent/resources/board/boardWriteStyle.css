@@ -170,128 +170,154 @@ header{
 }
 
 
+/*=============================*/
 
-/*===============boardView=======================*/
-.board-view-section{
-    margin-top: 100px;
-}
+.board-write-section{
 
-.board-view-div{
-
+    text-align: center;
     align-items: center;
+
 }
 
-.board-view-table{
-
+.board-write-div{
+    display: block;
+    width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 30px;
+
+    text-align: center;
+    align-items: center;
+
+   /*background-color: red;*/
+
+}
+
+.board-write-form{
     width: 1200px;
-    
-    
-}
-
-/*=============정보=============*/
-
-.info-no{
-    width: 50px;
-
-}
-
-.board-view-table-info{
+    display: inline-block;
+    margin-left: auto;
     text-align: center;
-    background-color: rgba(86,96,120,0.1);
-    
 }
 
-.info-author{
-    width: 50px;
-}
+.board-write-table{
+    display: inline-block;
+    margin-right: auto;
+    margin-left: auto;
 
-.info-date{
-    width: 100px;
-}
-
-.info-clicks{
-    width: 100px;
-}
-
-.info-author-2{
-    width: 250px;
 }
 
 
-
-
-.content-title{
-    text-align: center;
-    /*background-color: rgba(86,96,120,0.4);*/
-    padding: auto;
-    border-top: 1px solid #00ff9f;
-    border-bottom: 1px solid #00ff9f;
-
+.board-write-form-info{
     height: 40px;
+}
 
-    font-size: larger;
+.write-form-author, .write-form-password1{
+    text-align: right;
+    width: 200px;
+    padding-right: 10px;
+}
+
+.write-form-author-input{
+    color: white;
+    border: none;
+    border-right: 200px solid transparent;
+
+    padding-bottom: 20px;
+}
+
+.write-form-password1-input{
+    border-right: 50px solid transparent;
+}
+
+.write-form-input{
+    width: 380px;
+    height: 40px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-bottom: 2px solid #00ff9f;
+    padding-left: 10px;
+}
+
+.write-form-input:focus{
+    outline: none;
 }
 
 
-.board-view-table-content{
-    padding-top: 50px;
+.board-write-form-title{
+    height: 50px;
 
 }
 
-.board-view-table-info{
+.write-form-title-info{
+    margin-top: 20px;
+    height: 35px;
+    text-align: right;
+    align-self: center;
+
+    padding-right: 10px;
+
+    
+
+}
+
+
+.extra-td{
+    width: 100px;
+}
+
+#board-write-content{
+   
+    background-color: rgba(86,96,120,0.5);
+    border: none;
+    font-size: 15px;
+    color: white;
+    padding: 10px;
+
+    border-radius: 5px;
+
+}
+
+.write-form-title-input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #00ff9f;
+    height: 40px;
+    width: 100%;
+    
+    color: white;
+    padding-left: 10px;
+}
+
+.write-form-title{
+    padding-right: 50px;
+    padding-bottom: 20px;
+}
+
+
+/*boardfoot*/
+
+.board-write-form-end-td{
+    padding-left: 5px;
     padding-top: 10px;
 }
 
-
-.board-view-table-info{
-    padding-bottom: 10px;
-
-}
-
-.content-text{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-bottom: 2px solid #00ff9f;
-}
-
-
-/*============board bottom menu============*/
-.board-bottom-menu-section{
-    text-align: center;
-    display: flex;
-    margin: 0;
-    padding-top: 0%;
-}
-
-.board-bottom-menu{
-    width: 1200px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.board-bottom-menu-div1{
+.write-button-toList{
     float: left;
 }
 
-.board-bottom-menu-div2{
-    float: right;
-}
+.write-button{
+    width: 80px;
+    height: 30px;
 
-.board-menu-button{
     background-color: transparent;
-    border: 2px solid #00ff9f;
+    border: 1px solid #00ff9f;
     border-radius: 5px;
     color: white;
-    width: 70px;
-    height: 30px;
 }
 
-a:link{
-	color:white !important;
-}
-
-a:visited{
-	color: white !important;
+.write-button-submit{
+    width: 100px;
+    background-color: rgba(0, 255, 159, 0.3);
 }
