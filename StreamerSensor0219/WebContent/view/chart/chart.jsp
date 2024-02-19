@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
   <head>
@@ -22,26 +23,8 @@
             <span class="material-symbols-outlined"> close </span>
           </div>
         </div>
-        <!--           사이드바             -->
-        <div class="sidebar">
-          <a href="admin" >
-            <span class="material-symbols-outlined"> empty_dashboard </span>
-            <h3>대시보드</h3>
-          </a>
-          <a href="../Members_page/members.html">
-            <span class="material-symbols-outlined"> group </span>
-            <h3>회원 관리</h3>
-          </a>
-          <a href="#" class="active">
-            <span class="material-symbols-outlined"> insights </span>
-            <h3>분석</h3>
-          </a>
-          <a href="home">
-            <span class="material-symbols-outlined"> logout </span>
-            <h3>로그아웃</h3>
-          </a>
-        </div>
-        <!-- 사이드바 종료 -->
+        <!-- 왼쪽 사이드바 admin_include 안의 left_sideBar로 빼냄 -->
+		<c:import url="/view/admin_include/left_sideBar.jsp" />
       </aside>
 
       <!-- 메인 컨텐츠 -->
@@ -136,84 +119,9 @@
       </main>
       <!-- 메인 종료 -->
 
-      <!-- 오른쪽 섹션 시작 -->
-      <div class="right-section">
-        <div class="nav">
-          <button class="menu-btn">
-            <span class="material-symbols-outlined"> menu </span>
-          </button>
-          <div class="dark-mode">
-            <span class="material-symbols-outlined active"> light_mode </span>
-            <span class="material-symbols-outlined"> dark_mode </span>
-          </div>
-
-          <div class="profile">
-            <div class="info">
-              <b>요한</b>
-              <small class="text-muted">Admin</small>
-            </div>
-            <div class="profile-photo">
-              <img src="images/kitang.jpg" />
-            </div>
-          </div>
-        </div>
-        <!-- 오른쪽 nav 종료 -->
-
-        <!-- 어드민 기능 시작 -->
-        <div class="user-profile">
-          <div class="logo">
-            <img src="./images/KITA2.JPG" />
-            <h2>회기사천왕임요한</h2>
-            <p>Web Developer</p>
-          </div>
-        </div>
-
-        <div class="reminders">
-          <div class="header">
-            <h2>알림</h2>
-              <button>
-                <span class="message-count">30</span>
-                <span class="material-symbols-outlined"> notifications_none </span>
-              </button>
-              
-          </div>
-
-          <button class="notification">
-            <div class="icon">
-              <span class="material-symbols-outlined"> volume_up </span>
-            </div>
-            <div class="content">
-              <div class="info">
-                <h3>호출</h3>
-                <small class="text_muted"> 새 알림 3 건 </small>
-              </div>
-              <span class="material-symbols-outlined"> more_vert </span>
-            </div>
-          </button>
-
-          <div class="notification deactive">
-            <div class="icon">
-              <span class="material-symbols-outlined"> edit </span>
-            </div>
-            <div class="content">
-              <div class="info">
-                <h3>공지사항 쓰기</h3>
-                <small class="text_muted"> 최근 1개 등록함 </small>
-              </div>
-              <span class="material-symbols-outlined"> more_vert </span>
-            </div>
-          </div>
-
-          <div class="notification add-reminders">
-            <div>
-              <span class="material-symbols-outlined"> add </span>
-              <h3>새 기능 추가</h3>
-            </div>
-          </div>
-        </div>
-        <!-- 리마인더 종료 -->
-      </div>
-      <!-- 오른쪽 섹션 종료 -->
+      <!-- 오른쪽 사이드바 admin_include 안의 right_sideBar로 빼냄 -->
+	  <c:import url="/view/admin_include/right_sideBar.jsp" />
+	  
     </div>
     <!-- 컨테이너 종료 -->
     <script src="order.js"></script>
