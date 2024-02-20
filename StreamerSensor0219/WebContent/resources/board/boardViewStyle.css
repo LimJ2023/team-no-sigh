@@ -287,3 +287,19 @@ header{
     width: 70px;
     height: 30px;
 }
+
+/*==============Board Modify(게시글 정보 수정)=============*/
+.board-Modify-section{
+    margin-top: 100px;
+}
+
+.board-Modify-div{
+
+    align-items: center;
+}
+
+.form-group{
+	width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}
