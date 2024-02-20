@@ -31,7 +31,6 @@
       <main>
         <div class="graphBox1">
           <div class="box1">
-          	<canvas id="myChart"></canvas>
           </div>
           <div class="box2">
           </div>
@@ -149,29 +148,5 @@
         evt.currentTarget.className += " active";
       }
     </script>
-	<script>
-		const ctx = document.getElementById('myChart');
-
-		new Chart(ctx,
-				{
-					type : 'doughnutz',
-					data : {
-						labels : [ 'Red', 'Blue', 'Yellow', 'Green', 'Purple',
-								'Orange' ],
-						datasets : [ {
-							label : '# of Votes',
-							data : [ 12, 19, 3, 5, 2, 3 ],
-							borderWidth : 1
-						} ]
-					},
-					options : {
-						scales : {
-							y : {
-								beginAtZero : true
-							}
-						}
-					}
-				});
-	</script>
 </body>
 </html>
