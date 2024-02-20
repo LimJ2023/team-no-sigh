@@ -28,6 +28,14 @@ public class RankingMapper implements RowMapper<Ranking>{
 		ranking.setStrm_followers(rs.getInt("strm_followers"));
 		ranking.setStreaming_category(rs.getString("streaming_category"));
 		
+		//--------------
+		ranking.setAvg_viewers(rs.getInt("avg_viewers"));
+		ranking.setLikes(rs.getInt("likes"));
+		ranking.setDaily_viewers(rs.getInt("daily_viewers"));
+		
+		//-*-*----
+		//ranking.setSumAVG(rs.getInt("sumAVG"));
+		
 		return ranking;
 	}
 

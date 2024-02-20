@@ -28,6 +28,16 @@ public class Ranking {
 	//***************
 	
 	
+	private int avg_viewers;
+	private int likes;
+	private int comments;
+	private int daily_viewers;
+	
+	//************
+	
+	//private int sumAVG;
+	
+	
 	public int getRanking_id() {
 		return ranking_id;
 	}
@@ -127,6 +137,42 @@ public class Ranking {
 	public void setStreaming_date(String streaming_date) {
 		this.streaming_date = streaming_date;
 	}
+	
+	//********************
+	
+	public int getAvg_viewers() {
+		return avg_viewers;
+	}
+	public void setAvg_viewers(int avg_viewers) {
+		this.avg_viewers = avg_viewers;
+	}
+	public int getLikes() {
+		return likes;
+	}
+	public void setLikes(int likes) {
+		this.likes = likes;
+	}
+	public int getComments() {
+		return comments;
+	}
+	public void setComments(int comments) {
+		this.comments = comments;
+	}
+	public int getDaily_viewers() {
+		return daily_viewers;
+	}
+	public void setDaily_viewers(int daily_viewers) {
+		this.daily_viewers = daily_viewers;
+	}
+	
+	
+	//********************
+	/*public int getSumAVG() {
+		return sumAVG;
+	}
+	public void setSumAVG(int sumAVG) {
+		this.sumAVG = sumAVG;
+	}*/
 	
 	
 	
