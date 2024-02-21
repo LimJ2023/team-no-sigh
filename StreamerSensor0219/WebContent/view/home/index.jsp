@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var='root' value="${pageContext.request.contextPath }/"/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,10 +50,10 @@
             </div>
             <div class="item" data-radio-target="radio2">
                 <div class="streamer_box">
-                    <img src="${root }img/microphone.png" class="carImg profileMic"/>
+                    <img src="./img/2nd_Person.png" class="carImg"/>
                     <div class="box_text">
                         <h2 class="streamer_title">김지섭</h2>
-                        <div class="streamer_type">음악</div>
+                        <div class="streamer_type">게임</div>
                         <div class="watch-btn play-btn">
                             <i class='bx bx-right-arrow bx-md'></i>
                         </div>
@@ -63,7 +62,7 @@
             </div>
             <div class="item" data-radio-target="radio3">
                 <div class="streamer_box">
-                    <img src="${root }img/admin/profile1.png" class="carImg profileBocchi"/>
+                    <img src="./img/3rd_Person.png" class="carImg"/>
                     <div class="box_text">
                         <h2 class="streamer_title">봇치</h2>
                         <div class="streamer_type">음악</div>
@@ -78,7 +77,7 @@
             </div>
             <div class="item" data-radio-target="radio4">
                 <div class="streamer_box">
-                    <img src="${root }img/bank.png" class="carImg profileBank"/>
+                    <img src="./img/4th_Person.png" class="carImg"/>
                     <div class="box_text">
                         <h2 class="streamer_title">주식왕뱅킹</h2>
                         <div class="streamer_type">주식</div>
@@ -109,73 +108,69 @@
         <h3>오늘의 최고 시청 방송</h3>
     </div>
     <div class="todays_row">
-    
         <div class="todays_col colTop">
-        <a href="http://www.youtube.com" style="width: 100%, height:100%">
             <figure>
                 <img src="./img/0101.png" class="humanIcon"/>
                 <figcaption class="humanIconCap">방송1</figcaption>
                 <figcaption>view: 12k</figcaption>
-                <img src="./img/6-10.png" class="youtubeLogo"/>
-<!--                 <img src="./img/6-10.png" class="youtubeLogo"
-                    onclick="javascript:window.location='https://www.youtube.com/';"/> -->
+                <img src="./img/6-10.png" class="youtubeLogo"
+                    onclick="javascript:window.location='https://www.youtube.com/';"/>
             </figure>
-            </a>
+            
         </div>
 
-        
         <div class="todays_col">
-        <a href="http://www.youtube.com" style="width: 100%, height:100%">
             <figure>
                 <img src="./img/0102.png" class="humanIcon"/>
                 <figcaption class="humanIconCap">방송2</figcaption>
                 <figcaption>view: 10k</figcaption>
-                <img src="./img/6-10.png" class="youtubeLogo"/>
+                <img src="./img/6-10.png" class="youtubeLogo"
+                    onclick="javascript:window.location='https://www.youtube.com/watch?v=d-p4mMGYI7o';"/>
             </figure>
-            </a>
+            
         </div>
 
         <div class="todays_col">
-        <a href="http://www.youtube.com" style="width: 100%, height:100%">
             <figure>
                 <img src="./img/0103.png" class="humanIcon"/>
                 <figcaption class="humanIconCap">방송3</figcaption>
                 <figcaption>view: 4.5k</figcaption>
-                <img src="./img/6-10.png" class="youtubeLogo"/>
+                <img src="./img/6-10.png" class="youtubeLogo"
+                    onclick="javascript:window.location='https://www.youtube.com/watch?v=ZdJSHEczi_0';"/>
             </figure>
-            </a>
+            
         </div>
 
         <div class="todays_col">
-        <a href="https://chzzk.naver.com/" style="width: 100%, height:100%">
             <figure>
                 <img src="./img/0104.png" class="humanIcon"/>
                 <figcaption class="humanIconCap">방송4</figcaption>
                 <figcaption>view: 3k</figcaption>
-                <img src="./img/chhzk.png" class="chzzkLogo"/>
+                <img src="./img/chhzk.png" class="chzzkLogo"
+                    onclick="javascript:window.location='https://chzzk.naver.com/';"/>
             </figure>
-            </a>
+            
         </div>
 
         <div class="todays_col">
-        <a href="http://www.youtube.com" style="width: 100%, height:100%">
             <figure>
                 <img src="./img/0105.png" class="humanIcon"/>
                 <figcaption class="humanIconCap">방송5</figcaption>
                 <figcaption>view: 1.2k</figcaption>
-                <img src="./img/6-10.png" class="youtubeLogo"/>
+                <img src="./img/6-10.png" class="youtubeLogo"
+                    onclick="javascript:window.location='https://www.youtube.com/watch?v=ZdJSHEczi_0';"/>
             </figure>
-            </a>
+            
         </div>
         <div class="todays_col">
-        <a href="https://chzzk.naver.com/" style="width: 100%, height:100%">
             <figure>
                 <img src="./img/0106.png" class="humanIcon"/>
                 <figcaption class="humanIconCap">방송6</figcaption>
                 <figcaption>view: 3k</figcaption>
-                <img src="./img/chhzk.png" class="chzzkLogo"/>
+                <img src="./img/chhzk.png" class="chzzkLogo"
+                    onclick="javascript:window.location='https://chzzk.naver.com/';"/>
             </figure>
-           </a> 
+            
         </div>
     </div>
 </section>
@@ -315,9 +310,9 @@
                     </a>
                 </div>
             </div>
-            <!-- movie box 6 -->
-            <div class="movie-box">
-                <img src="./img/img1.png" alt="" class="movie-box-img">
+            <!-- streamer box 6 -->
+            <div class="streamer-box">
+                <img src="./img/img1.png" alt="" class="streamer-box-img">
                 <div class="box-text">
                     <h2 class="streamer-title">감스트</h2>
                     <span class="streamer-type">게임</span>
@@ -327,9 +322,9 @@
                     </a>
                 </div>
             </div>
-            <!-- movie box 7 -->
-            <div class="movie-box">
-                <img src="./img/img1.png" alt="" class="movie-box-img">
+            <!-- streamer box 7 -->
+            <div class="streamer-box">
+                <img src="./img/img1.png" alt="" class="streamer-box-img">
                 <div class="box-text">
                     <h2 class="streamer-title">감스트</h2>
                     <span class="streamer-type">게임</span>
@@ -339,9 +334,45 @@
                     </a>
                 </div>
             </div>
-            <!-- movie box 8 -->
-            <div class="movie-box">
-                <img src="./img/img1.png" alt="" class="movie-box-img">
+            <!-- streamer box 8 -->
+            <div class="streamer-box">
+                <img src="./img/img1.png" alt="" class="streamer-box-img">
+                <div class="box-text">
+                    <h2 class="streamer-title">감스트</h2>
+                    <span class="streamer-type">게임</span>
+                    <!-- 여기에 2번째 html -->
+                    <a href="play-page.html" class="watch-btn play-btn">
+                        <i class='bx bx-right-arrow'></i>
+                    </a>
+                </div>
+            </div>
+            <!-- streamer box 9 -->
+            <div class="streamer-box">
+                <img src="./img/img1.png" alt="" class="streamer-box-img">
+                <div class="box-text">
+                    <h2 class="streamer-title">감스트</h2>
+                    <span class="streamer-type">게임</span>
+                    <!-- 여기에 2번째 html -->
+                    <a href="play-page.html" class="watch-btn play-btn">
+                        <i class='bx bx-right-arrow'></i>
+                    </a>
+                </div>
+            </div>
+            <!-- streamer box 10 -->
+            <div class="streamer-box">
+                <img src="./img/img1.png" alt="" class="streamer-box-img">
+                <div class="box-text">
+                    <h2 class="streamer-title">감스트</h2>
+                    <span class="streamer-type">게임</span>
+                    <!-- 여기에 2번째 html -->
+                    <a href="play-page.html" class="watch-btn play-btn">
+                        <i class='bx bx-right-arrow'></i>
+                    </a>
+                </div>
+            </div>
+            <!-- streamer box 11 -->
+            <div class="streamer-box">
+                <img src="./img/img1.png" alt="" class="streamer-box-img">
                 <div class="box-text">
                     <h2 class="streamer-title">감스트</h2>
                     <span class="streamer-type">게임</span>
@@ -357,11 +388,8 @@
 <!-- movies section end -->
 <!-- next page -->
 <div class="more-page">
-    <a href="./index2.html" class="more-btn">More streamer page</a>
+    <a href="home/more_page" class="more-btn">More streamer page</a>
 </div>
-
-<c:import url="/view/home_include/footer.jsp"/>
-
 <script src="home/script.js"></script>
 </body>
 </html>
