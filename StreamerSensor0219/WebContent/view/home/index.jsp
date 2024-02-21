@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var='root' value="${pageContext.request.contextPath }/"/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,10 +51,10 @@
             </div>
             <div class="item" data-radio-target="radio2">
                 <div class="streamer_box">
-                    <img src="./img/2nd_Person.png" class="carImg"/>
+                    <img src="${root }img/microphone.png" class="carImg profileMic"/>
                     <div class="box_text">
                         <h2 class="streamer_title">김지섭</h2>
-                        <div class="streamer_type">게임</div>
+                        <div class="streamer_type">음악</div>
                         <div class="watch-btn play-btn">
                             <i class='bx bx-right-arrow bx-md'></i>
                         </div>
@@ -62,7 +63,7 @@
             </div>
             <div class="item" data-radio-target="radio3">
                 <div class="streamer_box">
-                    <img src="./img/3rd_Person.png" class="carImg"/>
+                    <img src="${root }img/admin/profile1.png" class="carImg profileBocchi"/>
                     <div class="box_text">
                         <h2 class="streamer_title">봇치</h2>
                         <div class="streamer_type">음악</div>
@@ -77,7 +78,7 @@
             </div>
             <div class="item" data-radio-target="radio4">
                 <div class="streamer_box">
-                    <img src="./img/4th_Person.png" class="carImg"/>
+                    <img src="${root }img/bank.png" class="carImg profileBank"/>
                     <div class="box_text">
                         <h2 class="streamer_title">주식왕뱅킹</h2>
                         <div class="streamer_type">주식</div>
@@ -108,69 +109,73 @@
         <h3>오늘의 최고 시청 방송</h3>
     </div>
     <div class="todays_row">
+    
         <div class="todays_col colTop">
+        <a href="http://www.youtube.com" style="width: 100%, height:100%">
             <figure>
                 <img src="./img/0101.png" class="humanIcon"/>
                 <figcaption class="humanIconCap">방송1</figcaption>
                 <figcaption>view: 12k</figcaption>
-                <img src="./img/6-10.png" class="youtubeLogo"
-                    onclick="javascript:window.location='https://www.youtube.com/';"/>
+                <img src="./img/6-10.png" class="youtubeLogo"/>
+<!--                 <img src="./img/6-10.png" class="youtubeLogo"
+                    onclick="javascript:window.location='https://www.youtube.com/';"/> -->
             </figure>
-            
+            </a>
         </div>
 
+        
         <div class="todays_col">
+        <a href="http://www.youtube.com" style="width: 100%, height:100%">
             <figure>
                 <img src="./img/0102.png" class="humanIcon"/>
                 <figcaption class="humanIconCap">방송2</figcaption>
                 <figcaption>view: 10k</figcaption>
-                <img src="./img/6-10.png" class="youtubeLogo"
-                    onclick="javascript:window.location='https://www.youtube.com/watch?v=d-p4mMGYI7o';"/>
+                <img src="./img/6-10.png" class="youtubeLogo"/>
             </figure>
-            
+            </a>
         </div>
 
         <div class="todays_col">
+        <a href="http://www.youtube.com" style="width: 100%, height:100%">
             <figure>
                 <img src="./img/0103.png" class="humanIcon"/>
                 <figcaption class="humanIconCap">방송3</figcaption>
                 <figcaption>view: 4.5k</figcaption>
-                <img src="./img/6-10.png" class="youtubeLogo"
-                    onclick="javascript:window.location='https://www.youtube.com/watch?v=ZdJSHEczi_0';"/>
+                <img src="./img/6-10.png" class="youtubeLogo"/>
             </figure>
-            
+            </a>
         </div>
 
         <div class="todays_col">
+        <a href="https://chzzk.naver.com/" style="width: 100%, height:100%">
             <figure>
                 <img src="./img/0104.png" class="humanIcon"/>
                 <figcaption class="humanIconCap">방송4</figcaption>
                 <figcaption>view: 3k</figcaption>
-                <img src="./img/chhzk.png" class="chzzkLogo"
-                    onclick="javascript:window.location='https://chzzk.naver.com/';"/>
+                <img src="./img/chhzk.png" class="chzzkLogo"/>
             </figure>
-            
+            </a>
         </div>
 
         <div class="todays_col">
+        <a href="http://www.youtube.com" style="width: 100%, height:100%">
             <figure>
                 <img src="./img/0105.png" class="humanIcon"/>
                 <figcaption class="humanIconCap">방송5</figcaption>
                 <figcaption>view: 1.2k</figcaption>
-                <img src="./img/6-10.png" class="youtubeLogo"
-                    onclick="javascript:window.location='https://www.youtube.com/watch?v=ZdJSHEczi_0';"/>
+                <img src="./img/6-10.png" class="youtubeLogo"/>
             </figure>
-            
+            </a>
         </div>
         <div class="todays_col">
+        <a href="https://chzzk.naver.com/" style="width: 100%, height:100%">
             <figure>
                 <img src="./img/0106.png" class="humanIcon"/>
                 <figcaption class="humanIconCap">방송6</figcaption>
                 <figcaption>view: 3k</figcaption>
-                <img src="./img/chhzk.png" class="chzzkLogo"
-                    onclick="javascript:window.location='https://chzzk.naver.com/';"/>
+                <img src="./img/chhzk.png" class="chzzkLogo"/>
             </figure>
-            
+           </a> 
         </div>
     </div>
 </section>
