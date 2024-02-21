@@ -209,8 +209,10 @@ header{
     width: 1200px;
     max-width: 1200px;
     margin: auto;
-    margin-top: 300px;
+    margin-top: 100px;
     margin-left: 20%;
+    
+    padding: 10px;
 
 }
 
@@ -367,6 +369,53 @@ header{
 	margin: 20px;
 	
 }
+
+
+.likes-bar{
+	background-color: #F9FF40;
+	height: 5px;
+	float: right;
+	color: white;
+	padding-right: 5px;
+	
+	align-self: center;
+	margin: 2px;
+}
+
+.likes-div{
+	display: inline-block;
+}
+
+
+.daily-div{
+	display: inline-block;
+}
+
+.daily-bar{
+	background-color: #ff82c9;
+	height: 5px;
+	float: right;
+	color: white;
+	padding-right: 5px;
+	
+	align-self: center;
+	margin: 2px;
+}
+
+/* 
+.likes-bar{
+	background-color: #F9FF40;
+	width: 100%;
+	height: 5px;
+
+	color:white;
+	padding-right:5px;
+	text-align: right;
+	
+	align-self: center;
+	
+	margin: 20px;
+} */
 
 
 /*=========footer===========*/
