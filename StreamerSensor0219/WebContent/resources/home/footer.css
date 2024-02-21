@@ -56,9 +56,6 @@
     min-height:10vh;
     display: flex;
     flex-direction: column;*/
-    
-
-
 }
 
 .footerRow{
@@ -69,6 +66,11 @@
     
 
     margin-top:auto;
+}
+
+.footerRow  a{
+	cursor: auto;
+	color: #3b3b3b;
 }
 
 
@@ -89,8 +91,6 @@
     color: white;
     font-size: 10pt;
 }
-
-
 
 .footerIcon{
     width: 30px;

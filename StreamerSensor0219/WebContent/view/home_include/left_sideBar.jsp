@@ -33,10 +33,6 @@
 		<a href="#home" class="nav-link"> <i class='bx bx-news'></i>
 			<span class="nav-link-title">news</span>
 		</a>
-		<a href="${root }admin" class="nav-link">
-			<i class='bx bx-wrench'></i>
-			<span class="nav-link-title">관리자페이지 진입 버튼1</span>
-		</a>
 	</div>
 </body>
 </html>
