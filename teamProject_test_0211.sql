@@ -20,6 +20,9 @@ ALTER USER streamer DEFAULT TABLESPACE USERS QUOTA UNLIMITED ON USERS;
 
 --테이블[streamer 계정으로 진행]
 DROP TABLE USERS;
+drop table admin;
+select * from users;
+select * from admin;
 CREATE TABLE users(
     user_num number not null UNIQUE,
     user_id VARCHAR2(20),
@@ -31,9 +34,9 @@ CREATE TABLE users(
     PRIMARY KEY(user_id)
 );
 
-
 --스트리머 테이블--
 DROP TABLE streamer;
+select * from streamer;
 CREATE TABLE streamer(
     strm_num number not null unique,
     strm_id VARCHAR2(40) PRIMARY KEY,
@@ -43,7 +46,6 @@ CREATE TABLE streamer(
     strm_Platform VARCHAR2(20), 
     strm_Followers number
 );
-
 
 --오늘 방송 정보 테이블--
 drop table streaming_info;
@@ -106,7 +108,6 @@ CREATE TABLE Preferences(
 
 
 -- 오늘의 방송 선호도--
-
 DROP TABLE Streaming_preference;
 CREATE TABLE Streaming_preference(
     avg_viewers NUMBER,
@@ -130,6 +131,7 @@ CREATE TABLE ranking(
 );
 
 DROP TABLE board;
+select * from board;
 CREATE TABLE board(
     board_num number primary key,
     user_id VARCHAR2(20),
@@ -163,6 +165,18 @@ CREATE TABLE admin(
     last_login TIMESTAMP
 );
 
+drop table admin_notice;
+select * from admin_notice;
+create table admin_notice(
+    notice_num number primary key,
+    notice_type varchar2(10),
+    notice_title varchar2(80),
+    notice_content varchar2(400),
+    notice_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    admin_id NUMBER,
+    foreign key (admin_id) REFERENCES admin(admin_id)    
+);
+
 --사이트 운영 통계 테이블--
 DROP TABLE site_stat;
 CREATE TABLE site_stat (
@@ -178,6 +192,8 @@ CREATE TABLE site_stat (
     server_monitoring VARCHAR2(255),
     timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+select * from site_stat;
 
 -----------사이트 운영 통계 인설트--------------
 INSERT INTO site_stat (stat_id,visit_count,page_views,day_revenue,total_revenue,new_members,total_members)
@@ -221,6 +237,8 @@ SELECT * FROM users;
 --7번 id 가 5번과 겹쳐 asdf -> asdf2 로 변경
 --!드래그 ->ctrl+enter로는 한 번에 10개까지밖에 안들어가는 것 같?음?
 
+select * from users;
+
 insert into users VALUES(1,'abcd','pw1', '김인직','남',40,'한국');
 insert into users VALUES(2,'dmstn','pw2', '임요한','남',25,'한국');
 insert into users VALUES(3,'location','pw3', '이지수','여',24,'한국');
@@ -263,33 +281,44 @@ INSERT INTO users VALUES(25, 'dkssud','pw25', '정도윤', '여', 20, '한국');
 
 SELECT * FROM streaming_info;
 
-
-insert into streaming_info values (2, '타르코프 초기화', 'http://www.youtube.com', '7시간 12분', '게임', '2024-01-09', '임요한');
-insert into streaming_info values (3, '자낳대 대회', 'http://www.youtube.com', '4시간 30분', '게임', '2024-01-08', '임요한');
-insert into streaming_info values (4, '레식 시즈킹 대회', 'http://www.youtube.com', '6시간 29분 25초', '게임', '2024-01-07', '임요한');
+insert into streaming_info values (2, '타르코프 초기화', 'http://www.youtube.com',
+'7시간 12분', '게임', '2024-01-09', '임요한');
+insert into streaming_info values (3, '자낳대 대회', 'http://www.youtube.com',
+'4시간 30분', '게임', '2024-01-08', '임요한');
+insert into streaming_info values (4, '레식 시즈킹 대회', 'http://www.youtube.com',
+'6시간 29분 25초', '게임', '2024-01-07', '임요한');
 
 
 --이지수(임방송인(105)
 
-INSERT INTO streaming_info VALUES(11, '코딩하기싫다', 'youtube.com', '1시간 52분', '수다', '2024-01-08', '임방송인');
-INSERT INTO streaming_info VALUES(12, '코딩노잼이에요', 'afreecatv.com', '2시간 22분', '수다', '2024-01-10',  '임방송인');
-INSERT INTO streaming_info VALUES(13, '자유를 찾았어요', 'youtube.com', '4시간 22분', '게임', '2024-01-11',  '임방송인');
+INSERT INTO streaming_info VALUES(11, '코딩하기싫다', 'youtube.com',
+'1시간 52분', '수다', '2024-01-08', '임방송인');
+INSERT INTO streaming_info VALUES(12, '코딩노잼이에요', 'afreecatv.com',
+'2시간 22분', '수다', '2024-01-10',  '임방송인');
+INSERT INTO streaming_info VALUES(13, '자유를 찾았어요', 'youtube.com',
+'4시간 22분', '게임', '2024-01-11',  '임방송인');
 
 
 --20240210 이지수 : 선수탐구 스킵됨//무결성 제약조건... 아마 strm_id 중복때문인듯
 SELECT * FROM streamer;
 --진훈님 (선수탐구(103)
 
-INSERT INTO streaming_info VALUES(8,'손흥민이 이적을 할까', 'youtube.com','24시간 50분','축구','2024-01-11', '선수탐구');
-INSERT INTO streaming_info VALUES(9,'황희찬이 이적을 할까', 'youtube.com','26시간 51분','축구','2024-01-12', '선수탐구');
-INSERT INTO streaming_info VALUES(10,'이강인이 이적을 할까', 'youtube.com','30시간 23분','축구','2024-01-13', '선수탐구');
+INSERT INTO streaming_info VALUES(8,'손흥민이 이적을 할까', 'youtube.com',
+'24시간 50분','축구','2024-01-11', '선수탐구');
+INSERT INTO streaming_info VALUES(9,'황희찬이 이적을 할까', 'youtube.com',
+'26시간 51분','축구','2024-01-12', '선수탐구');
+INSERT INTO streaming_info VALUES(10,'이강인이 이적을 할까', 'youtube.com',
+'30시간 23분','축구','2024-01-13', '선수탐구');
 
 
 --민기님 (가방송(102)
 
-insert into streaming_info values(5, '로아 카멘 트라이', null, '8시간', '게임', '2024-01-12', '빅헤드');
-insert into streaming_info values(6, '로아 브레이커 세팅', null, '5시간', '게임', '2024-01-13', '빅헤드');
-insert into streaming_info values(7, '로아 에스더 선언', null, '2시간', '게임', '2024-01-12', '빅헤드');
+insert into streaming_info values(5, '로아 카멘 트라이', null, '8시간',
+'게임', '2024-01-12', '빅헤드');
+insert into streaming_info values(6, '로아 브레이커 세팅', null, '5시간',
+'게임', '2024-01-13', '빅헤드');
+insert into streaming_info values(7, '로아 에스더 선언', null, '2시간',
+'게임', '2024-01-12', '빅헤드');
 
 --현수님(더월드 104)
 
@@ -339,8 +368,6 @@ INSERT INTO review VALUES(60, '123098', 13, '드디어재밌네', 61, 10, '2024-
 INSERT INTO review VALUES(61, '995884', 13, '하던거해', 15, 2, '2024-01-11');
 
 SELECT * FROM review;
-
-SELECT * FROM tab;
 
 --<<선호도 입력하기>>
 
@@ -416,15 +443,12 @@ SELECT * FROM review;
 SELECT * FROM streamer;
 SELECT * FROM streaming_info;
 SELECT * FROM streaming_preference;
-SELECT * FROM streaming_storage;
 SELECT * FROM user_review_relation;
+select * from site_stat;
 SELECT * FROm users;
-
---
-
-SELECT * FROM users;
-SELECT * FROM preferences;
-SELECT * FROM streamer;
+select * from admin;
+select * from admin_notice;
+select * from board;
 
 --240210 이지수 : user_id 는 VARCHAR2로 변경되었고, user_num이 NUMBER 대신함.
 --테이블 생성이 vARCHAR2 여서 맞게 임의의 user_id로 변경함 
@@ -446,8 +470,24 @@ INSERT INTO admin (admin_id, admin_name, admin_pw, email)
 INSERT INTO admin (admin_id, admin_name, admin_pw, email) 
     VALUES(3,'김진훈','12345','injik@naver.com');
     
-    
-    
+------------운영자 notice 입력 (시퀀스도 같이 하기)--------------
+drop sequence admin_notice_seq;
+create sequence admin_notice_seq
+start with 0
+increment by 1
+minvalue 0;
+
+insert into admin_notice (admin_id, notice_num, notice_type, notice_title,
+notice_content)
+values (1, admin_notice_seq.nextval, '점검', '2021년 2월 21일자 업데이트 내역',
+'새로운 기능 구현(db연동)');
+
+insert into admin_notice (admin_id, notice_num, notice_type, notice_title,
+notice_content)
+values (2, admin_notice_seq.nextval, '공지', '2021년 2월 21일자 서버 점검 시간',
+'2월 21일 16시00분 ~ 18시00분까지 임시점검이 있을 예정입니다.');
+
+select * from admin_notice;
 
 -------------------------------------------------------------------------
 
@@ -468,16 +508,18 @@ INSERT INTO streaming_preference VALUES(25, 57, 85, 47, 14);
 INSERT INTO streaming_preference VALUES(23, 55, 80, 45, 16);
 INSERT INTO streaming_preference VALUES(20, 50, 70, 40, 15);
 
+select * from users;
+
 
 ALTER TABLE users ADD subscription VARCHAR2(1);
 
 UPDATE users SET subscription = 'y' WHERE user_num = 1;
 
 --2~4 짝수 subscription n
-UPDATE users SET subscription = 'n' WHERE user_num = 4;
+UPDATE users SET subscription = 'n' WHERE mod(user_num, 2) = 0;
 
 --2~5 홀수 subscription y
-UPDATE users SET subscription = 'y' WHERE user_num = 5;
+UPDATE users SET subscription = 'y' WHERE mod(user_num, 2) = 1;
 
 
 --스트리머 레코드를 추가할 때마다 strm_num 값이 1 늘어나게 하는 시퀀스와 트리거
