@@ -31,6 +31,7 @@
       <main>
         <div class="graphBox1">
           <div class="box1">
+          	<canvas id="myChart"></canvas>
           </div>
           <div class="box2">
           </div>
@@ -125,7 +126,7 @@
     <!-- 컨테이너 종료 -->
     <script src="order.js"></script>
     <script src="index.js"></script>
-    <script src="myChart.js"></script>
+    <script src="chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
       window.onload = function () {
