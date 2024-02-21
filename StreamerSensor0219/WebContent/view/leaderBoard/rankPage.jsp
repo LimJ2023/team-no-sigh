@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
 <head>
@@ -24,6 +24,7 @@
 <body>
 	<p>test 03</p>
 	<!-- header -->
+
 	<header>
 		<!-- nav container(위쪽 로고부터 검색창, 회원이미지까지) home_include 안의 logo_include로 뺴냄 -->
 		<c:import url="/view/home_include/logo_include.jsp" />
@@ -33,7 +34,6 @@
 
 
 	<section class="rankContainer">
-
 
 		<div class="rankHead" style="border-radius: 1rem">
 			<h2>현재 사용자 : ${users.user_num } . ${users.user_name } (
@@ -188,6 +188,7 @@
 				</table>
 			</div>
 		</div>
+	</div>
 
 	</section>
 

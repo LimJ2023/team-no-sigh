@@ -1,18 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" import="java.sql.*"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<%
-Connection conn = null;
-PreparedStatement pstmt = null;
-
-String jdbc_driver = "oracle.jdbc.driver.OracleDriver";
-String jdbc_url = "jdbc:oracle:thin:@localhost:1521:xe";
-
-Class.forName(jdbc_driver);
-
-conn = DriverManager.getConnection(jdbc_url, "system", "12345");
-%>
 <html>
 <head>
 <meta charset="UTF-8" />
@@ -51,56 +40,35 @@ conn = DriverManager.getConnection(jdbc_url, "system", "12345");
 			<div class="select">
 				<select name="" id="category" onchange="onchangeSelect()">
 					<option value="All">전체 보기</option>
-					<option value="Subscrip">y</option>
-					<option value="Cancel">n</option>
+					<option value="y">y</option>
+					<option value="n">n</option>
 				</select>
 			</div>
 			<div class="user-profile">
-				<%
-				try {
-					String sql = "SELECT * from users";
-					pstmt = conn.prepareStatement(sql);
-
-					ResultSet rs = pstmt.executeQuery();
-
-					while (rs.next()) {
-
-						out.print("<a href='members_profile'>");
-						out.print("<div class='user'>");
-						out.print("<p class='id'>");
-						out.print("<img src='img/admin/profile4.png' />&nbsp; 아이디: ");
-						out.print(rs.getString("user_id"));
-						out.print("<p>");
-						out.print("<br /> <br />");
-						out.print("<p class='subscription'>구독 상태: ");
-						out.print(rs.getString("subscription"));
-						out.print("</p>");
-						out.print("</div>");
-						out.print("</a>");
-
-					}
-
-					rs.close();
-					pstmt.close();
-					conn.close();
-
-				} catch (Exception e) {
-					out.println(e);
-				}
-				%>
+				<c:forEach var="users" items="${users }">
+					<a href='member_profile'>
+						<div class='user'>
+							<p class='id'>
+								<img src='img/admin/profile4.png' />&nbsp; 아이디: ${users.user_id }
+							</p>
+							<br /> <br />
+							<p class='subscription'>구독 여부: ${users.subscription }</p>
+						</div>
+					</a>
+				</c:forEach>
 			</div>
 		</main>
 		<!-- 메인 종료 -->
 
 		<!-- 오른쪽 사이드바 admin_include 안의 right_sideBar로 빼냄 -->
 		<c:import url="/view/admin_include/right_sideBar.jsp" />
-		
+
 	</div>
 	<!-- 컨테이너 종료 -->
-	<script src="order.js"></script>
-	<script src="index.js"></script>
+	<script src="admin/order.js"></script>
+	<!-- <script src="index.js"></script> -->
 	<script src="admin/filter.js"></script>
-	<script src="searchUser.js"></script>
+	<!-- <script src="searchUser.js"></script> -->
 </body>
 
 </html>

@@ -288,6 +288,7 @@ main .user {
     border-radius: var(--card-border-radius);
     box-shadow: none;
     transition: all 0.3s ease;
+    /* display: block; */
 }
 
 main .user:hover {
