@@ -17,8 +17,10 @@
 		</a> <a href="${root }members"> <span
 			class="material-symbols-outlined"> group </span>
 			<h3>회원 관리</h3>
+
 		</a> <a href="../analysis_page/analysis.html"> <span
 			class="material-symbols-outlined"> insights </span>
+
 			<h3>분석</h3>
 		</a> <a href="${root }index"> <span class="material-symbols-outlined">logout
 		</span>

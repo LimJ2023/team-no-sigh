@@ -67,5 +67,7 @@
                 </div>
             </section>
 
+<c:import url="/view/home_include/footer.jsp"/>
+
 </body>
 </html>

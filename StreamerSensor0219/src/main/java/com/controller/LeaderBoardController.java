@@ -28,12 +28,16 @@ public class LeaderBoardController {
 		/* Ranking ranking = rankingService.getRanking(); */
 		List<Ranking> rankings = rankingService.getRankings();
 		
+		int sumAVG = rankingService.getSumAVG();
+		
 		model.addAttribute("users", users);
 		/* model.addAttribute("ranking", ranking); */
 		model.addAttribute("rankings", rankings);
+		model.addAttribute("sumAVG", sumAVG);
 		
 		return "/leaderBoard/rankPage";
 	}
+	
 	
 	
 }
