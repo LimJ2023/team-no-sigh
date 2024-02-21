@@ -21,4 +21,14 @@ public class BoardController {
 		return "/board/boardWrite";
 	}
 	
+	@RequestMapping(value = "/board/boardModify")
+	public String boardModifyPage() {
+		return "/board/boardModify";
+	}
+	
+	@RequestMapping(value = "/board/boardDelete")
+	public String boardDeletePage() {
+		return "/board/boardDelete";
+	}
+	
 }
