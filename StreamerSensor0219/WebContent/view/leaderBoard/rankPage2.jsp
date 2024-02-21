@@ -18,6 +18,9 @@
 <title>Streamer Sensor</title>
 </head>
 
+<script>
+	var sumAVG = 
+</script>
 
 <body>
 	<p>test 03</p>
@@ -55,7 +58,10 @@
 							<option value="수다" class="categoryOption">수다</option>
 					</select></td>
 				</tr>
+
 			</table>
+
+
 
 
 
@@ -71,7 +77,10 @@
 							<th scope="col" class="rankPlace">순위</th>
 							<th scope="col" colspan="1">스트리머</th>
 							<th scope="col">방송이름</th>
+							
 							<th scope="col">평균 시청자 수</th>
+							
+							
 							<th scope="col">좋아요 수</th>
 							<th scope="col">일일 시청자 수</th>
 							<th scope="col">팔로워 수</th>
@@ -90,8 +99,8 @@
 
 							<tr id="table_row">
 								<c:if test="${users.subscription eq 'y'}">
-									<td class="td td-rankPlace rankPlace">${ranking.rank_place }</td>
-									<td class="td td-streamerInfo">
+									<td class="td-rankPlace rankPlace">${ranking.rank_place }</td>
+									<td class="td-streamerInfo">
 										<div class='rank-streamer'>
 											<div class='rank-streamer-info'>
 												<img src="img/leaderBoard/Person_Icon.png"
@@ -111,25 +120,18 @@
 											${ranking.strm_id }
 										</div>
 									</td>
-									<td class="td td-description"><div class="rank_desc">${ranking.streaming_desc }</div></td>
+									<td class="td-description"><div class="rank_desc">${ranking.streaming_desc }</div></td>
 									
-									<td class="td td-avgViewers avgV-bar" style="width:${(ranking.avg_viewers / sumAVG) * 100 }%;">${ranking.avg_viewers }</td>
+									<td class="td-avgViewers avgV-bar" style="width:${(ranking.avg_viewers / sumAVG) * 100 }%;">${ranking.avg_viewers }</td>
 									
-									<td class="td td-likes">
-										<div class="likes-div">
-										<div class="likes-bar" style="width:${(ranking.likes / sumLikes) * 100}%;"></div>
-										<div class="likes">${ranking.likes }</div>
-										</div>
-									</td>
- 									<td class="td td-dailyViewers">
- 										<div class="daily-div">
- 											<div class="daily-bar" style="width:${(ranking.daily_viewers / sumDaily) * 100}%;"></div>
- 											<div class="dailyV">${ranking.daily_viewers }</div>
- 										</div>
- 									</td>
-									<td class="td td-followers">${ranking.strm_followers }</td>
 
-									<td class="td td-category">${ranking.streaming_category }</td>
+									
+									<td class="td-likes">${ranking.likes }</td>
+									<td class="td-dailyViewers">${ranking.daily_viewers }</td>
+<td class="td-followers">${ranking.strm_followers }</td>
+
+									<td class="td-category">${ranking.streaming_category }</td>
+
 								</c:if>
 
 								<c:if
@@ -156,26 +158,19 @@
 											${ranking.strm_id }
 										</div>
 									</td>
-									<td class="td td-description">${ranking.streaming_desc }</td>
+									<td class="td-description">${ranking.streaming_desc }</td>
 									
-									<td class="td td-avgViewers avgV-bar" style="width:${(ranking.avg_viewers / sumAVG) * 100 }%;">${ranking.avg_viewers }</td>
+									<td class="td-avgViewers avgV-bar" style="width:${(ranking.avg_viewers / sumAVG) * 100 }%;">${ranking.avg_viewers }</td>
 									
-									<td class="td td-likes">
-										<div class="likes-div">
-										<div class="likes-bar" style="width:${(ranking.likes / sumLikes) * 100}%;"></div>
-										<div class="likes">${ranking.likes }</div>
-										</div>
-									</td>
- 									<td class="td td-dailyViewers">
- 										<div class="daily-div">
- 											<div class="daily-bar" style="width:${(ranking.daily_viewers / sumDaily) * 100}%;"></div>
- 											<div class="dailyV">${ranking.daily_viewers }</div>
- 										</div>
- 									</td>
-									<td class="td td-followers">${ranking.strm_followers }</td>
 
-									<td class="td td-category">${ranking.streaming_category }</td>
+									
+									<td class="td-likes">${ranking.likes }</td>
+									<td class="td-dailyViewers">${ranking.daily_viewers }</td>
+									<td class="td-followers">${ranking.strm_followers }</td>
+
+									<td class="td-category">${ranking.streaming_category }</td>
 								</c:if>
+
 							</tr>
 						</c:forEach>
 
