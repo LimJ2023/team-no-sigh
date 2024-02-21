@@ -451,3 +451,15 @@ p{
 .bxs-hot{
     color: red;
 }
+
+.todays_anchor{
+	text-align: center;
+}
+
+.chzzkLogo{
+	border-radius: 10px;
+}
+
+.todays_col>a:visited{
+	color: white;
+}

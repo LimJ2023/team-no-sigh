@@ -49,4 +49,6 @@ public class AdminService {
 		
 		return result_info;
 	}
+	
+	
 }

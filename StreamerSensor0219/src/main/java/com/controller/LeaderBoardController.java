@@ -25,15 +25,23 @@ public class LeaderBoardController {
 	public String leaderBoardPage(Model model) {
 		
 		Users users = uService.getUsers();
-		Ranking ranking = rankingService.getRanking();
 		List<Ranking> rankings = rankingService.getRankings();
 		
+		int sumAVG = rankingService.getSumAVG();
+		int sumLikes = rankingService.getSumLikes();
+		
+		int sumDaily = rankingService.getSumDaily();
+		
 		model.addAttribute("users", users);
-		model.addAttribute("ranking", ranking);
 		model.addAttribute("rankings", rankings);
+		model.addAttribute("sumAVG", sumAVG);
+		model.addAttribute("sumLikes", sumLikes);
+		
+		model.addAttribute("sumDaily", sumDaily);
 		
 		return "/leaderBoard/rankPage";
 	}
+	
 	
 	
 }

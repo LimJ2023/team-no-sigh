@@ -14,25 +14,31 @@ public class UsersDAO {
 
 	@Autowired
 	private JdbcTemplate db;
-	
+
 	@Autowired
 	UsersMapper uMapper;
-	
-	
-	public List<Users> select_user(){
-			String sql = "SELECT * FROM users WHERE user_num = 2";
-		//String sql = "SELECT * FROM users WHERE user_num = 2";
+
+	public List<Users> select_user() {
+		String sql = "SELECT * FROM users WHERE user_num = 1";
+		// String sql = "SELECT * FROM users WHERE user_num = 2";
 		List<Users> users = db.query(sql, uMapper);
 		return users;
 	}
-	
-	/*
-	public List<Users> select_user_2(){
-		String sql = "SELECT * FROM users WHERE user_num = 2";
+
+
+	public List<Users> print_user() {
+		String sql = "select * from users";
+
 		List<Users> users = db.query(sql, uMapper);
 		return users;
 	}
-	*/
-	
-	
+
+	public List<Users> oneByOne_user() {
+		String sql = "select user_id, user_name, user_gen, user_age, user_na, subscription "
+				+ "from users "
+				+ "where user_num = #{user_num}";
+		List<Users> users = db.query(sql, uMapper);
+		return users;
+	}
+
 }

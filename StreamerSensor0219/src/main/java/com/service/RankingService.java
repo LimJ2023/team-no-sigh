@@ -10,19 +10,26 @@ import com.domain.Ranking;
 @Service
 public class RankingService {
 
+	
 	@Autowired
 	RankingDAO rankingDAO;
-	
-	public Ranking getRanking() {
-		
-		Ranking rankingBean = new Ranking();
-		rankingBean = rankingDAO.select_ranking().get(0);
-		return rankingBean;
-		
-	}
 	
 	public List<Ranking> getRankings() {
 		return rankingDAO.select_ranking();
 	}
+	
+	public int getSumAVG() {
+		return rankingDAO.getSumAVG();
+	}
+	
+	public int getSumLikes() {
+		return rankingDAO.getSumLikes();
+	}
+	
+	public int getSumDaily() {
+		return rankingDAO.getSumDaily();
+	}
+
+	
 	
 }

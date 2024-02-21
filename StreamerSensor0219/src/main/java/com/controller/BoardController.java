@@ -12,9 +12,23 @@ public class BoardController {
 	}
 	
 	@RequestMapping(value = "/board/boardView")
-	public String boardWritePage() {
+	public String boardViewPage() {
 		return "/board/boardView";
 	}
 	
+	@RequestMapping(value = "/board/boardWrite")
+	public String boardWritePage() {
+		return "/board/boardWrite";
+	}
+	
+	@RequestMapping(value = "/board/boardModify")
+	public String boardModifyPage() {
+		return "/board/boardModify";
+	}
+	
+	@RequestMapping(value = "/board/boardDelete")
+	public String boardDeletePage() {
+		return "/board/boardDelete";
+	}
 	
 }

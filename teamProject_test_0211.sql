@@ -497,6 +497,16 @@ END;
 /
 
 
+SELECT * FROM STREAMING_INFO;
+SELECT * FROM REVIEW;
+--리뷰 작성자,스트리머,방송제목,한줄평,점수,날짜 데이터를 최신날짜순,스트리머아이디 순으로 정렬
+select u.user_id, s.strm_id, i.streaming_desc ,r.writing_data, r.review_rating, r.review_creation_date
+from REVIEW r
+inner join STREAMING_INFO i on r.review_streaming_id = i.streaming_id
+inner join users u on u.user_id = r.user_id
+inner join streamer s  on s.strm_id = i.strm_id
+order by r.review_creation_date desc, i.streaming_id;
+
 --------------------------------------------------------------------
 
 
@@ -504,6 +514,18 @@ commit;
 
 
 --------------------------------------------------------------------
+
+--0221 이지수 (랭킹 바 확인 위해 수치 변경)
+
+UPDATE streaming_preference SET daily_viewers = 300 WHERE streaming_id = 2;
+UPDATE streaming_preference SET avg_viewers = 200 WHERE streaming_id = 2;
+
+
+UPDATE streaming_preference SET avg_viewers = 100 WHERE streaming_id = 11;
+UPDATE streaming_preference SET daily_viewers = 120 WHERE streaming_id = 11;
+
+
+commit;
 
 
 
