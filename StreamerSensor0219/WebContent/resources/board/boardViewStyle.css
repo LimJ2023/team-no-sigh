@@ -287,3 +287,11 @@ header{
     width: 70px;
     height: 30px;
 }
+
+a:link{
+	color:white !important;
+}
+
+a:visited{
+	color: white !important;
+}

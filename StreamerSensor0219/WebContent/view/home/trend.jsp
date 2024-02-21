@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,7 +40,7 @@
 					class="nav-link-title">trending</span>
 				</a> <a href="leaderBoard" class="nav-link"> <i
 					class="bx bx-bar-chart-alt-2"></i> <span class="nav-link-title">leaderBoard</span>
-				</a> <a href="../noticeBoardPage/noticeBoard.html" class="nav-link">
+				</a> <a href="board" class="nav-link">
 					<i class="bx bx-message-detail"></i> <span class="nav-link-title">community</span>
 				</a> <a href="../index.html" class="nav-link"> <i class="bx bx-news"></i>
 					<span class="nav-link-title">news</span>
@@ -182,6 +183,9 @@
 			</div>
 		</div>
 	</section>
+
+
+<c:import url="/view/home_include/footer.jsp"/>
 
 
 	<script src="home/list.js"></script>

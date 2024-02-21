@@ -1,7 +1,14 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@font-face {
+    font-family: 'SUIT-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 *{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', 'SUIT-Regular', sans-serif;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
@@ -223,7 +230,8 @@ header{
 
 .rank-table{
     border-collapse: separate;
-    border-spacing: 60px 40px;
+    /*border-spacing: 60px 40px;*/
+    border-spacing: 20px 20px;
     width: 100%;
 
 }
@@ -262,14 +270,6 @@ header{
     margin: 0 8px;
 }
 
-/*
-.rank-streamer-info-logo{
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    left: 400px;
-}
-*/
 
 .rank-streamer-info-logo{
     width: 20px;
@@ -289,7 +289,9 @@ header{
 
 .rank-streamer{
     margin-left: 20px;
-    margin-right: 100px;
+    /*margin-right: 100px;*/
+    width: 100%;
+    
 }
 
 
@@ -353,97 +355,78 @@ header{
 }
 
 
+.avgV-bar{
+	background-color: #00e7ff;
+	width: 100%;
+	height: 5px;
+	float:right;
+	color:white;
+	padding-right: 5px;
+	
+	align-self: center;
+	margin: 20px;
+	
+}
 
 
-
-
-
-/*=========footerTest===========*/
-
-.footerIcon{
-    width: 30px;
-    height: 30px;
-
+/*=========footer===========*/
+.footer{
+    text-align: left;
+    align-items: center;
+    margin-top: 30px;
 }
 
 .footerContainer{
-    padding: 70px 0;
+    width: 100%;
+    height: 160px;
+    background-color: transparent;
+    text-align: center;
+    align-items: center;
+    background-color: #3b3b3b;
+
+    padding: 15px 0;
     box-sizing: border-box;
-    max-width: 1170px;
     margin: auto;
     justify-content: space-between;
+
 }
 
 .footerRow{
     display: flex;
     flex-wrap: wrap;
-    margin-left: 200px;
-}
-
-.footerCol{
-    justify-content: space-between;
     margin: auto;
-    margin-top: 0;
+    margin-left: 40%;
 }
 
-.footerCol h4{
-    font-size: 18px;
-    color: #ffffff;
-    text-transform: capitalize;
-    margin-bottom: 35px;
-    font-weight: 500;
-    position: relative;
+
+.footerCol > h2{
+    color: #979797;
 }
 
-.footerCol h4::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    background-color: #00ff32;
-    height: 2px;
-    box-sizing: border-box;
-    width: 50px;
+.footerCol > p{
+    color: #5c5c5c;
 }
 
-.footerCol ul li:not(:last-child){
-    margin-bottom: 10px;
+.footerCol2{
+    margin-left: 50px;
+    display: flex;
 }
 
-.footerCol ul li a{
-    font-size: 16px;
-    text-transform: capitalize;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 300;
-    color: #bbbbbb;
-    display: block;
-    transition: all 0.3s ease;
+.footerCol2 li a{
+    color: white;
+    font-size: 10pt;
 }
 
-.footerCol ul li a:hover{
-    color: #00ff32;
-    padding-left: 8px;
-}
 
-.footerCol .linkIcons a{
-    display: inline-block;
-    height: 30px;
+
+.footerIcon{
     width: 30px;
-    margin: 0 10px 10px 0;
-    text-align: center;
-    line-height: 40px;
-    border-radius: 50%;
-    color: #ffffff;
-    transition: all 0.5s ease;
-}
-
-.footerCol .linkIcons a:hover{
-    color: #00e7ff;
-    background-color: #ffffff;
+    height: 30px;
 }
 
 
+
+/* ------ */
 .rank_desc{
 	overflow: hidden;
 }
@@ -454,4 +437,8 @@ header{
 
 .filterTable {
 	width: 100%;
+}
+
+.rankPlace{
+	width: 50px;
 }
