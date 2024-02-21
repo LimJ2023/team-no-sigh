@@ -59,6 +59,8 @@
 					<button id="age">연령대별</button>
 					<button>국적별</button>
 					<button>추세별</button>
+					<button id="delBtn">목록 삭제하기</button>
+					
 				</div>
 			</div>
 			<div class="rank-content-vertical">

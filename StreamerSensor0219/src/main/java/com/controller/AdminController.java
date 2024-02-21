@@ -21,14 +21,14 @@ public class AdminController {
 	
 	@RequestMapping(value = "/admin")
 	public String adminPage(Model model) {
-		/*
+		
 		Admin admin = adminService.getAdmin();
 		SiteInfo info = adminService.getSiteInfo();
 		Users user = usersService.getUsers();
 		model.addAttribute("admin", admin);
 		model.addAttribute("info",info);
 		model.addAttribute("user", user);
-		*/
+		
 		return "/admin/dashBoard";
 	}
 }

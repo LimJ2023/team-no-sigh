@@ -1,4 +1,10 @@
 const list = document.getElementById("first_list")
+const delBtn = document.getElementById("delBtn")
+
+delBtn.addEventListener('click', () => {
+    console.log("삭제버튼 진입");
+    deleteAll();
+})
 
 List.items.forEach(item => {
 
@@ -20,9 +26,8 @@ List.items.forEach(item => {
 })
 
 
-function deleteALl() {
-    document.querySelectorAll(".rank-info").forEach(item =>{
-        item.remove
-    })
-
-  }
+function deleteAll() {
+    document.querySelectorAll(".rank-ver-list").forEach(item => {
+        item.remove();
+    });
+}
