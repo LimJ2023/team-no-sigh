@@ -16,11 +16,11 @@ public class ChartServiceImpl implements ChartService{
 
     @Override
     public List<ChartData> getAllChartData() {
-        String sql = "SELECT x_column, y_column FROM your_table";
+        String sql = "SELECT strm_id, strm_Followers FROM streamer";
         return jdbcTemplate.query(sql, (rs, rowNum) -> {
             ChartData data = new ChartData();
-            data.setX(rs.getInt("x_column"));
-            data.setY(rs.getInt("y_column"));
+            data.setX(rs.getInt("strm_id"));
+            data.setY(rs.getInt("strm_Followers"));
             return data;
         });
     }
