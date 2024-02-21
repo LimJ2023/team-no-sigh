@@ -22,11 +22,14 @@ public class RankingService {
 		return rankingDAO.getSumAVG();
 	}
 	
+	public int getSumLikes() {
+		return rankingDAO.getSumLikes();
+	}
 	
-	/*
-	public List<RankGraph> getGraphData(){
-		return rankingDAO.getGraphData();
-	}*/
+	public int getSumDaily() {
+		return rankingDAO.getSumDaily();
+	}
+
 	
 	
 }

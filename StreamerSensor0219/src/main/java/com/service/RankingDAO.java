@@ -26,20 +26,21 @@ public class RankingDAO {
 		return ranking;
 	}
 	
-	
 	public int getSumAVG() {
 		String sql = "SELECT SUM(avg_viewers) AS sumAVG FROM streaming_preference sp INNER JOIN ranking r ON sp.streaming_id = r.streaming_id WHERE r.rank_date = '2024-01-09'";
 		return db.queryForObject(sql, Integer.class);
 		
 	}
 	
-	/*public List<RankGraph> getGraphData(){
-		
-		String sql = "SELECT SUM(avg_viewers) AS sumAVG FROM streaming_preference sp INNER JOIN ranking r ON sp.streaming_id = r.streaming_id WHERE r.rankdate = '2024-01-09'";
-		List<RankGraph> rankGraph = db.query(sql, rankGraphMapper);
-		return rankGraph;
-		
+	public int getSumLikes() {
+		String sql = "SELECT SUM(likes) AS sumLikes FROM streaming_preference sp INNER JOIN ranking r ON sp.streaming_id = r.streaming_id WHERE r.rank_date = '2024-01-09'";
+		return db.queryForObject(sql, Integer.class);
 	}
-	*/
+	
+	public int getSumDaily() {
+		String sql = "SELECT SUM(daily_viewers) AS sumDaily FROM streaming_preference sp INNER JOIN ranking r ON sp.streaming_id = r.streaming_id WHERE r.rank_date = '2024-01-09'";
+		return db.queryForObject(sql, Integer.class);
+	}
+	
 	
 }

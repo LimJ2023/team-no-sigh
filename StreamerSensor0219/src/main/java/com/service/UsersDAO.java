@@ -19,17 +19,12 @@ public class UsersDAO {
 	UsersMapper uMapper;
 
 	public List<Users> select_user() {
-		String sql = "SELECT * FROM users WHERE user_num = 2";
+		String sql = "SELECT * FROM users WHERE user_num = 1";
 		// String sql = "SELECT * FROM users WHERE user_num = 2";
 		List<Users> users = db.query(sql, uMapper);
 		return users;
 	}
 
-	/*
-	 * public List<Users> select_user_2(){ String sql =
-	 * "SELECT * FROM users WHERE user_num = 2"; List<Users> users = db.query(sql,
-	 * uMapper); return users; }
-	 */
 
 	public List<Users> print_user() {
 		String sql = "select * from users";
