@@ -308,14 +308,14 @@ header{
 .trend-section .rank-content-vertical{
     margin-top: 80px;
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 .trend-section .rank-ver-list{
+    width: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .trend-section .rank-img {
@@ -353,7 +353,7 @@ header{
 
 }
 .trend-section .rank-info-foot{
-    width: 120px;
+    width: 200px;
     display: flex;
     align-items: center;
     justify-content: space-between;
