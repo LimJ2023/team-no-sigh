@@ -1,364 +1,349 @@
 const List = {
-	"kind": "youtube#videoListResponse",
-	"etag": "LzAe86HyD6PLAWzGO8ejanT3zl4",
-	"items": [
-		{
-			"kind": "youtube#video",
-			"etag": "L3bR5rXPc7kwh10WMSNr2fg8Yrk",
-			"id": "qqrpMRDuPfc",
-			"snippet": {
-				"publishedAt": "2024-02-14T17:00:47Z",
-				"channelId": "UCjmJDM5pRKbUlVIzDYYWb6g",
-				"title": "Godzilla x Kong: The New Empire | Official Trailer 2",
-				"description": "The guardians of nature. The protectors of humanity. The rise of a new empire. #GodzillaXKong - Only in Theaters March 29.\n\nThe epic battle continues! Legendary Pictures’ cinematic Monsterverse follows up the explosive showdown of “Godzilla vs. Kong” with an all-new adventure that pits the almighty Kong and the fearsome Godzilla against a colossal undiscovered threat hidden within our world, challenging their very existence—and our own. “Godzilla x Kong: The New Empire” delves further into the histories of these Titans and their origins, as well as the mysteries of Skull Island and beyond, while uncovering the mythic battle that helped forge these extraordinary beings and tied them to humankind forever.\n\nOnce again at the helm is director Adam Wingard. The film stars Rebecca Hall (“Godzilla vs. Kong,” “The Night House”), Brian Tyree Henry (“Godzilla vs. Kong,” “Bullet Train”), Dan Stevens (“Gaslit,” “Legion,” “Beauty and the Beast”), Kaylee Hottle (“Godzilla vs. Kong”), Alex Ferns (“The Batman,” “Wrath of Man,” “Chernobyl”) and Fala Chen (“Irma Vep,” “Shang Chi and the Legend of the Ten Rings”).\n\nThe screenplay is by Terry Rossio (“Godzilla vs. Kong” the “Pirates of the Caribbean” series) and Simon Barrett (“You’re Next”) and Jeremy Slater (“Moon Knight”), from a story by Rossio & Wingard & Barrett, based on the character “Godzilla” owned and created by TOHO Co., Ltd. The film is produced by Mary Parent, Alex Garcia, Eric Mcleod, Thomas Tull and Brian Rogers. The executive producers are Wingard, Jen Conroy, Jay Ashenfelter, Yoshimitsu Banno, Kenji Okuhira.\n\nOnce again, Wingard is collaborating with director of photography Ben Seresin (“Godzilla vs. Kong,” “World War Z”), production designer Tom Hammock (“Godzilla vs. Kong,” “X,” “The Guest”), editor Josh Schaeffer (“Godzilla vs. Kong,” “Molly’s Game”), costume designer Emily Seresin (“The Invisible Man,” “Top of the Lake”). The composers are Tom Holkenborg (“Godzilla vs. Kong,” “Mad Max: Fury Road”) and Antonio Di Iorio (additional music on “Godzilla vs. Kong,” the “Sonic the Hedgehog” films).\n\nWarner Bros. Pictures and Legendary Pictures Present a Legendary Pictures Production, A Film By Adam Wingard, “Godzilla x Kong: The New Empire.” It is slated for release nationwide only in theaters and IMAX on March 29, 2024 and beginning 27 March 2024 internationally, distributed by Warner Bros. Pictures except in Japan, where the film will be distributed by Toho Co., Ltd and in mainland China, where it will be distributed by Legendary East.",
-				"thumbnails": {
-					"default": {
-						"url": "https://i.ytimg.com/vi/qqrpMRDuPfc/default.jpg",
-						"width": 120,
-						"height": 90
-					},
-					"medium": {
-						"url": "https://i.ytimg.com/vi/qqrpMRDuPfc/mqdefault.jpg",
-						"width": 320,
-						"height": 180
-					},
-					"high": {
-						"url": "https://i.ytimg.com/vi/qqrpMRDuPfc/hqdefault.jpg",
-						"width": 480,
-						"height": 360
-					},
-					"standard": {
-						"url": "https://i.ytimg.com/vi/qqrpMRDuPfc/sddefault.jpg",
-						"width": 640,
-						"height": 480
-					},
-					"maxres": {
-						"url": "https://i.ytimg.com/vi/qqrpMRDuPfc/maxresdefault.jpg",
-						"width": 1280,
-						"height": 720
-					}
-				},
-				"channelTitle": "Warner Bros. Pictures",
-				"tags": [
-					"2024",
-					"Adam Wingard",
-					"Brian Tyree Henry",
-					"Coming Soon",
-					"Dan Stevens",
-					"Godzilla",
-					"Godzilla x Kong",
-					"Godzilla x Kong: The New Empire Kong",
-					"Jeremy Slater",
-					"King Kong",
-					"Legendary",
-					"Mini Kong",
-					"Monsterverse",
-					"Movie",
-					"Rebecca Hall",
-					"Simon Barrett",
-					"Skar King",
-					"Terry Rossio",
-					"Trailer",
-					"WB",
-					"Warner Bros",
-					"Warner Bros Discovery",
-					"Warner Brothers"
-				],
-				"categoryId": "1",
-				"liveBroadcastContent": "none",
-				"defaultLanguage": "en",
-				"localized": {
-					"title": "Godzilla x Kong: The New Empire | Official Trailer 2",
-					"description": "The guardians of nature. The protectors of humanity. The rise of a new empire. #GodzillaXKong - Only in Theaters March 29.\n\nThe epic battle continues! Legendary Pictures’ cinematic Monsterverse follows up the explosive showdown of “Godzilla vs. Kong” with an all-new adventure that pits the almighty Kong and the fearsome Godzilla against a colossal undiscovered threat hidden within our world, challenging their very existence—and our own. “Godzilla x Kong: The New Empire” delves further into the histories of these Titans and their origins, as well as the mysteries of Skull Island and beyond, while uncovering the mythic battle that helped forge these extraordinary beings and tied them to humankind forever.\n\nOnce again at the helm is director Adam Wingard. The film stars Rebecca Hall (“Godzilla vs. Kong,” “The Night House”), Brian Tyree Henry (“Godzilla vs. Kong,” “Bullet Train”), Dan Stevens (“Gaslit,” “Legion,” “Beauty and the Beast”), Kaylee Hottle (“Godzilla vs. Kong”), Alex Ferns (“The Batman,” “Wrath of Man,” “Chernobyl”) and Fala Chen (“Irma Vep,” “Shang Chi and the Legend of the Ten Rings”).\n\nThe screenplay is by Terry Rossio (“Godzilla vs. Kong” the “Pirates of the Caribbean” series) and Simon Barrett (“You’re Next”) and Jeremy Slater (“Moon Knight”), from a story by Rossio & Wingard & Barrett, based on the character “Godzilla” owned and created by TOHO Co., Ltd. The film is produced by Mary Parent, Alex Garcia, Eric Mcleod, Thomas Tull and Brian Rogers. The executive producers are Wingard, Jen Conroy, Jay Ashenfelter, Yoshimitsu Banno, Kenji Okuhira.\n\nOnce again, Wingard is collaborating with director of photography Ben Seresin (“Godzilla vs. Kong,” “World War Z”), production designer Tom Hammock (“Godzilla vs. Kong,” “X,” “The Guest”), editor Josh Schaeffer (“Godzilla vs. Kong,” “Molly’s Game”), costume designer Emily Seresin (“The Invisible Man,” “Top of the Lake”). The composers are Tom Holkenborg (“Godzilla vs. Kong,” “Mad Max: Fury Road”) and Antonio Di Iorio (additional music on “Godzilla vs. Kong,” the “Sonic the Hedgehog” films).\n\nWarner Bros. Pictures and Legendary Pictures Present a Legendary Pictures Production, A Film By Adam Wingard, “Godzilla x Kong: The New Empire.” It is slated for release nationwide only in theaters and IMAX on March 29, 2024 and beginning 27 March 2024 internationally, distributed by Warner Bros. Pictures except in Japan, where the film will be distributed by Toho Co., Ltd and in mainland China, where it will be distributed by Legendary East."
-				},
-				"defaultAudioLanguage": "en-US"
-			},
-			"statistics": {
-				"viewCount": "6443761",
-				"likeCount": "271473",
-				"favoriteCount": "0",
-				"commentCount": "18732"
-			}
-		},
-		{
-			"kind": "youtube#video",
-			"etag": "EWFDdAeHK0xwmbz1yhDWdgjWmnk",
-			"id": "8wt_Y5_MJ4o",
-			"snippet": {
-				"publishedAt": "2024-02-14T14:30:10Z",
-				"channelId": "UCVRm2Ho8cL3lvWDyp2ayuFw",
-				"title": "Chiefs Are Repeat Super Bowl Champs, Vegas Vacations and Wild After Parties | Ep 78",
-				"description": "92%ers we are back with another episode of New Heights sponsored by Experian. If you’re looking to build your credit without adding debt, check out the Experian Smart Money Debit Card and Digital Checking Account. \n\nIn this episode, we are officially celebrating the Chiefs going back-to-back with a win in Super Bowl LVIII! \n\nBut first, we have a huge guest announcement for next week’s episode, crown an official winner of the first-ever New Heights Best Team Name Bracket Challenge, and shout out the 92% who now has the right to sign our baby and hoist their own New Heights Golden Cup. \n\nNext, we jump into the game and break down everything from the pregame fits, how Travis feels about his sideline incident with Andy Reid, the special teams play that finally jump-started the Chiefs offense, and the Niners controversial decision to receive the overtime kickoff. \n\nWe also get to discuss the absolute heater that Jason was on during his time in Vegas which included trips to The Sphere with Adam Sandler, some fake news from an Adele concert, and podcasting with Shaq. \n\nFinally, we break down everything that happened at the Chiefs post-game celebration including a lot of Jason in a Luchadore mask, and Kylie joins us to share her thoughts on seeing Jason go viral yet again. \n\nWe will be back with another episode next week but make sure you’re subscribed to the New Heights YouTube Channel and wherever you get your podcasts so you don’t miss a single episode and follow us on Instagram, Twitter, and TikTok for all the best moments from the show.\n.\n.\n.\nDownload the full podcast here:\nApple: https://podcasts.apple.com/us/podcast/new-heights/id1643745036\nSpotify:https://open.spotify.com/show/1y3SUbFMUSESC1N43tBleK?si=LsuQ4a5MRN6wGMcfVcuynw\n\n\nFollow New Heights on Social Media: \nhttp://hoo.be/newheightshow\n\n\nNEW MERCH: Shop the Official New Heights “Back-to-Back Big Yeti” tee https://www.homage.com/collections/new-heights/products/new-heights-back-2-back-big-yeti\n\nThere is still time to vote for New Heights in the iHeartRadio Podcast Awards\nhttps://www.iheart.com/podcast-awards/#vote\n\nSupport the Show:  \n\nPRIZEPICKS - Download the PrizePicks app today and use code NEWHEIGHTS for a first deposit match up to $100!\n\nEXPERIAN: To get your Experian Smart Money Debit Card and Digital Checking Account go to https://Experian.com/Kelce. Go to the app store and download the free Experian app now.\n\nBUFFALO WILD WINGS: Buffalo Wild Wings is giving America 6 free wings. If you dine-in or walk-in to B-dubs on February 26th from 2-5PM local time, you could get 6 free wings while supplies last\n\nACCELERATOR: Accelerator Active Energy is available at Giant Eagle, H-E-B and Amazon. https://a.co/d/6Gnp3gq\n\nAG1: If you're ready to take control of your health, try AG1 and get a FREE 1-year supply of Vitamin D3+K2 AND for a limited time you’ll get 10 free AG1 Travel Packs with your first purchase at https://drinkAG1.com/newheights\n\nFARMER’S DOG: Get 50% off your first box of fresh, healthy food at https://TheFarmersDog.com/newheights. Plus, you get FREE shipping! \n\nChapters: \n00:00 - Intro \n01:50 - Guest Announcement \n04:16 - Team Name Bracket Winner \n13:30 - Super Bowl Pregame Recap\n22:06 - First Half Breakdown \n26:15 - Bumping Andy Reid \n38:54 - Second Half Breakdown \n47:13 - Overtime Kickoff Decision \n01:00:00 - Post Game Thoughts \n01:09:00 - Jason’s Vegas Vacation \n01:21:00 - Golden Baby Name \n01:24:50 - After Party Break Down \n01:34:48 - Kylie Weighs in on the After Party \n01:42:00 - Super Bowl Stamp of the Week\n#nfl #chiefs #eagles #jasonkelce #traviskelce #superbowl",
-				"thumbnails": {
-					"default": {
-						"url": "https://i.ytimg.com/vi/8wt_Y5_MJ4o/default.jpg",
-						"width": 120,
-						"height": 90
-					},
-					"medium": {
-						"url": "https://i.ytimg.com/vi/8wt_Y5_MJ4o/mqdefault.jpg",
-						"width": 320,
-						"height": 180
-					},
-					"high": {
-						"url": "https://i.ytimg.com/vi/8wt_Y5_MJ4o/hqdefault.jpg",
-						"width": 480,
-						"height": 360
-					},
-					"standard": {
-						"url": "https://i.ytimg.com/vi/8wt_Y5_MJ4o/sddefault.jpg",
-						"width": 640,
-						"height": 480
-					},
-					"maxres": {
-						"url": "https://i.ytimg.com/vi/8wt_Y5_MJ4o/maxresdefault.jpg",
-						"width": 1280,
-						"height": 720
-					}
-				},
-				"channelTitle": "New Heights",
-				"tags": [
-					"New Heights",
-					"NFL",
-					"Shorts",
-					"Football",
-					"Jukes",
-					"Travis Kelce",
-					"Kansas City",
-					"Chiefs",
-					"Jason Kelce",
-					"Philadelphia",
-					"Eagles",
-					"Kansas City Chiefs",
-					"Philadelphia Eagles"
-				],
-				"categoryId": "17",
-				"liveBroadcastContent": "none",
-				"localized": {
-					"title": "Chiefs Are Repeat Super Bowl Champs, Vegas Vacations and Wild After Parties | Ep 78",
-					"description": "92%ers we are back with another episode of New Heights sponsored by Experian. If you’re looking to build your credit without adding debt, check out the Experian Smart Money Debit Card and Digital Checking Account. \n\nIn this episode, we are officially celebrating the Chiefs going back-to-back with a win in Super Bowl LVIII! \n\nBut first, we have a huge guest announcement for next week’s episode, crown an official winner of the first-ever New Heights Best Team Name Bracket Challenge, and shout out the 92% who now has the right to sign our baby and hoist their own New Heights Golden Cup. \n\nNext, we jump into the game and break down everything from the pregame fits, how Travis feels about his sideline incident with Andy Reid, the special teams play that finally jump-started the Chiefs offense, and the Niners controversial decision to receive the overtime kickoff. \n\nWe also get to discuss the absolute heater that Jason was on during his time in Vegas which included trips to The Sphere with Adam Sandler, some fake news from an Adele concert, and podcasting with Shaq. \n\nFinally, we break down everything that happened at the Chiefs post-game celebration including a lot of Jason in a Luchadore mask, and Kylie joins us to share her thoughts on seeing Jason go viral yet again. \n\nWe will be back with another episode next week but make sure you’re subscribed to the New Heights YouTube Channel and wherever you get your podcasts so you don’t miss a single episode and follow us on Instagram, Twitter, and TikTok for all the best moments from the show.\n.\n.\n.\nDownload the full podcast here:\nApple: https://podcasts.apple.com/us/podcast/new-heights/id1643745036\nSpotify:https://open.spotify.com/show/1y3SUbFMUSESC1N43tBleK?si=LsuQ4a5MRN6wGMcfVcuynw\n\n\nFollow New Heights on Social Media: \nhttp://hoo.be/newheightshow\n\n\nNEW MERCH: Shop the Official New Heights “Back-to-Back Big Yeti” tee https://www.homage.com/collections/new-heights/products/new-heights-back-2-back-big-yeti\n\nThere is still time to vote for New Heights in the iHeartRadio Podcast Awards\nhttps://www.iheart.com/podcast-awards/#vote\n\nSupport the Show:  \n\nPRIZEPICKS - Download the PrizePicks app today and use code NEWHEIGHTS for a first deposit match up to $100!\n\nEXPERIAN: To get your Experian Smart Money Debit Card and Digital Checking Account go to https://Experian.com/Kelce. Go to the app store and download the free Experian app now.\n\nBUFFALO WILD WINGS: Buffalo Wild Wings is giving America 6 free wings. If you dine-in or walk-in to B-dubs on February 26th from 2-5PM local time, you could get 6 free wings while supplies last\n\nACCELERATOR: Accelerator Active Energy is available at Giant Eagle, H-E-B and Amazon. https://a.co/d/6Gnp3gq\n\nAG1: If you're ready to take control of your health, try AG1 and get a FREE 1-year supply of Vitamin D3+K2 AND for a limited time you’ll get 10 free AG1 Travel Packs with your first purchase at https://drinkAG1.com/newheights\n\nFARMER’S DOG: Get 50% off your first box of fresh, healthy food at https://TheFarmersDog.com/newheights. Plus, you get FREE shipping! \n\nChapters: \n00:00 - Intro \n01:50 - Guest Announcement \n04:16 - Team Name Bracket Winner \n13:30 - Super Bowl Pregame Recap\n22:06 - First Half Breakdown \n26:15 - Bumping Andy Reid \n38:54 - Second Half Breakdown \n47:13 - Overtime Kickoff Decision \n01:00:00 - Post Game Thoughts \n01:09:00 - Jason’s Vegas Vacation \n01:21:00 - Golden Baby Name \n01:24:50 - After Party Break Down \n01:34:48 - Kylie Weighs in on the After Party \n01:42:00 - Super Bowl Stamp of the Week\n#nfl #chiefs #eagles #jasonkelce #traviskelce #superbowl"
-				}
-			},
-			"statistics": {
-				"viewCount": "1843074",
-				"likeCount": "52540",
-				"favoriteCount": "0",
-				"commentCount": "5377"
-			}
-		},
-		{
-			"kind": "youtube#video",
-			"etag": "t9JW8PQD3Ocmgtsi2ymnJ7QnjuM",
-			"id": "QS01z1mkWYM",
-			"snippet": {
-				"publishedAt": "2024-02-13T20:30:09Z",
-				"channelId": "UCsSsgPaZ2GSmO6il8Cb5iGA",
-				"title": "skibidi toilet 70 (part 3)",
-				"description": "this is the end... for someone\n\nfull-screen version\n\nadditional particles by HoovyTube\n\nContact me:\ninstagram.com/dafuqboomtv\nblugrayguy@gmail.com",
-				"thumbnails": {
-					"default": {
-						"url": "https://i.ytimg.com/vi/QS01z1mkWYM/default.jpg",
-						"width": 120,
-						"height": 90
-					},
-					"medium": {
-						"url": "https://i.ytimg.com/vi/QS01z1mkWYM/mqdefault.jpg",
-						"width": 320,
-						"height": 180
-					},
-					"high": {
-						"url": "https://i.ytimg.com/vi/QS01z1mkWYM/hqdefault.jpg",
-						"width": 480,
-						"height": 360
-					},
-					"standard": {
-						"url": "https://i.ytimg.com/vi/QS01z1mkWYM/sddefault.jpg",
-						"width": 640,
-						"height": 480
-					},
-					"maxres": {
-						"url": "https://i.ytimg.com/vi/QS01z1mkWYM/maxresdefault.jpg",
-						"width": 1280,
-						"height": 720
-					}
-				},
-				"channelTitle": "DaFuq!?Boom!",
-				"tags": [
-					"sfm animation",
-					"skibidi toilet vs cameramen",
-					"skibidi toilet",
-					"scientist skibidi",
-					"tv woman",
-					"titan cameraman",
-					"titan speakerman",
-					"skibidi toilet all episodes",
-					"titan tv man"
-				],
-				"categoryId": "24",
-				"liveBroadcastContent": "none",
-				"localized": {
-					"title": "skibidi toilet 70 (part 3)",
-					"description": "this is the end... for someone\n\nfull-screen version\n\nadditional particles by HoovyTube\n\nContact me:\ninstagram.com/dafuqboomtv\nblugrayguy@gmail.com"
-				},
-				"defaultAudioLanguage": "en"
-			},
-			"statistics": {
-				"viewCount": "22352216",
-				"likeCount": "1290358",
-				"favoriteCount": "0",
-				"commentCount": "161790"
-			}
-		},
-		{
-			"kind": "youtube#video",
-			"etag": "8D3FQT1ZgfsJNwIC0cvmUDHkS8M",
-			"id": "vhYrLQ6pphs",
-			"snippet": {
-				"publishedAt": "2024-02-14T17:00:51Z",
-				"channelId": "UCQCKnN9inc30A9f7IYP5_QA",
-				"title": "50 singles speed date in front of strangers | vs 1",
-				"description": "❤️ download the nectar app! ❤️ https://lovecommanectar.co/3vPtysL\nthose 4 letters u keep seeing? they're loveprints! u can find out yours on my app!\n\nwanna go on a date on my channel? (no pressure) https://lovecommanectar.co/date\nstalk my insta https://lovecommanectar.co/3f4P3O3\ntiktok https://lovecommanectar.co/3BV0uAy\ntwitter https://lovecommanectar.co/3Uq7Hjj\n\nlet’s all be friends: \nNut: https://www.instagram.com/nutstar/\nArielle: https://www.instagram.com/ariellewilson_\nElla: https://www.instagram.com/ella.martine/\nMylynn: https://www.instagram.com/mylynn.reyna/\nRichaunti: https://www.instagram.com/chaunti.dubz/\nReno: https://www.instagram.com/cherryemojigirll\nParmida: https://www.instagram.com/parmeedaa/\nEmma: https://www.instagram.com/emmagraberr/\nYasmeen: https://www.instagram.com/yasdoesitt/\nKeelyn: https://www.instagram.com/bb.ki.ki/\nScout: https://www.instagram.com/scoutnagao/\nCorinna: https://www.instagram.com/corinna.g\nJaynell: https://www.instagram.com/jaynellmora/\nHailii: https://www.instagram.com/hailiicampos/\nWinnie: http://instagram.com/winnieechang\nAgot: https://www.instagram.com/agotwmn\nJaybee: https://www.instagram.com/jaybeededios/\nJordin: https://www.instagram.com/jordindrake\nAbby: https://www.instagram.com/abby.feldman/\nParis: https://www.instagram.com/paris.blankenship/\nLika: https://www.instagram.com/likamuhoza\nJackwilliam: http://twitch.tv/ilyjacklight\nAmare: https://www.instagram.com/amare.deaver/\nBrian: https://www.instagram.com/torresbrian1/\nDavid: https://www.instagram.com/davidefinitely/\nMax: https://www.instagram.com/mhammer123\nMatt: https://www.instagram.com/mattbuiii/\nAj: https://www.instagram.com/aj_amusa/\nSamir: https://www.instagram.com/samirkhan916/\nJohn: https://www.instagram.com/loooong.john/\nDevun: https://www.instagram.com/devungore/\nMerit: https://www.instagram.com/merit_j_allday/\nNick: https://www.instagram.com/nickcoltrin/\nJibraan: https://www.instagram.com/jbbrsh/\nChristian: https://www.instagram.com/christakenotes/\nSekaye: https://www.instagram.com/sekaye/\nCarson: https://www.instagram.com/_carsonhayes_/\nCurtis: https://www.instagram.com/cmitchii/\nLumoni: https://www.instagram.com/lum.oni\nNico: https://www.instagram.com/lenickyt/\nGabbie: https://www.instagram.com/gabriella_lura\n\nlove,\nnectar\n\ncredits\nDirector: Claire Gostin\nCasting Director: Mark Chandler\nProduction Coordinator: Casey Naranjo\nEquipment Coordinator: Pat Saulo\nEditor: Rob DeBoucher\nPost-Production Coordinator: Claire Chung\n\n00:00 Intro/Recap\n00:49 Arielle & Ella (Cont'd)\n01:25 Jibraan & Gabbie\n04:51 Matt & Winnie\n06:37 Youssef & Keelyn\n09:52 Merit & Abby\n12:42 Rosebud & Ella\n16:07 Nick and Emma (Cont'd)\n17:11 Sekaye & Parmida\n19:01 Aj & Agot\n23:26 Amare & Paris\n26:16 Samir & Mylynn\n27:09 Lumoni & Harmony\n30:39 Carson & Scout\n34:56 John & Jordin\n38:05 BONUS ROUND - Jack & Harmony\n40:05 BONUS ROUND - Nico & Arielle\n44:03 Final Results",
-				"thumbnails": {
-					"default": {
-						"url": "https://i.ytimg.com/vi/vhYrLQ6pphs/default.jpg",
-						"width": 120,
-						"height": 90
-					},
-					"medium": {
-						"url": "https://i.ytimg.com/vi/vhYrLQ6pphs/mqdefault.jpg",
-						"width": 320,
-						"height": 180
-					},
-					"high": {
-						"url": "https://i.ytimg.com/vi/vhYrLQ6pphs/hqdefault.jpg",
-						"width": 480,
-						"height": 360
-					},
-					"standard": {
-						"url": "https://i.ytimg.com/vi/vhYrLQ6pphs/sddefault.jpg",
-						"width": 640,
-						"height": 480
-					},
-					"maxres": {
-						"url": "https://i.ytimg.com/vi/vhYrLQ6pphs/maxresdefault.jpg",
-						"width": 1280,
-						"height": 720
-					}
-				},
-				"channelTitle": "nectar",
-				"tags": [
-					"versus 1",
-					"versus 1 nectar",
-					"versus 1 jubilee",
-					"versus 1 jubilee nectar",
-					"online dating",
-					"dating show",
-					"dating tv show",
-					"dating internet",
-					"internet dating",
-					"nectar dating",
-					"nectar jubilee",
-					"dating",
-					"love",
-					"jubilee",
-					"soulmate",
-					"loveprint",
-					"nectarapp",
-					"nectar app",
-					"AWPO",
-					"AWEO",
-					"RWPO",
-					"RWEO",
-					"AWPG",
-					"AWEG",
-					"AIPO",
-					"RWPG",
-					"AIEO",
-					"RWEG",
-					"RIPO",
-					"RIEO",
-					"AIPG",
-					"AIEG",
-					"RIPG",
-					"REIG",
-					"hot couple",
-					"love is blind",
-					"epic",
-					"nut",
-					"love island"
-				],
-				"categoryId": "24",
-				"liveBroadcastContent": "none",
-				"localized": {
-					"title": "50 singles speed date in front of strangers | vs 1",
-					"description": "❤️ download the nectar app! ❤️ https://lovecommanectar.co/3vPtysL\nthose 4 letters u keep seeing? they're loveprints! u can find out yours on my app!\n\nwanna go on a date on my channel? (no pressure) https://lovecommanectar.co/date\nstalk my insta https://lovecommanectar.co/3f4P3O3\ntiktok https://lovecommanectar.co/3BV0uAy\ntwitter https://lovecommanectar.co/3Uq7Hjj\n\nlet’s all be friends: \nNut: https://www.instagram.com/nutstar/\nArielle: https://www.instagram.com/ariellewilson_\nElla: https://www.instagram.com/ella.martine/\nMylynn: https://www.instagram.com/mylynn.reyna/\nRichaunti: https://www.instagram.com/chaunti.dubz/\nReno: https://www.instagram.com/cherryemojigirll\nParmida: https://www.instagram.com/parmeedaa/\nEmma: https://www.instagram.com/emmagraberr/\nYasmeen: https://www.instagram.com/yasdoesitt/\nKeelyn: https://www.instagram.com/bb.ki.ki/\nScout: https://www.instagram.com/scoutnagao/\nCorinna: https://www.instagram.com/corinna.g\nJaynell: https://www.instagram.com/jaynellmora/\nHailii: https://www.instagram.com/hailiicampos/\nWinnie: http://instagram.com/winnieechang\nAgot: https://www.instagram.com/agotwmn\nJaybee: https://www.instagram.com/jaybeededios/\nJordin: https://www.instagram.com/jordindrake\nAbby: https://www.instagram.com/abby.feldman/\nParis: https://www.instagram.com/paris.blankenship/\nLika: https://www.instagram.com/likamuhoza\nJackwilliam: http://twitch.tv/ilyjacklight\nAmare: https://www.instagram.com/amare.deaver/\nBrian: https://www.instagram.com/torresbrian1/\nDavid: https://www.instagram.com/davidefinitely/\nMax: https://www.instagram.com/mhammer123\nMatt: https://www.instagram.com/mattbuiii/\nAj: https://www.instagram.com/aj_amusa/\nSamir: https://www.instagram.com/samirkhan916/\nJohn: https://www.instagram.com/loooong.john/\nDevun: https://www.instagram.com/devungore/\nMerit: https://www.instagram.com/merit_j_allday/\nNick: https://www.instagram.com/nickcoltrin/\nJibraan: https://www.instagram.com/jbbrsh/\nChristian: https://www.instagram.com/christakenotes/\nSekaye: https://www.instagram.com/sekaye/\nCarson: https://www.instagram.com/_carsonhayes_/\nCurtis: https://www.instagram.com/cmitchii/\nLumoni: https://www.instagram.com/lum.oni\nNico: https://www.instagram.com/lenickyt/\nGabbie: https://www.instagram.com/gabriella_lura\n\nlove,\nnectar\n\ncredits\nDirector: Claire Gostin\nCasting Director: Mark Chandler\nProduction Coordinator: Casey Naranjo\nEquipment Coordinator: Pat Saulo\nEditor: Rob DeBoucher\nPost-Production Coordinator: Claire Chung\n\n00:00 Intro/Recap\n00:49 Arielle & Ella (Cont'd)\n01:25 Jibraan & Gabbie\n04:51 Matt & Winnie\n06:37 Youssef & Keelyn\n09:52 Merit & Abby\n12:42 Rosebud & Ella\n16:07 Nick and Emma (Cont'd)\n17:11 Sekaye & Parmida\n19:01 Aj & Agot\n23:26 Amare & Paris\n26:16 Samir & Mylynn\n27:09 Lumoni & Harmony\n30:39 Carson & Scout\n34:56 John & Jordin\n38:05 BONUS ROUND - Jack & Harmony\n40:05 BONUS ROUND - Nico & Arielle\n44:03 Final Results"
-				}
-			},
-			"statistics": {
-				"viewCount": "438671",
-				"likeCount": "20029",
-				"favoriteCount": "0",
-				"commentCount": "2441"
-			}
-		},
-		{
-			"kind": "youtube#video",
-			"etag": "DRb6xzUr9jOsBsUfpGeikxZBdco",
-			"id": "KmhAQJqOaIY",
-			"snippet": {
-				"publishedAt": "2024-02-13T23:00:11Z",
-				"channelId": "UC1NZP8d-VFjV-kKSo6lDBig",
-				"title": "BossMan Dlow - Get In With Me (Official Video)",
-				"description": "Listen to \"Get In With Me\" On All Platforms:\nhttps://bossmandlow.lnk.to/GetInWithMe\n\nFollow BossMan Dlow:\nInstagram: https://BossmanDlow.lnk.to/Instagram\nTiktok: https://BossmanDlow.lnk.to/TikTok\nTwitter: https://BossmanDlow.lnk.to/Twitter\nFacebook: https://BossmanDlow.lnk.to/facebook\nSnapchat: https://BossmanDlow.lnk.to/snapchat\n\nListen to BossMan Dlow:\nApple Music: https://BossmanDlow.lnk.to/applemusic\nSpotify: https://BossmanDlow.lnk.to/spotify\nAmazon: https://BossmanDlow.lnk.to/AmazonMusic\nSoundCloud: https://BossmanDlow.lnk.to/SoundCloud\n\nSubscribe: https://BossmanDlow.lnk.to/Youtube\n\n#BossManDlow #GetInWithMe",
-				"thumbnails": {
-					"default": {
-						"url": "https://i.ytimg.com/vi/KmhAQJqOaIY/default.jpg",
-						"width": 120,
-						"height": 90
-					},
-					"medium": {
-						"url": "https://i.ytimg.com/vi/KmhAQJqOaIY/mqdefault.jpg",
-						"width": 320,
-						"height": 180
-					},
-					"high": {
-						"url": "https://i.ytimg.com/vi/KmhAQJqOaIY/hqdefault.jpg",
-						"width": 480,
-						"height": 360
-					},
-					"standard": {
-						"url": "https://i.ytimg.com/vi/KmhAQJqOaIY/sddefault.jpg",
-						"width": 640,
-						"height": 480
-					},
-					"maxres": {
-						"url": "https://i.ytimg.com/vi/KmhAQJqOaIY/maxresdefault.jpg",
-						"width": 1280,
-						"height": 720
-					}
-				},
-				"channelTitle": "BossMan Dlow",
-				"tags": [
-					"#bossmandlow"
-				],
-				"categoryId": "22",
-				"liveBroadcastContent": "none",
-				"localized": {
-					"title": "BossMan Dlow - Get In With Me (Official Video)",
-					"description": "Listen to \"Get In With Me\" On All Platforms:\nhttps://bossmandlow.lnk.to/GetInWithMe\n\nFollow BossMan Dlow:\nInstagram: https://BossmanDlow.lnk.to/Instagram\nTiktok: https://BossmanDlow.lnk.to/TikTok\nTwitter: https://BossmanDlow.lnk.to/Twitter\nFacebook: https://BossmanDlow.lnk.to/facebook\nSnapchat: https://BossmanDlow.lnk.to/snapchat\n\nListen to BossMan Dlow:\nApple Music: https://BossmanDlow.lnk.to/applemusic\nSpotify: https://BossmanDlow.lnk.to/spotify\nAmazon: https://BossmanDlow.lnk.to/AmazonMusic\nSoundCloud: https://BossmanDlow.lnk.to/SoundCloud\n\nSubscribe: https://BossmanDlow.lnk.to/Youtube\n\n#BossManDlow #GetInWithMe"
-				}
-			},
-			"statistics": {
-				"viewCount": "421499",
-				"likeCount": "23028",
-				"favoriteCount": "0",
-				"commentCount": "1540"
-			}
-		}
-	],
-	"nextPageToken": "CAUQAA",
-	"pageInfo": {
-		"totalResults": 200,
-		"resultsPerPage": 5
-	}
+  "kind": "youtube#videoListResponse",
+  "etag": "QtMCutrHglx8G92LHxE6MHArpzk",
+  "items": [
+    {
+      "kind": "youtube#video",
+      "etag": "zDQ8x2zFOhng-vbo_q9VN7bK7TU",
+      "id": "kHW-UVXOcLU",
+      "snippet": {
+        "publishedAt": "2024-02-20T09:00:37Z",
+        "channelId": "UC3SyT4_WLHzN7JmHQwKQZww",
+        "title": "IU 'Shopper' MV",
+        "description": "IU 6th Mini Album [The Winning]\n\nShopper\n\nLyrics by 아이유 / Composed by 이종훈, 이채규 / Arranged by 이종훈, 이채규\n\n영원히 문 닫지 않는 가게에서 자신만의 취향과 기준으로 원하는 것을 쓸어 담는 쇼퍼들의 이야기. \n그들이 카트에 담는 물건은 아주 개인적이다. 남들의 기준, 세상의 기준으로 보기에 너무 시시하거나 혹은 과하거나 어쩌면 요상하거나 그다지 가치롭지 않은 것들일 수도 있다. 하지만 쇼퍼들은 개의치 않는다. 자신이 진정으로 원하는 것을 깨닫기 위해 몸소 귀 기울이고 스스로를 행복하게 만들어줄 물건을 정확히 고르는 그들은, 본인의 욕망과 취향을 양껏 카트에 담으며 만족스러울 뿐이다. \n이 샵에서 본인 욕망의 가치에 대한 가격표는 오직 쇼퍼 본인이 단다. 그 선택이 가치로운지 아닌지는 오롯이 그가 판단한다.\n \n내가 쇼퍼로서 카트에 담은 것들은 2022년 ‘The Golden Hour : 오렌지 태양 아래’ 공연에서 마주했던 감정과 순간들이다. 나는 그 공연에서 나로서는 다소 낯선 결의 욕망들을 강하게 느꼈다. \n일에 있어 약간의 번아웃을 느끼던 와중에 마주한 그 이틀간의 공연은 미리 준비 중이었던 이 앨범의 주제와 분위기, 그리고 그것에 임하는 나의 에너지 자체를 싸그리 뒤집어 놓았다. 쉽고 편한 것은 잠시 뒤로 하고 다시 한번 쏟아내듯 도전하고 싶어졌다. 번아웃이라는 걸 인정하지 못한 채 같은 자리를 빙빙 돌며 차일피일 앨범의 마무리를 미루던 내 머릿속을 명료하게 정리해 준 것은 그 더운 밤의 관객들이었다.\n수만 명의 소리가 한 사람의 목소리처럼 또렷이 내 안에 들어와 새로운 욕심들을 깨웠다. 그로 인해 내가 느꼈던 용기와 벅참을 이 곡에 욱여 담았다. 이번에는 내 목소리가 이 곡을 듣는 이들에게 ‘자신이 원하는 것에 확신을 가질 용기’가 되길 바란다. /\n \n강렬한 사운드의 Electro-Pop Rock 트랙.\n시원한 기타 사운드를 기반으로 다양한 transition들이 쉴 새 없이 귀를 자극한다.\n아이유의 보컬은 곡 내내 절제와 발산을 반복하며 머릿속에서 탄산이 터지는 듯한 재미를 선사한다. \n곡 중간중간 재기발랄하게 가미된 FX 소스들이 마치 마켓에서 쇼핑을 하는 듯한 신나는 기분을 더한다.\n\n#아이유 #TheWinning #Shopper\n\n\n[IU Official SNS]\n\nYouTube ▶ https://www.youtube.com/@dlwlrma\nInstagram ▶ https://www.instagram.com/dlwlrma/\nX ▶https://twitter.com/_IUofficial\nTiktok ▶ https://www.tiktok.com/@_iuofficial\nFancafe ▶ https://cafe.daum.net/IU",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/kHW-UVXOcLU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/kHW-UVXOcLU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/kHW-UVXOcLU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/kHW-UVXOcLU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/kHW-UVXOcLU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "이지금 [IU Official]",
+        "tags": [
+          "IU",
+          "아이유",
+          "이담",
+          "EDAM",
+          "이지금",
+          "dlwlrma",
+          "Shopper",
+          "쇼퍼",
+          "IU MV",
+          "MV",
+          "Music Video",
+          "DPR",
+          "DPR IAN",
+          "The Winning"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "ko",
+        "localized": {
+          "title": "IU 'Shopper' MV",
+          "description": "IU 6th Mini Album [The Winning]\n\nShopper\n\nLyrics by 아이유 / Composed by 이종훈, 이채규 / Arranged by 이종훈, 이채규\n\n영원히 문 닫지 않는 가게에서 자신만의 취향과 기준으로 원하는 것을 쓸어 담는 쇼퍼들의 이야기. \n그들이 카트에 담는 물건은 아주 개인적이다. 남들의 기준, 세상의 기준으로 보기에 너무 시시하거나 혹은 과하거나 어쩌면 요상하거나 그다지 가치롭지 않은 것들일 수도 있다. 하지만 쇼퍼들은 개의치 않는다. 자신이 진정으로 원하는 것을 깨닫기 위해 몸소 귀 기울이고 스스로를 행복하게 만들어줄 물건을 정확히 고르는 그들은, 본인의 욕망과 취향을 양껏 카트에 담으며 만족스러울 뿐이다. \n이 샵에서 본인 욕망의 가치에 대한 가격표는 오직 쇼퍼 본인이 단다. 그 선택이 가치로운지 아닌지는 오롯이 그가 판단한다.\n \n내가 쇼퍼로서 카트에 담은 것들은 2022년 ‘The Golden Hour : 오렌지 태양 아래’ 공연에서 마주했던 감정과 순간들이다. 나는 그 공연에서 나로서는 다소 낯선 결의 욕망들을 강하게 느꼈다. \n일에 있어 약간의 번아웃을 느끼던 와중에 마주한 그 이틀간의 공연은 미리 준비 중이었던 이 앨범의 주제와 분위기, 그리고 그것에 임하는 나의 에너지 자체를 싸그리 뒤집어 놓았다. 쉽고 편한 것은 잠시 뒤로 하고 다시 한번 쏟아내듯 도전하고 싶어졌다. 번아웃이라는 걸 인정하지 못한 채 같은 자리를 빙빙 돌며 차일피일 앨범의 마무리를 미루던 내 머릿속을 명료하게 정리해 준 것은 그 더운 밤의 관객들이었다.\n수만 명의 소리가 한 사람의 목소리처럼 또렷이 내 안에 들어와 새로운 욕심들을 깨웠다. 그로 인해 내가 느꼈던 용기와 벅참을 이 곡에 욱여 담았다. 이번에는 내 목소리가 이 곡을 듣는 이들에게 ‘자신이 원하는 것에 확신을 가질 용기’가 되길 바란다. /\n \n강렬한 사운드의 Electro-Pop Rock 트랙.\n시원한 기타 사운드를 기반으로 다양한 transition들이 쉴 새 없이 귀를 자극한다.\n아이유의 보컬은 곡 내내 절제와 발산을 반복하며 머릿속에서 탄산이 터지는 듯한 재미를 선사한다. \n곡 중간중간 재기발랄하게 가미된 FX 소스들이 마치 마켓에서 쇼핑을 하는 듯한 신나는 기분을 더한다.\n\n#아이유 #TheWinning #Shopper\n\n\n[IU Official SNS]\n\nYouTube ▶ https://www.youtube.com/@dlwlrma\nInstagram ▶ https://www.instagram.com/dlwlrma/\nX ▶https://twitter.com/_IUofficial\nTiktok ▶ https://www.tiktok.com/@_iuofficial\nFancafe ▶ https://cafe.daum.net/IU"
+        },
+        "defaultAudioLanguage": "ko"
+      },
+      "statistics": {
+        "viewCount": "2943145",
+        "likeCount": "233515",
+        "favoriteCount": "0",
+        "commentCount": "7706"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "obmfHaCRnWDCxe52_en-nwk3yCw",
+      "id": "bNKXxwOQYB8",
+      "snippet": {
+        "publishedAt": "2024-02-19T08:58:08Z",
+        "channelId": "UC3IZKseVpdzPSBaWxBxundA",
+        "title": "LE SSERAFIM (르세라핌) 'EASY' OFFICIAL MV",
+        "description": "Creative Director : NU KIM\n\nVisual Creative Coordinating : Yujoo Kim\nStyle Directing : Yoon Cho, Soo Lee\nBrand Experience Design : Yoovin Baek, Hyemin Yoo\nContent Production : Yurok Jang, Jisoo Min\n\nA&R : Kyuyoung Kim, Yujeong Kim, Soyoon Park, Jennie Lee, Myeongji Kim\n\nPerformance Directing : Soyeon Park\nAssistant Directing : Soyoung Yoon, Yejin Lee\n\nMusic Video Director : Nina McNeely \nProducer : Collin Druz\nProduction Company : UnderWonder Content \nExecutive Producer : Frank Borin, Ivanna Borin \nDOP : Nikita Kuzmenko \nProduction Designer : Nucalifornia / Hugh Zeigler + Daniel Lane\n\nEditor : Taylor Tracy Walsh @ Cabin Editing Company \nColorist : Matt Osborne @ Company3 \nVFX : The Frender \nVFX Supervisor : Max Colt \nAdditional VFX : Roma VFX \n\n1st AD : Jonas Morales \n2nd AD : Damon Limbrick \nDirector Assistant : Jamie Donovan \nProduction Manager : Gabe Figueroa \nProduction Coordinator : Eliza Padden \n\nGaffer : Scott Moody \nKey Grip : Matt King, Charles Lenz \n1st AC : Nico Martin \n2nd AC : Carrie Lazar\n\n2D @ Emotion Creative \n2D Composite Artist : Moonyoung Go\n\nSOURCE MUSIC. Rights are reserved selectively in the video.\nUnauthorized reproduction is a violation of applicable laws.\nManufactured by SOURCE MUSIC, Seoul, Korea\n\nConnect with LE SSERAFIM:\nOFFICIAL YOUTUBE https://www.youtube.com/channel/UCs-QBT4qkj_YiQw1ZntDO3g  \nOFFICIAL INSTAGRAM https://www.instagram.com/le_sserafim/\nOFFICIAL TWITTER https://twitter.com/le_sserafim\nOFFICIAL JAPAN TWITTER https://twitter.com/le_sserafim_jp\nOFFICIAL FACEBOOK https://www.facebook.com/official.lesserafim/\nOFFICIAL WEVERSE https://weverse.onelink.me/qt3S/t2ra8uwj\nOFFICIAL TIKTOK https://www.tiktok.com/@le_sserafim\nOFFICIAL WEIBO https://weibo.com/LESSERAFIM\nOFFICIAL BILIBILI https://space.bilibili.com/627577002 \nOFFICIAL DOUYIN https://v.douyin.com/iJgLJpUp/\nOFFICIAL SOUNDCLOUD https://soundcloud.com/le_sserafim_official\n\n#LE_SSERAFIM #르세라핌 #LE_SSERAFIM_EASY #MakeItLookEasy",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/bNKXxwOQYB8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/bNKXxwOQYB8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/bNKXxwOQYB8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/bNKXxwOQYB8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/bNKXxwOQYB8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "HYBE LABELS",
+        "tags": [
+          "HYBE",
+          "HYBE LABELS",
+          "하이브",
+          "하이브레이블즈"
+        ],
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "ko",
+        "localized": {
+          "title": "LE SSERAFIM (르세라핌) 'EASY' OFFICIAL MV",
+          "description": "Creative Director : NU KIM\n\nVisual Creative Coordinating : Yujoo Kim\nStyle Directing : Yoon Cho, Soo Lee\nBrand Experience Design : Yoovin Baek, Hyemin Yoo\nContent Production : Yurok Jang, Jisoo Min\n\nA&R : Kyuyoung Kim, Yujeong Kim, Soyoon Park, Jennie Lee, Myeongji Kim\n\nPerformance Directing : Soyeon Park\nAssistant Directing : Soyoung Yoon, Yejin Lee\n\nMusic Video Director : Nina McNeely \nProducer : Collin Druz\nProduction Company : UnderWonder Content \nExecutive Producer : Frank Borin, Ivanna Borin \nDOP : Nikita Kuzmenko \nProduction Designer : Nucalifornia / Hugh Zeigler + Daniel Lane\n\nEditor : Taylor Tracy Walsh @ Cabin Editing Company \nColorist : Matt Osborne @ Company3 \nVFX : The Frender \nVFX Supervisor : Max Colt \nAdditional VFX : Roma VFX \n\n1st AD : Jonas Morales \n2nd AD : Damon Limbrick \nDirector Assistant : Jamie Donovan \nProduction Manager : Gabe Figueroa \nProduction Coordinator : Eliza Padden \n\nGaffer : Scott Moody \nKey Grip : Matt King, Charles Lenz \n1st AC : Nico Martin \n2nd AC : Carrie Lazar\n\n2D @ Emotion Creative \n2D Composite Artist : Moonyoung Go\n\nSOURCE MUSIC. Rights are reserved selectively in the video.\nUnauthorized reproduction is a violation of applicable laws.\nManufactured by SOURCE MUSIC, Seoul, Korea\n\nConnect with LE SSERAFIM:\nOFFICIAL YOUTUBE https://www.youtube.com/channel/UCs-QBT4qkj_YiQw1ZntDO3g  \nOFFICIAL INSTAGRAM https://www.instagram.com/le_sserafim/\nOFFICIAL TWITTER https://twitter.com/le_sserafim\nOFFICIAL JAPAN TWITTER https://twitter.com/le_sserafim_jp\nOFFICIAL FACEBOOK https://www.facebook.com/official.lesserafim/\nOFFICIAL WEVERSE https://weverse.onelink.me/qt3S/t2ra8uwj\nOFFICIAL TIKTOK https://www.tiktok.com/@le_sserafim\nOFFICIAL WEIBO https://weibo.com/LESSERAFIM\nOFFICIAL BILIBILI https://space.bilibili.com/627577002 \nOFFICIAL DOUYIN https://v.douyin.com/iJgLJpUp/\nOFFICIAL SOUNDCLOUD https://soundcloud.com/le_sserafim_official\n\n#LE_SSERAFIM #르세라핌 #LE_SSERAFIM_EASY #MakeItLookEasy"
+        },
+        "defaultAudioLanguage": "ko"
+      },
+      "statistics": {
+        "viewCount": "27413229",
+        "likeCount": "805067",
+        "favoriteCount": "0",
+        "commentCount": "28572"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "dv_91FjI-XF0E9MFxhja8IG3uc8",
+      "id": "WF6s-hubyaU",
+      "snippet": {
+        "publishedAt": "2024-02-19T10:35:26Z",
+        "channelId": "UC6KwCU8Y8Uw4h_Q0ptLZkqw",
+        "title": "[🇦🇺vlog] 호르몬아..나대지 마.... 남편보이와 하는 셀프 산후조리 (주책바가지 눈물주의)",
+        "description": "-\n\n비지니스 문의는 이쪽으로 👉🏽 haejoo@sandboxnetwork.net\n감성가득 인스타그램 👉🏽  https://instagram.com/hae_jooooo_\n미지의 그곳 해쭈 팬카페 👉🏽  https://m.cafe.naver.com/australiahaeju",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/WF6s-hubyaU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/WF6s-hubyaU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/WF6s-hubyaU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/WF6s-hubyaU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/WF6s-hubyaU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "해쭈 [HAEJOO]",
+        "tags": [
+          "해쭈",
+          "가좍",
+          "쁘큐보이",
+          "카야",
+          "새삼이",
+          "브이로그",
+          "호주",
+          "foodtrip",
+          "foodie",
+          "australia",
+          "mukbang",
+          "먹방브이로그",
+          "먹방",
+          "해쭈먹방",
+          "cooking",
+          "요리",
+          "고매요리"
+        ],
+        "categoryId": "22",
+        "liveBroadcastContent": "none",
+        "localized": {
+          "title": "[🇦🇺vlog] 호르몬아..나대지 마.... 남편보이와 하는 셀프 산후조리 (주책바가지 눈물주의)",
+          "description": "-\n\n비지니스 문의는 이쪽으로 👉🏽 haejoo@sandboxnetwork.net\n감성가득 인스타그램 👉🏽  https://instagram.com/hae_jooooo_\n미지의 그곳 해쭈 팬카페 👉🏽  https://m.cafe.naver.com/australiahaeju"
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "statistics": {
+        "viewCount": "824297",
+        "likeCount": "34748",
+        "favoriteCount": "0",
+        "commentCount": "2377"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "1In78mbkuh4t260F0aaGiuBOMio",
+      "id": "nVXNlMInalo",
+      "snippet": {
+        "publishedAt": "2024-02-16T23:58:11Z",
+        "channelId": "UCDNvRZRgvkBTUkQzFoT_8rA",
+        "title": "[EN] 겨울나기는 핑계고 ㅣ EP.38",
+        "description": "이번 겨울도 벌써 다 끝나가는데, 여러분들 모두 따뜻하게 겨울 보내셨나요?\n이번에 제가 정말 좋아하는 동생 이유 만나서 일상 토크를 나눠봤습니다.\n얘기하다 보니 진행도 잘하고 저랑 공통점이 되게 많더라고요?\n\n사실 다~~ 핑계고🐓\n쌥쌥이도 같이 와서 달달한 간식도 먹고 한바탕 떠들어제껴봤습니다.\n\nㅡㅡㅡ\n유선배 복지 콘텐츠 🐓핑계고🐓\n우리도 언제 올릴지 몰라요 ⚠불시 업로드⚠\n☁구독 & 좋아요 & 알림설정 필수☁\n\nㅡㅡㅡ\n\n[채널 '뜬뜬' of 안테나플러스]\n연출 | 조은진 조수빈 김다윤 이은솔 추형록 오민주\n작가 | 김송화 최수정 김이진 정채휴 전우성\n\nㅡㅡㅡ\n\n👇’뜬뜬’ 소식 보러가기\n[https://instagram.com/ddeun._.ddeun]\n#뜬뜬 #핑계고 #유재석 #양세찬 #아이유 #겨울나기\n\n- 본 콘텐츠와 무관한 내용의 댓글과 출연자에 대한 무분별한 욕설, 비난 및 조롱 등 악의적인 댓글은 무통보 삭제될 수 있습니다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/nVXNlMInalo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/nVXNlMInalo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/nVXNlMInalo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/nVXNlMInalo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/nVXNlMInalo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "뜬뜬 DdeunDdeun",
+        "tags": [
+          "뜬뜬",
+          "핑계고",
+          "유재석",
+          "아이유",
+          "양세찬",
+          "쌥쌥이",
+          "IU",
+          "겨울나기",
+          "캠핑",
+          "초코퐁듀",
+          "과일퐁듀",
+          "간식",
+          "삶은감자",
+          "감자",
+          "소파",
+          "웃긴짤",
+          "명언",
+          "자기전에",
+          "현실판",
+          "현실",
+          "홀씨",
+          "holssi",
+          "MVTeaser"
+        ],
+        "categoryId": "23",
+        "liveBroadcastContent": "none",
+        "localized": {
+          "title": "[EN] 겨울나기는 핑계고 ㅣ EP.38",
+          "description": "이번 겨울도 벌써 다 끝나가는데, 여러분들 모두 따뜻하게 겨울 보내셨나요?\n이번에 제가 정말 좋아하는 동생 이유 만나서 일상 토크를 나눠봤습니다.\n얘기하다 보니 진행도 잘하고 저랑 공통점이 되게 많더라고요?\n\n사실 다~~ 핑계고🐓\n쌥쌥이도 같이 와서 달달한 간식도 먹고 한바탕 떠들어제껴봤습니다.\n\nㅡㅡㅡ\n유선배 복지 콘텐츠 🐓핑계고🐓\n우리도 언제 올릴지 몰라요 ⚠불시 업로드⚠\n☁구독 & 좋아요 & 알림설정 필수☁\n\nㅡㅡㅡ\n\n[채널 '뜬뜬' of 안테나플러스]\n연출 | 조은진 조수빈 김다윤 이은솔 추형록 오민주\n작가 | 김송화 최수정 김이진 정채휴 전우성\n\nㅡㅡㅡ\n\n👇’뜬뜬’ 소식 보러가기\n[https://instagram.com/ddeun._.ddeun]\n#뜬뜬 #핑계고 #유재석 #양세찬 #아이유 #겨울나기\n\n- 본 콘텐츠와 무관한 내용의 댓글과 출연자에 대한 무분별한 욕설, 비난 및 조롱 등 악의적인 댓글은 무통보 삭제될 수 있습니다."
+        },
+        "defaultAudioLanguage": "ko"
+      },
+      "statistics": {
+        "viewCount": "4372702",
+        "likeCount": "77501",
+        "favoriteCount": "0",
+        "commentCount": "4358"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "pDZVUVwrECIqDuVcB3IKuYwmJRs",
+      "id": "c66Q6PqGYYY",
+      "snippet": {
+        "publishedAt": "2024-02-20T09:10:37Z",
+        "channelId": "UCUQVGXF4U-PupGCPdIRX4Qw",
+        "title": "첫 상대 투수가 빅리그 역대 최장신이라고?...'211cm 괴물' 상대한 이정후의 첫 라이브 배팅 / 스포츠머그",
+        "description": "샌프란시스코에서 스프링 캠프를 소화 중인 이정후 선수가 실전처럼 투수를 상대하는 '라이브 배팅'을 처음으로 실시했습니다. 211cm 빅리그 역대 최장신 투수를 상대해 눈길을 끌었는데요. 이정후의 타격 감각은 어땠을까요? 〈스포츠머그〉에서 전해드립니다.\n \n(취재: 유병민 / 구성·편집: 박진형 / 영상취재: 정상보 / 제작: 디지털뉴스제작부)\n\n🥇스포츠는 뭐다? ▶ 스포츠머그 SPORTSMUG\n\n#스포츠머그 #MLB #샌프란시스코 #야구 #해외야구 #이정후 #바람의손자 #메이저리그 #SMG\n\n♨지금 뜨거운 이슈, 함께 토론하기(스프 구독) : https://premium.sbs.co.kr\n\n▶스포츠머그 채널 구독하기 : https://n.sbs.co.kr/sportsMugTube\n▶Homepage : https://videomug.co.kr\n▶Facebook : https://www.facebook.com/videomug\n▶Twitter : https://twitter.com/videomug_sbs\n\nCopyright Ⓒ SBS. All rights reserved. 무단 전재, 재배포 및 AI학습 이용 금지",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/c66Q6PqGYYY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/c66Q6PqGYYY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/c66Q6PqGYYY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/c66Q6PqGYYY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/c66Q6PqGYYY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "스포츠머그 - SPORTSMUG",
+        "tags": [
+          "SBS SPORTSMUG",
+          "SPORTSMUG",
+          "format:해설",
+          "location:서울",
+          "series:스포츠머그",
+          "source:영상",
+          "type:디지털",
+          "네ㅐㄳ느ㅕㅎ",
+          "스포츠 MUG"
+        ],
+        "categoryId": "17",
+        "liveBroadcastContent": "none",
+        "localized": {
+          "title": "첫 상대 투수가 빅리그 역대 최장신이라고?...'211cm 괴물' 상대한 이정후의 첫 라이브 배팅 / 스포츠머그",
+          "description": "샌프란시스코에서 스프링 캠프를 소화 중인 이정후 선수가 실전처럼 투수를 상대하는 '라이브 배팅'을 처음으로 실시했습니다. 211cm 빅리그 역대 최장신 투수를 상대해 눈길을 끌었는데요. 이정후의 타격 감각은 어땠을까요? 〈스포츠머그〉에서 전해드립니다.\n \n(취재: 유병민 / 구성·편집: 박진형 / 영상취재: 정상보 / 제작: 디지털뉴스제작부)\n\n🥇스포츠는 뭐다? ▶ 스포츠머그 SPORTSMUG\n\n#스포츠머그 #MLB #샌프란시스코 #야구 #해외야구 #이정후 #바람의손자 #메이저리그 #SMG\n\n♨지금 뜨거운 이슈, 함께 토론하기(스프 구독) : https://premium.sbs.co.kr\n\n▶스포츠머그 채널 구독하기 : https://n.sbs.co.kr/sportsMugTube\n▶Homepage : https://videomug.co.kr\n▶Facebook : https://www.facebook.com/videomug\n▶Twitter : https://twitter.com/videomug_sbs\n\nCopyright Ⓒ SBS. All rights reserved. 무단 전재, 재배포 및 AI학습 이용 금지"
+        }
+      },
+      "statistics": {
+        "viewCount": "544711",
+        "likeCount": "2384",
+        "favoriteCount": "0",
+        "commentCount": "435"
+      }
+    }
+  ],
+  "nextPageToken": "CAUQAA",
+  "pageInfo": {
+    "totalResults": 200,
+    "resultsPerPage": 5
+  }
 }

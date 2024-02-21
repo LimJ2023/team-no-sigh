@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Streamer Sensor</title>
 
 <link rel="stylesheet" href="boardViewStyle.css">
 <link rel="stylesheet" href="swiper-bundle.min.css">
@@ -57,15 +57,15 @@
 
            <section class="board-bottom-menu-section">
                 <div class="board-bottom-menu">
-                    <div class="board-bottom-menu-div1">
+                    <div class="board-bottom-menu-div1 board-menu-button">
                     <a href="${root}board">목록으로</a>			<!-- 임시로 a링크로 바꿈 -->
                         <!-- <button type="button" class="board-menu-button button-list" onclick="location.href=board/boardList">목록으로</button> -->
                         
                     </div>
                     <div class="board-bottom-menu-div2">
                     
-                    <a href="${root}board/boardModify">수정하기</a>		<!-- 임시로 a링크로 바꿈 -->
-                    <a href="${root}board/boardDelete">삭제하기</a>		<!-- 임시로 a링크로 바꿈 -->
+                    <a href="${root}board/boardModify" class="board-menu-button">수정하기</a>		<!-- 임시로 a링크로 바꿈 -->
+                    <a href="${root}board/boardDelete" class="board-menu-button">삭제하기</a>		<!-- 임시로 a링크로 바꿈 -->
                         <!-- <button type="button" class="board-menu-button button-edit" onclick="location.href=board/boardModify">수정하기</button>
                         <button type="button" class="board-menu-button button-delete" onclick="location.href=board/boardDelete">삭제하기</button> -->
                     </div>
