@@ -49,6 +49,7 @@ public class JdbcDAO {
 		List<SiteInfo> info = db.query(sql, siteInfoMapper);
 		return info;
 	}
+	
 
 	/*
 	 * //#1 저장 public void insert_data(AdminBean bean) { String sql =
