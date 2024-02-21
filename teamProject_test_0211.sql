@@ -515,6 +515,18 @@ commit;
 
 --------------------------------------------------------------------
 
+--0221 이지수 (랭킹 바 확인 위해 수치 변경)
+
+UPDATE streaming_preference SET daily_viewers = 300 WHERE streaming_id = 2;
+UPDATE streaming_preference SET avg_viewers = 200 WHERE streaming_id = 2;
+
+
+UPDATE streaming_preference SET avg_viewers = 100 WHERE streaming_id = 11;
+UPDATE streaming_preference SET daily_viewers = 120 WHERE streaming_id = 11;
+
+
+commit;
+
 
 
 --<<사용자 더미 데이터>>
