@@ -315,9 +315,9 @@
                     </a>
                 </div>
             </div>
-            <!-- movie box 6 -->
-            <div class="movie-box">
-                <img src="./img/img1.png" alt="" class="movie-box-img">
+            <!-- streamer box 6 -->
+            <div class="streamer-box">
+                <img src="./img/img1.png" alt="" class="streamer-box-img">
                 <div class="box-text">
                     <h2 class="streamer-title">감스트</h2>
                     <span class="streamer-type">게임</span>
@@ -327,9 +327,9 @@
                     </a>
                 </div>
             </div>
-            <!-- movie box 7 -->
-            <div class="movie-box">
-                <img src="./img/img1.png" alt="" class="movie-box-img">
+            <!-- streamer box 7 -->
+            <div class="streamer-box">
+                <img src="./img/img1.png" alt="" class="streamer-box-img">
                 <div class="box-text">
                     <h2 class="streamer-title">감스트</h2>
                     <span class="streamer-type">게임</span>
@@ -339,9 +339,45 @@
                     </a>
                 </div>
             </div>
-            <!-- movie box 8 -->
-            <div class="movie-box">
-                <img src="./img/img1.png" alt="" class="movie-box-img">
+            <!-- streamer box 8 -->
+            <div class="streamer-box">
+                <img src="./img/img1.png" alt="" class="streamer-box-img">
+                <div class="box-text">
+                    <h2 class="streamer-title">감스트</h2>
+                    <span class="streamer-type">게임</span>
+                    <!-- 여기에 2번째 html -->
+                    <a href="play-page.html" class="watch-btn play-btn">
+                        <i class='bx bx-right-arrow'></i>
+                    </a>
+                </div>
+            </div>
+            <!-- streamer box 9 -->
+            <div class="streamer-box">
+                <img src="./img/img1.png" alt="" class="streamer-box-img">
+                <div class="box-text">
+                    <h2 class="streamer-title">감스트</h2>
+                    <span class="streamer-type">게임</span>
+                    <!-- 여기에 2번째 html -->
+                    <a href="play-page.html" class="watch-btn play-btn">
+                        <i class='bx bx-right-arrow'></i>
+                    </a>
+                </div>
+            </div>
+            <!-- streamer box 10 -->
+            <div class="streamer-box">
+                <img src="./img/img1.png" alt="" class="streamer-box-img">
+                <div class="box-text">
+                    <h2 class="streamer-title">감스트</h2>
+                    <span class="streamer-type">게임</span>
+                    <!-- 여기에 2번째 html -->
+                    <a href="play-page.html" class="watch-btn play-btn">
+                        <i class='bx bx-right-arrow'></i>
+                    </a>
+                </div>
+            </div>
+            <!-- streamer box 11 -->
+            <div class="streamer-box">
+                <img src="./img/img1.png" alt="" class="streamer-box-img">
                 <div class="box-text">
                     <h2 class="streamer-title">감스트</h2>
                     <span class="streamer-type">게임</span>
@@ -357,11 +393,8 @@
 <!-- movies section end -->
 <!-- next page -->
 <div class="more-page">
-    <a href="./index2.html" class="more-btn">More streamer page</a>
+    <a href="home/more_page" class="more-btn">More streamer page</a>
 </div>
-
-<c:import url="/view/home_include/footer.jsp"/>
-
 <script src="home/script.js"></script>
 </body>
 </html>
