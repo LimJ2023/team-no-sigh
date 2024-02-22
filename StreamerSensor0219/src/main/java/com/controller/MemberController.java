@@ -36,10 +36,7 @@ public class MemberController {
 	}
 	
 	@GetMapping("/member_profile")
-	public String member_profile(Model model) {
-		
-		Users users = uService.oneByOne_Users();
-		model.addAttribute("users", users);
+	public String member_profile() {
 		
 		return "admin/member_profile";
 	}
