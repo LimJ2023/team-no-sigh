@@ -58,7 +58,9 @@
 				<div class="horizon-buttons">
 					<button id="age">연령대별</button>
 					<button>국적별</button>
-					<button>추세별</button>
+					<button id="trendBtn">추세별</button>
+					<button id="delBtn">목록 삭제하기</button>
+					
 				</div>
 			</div>
 			<div class="rank-content-vertical">
@@ -101,7 +103,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="rank-ver-list">
+				<div class="rank-ver-list" id="second_list">
 					<div class="list-category">게임</div>
 					<div class="rank-info">
 						<div class="rank-img">
@@ -140,7 +142,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="rank-ver-list">
+				<div class="rank-ver-list" id="third_list">
 					<div class="list-category">음악</div>
 					<div class="rank-info">
 						<div class="rank-img">
