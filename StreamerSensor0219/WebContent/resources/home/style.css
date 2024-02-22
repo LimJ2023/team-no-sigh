@@ -350,20 +350,20 @@ p{
 	width: 50%;
 	height: auto;
 }
-/* movie-box */
-.movie-box{
+/* streamer-box */
+.streamer-box{
     position: relative;
     width: 100%;
     height: 380px;
     overflow: hidden;
     border-radius: 10px;
 }
-.movie-box-img{
+.streamer-box-img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.movie-box .box-text{
+.streamer-box .box-text{
     position: absolute;
     bottom: 0;
     left: 0;
@@ -376,11 +376,11 @@ p{
     background: linear-gradient(8deg, hsl(240 17% 14% / 74%) 14%, hsl(240 17% 14% / 14%) 44%);
     overflow: hidden;
 }
-.movie-title{
+.streamer-title{
     font-size: 1.1rem;
     font-weight: 500;
 }
-.movie-type{
+.streamer-type{
     font-size: 0.938rem;
 }
 .play-btn{
@@ -393,20 +393,36 @@ p{
     display: flex;
 }
 
-/* movies */
-.movies .heading{
+/* streamers */
+.streamers .heading{
     padding: 10px 14px;
 }
-.movies-content{
+.streamers-content{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(247px,1fr));
     gap: 1.5rem;
 }
-.movies-content .movie-box:hover .movie-box-img{
+.streamers-content .streamer-box:hover .streamer-box-img{
     transform: scale(1.1);
     transition: 0.5s;
 }
-
+/* more page */
+.more-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+.more-btn{
+    background: var(--main-color);
+    padding: 12px 20px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+.more-btn:hover{
+    background: var(--hover-color);
+    transition: 0.3s all linear;
+}
 
 /* 애니메이션 효과 */
 @keyframes animate{
