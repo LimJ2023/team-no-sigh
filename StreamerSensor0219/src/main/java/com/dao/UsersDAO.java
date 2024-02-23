@@ -25,4 +25,8 @@ public class UsersDAO {
 	}
 	
 	
+	public Users printOneUser(int user_idx) {
+		return mapper.printOneUser(user_idx);
+	}
+	
 }
