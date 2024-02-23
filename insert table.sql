@@ -259,6 +259,22 @@ BEGIN
 END;
 /
 
+
+-----------------방송에 들어갈 썸네일 등록---------------
+insert into streaming_img (img_id, img_url) 
+    VALUES(1, 'thumbnail1');
+insert into streaming_img (img_id, img_url) 
+    VALUES(2, 'thumbnail2');
+insert into streaming_img (img_id, img_url) 
+    VALUES(3, 'thumbnail3');
+insert into streaming_img (img_id, img_url) 
+    VALUES(4, 'thumbnail4');
+insert into streaming_img (img_id, img_url) 
+    VALUES(5, 'thumbnail5');
+insert into streaming_img (img_id, img_url) 
+    VALUES(6, 'thumbnail6');
+
+    
 --------------------------------------------------------------------
 
 

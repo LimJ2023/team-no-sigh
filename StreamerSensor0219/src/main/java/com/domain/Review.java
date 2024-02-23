@@ -1,12 +1,16 @@
 package com.domain;
 
-public class StreamInfo {
+import java.util.Date;
+
+public class Review {
 	
 	private String user_id;
 	private String strm_id;
 	private String streaming_desc;
 	private String writing_data;
-	private String thumbnail;
+	private int review_rating;
+	private Date review_creation_date;
+	private String img_url;
 	
 	
 	public String getUser_id() {
@@ -33,12 +37,26 @@ public class StreamInfo {
 	public void setWriting_data(String writing_data) {
 		this.writing_data = writing_data;
 	}
-	public String getThumbnail() {
-		return thumbnail;
+	public int getReview_rating() {
+		return review_rating;
 	}
-	public void setThumbnail(String thumbnail) {
-		this.thumbnail = thumbnail;
+	public void setReview_rating(int review_rating) {
+		this.review_rating = review_rating;
 	}
+	public Date getReview_creation_date() {
+		return review_creation_date;
+	}
+	public void setReview_creation_date(Date review_creation_date) {
+		this.review_creation_date = review_creation_date;
+	}
+	public String getImg_url() {
+		return img_url;
+	}
+	public void setImg_url(String img_url) {
+		this.img_url = img_url;
+	}
+	
+	
 	
 	
 }

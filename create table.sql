@@ -56,6 +56,17 @@ streamer_id VARCHAR2(20),
 FOREIGN KEY(streamer_id) references streamer(streamer_id)
 );
 
+ALTER TABLE streaming_info ADD img_id number;
+ALTER TABLE streaming_info ADD CONSTRAINT FK_streaming_img 
+    FOREIGN KEY (img_id) references streaming_img (img_id);
+    
+--방송에 들어갈 이미지 테이블--
+drop table streaming_img;
+CREATE TABLE streaming_img(
+    img_id number primary key,
+    img_url varchar2(255) not null
+);
+
 --리뷰 테이블--
 DROP TABLE review;
 CREATE table review(
@@ -202,6 +213,7 @@ create table history(
     foreign key (review_num) REFERENCES review (review_num), --ok
     foreign key (streamer_num) REFERENCES streamer (streamer_num) --?
 );
+
 insert into history (history_num, notice_num, comments_num, board_num,
 review_num, streamer_num) values (1, 20, 1, 1, 714, 100);
 

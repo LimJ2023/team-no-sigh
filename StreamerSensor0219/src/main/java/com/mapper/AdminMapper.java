@@ -19,4 +19,6 @@ public interface AdminMapper {
 			+ "from site_stat ")
 	List<SiteInfo> getSiteInfo();
 	
+	
+	
 }
