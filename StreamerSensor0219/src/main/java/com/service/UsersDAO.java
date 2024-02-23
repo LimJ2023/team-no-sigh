@@ -36,7 +36,7 @@ public class UsersDAO {
 	public List<Users> oneByOne_user() {
 		String sql = "select user_id, user_name, user_gen, user_age, user_na, subscription "
 				+ "from users "
-				+ "where user_num = #{user_num}";
+				+ "where user_num = 1";
 		List<Users> users = db.query(sql, uMapper);
 		return users;
 	}

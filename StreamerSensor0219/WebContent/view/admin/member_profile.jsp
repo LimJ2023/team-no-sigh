@@ -14,15 +14,14 @@
 		<div class="profile-box">
 			<p>
 				<img src="img/admin/profile1.png" /> <br> <br> <br>
-				<span>아이디: ${users_profile.user_id }</span> <br> <br> <span>구독 여부: ${users_profile.subscription }</span> <br>
-				<br>
+				<span>아이디: ${users_profile.user_id }</span> <br> <br> <span>구독
+					여부: ${users_profile.subscription }</span> <br> <br>
 			</p>
 		</div>
 		<div class="button">
-			<button type="button" value="수정하기">수정하기</button>
-			<br>
-			<button type="button" value="삭제하기">삭제하기</button>
-			<br> <a href="${root }members">전체 회원 보기</a>
+			<a href="">수정하기</a> <br> <br>
+			<a href="">삭제하기</a> <br> <br>
+			<a href="">전체 회원 보기</a>
 		</div>
 	</div>
 </body>
