@@ -3,6 +3,7 @@ package com.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.dao.AdminDAO;
 import com.domain.Admin;
 import com.domain.SiteInfo;
 
@@ -10,14 +11,12 @@ import com.domain.SiteInfo;
 public class AdminService {
 	
 	@Autowired
-	JdbcDAO dao;
+	AdminDAO dao;
 	
 	
 	public Admin getAdmin() {
-		
-		Admin bean = new Admin();
-		bean = dao.select_adminYohan().get(0);
-		return bean;
+		Admin admin = dao.getAdminInfo(1);
+		return admin;
 	}
 	
 	public SiteInfo getSiteInfo() {
@@ -32,8 +31,8 @@ public class AdminService {
 		double increase_revenue;
 		double increase_visit;
 		
-		info1 = dao.select_SiteInfo().get(0);
-		info2 = dao.select_SiteInfo().get(1);
+		info1 = dao.getSiteInfo().get(0);
+		info2 = dao.getSiteInfo().get(1);
 		
 		compare_total_revenue = info2.getTotal_revenue() - info1.getTotal_revenue();
 		compare_visit_count = info2.getVisit_count() - info1.getVisit_count();

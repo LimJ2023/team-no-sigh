@@ -35,6 +35,7 @@
 				<img src="img/admin/KITA2.JPG" />
 				<h2>${admin.admin_name }</h2>
 				<p>${admin.email}</p>
+				
 			</div>
 		</div>
 

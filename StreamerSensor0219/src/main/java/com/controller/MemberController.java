@@ -19,7 +19,7 @@ public class MemberController {
 	@GetMapping("/members")
 	public String members(Model model) {
 		
-		List<Users> users = uService.printUsers();
+		List<Users> users = uService.getAllUsers();
 		model.addAttribute("users", users);
 		
 		return "admin/members";
