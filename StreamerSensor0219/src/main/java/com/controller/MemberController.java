@@ -7,11 +7,17 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import com.domain.Admin;
+import com.domain.SiteInfo;
 import com.domain.Users;
+import com.service.AdminService;
 import com.service.UsersService;
 
 @Controller
 public class MemberController {
+	
+	@Autowired
+	AdminService adminService;
 	
 	@Autowired
 	UsersService uService;
@@ -26,7 +32,15 @@ public class MemberController {
 	}
 	
 	@GetMapping("/dashBoard")
-	public String dashBoard() {
+	public String dashBoard(Model model) {
+		
+		Admin admin = adminService.getAdmin();
+		SiteInfo info = adminService.getSiteInfo();
+		Users user = uService.getUsers();
+		model.addAttribute("admin", admin);
+		model.addAttribute("info",info);
+		model.addAttribute("user", user);
+		
 		return "admin/dashBoard";
 	}
 	
