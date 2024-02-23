@@ -24,5 +24,11 @@ public class UsersService {
 	public List<Users> getAllUsers() {
 		return uDAO.getAllUsers();
 	}
+	
+	public Users printOneUser(){
+		Users userBean = new Users();
+		userBean = uDAO.printOneUser(1);
+		return userBean;
+	}
 
 }

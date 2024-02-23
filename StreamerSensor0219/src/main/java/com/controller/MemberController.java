@@ -50,7 +50,11 @@ public class MemberController {
 	}
 	
 	@GetMapping("/member_profile")
-	public String member_profile() {
+	public String member_profile(Model model) {
+		
+		Users user = uService.printOneUser();
+		model.addAttribute("user", user);
+		
 		return "admin/member_profile";
 	}
 

@@ -14,7 +14,7 @@
 		<div class="profile-box">
 			<p>
 				<img src="img/admin/profile1.png" /> <br> <br> <br>
-				<span>아이디: ${users_profile.user_id }</span> <br> <br> <span>구독 여부: ${users_profile.subscription }</span> <br>
+				<span>아이디: ${userse.user_id }</span> <br> <br> <span>구독 여부: ${users.subscription }</span> <br>
 				<br>
 			</p>
 		</div>
