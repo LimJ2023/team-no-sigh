@@ -40,7 +40,9 @@
 					</tr>
 				</thead>
 
-
+				<%-- <c:forEach var="obj" items="${list }">
+					${obj.data1 }, ${obj.data2 }, ${obj.data3 }<br /> 게시물 목록 임시용 소스
+				</c:forEach> --%>
 				<tbody class="board-table-tbody">
 					<tr class="tr board-table-tbody-tr">
 						<td class="board-table-tbody-td td-no">5</td>
@@ -51,7 +53,7 @@
 					</tr>
 					<tr class="tr board-table-tbody-tr">
 						<td class="board-table-tbody-td td-no">4</td>
-						<td class="board-table-tbody-td td-title">제목샘플입니다4</td>
+						<td class="board-table-tbody-td td-title"><a href="${root}/boardView">제목샘플입니다4</a></td>
 						<td class="board-table-tbody-td td-author">이이름4</td>
 						<td class="board-table-tbody-td td-date">2024-02-15</td>
 						<td class="board-table-tbody-td td-clicks">조회4</td>
