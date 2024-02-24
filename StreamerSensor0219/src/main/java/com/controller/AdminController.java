@@ -30,6 +30,7 @@ public class AdminController {
 		SiteInfo info = adminService.getSiteInfo();
 		Users user = usersService.getUsers();
 		Review review = reviewService.getRecentReview();
+		
 		model.addAttribute("admin", admin);
 		model.addAttribute("info",info);
 		model.addAttribute("user", user);
