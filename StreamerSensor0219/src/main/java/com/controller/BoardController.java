@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/board")
 public class BoardController {
 
-	@RequestMapping(value = "/")
+	@RequestMapping(value = "")
 	public String boardListPage() {
 		return "/board/boardList";
 	}
