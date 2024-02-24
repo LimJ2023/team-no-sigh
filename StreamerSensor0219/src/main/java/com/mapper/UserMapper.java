@@ -10,9 +10,15 @@ public interface UserMapper {
 
 	@Select("SELECT * "
 			+ "FROM users "
-			+ "WHERE user_num = #{user_num}")
+			+ "WHERE user_idx = #{user_idx}")
 	Users getUserByNumber(int user_num);
 	
 	@Select("select * from users")
 	List<Users> getAllUsers();
+	
+	@Select("select user_id, subscription "
+			+ "FROM users "
+			+ "WHERE user_idx = #{user_idx}")
+	Users printOneUser(int user_idx);
+	
 }
