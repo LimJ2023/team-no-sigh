@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.dao.RankingDAO;
+import com.dao.RankingDAO;
 import com.domain.Ranking;
 
 @Service
@@ -15,19 +17,19 @@ public class RankingService {
 	RankingDAO rankingDAO;
 	
 	public List<Ranking> getRankings() {
-		return rankingDAO.select_ranking();
+		return rankingDAO.getRanking();
 	}
 	
 	public int getSumAVG() {
-		return rankingDAO.getSumAVG();
+		return rankingDAO.getSumAvg();
 	}
 	
 	public int getSumLikes() {
-		return rankingDAO.getSumLikes();
+		return rankingDAO.getLikes();
 	}
 	
 	public int getSumDaily() {
-		return rankingDAO.getSumDaily();
+		return rankingDAO.getDaily_viewers();
 	}
 
 	

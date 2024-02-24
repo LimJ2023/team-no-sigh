@@ -4,29 +4,30 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping("/board")
 public class BoardController {
 
-	@RequestMapping(value = "/board")
+	@RequestMapping(value = "")
 	public String boardListPage() {
 		return "/board/boardList";
 	}
 	
-	@RequestMapping(value = "/board/boardView")
+	@RequestMapping(value = "/boardView")
 	public String boardViewPage() {
 		return "/board/boardView";
 	}
 	
-	@RequestMapping(value = "/board/boardWrite")
+	@RequestMapping(value = "/boardWrite")
 	public String boardWritePage() {
 		return "/board/boardWrite";
 	}
 	
-	@RequestMapping(value = "/board/boardModify")
+	@RequestMapping(value = "/boardModify")
 	public String boardModifyPage() {
 		return "/board/boardModify";
 	}
 	
-	@RequestMapping(value = "/board/boardDelete")
+	@RequestMapping(value = "/boardDelete")
 	public String boardDeletePage() {
 		return "/board/boardDelete";
 	}

@@ -1,25 +1,24 @@
 package com.mapper;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.util.List;
 
-import org.springframework.jdbc.core.RowMapper;
-import org.springframework.stereotype.Component;
+import org.apache.ibatis.annotations.Select;
 
 import com.domain.Admin;
+import com.domain.SiteInfo;
 
-@Component
-public class AdminMapper implements RowMapper<Admin>{
 
-	@Override
-	public Admin mapRow(ResultSet rs, int rowNum) throws SQLException {
-		
-		Admin admin = new Admin();
-		admin.setAdmin_name(rs.getString("admin_name"));
-		admin.setEmail(rs.getString("email"));
-		
-		return admin;
-	}
+public interface AdminMapper {
 
+	@Select("select admin_name, email "
+			+ "from admin "
+			+ "where admin_id = #{admin_id}")
+	Admin getAdminInfo(int admin_id);
+	
+	@Select("select stat_id, total_revenue, visit_count, timestamp "
+			+ "from site_stat ")
+	List<SiteInfo> getSiteInfo();
+	
+	
 	
 }

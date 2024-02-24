@@ -7,11 +7,17 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import com.domain.Admin;
+import com.domain.SiteInfo;
 import com.domain.Users;
+import com.service.AdminService;
 import com.service.UsersService;
 
 @Controller
 public class MemberController {
+	
+	@Autowired
+	AdminService adminService;
 	
 	@Autowired
 	UsersService uService;
@@ -19,14 +25,22 @@ public class MemberController {
 	@GetMapping("/members")
 	public String members(Model model) {
 		
-		List<Users> users = uService.printUsers();
+		List<Users> users = uService.getAllUsers();
 		model.addAttribute("users", users);
 		
 		return "admin/members";
 	}
 	
 	@GetMapping("/dashBoard")
-	public String dashBoard() {
+	public String dashBoard(Model model) {
+		
+		Admin admin = adminService.getAdmin();
+		SiteInfo info = adminService.getSiteInfo();
+		Users user = uService.getUsers();
+		model.addAttribute("admin", admin);
+		model.addAttribute("info",info);
+		model.addAttribute("user", user);
+		
 		return "admin/dashBoard";
 	}
 	
@@ -38,9 +52,9 @@ public class MemberController {
 	@GetMapping("/member_profile")
 	public String member_profile(Model model) {
 		
-		/*
-		 * Users users = uService.oneByOne_Users(); model.addAttribute("users", users);
-		 */
+		Users user = uService.printOneUser();
+		model.addAttribute("user", user);
+		
 		return "admin/member_profile";
 	}
 

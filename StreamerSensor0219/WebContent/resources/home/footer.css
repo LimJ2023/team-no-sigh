@@ -80,6 +80,12 @@
     color: #5c5c5c;
 }
 
+.footerCol > p a{
+	text-decoration: none;
+	cursor: auto;
+	color: var(--body-color);
+}
+
 .footerCol2{
     margin-left: 50px;
     display: flex;

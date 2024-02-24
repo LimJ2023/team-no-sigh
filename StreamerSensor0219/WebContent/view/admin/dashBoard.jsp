@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:set var='root' value="${pageContext.request.contextPath }/"/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -67,10 +68,11 @@
 				<div class="highlight">
 					<div class="info">
 						<h3>최근 평가된 컨텐츠</h3>
-						<h3>평점 :</h3>
+						<h3>평점 : ${review.review_rating }점</h3>
+						<h3>제목 : ${review.streaming_desc }</h3>
 					</div>
 					<div class="content">
-						<img src="./images/con1.png">
+						<img src="img/thumbnail/${review.img_url}.png">
 					</div>
 				</div>
 				<!-- <div class="searches">
@@ -146,8 +148,8 @@
 
 	</div>
 	<!-- 컨테이너 종료 -->
-	<script src="https://apis.google.com/js/api.js"></script>
-	<script src="admin/youtube_api.js"></script>
+	<!-- <script src="https://apis.google.com/js/api.js"></script>
+	<script src="admin/youtube_api.js"></script> -->
 	<script src="admin/order.js"></script>
 	<script src="admin/admin.js"></script>
 </body>
