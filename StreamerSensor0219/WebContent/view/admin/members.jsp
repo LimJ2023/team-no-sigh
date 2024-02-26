@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" import="java.sql.*"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:set var='root' value="${pageContext.request.contextPath }/" />
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,7 +48,7 @@
 			</div>
 			<div class="user-profile">
 				<c:forEach var="users" items="${users }">
-					<a href='member_profile'>
+					<a href='${root }member_profile?user_idx=${users.user_idx}'>
 						<div class='user'>
 							<p class='id'>
 								<img src='img/admin/profile4.png' />&nbsp; 아이디: ${users.user_id }

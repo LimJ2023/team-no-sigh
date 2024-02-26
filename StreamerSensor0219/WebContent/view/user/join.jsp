@@ -71,9 +71,9 @@ function resetUserIdExist(){
 					<div class="card-body">
 						<form:form action="${root }login/join_pro" method="post"
 							modelAttribute="joinUserBean">
-							<form:hidden path="userIdExist"/>
+							<form:hidden path="userIdExist" />
 							<!-- "유효성 검사 여부 보내기" -->
-					<!-- 사용자에게는 안보이게 하기 위해 hidden(사용자는 백에서 어떻게 돌아가는지 알 필요x) -->
+							<!-- 사용자에게는 안보이게 하기 위해 hidden(사용자는 백에서 어떻게 돌아가는지 알 필요x) -->
 							<div class="form-group">
 								<form:label path="user_name">이름</form:label>
 								<form:input path="user_name" class='form-control' />
@@ -82,11 +82,13 @@ function resetUserIdExist(){
 							<div class="form-group">
 								<form:label path="user_id">아이디</form:label>
 								<div class="input-group">
-									<form:input path="user_id" class='form-control' onkeypress="resetUserIdExist()"/>
-																					<!-- 사용자 입력시 호출 -->
+									<form:input path="user_id" class='form-control'
+										onkeypress="resetUserIdExist()" />
+									<!-- 사용자 입력시 호출 -->
 									<div class="input-group-append">
-										<button type="button" class="btn btn-primary" onclick="checkUserIdExist()">중복확인</button>
-																					<!-- 누를시 호출(메서드) -->
+										<button type="button" class="btn btn-primary"
+											onclick="checkUserIdExist()">중복확인</button>
+										<!-- 누를시 호출(메서드) -->
 									</div>
 								</div>
 								<form:errors path="user_id" style='color:red' />

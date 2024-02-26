@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<c:set var='root' value='${pageContext.request.contextPath}/'/>
+<c:set var='root' value='${pageContext.request.contextPath}/' />
 <!DOCTYPE html>
 
 <html>
@@ -19,7 +19,7 @@
 </head>
 
 <script>
-	var sumAVG = 
+	var sumAVG =
 </script>
 
 <body>
@@ -35,10 +35,12 @@
 
 
 	<section class="rankContainer">
-		<div class="tempDiv"><h2>현재 사용자 : ${users.user_num } . ${users.user_name } (
-				${users.subscription} ) / UsersDAO sql 2=n / 1=y</h2></div>
-		
-		
+		<div class="tempDiv">
+			<h2>현재 사용자 : ${users.user_num } . ${users.user_name } (
+				${users.subscription} ) / UsersDAO sql 2=n / 1=y</h2>
+		</div>
+
+
 		<div class="rankHead" style="border-radius: 1rem">
 			<table class="table filterTable">
 				<tr class="rank-table-filters">
@@ -77,10 +79,10 @@
 							<th scope="col" class="rankPlace">순위</th>
 							<th scope="col" colspan="1">스트리머</th>
 							<th scope="col">방송이름</th>
-							
+
 							<th scope="col">평균 시청자 수</th>
-							
-							
+
+
 							<th scope="col">좋아요 수</th>
 							<th scope="col">일일 시청자 수</th>
 							<th scope="col">팔로워 수</th>
@@ -121,14 +123,15 @@
 										</div>
 									</td>
 									<td class="td-description"><div class="rank_desc">${ranking.streaming_desc }</div></td>
-									
-									<td class="td-avgViewers avgV-bar" style="width:${(ranking.avg_viewers / sumAVG) * 100 }%;">${ranking.avg_viewers }</td>
-									
 
-									
+									<td class="td-avgViewers avgV-bar"
+										style="width:${(ranking.avg_viewers / sumAVG) * 100 }%;">${ranking.avg_viewers }</td>
+
+
+
 									<td class="td-likes">${ranking.likes }</td>
 									<td class="td-dailyViewers">${ranking.daily_viewers }</td>
-<td class="td-followers">${ranking.strm_followers }</td>
+									<td class="td-followers">${ranking.strm_followers }</td>
 
 									<td class="td-category">${ranking.streaming_category }</td>
 
@@ -159,11 +162,12 @@
 										</div>
 									</td>
 									<td class="td-description">${ranking.streaming_desc }</td>
-									
-									<td class="td-avgViewers avgV-bar" style="width:${(ranking.avg_viewers / sumAVG) * 100 }%;">${ranking.avg_viewers }</td>
-									
 
-									
+									<td class="td-avgViewers avgV-bar"
+										style="width:${(ranking.avg_viewers / sumAVG) * 100 }%;">${ranking.avg_viewers }</td>
+
+
+
 									<td class="td-likes">${ranking.likes }</td>
 									<td class="td-dailyViewers">${ranking.daily_viewers }</td>
 									<td class="td-followers">${ranking.strm_followers }</td>
@@ -191,7 +195,7 @@
 	</section>
 
 
-<c:import url="/view/home_include/footer.jsp"/>	
+	<c:import url="/view/home_include/footer.jsp" />
 
 </body>
 <script src="leaderBoard/filter.js"></script>

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var='root' value="${pageContext.request.contextPath }/"/> 
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:set var='root' value="${pageContext.request.contextPath }/" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +17,9 @@
 			<div class="footerRow">
 				<div class="footerCol footerCol1">
 					<h2>STREAMER SENSOR</h2>
-					<p>Where you can find your Streamer <a href="${root }admin">.</a></p>
+					<p>
+						Where you can find your Streamer <a href="${root }admin">.</a>
+					</p>
 				</div>
 				<div class="footerCol footerCol2">
 					<ul>
@@ -28,13 +30,15 @@
 				</div>
 				<div class="footerCol footerCol2">
 					<div class="linkIcons">
-						<a href="#"><img src="${root }img/logo/facebook_logo_black.png"
+						<a href="#"><img
+							src="${root }img/logo/facebook_logo_black.png"
 							class="footerIcon f_facebookLogo"></a> <a href="#"><img
 							src="${root }img/logo/instagram_logo_black.png"
 							class="footerIcon f_facebookLogo"></a> <a href="#"><img
 							src="${root }img/logo/youube_logo_black.png"
 							class="footerIcon f_facebookLogo"></a> <a href="#"><img
-							src="${root }img/logo/x_logo_black.png" class="footerIcon f_facebookLogo"></a>
+							src="${root }img/logo/x_logo_black.png"
+							class="footerIcon f_facebookLogo"></a>
 					</div>
 				</div>
 			</div>

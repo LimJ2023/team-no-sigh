@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<c:set var='root' value='${pageContext.request.contextPath}/'/>
+<c:set var='root' value='${pageContext.request.contextPath}/' />
 <!DOCTYPE html>
 
 <html>
@@ -32,10 +32,12 @@
 
 
 	<section class="rankContainer">
-		<div class="tempDiv"><h2>현재 사용자 : ${users.user_num } . ${users.user_name } (
-				${users.subscription} ) / UsersDAO sql 2=n / 1=y</h2></div>
-		
-		
+		<div class="tempDiv">
+			<h2>현재 사용자 : ${users.user_num } . ${users.user_name } (
+				${users.subscription} ) / UsersDAO sql 2=n / 1=y</h2>
+		</div>
+
+
 		<div class="rankHead" style="border-radius: 1rem">
 			<table class="table filterTable">
 				<tr class="rank-table-filters">
@@ -112,21 +114,24 @@
 										</div>
 									</td>
 									<td class="td td-description"><div class="rank_desc">${ranking.streaming_desc }</div></td>
-									
-									<td class="td td-avgViewers avgV-bar" style="width:${(ranking.avg_viewers / sumAVG) * 100 }%;">${ranking.avg_viewers }</td>
-									
+
+									<td class="td td-avgViewers avgV-bar"
+										style="width:${(ranking.avg_viewers / sumAVG) * 100 }%;">${ranking.avg_viewers }</td>
+
 									<td class="td td-likes">
 										<div class="likes-div">
-										<div class="likes-bar" style="width:${(ranking.likes / sumLikes) * 100}%;"></div>
-										<div class="likes">${ranking.likes }</div>
+											<div class="likes-bar"
+												style="width:${(ranking.likes / sumLikes) * 100}%;"></div>
+											<div class="likes">${ranking.likes }</div>
 										</div>
 									</td>
- 									<td class="td td-dailyViewers">
- 										<div class="daily-div">
- 											<div class="daily-bar" style="width:${(ranking.daily_viewers / sumDaily) * 100}%;"></div>
- 											<div class="dailyV">${ranking.daily_viewers }</div>
- 										</div>
- 									</td>
+									<td class="td td-dailyViewers">
+										<div class="daily-div">
+											<div class="daily-bar"
+												style="width:${(ranking.daily_viewers / sumDaily) * 100}%;"></div>
+											<div class="dailyV">${ranking.daily_viewers }</div>
+										</div>
+									</td>
 									<td class="td td-followers">${ranking.strm_followers }</td>
 
 									<td class="td td-category">${ranking.streaming_category }</td>
@@ -157,21 +162,24 @@
 										</div>
 									</td>
 									<td class="td td-description">${ranking.streaming_desc }</td>
-									
-									<td class="td td-avgViewers avgV-bar" style="width:${(ranking.avg_viewers / sumAVG) * 100 }%;">${ranking.avg_viewers }</td>
-									
+
+									<td class="td td-avgViewers avgV-bar"
+										style="width:${(ranking.avg_viewers / sumAVG) * 100 }%;">${ranking.avg_viewers }</td>
+
 									<td class="td td-likes">
 										<div class="likes-div">
-										<div class="likes-bar" style="width:${(ranking.likes / sumLikes) * 100}%;"></div>
-										<div class="likes">${ranking.likes }</div>
+											<div class="likes-bar"
+												style="width:${(ranking.likes / sumLikes) * 100}%;"></div>
+											<div class="likes">${ranking.likes }</div>
 										</div>
 									</td>
- 									<td class="td td-dailyViewers">
- 										<div class="daily-div">
- 											<div class="daily-bar" style="width:${(ranking.daily_viewers / sumDaily) * 100}%;"></div>
- 											<div class="dailyV">${ranking.daily_viewers }</div>
- 										</div>
- 									</td>
+									<td class="td td-dailyViewers">
+										<div class="daily-div">
+											<div class="daily-bar"
+												style="width:${(ranking.daily_viewers / sumDaily) * 100}%;"></div>
+											<div class="dailyV">${ranking.daily_viewers }</div>
+										</div>
+									</td>
 									<td class="td td-followers">${ranking.strm_followers }</td>
 
 									<td class="td td-category">${ranking.streaming_category }</td>
@@ -196,7 +204,7 @@
 	</section>
 
 
-<c:import url="/view/home_include/footer.jsp"/>	
+	<c:import url="/view/home_include/footer.jsp" />
 
 </body>
 <script src="leaderBoard/filter.js"></script>

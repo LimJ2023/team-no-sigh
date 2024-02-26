@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,8 +25,7 @@
 			<!-- search box (검색)-->
 			<div class="search-box">
 				<input type="search" name="" id="search-input"
-					placeholder="Search streamer" /> <i
-					class="bx bx-search"></i>
+					placeholder="Search streamer" /> <i class="bx bx-search"></i>
 			</div>
 			<!-- user 사진 제대로 찾아서 넣어야함 (여기는 마이페이지랑 로그인되는 버튼구현)-->
 			<a href="login/html.html" class="user"> <img
@@ -40,8 +39,8 @@
 					class="nav-link-title">trending</span>
 				</a> <a href="leaderBoard" class="nav-link"> <i
 					class="bx bx-bar-chart-alt-2"></i> <span class="nav-link-title">leaderBoard</span>
-				</a> <a href="board" class="nav-link">
-					<i class="bx bx-message-detail"></i> <span class="nav-link-title">community</span>
+				</a> <a href="board" class="nav-link"> <i
+					class="bx bx-message-detail"></i> <span class="nav-link-title">community</span>
 				</a> <a href="../index.html" class="nav-link"> <i class="bx bx-news"></i>
 					<span class="nav-link-title">news</span>
 				</a> <a href="admin" class="nav-link"> <i class="bx bx-wrench"></i>
@@ -60,7 +59,7 @@
 					<button>국적별</button>
 					<button id="trendBtn">추세별</button>
 					<button id="delBtn">목록 삭제하기</button>
-					
+
 				</div>
 			</div>
 			<div class="rank-content-vertical">
@@ -187,7 +186,7 @@
 	</section>
 
 
-<c:import url="/view/home_include/footer.jsp"/>
+	<c:import url="/view/home_include/footer.jsp" />
 
 
 	<script src="home/list.js"></script>

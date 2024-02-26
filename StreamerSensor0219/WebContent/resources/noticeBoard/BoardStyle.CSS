@@ -1,191 +1,208 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-*{
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-    box-sizing: border-box;
-    scroll-padding-top: 2rem;
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap')
+	;
+
+* {
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+	box-sizing: border-box;
+	scroll-padding-top: 2rem;
 }
 /*some varibles(색깔)*/
-:root{
-    --main-color: #00ff9f;
-    --hover-color: hsl(37, 94%, 57%);
-    --body-color: #2c2c2c;
-
-    --container-color: #566078;
-    --text-color:#fcfeff;
+:root { -
+	-main-color: #00ff9f; -
+	-hover-color: hsl(37, 94%, 57%); -
+	-body-color: #2c2c2c; -
+	-container-color: #566078; -
+	-text-color: #fcfeff;
 }
 
 /* 커스텀 스크롤 바 */
-html::-webkit-scrollbar{
-    width: 0.5rem;
-    background: transparent;
+html::-webkit-scrollbar {
+	width: 0.5rem;
+	background: transparent;
 }
-.html::-webkit-scrollbar-thumb{
-    background: var(--main-color);
+
+.html::-webkit-scrollbar-thumb {
+	background: var(- -main-color);
 }
 /* 선택 색깔 */
-::selection{
-    background: var(--main-color);
-    color: var(--text-color);
-}
-a{
-    text-decoration: none;
-}
-li{
-    list-style: none;
-}
-section{
-    padding: 3rem 0 2rem;
-}
-img{
-    width: 100%;
-}
-.bx{
-    cursor: pointer;
-}
-body{
-    background: var(--body-color);
-    color: var(--text-color);
+::selection {
+	background: var(- -main-color);
+	color: var(- -text-color);
 }
 
-.noticeBoardArea{
-    width: 1000px;
-    margin: auto;
-    margin-top: 66px;
+a {
+	text-decoration: none;
 }
 
-.container{
-    max-width: 2000px;
-    margin: auto;
-    width: 100%;
+li {
+	list-style: none;
+}
+
+section {
+	padding: 3rem 0 2rem;
+}
+
+img {
+	width: 100%;
+}
+
+.bx {
+	cursor: pointer;
+}
+
+body {
+	background: var(- -body-color);
+	color: var(- -text-color);
+}
+
+.noticeBoardArea {
+	width: 1000px;
+	margin: auto;
+	margin-top: 66px;
+}
+
+.container {
+	max-width: 2000px;
+	margin: auto;
+	width: 100%;
 }
 
 /*게시판 영역*/
-.BoardList div{
-    display: inline-block;
-    background-color: #007a4b;
-    text-align: center;
+.BoardList div {
+	display: inline-block;
+	background-color: #007a4b;
+	text-align: center;
 }
 
-.BoardNumber{
-    width:6%
+.BoardNumber {
+	width: 6%
 }
 
-.Boardtitle{
-    width:60%
+.Boardtitle {
+	width: 60%
 }
 
-.BoardWriter{
-    width:11%
+.BoardWriter {
+	width: 11%
 }
 
-.BoardDate{
-    width:11%
+.BoardDate {
+	width: 11%
 }
 
-.BoardCount{
-    width:6%
+.BoardCount {
+	width: 6%
 }
 
-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: var(--body-color);
-    z-index: 100;
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: var(- -body-color);
+	z-index: 100;
 }
 /* nav 시작*/
-.nav{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
 }
 /* logo 시작*/
-.logo{
-    font-size: 1.4rem;
-    color: var(--text-color);
-    font-weight: 600;
-    text-transform: uppercase;
-    margin: 0 auto 0 0;
+.logo {
+	font-size: 1.4rem;
+	color: var(- -text-color);
+	font-weight: 600;
+	text-transform: uppercase;
+	margin: 0 auto 0 0;
 }
-.logo span{
-    color: var(--main-color);
+
+.logo span {
+	color: var(- -main-color);
 }
 /* search box(검색) 시작*/
-.search-box{
-    max-width: 240px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    column-gap: 0.7rem;
-    padding: 8px 15px;
-    background: var(--container-color);
-    border-radius: 4rem;
-    margin-right: 1rem;
+.search-box {
+	max-width: 240px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	column-gap: 0.7rem;
+	padding: 8px 15px;
+	background: var(- -container-color);
+	border-radius: 4rem;
+	margin-right: 1rem;
 }
-.search-box .bx{
-    font-size: 1.1rem;
+
+.search-box .bx {
+	font-size: 1.1rem;
 }
-.search-box .bx:hover{
-    color: var(--main-color);
+
+.search-box .bx:hover {
+	color: var(- -main-color);
 }
-#search-input{
-    width: 100%;
-    border: none;
-    outline: none;
-    color: var(--text-color);
-    background: transparent;
-    font-size: 0.938rem;
+
+#search-input {
+	width: 100%;
+	border: none;
+	outline: none;
+	color: var(- -text-color);
+	background: transparent;
+	font-size: 0.938rem;
 }
 
 /* user 시작*/
-.user{
-    display: flex;
-}
-.user-img{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center;
-}
-/* navbar 시작*/
-.navbar{
-    position: fixed;
-    top: 40%;
-    transform: translateY(-40%);
-    left: 18px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 2.1rem;
-}
-/* 버튼의 색깔이 회색빛 */
-.nav-link{
-    display: flex;
-    margin: 10px;
-    flex-direction: column;
-    align-items: center;
-    color: #b7b7b7;
-}
-/* nav-active를 줌으로서 첫번째 버튼이 색이 진하게 된것을 알수 있다 */
-.nav-link:hover{
-    color: var(--text-color);
-    transition: 0.3s all ease;
-    transform: scale(1.6);
-}
-.nav-link .bx{
-    font-size: 2.2rem;
-}
-.nav-link-title{
-    font-size: 0.7rem;
+.user {
+	display: flex;
 }
 
-.sugg-content{
+.user-img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	object-fit: cover;
+	object-position: center;
+}
+/* navbar 시작*/
+.navbar {
+	position: fixed;
+	top: 40%;
+	transform: translateY(-40%);
+	left: 18px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 2.1rem;
+}
+/* 버튼의 색깔이 회색빛 */
+.nav-link {
+	display: flex;
+	margin: 10px;
+	flex-direction: column;
+	align-items: center;
+	color: #b7b7b7;
+}
+/* nav-active를 줌으로서 첫번째 버튼이 색이 진하게 된것을 알수 있다 */
+.nav-link:hover {
+	color: var(- -text-color);
+	transition: 0.3s all ease;
+	transform: scale(1.6);
+}
+
+.nav-link .bx {
+	font-size: 2.2rem;
+}
+
+.nav-link-title {
+	font-size: 0.7rem;
+}
+
+.sugg-content {
 	width: 50%;
 	height: 30vh;
 	margin-top: 15vh;
@@ -195,60 +212,51 @@ header{
 	text-align: center;
 }
 
-
-
-
-.carousel{
-    user-select: none;
+.carousel {
+	user-select: none;
 }
-
-
-
 
 /* 스트리머 정보  출력*/
-
-.watch-btn{
-  margin: 20px 10px;
-  float: right;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--text-color);
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  color: var(--container-color);
+.watch-btn {
+	margin: 20px 10px;
+	float: right;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(- -text-color);
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	color: var(- -container-color);
 }
 
-.play-btn{
-  cursor: pointer;
+.play-btn {
+	cursor: pointer;
 }
-
 
 /*====================================================*/
 
 /* Events */
-.events{
+.events {
 	max-width: 1200px;
-    /*width: 100%;*/
-    /*width: 80%;*/
+	/*width: 100%;*/
+	/*width: 80%;*/
 	height: auto;
 	/*margin: 15px auto;*/
 	/*margin-top: 30px;*/
-    margin-left: 0px;
-    align-items: center;
-    text-align: center;
-
+	margin-left: 0px;
+	align-items: center;
+	text-align: center;
 }
 
-.title{
+.title {
 	text-align: center;
 	font-size: 20pt;
 	color: white;
 }
 
-.row{
-    display: flex;
+.row {
+	display: flex;
 	align-items: center;
 	/*width: 100%;*/
 	justify-content: space-between;
@@ -262,7 +270,7 @@ header{
 	align-items: center;
 	background-color: rgb(39, 159, 252);
 	/*background: transparent;*/
-/*	background: #A2CDE3;*/
+	/*	background: #A2CDE3;*/
 	justify-content: space-between;
 	border-radius: 10px;
 	margin-right: 20px;
@@ -271,17 +279,17 @@ header{
 	text-align: center;
 	box-sizing: border-box;
 	border: 3px solid transparent;
-/*	border: 3px solid black;*/
+	/*	border: 3px solid black;*/
 	cursor: pointer;
 }
 
-.col .humanIcon{
+.col .humanIcon {
 	max-width: 90%;
 	height: auto;
 	margin-top: 5px;
 }
 
-.youtubeLogo{
+.youtubeLogo {
 	width: 30px;
 	height: 30px;
 	margin-top: 5px;
@@ -294,8 +302,7 @@ header{
 	height: auto;
 	margin-top: 5px;
 }*/
-
-.chzzkLogo{
+.chzzkLogo {
 	width: 30px;
 	height: 30px;
 	margin-top: 5px;
@@ -303,49 +310,48 @@ header{
 	cursor: pointer;
 }
 
-.col .streamerName{
+.col .streamerName {
 	margin: 3px
 }
 
-.events .row{
+.events .row {
 	margin-top: 5px;
 }
 
-h4{
+h4 {
 	font-size: 3vmin;
 	color: white;
 	margin: 20px auto;
 }
 
-p{
+p {
 	color: #7c7c7c;
 	padding: 0px 40px;
 }
 
-.colTop{
+.colTop {
 	border: 3px solid gold;
 	width: 120px;
 }
 
-
 .col:hover {
-
-  border-radius: 3px;
-   border-style: solid;
- border-image: linear-gradient(180deg, rgb(64, 255, 244),  rgb(64, 186, 255))1;;
- /*  border-color: hotpink;*/
- border-radius: 10px;
+	border-radius: 3px;
+	border-style: solid;
+	border-image: linear-gradient(180deg, rgb(64, 255, 244),
+		rgb(64, 186, 255)) 1;;
+	/*  border-color: hotpink;*/
+	border-radius: 10px;
 }
 
-.events .ctn{
+.events .ctn {
 	margin-top: 30px;
 }
 
 /* 이런 방송은 어떠세요 */
-.expolore{
+.expolore {
 	width: 80%;
 	height: 80vh;
-/*	background-image: url('../img/bg2.png');
+	/*	background-image: url('../img/bg2.png');
 	background-position: center;*/
 	/*background-size: cover;
 	background-repeat: no-repeat;
@@ -353,7 +359,7 @@ p{
 	align-items: center;*/
 }
 
-.explore-content{
+.explore-content {
 	width: 100%;
 	padding: 50px;
 	color: white;
@@ -362,24 +368,24 @@ p{
 	flex-direction: column;
 }
 
-.explore-content h1{
+.explore-content h1 {
 	font-size: 7vmin;
 	margin: 50px;
 }
 
-.explore-content .line{
-	margin-bottom:10px;
+.explore-content .line {
+	margin-bottom: 10px;
 }
 
-.explore-content p{
+.explore-content p {
 	color: white;
 }
 
-.explore-content .ctn{
+.explore-content .ctn {
 	margin-top: 40px;
 }
 
-.suggestBox{
+.suggestBox {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	border-radius: 10px;
@@ -391,80 +397,134 @@ p{
 	color: white;
 }
 
-.suggest_Img{
+.suggest_Img {
 	width: 50%;
 	height: auto;
 }
 /* movie-box */
-.movie-box{
-    position: relative;
-    width: 100%;
-    height: 380px;
-    overflow: hidden;
-    border-radius: 10px;
+.movie-box {
+	position: relative;
+	width: 100%;
+	height: 380px;
+	overflow: hidden;
+	border-radius: 10px;
 }
-.movie-box-img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+
+.movie-box-img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
-.movie-box .box-text{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 14px;
-    background: linear-gradient(8deg, hsl(240 17% 14% / 74%) 14%, hsl(240 17% 14% / 14%) 44%);
-    overflow: hidden;
+
+.movie-box .box-text {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding: 14px;
+	background: linear-gradient(8deg, hsl(240 17% 14%/ 74%) 14%,
+		hsl(240 17% 14%/ 14%) 44%);
+	overflow: hidden;
 }
-.movie-title{
-    font-size: 1.1rem;
-    font-weight: 500;
+
+.movie-title {
+	font-size: 1.1rem;
+	font-weight: 500;
 }
-.movie-type{
-    font-size: 0.938rem;
+
+.movie-type {
+	font-size: 0.938rem;
 }
-.play-btn{
-    position: absolute;
-    bottom: 0.8rem;
-    right: 0.8rem;
+
+.play-btn {
+	position: absolute;
+	bottom: 0.8rem;
+	right: 0.8rem;
 }
 /* swiper-btn */
-.swiper-btn{
-    display: flex;
+.swiper-btn {
+	display: flex;
 }
 
 /* movies */
-.movies .heading{
-    padding: 10px 14px;
-}
-.movies-content{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(247px,1fr));
-    gap: 1.5rem;
-}
-.movies-content .movie-box:hover .movie-box-img{
-    transform: scale(1.1);
-    transition: 0.5s;
+.movies .heading {
+	padding: 10px 14px;
 }
 
+.movies-content {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(247px, 1fr));
+	gap: 1.5rem;
+}
+
+.movies-content .movie-box:hover .movie-box-img {
+	transform: scale(1.1);
+	transition: 0.5s;
+}
 
 /* 애니메이션 효과 */
-@keyframes animate{
-    0%{
-        box-shadow: 0 0 0 0 rgb(255, 180, 58, 0.7);
-    }
-    40%{
-        box-shadow: 0 0 0 50px rgb(255, 193, 7, 0);
-    }
-    80%{
-        box-shadow: 0 0 0 50px rgb(255, 193, 7, 0);
-    }
-    100%{
-        box-shadow: 0 0 0 rgb(255, 193, 7, 0);
-    }
+@
+keyframes animate { 0%{
+	box-shadow: 0 0 0 0 rgb(255, 180, 58, 0.7);
+}
+40
+%
+{
+box-shadow
+:
+0
+0
+0
+50px
+rgb(
+255
+,
+193
+,
+7
+,
+0
+);
+}
+80
+%
+{
+box-shadow
+:
+0
+0
+0
+50px
+rgb(
+255
+,
+193
+,
+7
+,
+0
+);
+}
+100
+%
+{
+box-shadow
+:
+0
+0
+0
+rgb(
+255
+,
+193
+,
+7
+,
+0
+);
+}
 }
