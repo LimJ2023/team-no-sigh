@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var='root' value="${pageContext.request.contextPath }/" />
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,8 +15,8 @@
 		<div class="profile-box">
 			<p>
 				<img src="img/admin/profile1.png" /> <br> <br> <br>
-				<span>아이디: ${userse.user_id }</span> <br> <br> <span>구독 여부: ${users.subscription }</span> <br>
-				<br>
+				<span>아이디: ${user.user_id }</span> <br> <br> 
+				<span>구독 여부: ${user.subscription }</span> <br> <br>
 			</p>
 		</div>
 		<div class="button">

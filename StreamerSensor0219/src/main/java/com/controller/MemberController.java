@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.domain.Admin;
 import com.domain.SiteInfo;
@@ -50,9 +51,9 @@ public class MemberController {
 	}
 	
 	@GetMapping("/member_profile")
-	public String member_profile(Model model) {
+	public String member_profile(@RequestParam("user_idx")int user_idx, Model model) {
 		
-		Users user = uService.printOneUser();
+		Users user = uService.printOneUser(user_idx);
 		model.addAttribute("user", user);
 		
 		return "admin/member_profile";
