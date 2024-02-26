@@ -11,7 +11,7 @@
 <body>
 	<!--           사이드바             -->
 	<div class="sidebar">
-		<a href="${root}dashBoard"> <span
+		<a href="${root}admin"> <span
 			class="material-symbols-outlined">empty_dashboard </span>
 			<h3>대시보드</h3>
 		</a> 

@@ -1,5 +1,7 @@
 package com.config;
 
+import javax.annotation.Resource;
+
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -15,6 +17,7 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import com.domain.Admin;
 import com.mapper.AdminMapper;
 import com.mapper.RankingMapper;
 import com.mapper.ReviewMapper;
@@ -38,6 +41,9 @@ public class ServletAppContext implements WebMvcConfigurer{
 	
 	@Value("${db.password}")
 	private String db_password;
+	
+	@Resource(name = "adminBean")
+	private Admin adminBean;
 	
 	//Controller 메서드가 반환하는 jsp 이름 앞뒤에 경로, 확장자 설정
 	@Override

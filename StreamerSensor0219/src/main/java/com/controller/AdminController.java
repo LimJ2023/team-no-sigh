@@ -39,6 +39,7 @@ public class AdminController {
 		model.addAttribute("user", user);
 		model.addAttribute("review", review);
 		model.addAttribute("subUsers", subUsers);
+		
 		return "/admin/dashBoard";
 	}
 }
