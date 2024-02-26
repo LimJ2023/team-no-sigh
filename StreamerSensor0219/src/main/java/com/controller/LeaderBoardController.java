@@ -1,5 +1,6 @@
 package com.controller;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +23,7 @@ public class LeaderBoardController {
 	RankingService rankingService;
 	
 	@RequestMapping(value = "/leaderBoard")
-	public String leaderBoardPage(Model model) {
+	public String leaderBoardPage(Model model) throws IOException {
 		
 		Users users = uService.getUsers();
 		List<Ranking> rankings = rankingService.getRankings();
@@ -32,12 +33,20 @@ public class LeaderBoardController {
 		
 		int sumDaily = rankingService.getSumDaily();
 		
+		List<Ranking> liveRanking = rankingService.liveApi();
+		
+	//	List<Ranking> videoRanking = rankingService.liveApi();
+		
+		
 		model.addAttribute("users", users);
 		model.addAttribute("rankings", rankings);
 		model.addAttribute("sumAVG", sumAVG);
 		model.addAttribute("sumLikes", sumLikes);
 		
 		model.addAttribute("sumDaily", sumDaily);
+		
+		model.addAttribute("liveRanking", liveRanking);
+	//	model.addAttribute("videoRanking", videoRanking);
 		
 		return "/leaderBoard/rankPage";
 	}

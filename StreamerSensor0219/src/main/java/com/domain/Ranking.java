@@ -8,20 +8,20 @@ public class Ranking {
 	private String rank_method;
 	private int streaming_id;
 	
-	private String strm_id;
+	private String streamer_id;
 
 	
 	//-------------
 	
-	private int strm_num;
+	private int streamer_idx;
 	//private String strm_id;
-	private String strm_gender;
-	private String strm_grade;
-	private String strm_status;
-	private String strm_platform;
-	private int strm_followers;
+	private String streamer_gender;
+	private String streamer_grade;
+	private String streamer_status;
+	private String streamer_platform;
+	private int streamer_followers;
 	
-	private String streaming_desc;
+	private String streaming_description;
 	private String streaming_category;
 	private String streaming_date;
 	
@@ -32,12 +32,6 @@ public class Ranking {
 	private int likes;
 	private int comments;
 	private int daily_viewers;
-	
-	//************
-	
-	//private int sumAVG;
-	
-	
 	public int getRanking_id() {
 		return ranking_id;
 	}
@@ -68,62 +62,48 @@ public class Ranking {
 	public void setStreaming_id(int streaming_id) {
 		this.streaming_id = streaming_id;
 	}
-	
-	
-	
-	
-	public String getStrm_id() {
-		return strm_id;
+
+	public int getStreamer_idx() {
+		return streamer_idx;
 	}
-	public void setStrm_id(String strm_id) {
-		this.strm_id = strm_id;
+	public void setStreamer_idx(int streamer_idx) {
+		this.streamer_idx = streamer_idx;
 	}
-	
-	
-	
-	//----------------
-	
-	public int getStrm_num() {
-		return strm_num;
+	public String getStreamer_gender() {
+		return streamer_gender;
 	}
-	public void setStrm_num(int strm_num) {
-		this.strm_num = strm_num;
+	public void setStreamer_gender(String streamer_gender) {
+		this.streamer_gender = streamer_gender;
 	}
-	public String getStrm_gender() {
-		return strm_gender;
+	public String getStreamer_grade() {
+		return streamer_grade;
 	}
-	public void setStrm_gender(String strm_gender) {
-		this.strm_gender = strm_gender;
+	public void setStreamer_grade(String streamer_grade) {
+		this.streamer_grade = streamer_grade;
 	}
-	public String getStrm_grade() {
-		return strm_grade;
+	public String getStreamer_status() {
+		return streamer_status;
 	}
-	public void setStrm_grade(String strm_grade) {
-		this.strm_grade = strm_grade;
+	public void setStreamer_status(String streamer_status) {
+		this.streamer_status = streamer_status;
 	}
-	public String getStrm_status() {
-		return strm_status;
+	public String getStreamer_platform() {
+		return streamer_platform;
 	}
-	public void setStrm_status(String strm_status) {
-		this.strm_status = strm_status;
+	public void setStreamer_platform(String streamer_platform) {
+		this.streamer_platform = streamer_platform;
 	}
-	public String getStrm_platform() {
-		return strm_platform;
+	public int getStreamer_followers() {
+		return streamer_followers;
 	}
-	public void setStrm_platform(String strm_platform) {
-		this.strm_platform = strm_platform;
+	public void setStreamer_followers(int streamer_followers) {
+		this.streamer_followers = streamer_followers;
 	}
-	public int getStrm_followers() {
-		return strm_followers;
+	public String getStreaming_description() {
+		return streaming_description;
 	}
-	public void setStrm_followers(int strm_followers) {
-		this.strm_followers = strm_followers;
-	}
-	public String getStreaming_desc() {
-		return streaming_desc;
-	}
-	public void setStreaming_desc(String streaming_desc) {
-		this.streaming_desc = streaming_desc;
+	public void setStreaming_description(String streaming_description) {
+		this.streaming_description = streaming_description;
 	}
 	public String getStreaming_category() {
 		return streaming_category;
@@ -137,9 +117,6 @@ public class Ranking {
 	public void setStreaming_date(String streaming_date) {
 		this.streaming_date = streaming_date;
 	}
-	
-	//********************
-	
 	public int getAvg_viewers() {
 		return avg_viewers;
 	}
@@ -164,16 +141,14 @@ public class Ranking {
 	public void setDaily_viewers(int daily_viewers) {
 		this.daily_viewers = daily_viewers;
 	}
-	
-	
-	//********************
-	/*public int getSumAVG() {
-		return sumAVG;
+	public String getStreamer_id() {
+		return streamer_id;
 	}
-	public void setSumAVG(int sumAVG) {
-		this.sumAVG = sumAVG;
-	}*/
+	public void setStreamer_id(String streamer_id) {
+		this.streamer_id = streamer_id;
+	}
 	
-	
+	//************
+
 	
 }

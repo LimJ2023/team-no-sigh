@@ -3,7 +3,7 @@ package com.domain;
 
 public class Users {
 
-	private int user_num;
+	private int user_idx;
 	private String user_id;
 	private String user_pw;
 	private String user_name;
@@ -13,12 +13,8 @@ public class Users {
 	
 	private String subscription;
 	
-	public int getUser_num() {
-		return user_num;
-	}
-	public void setUser_num(int user_num) {
-		this.user_num = user_num;
-	}
+
+
 	public String getUser_id() {
 		return user_id;
 	}
@@ -60,6 +56,12 @@ public class Users {
 	}
 	public void setSubscription(String subscription) {
 		this.subscription = subscription;
+	}
+	public int getUser_idx() {
+		return user_idx;
+	}
+	public void setUser_idx(int user_idx) {
+		this.user_idx = user_idx;
 	}
 	
 	

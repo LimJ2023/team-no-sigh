@@ -2,6 +2,7 @@
 INSERT INTO site_stat (stat_id,visit_count,page_views,day_revenue,total_revenue,new_members,total_members)
     VALUES(1,100,5000,30000,100000,3,10);
     
+    
 INSERT INTO site_stat (stat_id,visit_count,page_views,day_revenue,total_revenue,new_members,total_members)
     VALUES(2,240,8000,32000,182000,1,11);
 
@@ -39,13 +40,17 @@ SELECT * FROM users;
 --7번 id 가 5번과 겹쳐 asdf -> asdf2 로 변경
 --!드래그 ->ctrl+enter로는 한 번에 10개까지밖에 안들어가는 것 같?음?
 
+--2024-02-26 이지수:
+--테이블 수정으로 subscription 값 필요하게 됨
+--1~5번에만 임의의 subscription 값 넣었음
+
 select * from users;
 
-insert into users VALUES(1,'abcd','pw1', '김인직','남',40,'한국');
-insert into users VALUES(2,'dmstn','pw2', '임요한','남',25,'한국');
-insert into users VALUES(3,'location','pw3', '이지수','여',24,'한국');
-insert into users VALUES(4,'id','pw4', '최민기','남',23,'한국');
-insert into users VALUES(5,'asdf','pw5', '박현수','남',22,'한국');
+insert into users VALUES(1,'abcd','pw1', '김인직','남',40,'한국', 'y');
+insert into users VALUES(2,'dmstn','pw2', '임요한','남',25,'한국', 'n');
+insert into users VALUES(3,'location','pw3', '이지수','여',24,'한국', 'y');
+insert into users VALUES(4,'id','pw4', '최민기','남',23,'한국', 'n');
+insert into users VALUES(5,'asdf','pw5', '박현수','남',22,'한국', 'y');
 
 insert into users values(6, 'qwer','pw6', '가시청' , '남', 23, '한국');
 insert into users values(7, 'asdf2','pw7', '나시청' , '여', 24, '한국');
@@ -78,6 +83,14 @@ INSERT INTO users VALUES(25, 'dkssud','pw25', '정도윤', '여', 20, '한국');
 --2024-02-08 이지수 :  
 -- 1월 12?일 정도에 storage는 사용하지 않기로 테이블 제작을 멈추었던 것 같음.
 -- strm_num 말고 strm_id로 변경되었음 -> 각 값(마지막) 숫자에서 아이디로 변경
+
+--2024-02-26 이지수:
+--테이블 수정으로 img_id 값이 필요하게 됨
+--아직 img_id 값 정하지 않아서 일단 column Drop 하고 dummy 값 입력 후 img_id column을 재추가
+--(ALTER TABLE streaming_info DROP COLUMN img_id;)
+--(ALTER TABLE streaming_info ADD img_id number;
+--ALTER TABLE streaming_info ADD CONSTRAINT FK_streaming_img 
+--FOREIGN KEY (img_id) references streaming_img (img_id);
 
 SELECT * FROM streaming_info;
 
@@ -259,6 +272,7 @@ BEGIN
 END;
 /
 
+SELECT * FROM streamer;
 
 -----------------방송에 들어갈 썸네일 등록---------------
 insert into streaming_img (img_id, img_url) 
@@ -276,6 +290,9 @@ insert into streaming_img (img_id, img_url)
 
     
 --------------------------------------------------------------------
+---2024 02 26 이지수 --
+ALTER TABLE users RENAME COLUMN user_num TO user_idx;
+
 
 
 commit;

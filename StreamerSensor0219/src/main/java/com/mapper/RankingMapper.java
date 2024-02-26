@@ -11,7 +11,7 @@ public interface RankingMapper {
 	
 	@Select("SELECT r.ranking_id, r.rank_date, r.rank_place, r.rank_method, r.streaming_id, "
 			+ "s.streamer_id, s.streamer_idx, s.streamer_gender, s.streamer_grade, s.streamer_status, s.streamer_platform, s.streamer_followers, "
-			+ "si.streaming_desc, si.streaming_category, si.streaming_date, "
+			+ "si.streaming_description, si.streaming_category, si.streaming_date, "
 			+ "sp.avg_viewers, sp.likes, sp.comments, sp.daily_viewers "
 			+ "FROM ranking r "
 			+ "INNER JOIN streaming_info si ON si.streaming_id = r.streaming_id "
