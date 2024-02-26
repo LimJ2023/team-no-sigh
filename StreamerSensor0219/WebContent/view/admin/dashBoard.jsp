@@ -128,14 +128,23 @@
 				<table>
 					<thead>
 						<tr>
-							<th>구독 종류</th>
-							<th>고유 번호</th>
-							<th>결제 정보</th>
-							<th>상태</th>
+							<th>아이디</th>
+							<th>이름</th>
+							<th>국적</th>
+							<th>구독상태</th>
 							<th></th>
 						</tr>
 					</thead>
-					<tbody></tbody>
+					<tbody>
+						<c:forEach var="user" items="${subUsers }">
+							<tr>
+								<td>${user.user_id }</td>
+								<td>${user.user_name }</td>
+								<td>${user.user_na }</td>
+								<td>${user.subscription }</td>
+							</tr>
+						</c:forEach>
+					</tbody>
 				</table>
 				<a href="#">모두 보기</a>
 			</div>

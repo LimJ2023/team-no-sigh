@@ -13,7 +13,6 @@ public class AdminService {
 	@Autowired
 	AdminDAO dao;
 	
-	
 	public Admin getAdmin() {
 		Admin admin = dao.getAdminInfo(1);
 		return admin;

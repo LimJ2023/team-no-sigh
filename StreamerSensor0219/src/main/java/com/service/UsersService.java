@@ -1,5 +1,6 @@
 package com.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,5 +31,20 @@ public class UsersService {
 		userBean = uDAO.printOneUser(1);
 		return userBean;
 	}
+	public List<Users> getSubUsers(){
+		
+		List<Users> list = uDAO.getAllUsers();
+		List<Users> result = new ArrayList<Users>();
+		
+		for (Users user : list) {
+			if(user.getSubscription() != null && user.getSubscription().equals("y")) {
+				result.add(user);
+			}
+		}
+		
+		return result;
+		
+	}
+	
 
 }

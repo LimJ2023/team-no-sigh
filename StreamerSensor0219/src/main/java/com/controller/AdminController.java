@@ -1,5 +1,7 @@
 package com.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -29,12 +31,14 @@ public class AdminController {
 		Admin admin = adminService.getAdmin();
 		SiteInfo info = adminService.getSiteInfo();
 		Users user = usersService.getUsers();
+		List<Users> subUsers = usersService.getSubUsers();
 		Review review = reviewService.getRecentReview();
 		
 		model.addAttribute("admin", admin);
 		model.addAttribute("info",info);
 		model.addAttribute("user", user);
 		model.addAttribute("review", review);
+		model.addAttribute("subUsers", subUsers);
 		return "/admin/dashBoard";
 	}
 }
