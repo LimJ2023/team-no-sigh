@@ -14,7 +14,12 @@ public class Users {
 	private String subscription;
 	
 
-
+	public int getUser_idx() {
+		return user_idx;
+	}
+	public void setUser_idx(int user_idx) {
+		this.user_idx = user_idx;
+	}
 	public String getUser_id() {
 		return user_id;
 	}
@@ -57,12 +62,7 @@ public class Users {
 	public void setSubscription(String subscription) {
 		this.subscription = subscription;
 	}
-	public int getUser_idx() {
-		return user_idx;
-	}
-	public void setUser_idx(int user_idx) {
-		this.user_idx = user_idx;
-	}
+	
 	
 	
 	
