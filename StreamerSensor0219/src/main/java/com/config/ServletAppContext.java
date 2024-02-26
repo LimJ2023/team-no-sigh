@@ -1,9 +1,9 @@
 package com.config;
 
-import javax.annotation.Resource;
 
-import org.apache.commons.dbcp2.BasicDataSource;
+import javax.annotation.Resource;
 import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.tomcat.dbcp.dbcp2.BasicDataSource;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.mapper.MapperFactoryBean;
 import org.springframework.beans.factory.annotation.Value;
