@@ -16,8 +16,8 @@ import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import com.mapper.AdminMapper;
+import com.mapper.BoardMapper;
 import com.mapper.RankingMapper;
-import com.mapper.ReviewMapper;
 import com.mapper.UserMapper;
 
 @Configuration
@@ -95,12 +95,14 @@ public class ServletAppContext implements WebMvcConfigurer{
 	      factoryBean.setSqlSessionFactory(factory);
 	      return factoryBean;
 	   }
+	   
 	   @Bean
-	   public MapperFactoryBean<ReviewMapper> getReviewMapper(SqlSessionFactory factory) throws Exception{
-	      MapperFactoryBean<ReviewMapper> factoryBean = new MapperFactoryBean<ReviewMapper>(ReviewMapper.class);
+	   public MapperFactoryBean<BoardMapper> getBoardMapper(SqlSessionFactory factory) throws Exception{
+	      MapperFactoryBean<BoardMapper> factoryBean = new MapperFactoryBean<BoardMapper>(BoardMapper.class);
 	      factoryBean.setSqlSessionFactory(factory);
 	      return factoryBean;
 	   }
+	   
 	   
 		//쿼리를 전달하는 빈 등록
 		@Bean
