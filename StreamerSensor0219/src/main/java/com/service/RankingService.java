@@ -42,58 +42,7 @@ public class RankingService {
 	
 	
 	
-	public List<Ranking> liveApi(){
-		
-		String channelId = "UC-lHJZR3Gqxm24_Vd_AJ5Yw";
-		String apiKey = "AIzaSyCNUTsRVT4N2-lGyPxsWtzq97yIfPIi4zA";
-		
-		String urlStr = "https://youtube.googleapis.com/youtube/v3/"
-				+ "search?part=snippet&channelId="
-				+ channelId
-				+ "&maxResults=5&type=video&key="
-				+ apiKey;
-		
-		StringBuilder sb = new StringBuilder();
-		
-		try{
-			
-			URL u = new URL(urlStr);
-			URLConnection conn = u.openConnection();
-			
-			BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-			String line;
-			while((line = br.readLine()) != null) {
-				sb.append(line + "\n");
-			}
-			} catch (MalformedURLException e) {
-				e.printStackTrace();
-			}
-		
-		catch(IOException e) {
-				e.printStackTrace();
-			}
-			List<Ranking> rankings = new ArrayList<>();
-			JSONObject jsonObj = new JSONObject(sb.toString());
-			JSONArray items = jsonObj.getJSONArray("items");
-			
-			for(int i = 0; i < items.length(); i++) {
-				JSONObject item = items.getJSONObject(i);
-				String videoTitle = item.getJSONObject("snippet").getString("title");
-				
-				Ranking ranking = new Ranking();
-				ranking.setStreaming_description(videoTitle);
-				
-				rankings.add(ranking);
-			}
-			
-		
-		
-		return rankings;
-		
-		
-	}
 	
-	/*
 	public List<Ranking> liveApi(){
 	
 		String channelId = "UC-lHJZR3Gqxm24_Vd_AJ5Yw";
@@ -144,7 +93,7 @@ public class RankingService {
 		
 		
 	}
-	*/
+	
 	/*
 	public List<Ranking> liveApi() throws IOException{
 		

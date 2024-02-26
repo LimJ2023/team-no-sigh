@@ -33,9 +33,9 @@ public class LeaderBoardController {
 		
 		int sumDaily = rankingService.getSumDaily();
 		
-		List<Ranking> liveRanking = rankingService.liveApi();
+	//	List<Ranking> liveRanking = rankingService.liveApi();
 		
-	//	List<Ranking> videoRanking = rankingService.liveApi();
+		List<Ranking> videoRanking = rankingService.liveApi();
 		
 		
 		model.addAttribute("users", users);
@@ -45,8 +45,8 @@ public class LeaderBoardController {
 		
 		model.addAttribute("sumDaily", sumDaily);
 		
-		model.addAttribute("liveRanking", liveRanking);
-	//	model.addAttribute("videoRanking", videoRanking);
+	//	model.addAttribute("liveRanking", liveRanking);
+		model.addAttribute("videoRanking", videoRanking);
 		
 		return "/leaderBoard/rankPage";
 	}

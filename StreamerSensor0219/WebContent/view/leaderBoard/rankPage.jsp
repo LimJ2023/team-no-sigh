@@ -36,8 +36,8 @@
 				${users.subscription} ) / UsersDAO sql 2=n / 1=y</h2>
 				
 				
-					<c:forEach var="liveR" items="${liveRanking }">
-						<h4>${liveR.streaming_description }</h4>
+					<c:forEach var="video" items="${videoRanking }">
+						<h4>${video.streaming_description }</h4>
 					</c:forEach>
 				
 				</div>
