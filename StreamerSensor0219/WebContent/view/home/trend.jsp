@@ -90,6 +90,45 @@
 						</div>
 					</div>
 				</div>
+				<div class="rank-ver-list" id="third_list">
+					<div class="list-category">음악</div>
+					<div class="rank-info">
+						<div class="rank-img">
+							<img src="img/0101.png" />
+						</div>
+						<div class="rank-info-foot">
+							<div class="rank-name">음악1</div>
+							<div class="rank-views">400</div>
+							<div class="rank-trend">
+								<i class='bx bx-up-arrow-circle bx-md'></i>
+							</div>
+						</div>
+					</div>
+					<div class="rank-info">
+						<div class="rank-img">
+							<img src="img/0102.png" />
+						</div>
+						<div class="rank-info-foot">
+							<div class="rank-name">음악2</div>
+							<div class="rank-views">500</div>
+							<div class="rank-trend">
+								<i class='bx bx-down-arrow-circle bx-md'></i>
+							</div>
+						</div>
+					</div>
+					<div class="rank-info">
+						<div class="rank-img">
+							<img src="img/0103.png" />
+						</div>
+						<div class="rank-info-foot">
+							<div class="rank-name">음악3</div>
+							<div class="rank-views">600</div>
+							<div class="rank-trend">
+								<i class='bx bx-right-top-arrow-circle bx-md'></i>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<!--  -->
