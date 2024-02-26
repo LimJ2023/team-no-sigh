@@ -21,4 +21,5 @@ public interface UserMapper {
 			+ "WHERE user_idx = #{user_idx}")
 	Users printOneUser(int user_idx);
 	
+	
 }

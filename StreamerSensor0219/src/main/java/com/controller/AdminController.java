@@ -29,12 +29,12 @@ public class AdminController {
 		Admin admin = adminService.getAdmin();
 		SiteInfo info = adminService.getSiteInfo();
 		Users user = usersService.getUsers();
-		Review review = reviewService.getRecentReview();
+		//Review review = reviewService.getRecentReview();
 		
 		model.addAttribute("admin", admin);
 		model.addAttribute("info",info);
 		model.addAttribute("user", user);
-		model.addAttribute("review", review);
+		//model.addAttribute("review", review);
 		return "/admin/dashBoard";
 	}
 }

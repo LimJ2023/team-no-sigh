@@ -25,10 +25,8 @@ public class UsersService {
 		return uDAO.getAllUsers();
 	}
 	
-	public Users printOneUser(){
-		Users userBean = new Users();
-		userBean = uDAO.printOneUser(1);
-		return userBean;
+	public Users printOneUser(int user_idx){
+		return uDAO.printOneUser(user_idx);
 	}
 
 }
