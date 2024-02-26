@@ -524,6 +524,31 @@ UPDATE streaming_preference SET avg_viewers = 200 WHERE streaming_id = 2;
 UPDATE streaming_preference SET avg_viewers = 100 WHERE streaming_id = 11;
 UPDATE streaming_preference SET daily_viewers = 120 WHERE streaming_id = 11;
 
+--------------------------------------------------------------------
+--20240216 박현수 더미데이터 추가
+INSERT INTO users VALUES(26, 'houno', 'pw26', '시라누이 메이', '여', 20, '일본', null);
+INSERT INTO users VALUES(27, 'spamberger', 'pw27', '맥스 테일러', '남', 33, '미국', null);
+INSERT INTO users VALUES(28, 'sygong', 'pw28', '꾸지앙', '남', 25, '베트남', null);
+INSERT INTO users VALUES(29, 'chocomaster', 'pw29', '월리 티거', '남', 24, '가나', null);
+INSERT INTO users VALUES(30, 'ultracute', 'pw30', '웰 쵸이', '여', 19, '캐나다', null);
+
+INSERT INTO streaming_info VALUES(17, '추억의 플래시 게임 고향만두', 'youtube.com', '1시간 30분', '게임', '24/02/09','더 월드');
+
+INSERT INTO review VALUES(101,'지존짤',16,'내가 저거보다는 잘함',55,12,'2024-02-01');
+INSERT INTO review VALUES(102,'뭉탱교',16,'저거보다 잘한다는 사람 90% 못함',60,11,'2024-02-01');
+INSERT INTO review VALUES(103,'공략좀',16,'이거 레전드',30,13,'2024-02-02');
+
+SELECT * FROM review;
+SELECT * FROM streaming_info;
+SELECT * FROM users;
+SELECT * FROM user_review_relation;
+
+--20240221 박현수 board 테이블 연동 시도
+SELECT * FROM board;
+
+--20240226 박현수 board 읽기용 더미데이터
+insert into board values(1, 'abcd', '제목이요', '이것은 게시물이오시다', sysdate, 1, 1, '방송');
+
 
 commit;
 
