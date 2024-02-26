@@ -1,0 +1,223 @@
+
+:root{
+    --color-primary: #00ff32;
+    --color-primary2: #00e7ff;
+    --color-primary3: #2e6969af;
+    --color-danger: #FF0060;
+    --color-success: #1B9C85;
+    --color-warning: #F7D060;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-dark: #363949;
+    --color-dark-font: #edeffd;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-dark-variant: #677483;
+    --color-background: #2c2c2c;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+.dark-mode-variables{
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+body {
+    color: var(--color-white);
+    background-color: var(--color-background);
+}
+
+
+.reviews_header{
+    width: 100%;
+    height: 20rem;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* 스트리머 정보  */
+.reviews_header .header_streamerInfo{
+    display: flex;
+    align-items: center;
+    height: 40%;
+    margin-left: 1rem;
+    gap: 5%;
+
+}
+.reviews_header .header_streamerInfo .streamerInfo_cont{
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 1rem;
+    background-color: var(--color-primary3);
+    border-radius: 1rem;
+    padding: 0 3rem;
+
+}
+.reviews_header .header_streamerInfo .streamerInfo_img{
+    width: 5rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.reviews_header .header_streamerInfo .streamerInfo_img img{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 댓글   */
+.reviews_header .header_recentComments{
+    margin-top: 2rem;
+    border-top: 3px solid #2e6969af;
+}
+
+.reviews_header .related_streamers{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+
+}
+.reviews_header .related_streamers .streamer_icon{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0.5rem;
+}
+.reviews_header .related_streamers .streamer_icon img{
+    width: 100%;
+}
+
+.cmt_wrap{
+    display: flex;
+    margin: 1rem;
+}
+.cmt_wrap .profile_area{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.cmt_wrap .profile_area img{
+    width: 100%;
+    height: 100%;
+}
+.cmt_wrap .cont_area .cmt_head{
+    margin-left: 0.5rem;
+    font-size: 12px;
+    text-align: left;
+}
+.cmt_wrap .cont_area .cmt_cont{
+    margin-left: 0.5rem;
+    text-align: left;
+}
+
+/* 별점 */
+.star-container{
+    text-align: center;
+}
+.star-widget input{
+    display: none;
+}
+.star-widget label{
+    font-size: 10px;
+    color: #444;
+    padding: 10px;
+    transition: all 0.2s ease;
+    float: right;
+}
+.star-widget input:not(:checked) ~ label:hover,
+.star-widget input:not(:checked) ~ label:hover ~ label{
+    color: #fd4;
+}
+.stars{
+    display: inline-block;
+}
+
+input:checked ~ label{
+    color: #fd4;
+}
+input#rate-5:checked ~ label{
+    color: #fe7;
+    text-shadow: 0 0 20px #952;
+}
+
+
+/* 방송 썸네일 목록 */
+
+.reviews_container{
+    position: relative;
+    min-height: 50vh;
+    
+}
+.reviews_container .streaming_list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    border: 3px solid #2e6969af;
+    
+}
+.reviews_container .streaming_list .streaming_item{
+    margin: 1rem;
+    padding: 0.5rem;
+    height: 14rem;
+    width: 20rem;
+    box-shadow: var(--box-shadow);
+    transition: all 0.2s linear;
+    border-radius: 0.5rem;
+    background-color: var(--color-dark-variant);
+    color: var(--color-dark-font);
+
+}
+.bx {
+    cursor: pointer;
+}
+.streaming_info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.streaming_cont i{
+    margin-top: 1.5rem;
+}
+.streaming_img{
+    width: 380px;
+    height: 220px;
+    overflow: hidden;
+}
+.streaming_img img{
+    width: 100%;
+}
+.streaming_info_right{
+    display: flex;
+}
+.reviews_container .streaming_list .streaming_item:hover{
+    transform: scale(1.1);
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: medium;
+}

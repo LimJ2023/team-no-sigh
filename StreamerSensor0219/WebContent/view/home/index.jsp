@@ -67,7 +67,7 @@
                     <div class="box_text">
                         <h2 class="streamer_title">봇치</h2>
                         <div class="streamer_type">음악</div>
-                        <a href="review_page/review.html">
+                        <a href="review">
                             <div class="watch-btn play-btn">
                                 <i class='bx bx-right-arrow bx-md'></i>
                             </div>
