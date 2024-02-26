@@ -40,10 +40,11 @@
 					</tr>
 				</thead>
 
-				<%-- <c:forEach var="obj" items="${list }">
-					${obj.data1 }, ${obj.data2 }, ${obj.data3 }<br /> 게시물 목록 임시용 소스
-				</c:forEach> --%>
+				
 				<tbody class="board-table-tbody">
+					<%-- <c:forEach var="obj" items="${list }">
+						${obj.data1 }, ${obj.data2 }, ${obj.data3 }<br /> 게시물 목록 임시용 소스
+					</c:forEach> --%>
 					<tr class="tr board-table-tbody-tr">
 						<td class="board-table-tbody-td td-no">5</td>
 						<td class="board-table-tbody-td td-title"><a href="board/boardView">제목샘플입니다5</a></td>
@@ -57,27 +58,6 @@
 						<td class="board-table-tbody-td td-author">이이름4</td>
 						<td class="board-table-tbody-td td-date">2024-02-15</td>
 						<td class="board-table-tbody-td td-clicks">조회4</td>
-					</tr>
-					<tr class="tr board-table-tbody-tr">
-						<td class="board-table-tbody-td td-no">3</td>
-						<td class="board-table-tbody-td td-title">제목샘플입니다3</td>
-						<td class="board-table-tbody-td td-author">이이름3</td>
-						<td class="board-table-tbody-td td-date">2024-02-15</td>
-						<td class="board-table-tbody-td td-clicks">조회3</td>
-					</tr>
-					<tr class="tr board-table-tbody-tr">
-						<td class="board-table-tbody-td td-no">2</td>
-						<td class="board-table-tbody-td td-title">제목2</td>
-						<td class="board-table-tbody-td td-author">작성자2</td>
-						<td class="board-table-tbody-td td-date">작성일2</td>
-						<td class="board-table-tbody-td td-clicks">조회2</td>
-					</tr>
-					<tr class="tr board-table-tbody-tr">
-						<td class="board-table-tbody-td td-no">1</td>
-						<td class="board-table-tbody-td td-title">제목샘플1</td>
-						<td class="board-table-tbody-td td-author">김이름1</td>
-						<td class="board-table-tbody-td td-date">2024-02-14</td>
-						<td class="board-table-tbody-td td-clicks">조회1</td>
 					</tr>
 				</tbody>
 

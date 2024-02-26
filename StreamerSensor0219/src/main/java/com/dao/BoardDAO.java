@@ -12,7 +12,7 @@ public class BoardDAO {
 	@Autowired
 	BoardMapper boardMapper;
 	
-	public Board getBoardInfo() {
-		return boardMapper.getboard();
+	public Board getBoardInfo(int board_num) {
+		return boardMapper.getboard(board_num);
 	}
 }

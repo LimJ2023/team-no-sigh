@@ -6,9 +6,10 @@ import com.domain.Board;
 
 public interface BoardMapper {
 
-	@Select("SELECT board_num, user_id, title, info, board_date, view_count, comment_count, tags "
-			+ "FROM board "
-			+ "ORDER BY board_num ASC")
-	Board getboard();
+	@Select("select board_num, user_id, title, info, board_date, view_count " +
+			"from board " +
+			"where board_num = #{board_num} " +
+			"order by board_num asc")
+	Board getboard(int board_num);
 
 }

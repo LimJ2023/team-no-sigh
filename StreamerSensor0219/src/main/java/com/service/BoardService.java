@@ -12,9 +12,9 @@ public class BoardService {
 	@Autowired
 	BoardDAO boardDAO;
 	
-	public Board getBoard() {
+	public Board getBoard(int board_num) {
 		Board boardBean = new Board();
-		boardBean = boardDAO.getBoardInfo();
+		boardBean = boardDAO.getBoardInfo(board_num);
 		return boardBean;
 		
 	}
