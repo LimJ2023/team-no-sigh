@@ -6,7 +6,6 @@ const delBtn = document.getElementById("delBtn")
 const trendBtn = document.getElementById("trendBtn")
 
 delBtn.addEventListener('click', () => {
-    console.log("삭제버튼 진입");
     deleteAll();
 })
 
