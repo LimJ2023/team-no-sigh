@@ -11,7 +11,7 @@ public interface UserMapper {
 	@Select("SELECT * "
 			+ "FROM users "
 			+ "WHERE user_idx = #{user_idx}")
-	Users getUserByNumber(int user_num);
+	Users getUserByNumber(int user_idx);
 	
 	@Select("select * from users")
 	List<Users> getAllUsers();

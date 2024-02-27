@@ -2,9 +2,12 @@ package com.controller;
 
 import java.util.List;
 
+import javax.annotation.Resource;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.domain.Ranking;
@@ -39,8 +42,23 @@ public class LeaderBoardController {
 		
 		model.addAttribute("sumDaily", sumDaily);
 		
+		//20240227이지수
+		//List<Ranking> videoInfo = rankingService.videoApi();
+		//model.addAttribute("videoInfo", videoInfo);
+		//Ranking tempRankingBean = rankingService
+		List<Ranking> popVideoInfo = rankingService.popVideoApi();
+		model.addAttribute("popVideoInfo", popVideoInfo);
+		//
+		
+		//rankingService.addVideoInfo(popVideoInfo);
+		
 		return "/leaderBoard/rankPage";
+		
+		
 	}
+	
+	
+	//20240227 이지수 api db 테스트
 	
 	
 	
