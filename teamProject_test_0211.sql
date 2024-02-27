@@ -507,6 +507,16 @@ inner join users u on u.user_id = r.user_id
 inner join streamer s  on s.strm_id = i.strm_id
 order by r.review_creation_date desc, i.streaming_id;
 
+--20240226 박현수 board 읽기용 더미데이터
+insert into board values(1, 'abcd', '제목이요', '이것은 게시물이오시다', sysdate, 1, 1, '방송', board_seq.nextval);
+--------------------------------------------------------------------
+--20240226 박현수 board 읽기용 더미데이터
+
+
+--20240227 박현수 board content_idx 컬럼 추가 or 시퀀스 사용
+insert into board(board_num, user_id, title, info, board_date, view_count, comment_count, tags, content_idx)
+values(2, 'id', '제목이요', '이거 맞추기는 했는데, 이게 컨트롤 부족인지 설명 좀.', sysdate, 1, 1, '방송', board_seq.nextval);
+
 --------------------------------------------------------------------
 
 

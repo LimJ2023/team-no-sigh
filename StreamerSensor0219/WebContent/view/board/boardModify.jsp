@@ -30,7 +30,7 @@
 
 	<section class="board-write-section">
             <div class="board-write-div">
-                <form action="#" class="board-write-form">
+                <form action="${root }board/boardView" class="board-write-form">
                     <table class="table board-write-table">
                        
                         <tr class="board-write-form-info">
@@ -57,7 +57,6 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                         <tr class="board-write-form-end">
                             <td class="board-write-form-end-td" colspan="4">
                             	<a href="${root }board" class="write-button-toList write-button">목록으로</a>
-                            	<a href="${root }board/boardView" class="write-button-submit write-button">수정</a>	<!-- 임시 방편 -->
                                 <button type="submit" class="write-button-submit write-button">수정</button>
                             </td>
                         </tr>
