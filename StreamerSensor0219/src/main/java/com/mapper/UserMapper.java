@@ -13,16 +13,12 @@ public interface UserMapper {
 
 	@Select("SELECT * "
 			+ "FROM users "
-			+ "WHERE user_idx = #{user_idx}")
+			+ "WHERE user_num = #{user_num}")
 	Users getUserByNumber(int user_num);
 	
 	@Select("select * from users")
 	List<Users> getAllUsers();
 	
-	@Select("select user_id, subscription "
-			+ "FROM users "
-			+ "WHERE user_idx = #{user_idx}")
-	Users printOneUser(int user_idx);
 	
 	@Select("SELECT user_name " +
 			"FROM user_table " + 
@@ -47,4 +43,6 @@ public interface UserMapper {
 			"set user_pw = #{user_pw} " +
 			"where user_idx = #{user_idx}")
 	void modifyUserInfo(UserBean modifyUserBean);
+
+	Users printOneUser(int user_idx);
 }

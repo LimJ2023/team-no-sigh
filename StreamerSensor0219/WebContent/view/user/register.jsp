@@ -63,7 +63,7 @@ function resetUserIdExist(){
 			<div class="col-sm-6">
 				<div class="card shadow">
 					<div class="wrapper">
-						<form:form action="${root }login/join_pro" method="post"
+						<form:form action="${root }user/join_pro" method="post"
 							modelAttribute="joinUserBean">
 							<form:hidden path="userIdExist" />
 							<!-- "유효성 검사 여부 보내기" -->
@@ -80,8 +80,7 @@ function resetUserIdExist(){
 										onkeypress="resetUserIdExist()" />
 									<!-- 사용자 입력시 호출 -->
 									<div class="input-group-append">
-										<form:button type="button" class="btn btn-primary"
-											onclick="checkUserIdExist()">중복확인</form:button>
+										<button type="button" onclick="checkUserIdExist()">중복확인</button>
 										<!-- 누를시 호출(메서드) -->
 									</div>
 								</div>
@@ -89,14 +88,14 @@ function resetUserIdExist(){
 							</div>
 
 							<div class="input-box">
-								<form:label path="user_pw"></form:label> <form:input path="user_pw"
-									class='form-control' />
+								<form:label path="user_pw"></form:label>
+								<form:password path="user_pw" class='form-control' />
 								<form:errors path='user_pw' style='color:red' />
 							</div>
 
 							<div class="input-box">
-								<form:label path="user_pw2"></form:label> <form:input path="user_pw2"
-									class='form-control' />
+								<form:label path="user_pw2"></form:label>
+								<form:password path="user_pw2" class='form-control' />
 								<form:errors path='user_pw2' style='color:red' />
 							</div>
 
@@ -105,7 +104,7 @@ function resetUserIdExist(){
 									<form:button class="btn btn-primary">회원가입</form:button>
 								</div>
 							</div>
-							</form:form>
+						</form:form>
 					</div>
 				</div>
 			</div>
