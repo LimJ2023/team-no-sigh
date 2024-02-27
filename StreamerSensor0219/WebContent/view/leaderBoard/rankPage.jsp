@@ -32,8 +32,24 @@
 
 
 	<section class="rankContainer">
-		<div class="tempDiv"><h2>현재 사용자 : ${users.user_num } . ${users.user_name } (
-				${users.subscription} ) / UsersDAO sql 2=n / 1=y</h2></div>
+		<div class="tempDiv"><h2>현재 사용자 : ${users.user_idx } . ${users.user_name } (
+				${users.subscription} ) / UsersDAO sql 2=n / 1=y</h2>
+				
+				<%-- <c:forEach var="video" items="${videoInfo }">
+					<h2>${video.streaming_description }</h2>
+					<h4>${video.likes }</h4>
+					<h4>${video.comments }</h4>
+				</c:forEach> --%>
+				
+				<c:forEach var="popVideo" items="${popVideoInfo }">
+					<h2>${popVideo.streaming_description }</h2>
+					<h4>${popVideo.video_id }</h4>
+					<h4>${popVideo.likes }</h4>
+					<h4>${popVideo.comments }</h4>
+				</c:forEach>
+				
+				
+				</div>
 		
 		
 		<div class="rankHead" style="border-radius: 1rem">
@@ -98,20 +114,20 @@
 													class="table-icon" />
 
 												<c:choose>
-													<c:when test="${ranking.strm_platform eq '유튜브'}">
+													<c:when test="${ranking.streamer_platform eq '유튜브'}">
 														<img src="img/leaderBoard/logo_youtube.png"
 															class='rank-streamer-info-logo' />
 													</c:when>
-													<c:when test="${ranking.strm_platform eq '치지직'}">
+													<c:when test="${ranking.streamer_platform eq '치지직'}">
 														<img src="img/leaderBoard/logo_chzzk.png"
 															class='rank-streamer-info-logo' />
 													</c:when>
 												</c:choose>
 											</div>
-											${ranking.strm_id }
+											${ranking.streamer_id }
 										</div>
 									</td>
-									<td class="td td-description"><div class="rank_desc">${ranking.streaming_desc }</div></td>
+									<td class="td td-description"><div class="rank_desc">${ranking.streaming_description }</div></td>
 									
 									<td class="td td-avgViewers avgV-bar" style="width:${(ranking.avg_viewers / sumAVG) * 100 }%;">${ranking.avg_viewers }</td>
 									
@@ -127,7 +143,7 @@
  											<div class="dailyV">${ranking.daily_viewers }</div>
  										</div>
  									</td>
-									<td class="td td-followers">${ranking.strm_followers }</td>
+									<td class="td td-followers">${ranking.streamer_followers }</td>
 
 									<td class="td td-category">${ranking.streaming_category }</td>
 								</c:if>
@@ -143,20 +159,20 @@
 
 
 												<c:choose>
-													<c:when test="${ranking.strm_platform eq '유튜브'}">
+													<c:when test="${ranking.streamer_platform eq '유튜브'}">
 														<img src="img/leaderBoard/logo_youtube.png"
 															class='rank-streamer-info-logo' />
 													</c:when>
-													<c:when test="${ranking.strm_platform eq '치지직'}">
+													<c:when test="${ranking.streamer_platform eq '치지직'}">
 														<img src="img/leaderBoard/logo_chzzk.png"
 															class='rank-streamer-info-logo' />
 													</c:when>
 												</c:choose>
 											</div>
-											${ranking.strm_id }
+											${ranking.streamer_id }
 										</div>
 									</td>
-									<td class="td td-description">${ranking.streaming_desc }</td>
+									<td class="td td-description">${ranking.streaming_description }</td>
 									
 									<td class="td td-avgViewers avgV-bar" style="width:${(ranking.avg_viewers / sumAVG) * 100 }%;">${ranking.avg_viewers }</td>
 									
@@ -172,7 +188,7 @@
  											<div class="dailyV">${ranking.daily_viewers }</div>
  										</div>
  									</td>
-									<td class="td td-followers">${ranking.strm_followers }</td>
+									<td class="td td-followers">${ranking.streamer_followers }</td>
 
 									<td class="td td-category">${ranking.streaming_category }</td>
 								</c:if>
