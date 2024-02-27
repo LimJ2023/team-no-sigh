@@ -27,4 +27,10 @@ public class RankingDAO {
 	public int getDaily_viewers() {
 		return mapper.getDaily_viewers();
 	}
+	
+	/*//20240227 이지수 DB-API
+	public void addVideoInfo(List<Ranking> videoRankingBean) {
+		mapper.addVideoInfo(videoRankingBean);
+	}*/
+	
 }
