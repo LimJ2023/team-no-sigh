@@ -94,9 +94,11 @@
                     <div class="box_text">
                         <h2 class="streamer_title">임요한</h2>
                         <div class="streamer_type">게임</div>
-                        <div class="watch-btn play-btn">
-                            <i class='bx bx-right-arrow bx-md'></i>
-                        </div>
+                        <a href="review?streamer_num=100">
+                        	<div class="watch-btn play-btn">
+                            	<i class='bx bx-right-arrow bx-md'></i>
+                        	</div>
+                        </a>
                     </div>
                 </div>
             </div>

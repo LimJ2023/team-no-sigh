@@ -20,8 +20,8 @@
 				</div>
 				<div class="streamerInfo_cont">
 
-					<div class="streamer_id">Guitar Hero</div>
-					<div class="streamer_followers">팔로워수 : 500</div>
+					<div class="streamer_id">${streamer.strm_id }</div>
+					<div class="streamer_followers">팔로워수 : ${streamer.strm_followers }</div>
 					<div class="streamer_trends">최근 상승세</div>
 					<div class="streamer_comments">댓글 수 : 50개</div>
 				</div>
