@@ -48,5 +48,11 @@ public interface UserMapper {
 			"set user_pw = #{user_pw} " +
 			"where user_idx = #{user_idx}")
 	void modifyUserInfo(UserBean modifyUserBean);
+	
+	@Update("update users "
+			+ "set user_name = #{user_name}, user_gender = #{user_gender}, "
+			+ "user_age = #{user_age}, user_nation = #{user_nation}, subscription = #{subscription} "
+			+ "where user_idx = 1")
+	void modifyMemberInfo(UserBean modifyMemberBean);
 
 }

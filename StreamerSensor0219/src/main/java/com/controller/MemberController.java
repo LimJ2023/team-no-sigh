@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.domain.Admin;
@@ -57,6 +58,26 @@ public class MemberController {
 		model.addAttribute("users", users);
 
 		return "admin/member_profile";
+	}
+	
+	@GetMapping("/modify")
+	public String modify(@ModelAttribute("modifyMemberBean")Users modifyMemberBean,
+			@RequestParam("user_idx") int user_idx, Model model) {
+		
+		Users users = uService.printOneUser(user_idx);
+		model.addAttribute("users", users);
+		
+		Users userBean = uService.printOneUser(user_idx);
+		
+		modifyMemberBean.setUser_name(userBean.getUser_name());
+		modifyMemberBean.setUser_gender(userBean.getUser_gender());
+		modifyMemberBean.setUser_age(userBean.getUser_age());
+		modifyMemberBean.setUser_nation(userBean.getUser_nation());
+		modifyMemberBean.setSubscription(userBean.getSubscription());
+		
+		
+		
+		return "admin/member_profile_modify";
 	}
 
 }

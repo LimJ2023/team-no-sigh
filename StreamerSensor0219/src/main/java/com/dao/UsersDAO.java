@@ -46,4 +46,9 @@ public class UsersDAO {
 	public void modifyUserInfo(UserBean modifyUserBean) {
 		mapper.modifyUserInfo(modifyUserBean);
 	}
+	
+	public void modifyMemberInfo(UserBean modifyMemberBean) {
+		mapper.modifyMemberInfo(modifyMemberBean);
+	}
+	
 }
