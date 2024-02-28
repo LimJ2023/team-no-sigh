@@ -12,7 +12,7 @@ import com.domain.Users;
 public interface UserMapper {
 
 	@Select("SELECT * "
-			+ "FROM users "	
+			+ "FROM users "
 			+ "WHERE user_idx = #{user_idx}")
 	Users getUserByNumber(int user_idx);
 	
