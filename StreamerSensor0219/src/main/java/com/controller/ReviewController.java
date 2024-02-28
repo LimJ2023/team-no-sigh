@@ -16,9 +16,9 @@ public class ReviewController {
 	ReviewService reviewService;
 	
 	@GetMapping("/review")
-	public String review(@RequestParam("streamer_num") int streamer_num, Model model) {
+	public String review(@RequestParam("streamer_idx") int streamer_idx, Model model) {
 		
-		Streamer streamer = reviewService.getStreamerByIdx(streamer_num);
+		Streamer streamer = reviewService.getStreamerByIdx(streamer_idx);
 		
 		model.addAttribute("streamer", streamer);
 		
