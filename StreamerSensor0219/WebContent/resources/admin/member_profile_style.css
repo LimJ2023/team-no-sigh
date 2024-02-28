@@ -62,6 +62,7 @@ p {
 }
 
 a{
+	text-align: center;
     color: var(--color-primary);
     border: 1px solid var(--color-text);
     border-radius: 5px;
@@ -93,6 +94,7 @@ a{
 }
 
 .profile-box input {
+	text-align: center;
     color: var(--color-primary);
     padding: 5px;
 }

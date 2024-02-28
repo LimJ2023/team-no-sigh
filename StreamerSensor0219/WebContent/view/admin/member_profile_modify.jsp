@@ -13,45 +13,40 @@
 <body>
 	<div class="container">
 		<div class="profile-box">
-			<form:form action="${root }admin/modify_pro" method="post">
-				<div class="id">
-					<label for="user_id">아이디</label> <input type="text" id="user_id"
-						name="user_id" class="form-control" value="${users.user_id }"
-						disabled="disabled" />
+			<form:form action="${root }admin/modify_pro" method="post"
+				modelAttribute="modifyMemberBean">
+				<div class="memberProfile">
+					<form:label path="user_id">이름</form:label>
+					<form:input path="user_id" class="form-control" readonly="true" />
 				</div>
-				<div class="name">
-					<label for="user_name">이름</label> <input type="text" id="user_name"
-						name="user_name" class="form-control" value="${users.user_name }"
-						disabled="disabled" />
+				<div class="memberProfile">
+					<form:label path="user_name">이름</form:label>
+					<form:input path="user_name" class="form-control" />
 				</div>
-				<div class="gender">
-					<label for="user_gender">성별</label> <input type="text"
-						id="user_gender" name="user_gender" class="form-control"
-						value="${users.user_gender }" disabled="disabled" />
+				<div class="memberProfile">
+					<form:label path="user_gender">성별</form:label>
+					<form:input path="user_gender" class="form-control"/>
 				</div>
-				<div class="age">
-					<label for="user_age">나이</label> <input type="text" id="user_age"
-						name="user_age" class="form-control" value="${users.user_age }"
-						disabled="disabled" />
+				<div class="memberProfile">
+					<form:label path="user_age">나이</form:label>
+					<form:input path="user_age" class="form-control" />
 				</div>
-				<div class="nation">
-					<label for="user_nation">아이디</label> <input type="text"
-						id="user_id" name="user_nation" class="form-control"
-						value="${users.user_nation }" disabled="disabled" />
+				<div class="memberProfile">
+					<form:label path="user_nation">국적</form:label>
+					<form:input path="user_nation" class="form-control" />
 				</div>
-				<div class="subscription">
-					<label for="user_subscription">구독 여부</label> <input type="text"
-						id="user_subscrip" name="user_subscription" class="form-control"
-						value="${users.subscription }" disabled="disabled" />
+				<div class="memberProfile">
+					<form:label path="subscription">구독여부</form:label>
+					<form:input path="subscription" class="form-control" />
 				</div>
 			</form:form>
 		</div>
 
 		<div class="button">
-			<button type="button" value="수정하기">수정하기</button>
+			<form:button class = >수정완료</form:button>
 			<br>
 			<button type="button" value="삭제하기">삭제하기</button>
-			<br> <a href="${root }members">전체 회원 보기</a>
+			<br> <a href="${root }member_profile?user_idx=${users.user_idx}">취소</a>
 		</div>
 	</div>
 </body>

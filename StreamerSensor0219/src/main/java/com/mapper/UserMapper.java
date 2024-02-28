@@ -52,7 +52,7 @@ public interface UserMapper {
 	@Update("update users "
 			+ "set user_name = #{user_name}, user_gender = #{user_gender}, "
 			+ "user_age = #{user_age}, user_nation = #{user_nation}, subscription = #{subscription} "
-			+ "where user_idx = 1")
-	void modifyMemberInfo(UserBean modifyMemberBean);
+			+ "where user_idx = #{user_idx}")
+	void modifyMemberInfo(Users modifyMemberBean);
 
 }

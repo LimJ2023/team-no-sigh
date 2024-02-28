@@ -2,6 +2,8 @@ package com.controller;
 
 import java.util.List;
 
+import javax.annotation.Resource;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,6 +25,9 @@ public class MemberController {
 
 	@Autowired
 	UsersService uService;
+	
+	@Autowired
+	private Users selectUserBean;
 
 	@GetMapping("/members")
 	public String members(Model model) {
@@ -64,18 +69,19 @@ public class MemberController {
 	public String modify(@ModelAttribute("modifyMemberBean")Users modifyMemberBean,
 			@RequestParam("user_idx") int user_idx, Model model) {
 		
-		Users users = uService.printOneUser(user_idx);
-		model.addAttribute("users", users);
+		uService.modifyMemberInfo(modifyMemberBean);
 		
-		Users userBean = uService.printOneUser(user_idx);
-		
-		modifyMemberBean.setUser_name(userBean.getUser_name());
-		modifyMemberBean.setUser_gender(userBean.getUser_gender());
-		modifyMemberBean.setUser_age(userBean.getUser_age());
-		modifyMemberBean.setUser_nation(userBean.getUser_nation());
-		modifyMemberBean.setSubscription(userBean.getSubscription());
-		
-		
+		/*
+		 * Users users = uService.printOneUser(user_idx); model.addAttribute("users",
+		 * users);
+		 * 
+		 * modifyMemberBean.setUser_id(users.getUser_id());
+		 * modifyMemberBean.setUser_name(users.getUser_name());
+		 * modifyMemberBean.setUser_gender(users.getUser_gender());
+		 * modifyMemberBean.setUser_age(users.getUser_age());
+		 * modifyMemberBean.setUser_nation(users.getUser_nation());
+		 * modifyMemberBean.setSubscription(users.getSubscription());
+		 */
 		
 		return "admin/member_profile_modify";
 	}

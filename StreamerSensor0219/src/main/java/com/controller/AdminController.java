@@ -29,10 +29,11 @@ public class AdminController {
 	public String adminPage(Model model) {
 		
 		/*
-		 * Admin admin = adminService.getAdmin(); SiteInfo info =
-		 * adminService.getSiteInfo(); Users user = usersService.getUsers(); List<Users>
-		 * subUsers = usersService.getSubUsers(); Review review =
-		 * reviewService.getRecentReview();
+		 * Admin admin = adminService.getAdmin(); 
+		 * SiteInfo info = adminService.getSiteInfo(); 
+		 * Users user = usersService.getUsers(); List<Users>
+		 * subUsers = usersService.getSubUsers(); 
+		 * Review review = reviewService.getRecentReview();
 		 * 
 		 * model.addAttribute("admin", admin); model.addAttribute("info",info);
 		 * model.addAttribute("user", user); model.addAttribute("review", review);

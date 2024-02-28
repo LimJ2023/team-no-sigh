@@ -19,7 +19,10 @@ public class UsersService {
 	UsersDAO uDAO;
 
 	@Resource(name = "loginUserBean")
-	private Users loginUserBean;
+	private UserBean loginUserBean;
+	
+	@Autowired
+	private Users selectUserBean;
 
 	public Users getUsers() {
 		Users usersBean = new Users();
@@ -66,14 +69,13 @@ public class UsersService {
 		uDAO.addUserInfo(joinUserBean);
 	}
 
-	/*
-	 * public void getLoginUserInfo(UserBean tempLoginUserBean) { UserBean
-	 * tempLoginUserBean2 = uDAO.getLoginUserInfo(tempLoginUserBean); if
-	 * (tempLoginUserBean2 != null) {
-	 * loginUserBean.setUser_idx(tempLoginUserBean2.getUser_idx());
-	 * loginUserBean.setUser_name(tempLoginUserBean2.getUser_name());
-	 * loginUserBean.setUserLogin(true); } }
-	 */
+	public void getLoginUserInfo(UserBean tempLoginUserBean) { UserBean
+	tempLoginUserBean2 = uDAO.getLoginUserInfo(tempLoginUserBean); if
+	(tempLoginUserBean2 != null) {
+	loginUserBean.setUser_idx(tempLoginUserBean2.getUser_idx());
+	loginUserBean.setUser_name(tempLoginUserBean2.getUser_name());
+	loginUserBean.setUserLogin(true); } }
+	
 
 	public void getmodifyUserinfo(UserBean modifyUserBean) {
 		UserBean tempModifyUserBean = uDAO.getmodifyUserinfo(loginUserBean.getUser_idx());
@@ -88,8 +90,8 @@ public class UsersService {
 		uDAO.modifyUserInfo(modifyUserBean);
 	}
 	
-	public void modifyMemberInfo(UserBean modifyMemberBean) {
-		modifyMemberBean.setUser_idx(loginUserBean.getUser_idx());
+	public void modifyMemberInfo(Users modifyMemberBean) {
+		modifyMemberBean.setUser_idx(selectUserBean.getUser_idx());
 		uDAO.modifyMemberInfo(modifyMemberBean);
 	}
 
