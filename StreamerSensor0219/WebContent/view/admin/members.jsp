@@ -46,7 +46,7 @@
 			</div>
 			<div class="user-profile">
 				<c:forEach var="users" items="${users }">
-					<a href='member_profile'>
+					<a href='${root }member_profile?user_idx=${users.user_idx}'>
 						<div class='user'>
 							<p class='id'>
 								<img src='img/admin/profile4.png' />&nbsp; 아이디: ${users.user_id }

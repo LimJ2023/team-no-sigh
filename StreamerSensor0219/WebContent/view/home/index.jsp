@@ -112,43 +112,21 @@
     </div>
     <div class="todays_row">
     
-        <div class="todays_col colTop">
-        <a href="http://www.youtube.com" style="width: 100%, height:100%">
-            <figure>
-                <img src="./img/0101.png" class="humanIcon"/>
-                <figcaption class="humanIconCap">방송1</figcaption>
-                <figcaption>view: 12k</figcaption>
-                <img src="./img/6-10.png" class="youtubeLogo"/>
-<!--                 <img src="./img/6-10.png" class="youtubeLogo"
-                    onclick="javascript:window.location='https://www.youtube.com/';"/> -->
-            </figure>
-            </a>
-        </div>
-
-        
-        <div class="todays_col">
-        <a href="http://www.youtube.com" style="width: 100%, height:100%">
-            <figure>
-                <img src="./img/0102.png" class="humanIcon"/>
-                <figcaption class="humanIconCap">방송2</figcaption>
-                <figcaption>view: 10k</figcaption>
-                <img src="./img/6-10.png" class="youtubeLogo"/>
-            </figure>
-            </a>
-        </div>
-
-        <div class="todays_col">
-        <a href="http://www.youtube.com" style="width: 100%, height:100%">
-            <figure>
-                <img src="./img/0103.png" class="humanIcon"/>
-                <figcaption class="humanIconCap">방송3</figcaption>
-                <figcaption>view: 4.5k</figcaption>
-                <img src="./img/6-10.png" class="youtubeLogo"/>
-            </figure>
-            </a>
-        </div>
-
-        <div class="todays_col">
+    	<c:forEach var="popVideo" items="${popVideoInfo }">
+    		<div class="todays_col colTop">
+    			<a href="http://www.youtube.com/watch?v=${popVideo.video_id }" style="width:100%, height:100%">
+    				<figure>
+    					<img src="${popVideo.thumbnail_url }" class="humanIcon"/>
+    					<figcaption class="humanIconCap">${popVideo.streaming_description }</figcaption>
+    					<figcaption>♡ ${popVideo.likes }</figcaption>
+    					<img src="./img/6-10.png" class="youtubeLogo"/>
+    				</figure>
+    			</a>
+    		</div>
+    	</c:forEach>
+   
+    
+       <div class="todays_col">
         <a href="https://chzzk.naver.com/" style="width: 100%, height:100%">
             <figure>
                 <img src="./img/0104.png" class="humanIcon"/>
@@ -191,7 +169,12 @@
         <div class="suggestBox">
             <figure>
                 <img src="./img/Person_Icon.png" class="suggest_Img"/>
-                <figcaption>스트리머 이름</figcaption>
+              <%--   <c:forEach var="info" items="${streamerInfo }">
+                	<div>${info.title }</div>
+                	<div>구독자 : ${info.subscriber_count } 명</div>
+                	<div>비디오 : ${info.video_count } 개</div>
+                </c:forEach> --%>
+               
             </figure>
         </div>
 
