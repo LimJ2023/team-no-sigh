@@ -69,7 +69,6 @@ a{
 }
 
 .container{
-    position: fixed;
     top: 150px;
     left: 1.8%;
     background-color: var(--color-dark);
@@ -79,7 +78,8 @@ a{
     justify-content: center;
     padding: 20px;
     width: 96%;
-    margin: 0 auto;
+    margin: auto;
+    margin-top: 35px;
     gap: 1.8rem;
     grid-template-columns: 12rem auto 23rem;
 }

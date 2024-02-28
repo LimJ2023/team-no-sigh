@@ -7,9 +7,9 @@ public class Users {
 	private String user_id;
 	private String user_pw;
 	private String user_name;
-	private String user_gen;
+	private String user_gender;
 	private int user_age;
-	private String user_na;
+	private String user_nation;
 	
 	private String subscription;
 	
@@ -31,11 +31,11 @@ public class Users {
 	public void setUser_name(String user_name) {
 		this.user_name = user_name;
 	}
-	public String getUser_gen() {
-		return user_gen;
+	public String getUser_gender() {
+		return user_gender;
 	}
-	public void setUser_gen(String user_gen) {
-		this.user_gen = user_gen;
+	public void setUser_gender(String user_gender) {
+		this.user_gender = user_gender;
 	}
 	public int getUser_age() {
 		return user_age;
@@ -43,11 +43,11 @@ public class Users {
 	public void setUser_age(int user_age) {
 		this.user_age = user_age;
 	}
-	public String getUser_na() {
-		return user_na;
+	public String getUser_nation() {
+		return user_nation;
 	}
-	public void setUser_na(String user_na) {
-		this.user_na = user_na;
+	public void setUser_nation(String user_nation) {
+		this.user_nation = user_nation;
 	}
 	public String getSubscription() {
 		return subscription;
