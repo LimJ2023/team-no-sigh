@@ -80,7 +80,7 @@ public class UserController {
 			return "user/login_page";
 		}
 		
-		userService.getLoginUserInfo(tempLoginUserBean);
+		//userService.getLoginUserInfo(tempLoginUserBean);
 		
 		if(loginUserBean.isUserLogin() == true) {
 			return "user/login_success";

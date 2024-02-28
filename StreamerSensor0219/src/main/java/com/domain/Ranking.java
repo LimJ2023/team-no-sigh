@@ -1,5 +1,9 @@
 package com.domain;
 
+import java.awt.Image;
+
+import org.springframework.web.multipart.MultipartFile;
+
 public class Ranking {
 
 	private int ranking_id;
@@ -27,7 +31,10 @@ public class Ranking {
 	
 	//***************
 	private String video_id;
-
+	
+	//******
+	private String thumbnail_url;
+	private Image thumbImage;
 	
 	
 	private int avg_viewers;
@@ -153,6 +160,24 @@ public class Ranking {
 	}
 	public void setVideo_id(String video_id) {
 		this.video_id = video_id;
+	}
+
+	
+	//
+
+	
+
+	public String getThumbnail_url() {
+		return thumbnail_url;
+	}
+	public void setThumbnail_url(String thumbnail_url) {
+		this.thumbnail_url = thumbnail_url;
+	}
+	public Image getThumbImage() {
+		return thumbImage;
+	}
+	public void setThumbImage(Image thumbImage) {
+		this.thumbImage = thumbImage;
 	}
 	
 	
