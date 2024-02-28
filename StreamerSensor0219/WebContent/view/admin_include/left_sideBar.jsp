@@ -11,19 +11,16 @@
 <body>
 	<!--           사이드바             -->
 	<div class="sidebar">
-		<a href="${root}admin"> <span
-			class="material-symbols-outlined">empty_dashboard </span>
+		<a href="${root}admin"> <span class="material-symbols-outlined">empty_dashboard
+		</span>
 			<h3>대시보드</h3>
-		</a> 
-		<a href="${root }members"> <span
+		</a> <a href="${root }members"> <span
 			class="material-symbols-outlined"> group </span>
 			<h3>회원 관리</h3>
-	</a>
-		<a href="${root }chart"><span class="material-symbols-outlined"> insights </span>
-			<h3>분석</h3>
-		</a> 
-		<a href="${root }index"> <span class="material-symbols-outlined">logout
-		</span>
+		</a> <a href="${root }chart"><span class="material-symbols-outlined">
+				insights </span>
+			<h3>분석</h3> </a> <a href="${root }index"> <span
+			class="material-symbols-outlined">logout </span>
 			<h3>로그 아웃</h3>
 		</a>
 	</div>

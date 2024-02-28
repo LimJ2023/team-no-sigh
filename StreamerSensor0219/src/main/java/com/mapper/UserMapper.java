@@ -12,13 +12,17 @@ import com.domain.Users;
 public interface UserMapper {
 
 	@Select("SELECT * "
-			+ "FROM users "
+			+ "FROM users "	
 			+ "WHERE user_idx = #{user_idx}")
 	Users getUserByNumber(int user_idx);
 	
 	@Select("select * from users")
 	List<Users> getAllUsers();
 	
+	@Select("select user_id, user_name, user_gender, user_age, user_nation, subscription "
+			+ "FROM users "
+			+ "WHERE user_idx = #{user_idx}")
+	Users printOneUser(int user_idx);
 	
 	@Select("SELECT user_name " +
 			"FROM user_table " + 
@@ -34,6 +38,7 @@ public interface UserMapper {
 			+ "from user_table "
 			+ "where user_id=#{user_id} and user_pw=#{user_pw}")
 	UserBean getLoginUserInfo(UserBean tempLoginUserBean);
+	
 	@Select("select user_id, user_name " +
 			"from user_table "+
 			"where user_idx = #{user_idx}")
@@ -43,6 +48,11 @@ public interface UserMapper {
 			"set user_pw = #{user_pw} " +
 			"where user_idx = #{user_idx}")
 	void modifyUserInfo(UserBean modifyUserBean);
+	
+	@Update("update users "
+			+ "set user_name = #{user_name}, user_gender = #{user_gender}, "
+			+ "user_age = #{user_age}, user_nation = #{user_nation}, subscription = #{subscription} "
+			+ "where user_idx = #{user_idx}")
+	void modifyMemberInfo(Users modifyMemberBean);
 
-	Users printOneUser(int user_idx);
 }
