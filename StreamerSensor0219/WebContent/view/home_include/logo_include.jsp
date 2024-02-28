@@ -13,7 +13,7 @@
 	<!-- nav -->
 	<div class="nav container">
 		<!-- logo -->
-		<a href="home" class="logo"> Streamer<span>Sensor</span>
+		<a href="admin" class="logo"> Streamer<span>Sensor</span>
 		</a>
 		<!-- search box (검색)-->
 		<div class="search-box">

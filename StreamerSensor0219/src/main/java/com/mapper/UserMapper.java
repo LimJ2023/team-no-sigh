@@ -11,7 +11,14 @@ import com.domain.Users;
 
 public interface UserMapper {
 
+<<<<<<< HEAD
 
+=======
+	@Select("SELECT * "
+			+ "FROM users "
+			+ "WHERE user_idx = #{user_idx}")
+	Users getUserByNumber(int user_idx);
+>>>>>>> 2f839e007d4c09624a7839394b4c093aa2e70b70
 	
 	@Select("select * from users")
 	List<Users> getAllUsers();

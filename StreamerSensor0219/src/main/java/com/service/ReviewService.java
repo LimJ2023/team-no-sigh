@@ -19,7 +19,7 @@ public class ReviewService {
 	
 	public Review getRecentReview() {
 		Review review = reviewDao.getReviews().get(0);
-		System.out.println(review.getImg_url());
+		System.out.println("리뷰 서비스 진입. url = " + review.getImg_url());
 		return review;
 	}
 	
