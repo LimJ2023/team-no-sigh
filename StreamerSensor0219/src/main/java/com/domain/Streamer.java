@@ -10,6 +10,13 @@ public class Streamer {
 	private String strm_platform;
 	private int strm_followers;
 	
+	//0228 이지수
+	private long video_count;
+	private String channel_title;
+	private long subscriber_count;
+	private String title;
+	//
+	
 	
 	public int getStrm_num() {
 		return strm_num;
@@ -54,6 +61,33 @@ public class Streamer {
 		this.strm_followers = strm_followers;
 	}
 	
+	
+	//0228 이지수
+	public long getVideo_count() {
+		return video_count;
+	}
+	public void setVideo_count(long video_count) {
+		this.video_count = video_count;
+	}
+	public String getChannel_title() {
+		return channel_title;
+	}
+	public void setChannel_title(String channel_title) {
+		this.channel_title = channel_title;
+	}
+	//
+	public long getSubscriber_count() {
+		return subscriber_count;
+	}
+	public void setSubscriber_count(long subscriber_count) {
+		this.subscriber_count = subscriber_count;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
 	
 }
 
