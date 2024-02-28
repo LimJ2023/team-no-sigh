@@ -5,8 +5,8 @@ import java.util.Date;
 public class Review {
 	
 	private String user_id;
-	private String strm_id;
-	private String streaming_desc;
+	private String streamer_id;
+	private String streaming_description;
 	private String writing_data;
 	private int review_rating;
 	private Date review_creation_date;
@@ -18,18 +18,6 @@ public class Review {
 	}
 	public void setUser_id(String user_id) {
 		this.user_id = user_id;
-	}
-	public String getStrm_id() {
-		return strm_id;
-	}
-	public void setStrm_id(String strm_id) {
-		this.strm_id = strm_id;
-	}
-	public String getStreaming_desc() {
-		return streaming_desc;
-	}
-	public void setStreaming_desc(String streaming_desc) {
-		this.streaming_desc = streaming_desc;
 	}
 	public String getWriting_data() {
 		return writing_data;
@@ -54,6 +42,18 @@ public class Review {
 	}
 	public void setImg_url(String img_url) {
 		this.img_url = img_url;
+	}
+	public String getStreaming_description() {
+		return streaming_description;
+	}
+	public void setStreaming_description(String streaming_description) {
+		this.streaming_description = streaming_description;
+	}
+	public String getStreamer_id() {
+		return streamer_id;
+	}
+	public void setStreamer_id(String streamer_id) {
+		this.streamer_id = streamer_id;
 	}
 	
 	
