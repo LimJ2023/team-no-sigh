@@ -24,6 +24,8 @@ public class CheckLoginInterceptor implements HandlerInterceptor{
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
+		
+		request.setAttribute("loginUserBean", loginUserBean);
 		//로그인을 하지 않았다면
 		if (loginUserBean.isUserLogin() == false) {
 			//로그인 하지 않은 경로 호출

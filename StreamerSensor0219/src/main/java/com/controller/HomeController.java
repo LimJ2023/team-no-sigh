@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class HomeController {
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home() {
-		return "/home/index";
+	public String home(HttpServletRequest request) {
+		return "redirect:/index";
 	}
 
 	// home 링크를 누르면 index

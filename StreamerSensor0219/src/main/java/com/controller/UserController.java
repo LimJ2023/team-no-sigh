@@ -52,6 +52,12 @@ public class UserController {
 		return "user/myPage";
 	}
 	
+	@GetMapping("/logout")
+	public String logout() {
+		loginUserBean.setUserLogin(false);
+		return "user/logout";
+	}
+	
 	@PostMapping("/join_pro")
 	public String join_pro(@Valid @ModelAttribute("joinUserBean") UserBean joinUserBean, 
 			BindingResult result) {
