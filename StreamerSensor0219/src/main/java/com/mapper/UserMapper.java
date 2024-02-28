@@ -10,7 +10,6 @@ import com.beans.UserBean;
 import com.domain.Users;
 
 public interface UserMapper {
-
 	@Select("SELECT * "
 			+ "FROM users "
 			+ "WHERE user_idx = #{user_idx}")

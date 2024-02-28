@@ -1,5 +1,7 @@
 package com.dao;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -10,9 +12,13 @@ import com.mapper.StreamerMapper;
 public class StreamerDAO {
 	
 	@Autowired
-	StreamerMapper mapper;
+	StreamerMapper streamermapper;
 	
-	public Streamer getStreamer(int streamer_num) {
-		return mapper.getStreamer(streamer_num);
+	public Streamer getStreamer(int streamer_idx) {
+		return streamermapper.getStreamer(streamer_idx);
+	}
+	
+	public List<Streamer> getStreamerFollowers() {
+		return streamermapper.getStreamerFollowers();
 	}
 }

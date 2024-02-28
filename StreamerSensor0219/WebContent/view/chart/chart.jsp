@@ -9,6 +9,11 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"/>
+      <!-- JQuery -->
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
     <link rel="stylesheet" href="chart/chart_style.css" />
     <title>관리자 페이지 1</title>
   </head>
@@ -31,9 +36,10 @@
       <main>
         <div class="graphBox1">
           <div class="box1">
-          	<canvas id="myChart"></canvas>
+          	<canvas id="myChart1" width="300" height="300"></canvas>
           </div>
           <div class="box2">
+          	<canvas id="myChart2" width="1000" height="300"></canvas>
           </div>
         </div>
         <div class="graphBox2">
@@ -126,7 +132,6 @@
     <!-- 컨테이너 종료 -->
     <script src="order.js"></script>
     <script src="index.js"></script>
-    <script src="chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
       window.onload = function () {
@@ -148,6 +153,80 @@
         document.getElementById(tabName).style.display = "block";
         evt.currentTarget.className += " active";
       }
-    </script>
+	</script>
+	<script>
+    // 첫 번째 차트 그리기
+    var ctx1 = document.getElementById('myChart1').getContext('2d');
+    var myChart1 = new Chart(ctx1, {
+        type: 'doughnut',
+        data: {
+            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            datasets: [{
+                label: '# of Votes',
+                data: [12, 19, 3, 5, 2, 3],
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            // 차트 옵션 설정
+        }
+    });
+
+    // 두 번째 차트 그리기
+    var labels = [];
+    var ctx2 = document.getElementById('myChart2').getContext('2d');
+    var myChart2 = new Chart(ctx2, {
+        type: 'bar',
+        data: {
+        	labels : labels,
+            datasets: [{
+                label: '팔로워 수',
+                fill: false,
+                borderColor: 'rgb(75, 192, 192)',
+                tension: 0.1,
+                data:[]
+            }]
+        },
+        options: {
+            // 차트 옵션 설정
+        }
+    });
+ 	// AJAX 요청
+    $.ajax({
+        url: 'StreamerFollowers',
+        type: "POST",
+        contentType: "application/json",
+        data: JSON.stringify({}),
+        success: function(response) {
+            // 서버로부터 받은 응답을 처리하는 코드
+            updateChart(response);
+        },
+        error: function(xhr, status, error) {
+            // 에러 처리 코드
+        }
+    });
+ 	
+ 	function updateChart(data){
+ 		var streamer_followers = [];
+ 		var labels = [];
+ 		for(var i = 0; i < data.length; i++) {
+ 			streamer_followers.push(data[i].streamer_followers);
+ 			labels.push(data[i].streamer_idx);
+ 		}
+ 		myChart2.data.datasets[0].data = streamer_followers;
+ 		
+ 		myChart2.update();
+ 		updateLabels(labels);
+ 	}
+ 	
+ 	// labels 업데이트 함수
+    function updateLabels(newLabels) {
+        myChart2.data.labels = newLabels;
+        myChart2.update();
+    }
+	</script>
+
 </body>
 </html>

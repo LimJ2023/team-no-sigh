@@ -24,18 +24,15 @@
 function checkUserIdExist() {
 	var user_id = $("#user_id").val()
 	if(user_id.length == 0){
-		alert('아이디를 입력해주세요')
+		alert('아이디를 입력해주세요.')
 		return
-		//입력 없이 중복확인 누르면 아이디 입력하라고 경고하는 거
 	}
 	$.ajax({
 		url : '${root}user/checkUserIdExist/' + user_id,
 		type : 'get',
 		dataType : 'text',
-			//문자열로 받아올거다(내가 받고자 예상되는 형식 지정)
 		success : function(result){
 			if(result.trim() == 'true'){
-					//띄어쓰기 등 공백처리를??해준다 -> 공백을 제거해주는듯
 				alert('사용할 수 있는 아이디 입니다')
 				$("#userIdExist").val('true')
 			}else{
@@ -44,16 +41,11 @@ function checkUserIdExist() {
 			}
 		}
 	})
-}//checkUserIdExist
-
-
-//사용자 아이디란에 입력하면 무조건 false(초기화)
+}
+//사용자 아이디란에 입력하면 무조건 false
 function resetUserIdExist(){
-	//초기화 하려고 한다
-	
 	$("#userIdExist").val('false')
-	
-}//resetUserIdExist
+}
 
 </script>
 <body>
@@ -70,14 +62,15 @@ function resetUserIdExist(){
 							<!-- 사용자에게는 안보이게 하기 위해 hidden(사용자는 백에서 어떻게 돌아가는지 알 필요x) -->
 							<div class="input-box">
 
-								<form:input path="user_name" class='form-control' />
+								<form:input path="user_name" class='form-control' placeholder="이름을 입력해 주세요"/>
 								<form:errors path="user_name" style='color:red' />
 							</div>
 							<div class="form-group">
-								<form:label path="user_id"></form:label>
+								
 								<div class="input-box">
+								<form:label path="user_id"></form:label>
 									<form:input path="user_id" id="name" class='form-control'
-										onkeypress="resetUserIdExist()" />
+										onkeypress="resetUserIdExist()" placeholder="아이디를 입력해 주세요"/>
 									<!-- 사용자 입력시 호출 -->
 									<div class="input-group-append">
 										<button type="button" onclick="checkUserIdExist()">중복확인</button>
@@ -89,13 +82,13 @@ function resetUserIdExist(){
 
 							<div class="input-box">
 								<form:label path="user_pw"></form:label>
-								<form:password path="user_pw" class='form-control' />
+								<form:password path="user_pw" class='form-control' placeholder="비밀번호를 입력해 주세요"/>
 								<form:errors path='user_pw' style='color:red' />
 							</div>
 
 							<div class="input-box">
 								<form:label path="user_pw2"></form:label>
-								<form:password path="user_pw2" class='form-control' />
+								<form:password path="user_pw2" class='form-control' placeholder="비밀번호를 다시 입력해 주세요"/>
 								<form:errors path='user_pw2' style='color:red' />
 							</div>
 

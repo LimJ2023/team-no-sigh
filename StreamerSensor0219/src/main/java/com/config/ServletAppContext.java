@@ -27,6 +27,8 @@ import com.mapper.ReviewMapper;
 import com.mapper.StreamerMapper;
 import com.mapper.UserMapper;
 
+import com.beans.UserBean;
+
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = { "com.service", "com.dao", "com.controller", "com.mapper" })
@@ -48,6 +50,9 @@ public class ServletAppContext implements WebMvcConfigurer {
 
 	@Resource(name = "adminBean")
 	private Admin adminBean;
+	
+	@Resource(name="loginUserBean")
+	private UserBean loginUserBean;
 
 	// Controller 메서드가 반환하는 jsp 이름 앞뒤에 경로, 확장자 설정
 	@Override

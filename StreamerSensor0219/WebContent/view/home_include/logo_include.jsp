@@ -13,7 +13,7 @@
 	<!-- nav -->
 	<div class="nav container">
 		<!-- logo -->
-		<a href="home" class="logo"> Streamer<span>Sensor</span>
+		<a href="admin" class="logo"> Streamer<span>Sensor</span>
 		</a>
 		<!-- search box (검색)-->
 		<div class="search-box">
@@ -21,6 +21,7 @@
 				placeholder="Search streamer"> <i class='bx bx-search'></i>
 		</div>
 		<c:choose>
+			
 			<c:when test="${loginUserBean.userLogin == true }">
 				<!-- user 사진 제대로 찾아서 넣어야함 (여기는 마이페이지랑 로그인되는 버튼구현)-->
 				<a href="${root }user/myPage" class="user"> <img
@@ -28,7 +29,6 @@
 				</a>
 			</c:when>
 			<c:otherwise>
-
 				<a href="${root }user/login_page" class="user"> <img
 					src="img/Person_Icon.png" alt="" class="user-img">
 				</a>
