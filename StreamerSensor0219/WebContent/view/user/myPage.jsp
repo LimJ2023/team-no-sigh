@@ -13,7 +13,7 @@
 	<nav>
         <div class="container">
             <!-- logo -->
-            <a href="index.html" class="logo">
+            <a href="home" class="logo">
                 Streamer<span>Sensor</span>
             </a>
             <div class="search-bar">

@@ -69,7 +69,7 @@
 					<div class="info">
 						<h3>최근 평가된 컨텐츠</h3>
 						<h3>평점 : ${review.review_rating }점</h3>
-						<h3>제목 : ${review.streaming_desc }</h3>
+						<h3>제목 : ${review.streaming_description }</h3>
 					</div>
 					<div class="content">
 						<img src="img/thumbnail/${review.img_url}.png">

@@ -10,7 +10,6 @@ import com.beans.UserBean;
 import com.domain.Users;
 
 public interface UserMapper {
-
 	@Select("SELECT * "
 			+ "FROM users "
 			+ "WHERE user_idx = #{user_idx}")
@@ -45,4 +44,7 @@ public interface UserMapper {
 	void modifyUserInfo(UserBean modifyUserBean);
 
 	Users printOneUser(int user_idx);
+
+
+	Users getUserByNumber(int user_num);
 }

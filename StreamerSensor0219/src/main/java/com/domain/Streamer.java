@@ -10,6 +10,7 @@ public class Streamer {
 	private String streamer_platform;
 	private int streamer_followers;
 	
+	
 	public int getStreamer_idx() {
 		return streamer_idx;
 	}

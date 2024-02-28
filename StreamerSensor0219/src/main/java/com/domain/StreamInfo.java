@@ -4,7 +4,7 @@ public class StreamInfo {
 	
 	private String user_id;
 	private String strm_id;
-	private String streaming_desc;
+	private String streaming_description;
 	private String writing_data;
 	private String thumbnail;
 	
@@ -21,12 +21,6 @@ public class StreamInfo {
 	public void setStrm_id(String strm_id) {
 		this.strm_id = strm_id;
 	}
-	public String getStreaming_desc() {
-		return streaming_desc;
-	}
-	public void setStreaming_desc(String streaming_desc) {
-		this.streaming_desc = streaming_desc;
-	}
 	public String getWriting_data() {
 		return writing_data;
 	}
@@ -38,6 +32,12 @@ public class StreamInfo {
 	}
 	public void setThumbnail(String thumbnail) {
 		this.thumbnail = thumbnail;
+	}
+	public String getStreaming_description() {
+		return streaming_description;
+	}
+	public void setStreaming_description(String streaming_description) {
+		this.streaming_description = streaming_description;
 	}
 	
 	
