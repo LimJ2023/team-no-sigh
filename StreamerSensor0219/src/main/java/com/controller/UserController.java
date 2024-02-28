@@ -36,7 +36,7 @@ public class UserController {
 	private UserBean loginUserBean;
 	
 	@GetMapping("/login_page")
-	public String loginPage(@ModelAttribute("tempLoginUserBean") UserBean tempLoginUserBean,
+	public String login_page(@ModelAttribute("tempLoginUserBean") UserBean tempLoginUserBean,
 			@RequestParam(value="fail", defaultValue = "false") boolean fail, Model model) {
 		model.addAttribute("fail",fail);
 		return "user/login_page";
@@ -44,12 +44,12 @@ public class UserController {
 
 	@GetMapping("/register")
 	public String register(@ModelAttribute("joinUserBean") UserBean joinUserBean) {
-		return "/user/register";
+		return "user/register";
 	}
 	
 	@GetMapping("/myPage")
 	public String myPage() {
-		return "/user/myPage";
+		return "user/myPage";
 	}
 	
 	@PostMapping("/join_pro")
@@ -61,7 +61,7 @@ public class UserController {
 		}
 		//데이터베이스에 저장 및 회원가입 완료
 		userService.addUserInfo(joinUserBean);
-		return "/user/join_success";
+		return "user/join_success";
 	}
 	
 	
@@ -71,7 +71,7 @@ public class UserController {
 							UserBean tempLoginUserBean, BindingResult result) {
 		
 		if(result.hasErrors()) {
-			return "/user/login_page";
+			return "user/login_page";
 		}
 		
 		userService.getLoginUserInfo(tempLoginUserBean);
@@ -81,6 +81,11 @@ public class UserController {
 		}else {			
 			return "user/login_fail";
 		}
+	}
+	
+	@GetMapping("/not_login")
+	public String not_login() {
+		return "user/not_login";
 	}
 	
 	@InitBinder

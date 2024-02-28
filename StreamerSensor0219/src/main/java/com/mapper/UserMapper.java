@@ -13,16 +13,17 @@ public interface UserMapper {
 
 	@Select("SELECT * "
 			+ "FROM users "
+<<<<<<< HEAD
+			+ "WHERE user_num = #{user_num}")
+	Users getUserByNumber(int user_num);
+=======
 			+ "WHERE user_idx = #{user_idx}")
 	Users getUserByNumber(int user_idx);
+>>>>>>> 7edcd23fc1ff2704c0ce967fbe277de05c00e0db
 	
 	@Select("select * from users")
 	List<Users> getAllUsers();
 	
-	@Select("select user_id, subscription "
-			+ "FROM users "
-			+ "WHERE user_idx = #{user_idx}")
-	Users printOneUser(int user_idx);
 	
 	@Select("SELECT user_name " +
 			"FROM user_table " + 
@@ -47,4 +48,6 @@ public interface UserMapper {
 			"set user_pw = #{user_pw} " +
 			"where user_idx = #{user_idx}")
 	void modifyUserInfo(UserBean modifyUserBean);
+
+	Users printOneUser(int user_idx);
 }
