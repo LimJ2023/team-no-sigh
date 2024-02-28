@@ -13,16 +13,43 @@
 <body>
 	<div class="container">
 		<div class="profile-box">
-			<p>
-				<img src="img/admin/profile1.png" /> <br> <br> <br>
-				<span>아이디: ${users.user_id }</span> <br> <br> 
-				<span>이름: ${users.user_name }</span> <br> <br>
-				<span>성별: ${users.user_gender }</span> <br> <br>
-				<span>나이: ${users.user_age }</span> <br> <br>
-				<span>국적: ${users.user_nation }</span> <br> <br> 
-				<span>구독 여부: ${users.subscription }</span> <br> <br>
-			</p>
+			<div class="id">
+				<label for="user_id">아이디</label> <input type="text" id="user_id"
+					name="user_id" class="form-control" value="${users.user_id }"
+					disabled="disabled" />
+			</div>
+			<div class="name">
+				<label for="user_name">이름</label>
+				<input type="text" id="user_name"
+					name="user_name" class="form-control" value="${users.user_name }"
+					disabled="disabled" />
+			</div>
+			<div class="gender">
+				<label for="user_gender">성별</label>
+				<input type="text" id="user_gender"
+					name="user_gender" class="form-control" value="${users.user_gender }"
+					disabled="disabled" />
+			</div>
+			<div class="age">
+				<label for="user_age">나이</label>
+				<input type="text" id="user_age"
+					name="user_age" class="form-control" value="${users.user_age }"
+					disabled="disabled" />
+			</div>
+			<div class="nation">
+				<label for="user_nation">아이디</label>
+				<input type="text" id="user_id"
+					name="user_nation" class="form-control" value="${users.user_nation }"
+					disabled="disabled" />
+			</div>
+			<div class="subscription">
+				<label for="user_subscription">구독 여부</label>
+				<input type="text" id="user_subscrip"
+					name="user_subscription" class="form-control" value="${users.subscription }"
+					disabled="disabled" />
+			</div>
 		</div>
+		
 		<div class="button">
 			<button type="button" value="수정하기">수정하기</button>
 			<br>

@@ -84,14 +84,21 @@ a{
     grid-template-columns: 12rem auto 23rem;
 }
 
-.profile-box {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-}
-
 .container .profile-box img{
     border-radius: 50%;
+}
+
+.profile-box{
+    color: var(--color-primary);
+}
+
+.profile-box input {
+    color: var(--color-primary);
+    padding: 5px;
+}
+
+input:disabled{
+    background-color: var(--color-dark);
 }
 
 .button {
