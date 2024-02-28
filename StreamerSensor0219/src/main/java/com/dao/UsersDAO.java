@@ -14,7 +14,7 @@ public class UsersDAO {
 
 
 	@Autowired
-	UserMapper mapper;
+	private UserMapper mapper;
 
 	
 	public Users getUserByNumber(int user_num) {
@@ -30,6 +30,7 @@ public class UsersDAO {
 		return mapper.printOneUser(user_idx);
 	}
 	public String checkUserIdExist(String user_id) {
+		System.out.println("매퍼진입 유저체크 매서드 확인"+mapper.checkUserIdExist(user_id));
 		return mapper.checkUserIdExist(user_id);
 	}
 	

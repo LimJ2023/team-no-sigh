@@ -1,11 +1,15 @@
 package com.interceptor;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.web.servlet.HandlerInterceptor;
 
 import com.beans.UserBean;
+
+
 
 public class CheckLoginInterceptor implements HandlerInterceptor{
 
@@ -31,6 +35,7 @@ public class CheckLoginInterceptor implements HandlerInterceptor{
 		//로그인 되어있는 상태
 		return true;
 	}
+	
 	
 	
 }
