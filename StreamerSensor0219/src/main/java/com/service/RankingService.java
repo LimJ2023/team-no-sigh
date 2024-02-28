@@ -12,15 +12,17 @@ import java.util.List;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
 
 import com.dao.RankingDAO;
-import com.dao.RankingDAO;
 import com.domain.Ranking;
-import com.fasterxml.jackson.databind.util.JSONPObject;
+import com.domain.Streamer;
 import com.mapper.RankingMapper;
 
 @Service
+@PropertySource("/WEB-INF/properties/option.properties")
 public class RankingService {
 
 	
@@ -30,6 +32,9 @@ public class RankingService {
 	//20240227 이지수 DB API 테스트용
 	@Autowired
 	RankingMapper rankingMapper;
+	
+	@Value("${path.upload}")
+	private String path_upload;
 	//
 	
 	public List<Ranking> getRankings() {
@@ -87,10 +92,16 @@ public class RankingService {
 		for(int i=0; i < items.length(); i++) {
 			JSONObject item = items.getJSONObject(i);
 			String videoTitle = item.getJSONObject("snippet").getString("title");
+			//0228
+			String thumbnail_url = item.getJSONObject("snippet").getJSONObject("thumbnails").getJSONObject("high").getString("url");
 			
 			Ranking ranking = new Ranking();
 			ranking.setStreaming_description(videoTitle);
 			
+			//0228
+			
+			 ranking.setThumbnail_url(thumbnail_url);
+						
 			String videoId = item.getString("id");
 			ranking.setVideo_id(videoId);
 			
@@ -126,15 +137,10 @@ public class RankingService {
 				
 			popRankings.add(ranking);
 
-			//rankingDAO.addVideoInfo(popRankings);
 		}//for
 		
 		
 		return popRankings;
 	}
 	
-	/*public void addVideoInfo(List<Ranking> videoRankingBean) {
-		rankingDAO.addVideoInfo(videoRankingBean);;
-	}*/
-
 }

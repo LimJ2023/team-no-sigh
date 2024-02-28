@@ -20,7 +20,7 @@ ALTER USER streamer DEFAULT TABLESPACE USERS QUOTA UNLIMITED ON USERS;
 -- user 테이블
 DROP TABLE USERS;
 CREATE TABLE users(
-    user_num number not null UNIQUE,
+    user_idx number not null UNIQUE,
     user_id VARCHAR2(20),
     user_pw VARCHAR2(20),
     user_name VARCHAR2(20),
@@ -31,17 +31,29 @@ CREATE TABLE users(
     PRIMARY KEY(user_id)
 );
 
+alter table users drop column subscription;
+ALTER TABLE users ADD user_image VARCHAR2(500);
+ALTER TABLE users ADD subscription VARCHAR2(1);
+ALTER TABLE users RENAME COLUMN user_num TO user_idx;
+
+select * from users;
+
+--유저 이미지 테이블--
+
 --스트리머 테이블--
 DROP TABLE streamer;
 CREATE TABLE streamer(
-    streamer_num number not null unique,
+    streamer_idx number not null unique,
     streamer_id VARCHAR2(40) PRIMARY KEY,
     streamer_gender VARCHAR2(20),
     streamer_grade VARCHAR2(20),
     streamer_status VARCHAR2(20),
-    streamer_platform VARCHAR2(20), 
+    streamer_platform VARCHAR2(20),
     streamer_followers number
 );
+
+ALTER TABLE streamer RENAME COLUMN streamer_num TO streamer_idx;
+alter table streamer add streamer_image varchar2(500);
 
 --오늘 방송 정보 테이블--
 drop table streaming_info;
@@ -70,7 +82,7 @@ CREATE TABLE streaming_img(
 --리뷰 테이블--
 DROP TABLE review;
 CREATE table review(
-    review_num number PRIMARY KEY,
+    review_idx number PRIMARY KEY,
     user_id VARCHAR2(40),
     review_streaming_id number,
     writing_data VARCHAR2(200),
@@ -80,13 +92,15 @@ CREATE table review(
     FOREIGN KEY(review_streaming_id) REFERENCES streaming_info(streaming_id)
 );
 
+ALTER TABLE review RENAME COLUMN review_num TO review_idx;
+
 --리뷰와 사용자의 관계 테이블. (유저id와 리뷰의 id로 각 리뷰를 구별할 수 있도록)--
 DROP TABLE user_review_relation;
 CREATE TABLE user_review_relation(
-    review_num number,
+    review_idx number,
     user_id VARCHAR2(20),
-    PRIMARY KEY (review_num, user_id),
-    FOREIGN KEY (review_num) REFERENCES review(review_num),
+    PRIMARY KEY (review_idx, user_id),
+    FOREIGN KEY (review_idx) REFERENCES review(review_idx),
     FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
 
@@ -129,7 +143,7 @@ CREATE TABLE ranking(
 --보드 테이블--
 DROP TABLE board;
 CREATE TABLE board(
-    board_num number primary key,
+    board_idx number primary key,
     user_id VARCHAR2(20),
     title varchar2(20),
     info VARCHAR2(200),
@@ -143,13 +157,13 @@ CREATE TABLE board(
 --comments 테이블--
 drop TABLE comments;
 create table comments(
-    comments_num number primary key,
+    comments_idx number primary key,
     user_id VARCHAR2(20),
     info VARCHAR2(200),
     comments_date date,
-    board_num number,
+    board_idx number,
     FOREIGN KEY (user_id) REFERENCES USERS(user_id),
-    FOREIGN KEY (board_num) REFERENCES board(board_num)
+    FOREIGN KEY (board_idx) REFERENCES board(board_idx)
 );
 
 --admin 테이블--
@@ -166,7 +180,7 @@ CREATE TABLE admin(
 --admin 공지사항 테이블--
 drop table admin_notice;
 create table admin_notice(
-    notice_num number primary key,
+    notice_idx number primary key,
     notice_type varchar2(10),
     notice_title varchar2(80),
     notice_content varchar2(400),
@@ -190,6 +204,8 @@ CREATE TABLE site_stat (
     server_monitoring VARCHAR2(255),
     timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+commit;
 
     --new_members NUMBER, --신규 유저 수 보류
     --total_members NUMBER, --전체 유저 수 보류
