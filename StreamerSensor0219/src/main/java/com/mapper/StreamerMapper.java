@@ -8,6 +8,6 @@ public interface StreamerMapper {
 	
 	@Select("SELECT * "
 			+ "FROM streamer "
-			+ "WHERE strm_num = #{streamer_num} ")
+			+ "WHERE streamer_idx = #{streamer_idx} ")
 	Streamer getStreamer(int streamer_num);
 }

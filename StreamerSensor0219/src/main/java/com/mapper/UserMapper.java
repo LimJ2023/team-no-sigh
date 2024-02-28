@@ -12,14 +12,9 @@ import com.domain.Users;
 public interface UserMapper {
 
 	@Select("SELECT * "
-			+ "FROM users "
-<<<<<<< HEAD
-			+ "WHERE user_num = #{user_num}")
-	Users getUserByNumber(int user_num);
-=======
+			+ "FROM users "	
 			+ "WHERE user_idx = #{user_idx}")
 	Users getUserByNumber(int user_idx);
->>>>>>> 7edcd23fc1ff2704c0ce967fbe277de05c00e0db
 	
 	@Select("select * from users")
 	List<Users> getAllUsers();
@@ -39,6 +34,7 @@ public interface UserMapper {
 			+ "from user_table "
 			+ "where user_id=#{user_id} and user_pw=#{user_pw}")
 	UserBean getLoginUserInfo(UserBean tempLoginUserBean);
+	
 	@Select("select user_id, user_name " +
 			"from user_table "+
 			"where user_idx = #{user_idx}")
