@@ -1,19 +1,22 @@
-package com.domain;
+package com.beans;
 
-public class Streamer {
+import org.springframework.stereotype.Component;
+
+@Component
+public class StreamerBean {
 	
-	private int streamer_idx;
-	private String streamer_id;
-	private String streamer_gender;
-	private String streamer_grade;
-	private String streamer_status;
-	private String streamer_platform;
-	private int streamer_followers;
+	Integer streamer_idx;
+	String streamer_id;
+	String streamer_gender;
+	String streamer_grade;
+	String streamer_status;
+	String streamer_platform;
+	Integer streamer_followers;
 	
-	public int getStreamer_idx() {
+	public Integer getStreamer_idx() {
 		return streamer_idx;
 	}
-	public void setStreamer_idx(int streamer_idx) {
+	public void setStreamer_idx(Integer streamer_idx) {
 		this.streamer_idx = streamer_idx;
 	}
 	public String getStreamer_id() {
@@ -46,13 +49,11 @@ public class Streamer {
 	public void setStreamer_platform(String streamer_platform) {
 		this.streamer_platform = streamer_platform;
 	}
-	public int getStreamer_followers() {
+	public Integer getStreamer_followers() {
 		return streamer_followers;
 	}
-	public void setStreamer_followers(int streamer_followers) {
+	public void setStreamer_followers(Integer streamer_followers) {
 		this.streamer_followers = streamer_followers;
 	}
-	
+
 }
-
-
