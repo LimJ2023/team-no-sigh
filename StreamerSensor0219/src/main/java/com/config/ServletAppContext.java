@@ -6,7 +6,6 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.tomcat.dbcp.dbcp2.BasicDataSource;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.mapper.MapperFactoryBean;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -23,17 +22,16 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import com.beans.UserBean;
 import com.domain.Admin;
+import com.interceptor.CheckLoginInterceptor;
 import com.mapper.AdminMapper;
+import com.mapper.BoardMapper;
 import com.mapper.RankingMapper;
 import com.mapper.ReviewMapper;
 import com.mapper.StreamerMapper;
 import com.mapper.TopMenuMapper;
 import com.mapper.UserMapper;
-import com.service.TopMenuService;
-import com.interceptor.CheckLoginInterceptor;
-import com.interceptor.TopMenuInterceptor;
-import com.beans.UserBean;
 
 @Configuration
 @EnableWebMvc
@@ -140,6 +138,14 @@ public class ServletAppContext implements WebMvcConfigurer {
 	      factoryBean.setSqlSessionFactory(factory);
 	      return factoryBean;
 	   }
+	
+	@Bean
+	   public MapperFactoryBean<BoardMapper> getBoardMapper(SqlSessionFactory factory) throws Exception{
+	      MapperFactoryBean<BoardMapper> factoryBean = new MapperFactoryBean<BoardMapper>(BoardMapper.class);
+	      factoryBean.setSqlSessionFactory(factory);
+	      return factoryBean;
+	   }
+	
 
 	// 쿼리를 전달하는 빈 등록
 	@Bean
