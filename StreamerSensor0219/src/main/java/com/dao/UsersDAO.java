@@ -48,8 +48,14 @@ public class UsersDAO {
 		mapper.modifyUserInfo(modifyUserBean);
 	}
 	
+	//======================================================================================
+	
 	public void modifyMemberInfo(Users modifyMemberBean) {
 		mapper.modifyMemberInfo(modifyMemberBean);
+	}
+	
+	public void deleteMemberInfo(int user_idx) {
+		mapper.deleteMemberInfo(user_idx);
 	}
 	
 }
