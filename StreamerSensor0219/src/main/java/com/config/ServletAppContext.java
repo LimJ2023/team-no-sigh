@@ -6,6 +6,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.tomcat.dbcp.dbcp2.BasicDataSource;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.mapper.MapperFactoryBean;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -22,19 +23,19 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-import com.beans.UserBean;
+import com.beans.UsersBean;
 import com.domain.Admin;
 import com.interceptor.CheckLoginInterceptor;
-
 import com.interceptor.LoginMenuInterceptor;
 import com.mapper.AdminMapper;
+import com.mapper.BoardMapper;
 import com.mapper.LoginMenuMapper;
 import com.mapper.RankingMapper;
 import com.mapper.ReviewMapper;
+import com.mapper.StreamMapper;
 import com.mapper.StreamerMapper;
 import com.mapper.UsersMapper;
 import com.service.LoginMenuService;
-import com.beans.UsersBean;
 
 
 @Configuration
@@ -149,7 +150,12 @@ public class ServletAppContext implements WebMvcConfigurer {
 	      factoryBean.setSqlSessionFactory(factory);
 	      return factoryBean;
 	   }
-	
+	@Bean
+	public MapperFactoryBean<StreamMapper> getStreamMapper(SqlSessionFactory factory) throws Exception {
+		MapperFactoryBean<StreamMapper> factoryBean = new MapperFactoryBean<StreamMapper>(StreamMapper.class);
+		factoryBean.setSqlSessionFactory(factory);
+		return factoryBean;
+	}
 
 	// 쿼리를 전달하는 빈 등록
 	@Bean

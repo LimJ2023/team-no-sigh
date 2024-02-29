@@ -8,7 +8,8 @@ import com.domain.Streamer;
 
 public interface StreamerMapper {
 	
-	@Select("SELECT * "
+	@Select("SELECT streamer_idx, streamer_id, streamer_gender, streamer_grade, "
+			+ "streamer_status, streamer_platform, streamer_followers, streamer_img "
 			+ "FROM streamer "
 			+ "WHERE streamer_idx = #{streamer_idx} ")
 	Streamer getStreamer(int streamer_idx);

@@ -5,12 +5,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<!-- Bootstrap CDN -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-
 </head>
 <body>
 	<nav>
@@ -84,7 +78,7 @@
             이름 <br/>
             <input type="text" placeholder="이름을 입력해 주세요."> <br/>
             <br/>
-            <button>저장</button> <br/>
+            <button value="submit" >저장</button> <br/>
             <br/>
             비밀번호 변경 <hr/>
             <h5>비밀번호를 설정하려면 아래의 링크를 눌러주세요.</h5>
@@ -97,7 +91,7 @@
             <h4>한번 삭제한 계정은 복구할 수 없습니다.</h4>
             <br/>
             <br/>
-            <button>계정 삭제</button>
+            <button value="submit">계정 삭제</button>
             <a href="account_delete" style="text-decoration-line: none;"></a>
         </div>
     </main>

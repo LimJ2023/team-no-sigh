@@ -6,7 +6,7 @@ public class StreamInfo {
 	private String strm_id;
 	private String streaming_description;
 	private String writing_data;
-	private String thumbnail;
+	private String img_url;
 	
 	
 	public String getUser_id() {
@@ -27,17 +27,17 @@ public class StreamInfo {
 	public void setWriting_data(String writing_data) {
 		this.writing_data = writing_data;
 	}
-	public String getThumbnail() {
-		return thumbnail;
-	}
-	public void setThumbnail(String thumbnail) {
-		this.thumbnail = thumbnail;
-	}
 	public String getStreaming_description() {
 		return streaming_description;
 	}
 	public void setStreaming_description(String streaming_description) {
 		this.streaming_description = streaming_description;
+	}
+	public String getImg_url() {
+		return img_url;
+	}
+	public void setImg_url(String img_url) {
+		this.img_url = img_url;
 	}
 	
 	
