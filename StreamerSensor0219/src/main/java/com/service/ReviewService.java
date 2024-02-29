@@ -19,12 +19,11 @@ public class ReviewService {
 	
 	public Review getRecentReview() {
 		Review review = reviewDao.getReviews().get(0);
-		System.out.println("리뷰 서비스 진입. url = " + review.getImg_url());
 		return review;
 	}
 	
-	public Streamer getStreamerByIdx(int streamer_num) {
-		Streamer streamer = streamerDao.getStreamer(streamer_num);
+	public Streamer getStreamerByIdx(int streamer_idx) {
+		Streamer streamer = streamerDao.getStreamer(streamer_idx);
 		return streamer;
 	}
 	
