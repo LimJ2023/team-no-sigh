@@ -10,15 +10,11 @@ import com.beans.UserBean;
 import com.domain.Users;
 
 public interface UserMapper {
-<<<<<<< HEAD
-
-
-=======
+	
 	@Select("SELECT * "
 			+ "FROM users "
 			+ "WHERE user_idx = #{user_idx}")
 	Users getUserByNumber(int user_idx);
->>>>>>> d1af5a385041392b73463080764c6746764eddfd
 	
 	@Select("select * from users")
 	List<Users> getAllUsers();

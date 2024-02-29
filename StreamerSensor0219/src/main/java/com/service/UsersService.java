@@ -21,8 +21,6 @@ public class UsersService {
 	@Resource(name = "loginUserBean")
 	private UserBean loginUserBean;
 	
-	@Autowired
-	private Users selectUserBean;
 
 	public Users getUsers() {
 		Users usersBean = new Users();
@@ -90,9 +88,5 @@ public class UsersService {
 		uDAO.modifyUserInfo(modifyUserBean);
 	}
 	
-	public void modifyMemberInfo(Users modifyMemberBean) {
-		modifyMemberBean.setUser_idx(selectUserBean.getUser_idx());
-		uDAO.modifyMemberInfo(modifyMemberBean);
-	}
 
 }

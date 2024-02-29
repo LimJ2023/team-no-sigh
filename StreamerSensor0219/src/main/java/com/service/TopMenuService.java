@@ -11,12 +11,11 @@ import com.dao.TopMenuDao;
 @Service
 public class TopMenuService {
 
-	@Autowired
-	   private TopMenuDao topMenuDao;
-	   
-	   
-	   public List<BoardInfoBean> getTopMenuList(){
-	      List<BoardInfoBean> topMenuList = topMenuDao.getTopMenuList();
-	      return topMenuList;
-	   }
+	/*
+	 * @Autowired private TopMenuDao topMenuDao;
+	 * 
+	 * 
+	 * public List<BoardInfoBean> getTopMenuList(){ List<BoardInfoBean> topMenuList
+	 * = topMenuDao.getTopMenuList(); return topMenuList; }
+	 */
 }

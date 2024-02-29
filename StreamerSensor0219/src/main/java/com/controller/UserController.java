@@ -22,9 +22,6 @@ import com.service.UsersService;
 import com.validator.UserValidator;
 
 
-
-
-
 @Controller
 @RequestMapping("/user")
 public class UserController {

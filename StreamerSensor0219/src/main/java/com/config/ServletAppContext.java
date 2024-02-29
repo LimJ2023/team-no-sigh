@@ -59,9 +59,9 @@ public class ServletAppContext implements WebMvcConfigurer {
 	
 	@Resource(name="loginUserBean")
 	private UserBean loginUserBean;
-	
-	@Autowired
-	private TopMenuService topMenuService;
+	/*
+	 * @Autowired private TopMenuService topMenuService;
+	 */
 
 	// Controller 메서드가 반환하는 jsp 이름 앞뒤에 경로, 확장자 설정
 	@Override
@@ -171,17 +171,17 @@ public class ServletAppContext implements WebMvcConfigurer {
 	public void addInterceptors(InterceptorRegistry registry) {
 		WebMvcConfigurer.super.addInterceptors(registry);
 		
-		TopMenuInterceptor topMenuInterceptor = new TopMenuInterceptor(topMenuService,loginUserBean);
-		
-		InterceptorRegistration reg1 = registry.addInterceptor(topMenuInterceptor);
-		reg1.addPathPatterns("/**"); //모든 요청 주소에 동작(실행)
-		
+		/*
+		 * TopMenuInterceptor topMenuInterceptor = new
+		 * TopMenuInterceptor(topMenuService,loginUserBean);
+		 * 
+		 * InterceptorRegistration reg1 = registry.addInterceptor(topMenuInterceptor);
+		 * reg1.addPathPatterns("/**"); //모든 요청 주소에 동작(실행)
+		 */		
 		CheckLoginInterceptor checkLoginInterceptor = new CheckLoginInterceptor(loginUserBean);
 		InterceptorRegistration reg2 = registry.addInterceptor(checkLoginInterceptor);
-		reg2.addPathPatterns("/user/myPage", "/user/logout","/board/*");
+		reg2.addPathPatterns("/user/myPage", "/user/logout");
 		reg2.excludePathPatterns("/board/main");
-		
-		
 		
 		
 	}
