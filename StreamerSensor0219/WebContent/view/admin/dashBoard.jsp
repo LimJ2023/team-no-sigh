@@ -159,7 +159,8 @@
 	<!-- 컨테이너 종료 -->
 	<!-- <script src="https://apis.google.com/js/api.js"></script>
 	<script src="admin/youtube_api.js"></script> -->
-	<script src="admin/order.js"></script>
+	<script src="https://apis.google.com/js/api.js"></script>
+	<script src="jquery-3.7.1.min.js"></script>
 	<script src="admin/admin.js"></script>
 </body>
 </html>

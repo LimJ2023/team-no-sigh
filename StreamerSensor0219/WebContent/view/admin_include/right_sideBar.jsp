@@ -74,13 +74,13 @@
 				</div>
 			</div>
 
-			<div class="notification deactive">
+			<div class="notification deactive" id="addStreamer">
 				<div class="icon">
 					<span class="material-symbols-outlined"> edit </span>
 				</div>
-				<div class="content">
+				<div class="content" >
 					<div class="info">
-						<h3>유튜브 api 가져오기</h3>
+						<h3>스트리머 추가하기</h3>
 						<small class="text_muted"> 최근 1개 가져옴 </small>
 					</div>
 					<span class="material-symbols-outlined"> more_vert </span>
