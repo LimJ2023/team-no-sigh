@@ -30,7 +30,7 @@
 
 	<section class="board-write-section">
             <div class="board-write-div">
-                <form action="#" class="board-write-form">
+                <form action="${root }board" class="board-write-form">
                     <table class="table board-write-table">
                        
                         <tr class="board-write-form-info">
@@ -56,7 +56,6 @@
                         <tr class="board-write-form-end">
                             <td class="board-write-form-end-td" colspan="4">
                             	<a href="${root }board" class="write-button-toList write-button">목록으로</a>
-                            	<a href="${root }board" class="write-button-submit write-button">작성</a>	<!-- 임시 방편 -->
                                 <button type="submit" class="write-button-submit write-button">작성</button>
                             </td>
                         </tr>
