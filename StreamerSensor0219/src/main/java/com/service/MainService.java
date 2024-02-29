@@ -65,10 +65,12 @@ public List<Streamer> getStreamerInfo(){
 			Streamer streamer = new Streamer();
 			
 			String title = item.getJSONObject("snippet").getString("title");
-			streamer.setTitle(title);
-			
-			streamer.setVideo_count(video_count);
-			streamer.setSubscriber_count(subscriber_count);
+			/*
+			 * streamer.setTitle(title);
+			 * 
+			 * streamer.setVideo_count(video_count);
+			 * streamer.setSubscriber_count(subscriber_count);
+			 */
 			
 			streamerInfo.add(streamer);
 		}

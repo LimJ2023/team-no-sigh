@@ -25,9 +25,10 @@ public class MemberController {
 
 	@Autowired
 	UsersService uService;
-	
-	@Autowired
-	private Users selectUserBean;
+
+	/*
+	 * @Autowired private Users selectUserBean;
+	 */
 
 	@GetMapping("/members")
 	public String members(Model model) {
@@ -64,26 +65,28 @@ public class MemberController {
 
 		return "admin/member_profile";
 	}
-	
-	@GetMapping("/modify")
-	public String modify(@ModelAttribute("modifyMemberBean")Users modifyMemberBean,
-			@RequestParam("user_idx") int user_idx, Model model) {
-		
-		uService.modifyMemberInfo(modifyMemberBean);
-		
-		/*
-		 * Users users = uService.printOneUser(user_idx); model.addAttribute("users",
-		 * users);
-		 * 
-		 * modifyMemberBean.setUser_id(users.getUser_id());
-		 * modifyMemberBean.setUser_name(users.getUser_name());
-		 * modifyMemberBean.setUser_gender(users.getUser_gender());
-		 * modifyMemberBean.setUser_age(users.getUser_age());
-		 * modifyMemberBean.setUser_nation(users.getUser_nation());
-		 * modifyMemberBean.setSubscription(users.getSubscription());
-		 */
-		
-		return "admin/member_profile_modify";
-	}
+
+	/*
+	 * @GetMapping("/modify") public String
+	 * modify(@ModelAttribute("modifyMemberBean")Users modifyMemberBean,
+	 * 
+	 * @RequestParam("user_idx") int user_idx, Model model) {
+	 * 
+	 * uService.modifyMemberInfo(modifyMemberBean);
+	 * 
+	 * 
+	 * Users users = uService.printOneUser(user_idx); model.addAttribute("users",
+	 * users);
+	 * 
+	 * modifyMemberBean.setUser_id(users.getUser_id());
+	 * modifyMemberBean.setUser_name(users.getUser_name());
+	 * modifyMemberBean.setUser_gender(users.getUser_gender());
+	 * modifyMemberBean.setUser_age(users.getUser_age());
+	 * modifyMemberBean.setUser_nation(users.getUser_nation());
+	 * modifyMemberBean.setSubscription(users.getSubscription());
+	 * 
+	 * 
+	 * return "admin/member_profile_modify"; }
+	 */
 
 }

@@ -1,14 +1,11 @@
 package com.controller;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.domain.Admin;
-import com.domain.Review;
 import com.domain.SiteInfo;
 import com.domain.Users;
 import com.service.AdminService;
