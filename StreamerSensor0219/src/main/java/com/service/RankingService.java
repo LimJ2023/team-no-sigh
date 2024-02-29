@@ -19,6 +19,7 @@ import org.springframework.stereotype.Service;
 import com.dao.RankingDAO;
 import com.domain.Ranking;
 import com.domain.Streamer;
+import com.domain.Video;
 import com.mapper.RankingMapper;
 
 @Service
@@ -53,16 +54,14 @@ public class RankingService {
 		return rankingDAO.getDaily_viewers();
 	}
 
-	
-	//2024-02-27 이지수 - Api 테스트
-
-	public List<Ranking> popVideoApi(){
+	//20240229 이지수
+	public List<Video> popVideoApi(){
 		
 		String apiKey = "AIzaSyCNUTsRVT4N2-lGyPxsWtzq97yIfPIi4zA";
 		
 		String urlStr = "https://youtube.googleapis.com/youtube/v3/"
 				+ "videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular"
-				+ "&maxResults=3&"
+				+ "&maxResults=5&"
 				+ "regionCode=KR"
 				+ "&videoCategoryId=20" //게임 카테고리
 				+ "&key="
@@ -85,7 +84,7 @@ public class RankingService {
 			e.printStackTrace();
 		}
 		
-		List<Ranking> popRankings = new ArrayList<>();
+		List<Video> popRankings = new ArrayList<>();
 		JSONObject jsonObj = new JSONObject(sb.toString());
 		JSONArray items = jsonObj.getJSONArray("items");
 		
@@ -95,20 +94,21 @@ public class RankingService {
 			//0228
 			String thumbnail_url = item.getJSONObject("snippet").getJSONObject("thumbnails").getJSONObject("high").getString("url");
 			
-			Ranking ranking = new Ranking();
-			ranking.setStreaming_description(videoTitle);
+			Video video= new Video();
+			video.setVideo_title(videoTitle);
+			
 			
 			//0228
 			
-			 ranking.setThumbnail_url(thumbnail_url);
+			video.setThumbnail_url(thumbnail_url);
 						
 			String videoId = item.getString("id");
-			ranking.setVideo_id(videoId);
+			video.setVideo_id(videoId);
 			
 			String urlStr2 = "https://youtube.googleapis.com/youtube/v3/videos?"
 					+ "part=snippet%2CcontentDetails%2Cstatistics&id="
-					+ ranking.getVideo_id()
-					+ "&maxResults=3&key="
+					+ video.getVideo_id()
+					+ "&maxResults=5&key="
 					+ apiKey;
 			
 			try {
@@ -129,13 +129,13 @@ public class RankingService {
 			
 			JSONObject statistics = item.getJSONObject("statistics");
 				
-			long videoLikeCount = statistics.getLong("likeCount");
 			long videoCommentCount = statistics.getLong("commentCount");
+			long videoLikeCount = statistics.optLong("likeCount", 0);
+			
+			video.setVideo_like_count(videoLikeCount);
+			video.setVideo_comment_count(videoCommentCount);
 				
-			ranking.setLikes(videoLikeCount);;
-			ranking.setComments(videoCommentCount);
-				
-			popRankings.add(ranking);
+			popRankings.add(video);
 
 		}//for
 		

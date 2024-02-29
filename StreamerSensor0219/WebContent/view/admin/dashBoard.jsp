@@ -140,7 +140,7 @@
 							<tr>
 								<td>${user.user_id }</td>
 								<td>${user.user_name }</td>
-								<td>${user.user_na }</td>
+								<td>${user.user_nation }</td>
 								<td>${user.subscription }</td>
 							</tr>
 						</c:forEach>

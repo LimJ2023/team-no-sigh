@@ -119,70 +119,49 @@
     			<a href="http://www.youtube.com/watch?v=${popVideo.video_id }" style="width:100%, height:100%">
     				<figure>
     					<img src="${popVideo.thumbnail_url }" class="humanIcon"/>
-    					<figcaption class="humanIconCap">${popVideo.streaming_description }</figcaption>
-    					<figcaption>♡ ${popVideo.likes }</figcaption>
+    					<figcaption class="humanIconCap">${popVideo.video_title }</figcaption>
+    					<figcaption class="humanIconCap comments">댓글 : ${popVideo.video_comment_count }</figcaption>
+    				
+    				<c:choose>	
+    					<c:when test="${popVideo.video_like_count == 0}">
+    						<figcaption class="humanIconCap">👍 비공개</figcaption>
+    					</c:when>
+    					<c:otherwise>
+    						<figcaption class="humanIconCap">👍${popVideo.video_like_count }</figcaption>
+    					</c:otherwise>
+    					</c:choose> 
     					<img src="./img/6-10.png" class="youtubeLogo"/>
     				</figure>
     			</a>
     		</div>
     	</c:forEach>
    
-    
-       <div class="todays_col">
-        <a href="https://chzzk.naver.com/" style="width: 100%, height:100%">
-            <figure>
-                <img src="./img/0104.png" class="humanIcon"/>
-                <figcaption class="humanIconCap">방송4</figcaption>
-                <figcaption>view: 3k</figcaption>
-                <img src="./img/chhzk.png" class="chzzkLogo"/>
-            </figure>
-            </a>
-        </div>
-
-        <div class="todays_col">
-        <a href="http://www.youtube.com" style="width: 100%, height:100%">
-            <figure>
-                <img src="./img/0105.png" class="humanIcon"/>
-                <figcaption class="humanIconCap">방송5</figcaption>
-                <figcaption>view: 1.2k</figcaption>
-                <img src="./img/6-10.png" class="youtubeLogo"/>
-            </figure>
-            </a>
-        </div>
-        <div class="todays_col">
-        <a href="https://chzzk.naver.com/" style="width: 100%, height:100%">
-            <figure>
-                <img src="./img/0106.png" class="humanIcon"/>
-                <figcaption class="humanIconCap">방송6</figcaption>
-                <figcaption>view: 3k</figcaption>
-                <img src="./img/chhzk.png" class="chzzkLogo"/>
-            </figure>
-           </a> 
-        </div>
     </div>
 </section>
 
 <section class="explore">
-    <div class="explore-content">
-        <h3>이런 방송은 어떠세요?</h3>
-        <div class="line"></div>
-        <p>"Id"님이 본 방송과 비슷한 방송입니다!</p>
-
-        <div class="suggestBox">
-            <figure>
-                <img src="./img/Person_Icon.png" class="suggest_Img"/>
-              <%--   <c:forEach var="info" items="${streamerInfo }">
-                	<div>${info.title }</div>
-                	<div>구독자 : ${info.subscriber_count } 명</div>
-                	<div>비디오 : ${info.video_count } 개</div>
-                </c:forEach> --%>
-               
-            </figure>
-        </div>
-
-    </div>
+	<div class="explore-content">
+		<h3>이런 방송은 어떠세요?</h3>
+		<div class="line"></div>
+		<p>"ID"님이 시청한 방송과 비슷합니다!</p>
+			
+				<c:forEach var="info" items="${streamerInfo }">
+					<div class="suggestBox">
+					<a href="http://www.youtube.com/${info.channel_id }">
+						<figure>
+						<div><img src="${info.thumbnail_url }" class="suggest_Img"/></div>
+						<div>${info.channel_title }</div>
+						<div>구독자 : ${info.channel_subscriber_count } 명</div>
+						<div>영상 : ${info.channel_video_count } 개</div>
+						</figure>
+					</a>
+					</div>
+				</c:forEach>
+			
+	</div>
 
 </section>
+
 <!-- movies section start(주간 스트리머) -->
 <section class="movies container" id="popular">
     <!-- heading -->

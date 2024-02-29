@@ -12,6 +12,7 @@ import java.util.List;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
 
 import com.domain.Streamer;
@@ -27,7 +28,7 @@ public List<Streamer> getStreamerInfo(){
 		String urlStr = "https://youtube.googleapis.com/youtube/v3/channels"
 				+ "?part=snippet%2Cstatistics"
 				+ "&id=UCUCnZBCJhbllGTfqomgFKMg"
-				+ "&maxResults=3"
+				+ "&maxResults=1"
 				+ "&key="
 				+ apiKey;
 		
@@ -65,12 +66,15 @@ public List<Streamer> getStreamerInfo(){
 			Streamer streamer = new Streamer();
 			
 			String title = item.getJSONObject("snippet").getString("title");
-			/*
-			 * streamer.setTitle(title);
-			 * 
-			 * streamer.setVideo_count(video_count);
-			 * streamer.setSubscriber_count(subscriber_count);
-			 */
+			
+			String thumbUrl = item.getJSONObject("snippet").getJSONObject("thumbnails").getJSONObject("high").getString("url");
+			String channel_id = item.getJSONObject("snippet").getString("customUrl");
+			
+			streamer.setChannel_title(title);
+			streamer.setChannel_video_count(video_count);
+			streamer.setChannel_subscriber_count(subscriber_count);
+			streamer.setThumbnail_url(thumbUrl);
+			streamer.setChannel_id(channel_id);
 			
 			streamerInfo.add(streamer);
 		}

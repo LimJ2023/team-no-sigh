@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.domain.Ranking;
 import com.domain.Streamer;
 import com.domain.Users;
+import com.domain.Video;
 import com.service.RankingService;
 import com.service.UsersService;
 
@@ -44,7 +45,7 @@ public class LeaderBoardController {
 		model.addAttribute("sumDaily", sumDaily);
 		
 		//20240227이지수
-		List<Ranking> popVideoInfo = rankingService.popVideoApi();
+		List<Video> popVideoInfo = rankingService.popVideoApi();
 		model.addAttribute("popVideoInfo", popVideoInfo);
 		//
 		
