@@ -3,10 +3,10 @@ package com.beans;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
-public class UserBean {
+public class UsersBean {
 
 	// 초기값
-	public UserBean() {
+	public UsersBean() {
 		this.userIdExist = false;
 		this.userLogin = false;
 	}

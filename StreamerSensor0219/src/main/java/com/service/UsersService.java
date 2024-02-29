@@ -8,7 +8,7 @@ import javax.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.beans.UserBean;
+import com.beans.UsersBean;
 import com.dao.UsersDAO;
 import com.domain.Users;
 
@@ -19,7 +19,7 @@ public class UsersService {
 	UsersDAO uDAO;
 
 	@Resource(name = "loginUserBean")
-	private UserBean loginUserBean;
+	private UsersBean loginUserBean;
 	
 
 	public Users getUsers() {
@@ -63,11 +63,11 @@ public class UsersService {
 		}
 	}
 
-	public void addUserInfo(UserBean joinUserBean) {
+	public void addUserInfo(UsersBean joinUserBean) {
 		uDAO.addUserInfo(joinUserBean);
 	}
 
-	public void getLoginUserInfo(UserBean tempLoginUserBean) { UserBean
+	public void getLoginUserInfo(UsersBean tempLoginUserBean) { UsersBean
 	tempLoginUserBean2 = uDAO.getLoginUserInfo(tempLoginUserBean); if
 	(tempLoginUserBean2 != null) {
 	loginUserBean.setUser_idx(tempLoginUserBean2.getUser_idx());
@@ -75,15 +75,15 @@ public class UsersService {
 	loginUserBean.setUserLogin(true); } }
 	
 
-	public void getmodifyUserinfo(UserBean modifyUserBean) {
-		UserBean tempModifyUserBean = uDAO.getmodifyUserinfo(loginUserBean.getUser_idx());
+	public void getmodifyUserinfo(UsersBean modifyUserBean) {
+		UsersBean tempModifyUserBean = uDAO.getmodifyUserinfo(loginUserBean.getUser_idx());
 
 		modifyUserBean.setUser_id(tempModifyUserBean.getUser_id());
 		modifyUserBean.setUser_name(tempModifyUserBean.getUser_name());
 		modifyUserBean.setUser_idx(loginUserBean.getUser_idx());
 	}
 
-	public void modifyUserInfo(UserBean modifyUserBean) {
+	public void modifyUserInfo(UsersBean modifyUserBean) {
 		modifyUserBean.setUser_idx(loginUserBean.getUser_idx());
 		uDAO.modifyUserInfo(modifyUserBean);
 	}
