@@ -8,7 +8,6 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="board/boardList.css">
 
-
 <link rel="stylesheet" href="swiper-bundle.min.css">
 <!--     Fav icon -->
 <link rel="shortcut icon" href="../img/fav-icon.png" type="image/x-icon">
@@ -40,42 +39,24 @@
 					</tr>
 				</thead>
 
-
+				
 				<tbody class="board-table-tbody">
-					<tr class="tr board-table-tbody-tr">
-						<td class="board-table-tbody-td td-no">5</td>
-						<td class="board-table-tbody-td td-title"><a href="board/boardView">제목샘플입니다5</a></td>
-						<td class="board-table-tbody-td td-author">이이름5</td>
-						<td class="board-table-tbody-td td-date">2024-02-15</td>
-						<td class="board-table-tbody-td td-clicks">조회5</td>
-					</tr>
+					<%-- <c:forEach var="obj" items="${boardlist}">
+						<tr class="tr board-table-tbody-tr">
+							<td class="board-table-tbody-td td-no">${obj.board_num}</td>
+							<td class="board-table-tbody-td td-title"><a href="${root}board/boardView?board_num=1&content_idx=1">${.title}</a></td>
+							<td class="board-table-tbody-td td-author">${obj.user_id}</td>
+							<td class="board-table-tbody-td td-date">${obj.board_date}</td>
+							<td class="board-table-tbody-td td-clicks">${obj.data.view_count}</td>
+						</tr>
+					</c:forEach> --%>
+					
 					<tr class="tr board-table-tbody-tr">
 						<td class="board-table-tbody-td td-no">4</td>
-						<td class="board-table-tbody-td td-title">제목샘플입니다4</td>
+						<td class="board-table-tbody-td td-title"><a href="${root}board/boardView?board_num=1&content_idx=1">제목샘플입니다4</a></td>
 						<td class="board-table-tbody-td td-author">이이름4</td>
 						<td class="board-table-tbody-td td-date">2024-02-15</td>
 						<td class="board-table-tbody-td td-clicks">조회4</td>
-					</tr>
-					<tr class="tr board-table-tbody-tr">
-						<td class="board-table-tbody-td td-no">3</td>
-						<td class="board-table-tbody-td td-title">제목샘플입니다3</td>
-						<td class="board-table-tbody-td td-author">이이름3</td>
-						<td class="board-table-tbody-td td-date">2024-02-15</td>
-						<td class="board-table-tbody-td td-clicks">조회3</td>
-					</tr>
-					<tr class="tr board-table-tbody-tr">
-						<td class="board-table-tbody-td td-no">2</td>
-						<td class="board-table-tbody-td td-title">제목2</td>
-						<td class="board-table-tbody-td td-author">작성자2</td>
-						<td class="board-table-tbody-td td-date">작성일2</td>
-						<td class="board-table-tbody-td td-clicks">조회2</td>
-					</tr>
-					<tr class="tr board-table-tbody-tr">
-						<td class="board-table-tbody-td td-no">1</td>
-						<td class="board-table-tbody-td td-title">제목샘플1</td>
-						<td class="board-table-tbody-td td-author">김이름1</td>
-						<td class="board-table-tbody-td td-date">2024-02-14</td>
-						<td class="board-table-tbody-td td-clicks">조회1</td>
 					</tr>
 				</tbody>
 
@@ -103,8 +84,9 @@
                     </div>
                     
                     <div class="board_write">
-                    	<a href="board/boardWrite" class="board-write-button">글쓰기</a>
-                        <button class="board-write-button">글쓰기</button>
+                    	<form action="${root }board/boardWrite" method="post">
+                    		<button type="submit" class="board-write-button">글쓰기</button>
+                    	</form>
                     </div>
                 </div>
 
