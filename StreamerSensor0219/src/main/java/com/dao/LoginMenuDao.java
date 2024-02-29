@@ -13,6 +13,7 @@ import com.mapper.LoginMenuMapper;
 @Repository
 public class LoginMenuDao {
 
+
 	@Autowired
 	private LoginMenuMapper loginMenuMapper;
 		//TopMenuMapper가 스프링 컨테이너에 등록이 되어있어야 한다
@@ -24,4 +25,5 @@ public class LoginMenuDao {
 		return loginMenuList;
 			//BoardInfoBean 객체의 list형태로 반환
 	}
+
 }
