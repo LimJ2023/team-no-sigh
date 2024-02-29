@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,13 +17,14 @@
 		<div class="reviews_header">
 			<div class="header_streamerInfo">
 				<div class="streamerInfo_img">
-					<a href=""> <img src="img/admin/profile1.png">
+					<a href=""> <img src="img/admin/${streamer.streamer_img }.png">
 					</a>
 				</div>
 				<div class="streamerInfo_cont">
 
-					<div class="streamer_id">${streamer.strm_id }</div>
-					<div class="streamer_followers">팔로워수 : ${streamer.strm_followers }</div>
+					<div class="streamer_id">${streamer.streamer_id }</div>
+					<div class="streamer_followers">팔로워수 :
+						${streamer.streamer_followers }</div>
 					<div class="streamer_trends">최근 상승세</div>
 					<div class="streamer_comments">댓글 수 : 50개</div>
 				</div>
@@ -105,146 +108,30 @@
 
 		<div class="reviews_container">
 			<div class="streaming_list">
-				<div class="streaming_item">
-					<div class="streaming_img">
-						<a href="#"><img src="img/thumbnail/thumbnail6.png"></a>
 
-					</div>
-					<div class="streaming_info">
-						<div class="streaming_desc">
-							별자리가 될 수 있다면
-							<div class="flex justy-between size-md"></div>
+				<c:forEach var="stream" items="${streamList }">
+
+					<div class="streaming_item">
+						<div class="streaming_img">
+							<img src="img/thumbnail/${stream.img_url}.png">
 						</div>
-						<div class="streaming_info_right">
-							<div class="like">
-								<i class='bx bx-heart bx-md'></i> <span>100</span>
+						<div class="streaming_info">
+							<div class="streaming_desc">
+								${stream.streaming_description }
+								<div class="flex justy-between size-md"></div>
 							</div>
-							<div class="list">
-								<i class='bx bxs-comment-detail bx-md'></i> <span>10</span>
+							<div class="streaming_info_right">
+								<div class="like">
+									<i class='bx bx-heart bx-md'></i> <span>0</span>
+								</div>
+								<div class="list">
+									<i class='bx bxs-comment-detail bx-md'></i> <span>0</span>
+								</div>
 							</div>
-						</div>
 
-					</div>
-				</div>
-				<div class="streaming_item">
-					<div class="streaming_img">
-						<a href="#"><img src="img/thumbnail/thumbnail7.png"></a>
-
-					</div>
-					<div class="streaming_info">
-						<div class="streaming_desc">그 밴드</div>
-						<div class="streaming_info_right">
-							<div class="like">
-								<i class='bx bx-heart bx-md'></i> <span>100</span>
-							</div>
-							<div class="list">
-								<i class='bx bxs-comment-detail bx-md'></i> <span>30</span>
-							</div>
 						</div>
 					</div>
-				</div>
-				<div class="streaming_item">
-					<div class="streaming_img">
-						<a href="#"><img src="img/thumbnail/thumbnail8.png"></a>
-
-					</div>
-					<div class="streaming_info">
-						<div class="streaming_desc">베이스 커버</div>
-						<div class="streaming_info_right">
-							<div class="like">
-								<i class='bx bx-heart bx-md'></i> <span>100</span>
-							</div>
-							<div class="list">
-								<i class='bx bxs-comment-detail bx-md'></i> <span>200</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="streaming_item">
-					<div class="streaming_img">
-						<a href="#"><img src="img/thumbnail/thumbnail1.png"></a>
-
-					</div>
-					<div class="streaming_info">
-						<div class="streaming_desc">솔로 캠핑</div>
-						<div class="streaming_info_right">
-							<div class="like">
-								<i class='bx bx-heart bx-md'></i> <span>100</span>
-							</div>
-							<div class="list">
-								<i class='bx bxs-comment-detail bx-md'></i> <span>100</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="streaming_item">
-					<div class="streaming_img">
-						<a href="#"><img src="img/thumbnail/thumbnail2.png"></a>
-
-					</div>
-					<div class="streaming_info">
-						<div class="streaming_desc">자바 강의</div>
-						<div class="streaming_info_right">
-							<div class="like">
-								<i class='bx bx-heart bx-md'></i> <span>100</span>
-							</div>
-							<div class="list">
-								<i class='bx bxs-comment-detail bx-md'></i> <span>100</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="streaming_item">
-					<div class="streaming_img">
-						<a href="#"><img src="img/thumbnail/thumbnail3.png"></a>
-
-					</div>
-					<div class="streaming_info">
-						<div class="streaming_desc">누자베스</div>
-						<div class="streaming_info_right">
-							<div class="like">
-								<i class='bx bx-heart bx-md'></i> <span>100</span>
-							</div>
-							<div class="list">
-								<i class='bx bxs-comment-detail bx-md'></i> <span>100</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="streaming_item">
-					<div class="streaming_img">
-						<a href="#"><img src="img/thumbnail/thumbnail4.png"></a>
-
-					</div>
-					<div class="streaming_info">
-						<div class="streaming_desc">키보드 리뷰</div>
-						<div class="streaming_info_right">
-							<div class="like">
-								<i class='bx bx-heart bx-md'></i> <span>100</span>
-							</div>
-							<div class="list">
-								<i class='bx bxs-comment-detail bx-md'></i> <span>100</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="streaming_item">
-					<div class="streaming_img">
-						<a href="#"><img src="img/thumbnail/thumbnail5.png"></a>
-
-					</div>
-					<div class="streaming_info">
-						<div class="streaming_desc">맥북</div>
-						<div class="streaming_info_right">
-							<div class="like">
-								<i class='bx bx-heart bx-md'></i> <span>100</span>
-							</div>
-							<div class="list">
-								<i class='bx bxs-comment-detail bx-md'></i> <span>100</span>
-							</div>
-						</div>
-					</div>
-				</div>
+				</c:forEach>
 
 			</div>
 		</div>

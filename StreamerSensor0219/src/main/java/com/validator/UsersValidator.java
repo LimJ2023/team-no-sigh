@@ -3,25 +3,25 @@ package com.validator;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
-import com.beans.UserBean;
+import com.beans.UsersBean;
 
-public class UserValidator implements Validator {
+public class UsersValidator implements Validator {
 
 	@Override
 	public boolean supports(Class<?> clazz) {
-		return UserBean.class.isAssignableFrom(clazz);
+		return UsersBean.class.isAssignableFrom(clazz);
 	}
 
 	@Override
 	public void validate(Object target, Errors errors) {
-		UserBean userBean = (UserBean)target;
+		UsersBean usersBean = (UsersBean)target;
 		
 		String beanName=errors.getObjectName();
 		//System.out.println(beanName);
 		
 		//비밀번호 확인 또는 수정할 때
 		if (beanName.equals("joinUserBean") || beanName.equals("modifyUserBean")) {
-		if(userBean.getUser_pw().equals(userBean.getUser_pw2()) == false) {
+		if(usersBean.getUser_pw().equals(usersBean.getUser_pw2()) == false) {
 			errors.rejectValue("user_pw", "NotEquals");
 			errors.rejectValue("user_pw2", "NotEquals");
 		}
@@ -31,7 +31,7 @@ public class UserValidator implements Validator {
 		if (beanName.equals("joinUserBean")) {
 			
 			//db에 있다=사용할 수 없는 아이디
-			if(userBean.isUserIdExist() ==  false) {
+			if(usersBean.isUserIdExist() ==  false) {
 				errors.rejectValue("user_id", "DontCheckUserIdExist");
 			}//중복확인 안 누르고 회원가입 하려고할때 에러 발생
 		}

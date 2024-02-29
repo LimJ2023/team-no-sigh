@@ -4,7 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.context.annotation.SessionScope;
 
-import com.beans.UserBean;
+import com.beans.UsersBean;
 import com.domain.Admin;
 
 @Configuration
@@ -18,7 +18,7 @@ public class RootAppContext {
 	
 	@Bean("loginUserBean")
 	@SessionScope
-	public UserBean loginUserBean() {
-		return new UserBean();
+	public UsersBean loginUserBean() {
+		return new UsersBean();
 	}
 }

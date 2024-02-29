@@ -16,31 +16,31 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.beans.UserBean;
+import com.beans.UsersBean;
 import com.service.UsersService;
 
-import com.validator.UserValidator;
+import com.validator.UsersValidator;
 
 
 @Controller
 @RequestMapping("/user")
-public class UserController {
+public class UsersController {
 
 	@Autowired
 	private UsersService userService;
 	
 	@Resource(name = "loginUserBean")
-	private UserBean loginUserBean;
+	private UsersBean loginUserBean;
 	
 	@GetMapping("/login_page")
-	public String login_page(@ModelAttribute("tempLoginUserBean") UserBean tempLoginUserBean,
+	public String login_page(@ModelAttribute("tempLoginUserBean") UsersBean tempLoginUserBean,
 			@RequestParam(value="fail", defaultValue = "false") boolean fail, Model model) {
 		model.addAttribute("fail",fail);
 		return "user/login_page";
 	}
 
 	@GetMapping("/register")
-	public String register(@ModelAttribute("joinUserBean") UserBean joinUserBean) {
+	public String register(@ModelAttribute("joinUserBean") UsersBean joinUserBean) {
 		return "user/register";
 	}
 	
@@ -56,7 +56,7 @@ public class UserController {
 	}
 	
 	@PostMapping("/join_pro")
-	public String join_pro(@Valid @ModelAttribute("joinUserBean") UserBean joinUserBean, 
+	public String join_pro(@Valid @ModelAttribute("joinUserBean") UsersBean joinUserBean, 
 			BindingResult result) {
 		
 		if(result.hasErrors()) {
@@ -71,13 +71,13 @@ public class UserController {
 	
 	@PostMapping("/login_pro")
 	public String login_pro(@Valid @ModelAttribute("tempLoginUserBean") 
-							UserBean tempLoginUserBean, BindingResult result) {
+							UsersBean tempLoginUserBean, BindingResult result) {
 		
 		if(result.hasErrors()) {
 			return "user/login_page";
 		}
 		
-		//userService.getLoginUserInfo(tempLoginUserBean);
+		userService.getLoginUserInfo(tempLoginUserBean);
 		
 		if(loginUserBean.isUserLogin() == true) {
 			return "user/login_success";
@@ -93,7 +93,7 @@ public class UserController {
 	
 	@InitBinder
 	public void initBinder(WebDataBinder binder) {
-		UserValidator validator1 = new UserValidator();
+		UsersValidator validator1 = new UsersValidator();
 		binder.addValidators(validator1);
 	}
 }

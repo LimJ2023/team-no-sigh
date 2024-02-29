@@ -2,14 +2,15 @@ package com.mapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
-import com.beans.UserBean;
+import com.beans.UsersBean;
 import com.domain.Users;
 
-public interface UserMapper {
+public interface UsersMapper {
 	
 	@Select("SELECT * "
 			+ "FROM users "
@@ -25,34 +26,37 @@ public interface UserMapper {
 	Users printOneUser(int user_idx);
 	
 	@Select("SELECT user_name " +
-			"FROM user_table " + 
+			"FROM users " + 
 			"WHERE user_id = #{user_id}")
 	String checkUserIdExist(String user_id);
 		//사용자의 이름을 반환하는 쿼리문
 	
-	@Insert("INSERT INTO user_table (user_idx, user_name, user_id, user_pw) " +
-			"VALUES (user_seq.nextval, #{user_name}, #{user_id}, #{user_pw})")
-	void addUserInfo(UserBean joinUserBean);
+	@Insert("insert into users (user_idx, user_id, user_pw, user_name, user_gender, user_age, user_nation, subscription) " +
+			"VALUES (user_seq.nextval, #{user_id}, #{user_pw}, #{user_name}, #{user_gender}, #{user_age}, #{user_nation}, #{subscription}")
+	void addUserInfo(UsersBean joinUserBean);
 	
 	@Select("select user_idx, user_name "
-			+ "from user_table "
+			+ "from users "
 			+ "where user_id=#{user_id} and user_pw=#{user_pw}")
-	UserBean getLoginUserInfo(UserBean tempLoginUserBean);
+	UsersBean getLoginUserInfo(UsersBean tempLoginUserBean);
 	
 	@Select("select user_id, user_name " +
 			"from user_table "+
 			"where user_idx = #{user_idx}")
-	UserBean getmodifyUserinfo(int user_idx);
+	UsersBean getmodifyUserinfo(int user_idx);
 	
 	@Update("update user_table " +
 			"set user_pw = #{user_pw} " +
 			"where user_idx = #{user_idx}")
-	void modifyUserInfo(UserBean modifyUserBean);
+	void modifyUserInfo(UsersBean modifyUserBean);
 	
 	@Update("update users "
 			+ "set user_name = #{user_name}, user_gender = #{user_gender}, "
 			+ "user_age = #{user_age}, user_nation = #{user_nation}, subscription = #{subscription} "
 			+ "where user_idx = #{user_idx}")
 	void modifyMemberInfo(Users modifyMemberBean);
+	
+	@Delete("DELETE FROM users WHERE user_idx = #{user_idx}")
+	void deleteMemberInfo(int user_idx);
 
 }

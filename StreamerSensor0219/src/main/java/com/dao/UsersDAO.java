@@ -5,15 +5,15 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.beans.UserBean;
+import com.beans.UsersBean;
 import com.domain.Users;
-import com.mapper.UserMapper;
+import com.mapper.UsersMapper;
 
 @Repository
 public class UsersDAO {
 
 	@Autowired
-	private UserMapper mapper;
+	private UsersMapper mapper;
 
 	public Users getUserByNumber(int user_num) {
 		return mapper.getUserByNumber(user_num);
@@ -32,24 +32,30 @@ public class UsersDAO {
 		return mapper.checkUserIdExist(user_id);
 	}
 
-	public void addUserInfo(UserBean joinUserBean) {
+	public void addUserInfo(UsersBean joinUserBean) {
 		mapper.addUserInfo(joinUserBean);
 	}
 
-	public UserBean getLoginUserInfo(UserBean tempLoginUserBean) {
+	public UsersBean getLoginUserInfo(UsersBean tempLoginUserBean) {
 		return mapper.getLoginUserInfo(tempLoginUserBean);
 	}
 
-	public UserBean getmodifyUserinfo(int user_idx) {
+	public UsersBean getmodifyUserinfo(int user_idx) {
 		return mapper.getmodifyUserinfo(user_idx);
 	}
 
-	public void modifyUserInfo(UserBean modifyUserBean) {
+	public void modifyUserInfo(UsersBean modifyUserBean) {
 		mapper.modifyUserInfo(modifyUserBean);
 	}
 	
+	//======================================================================================
+	
 	public void modifyMemberInfo(Users modifyMemberBean) {
 		mapper.modifyMemberInfo(modifyMemberBean);
+	}
+	
+	public void deleteMemberInfo(int user_idx) {
+		mapper.deleteMemberInfo(user_idx);
 	}
 	
 }

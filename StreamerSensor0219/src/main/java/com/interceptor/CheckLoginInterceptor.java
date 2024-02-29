@@ -7,16 +7,16 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.web.servlet.HandlerInterceptor;
 
-import com.beans.UserBean;
+import com.beans.UsersBean;
 
 
 
 public class CheckLoginInterceptor implements HandlerInterceptor{
 
 	//로그인 여부를 판단하는 loginUserBean
-	private UserBean loginUserBean;
+	private UsersBean loginUserBean;
 	
-	public CheckLoginInterceptor(UserBean loginUserBean) {
+	public CheckLoginInterceptor(UsersBean loginUserBean) {
 		this.loginUserBean=loginUserBean;
 	}
 
