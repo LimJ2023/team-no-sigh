@@ -10,6 +10,11 @@ public class Streamer {
 	private String streamer_platform;
 	private int streamer_followers;
 	
+	//====0229 이지수
+	private String channel_title;
+	private long channel_video_count;
+	private long channel_subscriber_count;
+	//
 	
 	public int getStreamer_idx() {
 		return streamer_idx;
@@ -53,6 +58,27 @@ public class Streamer {
 	public void setStreamer_followers(int streamer_followers) {
 		this.streamer_followers = streamer_followers;
 	}
+	
+	//===========0229 이지수
+	public String getChannel_title() {
+		return channel_title;
+	}
+	public void setChannel_title(String channel_title) {
+		this.channel_title = channel_title;
+	}
+	public long getChannel_video_count() {
+		return channel_video_count;
+	}
+	public void setChannel_video_count(long channel_video_count) {
+		this.channel_video_count = channel_video_count;
+	}
+	public long getChannel_subscriber_count() {
+		return channel_subscriber_count;
+	}
+	public void setChannel_subscriber_count(long channel_subscriber_count) {
+		this.channel_subscriber_count = channel_subscriber_count;
+	}
+//=======
 	
 
 }

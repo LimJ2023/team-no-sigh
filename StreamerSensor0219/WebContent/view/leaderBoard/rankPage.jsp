@@ -34,19 +34,7 @@
 	<section class="rankContainer">
 		<div class="tempDiv"><h2>현재 사용자 : ${users.user_idx } . ${users.user_name } (
 				${users.subscription} ) / UsersDAO sql 2=n / 1=y</h2>
-				
-<%-- 				<c:forEach var="popVideo" items="${popVideoInfo }">
-					<h2>${popVideo.streaming_description }</h2>
-					<h4>${popVideo.video_id }</h4>
-					<h4>${popVideo.likes }</h4>
-					<h4>${popVideo.comments }</h4>
-					<div>${popVideo.thumbnail_url }</div>
-					<div><img src="${popVideo.thumbnail_url }" /></div>
-				</c:forEach> --%>
-				
-				<%-- <c:forEach var="sInfo" items = "${streamerInfo }">
-					 <div>${sInfo.title }</div>
-					 </c:forEach> --%>
+		
 				
 				</div>
 		
