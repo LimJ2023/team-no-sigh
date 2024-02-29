@@ -34,7 +34,8 @@ public class HomeController {
 		List<Streamer> streamerInfo = mainService.getStreamerInfo();
 		model.addAttribute("streamerInfo", streamerInfo);
 		
-		return "redirect:/index";
+		return "redirect:/home";
+		//return "redirect:/index"; 에서 수정 -> 메인이 안떠서 수정했습니다..(0229 이지수)
 	}
 
 	// home 링크를 누르면 index
