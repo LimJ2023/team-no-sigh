@@ -1,5 +1,6 @@
 package com.domain;
 
+
 public class Streamer {
 	
 	private int streamer_idx;
@@ -14,6 +15,8 @@ public class Streamer {
 	private String channel_title;
 	private long channel_video_count;
 	private long channel_subscriber_count;
+	private String thumbnail_url;
+	private String channel_id;
 	//
 	
 	public int getStreamer_idx() {
@@ -78,8 +81,21 @@ public class Streamer {
 	public void setChannel_subscriber_count(long channel_subscriber_count) {
 		this.channel_subscriber_count = channel_subscriber_count;
 	}
-//=======
-	
+
+	public String getThumbnail_url() {
+		return thumbnail_url;
+	}
+	public void setThumbnail_url(String thumbnail_url) {
+		this.thumbnail_url = thumbnail_url;
+	}
+
+	public String getChannel_id() {
+		return channel_id;
+	}
+	public void setChannel_id(String channel_id) {
+		this.channel_id = channel_id;
+	}
+	//=======
 
 }
 

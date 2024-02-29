@@ -19,11 +19,6 @@ public interface RankingMapper {
 			+ "WHERE rank_date = '2024-01-09' ORDER BY r.rank_place ASC")
 	List<Ranking> getRanking();
 
-	/*
-	@Select("SELECT SUM(avg_viewers) AS sumAVG FROM streaming_preference sp "
-			+ "INNER JOIN ranking r ON sp.streaming_id = r.streaming_id WHERE r.rank_date = '2024-01-09'")
-	int getSumAvg();*/
-	
 	
 	@Select("SELECT SUM(avg_viewers) AS sumAVG " + "FROM streaming_preference sp "
 			+ "INNER JOIN ranking r ON sp.streaming_id = r.streaming_id " + "WHERE r.rank_date = '2024-01-09'")

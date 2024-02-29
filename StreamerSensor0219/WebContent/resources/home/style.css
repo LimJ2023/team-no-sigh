@@ -487,3 +487,20 @@ p{
 .comments{
 	font-size: 10pt;
 }
+
+.explore a:link{
+	color: white;
+}
+
+.explore a:visited{
+	color: white;
+}
+
+.explore a:hover{
+	color: #00fdb6;
+}
+
+.suggestBox:hover{
+	border-color:#00fdb6;
+	background-color: rgba(255, 255, 255, 0.3);
+}
