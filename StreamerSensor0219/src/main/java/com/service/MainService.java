@@ -12,6 +12,7 @@ import java.util.List;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
 
 import com.domain.Streamer;
@@ -65,12 +66,12 @@ public List<Streamer> getStreamerInfo(){
 			Streamer streamer = new Streamer();
 			
 			String title = item.getJSONObject("snippet").getString("title");
-			/*
-			 * streamer.setTitle(title);
-			 * 
-			 * streamer.setVideo_count(video_count);
-			 * streamer.setSubscriber_count(subscriber_count);
-			 */
+			
+			streamer.setChannel_title(title);
+			 
+			streamer.setChannel_video_count(video_count);
+			streamer.setChannel_subscriber_count(subscriber_count);
+			
 			
 			streamerInfo.add(streamer);
 		}
