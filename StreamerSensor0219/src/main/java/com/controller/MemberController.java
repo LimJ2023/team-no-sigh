@@ -76,5 +76,13 @@ public class MemberController {
 	    return "/admin/member_delete";
 	}
 
-
+	@GetMapping("/modify")
+	public String modifyMember(@RequestParam("user_idx")int user_idx,
+			@ModelAttribute("modifyMemberBean")Users modifyMemberBean) {
+		
+		modifyMemberBean.setUser_idx(user_idx);
+		
+		return "/admin/member_profile_modify";
+	}
+	
 }
