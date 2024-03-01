@@ -21,7 +21,7 @@
 						accept="image/*" />
 				</div>
 				<div class="memberProfile">
-					<form:label path="user_id">이름</form:label>
+					<form:label path="user_id">아이디</form:label>
 					<form:input path="user_id" class="form-control" readonly="true" />
 				</div>
 				<div class="memberProfile">
@@ -44,14 +44,14 @@
 					<form:label path="subscription">구독여부</form:label>
 					<form:input path="subscription" class="form-control" />
 				</div>
+				<div class="button">
+					<form:button class="btn btn-primary">수정완료</form:button>
+					<br> <br> <a
+						href="${root }member_profile?user_idx=${user_idx}">취소</a>
+				</div>
 			</form:form>
 		</div>
 
-		<div class="button">
-			<form:button>수정완료</form:button>
-			<br> <br>
-			<a href="${root }member_profile?user_idx=${user_idx}">취소</a>
-		</div>
 	</div>
 </body>
 </html>
