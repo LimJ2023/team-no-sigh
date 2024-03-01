@@ -62,6 +62,7 @@ public class MemberController {
 
 		Users users = uService.printOneUser(user_idx);
 		model.addAttribute("users", users);
+		model.addAttribute("user_idx", user_idx);
 
 		return "admin/member_profile";
 	}
