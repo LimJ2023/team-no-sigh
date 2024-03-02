@@ -2,6 +2,7 @@ package com.mapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
@@ -55,6 +56,7 @@ public interface UsersMapper {
 			+ "where user_idx = #{user_idx}")
 	void modifyMemberInfo(Users modifyMemberBean);
 	
-	
+	@Delete("DELETE FROM users WHERE user_idx = #{user_idx}")
+	void deleteMemberInfo(int user_idx);
 
 }
