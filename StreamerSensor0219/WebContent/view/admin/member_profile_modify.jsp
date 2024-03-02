@@ -13,7 +13,7 @@
 <body>
 	<div class="container">
 		<div class="profile-box">
-			<form:form action="${root }admin/modify_pro" method="post"
+			<form:form action="${root }admin/modify_pro" method="get"
 				modelAttribute="modifyMemberBean" enctype="multipart/form-data">
 				<div class="memberProfile">
 					<form:label path="upload_file">첨부이미지</form:label>
@@ -46,8 +46,8 @@
 				</div>
 				<div class="button">
 					<form:button class="btn btn-primary">수정완료</form:button>
-					<br> <br> <a
-						href="${root }member_profile?user_idx=${user_idx}">취소</a>
+					<br> <br>
+					<a href="${root }member_profile?user_idx=${modifyMemberBean.user_idx}">취소</a>
 				</div>
 			</form:form>
 		</div>

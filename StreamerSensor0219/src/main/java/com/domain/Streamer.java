@@ -10,7 +10,7 @@ public class Streamer {
 	private String streamer_status;
 	private String streamer_platform;
 	private int streamer_followers;
-	
+	private String streamer_img;
 	private String channel_title;
 	private long channel_video_count;
 	private long channel_subscriber_count;

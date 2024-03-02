@@ -20,7 +20,7 @@ public interface UsersMapper {
 	@Select("select * from users")
 	List<Users> getAllUsers();
 	
-	@Select("select user_id, user_name, user_gender, user_age, user_nation, subscription "
+	@Select("select user_idx, user_id, user_name, user_gender, user_age, user_nation, subscription "
 			+ "FROM users "
 			+ "WHERE user_idx = #{user_idx}")
 	Users printOneUser(int user_idx);

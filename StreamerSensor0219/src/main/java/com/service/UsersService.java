@@ -99,6 +99,11 @@ public class UsersService {
 		modifyUserBean.setUser_idx(loginUserBean.getUser_idx());
 		uDAO.modifyUserInfo(modifyUserBean);
 	}
+	
+	public void modifyMemberInfo(Users modifyMemberBean) {
+		modifyMemberBean.setUser_idx(selectUserImage.getUser_idx());
+		uDAO.modifyMemberInfo(modifyMemberBean);
+	}
 
 	// ============================================================================================
 
