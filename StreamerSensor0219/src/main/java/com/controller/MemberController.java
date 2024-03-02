@@ -62,7 +62,7 @@ public class MemberController {
 
 		Users users = uService.printOneUser(user_idx);
 		model.addAttribute("users", users);
-		model.addAttribute("user_idx", user_idx);
+		//model.addAttribute("user_idx", user_idx);
 
 		return "admin/member_profile";
 	}
@@ -76,5 +76,21 @@ public class MemberController {
 	    return "/admin/member_delete";
 	}
 
-
+	@GetMapping("/member_modify")
+	public String modifyMember(@RequestParam("user_idx")int user_idx, Model model) {
+		
+		System.out.println("확인용1" + user_idx);
+		Users users = uService.printOneUser(user_idx);
+		System.out.println("확인용2" + users.getUser_idx());
+		//uService.modifyMemberInfo(users);
+		
+		System.out.println("확인용3" + users.getUser_idx());
+		
+		model.addAttribute("modifyMemberBean", users);
+		
+		System.out.println("확인용4" + users.getUser_idx());
+		
+		return "/admin/member_profile_modify";
+	}
+	
 }
