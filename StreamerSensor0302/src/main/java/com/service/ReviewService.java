@@ -1,6 +1,7 @@
 package com.service;
 
 import java.util.List;
+import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,8 +24,13 @@ public class ReviewService {
 	StreamMapper streamDao;
 	
 	public Review getRecentReview() {
-		Review review = reviewDao.getReviews().get(0);
-		return review;
+		List<Review> list = reviewDao.getRecentReview();
+		
+		Random rand =  new Random();
+		int ranNum = rand.nextInt(list.size());
+		Review result = list.get(ranNum);
+		
+		return result;
 	}
 	
 	public Streamer getStreamerByIdx(int streamer_idx) {

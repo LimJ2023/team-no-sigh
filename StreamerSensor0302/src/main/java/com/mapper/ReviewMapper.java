@@ -18,4 +18,14 @@ public interface ReviewMapper {
 			+ "order by r.review_creation_date desc")
 	List<Review> getAllReviews();
 	
+	@Select("select s.streaming_id, s.streamer_id, s.streaming_description, s.streaming_time, "
+			+ "c.categorys, s.streaming_date, "
+			+ "i.img_url "
+			+ "from streaming_info s "
+			+ "inner join streaming_img i on s.img_id = i.img_id "
+			+ "INNER JOIN stream_categorys c ON s.stream_categorys_id = c.stream_categorys_id "
+			+ "WHERE s.streaming_date = (SELECT MAX(s2.streaming_date) "
+			+ "    FROM streaming_info s2)")
+	List<Review> getRecentReivew();
+	
 }

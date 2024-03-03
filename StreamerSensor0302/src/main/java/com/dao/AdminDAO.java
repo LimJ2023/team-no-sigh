@@ -22,4 +22,8 @@ public class AdminDAO {
 	public List<SiteInfo> getSiteInfo() {
 		return adminMapper.getSiteInfo();
 	}
+	
+	public void updateVisitCount(int visit_count) {
+		adminMapper.updateVisitCount(visit_count);
+	}
 }

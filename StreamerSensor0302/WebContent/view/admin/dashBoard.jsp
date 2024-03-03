@@ -72,7 +72,7 @@
 						<h3>제목 : ${review.streaming_description }</h3>
 					</div>
 					<div class="content">
-						<img src="img/thumbnail/${review.img_url}.png">
+						<img src="${review.img_url}">
 					</div>
 				</div>
 				<!-- <div class="searches">

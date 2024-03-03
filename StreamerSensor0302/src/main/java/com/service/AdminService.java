@@ -30,22 +30,26 @@ public class AdminService {
 		double increase_revenue;
 		double increase_visit;
 		
-		info1 = dao.getSiteInfo().get(0);
-		info2 = dao.getSiteInfo().get(1);
+		info1 = dao.getSiteInfo().get(1);
+		info2 = dao.getSiteInfo().get(0);
 		
 		compare_total_revenue = info2.getTotal_revenue() - info1.getTotal_revenue();
 		compare_visit_count = info2.getVisit_count() - info1.getVisit_count();
 		
-		increase_revenue = (float) compare_total_revenue / info1.getTotal_revenue() * 100;
-		increase_visit = (float) compare_visit_count / info1.getVisit_count() * 100;
+		increase_revenue = (float) compare_total_revenue / info2.getTotal_revenue() * 100;
+		increase_visit = (float) compare_visit_count / info2.getVisit_count() * 100;
 		
-		result_info.setTotal_revenue(info1.getTotal_revenue());
-		result_info.setVisit_count(info1.getVisit_count());
+		result_info.setTotal_revenue(info2.getTotal_revenue());
+		result_info.setVisit_count(info2.getVisit_count());
 		
 		result_info.setIncrease_revenue( Math.round(increase_revenue * 100.0) / 100.0);
 		result_info.setIncrease_visit(Math.round(increase_visit * 100.0)/ 100.0);
 		
 		return result_info;
+	}
+	
+	public void updateVisitCount(int visit_count) {
+		dao.updateVisitCount(visit_count);
 	}
 	
 	

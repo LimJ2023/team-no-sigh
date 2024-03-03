@@ -17,4 +17,7 @@ public class ReviewDAO {
 	public List<Review> getReviews(){
 		return mapper.getAllReviews();
 	}
+	public List<Review> getRecentReview() {
+		return mapper.getRecentReivew();
+	}
 }
