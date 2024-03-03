@@ -13,7 +13,7 @@
 <body>
 	<div class="container">
 		<div class="profile-box">
-			<form:form action="${root }admin/modify_pro" method="get"
+			<form:form action="${root }admin/modify_success" method="get"
 				modelAttribute="modifyMemberBean" enctype="multipart/form-data">
 				<div class="memberProfile">
 					<form:label path="upload_file">첨부이미지</form:label>

@@ -3,10 +3,12 @@ package com.controller;
 import java.util.List;
 
 import javax.annotation.Resource;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -79,18 +81,25 @@ public class MemberController {
 	@GetMapping("/member_modify")
 	public String modifyMember(@RequestParam("user_idx")int user_idx, Model model) {
 		
-		System.out.println("확인용1" + user_idx);
 		Users users = uService.printOneUser(user_idx);
-		System.out.println("확인용2" + users.getUser_idx());
 		//uService.modifyMemberInfo(users);
-		
-		System.out.println("확인용3" + users.getUser_idx());
-		
 		model.addAttribute("modifyMemberBean", users);
 		
-		System.out.println("확인용4" + users.getUser_idx());
-		
 		return "/admin/member_profile_modify";
+	}
+	
+	@GetMapping("/modify_success")
+	public String modify_pro(@Valid @ModelAttribute("modifyMemberBean")Users modifyMemberBean,
+							 BindingResult result) {
+		System.out.println("확인용1" + modifyMemberBean);
+		if(result.hasErrors()) {
+			System.out.println("확인용2" + modifyMemberBean);
+			return "admin/member_profile_modify";
+		}
+		System.out.println("확인용3" + modifyMemberBean);
+		uService.modifyMemberInfo(modifyMemberBean);
+		System.out.println("확인용4" + modifyMemberBean);
+		return "admin/modify_success";
 	}
 	
 }
