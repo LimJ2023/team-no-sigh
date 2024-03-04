@@ -13,6 +13,14 @@
 <title>리뷰 작성 페이지</title>
 </head>
 <body>
+
+<header>
+    <!-- nav container(위쪽 로고부터 검색창, 회원이미지까지) home_include 안의 logo_include로 뺴냄 -->
+    <c:import url="/view/home_include/logo_include.jsp"/>
+    <!-- navbar (왼쪽 사이드바) home_include 안의 left_include로 빼냄 -->
+    <c:import url="/view/home_include/left_sideBar.jsp"/>
+</header>
+
 	<div class="reviews_wrap">
 		<div class="reviews_header">
 			<div class="header_streamerInfo">
