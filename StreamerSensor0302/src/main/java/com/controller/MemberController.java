@@ -82,10 +82,11 @@ public class MemberController {
 
 	@GetMapping("/member_profile")
 	public String member_profile(@RequestParam("user_idx") int user_idx, Model model) {
+		
+		model.addAttribute("user_idx", user_idx);
 
 		Users users = uService.printOneUser(user_idx);
 		model.addAttribute("users", users);
-		// model.addAttribute("user_idx", user_idx);
 
 		return "admin/member_profile";
 	}
