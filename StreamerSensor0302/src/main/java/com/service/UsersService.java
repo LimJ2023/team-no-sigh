@@ -46,7 +46,7 @@ public class UsersService {
 	public Users printOneUser(int user_idx) {
 		return uDAO.printOneUser(user_idx);
 	}
-	
+
 	public List<Users> getSubUsers() {
 
 		List<Users> list = uDAO.getAllUsers();
@@ -92,11 +92,6 @@ public class UsersService {
 		uDAO.modifyUserInfo(modifyUserBean);
 	}
 
-	public void modifyMemberInfo(Users modifyMemberBean) {
-		modifyMemberBean.setUser_idx(selectUserImage.getUser_idx());
-		uDAO.modifyMemberInfo(modifyMemberBean);
-	}
-
 	// ============================================================================================
 
 	public void deleteMemberInfo(int user_idx) {
@@ -123,23 +118,15 @@ public class UsersService {
 		return file_name;
 	}
 
-	public void addContentInfo(Users modifyMemberBean) {
-
-		/*
-		 * System.out.println(writeContentBean.getContent_subject());
-		 * System.out.println(writeContentBean.getContent_text());
-		 * System.out.println(writeContentBean.getUpload_file().getSize());
-		 */
+	public void modifyMemberInfo(Users modifyMemberBean) {
 
 		MultipartFile upload_file = modifyMemberBean.getUpload_file();
 
 		if (upload_file.getSize() > 0) {
-			String user_image = saveUploadFile(upload_file);
-			// System.out.println(file_name);
-			// 첨부파일 호출
-			modifyMemberBean.setUser_image(user_image);
+			String file_name = saveUploadFile(upload_file);
+			modifyMemberBean.setUser_image(file_name);
 		}
-		modifyMemberBean.setUser_idx(selectUserImage.getUser_idx());
+
 		uDAO.modifyMemberInfo(modifyMemberBean);
 	}
 
