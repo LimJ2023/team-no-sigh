@@ -71,6 +71,7 @@ public class UsersService {
 		if (tempLoginUserBean2 != null) {
 			loginUserBean.setUser_idx(tempLoginUserBean2.getUser_idx());
 			loginUserBean.setUser_name(tempLoginUserBean2.getUser_name());
+			loginUserBean.setSubscription(tempLoginUserBean2.getSubscription()); //0304 이지수 추가
 			loginUserBean.setUserLogin(true);
 		}
 	}

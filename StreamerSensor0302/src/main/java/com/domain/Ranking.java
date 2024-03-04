@@ -26,7 +26,7 @@ public class Ranking {
 	private int streamer_followers;
 	
 	private String streaming_description;
-	private String streaming_category;
+	private String streaming_categorys_id;
 	private String streaming_date;
 	
 	//***************
@@ -121,11 +121,11 @@ public class Ranking {
 	public void setStreaming_description(String streaming_description) {
 		this.streaming_description = streaming_description;
 	}
-	public String getStreaming_category() {
-		return streaming_category;
+	public String getStreaming_categorys_id() {
+		return streaming_categorys_id;
 	}
-	public void setStreaming_category(String streaming_category) {
-		this.streaming_category = streaming_category;
+	public void setStreaming_category(String streaming_categorys_id) {
+		this.streaming_categorys_id = streaming_categorys_id;
 	}
 	public String getStreaming_date() {
 		return streaming_date;

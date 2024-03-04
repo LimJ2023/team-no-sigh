@@ -34,6 +34,9 @@ public class UsersBean {
 
 	private boolean userLogin; // 로그인이 되었는지 로그인 유무
 
+	//0304 이지수
+	private String subscription;
+	
 	public int getUser_idx() {
 		return user_idx;
 	}
@@ -88,6 +91,16 @@ public class UsersBean {
 
 	public void setUserLogin(boolean userLogin) {
 		this.userLogin = userLogin;
+	}
+
+	
+	//0304 이지수
+	public String getSubscription() {
+		return subscription;
+	}
+
+	public void setSubscription(String subscription) {
+		this.subscription = subscription;
 	}
 
 }
