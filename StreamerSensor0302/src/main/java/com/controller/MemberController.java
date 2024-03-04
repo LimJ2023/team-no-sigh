@@ -62,19 +62,33 @@ public class MemberController {
 
 		Users users = uService.printOneUser(user_idx);
 		model.addAttribute("users", users);
-		model.addAttribute("user_idx", user_idx);
+		// model.addAttribute("user_idx", user_idx);
 
 		return "admin/member_profile";
 	}
 
 	@GetMapping("/member_delete")
-	public String deleteMember(@RequestParam("user_idx") int user_idx,
-	                           Model model) {
+	public String deleteMember(@RequestParam("user_idx") int user_idx, Model model) {
 
-	    uService.deleteMemberInfo(user_idx);
+		uService.deleteMemberInfo(user_idx);
 
-	    return "/admin/member_delete";
+		return "/admin/member_delete";
 	}
 
+	@GetMapping("/member_modify")
+	public String modifyMember(@RequestParam("user_idx")int user_idx, Model model) {
+
+		Users users = uService.printOneUser(user_idx);
+		//uService.modifyMemberInfo(users);
+
+		model.addAttribute("modifyMemberBean", users);
+
+		return "admin/member_profile_modify";
+	}
+	
+	@GetMapping("/modify_pro")
+	public String modify_pro() {
+		return "admin/modify_success";
+	}
 
 }

@@ -51,7 +51,7 @@
 		</div>
 		
 		<div class="button">
-			<a href="${root }modify?user_idx=${users.user_idx}">수정하기</a>
+			<a href="${root }member_modify?user_idx=${users.user_idx}">수정하기</a>
 			<br>
 			<a href="${root }member_delete?user_idx=${user_idx }">삭제하기</a>
 			<br> <a href="${root }members">전체 회원 보기</a>
