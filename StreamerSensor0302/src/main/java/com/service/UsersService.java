@@ -30,6 +30,7 @@ public class UsersService {
 	@Resource(name = "loginUserBean")
 	private UsersBean loginUserBean;
 
+
 	@Resource(name = "selectUserImage")
 	private Users selectUserImage;
 
@@ -61,7 +62,7 @@ public class UsersService {
 		return result;
 
 	}
-
+	
 	public boolean checkuserIdExist(String user_id) {
 
 		String user_name = uDAO.checkUserIdExist(user_id);
@@ -83,7 +84,7 @@ public class UsersService {
 		if (tempLoginUserBean2 != null) {
 			loginUserBean.setUser_idx(tempLoginUserBean2.getUser_idx());
 			loginUserBean.setUser_name(tempLoginUserBean2.getUser_name());
-			loginUserBean.setSubscription(tempLoginUserBean2.getSubscription()); //0304 이지수 추가
+			loginUserBean.setSubscription(tempLoginUserBean2.getSubscription()); // 0304 이지수 추가
 			loginUserBean.setUserLogin(true);
 		}
 	}
@@ -95,12 +96,11 @@ public class UsersService {
 		modifyUserBean.setUser_name(tempModifyUserBean.getUser_name());
 		modifyUserBean.setUser_idx(loginUserBean.getUser_idx());
 	}
-  
 	public void modifyUserInfo(UsersBean modifyUserBean) {
 		modifyUserBean.setUser_idx(loginUserBean.getUser_idx());
 		uDAO.modifyUserInfo(modifyUserBean);
 	}
-
+	
 	// ============================================================================================
 
 	public void deleteMemberInfo(int user_idx) {
@@ -127,15 +127,17 @@ public class UsersService {
 		return file_name;
 	}
 
-	public void modifyMemberInfo(Users modifyMemberBean) {
+	public void addContentInfo(Users modifyMemberBean) {
 
 		MultipartFile upload_file = modifyMemberBean.getUpload_file();
 
 		if (upload_file.getSize() > 0) {
-			String file_name = saveUploadFile(upload_file);
-			modifyMemberBean.setUser_image(file_name);
+			String user_image = saveUploadFile(upload_file);
+			// System.out.println(file_name);
+			// 첨부파일 호출
+			modifyMemberBean.setUser_image(user_image);
 		}
-
+		modifyMemberBean.setUser_idx(selectUserImage.getUser_idx());
 		uDAO.modifyMemberInfo(modifyMemberBean);
 	}
 

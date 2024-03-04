@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,133 +14,140 @@
 </head>
 <body>
 
-<header>
-    <!-- nav container(위쪽 로고부터 검색창, 회원이미지까지) home_include 안의 logo_include로 뺴냄 -->
-    <c:import url="/view/home_include/logo_include.jsp"/>
-</header>
-<section>
-	<div class="reviews_wrap">
-		<div class="reviews_header">
-			<div class="header_streamerInfo">
-				<div class="streamerInfo_img">
-					<img src="img/streamer_profile/${streamer.img_url }.png">
-				</div>
-				<div class="streamerInfo_cont">
+	<header>
+		<!-- nav container(위쪽 로고부터 검색창, 회원이미지까지) home_include 안의 logo_include로 뺴냄 -->
+		<c:import url="/view/home_include/logo_include.jsp" />
+	</header>
+	<section>
+		<div class="reviews_wrap">
+			<div class="reviews_header">
+				<div class="header_streamerInfo">
+					<div class="streamerInfo_img">
+						<img src="img/streamer_profile/${streamer.img_url }.png">
+					</div>
+					<div class="streamerInfo_cont">
 
-					<div class="streamer_id">${streamer.streamer_id }</div>
-					<div class="streamer_followers">팔로워수 :
-						${streamer.streamer_followers }</div>
-					<div class="streamer_trends">최근 상승세</div>
-					<div class="streamer_comments">댓글 수 : 50개</div>
-				</div>
+						<div class="streamer_id">${streamer.streamer_id }</div>
+						<div class="streamer_followers">팔로워수 :
+							${streamer.streamer_followers }</div>
+						<div class="streamer_trends">최근 상승세</div>
+						<div class="streamer_comments">댓글 수 : 50개</div>
+					</div>
 
-				<div class="related_streamers">
-					<p>연관 스트리머</p>
-					<div class="streamer_icon">
-						<img src="img/admin/profile2.png">
-					</div>
-					<div class="streamer_icon">
-						<img src="img/admin/profile3.png">
-					</div>
-					<div class="streamer_icon">
-						<img src="img/admin/profile4.png">
-					</div>
-				</div>
-
-			</div>
-			<div class="header_recentComments">
-				<div class="recentComments_item">
-					<div class="cmt_wrap">
-						<div class="profile_area">
-							<img src="img/admin/KITA2.JPG">
-						</div>
-						<div class="cont_area">
-							<div class="cmt_head">id : 이쿠요 키타 / date : 2024-01-21</div>
-							<div class="cmt_cont">좋은 음악을 들려주는 유튜버에요.</div>
-						</div>
-					</div>
-				</div>
-				<div class="recentComments_item">
-					<div class="cmt_wrap">
-						<div class="profile_area">
+					<div class="related_streamers">
+						<p>연관 스트리머</p>
+						<div class="streamer_icon">
 							<img src="img/admin/profile2.png">
 						</div>
-						<div class="cont_area">
-							<div class="cmt_head">id : 이지치 니지카 / date : 2024-01-21</div>
-							<div class="cmt_cont">멋진 연주입니다.</div>
-						</div>
-					</div>
-				</div>
-				<div class="recentComments_item">
-					<div class="cmt_wrap">
-						<div class="profile_area">
+						<div class="streamer_icon">
 							<img src="img/admin/profile3.png">
 						</div>
-						<div class="cont_area">
-							<div class="cmt_head">id : 야마다 료 / date : 2024-01-20</div>
-							<div class="cmt_cont">구독했습니다.</div>
+						<div class="streamer_icon">
+							<img src="img/admin/profile4.png">
+						</div>
+					</div>
+
+				</div>
+				<div class="header_recentComments">
+					<c:forEach var="rating" items="ratingList">
+						<div class="recentComments_item">
+						<div class="cmt_wrap">
+							<div class="profile_area">
+								<img src="img/user_profile/KITA2.JPG">
+							</div>
+							<div class="cont_area">
+								<div class="cmt_head">글쓴이 : ${rating.user_name} / date : ${rating.streamer_rating_date }</div>
+								<div class="cmt_cont">${rating.comment }</div>
+							</div>
+						</div>
+					</div>
+					</c:forEach>
+					
+					<div class="recentComments_item">
+						<div class="cmt_wrap">
+							<div class="profile_area">
+								<img src="img/admin/profile2.png">
+							</div>
+							<div class="cont_area">
+								<div class="cmt_head">id : 이지치 니지카 / date : 2024-01-21</div>
+								<div class="cmt_cont">멋진 연주입니다.</div>
+							</div>
+						</div>
+					</div>
+					<div class="recentComments_item">
+						<div class="cmt_wrap">
+							<div class="profile_area">
+								<img src="img/admin/profile3.png">
+							</div>
+							<div class="cont_area">
+								<div class="cmt_head">id : 야마다 료 / date : 2024-01-20</div>
+								<div class="cmt_cont">구독했습니다.</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="star-container">
-			<div class="star-widget">
-				<div class="stars">
-					<input type="radio" name="rate" id="rate-5"> <label
-						for="rate-5"><i class='bx bxs-star'></i></label> <input
-						type="radio" name="rate" id="rate-4"> <label for="rate-4"><i
-						class='bx bxs-star'></i></label> <input type="radio" name="rate"
-						id="rate-3"> <label for="rate-3"><i
-						class='bx bxs-star'></i></label> <input type="radio" name="rate"
-						id="rate-2"> <label for="rate-2"><i
-						class='bx bxs-star'></i></label> <input type="radio" name="rate"
-						id="rate-1"> <label for="rate-1"><i
-						class='bx bxs-star'></i></label>
+			<div class="star-container">
+				<div class="star-widget">
+					<form:form action="review_pro" method="get"
+						modelAttribute="streamerRating">
+						<form:hidden path="streamer_idx"/>
+						<form:hidden path="user_idx"/>
+						<div class="stars">
+							<form:radiobutton path="streamer_rating" id="rate-5" value="5"/> <label
+								for="rate-5"><i class='bx bxs-star'></i></label> 
+								<form:radiobutton path="streamer_rating" id="rate-4" value="4"/> <label
+								for="rate-4"><i class='bx bxs-star'></i></label> 
+								<form:radiobutton path="streamer_rating" id="rate-3" value="3"/> <label
+								for="rate-3"><i class='bx bxs-star'></i></label> 
+								<form:radiobutton path="streamer_rating" id="rate-2" value="2"/> <label
+								for="rate-2"><i class='bx bxs-star'></i></label> 
+								<form:radiobutton path="streamer_rating" id="rate-1" value="1"/> <label
+								for="rate-1"><i class='bx bxs-star'></i></label>
+						</div>
+
+
+						<div class="textarea">
+							<form:textarea path="comment" cols="30" placeholder="스트리머에게 의견을 남겨주세요"></form:textarea>
+						</div>
+						<div class="btn">
+							<form:button>게시</form:button>
+						</div>
+					</form:form>
 				</div>
+			</div>
 
-				<form action="review_pro">
-					<div class="textarea">
-						<textarea cols="30" placeholder="스트리머에게 의견을 남겨주세요"></textarea>
-					</div>
-					<div class="btn">
-						<button type="submit">게시</button>
-					</div>
-				</form>
+			<div class="reviews_container">
+				<div class="streaming_list">
+
+					<c:forEach var="stream" items="${streamList }">
+
+						<div class="streaming_item">
+							<div class="streaming_img">
+								<img src="img/thumbnail/${stream.img_url}.png">
+							</div>
+							<div class="streaming_info">
+								<div class="streaming_desc">
+									${stream.streaming_description }
+									<div class="flex justy-between size-md"></div>
+								</div>
+								<div class="streaming_info_right">
+									<div class="like">
+										<i class='bx bx-heart bx-md'></i> <span>0</span>
+									</div>
+									<div class="list">
+										<i class='bx bxs-comment-detail bx-md'></i> <span>0</span>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</c:forEach>
+
+				</div>
 			</div>
 		</div>
-
-		<div class="reviews_container">
-			<div class="streaming_list">
-
-				<c:forEach var="stream" items="${streamList }">
-
-					<div class="streaming_item">
-						<div class="streaming_img">
-							<img src="img/thumbnail/${stream.img_url}.png">
-						</div>
-						<div class="streaming_info">
-							<div class="streaming_desc">
-								${stream.streaming_description }
-								<div class="flex justy-between size-md"></div>
-							</div>
-							<div class="streaming_info_right">
-								<div class="like">
-									<i class='bx bx-heart bx-md'></i> <span>0</span>
-								</div>
-								<div class="list">
-									<i class='bx bxs-comment-detail bx-md'></i> <span>0</span>
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</c:forEach>
-
-			</div>
-		</div>
-	</div>
-</section>
+	</section>
 	<script src="script.js"></script>
 </body>
 </html>

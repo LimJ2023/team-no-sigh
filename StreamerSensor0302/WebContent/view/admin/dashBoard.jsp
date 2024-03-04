@@ -73,25 +73,9 @@
 						<h3>제목 : ${review.streaming_description }</h3>
 					</div>
 					<div class="content">
-						<img src="${review.img_url}">
+						<img src="img/thumbnail/${review.img_url}.png">
 					</div>
 				</div>
-				<!-- <div class="searches">
-            <div class="status">
-              <div class="info">
-                <h3>사이트 검색량</h3>
-                <h1>14,147</h1>
-              </div>
-              <div class="progress">
-                <svg>
-                  <circle cx="38" cy="38" r="36"></circle>
-                </svg>
-                <div class="percentage">
-                  <p>+21%</p>
-                </div>
-              </div>
-            </div>
-          </div> -->
 			</div>
 			<!-- 분석파트 끝 -->
 
@@ -99,11 +83,14 @@
 			<div class="new-users">
 				<h2>신규 회원</h2>
 				<div class="user-list">
+				<c:forEach var="user" items="">
 					<div class="user">
 						<img src="img/admin/profile1.png" />
 						<h2>${user.user_name}</h2>
 						<p>${user.user_age}</p>
 					</div>
+				</c:forEach>
+					
 					<div class="user">
 						<img src="img/admin/profile2.png" />
 						<h2>${user.user_name}</h2>

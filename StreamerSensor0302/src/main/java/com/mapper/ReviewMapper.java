@@ -2,9 +2,11 @@ package com.mapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 
 import com.domain.Review;
+import com.domain.StreamerRating;
 
 public interface ReviewMapper {
 
@@ -28,4 +30,15 @@ public interface ReviewMapper {
 			+ "    FROM streaming_info s2)")
 	List<Review> getRecentReivew();
 	
+	@Insert("INSERT INTO streamer_rating (comment_id, user_idx, streamer_idx, streamer_rating, "
+			+ "rating_comment, streamer_rating_date) "
+			+ "VALUES(STREAMER_RATING_ID_SEQ.nextval , #{user_idx}, #{streamer_idx}, #{streamer_rating}, "
+			+ "#{comment}, sysdate)")
+	void insertStreamerRating(StreamerRating rating);
+	
+	@Select("SELECT u.user_name,u.user_image, r.streamer_idx, r.streamer_rating, r.rating_comment, r.streamer_rating_date "
+			+ "FROM streamer_rating r"
+			+"INNER JOIN users u ON u.user_idx = r.user_idx "
+			+ "WHERE streamer_idx = #{streamer_idx}")
+	List<StreamerRating> getRatingListByStreamerIdx(int streamer_idx);
 }
