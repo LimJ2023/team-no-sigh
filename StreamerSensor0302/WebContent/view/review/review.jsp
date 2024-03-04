@@ -17,8 +17,7 @@
 		<div class="reviews_header">
 			<div class="header_streamerInfo">
 				<div class="streamerInfo_img">
-					<a href=""> <img src="img/admin/${streamer.streamer_img }.png">
-					</a>
+					<img src="img/streamer_profile/${streamer.streamer_img }.png">
 				</div>
 				<div class="streamerInfo_cont">
 
@@ -94,7 +93,7 @@
 						class='bx bxs-star'></i></label>
 				</div>
 
-				<form action="#">
+				<form action="review_pro">
 					<header>최고에요!</header>
 					<div class="textarea">
 						<textarea cols="30" placeholder="스트리머에게 의견을 남겨주세요"></textarea>

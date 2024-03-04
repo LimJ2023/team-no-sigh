@@ -14,7 +14,7 @@ public class AdminService {
 	AdminDAO dao;
 	
 	public Admin getAdmin() {
-		Admin admin = dao.getAdminInfo(1);
+		Admin admin = dao.getAdminInfo(0);
 		return admin;
 	}
 	

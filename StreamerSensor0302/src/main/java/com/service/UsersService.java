@@ -102,5 +102,17 @@ public class UsersService {
 			modifyMemberBean.setUser_idx(selectUserImage.getUser_idx());
 			uDAO.modifyMemberInfo(modifyMemberBean);
 		}
+		
+		public List<Users> getSubUsers() {
+
+			List<Users> list = uDAO.getAllUsers();
+			List<Users> result = new ArrayList<Users>();
+			for (Users user : list) {
+				if (user.getSubscription() != null && user.getSubscription().equals("y")) {
+					result.add(user);
+				}
+			}
+			return result;
+		}
 
 }
