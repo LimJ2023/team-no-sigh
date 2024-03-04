@@ -29,7 +29,7 @@ public class UsersService {
 
 	@Resource(name = "loginUserBean")
 	private UsersBean loginUserBean;
-	
+
 	@Resource(name = "selectUserImage")
 	private Users selectUserImage;
 
@@ -95,15 +95,10 @@ public class UsersService {
 		modifyUserBean.setUser_name(tempModifyUserBean.getUser_name());
 		modifyUserBean.setUser_idx(loginUserBean.getUser_idx());
 	}
-	
+  
 	public void modifyUserInfo(UsersBean modifyUserBean) {
 		modifyUserBean.setUser_idx(loginUserBean.getUser_idx());
 		uDAO.modifyUserInfo(modifyUserBean);
-	}
-
-	public void modifyMemberInfo(Users modifyMemberBean) {
-		modifyMemberBean.setUser_idx(selectUserImage.getUser_idx());
-		uDAO.modifyMemberInfo(modifyMemberBean);
 	}
 
 	// ============================================================================================
@@ -111,39 +106,37 @@ public class UsersService {
 	public void deleteMemberInfo(int user_idx) {
 		uDAO.deleteMemberInfo(user_idx);
 	}
-	
+
 	// 저장하는 메소드
-		private String saveUploadFile(MultipartFile upload_file) {
+	private String saveUploadFile(MultipartFile upload_file) {
 
-			// String file_name = System.currentTimeMillis() + "_" +
-			// upload_file.getOriginalFilename();
+		// String file_name = System.currentTimeMillis() + "_" +
+		// upload_file.getOriginalFilename();
 
-			// 경로 시스템 오류시
-			String file_name = System.currentTimeMillis() + "_"
-					+ FilenameUtils.getBaseName(upload_file.getOriginalFilename()) + "."
-					+ FilenameUtils.getExtension(upload_file.getOriginalFilename());
+		// 경로 시스템 오류시
+		String file_name = System.currentTimeMillis() + "_"
+				+ FilenameUtils.getBaseName(upload_file.getOriginalFilename()) + "."
+				+ FilenameUtils.getExtension(upload_file.getOriginalFilename());
 
-			try {
-				upload_file.transferTo(new File(path_upload + "/" + file_name));
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-
-			return file_name;
+		try {
+			upload_file.transferTo(new File(path_upload + "/" + file_name));
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 
-		public void addContentInfo(Users modifyMemberBean) {
+		return file_name;
+	}
 
-			MultipartFile upload_file = modifyMemberBean.getUpload_file();
+	public void modifyMemberInfo(Users modifyMemberBean) {
 
-			if (upload_file.getSize() > 0) {
-				String user_image = saveUploadFile(upload_file);
-				// System.out.println(file_name);
-				// 첨부파일 호출
-				modifyMemberBean.setUser_image(user_image);
-			}
-			modifyMemberBean.setUser_idx(selectUserImage.getUser_idx());
-			uDAO.modifyMemberInfo(modifyMemberBean);
+		MultipartFile upload_file = modifyMemberBean.getUpload_file();
+
+		if (upload_file.getSize() > 0) {
+			String file_name = saveUploadFile(upload_file);
+			modifyMemberBean.setUser_image(file_name);
 		}
+
+		uDAO.modifyMemberInfo(modifyMemberBean);
+	}
 
 }

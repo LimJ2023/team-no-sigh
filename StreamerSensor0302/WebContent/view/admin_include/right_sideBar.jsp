@@ -13,10 +13,10 @@
 			<button class="menu-btn">
 				<span class="material-symbols-outlined"> menu </span>
 			</button>
-			<div class="dark-mode">
+			<!-- <div class="dark-mode">
 				<span class="material-symbols-outlined active"> light_mode </span> <span
 					class="material-symbols-outlined"> dark_mode </span>
-			</div>
+			</div> -->
 
 			<div class="profile">
 				<div class="info">
