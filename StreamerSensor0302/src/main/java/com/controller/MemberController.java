@@ -44,7 +44,7 @@ public class MemberController {
 
 		List<Users> users = uService.getAllUsers();
 		model.addAttribute("users", users);
-		
+
 		Admin admin = adminService.getAdmin();
 		model.addAttribute("admin", admin);
 
@@ -102,9 +102,11 @@ public class MemberController {
 	public String modifyMember(@ModelAttribute("modifyMemberBean") Users modifyMemberBean,
 			@RequestParam("user_idx") int user_idx, Model model) {
 
+		model.addAttribute("user_idx", user_idx);
+
 		Users users = uService.printOneUser(user_idx);
 		// uService.modifyMemberInfo(users);
-		
+
 		modifyMemberBean.setUser_id(users.getUser_id());
 		modifyMemberBean.setUser_name(users.getUser_name());
 		modifyMemberBean.setUser_gender(users.getUser_gender());
@@ -112,7 +114,7 @@ public class MemberController {
 		modifyMemberBean.setUser_nation(users.getUser_nation());
 		modifyMemberBean.setSubscription(users.getSubscription());
 		modifyMemberBean.setUser_image(users.getUser_image());
-		
+
 		modifyMemberBean.setUser_idx(user_idx);
 
 		return "admin/member_profile_modify";
@@ -126,6 +128,7 @@ public class MemberController {
 		}
 
 		uService.modifyMemberInfo(modifyMemberBean);
+		// modifyMemberBean.setUser_idx(user_idx);
 
 		return "admin/modify_success";
 	}
