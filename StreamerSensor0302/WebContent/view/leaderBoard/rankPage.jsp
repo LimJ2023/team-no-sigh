@@ -32,8 +32,9 @@
 
 
 	<section class="rankContainer">
-		<div class="tempDiv"><h2>현재 사용자 : ${users.user_idx } . ${users.user_name } (
-				${users.subscription} ) / UsersDAO sql 2=n / 1=y</h2>
+		<div class="tempDiv">
+				<h2>로그인 : ${loginUserBean.user_name } 입니다</h2>
+				<h2>구독 : ${loginUserBean.subscription }</h2>
 		
 				
 				</div>
@@ -90,54 +91,15 @@
 					<tbody class="tbody">
 
 						<c:forEach var="ranking" items="${rankings}">
+							<c:set var="rankPlace" value="${rankPlace+1 }"/>
 
 							<tr id="table_row">
-								<c:if test="${users.subscription eq 'y'}">
-									<td class="td td-rankPlace rankPlace">${ranking.rank_place }</td>
-									<td class="td td-streamerInfo">
-										<div class='rank-streamer'>
-											<div class='rank-streamer-info'>
-												<img src="img/leaderBoard/Person_Icon.png"
-													class="table-icon" />
-
-												<c:choose>
-													<c:when test="${ranking.streamer_platform eq '유튜브'}">
-														<img src="img/leaderBoard/logo_youtube.png"
-															class='rank-streamer-info-logo' />
-													</c:when>
-													<c:when test="${ranking.streamer_platform eq '치지직'}">
-														<img src="img/leaderBoard/logo_chzzk.png"
-															class='rank-streamer-info-logo' />
-													</c:when>
-												</c:choose>
-											</div>
-											${ranking.streamer_id }
-										</div>
-									</td>
-									<td class="td td-description"><div class="rank_desc">${ranking.streaming_description }</div></td>
-									
-									<td class="td td-avgViewers avgV-bar" style="width:${(ranking.avg_viewers / sumAVG) * 100 }%;">${ranking.avg_viewers }</td>
-									
-									<td class="td td-likes">
-										<div class="likes-div">
-										<div class="likes-bar" style="width:${(ranking.likes / sumLikes) * 100}%;"></div>
-										<div class="likes">${ranking.likes }</div>
-										</div>
-									</td>
- 									<td class="td td-dailyViewers">
- 										<div class="daily-div">
- 											<div class="daily-bar" style="width:${(ranking.daily_viewers / sumDaily) * 100}%;"></div>
- 											<div class="dailyV">${ranking.daily_viewers }</div>
- 										</div>
- 									</td>
-									<td class="td td-followers">${ranking.streamer_followers }</td>
-
-									<td class="td td-category">${ranking.streaming_category }</td>
-								</c:if>
-
-								<c:if
-									test="${users.subscription eq 'n' && ranking.rank_place <= 3}">
-									<td class="td-rankPlace">${ranking.rank_place }</td>
+							
+							<c:choose>
+							
+									<%--로그인 하지 않은 사용자의 경우 리스트 3개까지 보여줌 --%>
+							<c:when test="${rankPlace <=3}">
+									<td class="td-rankPlace">${rankPlace }</td>
 									<td class="td-streamerInfo">
 										<div class='rank-streamer'>
 											<div class='rank-streamer-info'>
@@ -152,6 +114,10 @@
 													</c:when>
 													<c:when test="${ranking.streamer_platform eq '치지직'}">
 														<img src="img/leaderBoard/logo_chzzk.png"
+															class='rank-streamer-info-logo' />
+													</c:when>
+													<c:when test="${ranking.streamer_platform eq '아프리카'}">
+														<img src="img/leaderBoard/afreecaTV_logo.png"
 															class='rank-streamer-info-logo' />
 													</c:when>
 												</c:choose>
@@ -177,12 +143,115 @@
  									</td>
 									<td class="td td-followers">${ranking.streamer_followers }</td>
 
-									<td class="td td-category">${ranking.streaming_category }</td>
-								</c:if>
+									<td class="td td-category">${ranking.streaming_categorys_id }</td>
+								</c:when>
+							
+							
+							<%-- 구독한 사용자의 경우 전체 리스트 보여주기 --%>
+								<c:when test="${loginUserBean.subscription eq 'y'}">
+									<td class="td td-rankPlace rankPlace">${rankPlace }</td>
+									<td class="td td-streamerInfo">
+										<div class='rank-streamer'>
+											<div class='rank-streamer-info'>
+												<img src="img/leaderBoard/Person_Icon.png"
+													class="table-icon" />
+
+												<c:choose>
+													<c:when test="${ranking.streamer_platform eq '유튜브'}">
+														<img src="img/leaderBoard/logo_youtube.png"
+															class='rank-streamer-info-logo' />
+													</c:when>
+													<c:when test="${ranking.streamer_platform eq '치지직'}">
+														<img src="img/leaderBoard/logo_chzzk.png"
+															class='rank-streamer-info-logo' />
+													</c:when>
+													<c:when test="${ranking.streamer_platform eq '아프리카'}">
+														<img src="img/leaderBoard/afreecaTV_logo.png"
+															class='rank-streamer-info-logo' />
+													</c:when>
+												</c:choose>
+											</div>
+											${ranking.streamer_id }
+										</div>
+									</td>
+									<td class="td td-description"><div class="rank_desc">${ranking.streaming_description }</div></td>
+									
+									<td class="td td-avgViewers avgV-bar" style="width:${(ranking.avg_viewers / sumAVG) * 100 }%;">${ranking.avg_viewers }</td>
+									
+									<td class="td td-likes">
+										<div class="likes-div">
+										<div class="likes-bar" style="width:${(ranking.likes / sumLikes) * 100}%;"></div>
+										<div class="likes">${ranking.likes }</div>
+										</div>
+									</td>
+ 									<td class="td td-dailyViewers">
+ 										<div class="daily-div">
+ 											<div class="daily-bar" style="width:${(ranking.daily_viewers / sumDaily) * 100}%;"></div>
+ 											<div class="dailyV">${ranking.daily_viewers }</div>
+ 										</div>
+ 									</td>
+									<td class="td td-followers">${ranking.streamer_followers }</td>
+
+									<td class="td td-category">${ranking.streaming_categorys_id }</td>
+								</c:when>
+
+								<%--구독하지 않았을 경우 5개까지만 랭킹 보여주기 --%>
+								<c:when
+									test="${loginUserBean.subscription eq 'n' && rankPlace <= 5}"> 
+									<td class="td-rankPlace">${rankPlace }</td>
+									<td class="td-streamerInfo">
+										<div class='rank-streamer'>
+											<div class='rank-streamer-info'>
+												<img src="img/leaderBoard/Person_Icon.png"
+													class="table-icon" />
+
+
+												<c:choose>
+													<c:when test="${ranking.streamer_platform eq '유튜브'}">
+														<img src="img/leaderBoard/logo_youtube.png"
+															class='rank-streamer-info-logo' />
+													</c:when>
+													<c:when test="${ranking.streamer_platform eq '치지직'}">
+														<img src="img/leaderBoard/logo_chzzk.png"
+															class='rank-streamer-info-logo' />
+													</c:when>
+													<c:when test="${ranking.streamer_platform eq '아프리카'}">
+														<img src="img/leaderBoard/afreecaTV_logo.png"
+															class='rank-streamer-info-logo' />
+													</c:when>
+												</c:choose>
+											</div>
+											${ranking.streamer_id }
+										</div>
+									</td>
+									<td class="td td-description">${ranking.streaming_description }</td>
+									
+									<td class="td td-avgViewers avgV-bar" style="width:${(ranking.avg_viewers / sumAVG) * 100 }%;">${ranking.avg_viewers }</td>
+									
+									<td class="td td-likes">
+										<div class="likes-div">
+										<div class="likes-bar" style="width:${(ranking.likes / sumLikes) * 100}%;"></div>
+										<div class="likes">${ranking.likes }</div>
+										</div>
+									</td>
+ 									<td class="td td-dailyViewers">
+ 										<div class="daily-div">
+ 											<div class="daily-bar" style="width:${(ranking.daily_viewers / sumDaily) * 100}%;"></div>
+ 											<div class="dailyV">${ranking.daily_viewers }</div>
+ 										</div>
+ 									</td>
+									<td class="td td-followers">${ranking.streamer_followers }</td>
+
+									<td class="td td-category">${ranking.streaming_categorys_id }</td>
+								</c:when>
+							
+							</c:choose>
+							
+						
 							</tr>
 						</c:forEach>
 
-						<c:if test="${users.subscription eq 'n'}">
+						<c:if test="${loginUserBean.subscription eq 'n'}">
 							<td colspan=8>
 								<div class='blackSpace'>
 									<img src='img/leaderBoard/coloredLock.png' class='locked'>

@@ -114,7 +114,7 @@
     </div>
     <div class="todays_row">
     
-    	<c:forEach var="popVideo" items="${popVideoInfo }">
+    	<%-- <c:forEach var="popVideo" items="${popVideoInfo }">
     		<div class="todays_col colTop">
     			<a href="http://www.youtube.com/watch?v=${popVideo.video_id }" style="width:100%, height:100%">
     				<figure>
@@ -134,7 +134,7 @@
     				</figure>
     			</a>
     		</div>
-    	</c:forEach>
+    	</c:forEach> --%>
    
     </div>
 </section>

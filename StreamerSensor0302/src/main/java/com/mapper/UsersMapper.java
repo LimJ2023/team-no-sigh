@@ -35,7 +35,8 @@ public interface UsersMapper {
 			"VALUES (user_seq.nextval, #{user_id}, #{user_pw}, #{user_name}, #{user_gender}, #{user_age}, #{user_nation}, #{subscription}")
 	void addUserInfo(UsersBean joinUserBean);
 	
-	@Select("select user_idx, user_name "
+	//0304 이지수 subscription 추가
+	@Select("select user_idx, user_name, subscription "
 			+ "from users "
 			+ "where user_id=#{user_id} and user_pw=#{user_pw}")
 	UsersBean getLoginUserInfo(UsersBean tempLoginUserBean);
