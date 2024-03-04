@@ -105,22 +105,20 @@ public class MemberController {
 		Users users = uService.printOneUser(user_idx);
 		// uService.modifyMemberInfo(users);
 		
-		/*
-		 * modifyMemberBean.setUser_idx(users.getUser_idx());
-		 * modifyMemberBean.setUser_id(users.getUser_id());
-		 * modifyMemberBean.setUser_gender(users.getUser_gender());
-		 * modifyMemberBean.setUser_age(users.getUser_age());
-		 * modifyMemberBean.setUser_nation(users.getUser_nation());
-		 * modifyMemberBean.setSubscription(users.getSubscription());
-		 * modifyMemberBean.setUser_image(users.getUser_image());
-		 */
-
-		model.addAttribute("modifyMemberBean", users);
+		modifyMemberBean.setUser_id(users.getUser_id());
+		modifyMemberBean.setUser_name(users.getUser_name());
+		modifyMemberBean.setUser_gender(users.getUser_gender());
+		modifyMemberBean.setUser_age(users.getUser_age());
+		modifyMemberBean.setUser_nation(users.getUser_nation());
+		modifyMemberBean.setSubscription(users.getSubscription());
+		modifyMemberBean.setUser_image(users.getUser_image());
+		
+		modifyMemberBean.setUser_idx(user_idx);
 
 		return "admin/member_profile_modify";
 	}
 
-	@PostMapping("/modify_success")
+	@PostMapping("/admin/modify_pro")
 	public String modify_pro(@Valid @ModelAttribute("modifyMemberBean") Users modifyMemberBean, BindingResult result) {
 
 		if (result.hasErrors()) {

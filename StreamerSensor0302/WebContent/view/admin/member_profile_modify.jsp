@@ -19,7 +19,7 @@
 <body>
 	<div class="container">
 		<div class="profile-box">
-			<form:form action="${root }admin/modify_success" method="post"
+			<form:form action="${root }admin/modify_pro" method="post"
 				modelAttribute="modifyMemberBean" enctype="multipart/form-data">
 				<div class="memberProfile">
 					<form:label path="upload_file">첨부이미지</form:label>
@@ -41,6 +41,10 @@
 				<div class="memberProfile">
 					<form:label path="user_age">나이</form:label>
 					<form:input path="user_age" class="form-control" />
+				</div>
+				<div class="memberProfile">
+					<form:label path="user_nation">국적</form:label>
+					<form:input path="user_nation" class="form-control" />
 				</div>
 				<div class="memberProfile">
 					<form:label path="subscription">구독여부</form:label>

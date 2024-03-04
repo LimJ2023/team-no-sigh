@@ -93,7 +93,14 @@ public class UsersService {
 	}
 
 	public void modifyMemberInfo(Users modifyMemberBean) {
-		modifyMemberBean.setUser_idx(selectUserImage.getUser_idx());
+
+		MultipartFile upload_file = modifyMemberBean.getUpload_file();
+		
+		if(upload_file.getSize() > 0) {
+			String file_name = saveUploadFile(upload_file);
+			modifyMemberBean.setUser_image(file_name);
+		}
+		
 		uDAO.modifyMemberInfo(modifyMemberBean);
 	}
 
