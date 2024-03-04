@@ -128,7 +128,6 @@ public class MemberController {
 		}
 
 		uService.modifyMemberInfo(modifyMemberBean);
-		// modifyMemberBean.setUser_idx(user_idx);
 
 		return "admin/modify_success";
 	}
