@@ -35,7 +35,7 @@
 		<div class="tempDiv">
 				<h2>로그인 : ${loginUserBean.user_name } 입니다</h2>
 				<h2>구독 : ${loginUserBean.subscription }</h2>
-		
+
 				
 				</div>
 		
@@ -55,8 +55,8 @@
 						id="categorySelect" onchange="selectFunction()"
 						class="categorySelect">
 							<option value="" class="categoryOption">Category</option>
-							<option value="게임" class="categoryOption">게임</option>
-							<option value="수다" class="categoryOption">수다</option>
+							<option value="1" class="categoryOption">1</option>
+							<option value="6" class="categoryOption">6</option>
 					</select></td>
 				</tr>
 			</table>
@@ -143,7 +143,7 @@
  									</td>
 									<td class="td td-followers">${ranking.streamer_followers }</td>
 
-									<td class="td td-category">${ranking.streaming_categorys_id }</td>
+									<td class="td td-category">${ranking.stream_categorys_id }</td>
 								</c:when>
 							
 							
@@ -192,7 +192,7 @@
  									</td>
 									<td class="td td-followers">${ranking.streamer_followers }</td>
 
-									<td class="td td-category">${ranking.streaming_categorys_id }</td>
+									<td class="td td-category">${ranking.stream_categorys_id }</td>
 								</c:when>
 
 								<%--구독하지 않았을 경우 5개까지만 랭킹 보여주기 --%>
@@ -242,7 +242,7 @@
  									</td>
 									<td class="td td-followers">${ranking.streamer_followers }</td>
 
-									<td class="td td-category">${ranking.streaming_categorys_id }</td>
+									<td class="td td-category">${ranking.stream_categorys_id }</td>
 								</c:when>
 							
 							</c:choose>

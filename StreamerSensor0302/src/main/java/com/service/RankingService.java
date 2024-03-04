@@ -8,6 +8,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -37,7 +38,7 @@ public class RankingService {
 	@Value("${path.upload}")
 	private String path_upload;
 	//
-	
+
 	public List<Ranking> getRankings() {
 		return rankingDAO.getRanking();
 	}
@@ -54,6 +55,8 @@ public class RankingService {
 		return rankingDAO.getDaily_viewers();
 	}
 
+	
+	
 	//20240229 이지수
 	public List<Video> popVideoApi(){
 		
