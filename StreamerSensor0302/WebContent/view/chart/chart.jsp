@@ -88,7 +88,7 @@
             plugins: {
                 legend: {
                     labels: {
-                        color: 'white' // 텍스트 색상을 여기서 지정하세요
+                        color: 'rgba(125, 141, 161, 1)' // 텍스트 색상을 여기서 지정하세요
                     }
                 }
             }
@@ -146,19 +146,19 @@
             plugins: {
                 legend: {
                     labels: {
-                        color: 'white' // 범례의 텍스트 색상 변경
+                        color: 'rgba(125, 141, 161, 1)' // 범례의 텍스트 색상 변경
                     }
                 }
             },
             scales: {
                 y: {
                     ticks: {
-                        color: 'white' // Y 축 텍스트 색상 변경
+                        color: 'rgba(125, 141, 161, 1)' // Y 축 텍스트 색상 변경
                     }
                 },
                 x: {
                     ticks: {
-                        color: 'white' // X 축 텍스트 색상 변경
+                        color: 'rgba(125, 141, 161, 1)' // X 축 텍스트 색상 변경
                     }
                 }
             }
@@ -219,19 +219,19 @@
             plugins: {
                 legend: {
                     labels: {
-                        color: 'white' // 범례의 텍스트 색상 변경
+                        color: 'rgba(125, 141, 161, 1)' // 범례의 텍스트 색상 변경
                     }
                 }
             },
             scales: {
                 y: {
                     ticks: {
-                        color: 'white' // Y 축 텍스트 색상 변경
+                        color: 'rgba(125, 141, 161, 1)' // Y 축 텍스트 색상 변경
                     }
                 },
                 x: {
                     ticks: {
-                        color: 'white' // X 축 텍스트 색상 변경
+                        color: 'rgba(125, 141, 161, 1)' // X 축 텍스트 색상 변경
                     }
                 }
             }
