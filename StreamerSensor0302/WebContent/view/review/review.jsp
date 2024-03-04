@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,12 +12,17 @@
 <title>리뷰 작성 페이지</title>
 </head>
 <body>
+
+<header>
+    <!-- nav container(위쪽 로고부터 검색창, 회원이미지까지) home_include 안의 logo_include로 뺴냄 -->
+    <c:import url="/view/home_include/logo_include.jsp"/>
+</header>
+<section>
 	<div class="reviews_wrap">
 		<div class="reviews_header">
 			<div class="header_streamerInfo">
 				<div class="streamerInfo_img">
-					<a href=""> <img src="img/admin/${streamer.streamer_img }.png">
-					</a>
+					<img src="img/streamer_profile/${streamer.img_url }.png">
 				</div>
 				<div class="streamerInfo_cont">
 
@@ -94,8 +98,7 @@
 						class='bx bxs-star'></i></label>
 				</div>
 
-				<form action="#">
-					<header>최고에요!</header>
+				<form action="review_pro">
 					<div class="textarea">
 						<textarea cols="30" placeholder="스트리머에게 의견을 남겨주세요"></textarea>
 					</div>
@@ -136,7 +139,7 @@
 			</div>
 		</div>
 	</div>
-
+</section>
 	<script src="script.js"></script>
 </body>
 </html>

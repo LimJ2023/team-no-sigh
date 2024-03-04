@@ -67,7 +67,7 @@
                     <div class="box_text">
                         <h2 class="streamer_title">봇치</h2>
                         <div class="streamer_type">음악</div>
-                        <a href="review">
+                        <a href="review?streamer_idx=5">
                             <div class="watch-btn play-btn">
                                 <i class='bx bx-right-arrow bx-md'></i>
                             </div>
@@ -114,7 +114,7 @@
     </div>
     <div class="todays_row">
     
-    	<c:forEach var="popVideo" items="${popVideoInfo }">
+    	 <c:forEach var="popVideo" items="${popVideoInfo }">
     		<div class="todays_col colTop">
     			<a href="http://www.youtube.com/watch?v=${popVideo.video_id }" style="width:100%, height:100%">
     				<figure>
@@ -134,14 +134,52 @@
     				</figure>
     			</a>
     		</div>
-    	</c:forEach>
+    	</c:forEach> 
    
     </div>
 </section>
 
 <section class="explore">
 	<div class="explore-content">
-		<h3>이런 방송은 어떠세요?</h3>
+	
+	<c:choose>
+		<c:when test="${loginUserBean.userLogin == true }">
+			<p>${loginUserBean.user_name }님이 좋아하실 지도 모르는 방송입니다!</p>
+			
+				<c:forEach var="info" items="${streamerInfo }">
+					<div class="suggestBox">
+					<a href="http://www.youtube.com/${info.channel_id }">
+						<figure>
+						<div><img src="${info.thumbnail_url }" class="suggest_Img"/></div>
+						<div>${info.channel_title }</div>
+						<div>구독자 : ${info.channel_subscriber_count } 명</div>
+						<div>영상 : ${info.channel_video_count } 개</div>
+						</figure>
+					</a>
+					</div>
+				</c:forEach>
+		</c:when>
+		
+		<c:when test="${loginUserBean.userLogin == false }">
+			<h3>이런 방송은 어떠세요?</h3>
+			
+				<c:forEach var="info" items="${streamerInfo }">
+					<div class="suggestBox">
+					<a href="http://www.youtube.com/${info.channel_id }">
+						<figure>
+						<div><img src="${info.thumbnail_url }" class="suggest_Img"/></div>
+						<div>${info.channel_title }</div>
+						<div>구독자 : ${info.channel_subscriber_count } 명</div>
+						<div>영상 : ${info.channel_video_count } 개</div>
+						</figure>
+					</a>
+					</div>
+				</c:forEach>
+		</c:when>
+	</c:choose>
+	
+	
+<%-- 		<h3>이런 방송은 어떠세요?</h3>
 		<div class="line"></div>
 		<p>"ID"님이 시청한 방송과 비슷합니다!</p>
 			
@@ -156,7 +194,7 @@
 						</figure>
 					</a>
 					</div>
-				</c:forEach>
+				</c:forEach> --%>
 			
 	</div>
 

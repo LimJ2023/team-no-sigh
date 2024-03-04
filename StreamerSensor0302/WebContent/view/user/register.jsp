@@ -66,10 +66,10 @@ function resetUserIdExist(){
 								<form:errors path="user_name" style='color:red' />
 							</div>
 							<div class="form-group">
-								
-								<div class="input-box">
 								<form:label path="user_id"></form:label>
-									<form:input path="user_id" id="name" class='form-control'
+								<div class="input-box">
+								
+									<form:input path="user_id" class='form-control'
 										onkeypress="resetUserIdExist()" placeholder="아이디를 입력해 주세요"/>
 									<!-- 사용자 입력시 호출 -->
 									<div class="input-group-append">
@@ -91,7 +91,26 @@ function resetUserIdExist(){
 								<form:password path="user_pw2" class='form-control' placeholder="비밀번호를 다시 입력해 주세요"/>
 								<form:errors path='user_pw2' style='color:red' />
 							</div>
-
+							
+							<div class="input-box">
+								<form:label path="user_gender"></form:label>
+								<form:input path="user_gender" class='form-control' placeholder="성별을 입력해 주세요"/>
+								<form:errors path='user_gender' style='color:red' />
+							</div>
+							
+							<div class="input-box">
+								<form:label path="user_age"></form:label>
+								<form:input path="user_age" class='form-control' placeholder="나이를 입력해 주세요"/>
+								<form:errors path='user_age' style='color:red' />
+							</div>
+							
+							<div class="input-box">
+								<form:label path="user_nation"></form:label>
+								<form:input path="user_nation" class='form-control' placeholder="국적을 입력해 주세요"/>
+								<form:errors path='user_nation' style='color:red' />
+							</div>
+							
+							
 							<div class="input-box">
 								<div class="text-right">
 									<form:button class="btn btn-primary">회원가입</form:button>
