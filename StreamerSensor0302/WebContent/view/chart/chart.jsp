@@ -44,6 +44,7 @@
         </div>
         <div class="graphBox2">
           <div class="box3">
+          	<canvas id="myChart3" width="1200" height="500"></canvas>
           </div>
         </div>
         <div class="categoryBox1">
@@ -156,24 +157,64 @@
 	</script>
 	<script>
     // 첫 번째 차트 그리기
+    var backgroundColors = [
+    'rgba(255, 99, 132, 1)', // 빨강
+    'rgba(54, 162, 235, 1)',  // 파랑
+    'rgba(255, 206, 86, 1)',  // 노랑
+    // 추가적으로 필요한 색상들을 여기에 추가할 수 있습니다.
+	];
+    var labels = [];
     var ctx1 = document.getElementById('myChart1').getContext('2d');
     var myChart1 = new Chart(ctx1, {
         type: 'doughnut',
         data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            labels: labels,
             datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                borderColor: 'rgba(255, 99, 132, 1)',
-                borderWidth: 1
+                label: '등급 별 수',
+                fill: false,
+                backgroundColor: backgroundColors,
+                //borderColor: 'rgba(255, 99, 132, 1)',
+                tension: 0.1,
+                data:[]
             }]
         },
         options: {
             // 차트 옵션 설정
         }
     });
-
+ // AJAX 요청
+    $.ajax({
+        url: 'GradeCount',
+        type: "POST",
+        contentType: "application/json",
+        data: JSON.stringify({}),
+        success: function(response) {
+            // 서버로부터 받은 응답을 처리하는 코드
+            updateChart1(response);
+        },
+        error: function(xhr, status, error) {
+            // 에러 처리 코드
+        }
+    });
+ 	
+ 	function updateChart1(data){
+ 		var grade_count = [];
+ 		var labels = [];
+ 		for(var i = 0; i < data.length; i++) {
+ 			grade_count.push(data[i].grade_count);
+ 			labels.push(data[i].streamer_grade);
+ 		}
+ 		myChart1.data.datasets[0].data = grade_count;
+ 		
+ 		myChart1.update();
+ 		updateLabels1(labels);
+ 	}
+ 	
+ 	// labels 업데이트 함수
+    function updateLabels1(newLabels) {
+        myChart1.data.labels = newLabels;
+        myChart1.update();
+    }
     // 두 번째 차트 그리기
     var labels = [];
     var ctx2 = document.getElementById('myChart2').getContext('2d');
@@ -184,7 +225,7 @@
             datasets: [{
                 label: '팔로워 수',
                 fill: false,
-                borderColor: 'rgb(75, 192, 192)',
+                backgroundColor: 'rgba(0, 0, 0, 0.5)',
                 tension: 0.1,
                 data:[]
             }]
@@ -201,30 +242,83 @@
         data: JSON.stringify({}),
         success: function(response) {
             // 서버로부터 받은 응답을 처리하는 코드
-            updateChart(response);
+            updateChart2(response);
         },
         error: function(xhr, status, error) {
             // 에러 처리 코드
         }
     });
  	
- 	function updateChart(data){
+ 	function updateChart2(data){
  		var streamer_followers = [];
  		var labels = [];
  		for(var i = 0; i < data.length; i++) {
  			streamer_followers.push(data[i].streamer_followers);
- 			labels.push(data[i].streamer_idx);
+ 			labels.push(data[i].streamer_id);
  		}
  		myChart2.data.datasets[0].data = streamer_followers;
  		
  		myChart2.update();
- 		updateLabels(labels);
+ 		updateLabels2(labels);
  	}
  	
  	// labels 업데이트 함수
-    function updateLabels(newLabels) {
+    function updateLabels2(newLabels) {
         myChart2.data.labels = newLabels;
         myChart2.update();
+    }
+ 	// 세 번째 차트 그리기
+    var labels = [];
+    var ctx3 = document.getElementById('myChart3').getContext('2d');
+    var myChart3 = new Chart(ctx3, {
+        type: 'line',
+        data: {
+        	labels : labels,
+            datasets: [{
+                label: '하루 이용자',
+                fill: false,
+                backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                tension: 0.1,
+                data:[]
+            }]
+        },
+        options: {
+            // 차트 옵션 설정
+        }
+    });
+    
+ 	// AJAX 요청
+    $.ajax({
+        url: 'SiteStatDate',
+        type: "POST",
+        contentType: "application/json",
+        data: JSON.stringify({}),
+        success: function(response) {
+            // 서버로부터 받은 응답을 처리하는 코드
+            updateChart3(response);
+        },
+        error: function(xhr, status, error) {
+            // 에러 처리 코드
+        }
+    });
+ 	
+ 	function updateChart3(data){
+ 		var visit_count = [];
+ 		var labels = [];
+ 		for(var i = 0; i < data.length; i++) {
+ 			visit_count.push(data[i].visit_count);
+ 			labels.push(data[i].site_stat_date);
+ 		}
+ 		myChart3.data.datasets[0].data = visit_count;
+ 		
+ 		myChart3.update();
+ 		updateLabels3(labels);
+ 	}
+ 	
+ 	// labels 업데이트 함수
+    function updateLabels3(newLabels) {
+        myChart3.data.labels = newLabels;
+        myChart3.update();
     }
 	</script>
 
