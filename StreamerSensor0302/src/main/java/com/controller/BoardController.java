@@ -3,9 +3,11 @@ package com.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.beans.BoardInfoBean;
 import com.domain.Board;
 import com.service.BoardService;
 
@@ -18,24 +20,34 @@ public class BoardController {
 	
 	@RequestMapping(value = "")
 	public String boardListPage() {
+		
+		/*
+		 * model.addAttribute("board_idx", board_idx); Board boardlist =
+		 * boardService.getBoardCnt(board_idx); model.addAttribute("boardlist",
+		 * boardlist);
+		 */
 		return "/board/boardList";
 	}
 	
-	@RequestMapping(value = "/board/boardView")
-	public String boardViewPage(Model model, 
-			@RequestParam("board_num") int board_num,
-			@RequestParam("content_idx") int content_idx) {
+	@RequestMapping(value = "/boardView")
+	public String boardViewPage(Model model, @RequestParam("board_idx") int board_idx) {
 		
-		Board data = boardService.getBoard(content_idx);
+		model.addAttribute("board_idx", board_idx);
+		Board data = boardService.getBoardInfo(board_idx);
 		model.addAttribute("data", data);
-		model.addAttribute("board_num", board_num);
 		
 		return "/board/boardView";
 	}
 	
 	@RequestMapping(value = "/boardWrite")
-	public String boardWritePage() {
+	public String boardWritePage(@ModelAttribute("writeBoardInfoBean") BoardInfoBean writeBoardInfoBean) {
+		
 		return "/board/boardWrite";
+	}
+	
+	@RequestMapping(value = "/boardWriteSuccess")
+	public String boardWriteSuccessPage() {
+		return "/board/boardWriteSuccess";
 	}
 	
 	@RequestMapping(value = "/boardModify")
@@ -47,5 +59,6 @@ public class BoardController {
 	public String boardDeletePage() {
 		return "/board/boardDelete";
 	}
+	
 	
 }

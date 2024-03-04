@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var='root' value="${pageContext.request.contextPath }/"/> 
+<c:set var='root' value="${pageContext.request.contextPath }/"/>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,26 +31,26 @@
 
 	<section class="board-write-section">
             <div class="board-write-div">
-                <form action="${root }board" class="board-write-form">
+                <form:form action="${root }board/boardWriteSuccess" class="board-write-form">
                     <table class="table board-write-table">
                        
                         <tr class="board-write-form-info">
                             <td class="write-form-author">작성자</td>
-                            <td class="write-form-author-input "><input type="text" class="write-form-input"></td>
-                            <td class="write-form-password1">비밀번호</td>
-                            <td class="write-form-password1-input"><input type="password" class="write-form-input"></td>
+                            <td class="write-form-author-input "><form:input type="text" class="write-form-input" path="board_write_id"/></td>
+                            <td class="write-form-password1">태그</td>
+                            <td class="write-form-password1-input"><form:input type="text" class="write-form-input" path="board_write_tags"/></td>
                         </tr>
 
                         <tr class="board-write-form-title">
                             <td class="write-form-title-info">제목</td>
                             <td class="write-form-title" colspan="3">
-                                <input type="text" class="write-form-title-input">
+                                <form:input type="text" class="write-form-title-input" path="board_write_title"/>
                             </td>
                         </tr>
 
                         <tr class="board-write-form-content">
                             <td class="write-form-content" colspan="4">
-                                <textarea name="board-write-content" id="board-write-content" cols="160" rows="25" placeholder="내용을 입력하세요"></textarea>
+                                <form:textarea name="board-write-content" id="board-write-content" cols="160" rows="25" placeholder="내용을 입력하세요" path="board_write_info" />
                             </td>
                         </tr>
 
@@ -60,7 +61,7 @@
                             </td>
                         </tr>
                      </table>
-                </form>
+                </form:form>
             </div>
         </section>
         

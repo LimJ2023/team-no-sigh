@@ -34,7 +34,7 @@
                     <table class="table board-view-table">
                         <tr class="table board-view-table-info board-view-table-info-tr">
                             <td class="board-view-table-info info-no">글번호</td>
-                            <td class="board-view-table-info info-no">${data.content_idx }</td>
+                            <td class="board-view-table-info info-no">${data.board_idx }</td>
                             <td class="board-view-table-info info-author info-author-1">작성자</td>
                             <td class="board-view-table-info info-author info-author-2">${data.user_id}</td>
                         	<td class="board-view-table-info info-date">날짜</td>
