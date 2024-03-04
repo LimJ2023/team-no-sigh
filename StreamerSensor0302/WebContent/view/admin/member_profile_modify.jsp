@@ -1,4 +1,4 @@
-	<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var='root' value="${pageContext.request.contextPath }/" />
@@ -8,12 +8,18 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="admin/member_profile_style.css" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 <title>회원 프로필 관리 페이지</title>
-</head>
+</head>	
 <body>
 	<div class="container">
 		<div class="profile-box">
-			<form:form action="${root }admin/modify_pro" method="get"
+			<form:form action="${root }admin/modify_success" method="post"
 				modelAttribute="modifyMemberBean" enctype="multipart/form-data">
 				<div class="memberProfile">
 					<form:label path="upload_file">첨부이미지</form:label>
@@ -40,10 +46,10 @@
 					<form:label path="subscription">구독여부</form:label>
 					<form:input path="subscription" class="form-control" />
 				</div>
-				
+
 				<div class="button">
 					<form:button class="btn btn-primary">수정완료</form:button>
-					<br> <br> <a
+					<br> <a
 						href="${root }member_profile?user_idx=${modifyMemberBean.user_idx}">취소</a>
 				</div>
 			</form:form>
