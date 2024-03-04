@@ -44,84 +44,11 @@
         </div>
         <div class="graphBox2">
           <div class="box3">
-          	<canvas id="myChart3" width="1200" height="500"></canvas>
+          	<canvas id="myChart3" width="1350" height="500"></canvas>
           </div>
         </div>
         <div class="categoryBox1">
-          <div class="category-chart">
-            <div class="tab">
-              <button class="tablinks" id="tab1" onclick="openTab(event, 'Tab1')">Game</button>
-              <button class="tablinks" onclick="openTab(event, 'Tab2')">Real Life</button>
-              <button class="tablinks" onclick="openTab(event, 'Tab3')">Music</button>
-              <button class="tablinks" onclick="openTab(event, 'Tab4')">eSports</button>
-              <button class="tablinks" onclick="openTab(event, 'Tab5')">Creative</button>
-            </div>
-            
-            <div id="Tab1" class="tabcontent">
-              <h1>Game</h1>
-              <table>
-              	 <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Follower</th>
-                    <th>Platform</th>
-                    <th>Membership</th>
-                  </tr>
-              </table>
-            </div>
-            
-            <div id="Tab2" class="tabcontent">
-              <h1>Real Life</h1>
-              <table>
-                <thead>
-                 <tr>
-                   <th>Name</th>
-                   <th>Follower</th>
-                   <th>Platform</th>
-                   <th>Membership</th>
-                 </tr>
-             </table>
-            </div>
-            
-            <div id="Tab3" class="tabcontent">
-              <h1>Music</h1>
-              <table>
-                <thead>
-                 <tr>
-                   <th>Name</th>
-                   <th>Follower</th>
-                   <th>Platform</th>
-                   <th>Membership</th>
-                 </tr>
-             </table>
-            </div>
-            
-            <div id="Tab4" class="tabcontent">
-              <h1>eSports</h1>
-              <table>
-                <thead>
-                 <tr>
-                   <th>Name</th>
-                   <th>Follower</th>
-                   <th>Platform</th>
-                   <th>Membership</th>
-                 </tr>
-             </table>
-            </div>
-            
-            <div id="Tab5" class="tabcontent">
-              <h1>Creative</h1>
-              <table>
-                <thead>
-                 <tr>
-                   <th>Name</th>
-                   <th>Follower</th>
-                   <th>Platform</th>
-                   <th>Membership</th>
-                 </tr>
-             </table>
-            </div>
-          </div>
+          
         </div>
       </main>
       <!-- 메인 종료 -->
@@ -131,36 +58,15 @@
 	  
     </div>
     <!-- 컨테이너 종료 -->
-    <script src="order.js"></script>
-    <script src="index.js"></script>
+    <script src="chart/order.js"></script>
+    <script src="chart/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-      window.onload = function () {
-        document.getElementById('tab1').click();
-      };
-    
-      function openTab(evt, tabName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
-        }
-    
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-    
-        document.getElementById(tabName).style.display = "block";
-        evt.currentTarget.className += " active";
-      }
-	</script>
 	<script>
     // 첫 번째 차트 그리기
     var backgroundColors = [
-    'rgba(255, 99, 132, 1)', // 빨강
-    'rgba(54, 162, 235, 1)',  // 파랑
-    'rgba(255, 206, 86, 1)',  // 노랑
+    'rgba(192, 192, 192, 1)', // 실버
+    'rgba(255, 215, 0, 1)',  // 골드
+    'rgba(205, 127, 50, 1)',  // 노말
     // 추가적으로 필요한 색상들을 여기에 추가할 수 있습니다.
 	];
     var labels = [];
@@ -173,13 +79,19 @@
                 label: '등급 별 수',
                 fill: false,
                 backgroundColor: backgroundColors,
-                //borderColor: 'rgba(255, 99, 132, 1)',
+                borderColor: 'rgba(0, 0, 0, 0)',
                 tension: 0.1,
                 data:[]
             }]
         },
         options: {
-            // 차트 옵션 설정
+            plugins: {
+                legend: {
+                    labels: {
+                        color: 'white' // 텍스트 색상을 여기서 지정하세요
+                    }
+                }
+            }
         }
     });
  // AJAX 요청
@@ -225,13 +137,31 @@
             datasets: [{
                 label: '팔로워 수',
                 fill: false,
-                backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                backgroundColor: 'rgba(100, 149, 237, 1)',
                 tension: 0.1,
                 data:[]
             }]
         },
         options: {
-            // 차트 옵션 설정
+            plugins: {
+                legend: {
+                    labels: {
+                        color: 'white' // 범례의 텍스트 색상 변경
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    ticks: {
+                        color: 'white' // Y 축 텍스트 색상 변경
+                    }
+                },
+                x: {
+                    ticks: {
+                        color: 'white' // X 축 텍스트 색상 변경
+                    }
+                }
+            }
         }
     });
  	// AJAX 요청
@@ -277,13 +207,34 @@
             datasets: [{
                 label: '하루 이용자',
                 fill: false,
-                backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                pointBackgroundColor: 'rgba(178, 34, 34, 1)',
+                pointBorderColor: 'rgba(255, 165, 0, 1)',
+                backgroundColor: 'rgba(255, 165, 0, 1)',
+                borderColor: 'rgba(255, 165, 0, 1)',
                 tension: 0.1,
                 data:[]
             }]
         },
         options: {
-            // 차트 옵션 설정
+            plugins: {
+                legend: {
+                    labels: {
+                        color: 'white' // 범례의 텍스트 색상 변경
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    ticks: {
+                        color: 'white' // Y 축 텍스트 색상 변경
+                    }
+                },
+                x: {
+                    ticks: {
+                        color: 'white' // X 축 텍스트 색상 변경
+                    }
+                }
+            }
         }
     });
     
@@ -321,6 +272,5 @@
         myChart3.update();
     }
 	</script>
-
 </body>
 </html>
