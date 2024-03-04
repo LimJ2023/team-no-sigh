@@ -9,7 +9,7 @@
     --color-text: #202528;
     --color-light: rgba(0, 0, 0, 0.4);
     --color-dark-variant: #a3bdcc;
-    --color-background: #c2c2c2;
+    --color-background: #181a1e;
 
     --card-border-radius: 2rem;
     --border-radius-1: 0.4rem;
@@ -36,6 +36,7 @@ html{
 }
 
 body{
+    margin: auto;
     width: 100vw;
     height: 100vh;
     font-size: 0.88rem;
@@ -47,12 +48,11 @@ body{
 
 button{
     cursor: pointer;
-    color: var(--color-primary);
-    border: 1px solid var(--color-text);
+    color: var(--color-danger);
+    border: 1px solid var(--color-primary);
     border-radius: 5px;
     padding: 3px;
-    background: var(--color-dark);
-    display: block;
+    background: var(--color-text);
     width: 100%;
     border-radius: 5px;
 }
@@ -63,8 +63,8 @@ p {
 
 a{
 	text-align: center;
-    color: var(--color-primary);
-    border: 1px solid var(--color-text);
+    color: var(--color-danger);
+    border: 1px solid var(--color-primary);
     border-radius: 5px;
     padding: 5px;
 }
@@ -72,7 +72,7 @@ a{
 .container{
     top: 150px;
     left: 1.8%;
-    background-color: var(--color-dark);
+    background-color: var(--color-text);
     border-radius: 2.5rem;
     display: flex;
     align-items: center;
@@ -97,6 +97,16 @@ a{
 	text-align: center;
     color: var(--color-primary);
     padding: 5px;
+}
+
+.memberProfile {
+    text-align: center;
+    margin: 10px;
+}
+
+.memberProfile input{
+    border-radius: 1.5rem;
+    width: 50%;
 }
 
 input:disabled{

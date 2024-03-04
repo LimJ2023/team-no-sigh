@@ -5,11 +5,11 @@
     --color-warning: #F7D060;
     --color-white: #202528;
     --color-info-dark: #7d8da1;
-    --color-dark: #fff;
+    --color-dark: #edeffd;
     --color-text: #202528;
     --color-light: rgba(0, 0, 0, 0.4);
     --color-dark-variant: #a3bdcc;
-    --color-background: #c2c2c2;
+    --color-background: #181a1e;
 
     --card-border-radius: 2rem;
     --border-radius-1: 0.4rem;
@@ -73,11 +73,13 @@ h1 {
 h2 {
     font-weight: 600;
     font-size: 1.4rem;
+    color: var(--color-dark);
 }
 
 h3 {
     font-weight: 500;
     font-size: 0.87rem;
+    color: var(--color-dark);
 }
 
 small {
@@ -85,7 +87,7 @@ small {
 }
 
 p {
-    color: var(--color-dark-variant);
+    color: var(--color-dark);
 }
 
 b {
@@ -283,7 +285,7 @@ main .id:hover {
 main .user {
     text-align: center;
     margin-top: 1rem;
-    background-color: var(--color-dark);
+    background-color: var(--color-text);
     padding: 25.2px 15px;
     border-radius: var(--card-border-radius);
     box-shadow: none;
