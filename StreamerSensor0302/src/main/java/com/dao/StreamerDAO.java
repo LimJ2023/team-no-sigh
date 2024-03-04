@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.domain.GradeCount;
+import com.domain.SiteInfo;
 import com.domain.Streamer;
 import com.mapper.StreamerMapper;
 
@@ -20,5 +22,13 @@ public class StreamerDAO {
 	
 	public List<Streamer> getStreamerFollowers() {
 		return streamermapper.getStreamerFollowers();
+	}
+	
+	public List<GradeCount> getGradeCount(){
+		return streamermapper.getGradeCount();
+	}
+	
+	public List<SiteInfo> getSiteStatDate(){
+		return streamermapper.getSiteStatDate();
 	}
 }

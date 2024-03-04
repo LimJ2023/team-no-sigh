@@ -222,7 +222,7 @@ main {
 
 .graphBox1 .box1{
     position: relative;
-    background: #fff;
+    background: #202528;
     padding: 20px;
     width: 300px;
     height: 300px;
@@ -232,7 +232,7 @@ main {
 
 .graphBox1 .box2{
     position: relative;
-    background: #fff;
+    background: #202528;
     padding: 20px;
     width: 900px;
     height: 300px;
@@ -253,10 +253,10 @@ main {
 
 .graphBox2 .box3{
     position: relative;
-    background: #fff;
+    background: #202528;
     padding: 20px;
     width: 1260px;
-    height: 300px;
+    height: 500px;
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
 }
