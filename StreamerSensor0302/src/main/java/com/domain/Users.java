@@ -13,7 +13,7 @@ public class Users {
 	private int user_age;
 	private String user_nation;
 	private String subscription;
-	private String user_image;
+	public String user_image;
 
 	public String getUser_id() {
 		return user_id;
