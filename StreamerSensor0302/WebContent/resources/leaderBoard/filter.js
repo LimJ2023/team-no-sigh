@@ -28,6 +28,7 @@ function filterFunction() {
 }//filterFunction
 
 
+//03030303030303
 function selectFunction() {
 
 	var selected, filter, table, tr, td, i, selectValue;
@@ -38,7 +39,7 @@ function selectFunction() {
 	tr = table.getElementsByTagName("tr");
 
 	for (i = 0; i < tr.length; i++) {
-		td = tr[i].getElementsByTagName('td')[4];
+		td = tr[i].getElementsByTagName('td')[7];
 
 		if (td) {
 			selectValue = td.textContent || td.innerText;
@@ -53,6 +54,9 @@ function selectFunction() {
 	}
 
 }
+
+
+
 
 function filterTitleFunction() {
 
@@ -83,3 +87,17 @@ function filterTitleFunction() {
 
 
 //=======================================
+
+//=====0304 이지수 : 버튼(정렬용) 테스트
+
+function toggleSortAvgViewer(){
+	
+	var currentSortOrder = document.getElementById('currentSortOrder').value;
+	var newSortOrder = currentSortOrder === 'asc' ? 'desc' : 'asc';
+	document.getElementById('currentSortOrder').value = newSortOrder;
+	this.form.submit();
+	
+	
+}
+
+

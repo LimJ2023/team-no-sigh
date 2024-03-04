@@ -491,3 +491,8 @@ header{
 .rankPlace{
 	width: 50px;
 }
+
+
+.blackSpace{
+	z-index: 10;
+}
