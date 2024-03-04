@@ -1,13 +1,13 @@
 package com.domain;
 
-import java.sql.Timestamp;
+import java.sql.Date;
 
 public class SiteInfo {
 	
 	private int stat_id;
 	private int total_revenue;
 	private int visit_count;
-	private Timestamp timestamp;
+	private Date site_stat_date;
 	
 	private double increase_revenue;
 	private double increase_visit;
@@ -38,11 +38,11 @@ public class SiteInfo {
 	public void setVisit_count(int visit_count) {
 		this.visit_count = visit_count;
 	}
-	public Timestamp getTimestamp() {
-		return timestamp;
+	public Date getSite_stat_date() {
+		return site_stat_date;
 	}
-	public void setTimestamp(Timestamp timestamp) {
-		this.timestamp = timestamp;
+	public void setSite_stat_date(Date site_stat_date) {
+		this.site_stat_date = site_stat_date;
 	}
 	public int getStat_id() {
 		return stat_id;

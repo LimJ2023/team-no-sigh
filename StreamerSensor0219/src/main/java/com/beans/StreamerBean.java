@@ -12,6 +12,7 @@ public class StreamerBean {
 	String streamer_status;
 	String streamer_platform;
 	Integer streamer_followers;
+	int grade_count;	
 	
 	public Integer getStreamer_idx() {
 		return streamer_idx;
@@ -54,6 +55,12 @@ public class StreamerBean {
 	}
 	public void setStreamer_followers(Integer streamer_followers) {
 		this.streamer_followers = streamer_followers;
+	}
+	public int getGrade_count() {
+		return grade_count;
+	}
+	public void setGrade_count(int grade_count) {
+		this.grade_count = grade_count;
 	}
 
 }

@@ -9,7 +9,7 @@ public class Streamer {
 	private String streamer_status;
 	private String streamer_platform;
 	private int streamer_followers;
-	
+	private int streamer_img;
 	
 	public int getStreamer_idx() {
 		return streamer_idx;
@@ -53,7 +53,12 @@ public class Streamer {
 	public void setStreamer_followers(int streamer_followers) {
 		this.streamer_followers = streamer_followers;
 	}
-	
+	public int getStreamer_img() {
+		return streamer_img;
+	}
+	public void setStreamer_img(int streamer_img) {
+		this.streamer_img = streamer_img;
+	}
 
 }
 
