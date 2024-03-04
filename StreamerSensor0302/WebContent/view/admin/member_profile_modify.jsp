@@ -21,6 +21,7 @@
 		<div class="profile-box">
 			<form:form action="${root }admin/modify_pro" method="post"
 				modelAttribute="modifyMemberBean" enctype="multipart/form-data">
+			<form:hidden path="user_idx"/>
 				<div class="memberProfile">
 					<form:label path="upload_file">첨부이미지</form:label>
 					<form:input type="file" path="upload_file" class="form-control"
