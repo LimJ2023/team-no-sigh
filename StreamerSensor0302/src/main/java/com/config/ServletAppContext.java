@@ -25,6 +25,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import com.beans.UsersBean;
 import com.domain.Admin;
+import com.httpListener.SessionListener;
 import com.interceptor.CheckLoginInterceptor;
 import com.interceptor.LoginMenuInterceptor;
 import com.mapper.AdminMapper;
@@ -35,8 +36,8 @@ import com.mapper.ReviewMapper;
 import com.mapper.StreamMapper;
 import com.mapper.StreamerMapper;
 import com.mapper.UsersMapper;
+import com.mapper.VisitorMapper;
 import com.service.LoginMenuService;
-
 
 @Configuration
 @EnableWebMvc
@@ -59,12 +60,14 @@ public class ServletAppContext implements WebMvcConfigurer {
 
 	@Resource(name = "adminBean")
 	private Admin adminBean;
-	
-	@Resource(name="loginUserBean")
+
+	@Resource(name = "loginUserBean")
 	private UsersBean loginUserBean;
 	
-	  @Autowired private LoginMenuService loginMenuService;
-	 
+	
+	
+	@Autowired
+	private LoginMenuService loginMenuService;
 
 	// Controller 메서드가 반환하는 jsp 이름 앞뒤에 경로, 확장자 설정
 	@Override
@@ -100,6 +103,7 @@ public class ServletAppContext implements WebMvcConfigurer {
 		SqlSessionFactory factory = factoryBean.getObject();
 		return factory;
 	}
+	
 
 	// 쿼리문 실행을 위한 객체(Mapper 관리)
 	@Bean
@@ -136,34 +140,41 @@ public class ServletAppContext implements WebMvcConfigurer {
 		factoryBean.setSqlSessionFactory(factory);
 		return factoryBean;
 	}
-	
+
 	@Bean
-	   public MapperFactoryBean<LoginMenuMapper> getLoginMenuMapper(SqlSessionFactory factory) throws Exception{
-	      MapperFactoryBean<LoginMenuMapper> factoryBean = new MapperFactoryBean<LoginMenuMapper>(LoginMenuMapper.class);
-	      factoryBean.setSqlSessionFactory(factory);
-	      return factoryBean;
-	   }
-	
+	public MapperFactoryBean<LoginMenuMapper> getLoginMenuMapper(SqlSessionFactory factory) throws Exception {
+		MapperFactoryBean<LoginMenuMapper> factoryBean = new MapperFactoryBean<LoginMenuMapper>(LoginMenuMapper.class);
+		factoryBean.setSqlSessionFactory(factory);
+		return factoryBean;
+	}
+
 	@Bean
-	   public MapperFactoryBean<BoardMapper> getBoardMapper(SqlSessionFactory factory) throws Exception{
-	      MapperFactoryBean<BoardMapper> factoryBean = new MapperFactoryBean<BoardMapper>(BoardMapper.class);
-	      factoryBean.setSqlSessionFactory(factory);
-	      return factoryBean;
-	   }
+	public MapperFactoryBean<BoardMapper> getBoardMapper(SqlSessionFactory factory) throws Exception {
+		MapperFactoryBean<BoardMapper> factoryBean = new MapperFactoryBean<BoardMapper>(BoardMapper.class);
+		factoryBean.setSqlSessionFactory(factory);
+		return factoryBean;
+	}
+
 	@Bean
 	public MapperFactoryBean<StreamMapper> getStreamMapper(SqlSessionFactory factory) throws Exception {
 		MapperFactoryBean<StreamMapper> factoryBean = new MapperFactoryBean<StreamMapper>(StreamMapper.class);
 		factoryBean.setSqlSessionFactory(factory);
 		return factoryBean;
 	}
-
+	@Bean
+	public MapperFactoryBean<VisitorMapper> getVisitorMapper(SqlSessionFactory factory) throws Exception {
+		MapperFactoryBean<VisitorMapper> factoryBean = new MapperFactoryBean<VisitorMapper>(VisitorMapper.class);
+		factoryBean.setSqlSessionFactory(factory);
+		return factoryBean;
+	}
+	
 	// 쿼리를 전달하는 빈 등록
 	@Bean
 	public JdbcTemplate db(BasicDataSource source) {
 		JdbcTemplate db = new JdbcTemplate(source);
 		return db;
 	}
-	
+
 	@Bean
 	public ReloadableResourceBundleMessageSource messageSource() {
 		ReloadableResourceBundleMessageSource res = new ReloadableResourceBundleMessageSource();
@@ -171,13 +182,12 @@ public class ServletAppContext implements WebMvcConfigurer {
 		res.setBasenames("/WEB-INF/properties/error_message");
 		return res;
 	}
-	
+
 	@Bean
 	public static PropertySourcesPlaceholderConfigurer PropertySourcesPlaceholderConfigurer() {
 		return new PropertySourcesPlaceholderConfigurer();
 	}
-	
-	
+
 	@Bean
 	public StandardServletMultipartResolver multipartResolver() {
 		return new StandardServletMultipartResolver();
@@ -186,19 +196,17 @@ public class ServletAppContext implements WebMvcConfigurer {
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 		WebMvcConfigurer.super.addInterceptors(registry);
-		
-		
-		  LoginMenuInterceptor loginMenuInterceptor = new
-				  LoginMenuInterceptor(loginMenuService,loginUserBean);
-		 
-		  InterceptorRegistration reg1 = registry.addInterceptor(loginMenuInterceptor);
-		  reg1.addPathPatterns("/**"); //모든 요청 주소에 동작(실행)
-		 		
+
+		LoginMenuInterceptor loginMenuInterceptor = new LoginMenuInterceptor(loginMenuService, loginUserBean);
+
+		InterceptorRegistration reg1 = registry.addInterceptor(loginMenuInterceptor);
+		reg1.addPathPatterns("/**"); // 모든 요청 주소에 동작(실행)
+
 		CheckLoginInterceptor checkLoginInterceptor = new CheckLoginInterceptor(loginUserBean);
 		InterceptorRegistration reg2 = registry.addInterceptor(checkLoginInterceptor);
 		reg2.addPathPatterns("/user/myPage", "/user/logout");
 		reg2.excludePathPatterns("/board/main");
 		
-		
+
 	}
 }

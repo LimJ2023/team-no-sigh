@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.domain.Admin;
+import com.domain.Review;
 import com.domain.SiteInfo;
 import com.domain.Users;
 import com.service.AdminService;
@@ -27,26 +28,18 @@ public class AdminController {
 	@RequestMapping(value = "/admin")
 	public String adminPage(Model model) {
 		
-		/*
-		 * Admin admin = adminService.getAdmin(); 
-		 * SiteInfo info = adminService.getSiteInfo(); 
-		 * Users user = usersService.getUsers(); List<Users>
-		 * subUsers = usersService.getSubUsers(); 
-		 * Review review = reviewService.getRecentReview();
-		 * 
-		 * model.addAttribute("admin", admin); model.addAttribute("info",info);
-		 * model.addAttribute("user", user); model.addAttribute("review", review);
-		 * model.addAttribute("subUsers", subUsers);
-		 */
 		
 		Admin admin = adminService.getAdmin();
 		SiteInfo info = adminService.getSiteInfo();
 		Users user = usersService.getUsers();
-		List<Users> subUsers = usersService.getSubUsers(); 
+		List<Users> subUsers = usersService.getSubUsers();
+		Review review = reviewService.getRecentReview();
+		
 		model.addAttribute("admin", admin);
 		model.addAttribute("info",info);
 		model.addAttribute("user", user);
 		model.addAttribute("subUsers",subUsers);
+		model.addAttribute("review", review);
 		
 		return "/admin/dashBoard";
 	}

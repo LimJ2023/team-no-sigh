@@ -8,6 +8,12 @@ public class StreamInfo {
 	private String writing_data;
 	private String img_url;
 	
+	private long viewCount;
+	private long likesCount;
+	
+	
+	
+	
 	
 	public String getUser_id() {
 		return user_id;
@@ -38,6 +44,18 @@ public class StreamInfo {
 	}
 	public void setImg_url(String img_url) {
 		this.img_url = img_url;
+	}
+	public long getViewCount() {
+		return viewCount;
+	}
+	public void setViewCount(long viewCount) {
+		this.viewCount = viewCount;
+	}
+	public long getLikesCount() {
+		return likesCount;
+	}
+	public void setLikesCount(long likesCount) {
+		this.likesCount = likesCount;
 	}
 	
 	

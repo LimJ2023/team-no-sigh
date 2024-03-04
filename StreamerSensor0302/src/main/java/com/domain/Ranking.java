@@ -41,6 +41,8 @@ public class Ranking {
 	private long likes;
 	private long comments;
 	private int daily_viewers;
+	
+	
 	public int getRanking_id() {
 		return ranking_id;
 	}

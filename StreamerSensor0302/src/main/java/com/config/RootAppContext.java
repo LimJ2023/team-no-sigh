@@ -6,6 +6,7 @@ import org.springframework.web.context.annotation.SessionScope;
 
 import com.beans.UsersBean;
 import com.domain.Admin;
+import com.httpListener.SessionListener;
 
 @Configuration
 public class RootAppContext {
@@ -21,4 +22,5 @@ public class RootAppContext {
 	public UsersBean loginUserBean() {
 		return new UsersBean();
 	}
+	
 }

@@ -53,7 +53,8 @@
 					<div class="status">
 						<div class="info">
 							<h3>사이트 방문수</h3>
-							<h1>${info.visit_count}</h1>
+							<h1>누적 : ${info.visit_count}</h1>
+							<h1>오늘 : ${visitorCount }</h1>
 						</div>
 						<div class="progress">
 							<svg>
@@ -72,7 +73,7 @@
 						<h3>제목 : ${review.streaming_description }</h3>
 					</div>
 					<div class="content">
-						<img src="img/thumbnail/${review.img_url}.png">
+						<img src="${review.img_url}">
 					</div>
 				</div>
 				<!-- <div class="searches">
