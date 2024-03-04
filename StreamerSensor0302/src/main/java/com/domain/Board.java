@@ -1,8 +1,7 @@
 package com.domain;
 
 public class Board {
-	private int content_idx;
-	 private int board_num;
+	 private int board_idx;
 	 private String user_id;
 	 private String title;
 	 private String info;
@@ -11,11 +10,11 @@ public class Board {
 	 private int comment_count;
 	 private String tags;
 	 
-	public int getBoard_num() {
-		return board_num;
+	public int getBoard_idx() {
+		return board_idx;
 	}
-	public void setBoard_num(int board_num) {
-		this.board_num = board_num;
+	public void setBoard_idx(int board_idx) {
+		this.board_idx = board_idx;
 	}
 	public String getUser_id() {
 		return user_id;
@@ -58,12 +57,6 @@ public class Board {
 	}
 	public void setTags(String tags) {
 		this.tags = tags;
-	}
-	public int getContent_idx() {
-		return content_idx;
-	}
-	public void setContent_idx(int content_idx) {
-		this.content_idx = content_idx;
 	}
 	
 }

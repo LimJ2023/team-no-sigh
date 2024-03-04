@@ -41,19 +41,26 @@
 
 				
 				<tbody class="board-table-tbody">
-					<%-- <c:forEach var="obj" items="${boardlist}">
+					<c:forEach var="obj" items="${boardlist}">
 						<tr class="tr board-table-tbody-tr">
-							<td class="board-table-tbody-td td-no">${obj.board_num}</td>
-							<td class="board-table-tbody-td td-title"><a href="${root}board/boardView?board_num=1&content_idx=1">${.title}</a></td>
+							<td class="board-table-tbody-td td-no">${obj.board_idx}</td>
+							<td class="board-table-tbody-td td-title"><a href="${root}board/boardView?board_idx=${board_idx}">${obj.title}</a></td>
 							<td class="board-table-tbody-td td-author">${obj.user_id}</td>
 							<td class="board-table-tbody-td td-date">${obj.board_date}</td>
 							<td class="board-table-tbody-td td-clicks">${obj.data.view_count}</td>
 						</tr>
-					</c:forEach> --%>
+					</c:forEach>
 					
 					<tr class="tr board-table-tbody-tr">
 						<td class="board-table-tbody-td td-no">4</td>
-						<td class="board-table-tbody-td td-title"><a href="${root}board/boardView?board_num=1&content_idx=1">제목샘플입니다4</a></td>
+						<td class="board-table-tbody-td td-title"><a href="${root}board/boardView?board_idx=1">제목샘플입니다4</a></td>
+						<td class="board-table-tbody-td td-author">이이름4</td>
+						<td class="board-table-tbody-td td-date">2024-02-15</td>
+						<td class="board-table-tbody-td td-clicks">조회4</td>
+					</tr>
+					<tr class="tr board-table-tbody-tr">
+						<td class="board-table-tbody-td td-no">4</td>
+						<td class="board-table-tbody-td td-title"><a href="${root}board/boardView?board_idx=2">이거는?</a></td>
 						<td class="board-table-tbody-td td-author">이이름4</td>
 						<td class="board-table-tbody-td td-date">2024-02-15</td>
 						<td class="board-table-tbody-td td-clicks">조회4</td>
