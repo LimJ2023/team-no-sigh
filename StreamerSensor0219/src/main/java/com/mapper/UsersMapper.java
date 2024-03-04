@@ -10,8 +10,8 @@ import org.apache.ibatis.annotations.Update;
 import com.beans.UsersBean;
 import com.domain.Users;
 
-public interface UsersMapper {
-	
+public interface UserMapper {
+
 	@Select("SELECT * "
 			+ "FROM users "
 			+ "WHERE user_idx = #{user_idx}")

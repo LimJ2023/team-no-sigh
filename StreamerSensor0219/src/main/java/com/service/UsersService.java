@@ -30,8 +30,8 @@ public class UsersService {
 	@Resource(name = "loginUserBean")
 	private UsersBean loginUserBean;
 	
-	@Resource(name = ("selectUserImage"))
-	private Users selectUserImage;
+	@Resource(name = "selectUserBean")
+	private Users selectUserBean;
 
 	public Users getUsers() {
 		Users usersBean = new Users();
