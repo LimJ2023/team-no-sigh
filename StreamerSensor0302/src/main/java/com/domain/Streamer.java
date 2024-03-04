@@ -11,7 +11,7 @@ public class Streamer {
 	private String streamer_platform;
 	private int streamer_followers;
 	private String streamer_img;
-	
+	private String img_url;
 	private String channel_title;
 	private long channel_video_count;
 	private long channel_subscriber_count;
@@ -101,6 +101,12 @@ public class Streamer {
 		this.channel_id = channel_id;
 	}
 	//=======
+	public String getImg_url() {
+		return img_url;
+	}
+	public void setImg_url(String img_url) {
+		this.img_url = img_url;
+	}
 
 }
 
