@@ -71,7 +71,11 @@
 					class="board-menu-button">삭제하기</a>
 				<!-- 임시로 a링크로 바꿈 -->
 				<!-- <button type="button" class="board-menu-button button-edit" onclick="location.href=board/boardModify">수정하기</button>
-                        <button type="button" class="board-menu-button button-delete" onclick="location.href=board/boardDelete">삭제하기</button> -->
+           <section class="board-bottom-menu-section">
+                <div class="board-bottom-menu">
+                    <div class="board-bottom-menu-div1 board-menu-button">
+                    <a href="${root}board">목록으로</a>			<!-- 임시로 a링크로 바꿈 -->
+                        <!-- <button type="button" class="board-menu-button button-list" onclick="location.href=board/boardList">목록으로</button> -->
 			</div>
 		</div>
 	</section>

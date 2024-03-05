@@ -15,7 +15,7 @@ public class ReviewDAO {
 	@Autowired
 	ReviewMapper mapper;
 	
-	public List<Review> getReviews(){
+	public List<Review> getAllReviews(){
 		return mapper.getAllReviews();
 	}
 	public List<Review> getRecentReview() {
@@ -28,5 +28,8 @@ public class ReviewDAO {
 	
 	public List<StreamerRating> getRatingListByStreamerIdx(int streamer_idx){
 		return mapper.getRatingListByStreamerIdx(streamer_idx);
+	}
+	public int getCommentCount(int streamer_idx) {
+		return mapper.getCommentCount(streamer_idx);
 	}
 }
