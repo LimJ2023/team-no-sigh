@@ -3,6 +3,8 @@ package com.beans;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class UsersBean {
 
    // 초기값
@@ -11,6 +13,7 @@ public class UsersBean {
       this.userLogin = false;
    }
 
+   private MultipartFile upload_file;
    private int user_idx;
 
 	@Size(min = 2, max = 4)
@@ -144,6 +147,14 @@ public String getUser_image() {
 
 public void setUser_image(String user_image) {
 	this.user_image = user_image;
+}
+
+public MultipartFile getUpload_file() {
+	return upload_file;
+}
+
+public void setUpload_file(MultipartFile upload_file) {
+	this.upload_file = upload_file;
 }
 
 }
