@@ -47,9 +47,6 @@
           	<canvas id="myChart3" style="width: 1200px; height: 100%;"></canvas>
           </div>
         </div>
-        <div class="categoryBox1">
-          
-        </div>
       </main>
       <!-- 메인 종료 -->
 
