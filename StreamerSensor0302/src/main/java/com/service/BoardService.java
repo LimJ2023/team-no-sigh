@@ -1,5 +1,7 @@
 package com.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,9 +15,8 @@ public class BoardService {
 	@Autowired
 	BoardDAO boardDAO;
 	
-	public Board getBoardInfo(int board_idx) {
-		Board boardBean = new Board();
-		boardBean = boardDAO.getBoardInfo(board_idx);
+	public List<Board> getBoardInfo() {
+		List<Board> boardBean = boardDAO.getBoardInfo();
 		return boardBean;
 		
 	}
@@ -25,11 +26,15 @@ public class BoardService {
 	 * boardlist = boardDAO.getBoardCnt(board_idx); return boardlist; }
 	 */
 	
-	public void addBoardInfo(BoardInfoBean writeBoardInfoBean) {
+	public void addBoardInfo(BoardInfoBean writeBoardBean) {
 	      
-	      System.out.println(writeBoardInfoBean.getBoard_write_info());
-	      System.out.println(writeBoardInfoBean.getBoard_write_id());
+	      System.out.println(writeBoardBean.getBoard_write_info());
+	      System.out.println(writeBoardBean.getBoard_write_id());
 	      
-	      boardDAO.addBoardInfo(writeBoardInfoBean);
+	      boardDAO.addBoardInfo(writeBoardBean);
+	}
+	
+	public void deleteBoardInfo(int board_idx) {
+		boardDAO.deleteBoardInfo(board_idx);
 	}
 }

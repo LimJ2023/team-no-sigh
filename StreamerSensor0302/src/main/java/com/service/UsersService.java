@@ -30,7 +30,6 @@ public class UsersService {
 	@Resource(name = "loginUserBean")
 	private UsersBean loginUserBean;
 
-
 	@Resource(name = "selectUserImage")
 	private Users selectUserImage;
 
@@ -62,7 +61,7 @@ public class UsersService {
 		return result;
 
 	}
-	
+
 	public boolean checkuserIdExist(String user_id) {
 
 		String user_name = uDAO.checkUserIdExist(user_id);
@@ -96,11 +95,12 @@ public class UsersService {
 		modifyUserBean.setUser_name(tempModifyUserBean.getUser_name());
 		modifyUserBean.setUser_idx(loginUserBean.getUser_idx());
 	}
+
 	public void modifyUserInfo(UsersBean modifyUserBean) {
 		modifyUserBean.setUser_idx(loginUserBean.getUser_idx());
 		uDAO.modifyUserInfo(modifyUserBean);
 	}
-	
+
 	// ============================================================================================
 
 	public void deleteMemberInfo(int user_idx) {
