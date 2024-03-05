@@ -10,9 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.beans.BoardInfoBean;
 import com.domain.Board;
-import com.mapper.BoardMapper;
 import com.service.BoardService;
 
 @Controller
@@ -24,10 +22,10 @@ public class BoardController {
 
 	@RequestMapping(value = "")
 	public String boardListPage(Model model) {
-		
+
 		List<Board> board = boardService.getBoardInfo();
 		model.addAttribute("board", board);
-		
+
 		return "/board/boardList";
 	}
 
@@ -42,13 +40,21 @@ public class BoardController {
 	}
 
 	@RequestMapping(value = "/boardWrite")
-	public String boardWritePage(@ModelAttribute("writeBoardBean") BoardInfoBean writeBoardBean) {
+	public String boardWritePage(@ModelAttribute("writeBoardBean") Board writeBoardBean, 
+			/* @RequestParam("board_idx")int board_idx, */Model model) {
+
+		//model.addAttribute("board_idx", board_idx);
+		
+		//Board board = boardService.selectOneBoard(board_idx);
+		//model.addAttribute("board", board);
+		
+		//writeBoardBean.setBoard_idx(board_idx);
+
 		return "/board/boardWrite";
 	}
 
 	@RequestMapping(value = "/boardWriteSuccess")
-	public String boardWriteSuccessPage(@ModelAttribute("writeBoardBean") BoardInfoBean writeBoardBean,
-			BindingResult result) {
+	public String boardWriteSuccessPage(@ModelAttribute("writeBoardBean") Board writeBoardBean, BindingResult result) {
 		if (result.hasErrors()) {
 			return "board/write";
 		}
