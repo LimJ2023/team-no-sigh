@@ -77,9 +77,7 @@
 			</div>
 
 			<div class="board_write">
-				<form action="${root }board/boardWrite" method="post">
-					<button type="submit" class="board-write-button">글쓰기</button>
-				</form>
+				<a href="${root }board/boardWrite">글쓰기</a>
 			</div>
 		</div>
 
