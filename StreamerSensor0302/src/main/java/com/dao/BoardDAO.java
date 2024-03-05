@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.beans.BoardInfoBean;
 import com.domain.Board;
 import com.mapper.BoardMapper;
 
@@ -28,7 +27,7 @@ public class BoardDAO {
 		return boardMapper.selectOneBoard(board_idx);
 	}
 	
-	public void addBoardInfo(BoardInfoBean writeBoardBean) {
+	public void addBoardInfo(Board writeBoardBean) {
 		boardMapper.addBoardInfo(writeBoardBean);
 	}
 	

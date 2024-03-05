@@ -29,29 +29,32 @@
 	<section class="board-write-section">
 		<div class="board-write-div">
 			<form:form action="${root }board/boardWriteSuccess"
-				class="board-write-form">
+				class="board-write-form" modelAttribute="writeBoardBean">
+				<form:hidden path="board_idx" />
 				<table class="table board-write-table">
 
 					<tr class="board-write-form-info">
 						<td class="write-form-author">작성자</td>
-						<td class="write-form-author-input "><form:input type="text"
-								class="write-form-input" path="board_write_id" /></td>
+						<td class="write-form-author-input ">
+							<form:input type="text" class="write-form-input" path="user_id" />
+						</td>
 						<td class="write-form-password1">태그</td>
-						<td class="write-form-password1-input"><form:input
-								type="text" class="write-form-input" path="board_write_tags" /></td>
+						<td class="write-form-password1-input">
+							<form:input type="text" class="write-form-input" path="tags" />
+						</td>
 					</tr>
 
 					<tr class="board-write-form-title">
 						<td class="write-form-title-info">제목</td>
 						<td class="write-form-title" colspan="3"><form:input
-								type="text" class="write-form-title-input"
-								path="board_write_title" /></td>
+								type="text" class="write-form-title-input" path="title" /></td>
 					</tr>
 
 					<tr class="board-write-form-content">
-						<td class="write-form-content" colspan="4"><form:textarea
-								name="board-write-content" id="board-write-content" cols="160"
-								rows="25" placeholder="내용을 입력하세요" path="board_write_info" /></td>
+						<td class="write-form-content" colspan="4">
+							<form:textarea name="board-write-content" id="board-write-content" cols="160"
+										   rows="25" placeholder="내용을 입력하세요" path="info" />
+						</td>
 					</tr>
 
 

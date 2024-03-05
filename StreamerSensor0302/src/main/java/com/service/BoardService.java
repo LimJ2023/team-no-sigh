@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.beans.BoardInfoBean;
 import com.dao.BoardDAO;
 import com.domain.Board;
 
@@ -30,11 +29,7 @@ public class BoardService {
 		return boardDAO.selectOneBoard(board_idx);
 	}
 	
-	public void addBoardInfo(BoardInfoBean writeBoardBean) {
-	      
-	      System.out.println(writeBoardBean.getBoard_write_info());
-	      System.out.println(writeBoardBean.getBoard_write_id());
-	      
+	public void addBoardInfo(Board writeBoardBean) {	      
 	      boardDAO.addBoardInfo(writeBoardBean);
 	}
 	

@@ -35,9 +35,13 @@
                        
                         <tr class="board-write-form-info">
                             <td class="write-form-author">작성자</td>
-                            <td class="write-form-author-input "><input type="text" class="write-form-input" placeholder="이이름5"></td>
+                            <td class="write-form-author-input ">
+                            	<input type="text" class="write-form-input" placeholder="이이름5">
+                            </td>
                             <td class="write-form-password1">비밀번호</td>
-                            <td class="write-form-password1-input"><input type="password" class="write-form-input" placeholder="**********"></td>
+                            <td class="write-form-password1-input">
+                            	<input type="password" class="write-form-input" placeholder="**********">
+                            </td>
                         </tr>
 
                         <tr class="board-write-form-title">

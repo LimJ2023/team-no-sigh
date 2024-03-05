@@ -268,15 +268,13 @@ header{
 }
 
 #board-write-content{
-   
     background-color: rgba(86,96,120,0.5);
     border: none;
     font-size: 15px;
     color: white;
     padding: 10px;
-
     border-radius: 5px;
-
+    resize: none;
 }
 
 .write-form-title-input{
