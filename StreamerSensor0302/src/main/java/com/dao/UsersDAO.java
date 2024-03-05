@@ -32,19 +32,19 @@ public class UsersDAO {
 		return mapper.checkUserIdExist(user_id);
 	}
 
-	public void addUserInfo(UsersBean joinUserBean) {
+	public void addUserInfo(Users joinUserBean) {
 		mapper.addUserInfo(joinUserBean);
 	}
 
-	public UsersBean getLoginUserInfo(UsersBean tempLoginUserBean) {
+	public Users getLoginUserInfo(Users tempLoginUserBean) {
 		return mapper.getLoginUserInfo(tempLoginUserBean);
 	}
 
-	public UsersBean getmodifyUserinfo(int user_idx) {
+	public Users getmodifyUserinfo(int user_idx) {
 		return mapper.getmodifyUserinfo(user_idx);
 	}
 
-	public void modifyUserInfo(UsersBean modifyUserBean) {
+	public void modifyUserInfo(Users modifyUserBean) {
 		mapper.modifyUserInfo(modifyUserBean);
 	}
 	

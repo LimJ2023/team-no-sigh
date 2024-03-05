@@ -45,7 +45,7 @@
                     <div class="profile-photo">
                         <img src="">
                     </div>
-                    <h5>chuhua</h5>
+                    <h5>${users.user_id }</h5>
                     <span></span>
                 </div>
                 <button id="menu-btn">
@@ -71,7 +71,7 @@
                     <i class='bx bxs-movie-play' ></i>
                     <h4>구독</h4>
                 </a>
-                <a href="account.html">
+                <a href="${root }user/account">
                     <i class='bx bxs-user-detail' ></i>
                     <h4>계정</h4>
                 </a>
@@ -79,7 +79,7 @@
                     <i class='bx bxs-dashboard' ></i>
                     <h4>Mypage</h4>
                 </a>
-                <a href="#">
+                <a href="${root }user/logout">
                     <i class='bx bx-log-out'></i>
                     <h4>로그아웃</h4>
                 </a>

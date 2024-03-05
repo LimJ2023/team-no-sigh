@@ -1,19 +1,54 @@
 package com.domain;
 
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
 import org.springframework.web.multipart.MultipartFile;
 
 public class Users {
 
-	private MultipartFile upload_file;
-	private int user_idx;
-	private String user_id;
-	private String user_pw;
-	private String user_name;
-	private String user_gender;
-	private int user_age;
-	private String user_nation;
-	private String subscription;
-	public String user_image;
+	public Users() {
+	      this.userIdExist = false;
+	      this.userLogin = false;
+	   }
+
+	   private MultipartFile upload_file;
+	   private int user_idx;
+
+		@Size(min = 2, max = 4)
+		@Pattern(regexp = "[가-힣]*") // 한글 문자
+		// =한글로 써라.
+		private String user_name;
+
+		@Size(min = 2, max = 20)
+		@Pattern(regexp = "[a-zA-Z0-9]*") // 영어 또는 숫자만
+		private String user_id;
+
+		@Size(min = 2, max = 20)
+		@Pattern(regexp = "[a-zA-Z0-9]*")
+		private String user_pw;
+
+		@Size(min = 2, max = 20)
+		@Pattern(regexp = "[a-zA-Z0-9]*")
+		private String user_pw2;
+		
+		private String user_gender; //성별
+		
+		private int user_age; //나이
+		
+		private String user_nation; //국적
+		
+		
+		private String user_image; //사용자 이미지
+		
+		
+
+		private boolean userIdExist; // 아이디가 존재하는지
+
+		private boolean userLogin; // 로그인이 되었는지 로그인 유무
+
+	   //0304 이지수
+	   private String subscription;
 
 	public String getUser_id() {
 		return user_id;
@@ -93,6 +128,30 @@ public class Users {
 
 	public void setUser_image(String user_image) {
 		this.user_image = user_image;
+	}
+
+	public String getUser_pw2() {
+		return user_pw2;
+	}
+
+	public void setUser_pw2(String user_pw2) {
+		this.user_pw2 = user_pw2;
+	}
+
+	public boolean isUserIdExist() {
+		return userIdExist;
+	}
+
+	public void setUserIdExist(boolean userIdExist) {
+		this.userIdExist = userIdExist;
+	}
+
+	public boolean isUserLogin() {
+		return userLogin;
+	}
+
+	public void setUserLogin(boolean userLogin) {
+		this.userLogin = userLogin;
 	}
 
 }
