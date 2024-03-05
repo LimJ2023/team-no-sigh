@@ -19,8 +19,8 @@ public class RootAppContext {
 	
 	@Bean("loginUserBean")
 	@SessionScope
-	public UsersBean loginUserBean() {
-		return new UsersBean();
+	public Users loginUserBean() {
+		return new Users();
 	}
 	
 	@Bean("selectUserImage")

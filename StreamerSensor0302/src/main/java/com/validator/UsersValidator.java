@@ -4,6 +4,7 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
 import com.beans.UsersBean;
+import com.domain.Users;
 
 public class UsersValidator implements Validator {
 
@@ -14,7 +15,7 @@ public class UsersValidator implements Validator {
 
 	@Override
 	public void validate(Object target, Errors errors) {
-		UsersBean usersBean = (UsersBean)target;
+		Users usersBean = (Users)target;
 		
 		String beanName=errors.getObjectName();
 		//System.out.println(beanName);
