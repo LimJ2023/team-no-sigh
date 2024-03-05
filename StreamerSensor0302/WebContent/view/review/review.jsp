@@ -53,7 +53,7 @@
 						<div class="recentComments_item">
 							<div class="cmt_wrap">
 								<div class="profile_area">
-									<img src="img/user_profile/${rating.user_image }.png">
+									<img src="img/user_profile/${rating.img_url }.png">
 								</div>
 								<div class="cont_area">
 									<div class="cmt_head">${rating.user_name} / date :
@@ -103,7 +103,9 @@
 
 						<div class="streaming_item">
 							<div class="streaming_img">
-								<img src="img/thumbnail/${stream.img_url}.png">
+								<a href="${stream.streaming_url }">
+									<img src="img/thumbnail/${stream.img_url}.png">
+								</a>
 							</div>
 							<div class="streaming_info">
 								<div class="streaming_desc">

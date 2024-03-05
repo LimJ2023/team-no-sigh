@@ -3,7 +3,8 @@ package com.domain;
 public class StreamInfo {
 	
 	private String user_id;
-	private String strm_id;
+	private String streamer_id;
+	private String streaming_url;
 	private String streaming_description;
 	private String writing_data;
 	private String img_url;
@@ -20,12 +21,6 @@ public class StreamInfo {
 	}
 	public void setUser_id(String user_id) {
 		this.user_id = user_id;
-	}
-	public String getStrm_id() {
-		return strm_id;
-	}
-	public void setStrm_id(String strm_id) {
-		this.strm_id = strm_id;
 	}
 	public String getWriting_data() {
 		return writing_data;
@@ -56,6 +51,18 @@ public class StreamInfo {
 	}
 	public void setLikesCount(long likesCount) {
 		this.likesCount = likesCount;
+	}
+	public String getStreamer_id() {
+		return streamer_id;
+	}
+	public void setStreamer_id(String streamer_id) {
+		this.streamer_id = streamer_id;
+	}
+	public String getStreaming_url() {
+		return streaming_url;
+	}
+	public void setStreaming_url(String streaming_url) {
+		this.streaming_url = streaming_url;
 	}
 	
 	

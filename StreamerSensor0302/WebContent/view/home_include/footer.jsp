@@ -21,7 +21,7 @@
 				</div>
 				<div class="footerCol footerCol2">
 					<ul>
-						<li><a href="#">About Us</a></li>
+						<li><a href="admin">About Us</a></li>
 						<li><a href="#">Privacy Policy</a></li>
 						<li><a href="#">Q&A</a></li>
 					</ul>

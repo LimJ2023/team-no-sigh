@@ -16,7 +16,9 @@ public interface StreamMapper {
 	List<StreamInfo> getAllStreamInfo();
 	
 	//원하는 스트리머의 방송 정보 가져오기. idx로 구별
-		@Select("SELECT i.streaming_description, i.streaming_url, i.streaming_time, c.categorys, i.streaming_date, m.img_url "
+		@Select("SELECT i.streaming_description, i.streaming_url, i.streaming_time, "
+				+ "c.categorys, i.streaming_date, m.img_url, "
+				+ "i.streaming_url, i.streamer_id "
 				+ "from streaming_info i "
 				+ "INNER JOIN streamer s ON i.streamer_id = s.streamer_id "
 				+ "inner join streaming_img m on i.img_id = m.img_id "

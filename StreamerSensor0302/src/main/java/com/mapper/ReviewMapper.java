@@ -36,10 +36,11 @@ public interface ReviewMapper {
 			+ "#{rating_comment}, sysdate)")
 	void insertStreamerRating(StreamerRating rating);
 	
-	@Select("SELECT u.user_name, u.user_image, r.streamer_idx, r.streamer_rating, r.rating_comment, r.streamer_rating_date "
+	@Select("SELECT u.user_name, i.img_url, r.streamer_idx, r.streamer_rating, r.rating_comment, r.streamer_rating_date "
 			+ "FROM streamer_rating r "
 			+ "INNER JOIN users u ON u.user_idx = r.user_idx "
-			+ "WHERE streamer_idx = #{streamer_idx}")
+			+ "INNER JOIN streaming_img i ON i.img_id = u.user_image "
+			+ "WHERE r.streamer_idx = #{streamer_idx}")
 	List<StreamerRating> getRatingListByStreamerIdx(int streamer_idx);
 	
 	@Select("SELECT COUNT(*) "

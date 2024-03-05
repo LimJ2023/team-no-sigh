@@ -49,11 +49,11 @@ public class ReviewController {
 	public String review_pro(@ModelAttribute("streamerRating") StreamerRating streamerRating,
 							Model model) {
 		
-		int user_idx = streamerRating.getUser_idx();
+		int user_idx = 5;
 		int streamer_idx = streamerRating.getStreamer_idx();
 		
 		
-		model.addAttribute("user_idx", 5);
+		model.addAttribute("user_idx", user_idx);
 		model.addAttribute("streamer_idx",streamer_idx);
 		//인서트 문으로 db에 스트리머에 대한 평가와 별점, 날짜 입력하기
 		reviewService.insertStreamerRating(user_idx, streamer_idx, streamerRating);
