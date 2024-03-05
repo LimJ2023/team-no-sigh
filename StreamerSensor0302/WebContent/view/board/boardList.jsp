@@ -45,7 +45,7 @@
 						<tr class="tr board-table-tbody-tr">
 							<td class="board-table-tbody-td td-no">${obj.board_idx}</td>
 							<td class="board-table-tbody-td td-title">
-								<a href="${root}board/boardView?board_idx=${board_idx}">${obj.title}</a>
+								<a href="${root}board/boardView?board_idx=${obj.board_idx}">${obj.title}</a>
 							</td>
 							<td class="board-table-tbody-td td-author">${obj.user_id}</td>
 							<td class="board-table-tbody-td td-date">${obj.board_date}</td>
