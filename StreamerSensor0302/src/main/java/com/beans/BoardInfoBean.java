@@ -7,6 +7,8 @@ public class BoardInfoBean {
 	private String board_write_info;
 	private String board_write_date;
 	private String board_write_tags;
+	private int board_view_count;
+	private int board_comment_count;
 	
 	public int getBoard_write_idx() {
 		return board_write_idx;
@@ -43,6 +45,18 @@ public class BoardInfoBean {
 	}
 	public void setBoard_write_tags(String board_write_tags) {
 		this.board_write_tags = board_write_tags;
+	}
+	public int getBoard_view_count() {
+		return board_view_count;
+	}
+	public void setBoard_view_count(int board_view_count) {
+		this.board_view_count = board_view_count;
+	}
+	public int getBoard_comment_count() {
+		return board_comment_count;
+	}
+	public void setBoard_comment_count(int board_comment_count) {
+		this.board_comment_count = board_comment_count;
 	}
 	
 	

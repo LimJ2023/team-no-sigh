@@ -43,7 +43,6 @@ public class BoardController {
 
 	@RequestMapping(value = "/boardWrite")
 	public String boardWritePage(@ModelAttribute("writeBoardBean") BoardInfoBean writeBoardBean) {
-
 		return "/board/boardWrite";
 	}
 
@@ -64,7 +63,6 @@ public class BoardController {
 
 	@RequestMapping(value = "/boardDelete")
 	public String boardDeletePage(@RequestParam("board_idx") int board_idx, Model model) {
-
 		boardService.deleteBoardInfo(board_idx);
 		return "/board/boardDelete";
 	}

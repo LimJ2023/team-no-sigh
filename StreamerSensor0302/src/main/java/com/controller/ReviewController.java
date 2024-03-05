@@ -25,8 +25,6 @@ public class ReviewController {
 						@RequestParam("streamer_idx") int streamer_idx, 
 						Model model) {
 		
-		
-		
 		streamerRating.setStreamer_idx(streamer_idx);
 		
 		Streamer streamer = reviewService.getStreamerByIdx(streamer_idx);
@@ -38,6 +36,9 @@ public class ReviewController {
 		
 		List<StreamerRating> ratingList = reviewService.getRatingListByStreamerIdx(streamer_idx);
 		model.addAttribute("ratingList",ratingList);
+		
+		int commentCount = reviewService.getCommentCount(streamer_idx);
+		model.addAttribute("commentCount",commentCount);
 		
 		model.addAttribute("streamer_idx",streamer_idx);
 		

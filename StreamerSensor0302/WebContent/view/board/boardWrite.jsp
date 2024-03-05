@@ -54,6 +54,7 @@
 								rows="25" placeholder="내용을 입력하세요" path="board_write_info" /></td>
 					</tr>
 
+
 					<tr class="board-write-form-end">
 						<td class="board-write-form-end-td" colspan="4"><a
 							href="${root }board" class="write-button-toList write-button">목록으로</a>

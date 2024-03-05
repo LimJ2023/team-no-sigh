@@ -4,18 +4,13 @@ public class StreamerRating {
 
 	private int user_idx;
 	private int streamer_idx;
-	private String comment;
+	private String rating_comment;
 	private int streamer_rating;
 	private String streamer_rating_date;
 	private String user_name;
 	private String user_image;
 	
-	public String getComment() {
-		return comment;
-	}
-	public void setComment(String comment) {
-		this.comment = comment;
-	}
+	
 	public int getUser_idx() {
 		return user_idx;
 	}
@@ -51,6 +46,12 @@ public class StreamerRating {
 	}
 	public void setUser_image(String user_image) {
 		this.user_image = user_image;
+	}
+	public String getRating_comment() {
+		return rating_comment;
+	}
+	public void setRating_comment(String rating_comment) {
+		this.rating_comment = rating_comment;
 	}
 	
 	

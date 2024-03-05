@@ -30,8 +30,8 @@
 						<div class="streamer_id">${streamer.streamer_id }</div>
 						<div class="streamer_followers">팔로워수 :
 							${streamer.streamer_followers }</div>
-						<div class="streamer_trends">최근 상승세</div>
-						<div class="streamer_comments">댓글 수 : 50개</div>
+						<!-- <div class="streamer_trends">최근 상승세</div> -->
+						<div class="streamer_comments">댓글 수 : ${commentCount }개</div>
 					</div>
 
 					<div class="related_streamers">
@@ -49,66 +49,45 @@
 
 				</div>
 				<div class="header_recentComments">
-					<c:forEach var="rating" items="ratingList">
+					<c:forEach var="rating" items="${ratingList }">
 						<div class="recentComments_item">
-						<div class="cmt_wrap">
-							<div class="profile_area">
-								<img src="img/user_profile/KITA2.JPG">
-							</div>
-							<div class="cont_area">
-								<div class="cmt_head">글쓴이 : ${rating.user_name} / date : ${rating.streamer_rating_date }</div>
-								<div class="cmt_cont">${rating.comment }</div>
+							<div class="cmt_wrap">
+								<div class="profile_area">
+									<img src="img/user_profile/${rating.user_image }.png">
+								</div>
+								<div class="cont_area">
+									<div class="cmt_head">${rating.user_name} / date :
+										${rating.streamer_rating_date }</div>
+									<div class="cmt_cont">${rating.rating_comment }</div>
+								</div>
 							</div>
 						</div>
-					</div>
 					</c:forEach>
-					
-					<div class="recentComments_item">
-						<div class="cmt_wrap">
-							<div class="profile_area">
-								<img src="img/admin/profile2.png">
-							</div>
-							<div class="cont_area">
-								<div class="cmt_head">id : 이지치 니지카 / date : 2024-01-21</div>
-								<div class="cmt_cont">멋진 연주입니다.</div>
-							</div>
-						</div>
-					</div>
-					<div class="recentComments_item">
-						<div class="cmt_wrap">
-							<div class="profile_area">
-								<img src="img/admin/profile3.png">
-							</div>
-							<div class="cont_area">
-								<div class="cmt_head">id : 야마다 료 / date : 2024-01-20</div>
-								<div class="cmt_cont">구독했습니다.</div>
-							</div>
-						</div>
-					</div>
 				</div>
 			</div>
 			<div class="star-container">
 				<div class="star-widget">
 					<form:form action="review_pro" method="get"
 						modelAttribute="streamerRating">
-						<form:hidden path="streamer_idx"/>
-						<form:hidden path="user_idx"/>
+						<form:hidden path="streamer_idx" />
+						<form:hidden path="user_idx" />
 						<div class="stars">
-							<form:radiobutton path="streamer_rating" id="rate-5" value="5"/> <label
-								for="rate-5"><i class='bx bxs-star'></i></label> 
-								<form:radiobutton path="streamer_rating" id="rate-4" value="4"/> <label
-								for="rate-4"><i class='bx bxs-star'></i></label> 
-								<form:radiobutton path="streamer_rating" id="rate-3" value="3"/> <label
-								for="rate-3"><i class='bx bxs-star'></i></label> 
-								<form:radiobutton path="streamer_rating" id="rate-2" value="2"/> <label
-								for="rate-2"><i class='bx bxs-star'></i></label> 
-								<form:radiobutton path="streamer_rating" id="rate-1" value="1"/> <label
-								for="rate-1"><i class='bx bxs-star'></i></label>
+							<form:radiobutton path="streamer_rating" id="rate-5" value="5" />
+							<label for="rate-5"><i class='bx bxs-star'></i></label>
+							<form:radiobutton path="streamer_rating" id="rate-4" value="4" />
+							<label for="rate-4"><i class='bx bxs-star'></i></label>
+							<form:radiobutton path="streamer_rating" id="rate-3" value="3" />
+							<label for="rate-3"><i class='bx bxs-star'></i></label>
+							<form:radiobutton path="streamer_rating" id="rate-2" value="2" />
+							<label for="rate-2"><i class='bx bxs-star'></i></label>
+							<form:radiobutton path="streamer_rating" id="rate-1" value="1" />
+							<label for="rate-1"><i class='bx bxs-star'></i></label>
 						</div>
 
 
 						<div class="textarea">
-							<form:textarea path="comment" cols="30" placeholder="스트리머에게 의견을 남겨주세요"></form:textarea>
+							<form:textarea path="rating_comment" cols="30"
+								placeholder="스트리머에게 의견을 남겨주세요"></form:textarea>
 						</div>
 						<div class="btn">
 							<form:button>게시</form:button>
@@ -139,11 +118,9 @@
 										<i class='bx bxs-comment-detail bx-md'></i> <span>0</span>
 									</div>
 								</div>
-
 							</div>
 						</div>
 					</c:forEach>
-
 				</div>
 			</div>
 		</div>
