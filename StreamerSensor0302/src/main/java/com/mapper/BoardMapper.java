@@ -10,7 +10,8 @@ import com.domain.Board;
 public interface BoardMapper {
 
 	@Select("select board_idx, user_id, title, info, board_date, view_count " +
-			"from board ")
+			"from board "
+			+ "order by board_idx")
 	List<Board> getBoardInfo();
 	
 	/*
