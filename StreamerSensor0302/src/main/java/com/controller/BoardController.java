@@ -3,12 +3,14 @@ package com.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.beans.BoardInfoBean;
 import com.domain.Board;
+import com.mapper.BoardMapper;
 import com.service.BoardService;
 
 @Controller
@@ -40,13 +42,17 @@ public class BoardController {
 	}
 	
 	@RequestMapping(value = "/boardWrite")
-	public String boardWritePage(@ModelAttribute("writeBoardInfoBean") BoardInfoBean writeBoardInfoBean) {
+	public String boardWritePage(@ModelAttribute("writeBoardBean") BoardInfoBean writeBoardBean) {
 		
 		return "/board/boardWrite";
 	}
 	
 	@RequestMapping(value = "/boardWriteSuccess")
-	public String boardWriteSuccessPage() {
+	public String boardWriteSuccessPage(@ModelAttribute("writeBoardBean") BoardInfoBean writeBoardBean, BindingResult result) {
+		if(result.hasErrors()) {
+			return "board/write";
+		}
+		boardService.addBoardInfo(writeBoardBean);
 		return "/board/boardWriteSuccess";
 	}
 	
@@ -56,7 +62,9 @@ public class BoardController {
 	}
 	
 	@RequestMapping(value = "/boardDelete")
-	public String boardDeletePage() {
+	public String boardDeletePage(@RequestParam("board_idx") int board_idx, Model model) {
+		
+		boardService.deleteBoardInfo(board_idx);
 		return "/board/boardDelete";
 	}
 	

@@ -25,11 +25,15 @@ public class BoardService {
 	 * boardlist = boardDAO.getBoardCnt(board_idx); return boardlist; }
 	 */
 	
-	public void addBoardInfo(BoardInfoBean writeBoardInfoBean) {
+	public void addBoardInfo(BoardInfoBean writeBoardBean) {
 	      
-	      System.out.println(writeBoardInfoBean.getBoard_write_info());
-	      System.out.println(writeBoardInfoBean.getBoard_write_id());
+	      System.out.println(writeBoardBean.getBoard_write_info());
+	      System.out.println(writeBoardBean.getBoard_write_id());
 	      
-	      boardDAO.addBoardInfo(writeBoardInfoBean);
+	      boardDAO.addBoardInfo(writeBoardBean);
+	}
+	
+	public void deleteBoardInfo(int board_idx) {
+		boardDAO.deleteBoardInfo(board_idx);
 	}
 }

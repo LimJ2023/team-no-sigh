@@ -22,7 +22,11 @@ public class BoardDAO {
 	 * boardMapper.getBoardCnt(board_idx); }
 	 */
 	
-	public void addBoardInfo(BoardInfoBean writeBoardInfoBean) {
-		boardMapper.addBoardInfo(writeBoardInfoBean);
+	public void addBoardInfo(BoardInfoBean writeBoardBean) {
+		boardMapper.addBoardInfo(writeBoardBean);
+	}
+	
+	public void deleteBoardInfo(int board_idx) {
+		boardMapper.deleteBoardInfo(board_idx);
 	}
 }

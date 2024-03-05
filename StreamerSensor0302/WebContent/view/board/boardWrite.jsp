@@ -31,7 +31,7 @@
 
 	<section class="board-write-section">
             <div class="board-write-div">
-                <form:form action="${root }board/boardWriteSuccess" class="board-write-form">
+                <form:form action="${root }board/boardWriteSuccess" class="board-write-form" modelAttribute="writeBoardBean">
                     <table class="table board-write-table">
                        
                         <tr class="board-write-form-info">
