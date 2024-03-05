@@ -39,7 +39,7 @@ CREATE TABLE stream_categorys(
 CREATE TABLE streaming_info(
     streaming_id NUMBER PRIMARY KEY,
     streaming_description VARCHAR2(60),
-    streaming_url VARCHAR2(60),
+    streaming_url VARCHAR2(200),
     streaming_time VARCHAR2(60),
     stream_categorys_id NUMBER,
     streaming_date DATE,

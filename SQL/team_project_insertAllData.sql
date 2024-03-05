@@ -36,19 +36,18 @@ VALUES (1, notice_num_seq.nextval, '공지사항', '24년 3월 1일 점검 안�
 
 
 ---유저 데이터---
-insert into users(user_idx,user_id,user_pw,user_name,user_gender,user_age,user_nation,subscription)
-values(users_seq.nextval,'qwer','12345','이여성','여자',22,'한국','y');
-insert into users(user_idx,user_id,user_pw,user_name,user_gender,user_age,user_nation,subscription)
-values(users_seq.nextval,'asdf','asdf','김남성','남자',28,'한국','n');
-insert into users(user_idx,user_id,user_pw,user_name,user_gender,user_age,user_nation,subscription)
-values(users_seq.nextval,'12345','12345','김인직','남자',40,'한국','y');
-insert into users(user_idx,user_id,user_pw,user_name,user_gender,user_age,user_nation,subscription)
-values(users_seq.nextval,'soldesk','54321','솔데스크','여자',35,'한국','n');
-insert into users(user_idx,user_id,user_pw,user_name,user_gender,user_age,user_nation,subscription)
-values(users_seq.nextval,'star','1234','이스타','남자',35,'한국','n');
-insert into users(user_idx,user_id,user_pw,user_name,user_gender,user_age,user_nation,subscription)
-values(users_seq.nextval,'limj','12345','임요한','남자',30,'한국','y');
-
+insert into users(user_idx,user_id,user_pw,user_name,user_gender,user_age,user_nation,subscription, user_image)
+values(users_seq.nextval,'qwer','12345','이여성','여자',22,'한국','y', 400);
+insert into users(user_idx,user_id,user_pw,user_name,user_gender,user_age,user_nation,subscription, user_image)
+values(users_seq.nextval,'asdf','asdf','김남성','남자',28,'한국','n', 401);
+insert into users(user_idx,user_id,user_pw,user_name,user_gender,user_age,user_nation,subscription, user_image)
+values(users_seq.nextval,'12345','12345','김인직','남자',40,'한국','y', 402);
+insert into users(user_idx,user_id,user_pw,user_name,user_gender,user_age,user_nation,subscription, user_image)
+values(users_seq.nextval,'soldesk','54321','솔데스크','여자',35,'한국','n', 403);
+insert into users(user_idx,user_id,user_pw,user_name,user_gender,user_age,user_nation,subscription, user_image)
+values(users_seq.nextval,'star','1234','이스타','남자',35,'한국','n', 404);
+insert into users(user_idx,user_id,user_pw,user_name,user_gender,user_age,user_nation,subscription, user_image)
+values(users_seq.nextval,'limj','12345','임요한','남자',30,'한국','y', 405);
 
 ---스트리머 더미 데이터---
 insert into streamer( streamer_idx, streamer_id, streamer_gender, streamer_grade, streamer_status, streamer_platform, streamer_followers, streamer_img)
@@ -111,7 +110,8 @@ INSERT INTO streaming_img(img_id, img_url)
     VALUES (403, 'user_profile_4');
 INSERT INTO streaming_img(img_id, img_url) 
     VALUES (404, 'user_profile_5');
-    
+INSERT INTO streaming_img(img_id, img_url) 
+    VALUES (405, 'user_profile_1');
     
 -----방송 카테고리(주제) 데이터----
 INSERT INTO stream_categorys (stream_categorys_id, categorys) VALUES(0,'영화');
@@ -151,7 +151,9 @@ INSERT INTO streaming_info(streaming_id, streaming_description, streaming_url, s
 INSERT INTO streaming_info(streaming_id, streaming_description, streaming_url, streaming_time, stream_categorys_id, streaming_date, streamer_id, img_id)
     VALUES (streaming_id_seq.nextval, '9일 테스트용 제목', 'http://www.chzzk.com', '00:30', 1, '2024-01-09', '머독', 7);
 INSERT INTO streaming_info(streaming_id, streaming_description, streaming_url, streaming_time, stream_categorys_id, streaming_date, streamer_id, img_id)
-    VALUES (streaming_id_seq.nextval, '그 밴드 기타커버', 'http://www.youtube.com', '01:30', 2, '2024-03-01', '기타히어로', 12);
+    VALUES (streaming_id_seq.nextval, '그 밴드 기타커버', 'https://youtu.be/BGlQakaaJDs?si=Ucq3CQiFGzrYI333', '01:30', 2, '2024-03-01', '기타히어로', 12);
+
+
 
 ---방송 리뷰 데이터---
 INSERT INTO review (review_idx, user_id, review_streaming_id, writing_data, review_rating, review_creation_date) 
