@@ -5,6 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+<link rel="stylesheet" href="user/myPage.css">
+<link rel="stylesheet" href="user/test.css">
 <!-- Bootstrap CDN -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -20,9 +23,11 @@
                 Streamer<span>Sensor</span>
             </a>
             <div class="search-bar">
+            <form action="#">
                 <span class="material-icons-sharp"></span>
-                <input type="search" placeholder="search">
+                <input type="search" placeholder="search" name="search">
                 <i class='bx bx-search'></i>
+                </form>
             </div>
             <div class="profile-area">
                 <div class="theme-btn">
@@ -76,6 +81,7 @@
         </aside>
         
         <div class="account">
+        <form action="#">
             <h1>계정</h1> <br>
              기본정보 <br/>
              <br/>
@@ -99,6 +105,7 @@
             <br/>
             <button>계정 삭제</button>
             <a href="account_delete" style="text-decoration-line: none;"></a>
+            </form>
         </div>
     </main>
 </body>
