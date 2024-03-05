@@ -1,7 +1,7 @@
 DROP TABLE user_review_relation;
 DROP TABLE Streaming_preference;
 DROP TABLE Preferences;
-DROP TABLE Streaming_preference;
+DROP TABLE streaming_preference;
 DROP TABLE ranking;
 DROP TABLE site_stat;
 DROP TABLE history;
@@ -15,6 +15,10 @@ DROP TABLE users;
 DROP TABLE admin_notice;
 DROP TABLE admin;
 DROP TABLE user_table;
+DROP TABLE stream_categorys;
+DROP TABLE login_info_table;
+DROP TABLE visitor;
+DROP TABLE streamer_rating;
 
 --시퀀스 값 초기화
 drop SEQUENCE review_id_seq;
@@ -28,5 +32,8 @@ DROP SEQUENCE admin_id_seq;
 DROP SEQUENCE users_seq;
 DROP SEQUENCE board_seq;
 DROP SEQUENCE ranking_id_seq;
+DROP SEQUENCE preferences_id_seq;
+DROP SEQUENCE visitor_id_seq;
+DROP SEQUENCE streamer_rating_id_seq;
 
 commit;
