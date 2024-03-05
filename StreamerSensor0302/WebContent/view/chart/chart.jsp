@@ -36,15 +36,15 @@
       <main>
         <div class="graphBox1">
           <div class="box1">
-          	<canvas id="myChart1" width="300" height="300"></canvas>
+          	<canvas id="myChart1" style="width: 300px; height: 300px;"></canvas>
           </div>
           <div class="box2">
-          	<canvas id="myChart2" width="1000" height="300"></canvas>
+          	<canvas id="myChart2" style="width: 900px; height: 300px;"></canvas>
           </div>
         </div>
         <div class="graphBox2">
           <div class="box3">
-          	<canvas id="myChart3" width="1350" height="500"></canvas>
+          	<canvas id="myChart3" style="width: 1200px; height: 100%;"></canvas>
           </div>
         </div>
         <div class="categoryBox1">
