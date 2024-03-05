@@ -35,7 +35,7 @@ public class BoardController {
 	public String boardViewPage(Model model, @RequestParam("board_idx") int board_idx) {
 
 		model.addAttribute("board_idx", board_idx);
-		List<Board> data = boardService.getBoardInfo();
+		Board data = boardService.selectOneBoard(board_idx);
 		model.addAttribute("data", data);
 
 		return "/board/boardView";

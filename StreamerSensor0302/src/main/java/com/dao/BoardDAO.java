@@ -24,6 +24,10 @@ public class BoardDAO {
 	 * boardMapper.getBoardCnt(board_idx); }
 	 */
 	
+	public Board selectOneBoard(int board_idx) {
+		return boardMapper.selectOneBoard(board_idx);
+	}
+	
 	public void addBoardInfo(BoardInfoBean writeBoardBean) {
 		boardMapper.addBoardInfo(writeBoardBean);
 	}

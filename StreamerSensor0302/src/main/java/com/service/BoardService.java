@@ -26,6 +26,10 @@ public class BoardService {
 	 * boardlist = boardDAO.getBoardCnt(board_idx); return boardlist; }
 	 */
 	
+	public Board selectOneBoard(int board_idx) {
+		return boardDAO.selectOneBoard(board_idx);
+	}
+	
 	public void addBoardInfo(BoardInfoBean writeBoardBean) {
 	      
 	      System.out.println(writeBoardBean.getBoard_write_info());
