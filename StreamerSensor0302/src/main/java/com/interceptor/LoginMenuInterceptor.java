@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 import com.beans.LoginInfoBean;
-import com.beans.UsersBean;
 import com.domain.Users;
 import com.service.LoginMenuService;
 

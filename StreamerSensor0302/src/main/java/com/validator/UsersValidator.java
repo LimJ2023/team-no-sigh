@@ -10,12 +10,12 @@ public class UsersValidator implements Validator {
 
 	@Override
 	public boolean supports(Class<?> clazz) {
-		return UsersBean.class.isAssignableFrom(clazz);
+		return Users.class.isAssignableFrom(clazz);
 	}
 
 	@Override
 	public void validate(Object target, Errors errors) {
-		Users usersBean = (Users)target;
+		Users usersBean = (Users) target;
 		
 		String beanName=errors.getObjectName();
 		//System.out.println(beanName);

@@ -74,7 +74,7 @@
 				</div>
 			</div>
 
-			<div class="notification deactive" id="addStreamer">
+			<div class="notification deactive" id="addStreamer" onclick="loadClient()">
 				<div class="icon">
 					<span class="material-symbols-outlined"> edit </span>
 				</div>

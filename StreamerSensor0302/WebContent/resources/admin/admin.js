@@ -1,16 +1,4 @@
 
-function authenticate() {
-    return gapi.auth2.getAuthInstance()
-        .signIn({scope: "https://www.googleapis.com/auth/youtube.readonly"})
-        .then(function() { console.log("Sign-in successful"); },
-              function(err) { console.error("Error signing in", err); });
-  }
-  function loadClient() {
-    gapi.client.setApiKey("AIzaSyAoJiuc-avFKKl9qicmjksHRGbfL5dADEY");
-    return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
-        .then(function() { console.log("GAPI client loaded for API"); },
-              function(err) { console.error("Error loading GAPI client for API", err); });
-  }
   // Make sure the client is loaded and sign-in is complete before calling this method.
   function execute() {
     return gapi.client.youtube.channels.list({
@@ -21,7 +9,7 @@ function authenticate() {
       "id": [
         "123"
       ],
-      "maxResults": 5
+      "maxResults": 10
     })
         .then(function(response) {
                 // Handle the results here (response.result has the parsed body).
@@ -29,8 +17,30 @@ function authenticate() {
               },
               function(err) { console.error("Execute error", err); });
   }
-  gapi.load("client:auth2", function() {
-    gapi.auth2.init({client_id: "796463472835-5sikuqc9jrosu7vpkg2ojh6pgc6gdaua.apps.googleusercontent.com"});
-  });
+
+
+  function getApi() {
+    const info = document.createElement("div");
+
+    fetch('https://youtube.googleapis.com/youtube/v3/videos?part=snippet&part=statistics&chart=mostPopular&regionCode=kr&maxResult=10&key=AIzaSyAoJiuc-avFKKl9qicmjksHRGbfL5dADEY')
+    .then(res => res.json())
+    .then(data => {
+        data.items.forEach(item => {
+            const cont = `
+            <div class="rank-img">
+                <img src="${item.snippet.thumbnails.default.url}" />
+            </div>
+            <div class="rank-info-foot">
+                <div class="rank-name" ></div>
+                <div class="rank-views">조회수 ${item.statistics.viewCount}</div>
+                <div class="rank-likes">좋아요 ${item.statistics.likeCount}</div>
+                <div class="rank-trend"><i class='bx bx-right-arrow-circle bx-md'></i></div>
+            </div>
+            `
+            info.innerHTML = cont;
+        })
+    })
+}
+
 
   

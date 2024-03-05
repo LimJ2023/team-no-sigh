@@ -13,7 +13,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.beans.UsersBean;
+
 import com.dao.UsersDAO;
 import com.domain.Users;
 
@@ -28,7 +28,7 @@ public class UsersService {
 	UsersDAO uDAO;
 
 	@Resource(name = "loginUserBean")
-	private UsersBean loginUserBean;
+	private Users loginUserBean;
 
 	@Resource(name = "selectUserImage")
 	private Users selectUserImage;
@@ -74,12 +74,12 @@ public class UsersService {
 		}
 	}
 
-	public void addUserInfo(UsersBean joinUserBean) {
+	public void addUserInfo(Users joinUserBean) {
 		uDAO.addUserInfo(joinUserBean);
 	}
 
-	public void getLoginUserInfo(UsersBean tempLoginUserBean) {
-		UsersBean tempLoginUserBean2 = uDAO.getLoginUserInfo(tempLoginUserBean);
+	public void getLoginUserInfo(Users tempLoginUserBean) {
+		Users tempLoginUserBean2 = uDAO.getLoginUserInfo(tempLoginUserBean);
 		if (tempLoginUserBean2 != null) {
 			loginUserBean.setUser_idx(tempLoginUserBean2.getUser_idx());
 			loginUserBean.setUser_name(tempLoginUserBean2.getUser_name());
@@ -88,15 +88,18 @@ public class UsersService {
 		}
 	}
 
-	public void getmodifyUserinfo(UsersBean modifyUserBean) {
-		UsersBean tempModifyUserBean = uDAO.getmodifyUserinfo(loginUserBean.getUser_idx());
+	public void getmodifyUserinfo(Users modifyUserBean) {
+		Users tempModifyUserBean = uDAO.getmodifyUserinfo(loginUserBean.getUser_idx());
 
 		modifyUserBean.setUser_id(tempModifyUserBean.getUser_id());
 		modifyUserBean.setUser_name(tempModifyUserBean.getUser_name());
+		modifyUserBean.setUser_gender(tempModifyUserBean.getUser_gender());
+		modifyUserBean.setUser_age(tempModifyUserBean.getUser_age());
+		modifyUserBean.setUser_nation(tempModifyUserBean.getUser_nation());
 		modifyUserBean.setUser_idx(loginUserBean.getUser_idx());
 	}
 
-	public void modifyUserInfo(UsersBean modifyUserBean) {
+	public void modifyUserInfo(Users modifyUserBean) {
 		modifyUserBean.setUser_idx(loginUserBean.getUser_idx());
 		uDAO.modifyUserInfo(modifyUserBean);
 	}
