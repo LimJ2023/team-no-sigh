@@ -64,7 +64,7 @@
                     <div class="board-bottom-menu-div2">
                     
                     <a href="${root}board/boardModify" class="board-menu-button">수정하기</a>		<!-- 임시로 a링크로 바꿈 -->
-                    <a href="${root}board/boardDelete" class="board-menu-button">삭제하기</a>		<!-- 임시로 a링크로 바꿈 -->
+                    <a href="${root}board/boardDelete?board_idx=${board_idx}" class="board-menu-button">삭제하기</a>		<!-- 임시로 a링크로 바꿈 -->
                         <!-- <button type="button" class="board-menu-button button-edit" onclick="location.href=board/boardModify">수정하기</button>
                         <button type="button" class="board-menu-button button-delete" onclick="location.href=board/boardDelete">삭제하기</button> -->
                     </div>
