@@ -1,5 +1,6 @@
 package com.mapper;
 
+import java.util.List;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
@@ -10,9 +11,8 @@ import com.domain.Board;
 public interface BoardMapper {
 
 	@Select("select board_idx, user_id, title, info, board_date, view_count " +
-			"from board " +
-			"where board_idx = #{board_idx}")
-	Board getBoardInfo(int board_idx);
+			"from board ")
+	List<Board> getBoardInfo();
 	
 	/*
 	 * @Select("select board_idx, user_id, title, view_count from board where board_idx = #{board_idx}"

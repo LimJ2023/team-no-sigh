@@ -1,5 +1,7 @@
 package com.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,9 +15,8 @@ public class BoardService {
 	@Autowired
 	BoardDAO boardDAO;
 	
-	public Board getBoardInfo(int board_idx) {
-		Board boardBean = new Board();
-		boardBean = boardDAO.getBoardInfo(board_idx);
+	public List<Board> getBoardInfo() {
+		List<Board> boardBean = boardDAO.getBoardInfo();
 		return boardBean;
 		
 	}
