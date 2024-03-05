@@ -23,9 +23,8 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-import com.beans.UsersBean;
 import com.domain.Admin;
-import com.httpListener.SessionListener;
+import com.domain.Users;
 import com.interceptor.CheckLoginInterceptor;
 import com.interceptor.LoginMenuInterceptor;
 import com.mapper.AdminMapper;
@@ -62,7 +61,7 @@ public class ServletAppContext implements WebMvcConfigurer {
 	private Admin adminBean;
 
 	@Resource(name = "loginUserBean")
-	private UsersBean loginUserBean;
+	private Users loginUserBean;
 	
 	
 	

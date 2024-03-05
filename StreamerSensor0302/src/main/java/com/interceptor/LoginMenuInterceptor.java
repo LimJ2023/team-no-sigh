@@ -8,17 +8,17 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 import com.beans.LoginInfoBean;
-import com.beans.UsersBean;
+import com.domain.Users;
 import com.service.LoginMenuService;
 
 
 public class LoginMenuInterceptor implements HandlerInterceptor{
 
 	
-	  private LoginMenuService loginMenuService; private UsersBean loginUserBean;
+	  private LoginMenuService loginMenuService; private Users loginUserBean;
 	
 	  //생성자 통해 주입 
-	  public LoginMenuInterceptor(LoginMenuService loginMenuService, UsersBean loginUserBean) {
+	  public LoginMenuInterceptor(LoginMenuService loginMenuService, Users loginUserBean) {
 		this.loginMenuService = loginMenuService;
 		this.loginUserBean = loginUserBean;
 	}

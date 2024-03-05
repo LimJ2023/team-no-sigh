@@ -1,22 +1,20 @@
 package com.interceptor;
 
-import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.web.servlet.HandlerInterceptor;
 
-import com.beans.UsersBean;
+import com.domain.Users;
 
 
 
 public class CheckLoginInterceptor implements HandlerInterceptor{
 
 	//로그인 여부를 판단하는 loginUserBean
-	private UsersBean loginUserBean;
+	private Users loginUserBean;
 	
-	public CheckLoginInterceptor(UsersBean loginUserBean) {
+	public CheckLoginInterceptor(Users loginUserBean) {
 		this.loginUserBean=loginUserBean;
 	}
 

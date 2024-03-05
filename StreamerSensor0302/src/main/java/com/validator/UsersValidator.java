@@ -4,17 +4,18 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
 import com.beans.UsersBean;
+import com.domain.Users;
 
 public class UsersValidator implements Validator {
 
 	@Override
 	public boolean supports(Class<?> clazz) {
-		return UsersBean.class.isAssignableFrom(clazz);
+		return Users.class.isAssignableFrom(clazz);
 	}
 
 	@Override
 	public void validate(Object target, Errors errors) {
-		UsersBean usersBean = (UsersBean)target;
+		Users usersBean = (Users) target;
 		
 		String beanName=errors.getObjectName();
 		//System.out.println(beanName);
