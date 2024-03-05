@@ -4,11 +4,11 @@
 <c:set var='root' value="${pageContext.request.contextPath }/" />
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>MyPage</title>
     <link rel="stylesheet" href="${root }user/myPage.css">
     <link rel="stylesheet" href="${root }user/test.css">
@@ -23,8 +23,10 @@
     <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
     
 </head>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="myPage.js"></script>
 <body>
+ <h1>테스트</h1>
     <nav>
         <div class="container">
             <!-- logo -->
@@ -67,7 +69,7 @@
                     <i class='bx bxs-dashboard' ></i>
                     <h4>마이페이지</h4>
                 </a>
-                <a href="#">
+                <a href="${root }user/subscribe">
                     <i class='bx bxs-movie-play' ></i>
                     <h4>구독</h4>
                 </a>
@@ -94,6 +96,8 @@
             </div>
         </aside>
         <!-- end aside -->
+        
+        
         <section class="middle">
             <div class="header">
                 <h1>구독&즐겨찾기</h1>
@@ -105,24 +109,24 @@
                     <div class="top">
                         <div class="left">
                             <img src="">
-                            <h1>유튜브</h2>
+                            <h1>유튜브</h1>
                         </div>
                         <img src="" class="right">
                     </div>
                     <div class="middle">
-                        <h4>즐찾스트리머</h1>
+                        <h4>즐찾스트리머</h4>
                         <img src="" class="chip">
                         <P>날짜</P>
                         <small>태그</small>
                     </div>
                     <div class="middle">
-                        <h4>즐찾스트리머</h1>
+                        <h4>즐찾스트리머</h4>
                         <img src="" class="chip">
                         <P>날짜</P>
                         <small>태그</small>
                     </div>
                     <div class="middle">
-                        <h4>즐찾스트리머</h1>
+                        <h4>즐찾스트리머</h4>>
                         <img src="" class="chip">
                         <P>날짜</P>
                         <small>태그</small>
@@ -134,20 +138,20 @@
                     <div class="top">
                         <div class="left">
                             <img src="">
-                            <h1>치지직</h2>
+                            <h1>치지직</h1>>
                         </div>
                         <img src="" class="right">
                     </div>
                     <div class="middle">
-                        <h4>즐찾스트리머</h1>
+                        <h4>즐찾스트리머</h4>
                         <img src="" class="chip">
                     </div>
                     <div class="middle">
-                        <h4>즐찾스트리머</h1>
+                        <h4>즐찾스트리머</h4>
                         <img src="" class="chip">
                     </div>
                     <div class="middle">
-                        <h4>즐찾스트리머</h1>
+                        <h4>즐찾스트리머</h4>
                         <img src="" class="chip">
                     </div>
                 </div>
@@ -307,8 +311,7 @@
     </main>
     <!-- end of aside=============== -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="mypage.js"></script>
+    
 </body>
 
 </html>
