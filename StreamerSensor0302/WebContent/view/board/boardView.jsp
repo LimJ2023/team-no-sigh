@@ -43,13 +43,11 @@
 					<td class="board-view-table-info info-clicks">${data.view_count }</td>
 				</tr>
 				<tr class="table board-view-table-content">
-					<td class="content-title" colspan="8"><c:out
-							value="${data.title}" /></td>
+					<td class="content-title" colspan="1"><c:out value="${data.categorys}" /></td>
+					<td class="content-title" colspan="7"><c:out value="${data.title}" /></td>
 				</tr>
 				<tr class="btable board-view-table-content">
-					<td class="content-text" colspan="8">글내용 <br> <c:out
-							value="${data.info}" />
-					</td>
+					<td class="content-text" colspan="8"><c:out value="${data.info}" /></td>
 				</tr>
 			</table>
 		</div>
@@ -59,23 +57,14 @@
 		<div class="board-bottom-menu">
 			<div class="board-bottom-menu-div1 board-menu-button">
 				<a href="${root}board">목록으로</a>
-				<!-- 임시로 a링크로 바꿈 -->
-				<!-- <button type="button" class="board-menu-button button-list" onclick="location.href=board/boardList">목록으로</button> -->
 
 			</div>
 			<div class="board-bottom-menu-div2">
 
-				<a href="${root}board/boardModify" class="board-menu-button">수정하기</a>
+				<a href="${root}board/boardModify?board_idx=${board_idx}" class="board-menu-button">수정하기</a>
 				<!-- 임시로 a링크로 바꿈 -->
 				<a href="${root}board/boardDelete?board_idx=${board_idx}"
 					class="board-menu-button">삭제하기</a>
-				<!-- 임시로 a링크로 바꿈 -->
-				<!-- <button type="button" class="board-menu-button button-edit" onclick="location.href=board/boardModify">수정하기</button>
-           <section class="board-bottom-menu-section">
-                <div class="board-bottom-menu">
-                    <div class="board-bottom-menu-div1 board-menu-button">
-                    <a href="${root}board">목록으로</a>			<!-- 임시로 a링크로 바꿈 -->
-                        <!-- <button type="button" class="board-menu-button button-list" onclick="location.href=board/boardList">목록으로</button> -->
 			</div>
 		</div>
 	</section>

@@ -18,10 +18,9 @@ public class BoardDAO {
 		return boardMapper.getBoardInfo();
 	}
 	
-	/*
-	 * public Board getBoardCnt(int board_idx) { return
-	 * boardMapper.getBoardCnt(board_idx); }
-	 */
+	public void conutOneBoard(int board_idx) {
+		boardMapper.conutOneBoard(board_idx);
+	}
 	
 	public Board selectOneBoard(int board_idx) {
 		return boardMapper.selectOneBoard(board_idx);
@@ -29,6 +28,10 @@ public class BoardDAO {
 	
 	public void addBoardInfo(Board writeBoardBean) {
 		boardMapper.addBoardInfo(writeBoardBean);
+	}
+	
+	public void modifyBoardInfo(Board modifyBoardBean) {
+		boardMapper.modifyBoardInfo(modifyBoardBean);
 	}
 	
 	public void deleteBoardInfo(int board_idx) {

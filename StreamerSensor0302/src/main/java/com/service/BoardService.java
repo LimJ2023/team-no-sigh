@@ -20,20 +20,25 @@ public class BoardService {
 		
 	}
 	
-	/*
-	 * public Board getBoardCnt(int board_idx) { Board boardlist = new Board();
-	 * boardlist = boardDAO.getBoardCnt(board_idx); return boardlist; }
-	 */
+	public void conutOneBoard(int board_idx) {
+		boardDAO.conutOneBoard(board_idx);
+	}
 	
 	public Board selectOneBoard(int board_idx) {
 		return boardDAO.selectOneBoard(board_idx);
 	}
 	
 	public void addBoardInfo(Board writeBoardBean) {	      
-	      boardDAO.addBoardInfo(writeBoardBean);
+	    boardDAO.addBoardInfo(writeBoardBean);
+	}
+	
+	public void modifyBoardInfo(Board modifyBoardBean) {
+		boardDAO.modifyBoardInfo(modifyBoardBean);
 	}
 	
 	public void deleteBoardInfo(int board_idx) {
 		boardDAO.deleteBoardInfo(board_idx);
 	}
+	
+	
 }

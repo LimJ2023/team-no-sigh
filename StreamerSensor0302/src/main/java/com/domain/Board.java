@@ -8,7 +8,7 @@ public class Board {
 	 private String board_date;
 	 private int view_count;
 	 private int comment_count;
-	 private String tags;
+	 private String categorys;
 	 
 	public int getBoard_idx() {
 		return board_idx;
@@ -52,11 +52,11 @@ public class Board {
 	public void setComment_count(int comment_count) {
 		this.comment_count = comment_count;
 	}
-	public String getTags() {
-		return tags;
+	public String getCategorys() {
+		return categorys;
 	}
-	public void setTags(String tags) {
-		this.tags = tags;
+	public void setCategorys(String categorys) {
+		this.categorys = categorys;
 	}
 	
 }

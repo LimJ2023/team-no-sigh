@@ -33,6 +33,7 @@ public class BoardController {
 	public String boardViewPage(Model model, @RequestParam("board_idx") int board_idx) {
 
 		model.addAttribute("board_idx", board_idx);
+		boardService.conutOneBoard(board_idx);
 		Board data = boardService.selectOneBoard(board_idx);
 		model.addAttribute("data", data);
 
@@ -40,16 +41,7 @@ public class BoardController {
 	}
 
 	@RequestMapping(value = "/boardWrite")
-	public String boardWritePage(@ModelAttribute("writeBoardBean") Board writeBoardBean, 
-			/* @RequestParam("board_idx")int board_idx, */Model model) {
-
-		//model.addAttribute("board_idx", board_idx);
-		
-		//Board board = boardService.selectOneBoard(board_idx);
-		//model.addAttribute("board", board);
-		
-		//writeBoardBean.setBoard_idx(board_idx);
-
+	public String boardWritePage(@ModelAttribute("writeBoardBean") Board writeBoardBean, Model model) {
 		return "/board/boardWrite";
 	}
 
@@ -63,8 +55,29 @@ public class BoardController {
 	}
 
 	@RequestMapping(value = "/boardModify")
-	public String boardModifyPage() {
+	public String boardModifyPage(@ModelAttribute("modifyBoardBean") Board modifyBoardBean, @RequestParam("board_idx") int board_idx,  Model model) {
+		model.addAttribute("board_idx", board_idx);
+		
+		Board tempBoardlist = boardService.selectOneBoard(board_idx);
+		
+		modifyBoardBean.setBoard_idx(tempBoardlist.getBoard_idx());
+		modifyBoardBean.setUser_id(tempBoardlist.getUser_id());
+		modifyBoardBean.setTitle(tempBoardlist.getTitle());
+		modifyBoardBean.setInfo(tempBoardlist.getInfo());
+		modifyBoardBean.setBoard_date(tempBoardlist.getBoard_date());
+		modifyBoardBean.setView_count(tempBoardlist.getView_count());
+		modifyBoardBean.setComment_count(tempBoardlist.getComment_count());
+		modifyBoardBean.setCategorys(tempBoardlist.getCategorys());
+		
 		return "/board/boardModify";
+	}
+	
+	@RequestMapping(value = "/boardModifySuccess")
+	public String boardModifySuccessPage(@ModelAttribute("modifyBoardBean") Board modifyBoardBean, @RequestParam("board_idx") int board_idx, Model model) {
+		model.addAttribute("board_idx", board_idx);
+		
+		boardService.modifyBoardInfo(modifyBoardBean);
+		return "/board/boardModifySuccess";
 	}
 
 	@RequestMapping(value = "/boardDelete")
