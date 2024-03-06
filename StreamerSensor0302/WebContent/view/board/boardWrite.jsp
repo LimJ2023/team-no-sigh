@@ -28,8 +28,7 @@
 
 	<section class="board-write-section">
 		<div class="board-write-div">
-			<form:form action="${root }board/boardWriteSuccess"
-				class="board-write-form" modelAttribute="writeBoardBean">
+			<form:form action="${root }board/boardWriteSuccess" class="board-write-form" modelAttribute="writeBoardBean">
 				<form:hidden path="board_idx" />
 				<table class="table board-write-table">
 
@@ -38,16 +37,16 @@
 						<td class="write-form-author-input ">
 							<form:input type="text" class="write-form-input" path="user_id" />
 						</td>
-						<td class="write-form-password1">태그</td>
+						<td class="write-form-password1">카테고리</td>
 						<td class="write-form-password1-input">
-							<form:input type="text" class="write-form-input" path="tags" />
+							<form:input type="text" class="write-form-input" path="categorys" />
 						</td>
 					</tr>
 
 					<tr class="board-write-form-title">
 						<td class="write-form-title-info">제목</td>
-						<td class="write-form-title" colspan="3"><form:input
-								type="text" class="write-form-title-input" path="title" /></td>
+						<td class="write-form-title" colspan="3">
+						<form:input type="text" class="write-form-title-input" path="title" /></td>
 					</tr>
 
 					<tr class="board-write-form-content">
