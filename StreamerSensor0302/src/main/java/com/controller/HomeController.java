@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.domain.Carousel_Test;
 import com.domain.Ranking;
 import com.domain.Streamer;
 import com.domain.Video;
@@ -34,6 +35,11 @@ public class HomeController {
 		List<Streamer> streamerInfo = mainService.getStreamerInfo();
 		model.addAttribute("streamerInfo", streamerInfo);
 		
+		//0306 이지수
+		List<Carousel_Test> carouselTest = mainService.getTest();
+		model.addAttribute("carouselTest", carouselTest);
+		//
+		
 		return "redirect:/home";
 		//return "redirect:/index"; 에서 수정 -> 메인이 안떠서 수정했습니다..(0229 이지수)
 	}
@@ -46,6 +52,11 @@ public class HomeController {
 		model.addAttribute("popVideoInfo", popVideoInfo);
 		List<Streamer> streamerInfo = mainService.getStreamerInfo();
 		model.addAttribute("streamerInfo", streamerInfo);
+		
+		//0306 이지수
+		List<Carousel_Test> carouselTest = mainService.getTest();
+		model.addAttribute("carouselTest", carouselTest);
+		//
 		
 		return "/home/index";
 	}
