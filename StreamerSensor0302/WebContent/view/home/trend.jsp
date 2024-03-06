@@ -29,16 +29,15 @@
 			<div class="rank-content-horizon">
 				<h2>가장 있기있는 방송 목록</h2>
 				<div class="horizon-buttons">
-					<button id="flatformBtn">플랫폼</button>
-					<button id="categoryBtn">카테고리</button>
-					<button id="trendBtn">추세</button>
-					<button id="delBtn">목록 삭제하기</button>
-
+					<button id="favoriteBtn">추천 영상 목록</button>
+					<button id="categoryBtn">카테고리별 목록</button>
+					<button id="trendBtn">추세별 목록</button>
+					<button id="youtubeBtn">인기 유튜브 목록</button>
 				</div>
 			</div>
 			<div class="rank-content-vertical">
 				<div class="rank-ver-list" id="first_list">
-					<div class="list-category">리뷰</div>
+					<div class="list-category"></div>
 					<div class="rank-info">
 						<div class="rank-img">
 							<img src="img/0101.png" />
@@ -53,7 +52,7 @@
 					</div>
 				</div>
 				<div class="rank-ver-list" id="second_list">
-					<div class="list-category">게임</div>
+					<div class="list-category"></div>
 					<div class="rank-info">
 						<div class="rank-img">
 							<img src="img/0106.png" />
@@ -70,7 +69,7 @@
 
 				</div>
 				<div class="rank-ver-list" id="third_list">
-					<div class="list-category">음악</div>
+					<div class="list-category"></div>
 					<div class="rank-info">
 						<div class="rank-img">
 							<img src="img/0101.png" />

@@ -360,10 +360,16 @@ header{
     font-size: medium;
     overflow: hidden;
 }
-.rank-info-foot .rank-name{
-    width: 100px;
+
+.trend-section .rank-name{
+    width: 200px;
+    height: 50px;
+    
     overflow: hidden;
+    text-overflow: ellipsis;
 }
+
+
 .bx-right-top-arrow-circle{
     color: #e08013;
 }

@@ -68,7 +68,7 @@
 				</div>
 				<div class="highlight">
 					<div class="info">
-						<h3>최근 평가된 컨텐츠</h3>
+						<h3>최근 평가된 스트리머</h3>
 						<h3>평점 : ${review.review_rating }점</h3>
 						<h3>제목 : ${review.streaming_description }</h3>
 					</div>
