@@ -30,9 +30,9 @@
 					disabled="disabled" />
 			</div>
 			<div class="memberProfile">
-				<label for="user_name">이름: </label> <input type="text" id="user_name"
-					name="user_name" class="form-control" value="${users.user_name }"
-					disabled="disabled" />
+				<label for="user_name">이름: </label> <input type="text"
+					id="user_name" name="user_name" class="form-control"
+					value="${users.user_name }" disabled="disabled" />
 			</div>
 			<div class="memberProfile">
 				<label for="user_gender">성별: </label> <input type="text"
@@ -58,9 +58,30 @@
 
 		<div class="button">
 			<a href="${root }member_modify?user_idx=${users.user_idx}">수정하기</a> <br>
-			<a href="${root }member_delete?user_idx=${users.user_idx }">삭제하기</a> <br>
-			<a href="${root }members">전체 회원 보기</a>
+			<a href="${root }member_delete?user_idx=${users.user_idx }">삭제하기</a>
+			<br> <a href="${root }members">전체 회원 보기</a>
 		</div>
 	</div>
+
+	<c:if test="${user_id != null }">
+		<div class="board-info">
+			<table class="reading-user-board">
+				<tr class="board-table-list">
+					<td class="board-write">작성자</td>
+					<td class="board-title">글 제목</td>
+					<td class="board-content">글 내용</td>
+					<td class="board-date">작성 일자</td>
+				</tr>
+				<c:forEach var="board" items="board">
+					<tr>
+						<td class="board-write">${board.user_id }</td>
+						<td class="board-title">${board.title }</td>
+						<td class="board-content">${board.info }</td>
+						<td class="board-date">${board.board_date }</td>
+					</tr>
+				</c:forEach>
+			</table>
+		</div>
+	</c:if>
 </body>
 </html>

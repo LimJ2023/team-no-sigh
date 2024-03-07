@@ -86,6 +86,7 @@ public class MemberController {
 			@RequestParam("user_id")String user_id, Model model) {
 		
 		model.addAttribute("user_idx", user_idx);
+		model.addAttribute("user_id", user_id);
 
 		Users users = uService.printOneUser(user_idx);
 		model.addAttribute("users", users);
@@ -93,6 +94,9 @@ public class MemberController {
 		List<Users> board =  uService.selectBoardInfo(user_id);
 		model.addAttribute("board", board);
 		
+
+		List<Users> board = uService.selectBoardInfo(user_id);
+		model.addAttribute("board", board);
 
 		return "admin/member_profile";
 	}
