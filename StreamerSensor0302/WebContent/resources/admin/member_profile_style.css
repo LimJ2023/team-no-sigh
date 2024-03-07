@@ -129,4 +129,55 @@ input:disabled{
 
 .reading-user-board{
 	color: var(--color-primary);
+	margin: auto;
+}
+
+.board-table-thead{
+    height: 50px;
+    color: #00ff9f;
+}
+
+
+.board-table-thead-tr{
+    
+    border-bottom: 3px solid #00ff9f;
+    border-radius: 5px;
+}
+
+.board-table-tbody{
+    margin: 10px;
+}
+.board-table-tbody-tr{
+    margin: 10px;
+    padding: 10px;
+
+}
+
+.board-table-tbody-td{
+
+    height: 30px;
+
+    background-color: rgba(86,96,120,0.2);
+
+
+    border-top: 2px solid #2c2c2c;
+    border-bottom: 2px solid #2c2c2c;
+
+    padding: 20px;
+
+}
+
+.td-no{
+    width: 50px;
+    text-align: center;
+}
+
+.td-author{
+    width: 150px;
+    text-align: center;
+}
+
+.td-date{
+    width: 200px;
+    text-align: center;
 }
