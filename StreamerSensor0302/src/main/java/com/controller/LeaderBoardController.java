@@ -2,16 +2,12 @@ package com.controller;
 
 import java.util.List;
 
-import javax.annotation.Resource;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.domain.Ranking;
-import com.domain.Streamer;
 import com.domain.Users;
 import com.domain.Video;
 import com.service.RankingService;

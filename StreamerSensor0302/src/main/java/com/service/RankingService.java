@@ -8,8 +8,6 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +17,6 @@ import org.springframework.stereotype.Service;
 
 import com.dao.RankingDAO;
 import com.domain.Ranking;
-import com.domain.Streamer;
 import com.domain.Video;
 import com.mapper.RankingMapper;
 

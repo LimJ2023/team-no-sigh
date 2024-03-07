@@ -31,14 +31,16 @@ public class AdminController {
 		
 		Admin admin = adminService.getAdmin();
 		SiteInfo info = adminService.getSiteInfo();
-		Users user = usersService.getUsers();
 		
 		List<Users> subUsers = usersService.getSubUsers();
+		List<Users> newUsers = usersService.getNewJoinUsers(3);
 		Review review = reviewService.getRecentReview();
+		
+		System.out.println("유저 이미지 : " + newUsers.get(0).getUser_image());
 		
 		model.addAttribute("admin", admin);
 		model.addAttribute("info",info);
-		model.addAttribute("user", user);
+		model.addAttribute("newUsers",newUsers);
 		model.addAttribute("subUsers",subUsers);
 		model.addAttribute("review", review);
 		

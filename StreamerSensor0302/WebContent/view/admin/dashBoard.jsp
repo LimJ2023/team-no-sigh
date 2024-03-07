@@ -83,29 +83,14 @@
 			<div class="new-users">
 				<h2>신규 회원</h2>
 				<div class="user-list">
-				<c:forEach var="user" items="">
+				<c:forEach var="item" items="${newUsers }">
 					<div class="user">
-						<img src="img/admin/profile1.png" />
-						<h2>${user.user_name}</h2>
-						<p>${user.user_age}</p>
+						<img src="img/user_profile/${item.user_image}.png" />
+						<h2>${item.user_name}</h2>
+						<p>${item.user_id}</p>
 					</div>
 				</c:forEach>
 					
-					<div class="user">
-						<img src="img/admin/profile2.png" />
-						<h2>${user.user_name}</h2>
-						<p>${user.user_age}</p>
-					</div>
-					<div class="user">
-						<img src="img/admin/profile3.png" />
-						<h2>${users.user_name}</h2>
-						<p>${users.user_age}</p>
-					</div>
-					<div class="user">
-						<img src="img/admin/profile4.png" />
-						<h2>${users.user_name}</h2>
-						<p>${users.user_age}</p>
-					</div>
 				</div>
 			</div>
 			<!-- 새 유저 끝 -->

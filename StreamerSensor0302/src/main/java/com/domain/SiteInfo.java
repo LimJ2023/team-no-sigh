@@ -1,7 +1,5 @@
 package com.domain;
 
-import java.sql.Date;
-
 public class SiteInfo {
 	
 	private int stat_id;

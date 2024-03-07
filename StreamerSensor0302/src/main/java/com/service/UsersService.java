@@ -15,6 +15,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 
 import com.dao.UsersDAO;
+import com.domain.Board;
 import com.domain.Users;
 
 @Service
@@ -140,6 +141,21 @@ public class UsersService {
 		}
 
 		uDAO.modifyMemberInfo(modifyMemberBean);
+	}
+	
+	public List<Board> selectBoardInfo(String user_id){
+		return uDAO.selectBoardInfo(user_id);
+	}
+	
+	public List<Users> getNewJoinUsers(int usersCount) {
+		List<Users> list = uDAO.getNewJoinUsers();
+		List<Users> result = new ArrayList<Users>();
+		
+		for (int i = 0; i <= usersCount - 1; i++) {
+			result.add(list.get(i));
+		}
+		
+		return result;
 	}
 
 }

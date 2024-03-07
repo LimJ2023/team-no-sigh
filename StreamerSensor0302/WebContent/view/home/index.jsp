@@ -24,7 +24,13 @@
     <!-- navbar (왼쪽 사이드바) home_include 안의 left_include로 빼냄 -->
     <c:import url="/view/home_include/left_sideBar.jsp"/>
 </header>
-
+<%--  <c:forEach var="mainTest" items="${carouselTest }">
+	<c:set var="radio" value="${radio+1 }"/>
+	<h3>${radio }</h3>
+	<h3>${mainTest.test_id }</h3>
+<h3>${mainTest.test_idx }</h3>
+	</c:forEach> 
+ --%>
 
 <!-- 캐러셀 -->
 <div class="sugg-content">
@@ -34,9 +40,46 @@
         <input type="radio" name="position" checked id="radio3"/>
         <input type="radio" name="position" id="radio4"/>
         <input type="radio" name="position" id="radio5"/>
+<div class="carousel">
 
+	<c:forEach var="mainTest" items="${carouselTest }">
+		<c:set var="radio" value="${radio +1 }"/>
+		<div class="item" data-radio-target="radio${radio }">
+                <div class="streamer_box">
+                    <img src="img/carousel_test/${mainTest.test_img }.png" class="carImg profileBocchi"/>
+                    <div class="box_text">
+                        <h2 class="streamer_title">${mainTest.test_id }</h2>
+                        <a href="review?streamer_idx=${mainTest.test_idx }">
+                            <div class="watch-btn play-btn">
+                                <i class='bx bx-right-arrow bx-md'></i>
+                            </div>
+                        </a>
 
-        <div class="carousel">
+                    </div>
+                </div>
+            </div>
+	</c:forEach>
+
+		<%-- <c:forEach var="mainTest" items="${carouselTest }">
+			<c:set var="radio" value="${radio+1 }"/>
+			<div class="carousel">
+				<div class="item" data-radio-target="radio${radio }">
+					<div class="streamer_box">
+						<img src="img/carousel_test/${mainTest.test_img }.png" class="carImg"/>
+						<div class="box_text">
+							<h2 class="streamer_title">${mainTest.test_id }</h2>
+							<a href="review?streamer_idx=${mainTest.test_idx }">
+							<div class="watch-btn play-btn">
+								<i class="bx bx-right-arrow bx-md"></i>
+							</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</c:forEach>
+		 --%>
+        <%-- <div class="carousel">
             <div class="item" data-radio-target="radio1">
                 <div class="streamer_box">
                     <img src="./img/Person_Icon.png" class="carImg"/>
@@ -104,6 +147,7 @@
                     </div>
                 </div>
             </div>
+        </div> --%>
         </div>
     </div>
 </div>

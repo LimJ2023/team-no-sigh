@@ -1,14 +1,7 @@
 package com.mapper;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-
-import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.SelectProvider;
-import org.apache.ibatis.jdbc.SQL;
-
 import com.domain.Ranking;
 
 public interface RankingMapper {

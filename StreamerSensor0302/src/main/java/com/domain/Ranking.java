@@ -2,8 +2,6 @@ package com.domain;
 
 import java.awt.Image;
 
-import org.springframework.web.multipart.MultipartFile;
-
 public class Ranking {
 
 	private int ranking_id;
@@ -41,7 +39,7 @@ public class Ranking {
 	private long likes;
 	private long comments;
 	private int daily_viewers;
-	
+
 	
 	public int getRanking_id() {
 		return ranking_id;

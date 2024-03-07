@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.beans.BoardPageBean;
 import com.domain.Board;
 import com.service.BoardService;
 
@@ -21,10 +22,13 @@ public class BoardController {
 	BoardService boardService;
 
 	@RequestMapping(value = "")
-	public String boardListPage(Model model) {
+	public String boardListPage(Model model, @RequestParam(value = "page", defaultValue = "1")int page) {
 
-		List<Board> board = boardService.getBoardInfo();
+		List<Board> board = boardService.getBoardInfo(page);
 		model.addAttribute("board", board);
+		
+		BoardPageBean pageBean = boardService.getBoardCnt(page);
+		model.addAttribute("pageBean", pageBean);
 
 		return "/board/boardList";
 	}

@@ -1,8 +1,6 @@
 package com.controller;
 
 import java.io.IOException;
-import java.sql.Date;
-import java.text.SimpleDateFormat;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -26,6 +24,10 @@ import com.service.StreamerService;
 @Component
 public class StreamerController extends HttpServlet {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Autowired
 	private StreamerService streamerService;
 	

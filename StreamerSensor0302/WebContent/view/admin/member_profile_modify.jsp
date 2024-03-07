@@ -55,7 +55,7 @@
 				<div class="button">
 					<form:button class="btn btn-primary">수정완료</form:button>
 					<br> <a
-						href="${root }member_profile?user_idx=${modifyMemberBean.user_idx}">취소</a>
+						href="${root }member_profile?user_idx=${modifyMemberBean.user_idx}&user_id=${modifyMemberBean.user_id}">취소</a>
 				</div>
 			</form:form>
 		</div>
