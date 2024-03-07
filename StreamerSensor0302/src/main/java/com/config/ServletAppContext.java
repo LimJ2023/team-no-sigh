@@ -30,6 +30,7 @@ import com.interceptor.LoginMenuInterceptor;
 import com.mapper.AdminMapper;
 import com.mapper.BoardMapper;
 import com.mapper.LoginMenuMapper;
+import com.mapper.MainMapper;
 import com.mapper.RankingMapper;
 import com.mapper.ReviewMapper;
 import com.mapper.StreamMapper;
@@ -163,6 +164,14 @@ public class ServletAppContext implements WebMvcConfigurer {
 	@Bean
 	public MapperFactoryBean<VisitorMapper> getVisitorMapper(SqlSessionFactory factory) throws Exception {
 		MapperFactoryBean<VisitorMapper> factoryBean = new MapperFactoryBean<VisitorMapper>(VisitorMapper.class);
+		factoryBean.setSqlSessionFactory(factory);
+		return factoryBean;
+	}
+	
+	//0306이지수
+	@Bean
+	public MapperFactoryBean<MainMapper> getMainMapper(SqlSessionFactory factory) throws Exception{
+		MapperFactoryBean<MainMapper> factoryBean = new MapperFactoryBean<MainMapper>(MainMapper.class);
 		factoryBean.setSqlSessionFactory(factory);
 		return factoryBean;
 	}
