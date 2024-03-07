@@ -171,7 +171,7 @@ INSERT INTO review (review_idx, user_id, review_streaming_id, writing_data, revi
 
 
 ---게시판 데이터---
-INSERT INTO board (board_idx, user_id, title, info, board_date, view_count, comment_count, tags)
+INSERT INTO board (board_idx, user_id, title, info, board_date, view_count, comment_count, categorys)
     VALUES(board_seq.nextval, 'soldesk', '제목이요', '이거 맞추기는 했는데, 이게 컨트롤 부족인지 설명 좀.', sysdate, 1, 1, '방송');
 
 ---랭킹 데이터---
@@ -216,9 +216,7 @@ INSERT INTO site_stat (stat_id,visit_count,page_views,day_revenue,total_revenue,
     VALUES(6,310,13000,38000,439000,6,40,'2024-03-04');
 
 
-    
-    
-    UPDATE ranking SET rank_place=2 WHERE ranking_id=2;
+UPDATE ranking SET rank_place=2 WHERE ranking_id=2;
 
 --스트리머 더미 데이터 추가(0304 이지수)
 insert into streamer( streamer_idx, streamer_id, streamer_gender, streamer_grade, streamer_status, streamer_platform, streamer_followers, streamer_img)
@@ -251,7 +249,7 @@ INSERT INTO streaming_preference(avg_viewers, likes, comments, daily_viewers, st
 INSERT INTO streaming_preference(avg_viewers, likes, comments, daily_viewers, streaming_id) VALUES( 2800, 1700, 37000, 3750, 15);
 INSERT INTO streaming_preference(avg_viewers, likes, comments, daily_viewers, streaming_id) VALUES( 2700, 1600, 32000, 3500, 16);
 INSERT INTO streaming_preference(avg_viewers, likes, comments, daily_viewers, streaming_id) VALUES( 2600, 1580, 30000, 3430, 17);
-INSERT INTO streaming_preference(avg_viewers, likes, comments, daily_viewers, streaming_id) VALUES( 2300, 1550, 27000, 3410, 18);
+INSERT INTO streaming_preference(avg_viewers, likes, comments, daily_viewers, streaming_id) VALUES( 2300, 1550, 27000, 3410, 13);
 
 -----스트리머에게 의견 하나 남기기
 INSERT INTO streamer_rating (comment_id, user_idx, streamer_idx, streamer_rating, rating_comment, streamer_rating_date)

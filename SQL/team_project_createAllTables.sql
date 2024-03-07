@@ -96,15 +96,16 @@ CREATE TABLE ranking(
 --보드 테이블--
 CREATE TABLE board(
     board_idx number primary key,
-    user_id VARCHAR2(20),
-    title varchar2(20),
+    user_id VARCHAR2(60),
+    title varchar2(60),
     info VARCHAR2(200),
     board_date date,
     view_count number,
     comment_count number,
-    tags VARCHAR2(20),
-    FOREIGN KEY (user_id) REFERENCES USERS(user_id) ON DELETE SET NULL
+    categorys VARCHAR2(60)
 );
+
+
 
 --댓글 테이블--
 CREATE TABLE comments(
