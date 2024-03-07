@@ -45,7 +45,7 @@
 						<tr class="tr board-table-tbody-tr">
 							<td class="board-table-tbody-td td-no">${obj.board_idx}</td>
 							<td class="board-table-tbody-td td-title">
-								<a href="${root}board/boardView?board_idx=${obj.board_idx}">${obj.title}</a>
+								<a href="${root}board/boardView?board_idx=${obj.board_idx}&page=${page}">${obj.title}</a>
 							</td>
 							<td class="board-table-tbody-td td-author">${obj.user_id}</td>
 							<td class="board-table-tbody-td td-date">${obj.board_date}</td>
@@ -70,10 +70,35 @@
 
 
 			<div class="board-listNum">
-				<a href="#" class="pageControl pageControl-left">&lt;</a> <a
-					href="#" class="pageControl pageControl_anchorNum">1</a> <a
-					href="#" class="pageControl pageControl_anchorNum">2</a> <a
-					href="#" class="pageControl pageControl-right">&gt;</a>
+				<c:choose>
+					<c:when test="${pageBean.prevPage <=0}">
+						<a href="#" class="pageControl pageControl-left">&lt;</a>
+					</c:when>
+					<c:otherwise>
+						<a href="${root }board?page=${pageBean.prevPage}" class="pageControl pageControl-left">&lt;</a>
+					</c:otherwise>
+				</c:choose>
+				
+				<c:forEach var="idx" begin="${pageBean.min }" end="${pageBean.max }" >
+					<c:choose>
+						<c:when test="${idx == pageBean.currentPage}">
+							<a href="${root }board?page=${idx}" class="pageControl pageControl_anchorNum">${idx}</a> 
+						</c:when>
+						<c:otherwise>
+							<a href="${root }board?page=${idx}" class="pageControl pageControl_anchorNum">${idx}</a> 
+						</c:otherwise>
+					</c:choose>
+				</c:forEach>
+				 
+				<c:choose>
+					<c:when test="${pageBean.max >= pageBean.pageCnt }">
+						<a href="#" class="pageControl pageControl-right">&gt;</a>
+					</c:when>
+					<c:otherwise>
+						<a href="${root }board?page=${pageBean.nextPage}" class="pageControl pageControl-right">&gt;</a>
+					</c:otherwise>
+				</c:choose>
+					
 			</div>
 
 			<div class="board_write">
