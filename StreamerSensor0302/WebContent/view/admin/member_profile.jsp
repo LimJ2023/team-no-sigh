@@ -68,8 +68,9 @@
 			<thead class="board-table-thead">
 				<tr class="tr board-table-thead-tr">
 					<th class="th board-table-thead-th">No.</th>
-					<th class="th board-table-thead-th">제목</th>
 					<th class="th board-table-thead-th">작성자</th>
+					<th class="th board-table-thead-th">제목</th>
+					<th class="th board-table-thead-th">내용</th>
 					<th class="th board-table-thead-th">작성일</th>
 				</tr>
 			</thead>
@@ -79,8 +80,9 @@
 				<c:forEach var="obj" items="${board}">
 					<tr class="tr board-table-tbody-tr">
 						<td class="board-table-tbody-td td-no">${obj.board_idx}</td>
-						<td class="board-table-tbody-td td-title">${obj.title }</td>
 						<td class="board-table-tbody-td td-author">${obj.user_id}</td>
+						<td class="board-table-tbody-td td-title">${obj.title }</td>
+						<td class="board-table-tbody-td td-title">${obj.info }</td>
 						<td class="board-table-tbody-td td-date">${obj.board_date}</td>
 					</tr>
 				</c:forEach>
