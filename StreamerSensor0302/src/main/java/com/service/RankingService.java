@@ -8,12 +8,15 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import com.dao.RankingDAO;
 import com.domain.Ranking;
@@ -28,14 +31,8 @@ public class RankingService {
 	@Autowired
 	RankingDAO rankingDAO;
 	
-	//20240227 이지수 DB API 테스트용
 	@Autowired
 	RankingMapper rankingMapper;
-	
-	@Value("${path.upload}")
-	private String path_upload;
-	//
-
 	public List<Ranking> getRankings() {
 		return rankingDAO.getRanking();
 	}
@@ -143,4 +140,9 @@ public class RankingService {
 		return popRankings;
 	}
 	
+	public List<Ranking> getRankingByDate(String streamingDate) {
+	    return rankingDAO.getRankingByDate(streamingDate);
+	}
+	
+
 }

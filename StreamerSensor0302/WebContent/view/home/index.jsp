@@ -41,8 +41,24 @@
         <input type="radio" name="position" id="radio4"/>
         <input type="radio" name="position" id="radio5"/>
 <div class="carousel">
+<c:forEach var="mainFive" items="${fiveStreamer }">
+		<c:set var="radio" value="${radio +1 }"/>
+		<div class="item" data-radio-target="radio${radio }">
+                <div class="streamer_box">
+                    <img src="img/fiveCarousel/${mainFive.streamer_img }.png" class="carImg profileBocchi"/>
+                    <div class="box_text">
+                        <h2 class="streamer_title">${mainFive.streamer_id }</h2>
+                        <a href="review?streamer_idx=${mainFive.streamer_idx }">
+                            <div class="watch-btn play-btn">
+                                <i class='bx bx-right-arrow bx-md'></i>
+                            </div>
+                        </a>
 
-	<c:forEach var="mainTest" items="${carouselTest }">
+                    </div>
+                </div>
+            </div>
+	</c:forEach>
+	<%-- <c:forEach var="mainTest" items="${carouselTest }">
 		<c:set var="radio" value="${radio +1 }"/>
 		<div class="item" data-radio-target="radio${radio }">
                 <div class="streamer_box">
@@ -58,7 +74,7 @@
                     </div>
                 </div>
             </div>
-	</c:forEach>
+	</c:forEach> --%>
 
 		<%-- <c:forEach var="mainTest" items="${carouselTest }">
 			<c:set var="radio" value="${radio+1 }"/>

@@ -35,10 +35,12 @@ public class HomeController {
 		List<Streamer> streamerInfo = mainService.getStreamerInfo();
 		model.addAttribute("streamerInfo", streamerInfo);
 		
-		//0306 이지수
+		/*//0306 이지수
 		List<Carousel_Test> carouselTest = mainService.getTest();
 		model.addAttribute("carouselTest", carouselTest);
-		//
+		//*/
+		List<Streamer> fiveStreamer = mainService.getFiveStreamer();
+		model.addAttribute("fiveStreamer", fiveStreamer);
 		
 		return "redirect:/home";
 		//return "redirect:/index"; 에서 수정 -> 메인이 안떠서 수정했습니다..(0229 이지수)
@@ -53,10 +55,12 @@ public class HomeController {
 		List<Streamer> streamerInfo = mainService.getStreamerInfo();
 		model.addAttribute("streamerInfo", streamerInfo);
 		
-		//0306 이지수
+		/*//0306 이지수
 		List<Carousel_Test> carouselTest = mainService.getTest();
 		model.addAttribute("carouselTest", carouselTest);
-		//
+		//*/
+		List<Streamer> fiveStreamer = mainService.getFiveStreamer();
+		model.addAttribute("fiveStreamer", fiveStreamer);
 		
 		return "/home/index";
 	}

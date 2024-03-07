@@ -89,7 +89,10 @@
 					</thead>
 
 					<tbody class="tbody">
-
+<div class="date-picker">
+    <label for="streamingDate">날짜 선택: </label>
+    <input type="date" id="streamingDate" name="streamingDate" onchange="loadRankingData()"/>
+</div>
 						<c:forEach var="ranking" items="${rankings}">
 							<c:set var="rankPlace" value="${rankPlace+1 }"/>
 
@@ -98,7 +101,7 @@
 							<c:choose>
 							
 									<%--로그인 하지 않은 사용자의 경우 리스트 3개까지 보여줌 --%>
-							<c:when test="${rankPlace <=3}">
+							<c:when test="${rankPlace <=5}">
 									<td class="td-rankPlace">${rankPlace }</td>
 									<td class="td-streamerInfo">
 										<div class='rank-streamer'>
@@ -251,7 +254,7 @@
 							</tr>
 						</c:forEach>
 
-						<c:if test="${loginUserBean.subscription eq 'n'}">
+						<c:if test="${loginUserBean.subscription eq 'n' || loginUserBean.userLogin == false}">
 							<td colspan=8>
 								<div class='blackSpace'>
 									<img src='img/leaderBoard/coloredLock.png' class='locked'>
@@ -272,4 +275,13 @@
 
 </body>
 <script src="leaderBoard/filter.js"></script>
+<script>
+function loadRankingData() {
+    var selectedDate = document.getElementById('streamingDate').value;
+    if (!selectedDate) {
+        return; // 날짜가 선택되지 않았으면 아무 작업도 수행하지 않습니다.
+    }
+    window.location.href = "/StreamerSensor0302/leaderBoard?streaming_date=" + selectedDate;
+}
+</script>
 </html>
