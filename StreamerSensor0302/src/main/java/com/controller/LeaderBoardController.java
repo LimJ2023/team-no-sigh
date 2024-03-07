@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.domain.Ranking;
 import com.domain.Users;
@@ -22,6 +23,18 @@ public class LeaderBoardController {
 	@Autowired
 	RankingService rankingService;
 	
+	@RequestMapping(value = "/leaderBoard")
+	public String leaderBoardPage(@RequestParam(value = "streaming_date", required = false) String streamingDate, Model model) {
+	    List<Ranking> rankings;
+	    if (streamingDate != null) {
+	        rankings = rankingService.getRankingByDate(streamingDate);
+	    } else {
+	        rankings = rankingService.getRankings(); // 날짜가 선택되지 않았다면 기본 데이터 로드
+	    }
+	    model.addAttribute("rankings", rankings);
+	    return "/leaderBoard/rankPage";
+	}
+	/*
 	@RequestMapping(value = "/leaderBoard")
 	public String leaderBoardPage(Model model) {
 		
@@ -48,8 +61,7 @@ public class LeaderBoardController {
 		return "/leaderBoard/rankPage";
 		
 		
-	}
-	
+	}*/
 	
 	
 	

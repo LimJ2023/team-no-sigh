@@ -25,8 +25,12 @@ public class MainService {
 	@Autowired
 	MainDAO mainDAO;
 	
-	public List<Carousel_Test> getTest(){
+	/*public List<Carousel_Test> getTest(){
 		return mainDAO.getTest();
+	}*/
+	
+	public List<Streamer> getFiveStreamer(){
+		return mainDAO.getFiveStreamer();
 	}
 	
 public List<Streamer> getStreamerInfo(){
