@@ -117,3 +117,16 @@ input:disabled{
     display: flex;
     flex-direction: column;
 }
+
+.board-info {
+	width: 96%;
+	background-color: var(--color-text);
+	padding: 20px;
+	margin: auto;
+	margin-top: 35px;
+	border-radius: 2.5rem;
+}
+
+.reading-user-board{
+	color: var(--color-primary);
+}
