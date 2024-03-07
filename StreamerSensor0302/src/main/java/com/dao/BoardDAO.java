@@ -2,6 +2,7 @@ package com.dao;
 
 import java.util.List;
 
+import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -14,8 +15,12 @@ public class BoardDAO {
 	@Autowired
 	BoardMapper boardMapper;
 	
-	public List<Board> getBoardInfo() {
-		return boardMapper.getBoardInfo();
+	public List<Board> getBoardInfo(RowBounds rowBounds) {
+		return boardMapper.getBoardInfo(rowBounds);
+	}
+	
+	public int getBoardCnt(int boardCount) {
+		return boardMapper.getBoardCnt(boardCount);
 	}
 	
 	public void conutOneBoard(int board_idx) {
