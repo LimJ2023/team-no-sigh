@@ -32,5 +32,7 @@ public class RankingDAO {
 	public void addVideoInfo(List<Ranking> videoRankingBean) {
 		mapper.addVideoInfo(videoRankingBean);
 	}*/
-	
+	public List<Ranking> getRankingByDate(String streamingDate) {
+	    return mapper.getRankingByDate(streamingDate);
+	}
 }

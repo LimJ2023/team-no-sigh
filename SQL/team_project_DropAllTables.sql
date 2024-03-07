@@ -20,6 +20,7 @@ DROP TABLE login_info_table;
 DROP TABLE visitor;
 DROP TABLE streamer_rating;
 
+
 --시퀀스 값 초기화
 drop SEQUENCE review_id_seq;
 drop SEQUENCE streaming_id_seq;
