@@ -63,4 +63,8 @@ public class UsersDAO {
 		return mapper.selectBoardInfo(user_id);
 	}
 	
+	public List<Users> getNewJoinUsers() {
+		return mapper.getNewJoinUsers();
+	}
+	
 }

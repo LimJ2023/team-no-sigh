@@ -4,12 +4,6 @@ import javax.servlet.annotation.WebListener;
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
-import com.dao.AdminDAO;
-import com.domain.SiteInfo;
-import com.service.AdminService;
-
 @WebListener
 public class SessionListener implements HttpSessionListener{
 

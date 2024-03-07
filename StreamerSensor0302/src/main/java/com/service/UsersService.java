@@ -146,5 +146,16 @@ public class UsersService {
 	public List<Board> selectBoardInfo(String user_id){
 		return uDAO.selectBoardInfo(user_id);
 	}
+	
+	public List<Users> getNewJoinUsers(int usersCount) {
+		List<Users> list = uDAO.getNewJoinUsers();
+		List<Users> result = new ArrayList<Users>();
+		
+		for (int i = 0; i <= usersCount - 1; i++) {
+			result.add(list.get(i));
+		}
+		
+		return result;
+	}
 
 }

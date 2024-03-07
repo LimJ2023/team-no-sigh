@@ -1,7 +1,5 @@
 package com.controller;
 
-import java.util.List;
-
 import javax.annotation.Resource;
 import javax.validation.Valid;
 
@@ -15,13 +13,10 @@ import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.beans.UsersBean;
 import com.domain.Users;
 import com.service.UsersService;
-
 import com.validator.UsersValidator;
 
 @Controller

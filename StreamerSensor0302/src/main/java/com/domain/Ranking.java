@@ -2,8 +2,6 @@ package com.domain;
 
 import java.awt.Image;
 
-import org.springframework.web.multipart.MultipartFile;
-
 public class Ranking {
 
 	private int ranking_id;

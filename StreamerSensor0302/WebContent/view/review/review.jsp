@@ -35,7 +35,7 @@
 					</div>
 
 					<div class="related_streamers">
-						<p>연관 스트리머</p>
+						<p>연관 주제</p>
 						<div class="streamer_icon">
 							<img src="img/admin/profile2.png">
 						</div>

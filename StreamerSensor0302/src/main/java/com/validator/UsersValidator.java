@@ -3,7 +3,6 @@ package com.validator;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
-import com.beans.UsersBean;
 import com.domain.Users;
 
 public class UsersValidator implements Validator {
