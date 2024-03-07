@@ -15,11 +15,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
 
+import com.dao.MainDAO;
+import com.domain.Carousel_Test;
 import com.domain.Streamer;
 
 @Service
 public class MainService {
 
+	//0306 이지수
+	@Autowired
+	MainDAO mainDAO;
+	
+	public List<Carousel_Test> getTest(){
+		return mainDAO.getTest();
+	}
+	
 public List<Streamer> getStreamerInfo(){
 		
 		

@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.beans.UsersBean;
+//import com.beans.UsersBean;
 import com.domain.Users;
 import com.mapper.UsersMapper;
 
@@ -56,6 +56,10 @@ public class UsersDAO {
 	
 	public void deleteMemberInfo(int user_idx) {
 		mapper.deleteMemberInfo(user_idx);
+	}
+	
+	public List<Users> selectBoardInfo(String user_id) {
+		return mapper.selectBoardInfo(user_id);
 	}
 	
 }

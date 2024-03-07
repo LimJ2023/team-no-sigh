@@ -79,7 +79,7 @@
 							<th scope="col">좋아요 수</th>
 							<th scope="col">일일 시청자 수</th>
 							<th scope="col">팔로워 수</th>
-							<th scope="col">카테고리</th>
+							<th scope="col">♡</th>
 
 						</tr>
 

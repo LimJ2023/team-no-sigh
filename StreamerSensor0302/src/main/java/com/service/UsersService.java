@@ -141,5 +141,9 @@ public class UsersService {
 
 		uDAO.modifyMemberInfo(modifyMemberBean);
 	}
+	
+	public List<Users> selectBoardInfo(String user_id){
+		return uDAO.selectBoardInfo(user_id);
+	}
 
 }
