@@ -138,6 +138,13 @@ public class UsersController {
 		return "user/not_login";
 	}
 
+	@GetMapping("/subscribe")
+	public String subscribe() {
+		
+		
+		return "user/subscribe";
+	}
+	
 	@InitBinder
 	public void initBinder(WebDataBinder binder) {
 		UsersValidator validator1 = new UsersValidator();

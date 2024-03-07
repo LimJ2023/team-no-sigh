@@ -30,23 +30,16 @@
     <nav>
         <div class="container">
             <!-- logo -->
-            <a href="index.html" class="logo">
+            <a href="${root }home" class="logo">
                 Streamer<span>Sensor</span>
             </a>
-            <div class="search-bar">
-                <span class="material-icons-sharp"></span>
-                <input type="search" placeholder="search">
-                <i class='bx bx-search'></i>
-            </div>
+           
             <div class="profile-area">
-                <div class="theme-btn">
-                    <i class='bx bx-wallet-alt active' ></i>
-                    <i class='bx bxs-wallet-alt'></i>
-                </div>
+                
                 <div class="profile">
-                    <div class="profile-photo">
-                        <img src="">
-                    </div>
+                    <a href="${root }user/myPage" class="user"> <img
+					src="img/Person_Icon.png" alt="" class="user-img">
+				</a>
                     <h5>${users.user_id }</h5>
                     <span></span>
                 </div>
@@ -65,7 +58,7 @@
             </button>
             
             <div class="sidebar">
-                <a href="#" class="active">
+                <a href="${root }user/myPage" class="active">
                     <i class='bx bxs-dashboard' ></i>
                     <h4>마이페이지</h4>
                 </a>
@@ -77,10 +70,7 @@
                     <i class='bx bxs-user-detail' ></i>
                     <h4>계정</h4>
                 </a>
-                <a href="#">
-                    <i class='bx bxs-dashboard' ></i>
-                    <h4>Mypage</h4>
-                </a>
+
                 <a href="${root }user/logout">
                     <i class='bx bx-log-out'></i>
                     <h4>로그아웃</h4>

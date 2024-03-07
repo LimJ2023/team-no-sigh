@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>MyPage</title>
-    <link rel="stylesheet" href="${root }user/account.css">
+    <link rel="stylesheet" href="${root }user/acco.css">
     <!-- 아이콘 -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--폰트  -->
@@ -28,19 +28,12 @@
     <nav>
         <div class="container">
             <!-- logo -->
-            <a href="index.html" class="logo">
+            <a href="${root }home" class="logo">
                 Streamer<span>Sensor</span>
             </a>
-            <div class="search-bar">
-                <span class="material-icons-sharp"></span>
-                <input type="search" placeholder="search">
-                <i class='bx bx-search'></i>
-            </div>
+            
             <div class="profile-area">
-                <div class="theme-btn">
-                    <i class='bx bx-wallet-alt active' ></i>
-                    <i class='bx bxs-wallet-alt'></i>
-                </div>
+                
                 <div class="profile">
                     <div class="profile-photo">
                         <img src="">
@@ -75,23 +68,13 @@
                     <i class='bx bxs-user-detail' ></i>
                     <h4>계정</h4>
                 </a>
-                <a href="#">
-                    <i class='bx bxs-dashboard' ></i>
-                    <h4>Mypage</h4>
-                </a>
-                <a href="#">
+                <a href="${root }user/logout">
                     <i class='bx bx-log-out'></i>
                     <h4>로그아웃</h4>
                 </a>
             </div>
             <!-- end sidebar -->
-            <div class="updates">
-                <i class='bx bx-refresh'></i>
-                <h4>Update Available</h4>
-                <small>Security Updates</small>
-                <small>General Updates</small>
-                <a href="#">Update Now</a>
-            </div>
+            
         </aside>
         <!-- end aside -->
         
