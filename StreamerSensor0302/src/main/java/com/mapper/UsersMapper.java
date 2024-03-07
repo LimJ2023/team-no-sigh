@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
+import com.domain.Board;
 //import com.beans.UsersBean;
 import com.domain.Users;
 
@@ -62,6 +63,6 @@ public interface UsersMapper {
 			+ "from users u "
 			+ "INNER JOIN board b on u.user_id = b.user_id "
 			+ "where u.user_id = #{user_id}")
-	List<Users> selectBoardInfo(String user_id);
+	List<Board> selectBoardInfo(String user_id);
 
 }

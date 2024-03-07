@@ -63,25 +63,29 @@
 		</div>
 	</div>
 
-	<c:if test="${user_id != null }">
-		<div class="board-info">
-			<table class="reading-user-board">
-				<tr class="board-table-list">
-					<td class="board-write">작성자</td>
-					<td class="board-title">글 제목</td>
-					<td class="board-content">글 내용</td>
-					<td class="board-date">작성 일자</td>
+	<div class="board-info">
+		<table class="reading-user-board">
+			<thead class="board-table-thead">
+				<tr class="tr board-table-thead-tr">
+					<th class="th board-table-thead-th">No.</th>
+					<th class="th board-table-thead-th">제목</th>
+					<th class="th board-table-thead-th">작성자</th>
+					<th class="th board-table-thead-th">작성일</th>
 				</tr>
-				<c:forEach var="board" items="board">
-					<tr>
-						<td class="board-write">${board.user_id }</td>
-						<td class="board-title">${board.title }</td>
-						<td class="board-content">${board.info }</td>
-						<td class="board-date">${board.board_date }</td>
+			</thead>
+
+
+			<tbody class="board-table-tbody">
+				<c:forEach var="obj" items="${board}">
+					<tr class="tr board-table-tbody-tr">
+						<td class="board-table-tbody-td td-no">${obj.board_idx}</td>
+						<td class="board-table-tbody-td td-title">${obj.title }</td>
+						<td class="board-table-tbody-td td-author">${obj.user_id}</td>
+						<td class="board-table-tbody-td td-date">${obj.board_date}</td>
 					</tr>
 				</c:forEach>
-			</table>
-		</div>
-	</c:if>
+			</tbody>
+		</table>
+	</div>
 </body>
 </html>
