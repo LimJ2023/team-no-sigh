@@ -7,7 +7,6 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
-import com.beans.UsersBean;
 import com.domain.Users;
 
 public interface UsersMapper {
@@ -57,5 +56,11 @@ public interface UsersMapper {
 
 	@Delete("DELETE FROM users WHERE user_idx = #{user_idx}")
 	void deleteMemberInfo(int user_idx);
+	
+	@Select("select u.user_id, b.title, b.info, b.board_date "
+			+ "from users u "
+			+ "INNER JOIN board b on u.user_id = b.user_id "
+			+ "where u.user_id = #{user_id}")
+	List<Users> selectBoardInfo(String user_id);
 
 }

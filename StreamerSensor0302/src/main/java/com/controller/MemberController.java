@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.validation.Valid;
 
+import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -81,12 +82,17 @@ public class MemberController {
 	}
 
 	@GetMapping("/member_profile")
-	public String member_profile(@RequestParam("user_idx") int user_idx, Model model) {
+	public String member_profile(@RequestParam("user_idx") int user_idx, 
+			@RequestParam("user_id")String user_id, Model model) {
 		
 		model.addAttribute("user_idx", user_idx);
 
 		Users users = uService.printOneUser(user_idx);
 		model.addAttribute("users", users);
+		
+		List<Users> board =  uService.selectBoardInfo(user_id);
+		model.addAttribute("board", board);
+		
 
 		return "admin/member_profile";
 	}
