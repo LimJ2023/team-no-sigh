@@ -39,7 +39,17 @@
 						</td>
 						<td class="write-form-password1">카테고리</td>
 						<td class="write-form-password1-input">
-							<form:input type="text" class="write-form-input" path="categorys" />
+							<%-- <form:input type="text" class="write-form-input" path="categorys" /> --%>
+							<form:select class="write-form-input" path="categorys" style="background-color : #2c2c2c">
+								<form:option value="영화" />
+								<form:option value="게임" />
+								<form:option value="음악" />
+								<form:option value="리뷰" />
+								<form:option value="주식" />
+								<form:option value="음식" />
+								<form:option value="수다" />
+								<form:option value="스포츠" />
+							</form:select>
 						</td>
 					</tr>
 
