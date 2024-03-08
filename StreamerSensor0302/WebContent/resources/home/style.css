@@ -52,8 +52,8 @@ body{
 }
 .container{
     max-width: 2000px;
-    margin: auto;
-    width: 100%;
+    margin: 0 auto;
+    width: 50%;
 }
 header{
     position: fixed;
