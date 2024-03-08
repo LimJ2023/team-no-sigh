@@ -45,7 +45,7 @@
 		<c:set var="radio" value="${radio +1 }"/>
 		<div class="item" data-radio-target="radio${radio }">
                 <div class="streamer_box">
-                    <img src="img/fiveCarousel/${mainFive.streamer_img }.png" class="carImg profileBocchi"/>
+                    <img src="img/fiveCarousel/${mainFive.streamer_image }.png" class="carImg profileBocchi"/>
                     <div class="box_text">
                         <h2 class="streamer_title">${mainFive.streamer_id }</h2>
                         <a href="review?streamer_idx=${mainFive.streamer_idx }">
