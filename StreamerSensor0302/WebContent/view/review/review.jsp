@@ -23,7 +23,7 @@
 			<div class="reviews_header">
 				<div class="header_streamerInfo">
 					<div class="streamerInfo_img">
-						<img src="img/streamer_profile/${streamer.img_url }.png">
+						<img src="img/streamer_profile/${streamer.streamer_image }.png">
 					</div>
 					<div class="streamerInfo_cont">
 
@@ -53,7 +53,7 @@
 						<div class="recentComments_item">
 							<div class="cmt_wrap">
 								<div class="profile_area">
-									<img src="img/user_profile/${rating.img_url }.png">
+									<img src="img/user_profile/${rating.user_image }.png">
 								</div>
 								<div class="cont_area">
 									<div class="cmt_head">${rating.user_name} / date :
@@ -102,7 +102,7 @@
 						<div class="streaming_item">
 							<div class="streaming_img">
 								<a href="${stream.streaming_url }">
-									<img src="img/thumbnail/${stream.img_url}.png">
+									<img src="img/thumbnail/${stream.streaming_image}.png">
 								</a>
 							</div>
 							<div class="streaming_info">
