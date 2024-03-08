@@ -10,7 +10,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.domain.Carousel_Test;
 import com.domain.Ranking;
 import com.domain.Streamer;
 import com.domain.Video;

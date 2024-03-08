@@ -98,9 +98,7 @@
 
 			<div class="reviews_container">
 				<div class="streaming_list">
-
 					<c:forEach var="stream" items="${streamList }">
-
 						<div class="streaming_item">
 							<div class="streaming_img">
 								<a href="${stream.streaming_url }">
