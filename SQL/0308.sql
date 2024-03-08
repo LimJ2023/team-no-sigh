@@ -1,17 +1,14 @@
+SELECT streamer_idx, streamer_id, streamer_platform, streamer_image FROM streamer WHERE streamer_idx BETWEEN 0 AND 4;
 
-DROP TABLE main_carousel_test;
-DROP TABLE test_category;
-DROP TABLE test_pref;
-DROP TABLE test_user_streaming_likes;
+select * from streamer;
 
-SELECT * FROM streaming_preference;
-SELECT * FROM streaming_info;
 
-INSERT INTO streamer VALUES (streamer_idx_seq.nextval, '게임ZONE', '남', '일반', '오프라인', '유튜브', 50000, 206);
-INSERT INTO streamer VALUES (streamer_idx_seq.nextval, '플레이뷰', '남', '일반', '온라인', '치지직', 47500, 207);
-INSERT INTO streamer VALUES (streamer_idx_seq.nextval, '조이스틱코어', '여', '일반', '온라인', '아프리카', 47300, 208);
-INSERT INTO streamer VALUES (streamer_idx_seq.nextval, '버튼승부', '여', '일반', '온라인', '아프리카', 47200, 209);
-INSERT INTO streamer VALUES (streamer_idx_seq.nextval, '에코웨이브', '여', '일반', '오프라인', '유튜브', 47000, 210);
+
+INSERT INTO streamer VALUES (streamer_idx_seq.nextval, '게임ZONE', '남', '일반', '오프라인', '유튜브', 50000, streamer_profile_12);
+INSERT INTO streamer VALUES (streamer_idx_seq.nextval, '플레이뷰', '남', '일반', '온라인', '치지직', 47500, streamer_profile_13);
+INSERT INTO streamer VALUES (streamer_idx_seq.nextval, '조이스틱코어', '여', '일반', '온라인', '아프리카', 47300, streamer_profile_14);
+INSERT INTO streamer VALUES (streamer_idx_seq.nextval, '버튼승부', '여', '일반', '온라인', '아프리카', 47200, streamer_profile_15);
+INSERT INTO streamer VALUES (streamer_idx_seq.nextval, '에코웨이브', '여', '일반', '오프라인', '유튜브', 47000, streamer_profile_16);
 
 INSERT INTO streaming_info VALUES (streaming_id_seq.nextval, '게임플렉스', 'http://www.youtube.com', '2시간 22분', 1, '2024-01-09', '게임ZONE', 6);
 INSERT INTO streaming_info VALUES (streaming_id_seq.nextval, '버추얼퀘스트', 'http://www.chzzk.com', '4시간 32분', 1, '2024-01-09', '플레이뷰', 7);
@@ -29,5 +26,3 @@ INSERT INTO streaming_preference VALUES(1950, 1300, 25100, 2000, 22);
 INSERT INTO streaming_info VALUES (streaming_id_seq.nextval, '1월 8일 게임', 'http://www.afreecatv.com', '2시간 28분', 1, '2024-01-08', '머독', 6);
 
 INSERT INTO streaming_preference VALUES(12300, 11752, 315000, 31600, 23);
-
-commit;
