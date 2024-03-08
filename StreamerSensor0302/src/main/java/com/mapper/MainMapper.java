@@ -5,8 +5,6 @@ import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
-import com.beans.StreamerBean;
-import com.domain.Carousel_Test;
 import com.domain.Streamer;
 
 @Mapper
