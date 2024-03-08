@@ -66,7 +66,6 @@ public class Streamer {
 	public void setStreamer_image(String streamer_image) {
 		this.streamer_image = streamer_image;
 	}
-	
 	//===========0229 이지수
 	public String getChannel_title() {
 		return channel_title;

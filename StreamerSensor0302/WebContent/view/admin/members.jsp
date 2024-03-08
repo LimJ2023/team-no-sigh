@@ -46,11 +46,14 @@
 			</div>
 			<div class="user-profile">
 				<c:forEach var="users" items="${users }">
-					<a href='${root }member_profile?user_idx=${users.user_idx}&user_id=${users.user_id}'>
+					<a
+						href='${root }member_profile?user_idx=${users.user_idx}&user_id=${users.user_id}'>
 						<div class='user'>
-							<p class='id'>
-								<img src='img/admin/profile4.png' />&nbsp; 아이디: ${users.user_id }
-							</p>
+							<c:if test="${users.user_image != null }">
+								<p class='id'>
+									<img src='${root }upload/${users.user_image}' />&nbsp; 아이디: ${users.user_id }
+								</p>
+							</c:if>
 							<br /> <br />
 							<p class='subscription'>구독 여부: ${users.subscription }</p>
 						</div>
