@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.domain.Admin;
 import com.domain.Review;
 import com.domain.SiteInfo;
+import com.domain.StreamerRating;
 import com.domain.Users;
 import com.service.AdminService;
 import com.service.ReviewService;
@@ -34,7 +35,7 @@ public class AdminController {
 		
 		List<Users> subUsers = usersService.getSubUsers();
 		List<Users> newUsers = usersService.getNewJoinUsers(3);
-		Review review = reviewService.getRecentReview();
+		StreamerRating rating = reviewService.getRecentRating();
 		
 		System.out.println("유저 이미지 : " + newUsers.get(0).getUser_image());
 		
@@ -42,7 +43,7 @@ public class AdminController {
 		model.addAttribute("info",info);
 		model.addAttribute("newUsers",newUsers);
 		model.addAttribute("subUsers",subUsers);
-		model.addAttribute("review", review);
+		model.addAttribute("rating",rating);
 		
 		return "/admin/dashBoard";
 	}

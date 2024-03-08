@@ -40,6 +40,13 @@ public interface ReviewMapper {
 			+ "WHERE streamer_idx = #{streamer_idx}")
 	List<StreamerRating> getRatingListByStreamerIdx(int streamer_idx);
 	
+	@Select("SELECT r.streamer_rating, r.rating_comment, r.streamer_rating_date, s.streamer_id, s.streamer_image "
+			+ "FROM streamer_rating r "
+			+ "INNER JOIN streamer s ON r.streamer_idx = s.streamer_idx "
+			+ "WHERE r.streamer_rating_date = (SELECT MAX(r2.streamer_rating_date) "
+			+ "	   FROM streamer_rating r2)")
+	StreamerRating getRecentRating();
+	
 	@Select("SELECT COUNT(*) "
 			+ "FROM streamer_rating "
 			+ "WHERE streamer_idx = #{streamer_idx}")

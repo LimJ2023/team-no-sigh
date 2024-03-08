@@ -69,11 +69,11 @@
 				<div class="highlight">
 					<div class="info">
 						<h3>최근 평가된 스트리머</h3>
-						<h3>평점 : ${review.review_rating }점</h3>
-						<h3>제목 : ${review.streaming_description }</h3>
+						<h3>평점 : ${rating.streamer_rating }점</h3>
+						<h3>내용 : ${rating.rating_comment }</h3>
 					</div>
 					<div class="content">
-						<img src="img/thumbnail/${review.img_url}.png">
+						<img src="img/streamer_profile/${rating.streamer_image}.png">
 					</div>
 				</div>
 			</div>

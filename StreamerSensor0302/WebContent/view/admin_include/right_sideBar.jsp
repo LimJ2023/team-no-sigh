@@ -38,7 +38,7 @@
 				
 			</div>
 		</div>
-
+	<!--  
 		<div class="reminders">
 			<div class="header">
 				<h2>알림</h2>
@@ -94,7 +94,9 @@
 				</div>
 			</div>
 		</div>
+		-->
 		<!-- 리마인더 종료 -->
+		
 	</div>
 	<!-- 오른쪽 섹션 종료 -->
 </body>

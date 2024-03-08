@@ -32,4 +32,8 @@ public class ReviewDAO {
 	public int getCommentCount(int streamer_idx) {
 		return mapper.getCommentCount(streamer_idx);
 	}
+	
+	public StreamerRating getRecentRating() {
+		return mapper.getRecentRating();
+	}
 }
