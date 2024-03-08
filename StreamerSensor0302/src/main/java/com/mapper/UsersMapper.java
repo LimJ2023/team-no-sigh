@@ -44,12 +44,13 @@ public interface UsersMapper {
 	@Select("select user_id, user_name " + "from users " + "where user_idx = #{user_idx}")
 	Users getmodifyUserinfo(int user_idx);
 
-	@Update("update users " + "set user_name = #{user_name}, user_gender = #{user_gender}, "
+	@Update("update users "
+			+ "set user_name = #{user_name}, user_gender = #{user_gender}, "
 			+ "user_age = #{user_age}, user_nation = #{user_nation}, "
 			+ "subscription = #{subscription}, user_image = #{user_image, jdbcType=VARCHAR} "
 			+ "where user_idx = #{user_idx} ")
 	void modifyUserInfo(Users modifyUserBean);
-
+	//=======================================================================================
 	@Update("update users "
 			+ "set user_name = #{user_name}, user_gender = #{user_gender}, "
 			+ "user_age = #{user_age}, user_nation = #{user_nation}, "
@@ -65,7 +66,7 @@ public interface UsersMapper {
 			+ "INNER JOIN board b on u.user_id = b.user_id "
 			+ "where u.user_id = #{user_id}")
 	List<Board> selectBoardInfo(String user_id);
-	
+	//-------------------------------------------------------------------------------
 	@Select("SELECT u.user_idx, u.user_id, u.user_name, u.user_age, u.user_image "
 			+ "FROM users u "
 			+ "ORDER BY user_idx desc")

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>MyPage</title>
-    <link rel="stylesheet" href="${root }user/acco.css">
+    <link rel="stylesheet" href="${root }user/accocopy.css">
     <!-- 아이콘 -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--폰트  -->
@@ -87,23 +87,40 @@
 					<img src="${root }upload/${users.user_image}" width="100%">
 				
 			</c:if>
+				 <div>
+				<div class="input-box">
 				 <br /> 아이디 <br />
-				<input path="user_id" placeholder="아이디를 입력해 주세요."
+				<form:input path="user_id" placeholder="아이디를 입력해 주세요."
 					readonly="true" />
-				<br /> 이름 <br />
-				<input path="user_name" placeholder="이름을 입력해 주세요."
+				</div>
+				<div class="input-box">
+				이름 <br />
+				<form:input path="user_name" placeholder="이름을 입력해 주세요."
 					readonly="true" />
-				<br /> 성별 <br />
-				<input path="user_gender" placeholder="성별을 입력해 주세요." readonly="true" />
-				<br /> 나이 <br />
-				<input path="user_age" placeholder="나이을 입력해 주세요." readonly="true"/>
-				<br /> 국적 <br />
-				<input path="user_nation" placeholder="국적을 입력해 주세요." readonly="true"/>
+				</div>
+				<div class="input-box">
+				 성별 <br />
+				<form:input path="user_gender" placeholder="성별을 입력해 주세요." readonly="true" />
+				</div>
+				<div class="input-box">
+				 나이 <br />
+				<form:input path="user_age" placeholder="나이을 입력해 주세요." readonly="true"/>
+				</div>
+				<div class="input-box">
+				 국적 <br />
+				<form:input path="user_nation" placeholder="국적을 입력해 주세요." readonly="true"/>
+				</div>
+				<div class="input-box">
 				<br /> <br />
-				<password path="user_pw" placeholder="비밀번호를 입력해 주세요." readonly="true"/>
+				<form:password path="user_pw" placeholder="비밀번호를 입력해 주세요." readonly="true"/>
+				</div>
+				<div class="input-box">
 				<br /> <br />
-				<password path="user_pw2" placeholder="비밀번호를 다시 입력해 주세요." readonly="true"/>
-				<a href="${root }user/password_chan">수정하기</a> <br>
+				<form:password path="user_pw2" placeholder="비밀번호를 다시 입력해 주세요." readonly="true"/>
+				</div>
+				<form:button class="btn">
+				<a href="${root }user/password_chan" >수정하기</a> <br>
+				</form:button>
 				
 				<br /> <br> 계정 삭제 <br /> <br />
 				<div style="color: red;">
@@ -112,7 +129,7 @@
 				<br />
 				<li>즐겨찾기 목록 등 개인 편의를 위해 저장한 모든 데이터가 영구적으로 삭제됩니다.</li>
 				<li>이용중인 모든 유료서비스가 해지되며 결제한 금액은 환불되지 않습니다.</li> <br />
-				<button value="submit">
+				<button class="btn" value="submit">
 					<a href="${root }account_delete" style="text-decoration-line: none;">계정
 						삭제</a>
 				</button>

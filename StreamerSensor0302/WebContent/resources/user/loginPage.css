@@ -100,3 +100,14 @@ body{
 .register-link p a:hover{
     text-decoration: underline;
 }
+.input-group-append{
+    width: 20%;
+    height: 20px;
+    background-color: #fff;
+    position: relative;
+    top: 5px;
+    left: 230px;
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+}

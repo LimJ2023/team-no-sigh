@@ -26,7 +26,7 @@
 </head>
 <script src="https://js.tosspayments.com/v1"></script>
 <script>
-let amount = 50000;
+let amount = 3900;
 
 let tossPayments = TossPayments("test_ck_D5GePWvyJnrK0W0k6q8gLzN97Eoq");
 
@@ -167,10 +167,7 @@ let jsons = {
 			<!-- logo -->
 			<a href="${root }/home" class="logo"> Streamer<span>Sensor</span>
 			</a>
-			<div class="search-bar">
-				<span class="material-icons-sharp"></span> <input type="search"
-					placeholder="search"> <i class='bx bx-search'></i>
-			</div>
+			
 			<div class="profile-area">
 
 				<div class="profile">
@@ -195,17 +192,23 @@ let jsons = {
 			</button>
 
 			<div class="sidebar">
-				<a href="#" class="active"> <i class='bx bxs-dashboard'></i>
-					<h4>마이페이지</h4>
-				</a> <a href="#"> <i class='bx bxs-movie-play'></i>
-					<h4>구독</h4>
-				</a> <a href="account.html"> <i class='bx bxs-user-detail'></i>
-					<h4>계정</h4>
-				</a> <a href="#"> <i class='bx bxs-dashboard'></i>
-					<h4>Mypage</h4>
-				</a> <a href="#"> <i class='bx bx-log-out'></i>
-					<h4>로그아웃</h4>
-				</a>
+				<a href="${root }user/myPage" class="active">
+                    <i class='bx bxs-dashboard' ></i>
+                    <h4>마이페이지</h4>
+                </a>
+                <a href="${root }user/subscribe">
+                    <i class='bx bxs-movie-play' ></i>
+                    <h4>구독</h4>
+                </a>
+                <a href="${root }user/account">
+                    <i class='bx bxs-user-detail' ></i>
+                    <h4>계정</h4>
+                </a>
+
+                <a href="${root }user/logout">
+                    <i class='bx bx-log-out'></i>
+                    <h4>로그아웃</h4>
+                </a>
 			</div>
 			<!-- end sidebar -->
 
@@ -213,14 +216,81 @@ let jsons = {
 
 		<div class="account">
 			<h1>구독</h1>
-			<br>
-			<div>
-				구독하시겠습니까
-				
-					<button onclick="pay('카드',jsons.card);" type="submit">결제하기</button>
-				
-			</div>
 
+
+			<section class="pricing_section">
+				<div class="pricing_div">
+					<div class="pricing_header">
+
+						<div class="subscription_plan_list subs_default">
+							<h1 class="pricing_title" style="color: blueviolet;">
+								<i class='bx bxs-user-x'></i> Default
+							</h1>
+							<div class="pricing_text pricing_default">
+								<h2 style="position: relative; top: 20px;">회원 가입만 하셨을 경우</h2>
+								<ul>
+									<li>•스트리머의 순위를 보는데 제약이 있습니다</li>
+									<br />
+									<li>•회원정보 수정이 가능합니다</li>
+									<br />
+									<li>•게시판 글 등록을 할 수 있습니다</li>
+								</ul>
+							</div>
+							<br />
+
+						</div>
+
+						<div class="subscription_plan_list subs_subbed">
+							<h1 class="pricing_title">
+								<i class='bx bxs-hand-right'></i> Subscription
+							</h1>
+							<div class="pricing_text pricing_subbed">
+								<h2 style="position: relative; top: 20px;">구독기능</h2>
+								<ul>
+									<li>•더 구체적인 순위를 알 수 있습니다</li>
+									<br />
+									<li>•즐겨찾기를 통해 관심있는 스트리머목록을 <br /> 관리하실수 있습니다
+									</li>
+									<br />
+									<li>•스트리머의 상세정보를 확인할수 있습니다</li>
+								</ul>
+								<div class="subs_price_month">
+									<h3 style="size: 50px;">
+										<i class='bx bx-check'></i>월 ₩3900원
+									</h3>
+
+									<h5 style="color: black;">•취소가 가능합니다</h5>
+									<br />
+									<h4 style="color: #DB4455;">구독하시겠습니까?</h4>
+								</div>
+								<button class="subscription_button"
+									onclick="pay('카드',jsons.card);" type="submit">결제하기</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="subs_detail">
+
+						<div class="subs_advantages">
+							<div class="subs_advantages_div">
+								<img src="${root }./img/ranking.png" class="subs_advantages_icon">
+								<div class="subs_advantages_div_detail">더 구체적인 순위 정보를 확인할
+									수 있습니다</div>
+							</div>
+							<div class="subs_advantages_div">
+								<img src="${root }./img/favorite.png" class="subs_advantages_icon">
+								<div class="subs_advantages_div_detail">즐겨찾기를 통해 관심있는 스트리머
+									목록을 관리할 수 있습니다</div>
+							</div>
+							<div class="subs_advantages_div">
+								<img src="${root }./img/writing.png" class="subs_advantages_icon">
+								<div class="subs_advantages_div_detail">스트리머의 상세 정보를 확인할 수
+									있습니다</div>
+							</div>
+						</div>
+
+					</div>
+			</section>
 
 		</div>
 	</main>

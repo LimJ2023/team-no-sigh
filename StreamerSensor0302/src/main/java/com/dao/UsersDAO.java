@@ -62,7 +62,7 @@ public class UsersDAO {
 	public List<Board> selectBoardInfo(String user_id) {
 		return mapper.selectBoardInfo(user_id);
 	}
-	
+	//======================================================================================
 	public List<Users> getNewJoinUsers() {
 		return mapper.getNewJoinUsers();
 	}

@@ -72,8 +72,8 @@ function resetUserIdExist(){
 									<form:input path="user_id" class='form-control'
 										onkeypress="resetUserIdExist()" placeholder="아이디를 입력해 주세요"/>
 									<!-- 사용자 입력시 호출 -->
-									<div class="input-group-append">
-										<button type="button" onclick="checkUserIdExist()">중복확인</button>
+									<div >
+										<button class="input-group-append" class="input-group-append" type="button" onclick="checkUserIdExist()">중복확인</button>
 										<!-- 누를시 호출(메서드) -->
 									</div>
 								</div>
@@ -99,7 +99,7 @@ function resetUserIdExist(){
 							</div>
 							
 							<div class="input-box">
-								<form:label path="user_age"></form:label>
+								<form:label path="user_age">나이</form:label>
 								<form:input path="user_age" class='form-control' placeholder="나이를 입력해 주세요"/>
 								<form:errors path='user_age' style='color:red' />
 							</div>
