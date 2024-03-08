@@ -65,9 +65,8 @@ public interface UsersMapper {
 			+ "where u.user_id = #{user_id}")
 	List<Board> selectBoardInfo(String user_id);
 	
-	@Select("SELECT u.user_idx, u.user_id, u.user_name, u.user_age, i.img_url as user_image "
+	@Select("SELECT u.user_idx, u.user_id, u.user_name, u.user_age, u.user_image "
 			+ "FROM users u "
-			+ "INNER JOIN streaming_img i ON i.img_id = u.user_image "
 			+ "ORDER BY user_idx desc")
 	List<Users> getNewJoinUsers();
 

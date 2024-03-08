@@ -36,7 +36,8 @@
 				</div>
 			</div>
 			<div class="rank-content-vertical">
-				<div class="rank-ver-list" id="first_list">
+			 <c:forEach var="item" items="">
+			 	<div class="rank-ver-list" id="first_list">
 					<div class="list-category"></div>
 					<div class="rank-info">
 						<div class="rank-img">
@@ -51,6 +52,8 @@
 						</div>
 					</div>
 				</div>
+			 </c:forEach>
+				
 				<div class="rank-ver-list" id="second_list">
 					<div class="list-category"></div>
 					<div class="rank-info">
