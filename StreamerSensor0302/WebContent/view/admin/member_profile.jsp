@@ -45,7 +45,7 @@
 					disabled="disabled" />
 			</div>
 			<div class="memberProfile">
-				<label for="user_nation">아이디: </label> <input type="text"
+				<label for="user_nation">국적: </label> <input type="text"
 					id="user_id" name="user_nation" class="form-control"
 					value="${users.user_nation }" disabled="disabled" />
 			</div>
@@ -57,8 +57,8 @@
 		</div>
 
 		<div class="button">
-			<a href="${root }member_modify?user_idx=${users.user_idx}">수정하기</a> <br>
-			<a href="${root }member_delete?user_idx=${users.user_idx }">삭제하기</a>
+			<a href="${root }member_modify?user_idx=${users.user_idx}&user_id=${users.user_id}">수정하기</a> <br>
+			<a href="${root }member_delete?user_idx=${users.user_idx }&user_id=${users.user_id}">삭제하기</a>
 			<br> <a href="${root }members">전체 회원 보기</a>
 		</div>
 	</div>

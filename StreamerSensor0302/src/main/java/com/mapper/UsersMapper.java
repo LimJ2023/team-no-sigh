@@ -50,7 +50,8 @@ public interface UsersMapper {
 			+ "where user_idx = #{user_idx} ")
 	void modifyUserInfo(Users modifyUserBean);
 
-	@Update("update users " + "set user_name = #{user_name}, user_gender = #{user_gender}, "
+	@Update("update users "
+			+ "set user_name = #{user_name}, user_gender = #{user_gender}, "
 			+ "user_age = #{user_age}, user_nation = #{user_nation}, "
 			+ "subscription = #{subscription}, user_image = #{user_image, jdbcType=VARCHAR} "
 			+ "where user_idx = #{user_idx} ")
