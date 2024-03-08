@@ -15,3 +15,20 @@ function onchangeSelect() {
 		}
 	});
 }
+
+function searchFunction() {
+	var input, user, i, id;
+
+	input = document.getElementById("searchInput").value.toUpperCase();
+	user = document.getElementsByClassName("user");
+
+	for (i = 0; i < user.length; i++) {
+		id = user[i].getElementsByClassName("id");
+
+		if (id[0].innerHTML.toUpperCase().indexOf(input) > -1) {
+			user[i].style.display = "";
+		} else {
+			user[i].style.display = "none";
+		}
+	}
+}
