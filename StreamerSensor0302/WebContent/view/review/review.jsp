@@ -36,15 +36,7 @@
 
 					<div class="related_streamers">
 						<p>연관 주제</p>
-						<div class="streamer_icon">
-							<img src="img/admin/profile2.png">
-						</div>
-						<div class="streamer_icon">
-							<img src="img/admin/profile3.png">
-						</div>
-						<div class="streamer_icon">
-							<img src="img/admin/profile4.png">
-						</div>
+						
 					</div>
 
 				</div>

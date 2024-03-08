@@ -19,7 +19,7 @@
 			<h3>회원 관리</h3>
 		</a> <a href="${root }chart"><span class="material-symbols-outlined">
 				insights </span>
-			<h3>분석</h3> </a> <a href="${root }index"> <span
+			<h3>분석</h3> </a> <a href="${root }home"> <span
 			class="material-symbols-outlined">logout </span>
 			<h3>로그 아웃</h3>
 		</a>

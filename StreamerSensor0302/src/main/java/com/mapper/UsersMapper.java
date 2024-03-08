@@ -32,7 +32,7 @@ public interface UsersMapper {
 		//사용자의 이름을 반환하는 쿼리문
 	
 	@Insert("insert into users (user_idx, user_id, user_pw, user_name, user_gender, user_age, user_nation) " +
-			"VALUES (user_seq.nextval, #{user_id}, #{user_pw}, #{user_name}, #{user_gender}, #{user_age}, #{user_nation})")
+			"VALUES (users_seq.nextval, #{user_id}, #{user_pw}, #{user_name}, #{user_gender}, #{user_age}, #{user_nation})")
 	void addUserInfo(Users joinUserBean);
 	
 	//0304 이지수 subscription 추가
