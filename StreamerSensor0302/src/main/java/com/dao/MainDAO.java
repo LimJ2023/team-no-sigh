@@ -23,5 +23,9 @@ public class MainDAO {
 		return mapper.getFiveStreamer();
 	}
 
+	public List<Streamer> getRandomSugg(){
+		return mapper.getRandomSugg();
+	}
+
 	
 }
