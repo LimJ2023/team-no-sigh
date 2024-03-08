@@ -37,11 +37,10 @@
                         <tr class="board-write-form-info">
                             <td class="write-form-author">작성자</td>
                             <td class="write-form-author-input ">
-                            	<form:input type="text" class="write-form-input" placeholder="${tempBoardlist.user_id}" path="user_id" />
+                            	<form:input type="text" class="write-form-input" placeholder="${tempBoardlist.user_id}" path="user_id" readonly="true"/>
                             </td>
                             <td class="write-form-password1">카테고리</td>
                             <td class="write-form-password1-input">
-                            	<%-- <form:input type="text" class="write-form-input" placeholder="${tempBoardlist.categorys}" path="categorys" /> --%>
                             	<form:select class="write-form-input" path="categorys" style="background-color : #2c2c2c">
 									<form:option value="영화" />
 									<form:option value="게임" />
