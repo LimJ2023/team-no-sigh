@@ -88,6 +88,8 @@ small {
 
 p {
     color: var(--color-dark);
+    display: flex;
+    justify-content: center;
 }
 
 b {
@@ -227,6 +229,7 @@ main {
 }
 
 main .search {
+	margin-top: 15px;
     display: flex;
     justify-content: center;
 }
@@ -253,6 +256,7 @@ main .user-profile {
     bottom: -100px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+    grid-auto-flow: dense;
     gap: 1.6rem;
 }
 
@@ -260,6 +264,7 @@ main .select {
     display: flex;
     padding: 1.6rem;
     padding-bottom: 0;
+    grid-auto-flow: dense;
 }
 
 main .select select {
@@ -269,6 +274,7 @@ main .select select {
     position: relative;
     text-align: center;
     right: -20px;
+    bottom: -50px;
 }
 
 main .user-profile .id {
@@ -276,6 +282,7 @@ main .user-profile .id {
     justify-content: center;
     align-items: center;
     text-align: right;
+    grid-auto-flow: dense;
 }
 
 main .id:hover {
