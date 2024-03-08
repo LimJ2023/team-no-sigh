@@ -33,6 +33,10 @@ public class MainService {
 		return mainDAO.getFiveStreamer();
 	}
 	
+	public List<Streamer> getRandomSugg(){
+		return mainDAO.getRandomSugg();
+	}
+	
 public List<Streamer> getStreamerInfo(){
 		
 		

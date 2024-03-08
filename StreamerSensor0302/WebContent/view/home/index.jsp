@@ -31,6 +31,10 @@
 <h3>${mainTest.test_idx }</h3>
 	</c:forEach> 
  --%>
+ 
+<%-- <c:forEach var="random" items="${randomSuggestion }">
+	<h3>${random.streamer_id }</h3>
+</c:forEach> --%>
 
 <!-- 캐러셀 -->
 <div class="sugg-content">
@@ -205,15 +209,14 @@
 	<c:choose>
 		<c:when test="${loginUserBean.userLogin == true }">
 			<p>${loginUserBean.user_name }님이 좋아하실 지도 모르는 방송입니다!</p>
+			<c:out value="${randomSuggstion.streamer_id }"></c:out>
 			
-				<c:forEach var="info" items="${streamerInfo }">
+				<c:forEach var="random" items="${randomSuggestion }" end="0">
 					<div class="suggestBox">
-					<a href="http://www.youtube.com/${info.channel_id }">
+					<a href="review?streamer_idx=${random.streamer_idx }">
 						<figure>
-						<div><img src="${info.thumbnail_url }" class="suggest_Img"/></div>
-						<div>${info.channel_title }</div>
-						<div>구독자 : ${info.channel_subscriber_count } 명</div>
-						<div>영상 : ${info.channel_video_count } 개</div>
+						<div><img src="img/streamer_profile/${random.streamer_image }.png" class="suggest_Img"/></div>
+						<div>${random.streamer_id }</div>
 						</figure>
 					</a>
 					</div>

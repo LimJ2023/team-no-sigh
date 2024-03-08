@@ -1,9 +1,4 @@
-SELECT streamer_idx, streamer_id, streamer_platform, streamer_image FROM streamer WHERE streamer_idx BETWEEN 0 AND 4;
-
-select * from streamer;
-
-
-
+--오전 추가 정보
 INSERT INTO streamer VALUES (streamer_idx_seq.nextval, '게임ZONE', '남', '일반', '오프라인', '유튜브', 50000, streamer_profile_12);
 INSERT INTO streamer VALUES (streamer_idx_seq.nextval, '플레이뷰', '남', '일반', '온라인', '치지직', 47500, streamer_profile_13);
 INSERT INTO streamer VALUES (streamer_idx_seq.nextval, '조이스틱코어', '여', '일반', '온라인', '아프리카', 47300, streamer_profile_14);
@@ -22,7 +17,9 @@ INSERT INTO streaming_preference VALUES(2500, 1500, 32500, 4100, 20);
 INSERT INTO streaming_preference VALUES(2100, 1200, 25000, 1900, 21);
 INSERT INTO streaming_preference VALUES(1950, 1300, 25100, 2000, 22);
 
-
 INSERT INTO streaming_info VALUES (streaming_id_seq.nextval, '1월 8일 게임', 'http://www.afreecatv.com', '2시간 28분', 1, '2024-01-08', '머독', 6);
-
 INSERT INTO streaming_preference VALUES(12300, 11752, 315000, 31600, 23);
+
+--15:56 추가 정보
+INSERT INTO preferences (preferences_idx, user_id, streamer_id, review_count, favorites, stream_categorys_id)
+    VALUES(PREFERENCES_ID_SEQ.nextval, 'qwer', '머독', null, 1, 1);
