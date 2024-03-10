@@ -34,7 +34,9 @@ function getApi() {
 
                 const cont = `
                     <div class="rank-img">
+                    <a href="https://www.youtube.com/watch?v=${item.id }">
                         <img src="${item.snippet.thumbnails.medium.url}" />
+                    </a>
                     </div>
                     <div class="rank-name" >${item.snippet.title}</div>
                     <div class="rank-info-foot">

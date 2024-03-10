@@ -29,7 +29,6 @@
 			<div class="rank-content-horizon">
 				<h2>가장 있기있는 방송 목록</h2>
 				<div class="horizon-buttons">
-					<button id="favBtn">맞춤 영상</button>
 					<button id="listBtn">최신 영상</button>
 					<button id="youtubeBtn">유튜브 인기 영상</button>
 				</div>
@@ -39,7 +38,9 @@
 					<c:forEach var="item" items="${streamList }">
 						<div class="rank-info">
 						<div class="rank-img">
+						<a href="https://www.youtube.com/watch?v=${item.streaming_url }">
 							<img src="img/thumbnail/${item.streaming_image}.png" />
+						</a>
 						</div>
 						<div class="rank-name">${item.streaming_description }</div>
 						<div class="rank-info-foot">

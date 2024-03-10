@@ -78,6 +78,14 @@ insert into streamer( streamer_idx, streamer_id, streamer_gender, streamer_grade
 values ( streamer_idx_seq.nextval, '푸른도시의선장', '여', '실버', '오프라인', '치지직', '57500', 'streamer_profile_11');
 
 
+----방송 제목과 이미지 이름을 같게 만들기
+UPDATE streaming_info SET streaming_image = (SELECT i2.streaming_description
+                                         FROM streaming_info i2
+                                         WHERE i2.streaming_id = streaming_info.streaming_id)
+WHERE streaming_id >= 0;
+
+
+
 -----------------방송에 들어갈 썸네일 등록---------------
 --썸네일은 1번대
 --insert into streaming_img (img_id, img_url) 
@@ -158,11 +166,11 @@ INSERT INTO streaming_info (streaming_id ,streaming_description, streaming_url,s
 INSERT INTO streaming_info(streaming_id, streaming_description, streaming_url, streaming_time, stream_categorys_id, streaming_date, streamer_id, streaming_image)
     VALUES (streaming_id_seq.nextval, '감스트 맨유 2-1 패배.. 진짜 개못한다', 'https://www.youtube.com/watch?v=-P660O7wr6w', '14:20', 7, '2024-02-25', '감스트', 'thumbnail_7');
 INSERT INTO streaming_info(streaming_id, streaming_description, streaming_url, streaming_time, stream_categorys_id, streaming_date, streamer_id, streaming_image)
-    VALUES (streaming_id_seq.nextval, '[케인]미친 프리킥', 'https://www.youtube.com/watch?v=ppfiM-C5vtQ', '31:15', 1, '2024-02-27', '케인', 'thumbnail_8');
+    VALUES (streaming_id_seq.nextval, '미친 프리킥', 'https://www.youtube.com/watch?v=ppfiM-C5vtQ', '31:15', 1, '2024-02-27', '케인', 'thumbnail_8');
 INSERT INTO streaming_info(streaming_id, streaming_description, streaming_url, streaming_time, stream_categorys_id, streaming_date, streamer_id, streaming_image)
     VALUES (streaming_id_seq.nextval, '감히 도전 할 수 없는 전설의 45번 도전과제', 'https://www.youtube.com/watch?v=vJPbxBAvPCI', '15:15', 1, '2024-02-26', '머독', 'thumbnail_9');
 INSERT INTO streaming_info(streaming_id, streaming_description, streaming_url, streaming_time, stream_categorys_id, streaming_date, streamer_id, streaming_image)
-    VALUES (streaming_id_seq.nextval, '대규모 패치한 오버워치 근황 ㅋㅋㅋ...', 'https://www.youtube.com/watch?v=DHGGYPe-foo', '17:54', 1, '2024-02-28', '빅헤드', 'thumbnail_10');
+    VALUES (streaming_id_seq.nextval, '대규모 패치한 오버워치 근황', 'https://www.youtube.com/watch?v=DHGGYPe-foo', '17:54', 1, '2024-02-28', '빅헤드', 'thumbnail_10');
 INSERT INTO streaming_info(streaming_id, streaming_description, streaming_url, streaming_time, stream_categorys_id, streaming_date, streamer_id, streaming_image)
     VALUES (streaming_id_seq.nextval, '그냥 분탕치는게 좋은 사람', 'https://www.youtube.com/watch?v=Jyxu53dwkZw', '18:31', 1, '2024-02-28', '한동숙', 'thumbnail_11');
 INSERT INTO streaming_info(streaming_id, streaming_description, streaming_url, streaming_time, stream_categorys_id, streaming_date, streamer_id, streaming_image)
@@ -181,7 +189,7 @@ INSERT INTO streaming_info (streaming_id ,streaming_description, streaming_url,s
 INSERT INTO streaming_info (streaming_id ,streaming_description, streaming_url,streaming_time, stream_categorys_id, streaming_date, streamer_id, streaming_image)
     VALUES (streaming_id_seq.nextval,'무한한 모험의 땅으로 여행을 떠나다', 'http://www.youtube.com', '2시간 28분', 1, '2024-01-09', '별빛쟁이', 'thumbnail_17');    
 INSERT INTO streaming_info (streaming_id ,streaming_description, streaming_url,streaming_time, stream_categorys_id, streaming_date, streamer_id, streaming_image)
-    VALUES (streaming_id_seq.nextval,'최후의 전투: 운명의 순간', 'http://www.chzzk.com', '5시간 15분', 1, '2024-01-09', '푸른도시의선장', 'thumbnail_18');
+    VALUES (streaming_id_seq.nextval,'최후의 전투 운명의 순간', 'http://www.chzzk.com', '5시간 15분', 1, '2024-01-09', '푸른도시의선장', 'thumbnail_18');
 
 
 ---방송 리뷰 데이터---
