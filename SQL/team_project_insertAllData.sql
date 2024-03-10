@@ -18,6 +18,20 @@ VALUES (admin_id_seq.nextval, '박현수', '11029', 'ParkHyeonSu@google.com');
 INSERT INTO admin (admin_id, admin_name, admin_pw, email)
 VALUES (admin_id_seq.nextval, 'ADMIN', '12345', 'soldesk@soldesk.com');
 
+update admin set last_login = '24/03/07'
+WHERE admin_id = 0;
+update admin set last_login = '24/03/08'
+WHERE admin_id = 1;
+update admin set last_login = '24/03/09'
+WHERE admin_id = 2;
+update admin set last_login = '24/03/10'
+WHERE admin_id = 3;
+update admin set last_login = '24/03/06'
+WHERE admin_id = 4;
+update admin set last_login = '24/03/05'
+WHERE admin_id = 5;
+
+
 ---공지사항 데이터---
 INSERT INTO admin_notice (admin_id, notice_num, notice_type, notice_title, notice_content)
 VALUES (1, notice_num_seq.nextval, '공지사항', '24년 2월 29일 공지사항입니다.', '기존에 존재하고 있던 로그인 오류 수정하였으며, 서버가 잠시 불안정하던 문제를
