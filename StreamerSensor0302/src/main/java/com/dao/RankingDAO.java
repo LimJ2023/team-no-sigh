@@ -17,9 +17,12 @@ public class RankingDAO {
 	public List<Ranking> getRanking() {
 		return mapper.getRanking();
 	}
-	
 	public int getSumAvg() {
 		return mapper.getSumAvg();
+	}
+	
+	public int getSumAvgByDate(String streamingDate) {
+		return mapper.getSumAvgByDate(streamingDate);
 	}
 	public int getLikes() {
 		return mapper.getLikes();

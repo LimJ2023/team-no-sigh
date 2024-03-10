@@ -26,12 +26,26 @@ public class LeaderBoardController {
 	@RequestMapping(value = "/leaderBoard")
 	public String leaderBoardPage(@RequestParam(value = "streaming_date", required = false) String streamingDate, Model model) {
 	    List<Ranking> rankings;
+	    int sumAVG;
 	    if (streamingDate != null) {
 	        rankings = rankingService.getRankingByDate(streamingDate);
+	        sumAVG = rankingService.getSumAvgByDate(streamingDate);
 	    } else {
 	        rankings = rankingService.getRankings(); // 날짜가 선택되지 않았다면 기본 데이터 로드
+	        sumAVG = rankingService.getSumAVG();
 	    }
 	    model.addAttribute("rankings", rankings);
+	    
+	    
+	    
+	    
+	    int sumLikes = rankingService.getSumLikes();
+	    int sumDaily = rankingService.getSumDaily();
+	    
+	    model.addAttribute("sumAVG", sumAVG);
+	    model.addAttribute("sumLikes", sumLikes);
+	    model.addAttribute("sumDaily", sumDaily);
+	    
 	    return "/leaderBoard/rankPage";
 	}
 	/*
