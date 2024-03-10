@@ -1,0 +1,40 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="STREAM_CATEGORYS" directorySegmentName="seg_0" id="56153B41-0E21-6A84-9F58-1ACDB1331855">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:40 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<schemaObject>6CB19241-2DED-CCCB-5CEE-1412EF700B0A</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>945C9E0E-9588-97DE-BC2E-C15957259645</segment>
+<tableSpace>BFA847D2-7959-B57B-80E6-66494D056F8D</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="CATEGORYS" id="A5765876-D17B-7963-7D94-FC84F395D652">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:40 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STREAM_CATEGORYS_ID" id="DE235848-3432-6C37-E97C-83886C067EE7">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:40 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="STREAM_CATEGORYS_PK" id="6307BC4C-6260-7BBD-ED7C-1667948BFA8C">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:40 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<schemaObject>6CB19241-2DED-CCCB-5CEE-1412EF700B0A</schemaObject>
+<segment>A18B7128-5861-EA61-BB1D-171CD678063D</segment>
+<tableSpace>BFA847D2-7959-B57B-80E6-66494D056F8D</tableSpace>
+<indexSegment>A18B7128-5861-EA61-BB1D-171CD678063D</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

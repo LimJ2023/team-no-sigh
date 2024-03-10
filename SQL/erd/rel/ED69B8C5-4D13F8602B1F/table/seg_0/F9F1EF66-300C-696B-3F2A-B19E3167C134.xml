@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F9F1EF66-300C-696B-3F2A-B19E3167C134" schemaObject="6CB19241-2DED-CCCB-5CEE-1412EF700B0A" name="VISITOR">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>STREAMER</sourceObjSchema>
+<sourceObjName>VISITOR</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:47 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="VISIT_ID" id="A679C34A-76BB-7885-4A79-215FF54CF543">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>VISITOR</sourceObjSchema>
+<sourceObjName>VISIT_ID</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:47 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VISIT_IP" id="EC9C5A94-15D3-6F47-EC60-79EFF0D75A58">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>VISITOR</sourceObjSchema>
+<sourceObjName>VISIT_IP</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:47 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 BYTE</dataTypeSize>
+<ownDataTypeParameters>200 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VISIT_TIME" id="FA55DAF5-6393-287E-AC5D-B7F976057113">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>VISITOR</sourceObjSchema>
+<sourceObjName>VISIT_TIME</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:47 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VISIT_AGENT" id="F6C8950D-FCD7-6DDB-8BCB-308075199D87">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>VISITOR</sourceObjSchema>
+<sourceObjName>VISIT_AGENT</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:47 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>400 BYTE</dataTypeSize>
+<ownDataTypeParameters>400 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8FA54A03-B026-003D-1F75-E08E36D1EB1B" schemaObject="6CB19241-2DED-CCCB-5CEE-1412EF700B0A" name="VISITOR_PK">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>STREAMER</sourceObjSchema>
+<sourceObjName>SYS_C008854</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:47 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A679C34A-76BB-7885-4A79-215FF54CF543"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,70 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4CF8077D-8D71-A8A2-7AA9-5091E0D068CA" schemaObject="6CB19241-2DED-CCCB-5CEE-1412EF700B0A" name="LOGIN_INFO_TABLE">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>STREAMER</sourceObjSchema>
+<sourceObjName>LOGIN_INFO_TABLE</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:51 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="LOGIN_INFO_IDX" id="DD57F741-78C0-8A3D-63B7-0AFE7B7D85DD">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>LOGIN_INFO_TABLE</sourceObjSchema>
+<sourceObjName>LOGIN_INFO_IDX</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:51 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LOGIN_INFO_NAME" id="E9E8DC73-C908-F937-653F-D0FF3170B445">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>LOGIN_INFO_TABLE</sourceObjSchema>
+<sourceObjName>LOGIN_INFO_NAME</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:51 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500 BYTE</dataTypeSize>
+<ownDataTypeParameters>500 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B9A7C5B8-6764-BDBB-1B98-B2DCFBB8CCC1" name="LOGIN_INFO_PK">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>STREAMER</sourceObjSchema>
+<sourceObjName>LOGIN_INFO_PK</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:51 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DD57F741-78C0-8A3D-63B7-0AFE7B7D85DD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1A4F50DC-4F1D-8CB9-2ED9-02976BB27E59" schemaObject="6CB19241-2DED-CCCB-5CEE-1412EF700B0A" name="LOGIN_INFO_PK">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>STREAMER</sourceObjSchema>
+<sourceObjName>LOGIN_INFO_PK</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:51 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DD57F741-78C0-8A3D-63B7-0AFE7B7D85DD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

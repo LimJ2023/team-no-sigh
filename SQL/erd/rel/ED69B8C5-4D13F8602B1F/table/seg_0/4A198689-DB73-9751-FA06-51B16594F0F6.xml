@@ -1,0 +1,143 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4A198689-DB73-9751-FA06-51B16594F0F6" schemaObject="6CB19241-2DED-CCCB-5CEE-1412EF700B0A" name="REVIEW">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>STREAMER</sourceObjSchema>
+<sourceObjName>REVIEW</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:09 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="REVIEW_IDX" id="CDB4B398-B8CB-A9B2-CAF1-2C1334C2C169">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>REVIEW</sourceObjSchema>
+<sourceObjName>REVIEW_IDX</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:09 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USER_ID" id="2B59D709-DD1C-12B8-C446-DE08366AFA5D">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>REVIEW</sourceObjSchema>
+<sourceObjName>USER_ID</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:09 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60 BYTE</dataTypeSize>
+<ownDataTypeParameters>60 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REVIEW_STREAMING_ID" id="4067AFD5-1644-205A-CF58-494320B84EC1">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>REVIEW</sourceObjSchema>
+<sourceObjName>REVIEW_STREAMING_ID</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:09 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2989225D-F77E-4295-852F-155366A544DE" referredColumn="4B2428DF-8C62-FFA0-5192-26729D8B7708"/>
+</associations>
+</Column>
+<Column name="WRITING_DATA" id="E0CDE805-7354-E19D-4074-40EE753A482D">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>REVIEW</sourceObjSchema>
+<sourceObjName>WRITING_DATA</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:09 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 BYTE</dataTypeSize>
+<ownDataTypeParameters>200 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LIKES_COUNT" id="34020640-B872-829C-ED05-58450550314C">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>REVIEW</sourceObjSchema>
+<sourceObjName>LIKES_COUNT</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:09 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REVIEW_RATING" id="CF630F9F-219C-3C37-A64A-DC13BD84A9DE">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>REVIEW</sourceObjSchema>
+<sourceObjName>REVIEW_RATING</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:09 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REVIEW_CREATION_DATE" id="8B4098AE-17D5-39AB-D5AA-EEA805B37D52">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>REVIEW</sourceObjSchema>
+<sourceObjName>REVIEW_CREATION_DATE</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:09 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="44C9D8E8-CCA0-6925-B5E0-D3AE1182633A" schemaObject="6CB19241-2DED-CCCB-5CEE-1412EF700B0A" name="REVIEW_PK">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>STREAMER</sourceObjSchema>
+<sourceObjName>SYS_C008826</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:09 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CDB4B398-B8CB-A9B2-CAF1-2C1334C2C169"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B5D2A7FF-14E7-CBD6-A332-FC42A8FB0256" name="SYS_C008827">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:09 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4067AFD5-1644-205A-CF58-494320B84EC1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

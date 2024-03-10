@@ -1,0 +1,114 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D319CD0A-DF8E-8937-A86F-A4507AC5A388" schemaObject="6CB19241-2DED-CCCB-5CEE-1412EF700B0A" name="RANKING">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>STREAMER</sourceObjSchema>
+<sourceObjName>RANKING</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:00 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="RANKING_ID" id="1C21C9C4-5963-1B00-0D5F-5543B274DEBF">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>RANKING</sourceObjSchema>
+<sourceObjName>RANKING_ID</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:00 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RANK_DATE" id="72C4B809-D50D-47B2-83A2-6B2823FCBF03">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>RANKING</sourceObjSchema>
+<sourceObjName>RANK_DATE</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:00 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RANK_PLACE" id="D4FCE3F4-CD32-DFBD-8612-D09185A2234E">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>RANKING</sourceObjSchema>
+<sourceObjName>RANK_PLACE</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:00 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RANK_METHOD" id="32340C07-2893-D2A3-214B-C374471937F6">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>RANKING</sourceObjSchema>
+<sourceObjName>RANK_METHOD</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:00 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60 BYTE</dataTypeSize>
+<ownDataTypeParameters>60 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STREAMING_ID" id="A6178FF2-7AD5-B9A1-FEEF-1EB9F20C00E3">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>RANKING</sourceObjSchema>
+<sourceObjName>STREAMING_ID</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:00 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EE00D095-E58E-489F-399B-2697DDF2877A" referredColumn="4B2428DF-8C62-FFA0-5192-26729D8B7708"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="64314257-D743-33B6-95A9-53F3A2680DD9" schemaObject="6CB19241-2DED-CCCB-5CEE-1412EF700B0A" name="RANKING_PK">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>STREAMER</sourceObjSchema>
+<sourceObjName>SYS_C008834</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:00 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1C21C9C4-5963-1B00-0D5F-5543B274DEBF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D54BB139-BDBD-4DB4-FB88-FD7BC09173CB" name="SYS_C008835">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:00 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A6178FF2-7AD5-B9A1-FEEF-1EB9F20C00E3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

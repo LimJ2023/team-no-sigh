@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="STREAMING_INFO" directorySegmentName="seg_0" id="8352BFEA-8CD7-64E0-93AB-CAD1907876A5">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:53 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<schemaObject>6CB19241-2DED-CCCB-5CEE-1412EF700B0A</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>945C9E0E-9588-97DE-BC2E-C15957259645</segment>
+<tableSpace>BFA847D2-7959-B57B-80E6-66494D056F8D</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="STREAM_CATEGORYS_ID" id="29F282A3-8C45-DD85-22C2-740FB3B74323">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:53 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STREAMING_ID" id="4B2428DF-8C62-FFA0-5192-26729D8B7708">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:53 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STREAMING_IMAGE" id="5FB23D36-CE68-ACC9-9C31-349AF5F3219F">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:53 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STREAMING_URL" id="69E606DE-5622-362D-2B48-A2D7DDD6B1C7">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:53 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STREAMER_ID" id="89FE3299-9D1A-CF93-6E84-65770418E624">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:53 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STREAMING_TIME" id="8A1C75B9-B88E-67F8-0956-AD0AD96534AF">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:53 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STREAMING_DESCRIPTION" id="8A7E91BC-AAAA-CAE1-B612-2D2A320176DF">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:53 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STREAMING_DATE" id="E73DE1E4-085E-85B8-5972-0F24E0EFC27C">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:53 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="SYS_C008824" id="099A95C8-AD71-5199-4F03-EFF7C4111608">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:53 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="SYS_C008825" id="0BD942D0-6CD1-61B2-8175-A3F0C09F037C">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:53 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="STREAMING_INFO_PK" id="4285969E-29A1-0738-81A5-C2207541F886">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:53 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<schemaObject>6CB19241-2DED-CCCB-5CEE-1412EF700B0A</schemaObject>
+<segment>A18B7128-5861-EA61-BB1D-171CD678063D</segment>
+<tableSpace>BFA847D2-7959-B57B-80E6-66494D056F8D</tableSpace>
+<indexSegment>A18B7128-5861-EA61-BB1D-171CD678063D</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>
