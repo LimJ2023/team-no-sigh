@@ -15,6 +15,8 @@ VALUES (admin_id_seq.nextval, '최민기', 'Choi91', 'Choi@naver.com');
 INSERT INTO admin (admin_id, admin_name, admin_pw, email)
 VALUES (admin_id_seq.nextval, '박현수', '11029', 'ParkHyeonSu@google.com');
 
+INSERT INTO admin (admin_id, admin_name, admin_pw, email)
+VALUES (admin_id_seq.nextval, 'ADMIN', '12345', 'soldesk@soldesk.com');
 
 ---공지사항 데이터---
 INSERT INTO admin_notice (admin_id, notice_num, notice_type, notice_title, notice_content)

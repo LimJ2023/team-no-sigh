@@ -46,7 +46,7 @@ public class MemberController {
 		List<Users> users = uService.getAllUsers();
 		model.addAttribute("users", users);
 
-		Admin admin = adminService.getAdmin();
+		Admin admin = adminService.getAdmin(0);
 		model.addAttribute("admin", admin);
 
 		return "admin/members";
@@ -54,8 +54,8 @@ public class MemberController {
 
 	@GetMapping("/dashBoard")
 	public String dashBoard(Model model) {
-
-		Admin admin = adminService.getAdmin();
+		
+		Admin admin = adminService.getAdmin(0);
 		SiteInfo info = adminService.getSiteInfo();
 		Users user = uService.getUsers();
 		List<Users> subUsers = uService.getSubUsers();

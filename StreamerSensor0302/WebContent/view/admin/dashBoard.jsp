@@ -96,6 +96,7 @@
 			<!-- 새 유저 끝 -->
 
 			<!-- 최근 주문 시작 -->
+			
 			<div class="recent-orders">
 				<h2>최근 구독</h2>
 				<table>
@@ -119,7 +120,7 @@
 						</c:forEach>
 					</tbody>
 				</table>
-				<a href="#">모두 보기</a>
+				<a href="admin?adminId=5">supersupermember</a>
 			</div>
 			<!-- 최근 주문 끝 -->
 		</main>

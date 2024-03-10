@@ -9,7 +9,9 @@ public class Admin {
     private String email;
     private String admin_pw;
     private Date created_at;
-    private Date last_login;
+    private String last_login;
+    private boolean superAdmin;
+    
     
 	public String getEmail() {
 		return email;
@@ -41,10 +43,18 @@ public class Admin {
 	public void setCreated_at(Date created_at) {
 		this.created_at = created_at;
 	}
-	public Date getLast_login() {
+	
+	
+	public boolean isSuperAdmin() {
+		return superAdmin;
+	}
+	public void setSuperAdmin(boolean superAdmin) {
+		this.superAdmin = superAdmin;
+	}
+	public String getLast_login() {
 		return last_login;
 	}
-	public void setLast_login(Date last_login) {
+	public void setLast_login(String last_login) {
 		this.last_login = last_login;
 	}
     

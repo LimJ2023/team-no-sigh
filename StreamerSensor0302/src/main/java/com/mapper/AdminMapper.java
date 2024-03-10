@@ -11,10 +11,20 @@ import com.domain.SiteInfo;
 
 public interface AdminMapper {
 
-	@Select("select admin_name, email "
+	@Select("select admin_id, admin_name, admin_pw, email, created_at "
 			+ "from admin "
-			+ "where admin_id = #{admin_id}")
+			+ "WHERE admin_id = #{admin_id}")
 	Admin getAdminInfo(int admin_id);
+	@Select("select admin_id, admin_name, admin_pw, email, created_at, to_char(last_login) last_login "
+			+ "from admin "
+			+ "WHERE last_login is not null "
+			+ "order by last_login desc")
+	List<Admin> getAllAdmin();
+	
+	@Update("update admin set last_login = sysdate "
+			+ "WHERE admin_id = #{admin_id}")
+	void updateAdminInfo(int admin_id);
+	
 	
 	@Select("select stat_id, total_revenue, visit_count, site_stat_date "
 			+ "from site_stat "

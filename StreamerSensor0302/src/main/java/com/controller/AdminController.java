@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.domain.Admin;
 import com.domain.Review;
@@ -27,23 +28,30 @@ public class AdminController {
 	ReviewService reviewService;
 	
 	@RequestMapping(value = "/admin")
-	public String adminPage(Model model) {
+	public String adminPage(@RequestParam("adminId") int adminId, Model model) {
 		
 		
-		Admin admin = adminService.getAdmin();
+		Admin admin = adminService.getAdmin(adminId);
 		SiteInfo info = adminService.getSiteInfo();
 		
 		List<Users> subUsers = usersService.getSubUsers();
 		List<Users> newUsers = usersService.getNewJoinUsers(3);
-		StreamerRating rating = reviewService.getRecentRating();
 		
-		System.out.println("유저 이미지 : " + newUsers.get(0).getUser_image());
+		StreamerRating rating = reviewService.getRecentRating();
 		
 		model.addAttribute("admin", admin);
 		model.addAttribute("info",info);
 		model.addAttribute("newUsers",newUsers);
 		model.addAttribute("subUsers",subUsers);
 		model.addAttribute("rating",rating);
+		
+		if(adminId == 5) {
+			
+			List<Admin> adminList = adminService.getAllAdmin();
+			model.addAttribute("adminList",adminList);
+			
+			return "/admin/dashBoard_super";
+		}
 		
 		return "/admin/dashBoard";
 	}

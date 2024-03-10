@@ -1,5 +1,7 @@
 package com.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,11 +15,26 @@ public class AdminService {
 	@Autowired
 	AdminDAO dao;
 	
-	public Admin getAdmin() {
-		Admin admin = dao.getAdminInfo(0);
+	public Admin getAdmin(int adminId) {
+		
+		
+		
+		Admin admin = dao.getAdminInfo(adminId);
+		
+		if(adminId == 5) {
+			admin.setSuperAdmin(true);
+		} else {
+			admin.setSuperAdmin(false);
+		}
+		dao.updateAdminInfo(adminId);
+		
 		return admin;
 	}
 	
+	
+	public List<Admin> getAllAdmin(){
+		return dao.getAllAdmin();
+	}
 	public SiteInfo getSiteInfo() {
 		
 		SiteInfo info1 = new SiteInfo();
