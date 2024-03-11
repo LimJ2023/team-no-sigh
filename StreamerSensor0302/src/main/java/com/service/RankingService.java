@@ -19,6 +19,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.dao.RankingDAO;
+import com.domain.Likes;
 import com.domain.Ranking;
 import com.domain.Video;
 import com.mapper.RankingMapper;
@@ -145,6 +146,18 @@ public class RankingService {
 	
 	public List<Ranking> getRankingByDate(String streamingDate) {
 	    return rankingDAO.getRankingByDate(streamingDate);
+	}
+	
+	public void addLikes(Likes addFavorites) {
+		rankingDAO.addLikes(addFavorites);
+	}
+	
+	public int getLikesByDate(String streamingDate) {
+		return rankingDAO.getLikesByDate(streamingDate);
+	}
+	
+	public int getDaily_viewersByDate(String streamingDate) {
+		return rankingDAO.getDaily_viewersByDate(streamingDate);
 	}
 	
 
