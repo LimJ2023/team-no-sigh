@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="LOGIN_INFO_TABLE" directorySegmentName="seg_0" id="4CF8077D-8D71-A8A2-7AA9-5091E0D068CA">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:51 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<schemaObject>6CB19241-2DED-CCCB-5CEE-1412EF700B0A</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>D5280445-8828-DE83-3559-E190515FB5AF</segment>
+<tableSpace>BFA847D2-7959-B57B-80E6-66494D056F8D</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="LOGIN_INFO_IDX" id="DD57F741-78C0-8A3D-63B7-0AFE7B7D85DD">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:51 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LOGIN_INFO_NAME" id="E9E8DC73-C908-F937-653F-D0FF3170B445">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:51 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="LOGIN_INFO_PK" id="1A4F50DC-4F1D-8CB9-2ED9-02976BB27E59">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:51 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<schemaObject>6CB19241-2DED-CCCB-5CEE-1412EF700B0A</schemaObject>
+<segment>4F2F2684-50B5-26EA-550A-BED432441844</segment>
+<tableSpace>BFA847D2-7959-B57B-80E6-66494D056F8D</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="LOGIN_INFO_PK" id="B9A7C5B8-6764-BDBB-1B98-B2DCFBB8CCC1">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:51 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<segment>4F2F2684-50B5-26EA-550A-BED432441844</segment>
+<tableSpace>BFA847D2-7959-B57B-80E6-66494D056F8D</tableSpace>
+<existingIndex>1A4F50DC-4F1D-8CB9-2ED9-02976BB27E59</existingIndex>
+<indexSegment>4F2F2684-50B5-26EA-550A-BED432441844</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

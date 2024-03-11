@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F16A5A0D-1D9D-A544-551A-162059223B8F" schemaObject="6CB19241-2DED-CCCB-5CEE-1412EF700B0A" name="STREAMING_PREFERENCE">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>STREAMER</sourceObjSchema>
+<sourceObjName>STREAMING_PREFERENCE</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:14 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="AVG_VIEWERS" id="0C930A83-58D9-AA47-D79E-DA76D69993A6">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>STREAMING_PREFERENCE</sourceObjSchema>
+<sourceObjName>AVG_VIEWERS</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:14 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LIKES" id="64FEE464-8502-D6D8-DB93-BE0CFF6BADCF">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>STREAMING_PREFERENCE</sourceObjSchema>
+<sourceObjName>LIKES</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:14 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COMMENTS" id="21B26427-3587-DEC9-0156-CD6348E7CCC0">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>STREAMING_PREFERENCE</sourceObjSchema>
+<sourceObjName>COMMENTS</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:14 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DAILY_VIEWERS" id="92BDE467-F425-FA79-B089-E3B33CBF24AB">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>STREAMING_PREFERENCE</sourceObjSchema>
+<sourceObjName>DAILY_VIEWERS</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:14 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STREAMING_ID" id="4F400CA6-C9CA-3CD4-ABC8-30CA58B3132B">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>STREAMING_PREFERENCE</sourceObjSchema>
+<sourceObjName>STREAMING_ID</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:14 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8A801736-2BE9-9B11-AAE8-7FBA5517EE4C" referredColumn="4B2428DF-8C62-FFA0-5192-26729D8B7708"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FC47F260-DEF5-598C-16A8-F36F9F470900" schemaObject="6CB19241-2DED-CCCB-5CEE-1412EF700B0A" name="STREAMING_PREFERENCE_PK">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>STREAMER</sourceObjSchema>
+<sourceObjName>SYS_C008847</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:14 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4F400CA6-C9CA-3CD4-ABC8-30CA58B3132B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F755164D-A8D4-DDE5-1FE7-872B1CB70238" name="SYS_C008848">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:14 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4F400CA6-C9CA-3CD4-ABC8-30CA58B3132B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

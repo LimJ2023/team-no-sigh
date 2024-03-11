@@ -26,6 +26,8 @@ public class Ranking {
 	private String streaming_description;
 	private String stream_categorys_id;
 	private String streaming_date;
+	private String categorys;
+	
 	
 	//***************
 	private String video_id;
@@ -180,6 +182,16 @@ public class Ranking {
 		this.thumbImage = thumbImage;
 	}
 	
+	//
+	public String getCategorys() {
+		return categorys;
+	}
+	public void setCategorys(String categorys) {
+		this.categorys = categorys;
+	}
+	public void setStream_categorys_id(String stream_categorys_id) {
+		this.stream_categorys_id = stream_categorys_id;
+	}
 	
 	
 }

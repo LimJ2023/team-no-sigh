@@ -1,0 +1,131 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="86C5AC41-1C18-F5CE-8808-2C7C170E054F" schemaObject="6CB19241-2DED-CCCB-5CEE-1412EF700B0A" name="ADMIN_NOTICE">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>STREAMER</sourceObjSchema>
+<sourceObjName>ADMIN_NOTICE</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:26 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ADMIN_ID" id="E31D4A7A-1C27-5CC2-8B05-6B3C19236486">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>ADMIN_NOTICE</sourceObjSchema>
+<sourceObjName>ADMIN_ID</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:26 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A6E581BE-6019-AE2B-6D4B-30D83E76E45E" referredColumn="ACB3F223-0123-0109-D3D1-A42D1814C9F7"/>
+</associations>
+</Column>
+<Column name="NOTICE_NUM" id="F0DF4368-BFBB-460D-E197-BA57AD414BA4">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>ADMIN_NOTICE</sourceObjSchema>
+<sourceObjName>NOTICE_NUM</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:26 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOTICE_TYPE" id="B37FCBDA-AEC7-A7C0-8D91-09237BA2F722">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>ADMIN_NOTICE</sourceObjSchema>
+<sourceObjName>NOTICE_TYPE</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:26 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60 BYTE</dataTypeSize>
+<ownDataTypeParameters>60 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOTICE_TITLE" id="46BF2C18-DF70-632C-87DC-B1690B7B090F">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>ADMIN_NOTICE</sourceObjSchema>
+<sourceObjName>NOTICE_TITLE</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:26 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>80 BYTE</dataTypeSize>
+<ownDataTypeParameters>80 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOTICE_CONTENT" id="67A80934-EC1F-A6CB-1592-0C6CFF09B812">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>ADMIN_NOTICE</sourceObjSchema>
+<sourceObjName>NOTICE_CONTENT</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:26 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>400 BYTE</dataTypeSize>
+<ownDataTypeParameters>400 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOTICE_DATE" id="305442CB-A7D9-C86A-4C2A-7FD4CBE00402">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>ADMIN_NOTICE</sourceObjSchema>
+<sourceObjName>NOTICE_DATE</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:26 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<defaultValue>CURRENT_TIMESTAMP</defaultValue>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DE7DD3DF-F6A2-D734-8EBA-879FD40F695E" schemaObject="6CB19241-2DED-CCCB-5CEE-1412EF700B0A" name="ADMIN_NOTICE_PK">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>STREAMER</sourceObjSchema>
+<sourceObjName>SYS_C008844</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:26 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F0DF4368-BFBB-460D-E197-BA57AD414BA4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="67B7A471-E76A-F200-E045-A63F959892A0" name="SYS_C008845">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:27 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E31D4A7A-1C27-5CC2-8B05-6B3C19236486"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -43,17 +43,12 @@ public class HomeController {
 		List<Streamer> fiveStreamer = mainService.getFiveStreamer();
 		model.addAttribute("fiveStreamer", fiveStreamer);
 		
-		List<Streamer> randomSuggestion = mainService.getRandomSugg();
-		model.addAttribute("randomSuggestion", randomSuggestion);
-	
-		/*
-		System.out.println("User login status: " + loginUserBean.isUserLogin());
-		if(loginUserBean.isUserLogin() && loginUserBean.getUser_id() !=null) {
-			String user_id = loginUserBean.getUser_id();
-			 System.out.println("Logged in user_id: " + user_id);
-			List<Streamer> randomSuggestion = mainService.getRandomSugg(user_id);
+
+		if(loginUserBean.isUserLogin()) {
+			int user_idx = loginUserBean.getUser_idx();
+			List<Streamer> randomSuggestion = mainService.getRandomSugg(user_idx);
 			model.addAttribute("randomSuggestion", randomSuggestion);
-		}*/
+		}
 		
 		return "redirect:/home"; 
 		//return "redirect:/index"; 에서 수정 -> 메인이 안떠서 수정했습니다..(0229 이지수)
@@ -71,17 +66,12 @@ public class HomeController {
 		List<Streamer> fiveStreamer = mainService.getFiveStreamer();
 		model.addAttribute("fiveStreamer", fiveStreamer);
 		
-		List<Streamer> randomSuggestion = mainService.getRandomSugg();
-			        model.addAttribute("randomSuggestion", randomSuggestion);
-		
-		/*
-		System.out.println("User login status: " + loginUserBean.isUserLogin());
-		if(loginUserBean.isUserLogin()&& loginUserBean.getUser_id() !=null) {
-			String user_id = loginUserBean.getUser_id();
-			 System.out.println("Logged in user_id: " + user_id);
-			List<Streamer> randomSuggestion = mainService.getRandomSugg(user_id);
+
+		if(loginUserBean.isUserLogin()) {
+			int user_idx = loginUserBean.getUser_idx();
+			List<Streamer> randomSuggestion = mainService.getRandomSugg(user_idx);
 			model.addAttribute("randomSuggestion", randomSuggestion);
-		}*/
+		}
 		
 		
 		return "/home/index";

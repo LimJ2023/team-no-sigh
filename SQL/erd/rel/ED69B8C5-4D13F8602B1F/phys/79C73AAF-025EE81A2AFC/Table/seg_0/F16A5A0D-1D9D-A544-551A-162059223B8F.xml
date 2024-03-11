@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="STREAMING_PREFERENCE" directorySegmentName="seg_0" id="F16A5A0D-1D9D-A544-551A-162059223B8F">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:14 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<schemaObject>6CB19241-2DED-CCCB-5CEE-1412EF700B0A</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>945C9E0E-9588-97DE-BC2E-C15957259645</segment>
+<tableSpace>BFA847D2-7959-B57B-80E6-66494D056F8D</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="AVG_VIEWERS" id="0C930A83-58D9-AA47-D79E-DA76D69993A6">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:14 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="COMMENTS" id="21B26427-3587-DEC9-0156-CD6348E7CCC0">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:14 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STREAMING_ID" id="4F400CA6-C9CA-3CD4-ABC8-30CA58B3132B">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:14 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LIKES" id="64FEE464-8502-D6D8-DB93-BE0CFF6BADCF">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:14 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DAILY_VIEWERS" id="92BDE467-F425-FA79-B089-E3B33CBF24AB">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:14 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="SYS_C008848" id="F755164D-A8D4-DDE5-1FE7-872B1CB70238">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:14 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="STREAMING_PREFERENCE_PK" id="FC47F260-DEF5-598C-16A8-F36F9F470900">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:14 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<schemaObject>6CB19241-2DED-CCCB-5CEE-1412EF700B0A</schemaObject>
+<segment>A18B7128-5861-EA61-BB1D-171CD678063D</segment>
+<tableSpace>BFA847D2-7959-B57B-80E6-66494D056F8D</tableSpace>
+<indexSegment>A18B7128-5861-EA61-BB1D-171CD678063D</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>
