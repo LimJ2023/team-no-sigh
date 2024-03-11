@@ -73,6 +73,9 @@ a{
 }
 
 .container{
+	position: absolute;
+    top: 150px;
+    left: 1.8%;
     background-color: var(--color-text);
     border-radius: 2.5rem;
     display: flex;
