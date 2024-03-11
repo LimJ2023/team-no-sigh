@@ -66,7 +66,6 @@
 									<img src="img/user_profile/${rating.user_image }.png">
 								</div>
 								<div class="cont_area">
-									
 									<div class="cmt_head">${rating.user_name}/ date :
 										${rating.streamer_rating_date }</div>
 									<div class="cmt_cont">${rating.rating_comment }</div>

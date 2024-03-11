@@ -29,7 +29,7 @@
 			<div class="rank-content-horizon">
 				<h2>가장 있기있는 방송 목록</h2>
 				<div class="horizon-buttons">
-					<button id="listBtn">최신 영상</button>
+					<button id="refreshBtn">최신 목록</button>
 					<button id="youtubeBtn">유튜브 인기 영상</button>
 				</div>
 			</div>
@@ -59,7 +59,7 @@
 
 	<c:import url="/view/home_include/footer.jsp" />
 
-
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 	<script src="home/list.js"></script>
 	<script src="home/trend.js"></script>
 
