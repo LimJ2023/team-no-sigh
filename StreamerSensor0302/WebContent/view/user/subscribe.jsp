@@ -200,7 +200,7 @@ let jsons = {
                     <i class='bx bxs-movie-play' ></i>
                     <h4>구독</h4>
                 </a>
-                <a href="${root }user/account">
+                <a href="${root }user/password_chan">
                     <i class='bx bxs-user-detail' ></i>
                     <h4>계정</h4>
                 </a>

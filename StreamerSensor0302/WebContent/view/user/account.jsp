@@ -93,31 +93,38 @@
 				<form:input path="user_id" placeholder="아이디를 입력해 주세요."
 					readonly="true" />
 				</div>
+				
 				<div class="input-box">
 				이름 <br />
 				<form:input path="user_name" placeholder="이름을 입력해 주세요."
 					readonly="true" />
 				</div>
+				
 				<div class="input-box">
 				 성별 <br />
 				<form:input path="user_gender" placeholder="성별을 입력해 주세요." readonly="true" />
 				</div>
+				
 				<div class="input-box">
 				 나이 <br />
 				<form:input path="user_age" placeholder="나이을 입력해 주세요." readonly="true"/>
 				</div>
+				
 				<div class="input-box">
 				 국적 <br />
 				<form:input path="user_nation" placeholder="국적을 입력해 주세요." readonly="true"/>
 				</div>
+				
 				<div class="input-box">
 				<br /> <br />
 				<form:password path="user_pw" placeholder="비밀번호를 입력해 주세요." readonly="true"/>
 				</div>
+				
 				<div class="input-box">
 				<br /> <br />
 				<form:password path="user_pw2" placeholder="비밀번호를 다시 입력해 주세요." readonly="true"/>
 				</div>
+				
 				<form:button class="btn">
 				<a href="${root }user/password_chan" >수정하기</a> <br>
 				</form:button>

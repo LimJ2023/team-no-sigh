@@ -454,6 +454,8 @@ canvas#chart{
 main section.right .investments{
     background: var(--color-white);
     border-radius: var(--car-border-radius);
+    position: relative;
+    top: 100px;
 }
 main section.right .investments img{
     width: 2.4rem;

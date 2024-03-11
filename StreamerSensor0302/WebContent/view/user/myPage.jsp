@@ -66,7 +66,7 @@
                     <i class='bx bxs-movie-play' ></i>
                     <h4>구독</h4>
                 </a>
-                <a href="${root }user/account">
+                <a href="${root }user/password_chan">
                     <i class='bx bxs-user-detail' ></i>
                     <h4>계정</h4>
                 </a>
@@ -90,8 +90,8 @@
         
         <section class="middle">
             <div class="header">
-                <h1>구독&즐겨찾기</h1>
-                <input type="date">
+                <h1 style="color: white;">즐겨찾기</h1>
+                
             </div>
 
             <div class="cards">
@@ -171,7 +171,7 @@
             </div>
             <!-- =end cards= -->
 
-            <div class="monthly-report">
+            <%-- <div class="monthly-report">
                 <div class="report">
                     <h3>Income</h3>
                     <div>
@@ -251,7 +251,7 @@
             <!-- end of payment -->
             <canvas id="chart"></canvas>
 
-        </section>
+        </section> --%>
         <!-- end middle -->
         <section class="right">
             <div class="investments">

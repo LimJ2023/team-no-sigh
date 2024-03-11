@@ -48,7 +48,9 @@ public class UsersDAO {
 	public void modifyUserInfo(Users modifyUserBean) {
 		mapper.modifyUserInfo(modifyUserBean);
 	}
-	
+	public void deleteInfo(int user_idx) {
+		mapper.deleteInfo(user_idx);
+	}
 	//======================================================================================
 	
 	public void modifyMemberInfo(Users modifyMemberBean) {

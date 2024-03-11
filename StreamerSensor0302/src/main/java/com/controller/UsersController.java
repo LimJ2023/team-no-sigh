@@ -61,12 +61,7 @@ public class UsersController {
 		return "user/myPage";
 	}
 	
-	@GetMapping("/account")
-	public String account() {
-		
-		
-		return "user/account";
-	}
+	
 	
 	@GetMapping("/account_delete")
 	public String account_delete(@RequestParam("user_idx") int user_idx, Model model) {
@@ -76,22 +71,11 @@ public class UsersController {
 	}
 
 	@GetMapping("/password_chan")
-	public String modify(@ModelAttribute("modifyUserBean") Users modifyUserBean,
-						@RequestParam("user_idx") int user_idx, Model model) {
+	public String modify(@ModelAttribute("modifyUserBean") Users modifyUserBean
+						) {
 
 		userService.getmodifyUserinfo(modifyUserBean);
-		Users users = userService.printOneUser(user_idx);
-		// uService.modifyMemberInfo(users);
 		
-		modifyUserBean.setUser_id(users.getUser_id());
-		modifyUserBean.setUser_name(users.getUser_name());
-		modifyUserBean.setUser_gender(users.getUser_gender());
-		modifyUserBean.setUser_age(users.getUser_age());
-		modifyUserBean.setUser_nation(users.getUser_nation());
-		modifyUserBean.setSubscription(users.getSubscription());
-		modifyUserBean.setUser_image(users.getUser_image());
-
-		modifyUserBean.setUser_idx(user_idx);
 		return "user/password_chan";
 	}
 
@@ -162,7 +146,13 @@ public class UsersController {
 
 	}
 	
-	
+	@GetMapping("/member_delete")
+	public String deleteMember(@RequestParam("user_idx") int user_idx, Model model) {
+
+		userService.deleteMemberInfo(user_idx);
+
+		return "/user/member_delete";
+	}
 	
 	@GetMapping("/success")
     public String paymentResult(

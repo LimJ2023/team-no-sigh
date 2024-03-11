@@ -41,15 +41,15 @@ public interface UsersMapper {
 			+ "where user_id=#{user_id} and user_pw=#{user_pw}")
 	Users getLoginUserInfo(Users tempLoginUserBean);
 
-	@Select("select user_id, user_name " + "from users " + "where user_idx = #{user_idx}")
+	@Select("select user_id, user_name, user_gender, user_age, user_nation " + "from users " + "where user_idx = #{user_idx}")
 	Users getmodifyUserinfo(int user_idx);
 
-	@Update("update users "
-			+ "set user_name = #{user_name}, user_gender = #{user_gender}, "
-			+ "user_age = #{user_age}, user_nation = #{user_nation}, "
-			+ "subscription = #{subscription}, user_image = #{user_image, jdbcType=VARCHAR} "
-			+ "where user_idx = #{user_idx} ")
+	@Update("update users " +
+			"set user_pw = #{user_pw} " +
+			"where user_idx = #{user_idx}")
 	void modifyUserInfo(Users modifyUserBean);
+	@Delete("DELETE FROM users WHERE user_idx = #{user_idx}")
+	void deleteInfo(int user_idx);
 	//=======================================================================================
 	@Update("update users "
 			+ "set user_name = #{user_name}, user_gender = #{user_gender}, "

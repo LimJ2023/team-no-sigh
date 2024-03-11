@@ -105,6 +105,9 @@ public class UsersService {
 		uDAO.modifyUserInfo(modifyUserBean);
 	}
 
+	public void deleteInfo(int user_idx) {
+		uDAO.deleteInfo(user_idx);
+	}
 	// ============================================================================================
 
 	public void deleteMemberInfo(int user_idx) {

@@ -60,6 +60,7 @@ function resetUserIdExist(){
 							<form:hidden path="userIdExist" />
 							<!-- "유효성 검사 여부 보내기" -->
 							<!-- 사용자에게는 안보이게 하기 위해 hidden(사용자는 백에서 어떻게 돌아가는지 알 필요x) -->
+							<h1>Register</h1>
 							<div class="input-box">
 
 								<form:input path="user_name" class='form-control' placeholder="이름을 입력해 주세요"/>
