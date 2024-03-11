@@ -94,19 +94,19 @@ function resetUserIdExist(){
 							</div>
 							
 							<div class="input-box">
-								<form:label path="user_gender"></form:label>
+								
 								<form:input path="user_gender" class='form-control' placeholder="성별을 입력해 주세요"/>
 								<form:errors path='user_gender' style='color:red' />
 							</div>
 							
 							<div class="input-box">
-								<form:label path="user_age">나이</form:label>
+								<form:label path="user_age"></form:label>
 								<form:input path="user_age" class='form-control' placeholder="나이를 입력해 주세요"/>
 								<form:errors path='user_age' style='color:red' />
 							</div>
 							
 							<div class="input-box">
-								<form:label path="user_nation"></form:label>
+								
 								<form:input path="user_nation" class='form-control' placeholder="국적을 입력해 주세요"/>
 								<form:errors path='user_nation' style='color:red' />
 							</div>

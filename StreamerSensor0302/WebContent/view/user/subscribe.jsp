@@ -174,7 +174,7 @@ let jsons = {
 					<div class="profile-photo">
 						<img src="">
 					</div>
-					<h5>chuhua</h5>
+					<h5></h5>
 					<span></span>
 				</div>
 				<button id="menu-btn">
@@ -255,13 +255,13 @@ let jsons = {
 									<li>•스트리머의 상세정보를 확인할수 있습니다</li>
 								</ul>
 								<div class="subs_price_month">
-									<h3 style="size: 50px;">
+									<h3 style="size: 50px; font-size: 70px;">
 										<i class='bx bx-check'></i>월 ₩3900원
 									</h3>
 
-									<h5 style="color: black;">•취소가 가능합니다</h5>
+									<h5 style="color: black; font-size: 40px">•취소가 가능합니다</h5>
 									<br />
-									<h4 style="color: #DB4455;">구독하시겠습니까?</h4>
+									<h4 style="color: #DB4455; font-size: 40px;">구독하시겠습니까?</h4>
 								</div>
 								<button class="subscription_button"
 									onclick="pay('카드',jsons.card);" type="submit">결제하기</button>

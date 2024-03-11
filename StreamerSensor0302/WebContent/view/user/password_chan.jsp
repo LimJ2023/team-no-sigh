@@ -67,11 +67,7 @@
                     <i class='bx bxs-user-detail' ></i>
                     <h4>계정</h4>
                 </a>
-                <a href="#">
-                    <i class='bx bxs-dashboard' ></i>
-                    <h4>Mypage</h4>
-                </a>
-                <a href="#">
+                <a href="${root }user/logout">
                     <i class='bx bx-log-out'></i>
                     <h4>로그아웃</h4>
                 </a>
@@ -137,7 +133,7 @@
 				<br />
 				<li>즐겨찾기 목록 등 개인 편의를 위해 저장한 모든 데이터가 영구적으로 삭제됩니다.</li>
 				<li>이용중인 모든 유료서비스가 해지되며 결제한 금액은 환불되지 않습니다.</li> <br />
-				<form:button class="btn" value="submit">
+				<form:button class="btn">
 					<a href="${root }account_delete" style="text-decoration-line: none;">계정
 						삭제</a>
 				</form:button>
