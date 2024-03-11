@@ -239,4 +239,14 @@ public class UsersController {
 
         return "user/fail";
     }
+    
+    @GetMapping("getSubscriptionY")
+    public String getSubscriptionY() {
+    	return "/user/getSubscriptionY";
+    }
+    
+    @GetMapping("getSubscriptionN")
+    public String getSubscriptionN() {
+    	return "/user/getSubscriptionN";
+    }
 }

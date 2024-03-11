@@ -67,4 +67,11 @@ public class UsersDAO {
 		return mapper.getNewJoinUsers();
 	}
 	
+	public List<Users> getSubscriptionY(){
+		return mapper.getSubscriptionY();
+	}
+	
+	public List<Users> getSubscriptionN(){
+		return mapper.getSubscriptionN();
+	}
 }

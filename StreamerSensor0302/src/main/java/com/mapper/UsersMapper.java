@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
@@ -70,5 +71,14 @@ public interface UsersMapper {
 			+ "FROM users u "
 			+ "ORDER BY user_idx desc")
 	List<Users> getNewJoinUsers();
-
+	
+	@Select("SELECT user_image, user_id, subscription"
+			+ "FROM users "
+			+ "WHERE subscription = 'y'")
+	List<Users> getSubscriptionY();
+	
+	@Select("SELECT user_image, user_id, subscription"
+			+ "FROM users "
+			+ "WHERE subscription = 'n'")
+	List<Users> getSubscriptionN();
 }

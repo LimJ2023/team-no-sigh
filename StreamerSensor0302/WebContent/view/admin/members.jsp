@@ -31,32 +31,32 @@
 		<!-- 메인 컨텐츠 -->
 		<main>
 			<div class="search">
-				<input type="text" placeholder="검색..." id="searchInput" />
-				<button type="submit">
-					<span class="material-symbols-outlined"> search</span>
-				</button>
-			</div>
-			<ul id="searchedUserList" class="list-users"></ul>
-			<div class="select">
-				<select name="" id="category" onchange="onchangeSelect()">
-					<option value="All">전체 보기</option>
-					<option value="y">y</option>
-					<option value="n">n</option>
-				</select>
-			</div>
-			<div class="user-profile">
-				<c:forEach var="users" items="${users }">
-					<a href='${root }member_profile?user_idx=${users.user_idx}&user_id=${users.user_id}'>
-						<div class='user'>
-							<p class='id'>
-								<img src='img/admin/profile4.png' />&nbsp; 아이디: ${users.user_id }
-							</p>
-							<br /> <br />
-							<p class='subscription'>구독 여부: ${users.subscription }</p>
-						</div>
-					</a>
-				</c:forEach>
-			</div>
+        <input type="text" placeholder="검색..." id="searchInput" />
+        <button type="submit">
+            <span class="material-symbols-outlined"> search</span>
+        </button>
+    </div>
+    <ul id="searchedUserList" class="list-users"></ul>
+    <div class="select">
+        <select name="" id="category" onchange="filterUsers()">
+            <option value="All">전체 보기</option>
+            <option value="y">y</option>
+            <option value="n">n</option>
+        </select>
+    </div>
+    <div class="user-profile">
+        <c:forEach var="user" items="${users}">
+                <a href="${root }member_profile?user_idx=${user.user_idx}&user_id=${user.user_id}">
+                    <div class='user'>
+                        <p class='id'>
+                            <img src='img/admin/profile4.png' />&nbsp; 아이디: ${user.user_id }
+                        </p>
+                        <br /> <br />
+                        <p class='subscription'>구독 여부: ${user.subscription }</p>
+                    </div>
+                </a>
+        </c:forEach>
+    </div>
 		</main>
 		<!-- 메인 종료 -->
 
@@ -67,7 +67,7 @@
 	<!-- 컨테이너 종료 -->
 	<script src="admin/order.js"></script>
 	<!-- <script src="index.js"></script> -->
-	<script src="admin/filter.js"></script>
+	<!-- <script src="admin/filter.js"></script>-->
 	<!-- <script src="searchUser.js"></script> -->
 </body>
 

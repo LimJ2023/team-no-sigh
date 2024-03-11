@@ -17,6 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.dao.UsersDAO;
 import com.domain.Board;
 import com.domain.Users;
+import com.mapper.UsersMapper;
 
 @Service
 @PropertySource("/WEB-INF/properties/option.properties")
@@ -156,6 +157,14 @@ public class UsersService {
 		}
 		
 		return result;
+	}
+	
+	public List<Users> getSubscriptionY(){
+		return uDAO.getSubscriptionY();
+	}
+	
+	public List<Users> getSubscriptionN(){
+		return uDAO.getSubscriptionN();
 	}
 
 }
