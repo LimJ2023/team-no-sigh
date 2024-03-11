@@ -41,6 +41,7 @@ html::-webkit-scrollbar{
 }
 a{
     text-decoration: none;
+    color: #fff;
 }
 li{
     list-style: none;
@@ -232,8 +233,6 @@ header{
     height: 30px;
 
     background-color: rgba(86,96,120,0.2);
-
-
     border-top: 2px solid #2c2c2c;
     border-bottom: 2px solid #2c2c2c;
 

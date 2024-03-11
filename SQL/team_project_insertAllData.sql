@@ -53,17 +53,17 @@ VALUES (1, notice_num_seq.nextval, '공지사항', '24년 3월 1일 점검 안�
 
 ---유저 데이터---
 insert into users(user_idx,user_id,user_pw,user_name,user_gender,user_age,user_nation,subscription, user_image)
-values(users_seq.nextval,'qwer','12345','이여성','여자',22,'한국','y', 'user_profile_1');
+values(users_seq.nextval,'qwer','12345','이여성','여자',22,'한국','y', 'user_profile_1.png');
 insert into users(user_idx,user_id,user_pw,user_name,user_gender,user_age,user_nation,subscription, user_image)
-values(users_seq.nextval,'asdf','asdf','김남성','남자',28,'한국','n', 'user_profile_2');
+values(users_seq.nextval,'asdf','asdf','김남성','남자',28,'한국','n', 'user_profile_2.png');
 insert into users(user_idx,user_id,user_pw,user_name,user_gender,user_age,user_nation,subscription, user_image)
-values(users_seq.nextval,'12345','12345','김인직','남자',40,'한국','y', 'user_profile_3');
+values(users_seq.nextval,'12345','12345','김인직','남자',40,'한국','y', 'user_profile_3.png');
 insert into users(user_idx,user_id,user_pw,user_name,user_gender,user_age,user_nation,subscription, user_image)
-values(users_seq.nextval,'soldesk','54321','솔데스크','여자',35,'한국','n', 'user_profile_4');
+values(users_seq.nextval,'soldesk','54321','솔데스크','여자',35,'한국','n', 'user_profile_4.png');
 insert into users(user_idx,user_id,user_pw,user_name,user_gender,user_age,user_nation,subscription, user_image)
-values(users_seq.nextval,'star','1234','이스타','남자',35,'한국','n', 'user_profile_5');
+values(users_seq.nextval,'star','1234','이스타','남자',35,'한국','n', 'user_profile_5.png');
 insert into users(user_idx,user_id,user_pw,user_name,user_gender,user_age,user_nation,subscription, user_image)
-values(users_seq.nextval,'limj','12345','임요한','남자',30,'한국','y', 'user_profile_2');
+values(users_seq.nextval,'limj','12345','임요한','남자',30,'한국','y', 'user_profile_2.png');
 
 ---스트리머 더미 데이터---
 insert into streamer( streamer_idx, streamer_id, streamer_gender, streamer_grade, streamer_status, streamer_platform, streamer_followers, streamer_image)

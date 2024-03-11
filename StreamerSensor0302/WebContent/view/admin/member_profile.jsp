@@ -21,7 +21,7 @@
 		<div class="profile-box">
 			<c:if test="${users.user_image != null }">
 				<div class="memberProfile">
-					<img src="${root }upload/${users.user_image}" width="100%">
+					<img src="img/user_profile/${users.user_image}" width="100%">
 				</div>
 			</c:if>
 			<div class="memberProfile">
