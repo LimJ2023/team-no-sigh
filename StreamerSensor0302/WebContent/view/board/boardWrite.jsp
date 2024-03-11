@@ -67,9 +67,8 @@
 
 
 					<tr class="board-write-form-end">
-						<td class="board-write-form-end-td" colspan="4"><a
-							href="${root }board" class="write-button-toList write-button">목록으로</a>
-							<button type="submit" class="write-button-submit write-button">작성</button>
+						<td class="board-write-form-end-td" colspan="4"><a href="${root }board" class="write-button-toList write-button" style="font-size: 20px;">목록으로</a>
+							<button type="submit" class="write-button-submit write-button" style="font-size: 20px;">작성</button>
 						</td>
 					</tr>
 				</table>

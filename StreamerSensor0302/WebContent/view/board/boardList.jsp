@@ -14,6 +14,7 @@
 <!-- box icons -->
 <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
 	rel="stylesheet">
+
 <title>Streamer Sensor</title>
 </head>
 <body>
@@ -45,7 +46,7 @@
 						<tr class="tr board-table-tbody-tr">
 							<td class="board-table-tbody-td td-no">${obj.board_idx}</td>
 							<td class="board-table-tbody-td td-title">
-								<a href="${root}board/boardView?board_idx=${obj.board_idx}&page=${page}">${obj.title}</a>
+								<a href="${root}board/boardView?board_idx=${obj.board_idx}&page=${page}" style="color: white">${obj.title}</a>
 							</td>
 							<td class="board-table-tbody-td td-author">${obj.user_id}</td>
 							<td class="board-table-tbody-td td-date">${obj.board_date}</td>
@@ -102,7 +103,7 @@
 			</div>
 
 			<div class="board_write">
-				<a href="${root }board/boardWrite">글쓰기</a>
+				<a href="${root }board/boardWrite" style="color: white; border: 2px solid #00ff9f; border-radius: 5px; width: 200px; height: 100px; font-size: 20px;">글쓰기</a>
 			</div>
 		</div>
 
