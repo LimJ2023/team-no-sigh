@@ -66,13 +66,14 @@
 									<img src="img/user_profile/${rating.user_image }.png">
 								</div>
 								<div class="cont_area">
-									<c:forEach var="i" begin="1" end="${rating.streamer_rating}">
-										<i class="bx bxs-star"></i>
-									</c:forEach>
+									
 									<div class="cmt_head">${rating.user_name}/ date :
 										${rating.streamer_rating_date }</div>
 									<div class="cmt_cont">${rating.rating_comment }</div>
 								</div>
+								<c:forEach var="i" begin="1" end="${rating.streamer_rating}">
+										<i class="bx bxs-star"></i>
+									</c:forEach>
 							</div>
 						</div>
 					</c:forEach>
