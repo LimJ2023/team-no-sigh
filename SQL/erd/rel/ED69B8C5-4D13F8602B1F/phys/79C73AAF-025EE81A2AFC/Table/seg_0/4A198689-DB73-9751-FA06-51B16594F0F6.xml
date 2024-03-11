@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="REVIEW" directorySegmentName="seg_0" id="4A198689-DB73-9751-FA06-51B16594F0F6">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:09 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<schemaObject>6CB19241-2DED-CCCB-5CEE-1412EF700B0A</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>D5280445-8828-DE83-3559-E190515FB5AF</segment>
+<tableSpace>BFA847D2-7959-B57B-80E6-66494D056F8D</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="USER_ID" id="2B59D709-DD1C-12B8-C446-DE08366AFA5D">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:09 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LIKES_COUNT" id="34020640-B872-829C-ED05-58450550314C">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:09 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="REVIEW_STREAMING_ID" id="4067AFD5-1644-205A-CF58-494320B84EC1">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:09 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="REVIEW_CREATION_DATE" id="8B4098AE-17D5-39AB-D5AA-EEA805B37D52">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:09 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="REVIEW_IDX" id="CDB4B398-B8CB-A9B2-CAF1-2C1334C2C169">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:09 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="REVIEW_RATING" id="CF630F9F-219C-3C37-A64A-DC13BD84A9DE">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:09 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="WRITING_DATA" id="E0CDE805-7354-E19D-4074-40EE753A482D">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:09 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="SYS_C008827" id="B5D2A7FF-14E7-CBD6-A332-FC42A8FB0256">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:09 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="REVIEW_PK" id="44C9D8E8-CCA0-6925-B5E0-D3AE1182633A">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:09 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<schemaObject>6CB19241-2DED-CCCB-5CEE-1412EF700B0A</schemaObject>
+<segment>4F2F2684-50B5-26EA-550A-BED432441844</segment>
+<tableSpace>BFA847D2-7959-B57B-80E6-66494D056F8D</tableSpace>
+<indexSegment>4F2F2684-50B5-26EA-550A-BED432441844</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

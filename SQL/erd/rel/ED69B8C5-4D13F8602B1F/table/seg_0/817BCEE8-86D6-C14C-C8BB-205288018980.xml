@@ -1,0 +1,187 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="817BCEE8-86D6-C14C-C8BB-205288018980" schemaObject="6CB19241-2DED-CCCB-5CEE-1412EF700B0A" name="SITE_STAT">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>STREAMER</sourceObjSchema>
+<sourceObjName>SITE_STAT</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:24 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="STAT_ID" id="F4B560EF-863F-A2FD-3B9A-903AABFC7632">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>SITE_STAT</sourceObjSchema>
+<sourceObjName>STAT_ID</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:24 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VISIT_COUNT" id="3DC188D2-7A36-935A-CC8F-81B58C3A73C1">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>SITE_STAT</sourceObjSchema>
+<sourceObjName>VISIT_COUNT</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:24 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PAGE_VIEWS" id="F451FE59-7291-D1F6-86B2-7D5E574B6B4E">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>SITE_STAT</sourceObjSchema>
+<sourceObjName>PAGE_VIEWS</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:24 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DAY_REVENUE" id="2EE3C32D-2091-AD66-27D8-C3898A47219F">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>SITE_STAT</sourceObjSchema>
+<sourceObjName>DAY_REVENUE</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:24 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TOTAL_REVENUE" id="9A024FAF-2E7E-331D-674F-B8C5BE1EF0C3">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>SITE_STAT</sourceObjSchema>
+<sourceObjName>TOTAL_REVENUE</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:24 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NEW_MEMBERS" id="D070E9C8-6828-51F8-213D-B8D8EBB2F8D4">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>SITE_STAT</sourceObjSchema>
+<sourceObjName>NEW_MEMBERS</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:24 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TOTAL_MEMBERS" id="123BAEE7-DAFB-9C54-298A-A41F452ED9EA">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>SITE_STAT</sourceObjSchema>
+<sourceObjName>TOTAL_MEMBERS</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:24 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BROWSER_STATS" id="5372CE87-A1F0-0863-EEA0-AC86B97D0488">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>SITE_STAT</sourceObjSchema>
+<sourceObjName>BROWSER_STATS</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:24 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SECURITY_EVENTS" id="3935686D-FF7F-E314-86F8-7CD6884963F3">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>SITE_STAT</sourceObjSchema>
+<sourceObjName>SECURITY_EVENTS</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:24 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SERVER_MONITORING" id="E00BC27B-D2CF-860B-D04C-D5E6C5BA2E14">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>SITE_STAT</sourceObjSchema>
+<sourceObjName>SERVER_MONITORING</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:24 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SITE_STAT_DATE" id="87146B0D-79D1-F54D-D9AB-7A74B2984DC7">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>SITE_STAT</sourceObjSchema>
+<sourceObjName>SITE_STAT_DATE</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:24 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4CC8CEAD-E5E9-858B-EB59-80984C7BE30B" schemaObject="6CB19241-2DED-CCCB-5CEE-1412EF700B0A" name="SITE_STAT_PK">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>STREAMER</sourceObjSchema>
+<sourceObjName>SYS_C008846</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:24 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F4B560EF-863F-A2FD-3B9A-903AABFC7632"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

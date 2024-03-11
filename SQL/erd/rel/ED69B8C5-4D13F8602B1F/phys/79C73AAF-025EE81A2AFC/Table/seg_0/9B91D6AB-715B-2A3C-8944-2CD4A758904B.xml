@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="USERS" directorySegmentName="seg_0" id="9B91D6AB-715B-2A3C-8944-2CD4A758904B">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:29 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<schemaObject>6CB19241-2DED-CCCB-5CEE-1412EF700B0A</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>945C9E0E-9588-97DE-BC2E-C15957259645</segment>
+<tableSpace>BFA847D2-7959-B57B-80E6-66494D056F8D</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="USER_PW" id="20D4B9D3-8358-140D-2A34-370C6948C188">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:29 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="USER_IMAGE" id="23B21665-B37A-CEB8-99D3-FC073A47AAEB">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:29 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SUBSCRIPTION" id="2958D767-07AD-3401-5FB8-266A445A3599">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:29 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="USER_IDX" id="64D668B0-440E-2373-D890-63E676AB3896">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:29 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="USER_ID" id="8C74EF79-013A-F94E-B6BD-9D99FB1A70DE">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:29 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="USER_NATION" id="C387587D-226B-ED45-7CBB-AB06031D198B">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:29 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="USER_GENDER" id="D53E5B04-EC70-C01A-0FDD-3D65A18647B3">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:29 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="USER_NAME" id="DAEE7844-8187-9192-76AD-9B15EBFC1FB9">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:29 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="USER_AGE" id="E17BC477-B089-DCA6-D1E9-14030190D187">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:29 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="USERS_PK" id="CA0734BF-D03C-7885-62DA-E067CCA94E55">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:29 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<schemaObject>6CB19241-2DED-CCCB-5CEE-1412EF700B0A</schemaObject>
+<segment>A18B7128-5861-EA61-BB1D-171CD678063D</segment>
+<tableSpace>BFA847D2-7959-B57B-80E6-66494D056F8D</tableSpace>
+<indexSegment>A18B7128-5861-EA61-BB1D-171CD678063D</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="USERS_USER_IDX_UN" id="D14BC40A-D4E0-844B-F7EB-105A0F434A74">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:29 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<schemaObject>6CB19241-2DED-CCCB-5CEE-1412EF700B0A</schemaObject>
+<segment>A18B7128-5861-EA61-BB1D-171CD678063D</segment>
+<tableSpace>BFA847D2-7959-B57B-80E6-66494D056F8D</tableSpace>
+<indexSegment>A18B7128-5861-EA61-BB1D-171CD678063D</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev12c>

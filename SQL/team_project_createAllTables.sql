@@ -226,12 +226,6 @@ create sequence users_seq
     minvalue 0
     ORDER
     NOCACHE;
-    create sequence user_seq
-    start with 0
-    increment by 1
-    minvalue 0
-    ORDER
-    NOCACHE;
 CREATE SEQUENCE board_seq
     START WITH 0
     INCREMENT BY 1

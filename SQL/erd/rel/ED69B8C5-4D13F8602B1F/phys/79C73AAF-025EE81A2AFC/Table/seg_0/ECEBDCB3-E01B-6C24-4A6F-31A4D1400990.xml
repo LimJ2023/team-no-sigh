@@ -1,0 +1,70 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="BOARD" directorySegmentName="seg_0" id="ECEBDCB3-E01B-6C24-4A6F-31A4D1400990">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:32 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<schemaObject>6CB19241-2DED-CCCB-5CEE-1412EF700B0A</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>945C9E0E-9588-97DE-BC2E-C15957259645</segment>
+<tableSpace>BFA847D2-7959-B57B-80E6-66494D056F8D</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="TITLE" id="2BDC0E3B-5888-F8A2-428E-F94730589EB9">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:32 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="BOARD_DATE" id="39CD1DF3-BFE0-B64F-7690-FA5293F13DA7">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:32 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CATEGORYS" id="4F801DA3-B378-0F76-2BA6-091C8ED21239">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:32 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="USER_ID" id="709E9CBE-9465-02D5-7235-BF9F0345BFDB">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:32 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="BOARD_IDX" id="C0D90601-D589-65D9-061E-434BFFB706F3">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:32 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="INFO" id="C3956D4E-4086-4A26-17E6-BCD035BFFBC7">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:32 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="VIEW_COUNT" id="D91357B6-C0A9-DA97-4BB8-EAC4BEA8FB4F">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:32 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="COMMENT_COUNT" id="F6AB96BF-9C6C-04E8-CDBD-89B6BC92577E">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:32 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="BOARD_PK" id="9A7C3B23-2D87-4CB6-B1BD-14B259FC9CED">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:32 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<schemaObject>6CB19241-2DED-CCCB-5CEE-1412EF700B0A</schemaObject>
+<segment>A18B7128-5861-EA61-BB1D-171CD678063D</segment>
+<tableSpace>BFA847D2-7959-B57B-80E6-66494D056F8D</tableSpace>
+<indexSegment>A18B7128-5861-EA61-BB1D-171CD678063D</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

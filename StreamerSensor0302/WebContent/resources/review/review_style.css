@@ -381,6 +381,10 @@ input#rate-5:checked ~ label{
 .bx {
     cursor: pointer;
 }
+.cmt_wrap .bxs-star {
+	cursor: default;
+	color: yellow;
+}
 .streaming_info{
     display: flex;
     align-items: center;

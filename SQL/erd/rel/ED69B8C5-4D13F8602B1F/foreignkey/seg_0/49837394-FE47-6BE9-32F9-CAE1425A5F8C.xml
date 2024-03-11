@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="49837394-FE47-6BE9-32F9-CAE1425A5F8C" containerWithKeyObject="0C31C019-101E-1DE1-F310-00AEFCA63295" localFKIndex="C21B28D7-F719-27A8-CC1B-0C05EC52FC9D" name="SYS_C008828">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>STREAMER</sourceObjSchema>
+<sourceObjName>SYS_C008828</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:19 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<referredTableLongName>STREAMER.REVIEW</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>4A198689-DB73-9751-FA06-51B16594F0F6</referredTableID>
+<keyObject>44C9D8E8-CCA0-6925-B5E0-D3AE1182633A</keyObject>
+<referredKeyID>44C9D8E8-CCA0-6925-B5E0-D3AE1182633A</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>REVIEW_IDX</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

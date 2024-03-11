@@ -13,7 +13,25 @@
 <title>리뷰 작성 페이지</title>
 </head>
 <body>
+	<script>
+		// rating 값을 받아서 해당 개수만큼의 별을 생성하는 함수
+		function generateStars(rating) {
+			let starsHTML = '';
 
+			// 별의 최대 개수
+			const maxStars = 5;
+
+			// rating 값에 따라 별의 개수를 결정
+			const numberOfStars = Math.min(Math.max(0, rating), maxStars);
+
+			// 별의 HTML을 생성
+			for (let i = 0; i < numberOfStars; i++) {
+				starsHTML += '<i class="bx bxs-star"></i>';
+			}
+
+			return starsHTML;
+		}
+	</script>
 	<header>
 		<!-- nav container(위쪽 로고부터 검색창, 회원이미지까지) home_include 안의 logo_include로 뺴냄 -->
 		<c:import url="/view/home_include/logo_include.jsp" />
@@ -36,7 +54,7 @@
 
 					<div class="related_streamers">
 						<p>연관 주제</p>
-						
+
 					</div>
 
 				</div>
@@ -48,10 +66,13 @@
 									<img src="img/user_profile/${rating.user_image }.png">
 								</div>
 								<div class="cont_area">
-									<div class="cmt_head">${rating.user_name} / date :
+									<div class="cmt_head">${rating.user_name}/ date :
 										${rating.streamer_rating_date }</div>
 									<div class="cmt_cont">${rating.rating_comment }</div>
 								</div>
+								<c:forEach var="i" begin="1" end="${rating.streamer_rating}">
+										<i class="bx bxs-star"></i>
+									</c:forEach>
 							</div>
 						</div>
 					</c:forEach>
@@ -93,8 +114,8 @@
 					<c:forEach var="stream" items="${streamList }">
 						<div class="streaming_item">
 							<div class="streaming_img">
-								<a href="${stream.streaming_url }">
-									<img src="img/thumbnail/${stream.streaming_image}.png">
+								<a href="${stream.streaming_url }"> <img
+									src="img/thumbnail/${stream.streaming_image}.png">
 								</a>
 							</div>
 							<div class="streaming_info">
@@ -117,6 +138,6 @@
 			</div>
 		</div>
 	</section>
-	<script src="script.js"></script>
+
 </body>
 </html>

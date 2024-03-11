@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="RANKING" directorySegmentName="seg_0" id="D319CD0A-DF8E-8937-A86F-A4507AC5A388">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:00 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<schemaObject>6CB19241-2DED-CCCB-5CEE-1412EF700B0A</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>945C9E0E-9588-97DE-BC2E-C15957259645</segment>
+<tableSpace>BFA847D2-7959-B57B-80E6-66494D056F8D</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="RANKING_ID" id="1C21C9C4-5963-1B00-0D5F-5543B274DEBF">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:00 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="RANK_METHOD" id="32340C07-2893-D2A3-214B-C374471937F6">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:00 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="RANK_DATE" id="72C4B809-D50D-47B2-83A2-6B2823FCBF03">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:00 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STREAMING_ID" id="A6178FF2-7AD5-B9A1-FEEF-1EB9F20C00E3">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:00 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="RANK_PLACE" id="D4FCE3F4-CD32-DFBD-8612-D09185A2234E">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:00 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="SYS_C008835" id="D54BB139-BDBD-4DB4-FB88-FD7BC09173CB">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:00 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="RANKING_PK" id="64314257-D743-33B6-95A9-53F3A2680DD9">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:00 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<schemaObject>6CB19241-2DED-CCCB-5CEE-1412EF700B0A</schemaObject>
+<segment>A18B7128-5861-EA61-BB1D-171CD678063D</segment>
+<tableSpace>BFA847D2-7959-B57B-80E6-66494D056F8D</tableSpace>
+<indexSegment>A18B7128-5861-EA61-BB1D-171CD678063D</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

@@ -1,19 +1,38 @@
 
 const youtubeBtn = document.getElementById("youtubeBtn")
-
+const refreshBtn = document.getElementById("refreshBtn")
 
 youtubeBtn.addEventListener('click', () => {
     deleteAll();
     getApi();
 })
 
+document.addEventListener('DOMContentLoaded', function() {
+    // 버튼을 클릭했을 때 새로고침하는 함수
+    refreshBtn.addEventListener('click', function() {
+        window.location.reload();
+    });
+});
+$(document).ready(function () { 
+    $(refreshBtn).click(function () { 
+        $.ajax({
+            type: "get",
+            url: window.location.href,
+            success: function (response) {
+                $('html').html();
+            }
+        });
+        
+    });
 
+ })
 
 function deleteAll() {
     document.querySelectorAll(".rank-info").forEach(item => {
         item.remove();
     });
 }
+
 
 
 

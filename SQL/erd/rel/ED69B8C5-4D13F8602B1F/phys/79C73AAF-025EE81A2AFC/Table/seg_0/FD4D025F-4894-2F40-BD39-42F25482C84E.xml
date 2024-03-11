@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="PREFERENCES" directorySegmentName="seg_0" id="FD4D025F-4894-2F40-BD39-42F25482C84E">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:56 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<schemaObject>6CB19241-2DED-CCCB-5CEE-1412EF700B0A</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>945C9E0E-9588-97DE-BC2E-C15957259645</segment>
+<tableSpace>BFA847D2-7959-B57B-80E6-66494D056F8D</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="STREAMER_ID" id="01A970F9-5CAF-3D67-DA6F-D75391F78FED">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:56 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="REVIEW_COUNT" id="10870BE7-7D08-D5BB-7A2A-17E4CDAE2500">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:56 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="FAVORITES" id="1322F3D0-FB94-7945-C894-61673B5AC2B1">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:56 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PREFERENCES_IDX" id="1E63809B-2B58-DC30-D932-D9F2C839C1B7">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:56 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="USER_ID" id="7801F9E0-9C02-4E5F-4AB4-C6D17C784A03">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:56 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STREAM_CATEGORYS_ID" id="91A225E5-32A2-A02F-CEB9-6492D96B7245">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:56 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="SYS_C008832" id="053C2042-EFD6-2AD2-3736-C47656C304EC">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:56 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="SYS_C008833" id="16461914-F0AE-FEC0-DF6B-501806EE4B1B">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:56 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="SYS_C008831" id="D3292E7B-2A5C-309F-4529-32384EE5B3D4">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:56 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PREFERENCES_PK" id="36AEFEAB-33AD-AAC8-1661-CE3D888C1395">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:56 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<schemaObject>6CB19241-2DED-CCCB-5CEE-1412EF700B0A</schemaObject>
+<segment>A18B7128-5861-EA61-BB1D-171CD678063D</segment>
+<tableSpace>BFA847D2-7959-B57B-80E6-66494D056F8D</tableSpace>
+<indexSegment>A18B7128-5861-EA61-BB1D-171CD678063D</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>
