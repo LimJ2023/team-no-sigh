@@ -306,9 +306,8 @@ header{
     text-align: center;
 }
 .trend-section .rank-content-vertical{
-	margin-left: 260px;
-    margin-top: 80px;
-    width: 800px;
+	margin: 80px auto;
+    width: 1000px;
    /* display: flex;
     justify-content: center;
     */
@@ -330,7 +329,7 @@ header{
 }
 
 .trend-section .rank-content-horizon{
-    margin-top: 100px;
+    margin: 100px;
 }
 .horizon-buttons {
 	display: flex;
