@@ -36,9 +36,12 @@ public class RankingService {
 	public List<Ranking> getRankings() {
 		return rankingDAO.getRanking();
 	}
-	
 	public int getSumAVG() {
 		return rankingDAO.getSumAvg();
+	}
+	
+	public int getSumAvgByDate(String streamingDate) {
+		return rankingDAO.getSumAvgByDate(streamingDate);
 	}
 	
 	public int getSumLikes() {

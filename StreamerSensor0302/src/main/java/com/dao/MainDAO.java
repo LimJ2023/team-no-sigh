@@ -23,8 +23,13 @@ public class MainDAO {
 		return mapper.getFiveStreamer();
 	}
 
+	/*
 	public List<Streamer> getRandomSugg(){
 		return mapper.getRandomSugg();
+	}
+	*/
+	public List<Streamer> getRandomSugg(int user_idx){
+		return mapper.getRandomSugg(user_idx);
 	}
 
 	
