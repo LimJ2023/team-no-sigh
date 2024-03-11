@@ -59,6 +59,7 @@ button{
 
 p {
     color: var(--color-primary);
+    font-size: 24pt;
 }
 
 a{
@@ -67,6 +68,7 @@ a{
     border: 1px solid var(--color-primary);
     border-radius: 5px;
     padding: 5px;
+    font-size: 16pt;
 }
 
 .container{
@@ -104,11 +106,14 @@ a{
 .memberProfile {
     text-align: center;
     margin: 10px;
+    font-size: 16pt;
+    color: var(--color-dark);
 }
 
 .memberProfile input{
     border-radius: 1.5rem;
     width: 50%;
+    font-size: 16pt;
 }
 
 input:disabled{
@@ -160,8 +165,7 @@ input:disabled{
     height: 30px;
 
     background-color: rgba(86,96,120,0.2);
-
-
+	font-size: 16pt;
     border-top: 2px solid #2c2c2c;
     border-bottom: 2px solid #2c2c2c;
 
