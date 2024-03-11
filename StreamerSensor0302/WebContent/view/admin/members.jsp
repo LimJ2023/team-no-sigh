@@ -50,9 +50,6 @@
 					<a href='${root }member_profile?user_idx=${users.user_idx}&user_id=${users.user_id}'>
 						<div class='user'>
 							<c:if test="${users.user_image != null }">
-								<p class='image'>
-									<img src='${root }img/user_profile/${users.user_image}' />
-								</p>
 								<br />
 								<p class="id">아이디: ${users.user_id }</p>
 							</c:if>
