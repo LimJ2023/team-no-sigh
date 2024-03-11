@@ -284,8 +284,9 @@ header{
     border: 2px solid #00ff9f;
     border-radius: 5px;
     color: white;
-    width: 70px;
-    height: 30px;
+   	font-size: 23px;
+    width: 100px;
+	height: 40px;
 }
 
 a:link{

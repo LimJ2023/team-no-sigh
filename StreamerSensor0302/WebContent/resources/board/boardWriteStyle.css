@@ -306,9 +306,9 @@ header{
 }
 
 .write-button{
-    width: 80px;
-    height: 30px;
-
+    width: 200px;
+    height: 70px;
+	font-size: 23px;
     background-color: transparent;
     border: 1px solid #00ff9f;
     border-radius: 5px;
