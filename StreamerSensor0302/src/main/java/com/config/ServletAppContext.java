@@ -23,9 +23,11 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import com.beans.UsersBean;
 import com.domain.Admin;
 import com.domain.Users;
 import com.interceptor.CheckLoginInterceptor;
+import com.interceptor.CheckSubsInterceptor;
 import com.interceptor.LoginMenuInterceptor;
 import com.mapper.AdminMapper;
 import com.mapper.BoardMapper;
@@ -215,6 +217,10 @@ public class ServletAppContext implements WebMvcConfigurer {
 		reg2.addPathPatterns("/user/myPage", "/user/logout");
 		reg2.excludePathPatterns("/board/main");
 		
+		//0311 이지수
+		/*CheckSubsInterceptor checkSubsInterceptor = new CheckSubsInterceptor(loginUserBean);
+		InterceptorRegistration reg3 = registry.addInterceptor(checkSubsInterceptor);
+		reg3.addPathPatterns("/leaderBoard/**");*/
 
 	}
 }

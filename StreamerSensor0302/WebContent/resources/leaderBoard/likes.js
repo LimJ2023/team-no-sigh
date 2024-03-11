@@ -1,19 +1,23 @@
- $(document).ready(function(){
-        console.log("u");
-        var user_idx = '${loginUserBean.user_idx}';  // JSP에서 JavaScript로 값 전달
-        $('.td-heart img').on('click', function(){
-            var image = $(this);  // 'this'를 현재 클릭된 이미지로 고정합니다.
-            
-            $.ajax({
-                type: "POST",
-                url: "/StreamerSensor0302/updateLikes",
-                data: {user_idx: user_idx},
-                success: function(response){
-                    image.attr("src", "img/leaderBoard/green_heart.png");
-                },
-                error: function(xhr, status, error){
-                    console.error("AJAX Error:" + status + error);
-                }
-            });
-        });
-    });
+function toggleHeart(rankPlace, streamerId, categoryId){
+ console.log("toggleHeart function called")
+	var heartImage = document.getElementById('heart-' + rankPlace);
+	console.log(heartImage.src)
+	
+	var imageName = heartImage.src.split('/').pop();
+	if(imageName === 'empty_heart.png'){
+		heartImage.src = heartImage.src.replace('empty_heart.png', 'green_heart.png');
+		
+		var xhr = new XMLHttpRequest();
+		xhr.open('POST', '/addLike', true);
+		xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+		xhr.onload = function(){
+			if(this.status == 200){
+				console.log('adding favorites...');
+			}else {
+				console.error('Error occurred');
+			}
+		 };
+
+        xhr.send(`userId=${encodeURIComponent(userId)}&streamerId=${encodeURIComponent(streamerId)}&categoryId=${encodeURIComponent(categoryId)}`);
+    }
+}

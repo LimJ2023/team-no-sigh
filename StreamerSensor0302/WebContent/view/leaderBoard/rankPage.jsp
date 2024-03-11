@@ -16,10 +16,15 @@
 <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
 	rel="stylesheet">
 <title>Streamer Sensor</title>
+<script src="leaderBoard/likes.js"></script>
 </head>
 
 
 <body>
+ <script>
+var userId = '${loginUserBean.user_id}';
+var rootPath = '${root}';
+</script> 
 	<header>
 		<!-- nav container(위쪽 로고부터 검색창, 회원이미지까지) home_include 안의 logo_include로 뺴냄 -->
 		<c:import url="/view/home_include/logo_include.jsp" />
@@ -28,13 +33,13 @@
 	</header>
 
 
-	<section class="rankContainer">
+	<%-- <section class="rankContainer">
 		<div class="tempDiv">
 			<h2>로그인 : ${loginUserBean.user_name } 입니다</h2>
 			<h2>구독 : ${loginUserBean.subscription }</h2>
 			<h2>${sumAVG }</h2>
 			<h2>hi</h2>
-		</div>
+		</div> --%>
 
 
 		<div class="rankHead" style="border-radius: 1rem">
@@ -157,7 +162,7 @@
 										<td class="td-streamerInfo">
 											<div class='rank-streamer'>
 												<div class='rank-streamer-info'>
-													<img src="img/leaderBoard/Person_Icon.png"
+													<img src="img/streamer_profile/${ranking.streamer_image }.png"
 														class="table-icon" />
 
 													<c:choose>
@@ -186,7 +191,7 @@
 										<td class="td td-likes">
 											<div class="likes-div">
 												<div class="likes-bar"
-													style="width:${(ranking.likes / sumLikes) * 100}%;"></div>
+													style="width:${(ranking.likes / likesByDate) * 100}%;"></div>
 												<div class="likes">${ranking.likes }</div>
 											</div>
 										</td>
@@ -198,6 +203,9 @@
 											</div>
 										</td>
 										<td class="td td-followers">${ranking.streamer_followers }</td>
+										<%-- <td class="td td-heart" onclick="toggleHeart('${rankPlace}', '${ranking.streamer_id }', '${ranking.stream_categorys_id }')">
+											<img src="img/leaderBoard/empty_heart.png" alt=""  id="heart-${rankPlace }"/>
+										</td> --%>
 
 										<td class="td td-category">${ranking.categorys }</td>
 									</c:when>
@@ -209,7 +217,7 @@
 										<td class="td td-streamerInfo">
 											<div class='rank-streamer'>
 												<div class='rank-streamer-info'>
-													<img src="img/leaderBoard/Person_Icon.png"
+													<img src="img/streamer_profile/${ranking.streamer_image }.png"
 														class="table-icon" />
 
 													<c:choose>
@@ -238,7 +246,7 @@
 										<td class="td td-likes">
 											<div class="likes-div">
 												<div class="likes-bar"
-													style="width:${(ranking.likes / sumLikes) * 100}%;"></div>
+													style="width:${(ranking.likes / likesByDate) * 100}%;"></div>
 												<div class="likes">${ranking.likes }</div>
 											</div>
 										</td>
@@ -261,7 +269,7 @@
 										<td class="td-streamerInfo">
 											<div class='rank-streamer'>
 												<div class='rank-streamer-info'>
-													<img src="img/leaderBoard/Person_Icon.png"
+													<img src="img/streamer_profile/${ranking.streamer_image }.png"
 														class="table-icon" />
 
 
@@ -291,7 +299,7 @@
 										<td class="td td-likes">
 											<div class="likes-div">
 												<div class="likes-bar"
-													style="width:${(ranking.likes / sumLikes) * 100}%;"></div>
+													style="width:${(ranking.likes / likesByDate) * 100}%;"></div>
 												<div class="likes">${ranking.likes }</div>
 											</div>
 										</td>
@@ -335,6 +343,7 @@
 
 </body>
 <script src="leaderBoard/filter.js"></script>
+
 <script>
 	function loadRankingData() {
 		var selectedDate = document.getElementById('streamingDate').value;
@@ -344,5 +353,6 @@
 		window.location.href = "/StreamerSensor0302/leaderBoard?streaming_date="
 				+ selectedDate;
 	}
+
 </script>
 </html>

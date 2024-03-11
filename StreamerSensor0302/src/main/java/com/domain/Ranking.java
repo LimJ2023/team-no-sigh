@@ -41,8 +41,16 @@ public class Ranking {
 	private long likes;
 	private long comments;
 	private int daily_viewers;
+	
+	private String streamer_image;
 
 	
+	public String getStreamer_image() {
+		return streamer_image;
+	}
+	public void setStreamer_image(String streamer_image) {
+		this.streamer_image = streamer_image;
+	}
 	public int getRanking_id() {
 		return ranking_id;
 	}
