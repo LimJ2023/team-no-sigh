@@ -9,7 +9,7 @@ CREATE TABLE users(
     user_age NUMBER,
     user_nation VARCHAR2(60),
     subscription VARCHAR2(1),
-    user_image VARCHAR2(400)
+    user_image VARCHAR2(400) default 'user_profile_1.png'
 );
 
 --스트리머 테이블--
