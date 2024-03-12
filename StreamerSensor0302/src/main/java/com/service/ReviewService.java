@@ -61,4 +61,8 @@ public class ReviewService {
 		return reviewDao.getCommentCount(streamer_idx);
 	}
 	
+	public void deleteRatingById(int comment_id) {
+		reviewDao.deleteRatingById(comment_id);
+	}
+	
 }

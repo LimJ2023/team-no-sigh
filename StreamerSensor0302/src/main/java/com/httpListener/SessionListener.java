@@ -19,7 +19,7 @@ public class SessionListener implements HttpSessionListener{
         }
         
         se.getSession().getServletContext().setAttribute("visitorCount", currentCount);
-        System.out.println("방문 횟수 : " + currentCount);
+        
 	}
 
 	@Override

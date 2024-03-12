@@ -1,7 +1,8 @@
 package com.domain;
 
 public class StreamerRating {
-
+	
+	private int comment_id;
 	private int user_idx;
 	private int streamer_idx;
 	private String rating_comment;
@@ -68,6 +69,12 @@ public class StreamerRating {
 	}
 	public void setStreamer_image(String streamer_image) {
 		this.streamer_image = streamer_image;
+	}
+	public int getComment_id() {
+		return comment_id;
+	}
+	public void setComment_id(int comment_id) {
+		this.comment_id = comment_id;
 	}
 	
 	

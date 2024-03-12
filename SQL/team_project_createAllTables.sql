@@ -261,6 +261,4 @@ CREATE SEQUENCE streamer_rating_id_seq
     MINVALUE 0
     ORDER
     NOCACHE;
-
-
 commit;

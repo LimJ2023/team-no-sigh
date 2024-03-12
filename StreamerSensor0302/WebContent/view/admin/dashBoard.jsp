@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<c:set var='root' value="${pageContext.request.contextPath }/"/>
+<c:set var='root' value="${pageContext.request.contextPath }/" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,6 +14,7 @@
 <title>관리자 페이지 1</title>
 </head>
 <body>
+	<script src="admin/admin.js"></script>
 	<div class="container">
 		<aside>
 			<div class="toggle">
@@ -54,7 +55,7 @@
 						<div class="info">
 							<h3>사이트 방문수</h3>
 							<h1>누적 : ${info.visit_count + visitorCount}</h1>
-							<h1>오늘 : ${visitorCount }</h1>
+							<h1>오늘 : ${info.dayVisit }</h1>
 						</div>
 						<div class="progress">
 							<svg>
@@ -67,14 +68,38 @@
 					</div>
 				</div>
 				<div class="highlight">
+				<c:choose>
+					<c:when test="${rating == null }">
+						<div class="info">
+							<h2>최근 평가가 없습니다.</h2>
+						</div>
+					</c:when>
+					<c:otherwise>
 					<div class="info">
 						<h3>최근 평가된 스트리머</h3>
 						<h3>평점 : ${rating.streamer_rating }점</h3>
 						<h3>내용 : ${rating.rating_comment }</h3>
+						
 					</div>
 					<div class="content">
 						<img src="img/streamer_profile/${rating.streamer_image}.png">
 					</div>
+					<script>
+					function showConfirmation() {
+			            var result = confirm("댓글을 삭제하시겠습니까?");
+			            if (result) {
+			                // 사용자가 "Yes"를 선택한 경우에 수행할 작업
+			                location.href = "${root}admin/deleteComment";
+			            } else {
+			                
+			            }
+			        }
+					</script>
+					<span class="material-symbols-outlined" onclick="showConfirmation()">delete
+					</span>
+					</c:otherwise>
+				</c:choose>
+					
 				</div>
 			</div>
 			<!-- 분석파트 끝 -->
@@ -83,20 +108,20 @@
 			<div class="new-users">
 				<h2>신규 회원</h2>
 				<div class="user-list">
-				<c:forEach var="item" items="${newUsers }">
-					<div class="user">
-						<img src="img/user_profile/${item.user_image}" />
-						<h2>${item.user_name}</h2>
-						<p>${item.user_id}</p>
-					</div>
-				</c:forEach>
-					
+					<c:forEach var="item" items="${newUsers }">
+						<div class="user">
+							<img src="img/user_profile/${item.user_image}" />
+							<h2>${item.user_name}</h2>
+							<p>${item.user_id}</p>
+						</div>
+					</c:forEach>
+
 				</div>
 			</div>
 			<!-- 새 유저 끝 -->
 
 			<!-- 최근 주문 시작 -->
-			
+
 			<div class="recent-orders">
 				<h2>최근 구독</h2>
 				<table>
@@ -135,6 +160,6 @@
 	<script src="admin/youtube_api.js"></script> -->
 	<script src="https://apis.google.com/js/api.js"></script>
 	<script src="jquery-3.7.1.min.js"></script>
-	<script src="admin/admin.js"></script>
+	
 </body>
 </html>

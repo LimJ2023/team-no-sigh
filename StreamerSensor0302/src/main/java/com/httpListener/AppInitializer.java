@@ -13,6 +13,7 @@ public class AppInitializer implements ServletContextListener{
 		
 		ServletContext context = sce.getServletContext();
         context.setAttribute("visitorCount", 0);
+        context.setAttribute("totalSales", 0);
 	}
 	
 }

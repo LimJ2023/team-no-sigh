@@ -88,6 +88,4 @@ public class LeaderBoardController {
 		
 		return ResponseEntity.ok().build();
 	}
-	
-	
 }

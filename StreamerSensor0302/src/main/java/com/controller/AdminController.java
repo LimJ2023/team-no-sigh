@@ -2,9 +2,12 @@ package com.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -28,7 +31,8 @@ public class AdminController {
 	ReviewService reviewService;
 	
 	@RequestMapping(value = "/admin")
-	public String adminPage(@RequestParam("adminId") int adminId, Model model) {
+	public String adminPage(@RequestParam(value =  "adminId", defaultValue = "0") int adminId, 
+			Model model, HttpSession session) {
 		
 		
 		Admin admin = adminService.getAdmin(adminId);
@@ -38,6 +42,13 @@ public class AdminController {
 		List<Users> newUsers = usersService.getNewJoinUsers(3);
 		
 		StreamerRating rating = reviewService.getRecentRating();
+		
+		int totalSales = (int)session.getServletContext().getAttribute("totalSales");
+		int dayvisit = (int)session.getServletContext().getAttribute("visitorCount");
+		
+		
+		info.setTotalSales(totalSales);
+		info.setDayVisit(dayvisit);
 		
 		model.addAttribute("admin", admin);
 		model.addAttribute("info",info);
@@ -54,5 +65,13 @@ public class AdminController {
 		}
 		
 		return "/admin/dashBoard";
+	}
+	@RequestMapping( value = "/admin/deleteComment")
+	public String deleteComment() {
+		
+		int delId = reviewService.getRecentRating().getComment_id();
+		reviewService.deleteRatingById(delId);
+		
+		return "redirect:/admin";
 	}
 }

@@ -36,4 +36,8 @@ public class ReviewDAO {
 	public StreamerRating getRecentRating() {
 		return mapper.getRecentRating();
 	}
+	
+	public void deleteRatingById(int comment_id) {
+		mapper.deleteRatingById(comment_id);
+	}
 }

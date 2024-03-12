@@ -2,6 +2,7 @@ package com.mapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 
@@ -40,12 +41,16 @@ public interface ReviewMapper {
 			+ "WHERE streamer_idx = #{streamer_idx}")
 	List<StreamerRating> getRatingListByStreamerIdx(int streamer_idx);
 	
-	@Select("SELECT r.streamer_rating, r.rating_comment, r.streamer_rating_date, s.streamer_id, s.streamer_image "
+	@Select("SELECT r.comment_id ,r.streamer_rating, r.rating_comment, r.streamer_rating_date, s.streamer_id, s.streamer_image "
 			+ "FROM streamer_rating r "
 			+ "INNER JOIN streamer s ON r.streamer_idx = s.streamer_idx "
 			+ "WHERE r.streamer_rating_date = (SELECT MAX(r2.streamer_rating_date) "
 			+ "	   FROM streamer_rating r2)")
 	StreamerRating getRecentRating();
+	
+	@Delete("delete from streamer_rating "
+			+ "WHERE comment_id = #{comment_id}")
+	void deleteRatingById(int comment_id);
 	
 	@Select("SELECT COUNT(*) "
 			+ "FROM streamer_rating "

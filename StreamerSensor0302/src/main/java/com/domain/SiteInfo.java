@@ -10,7 +10,8 @@ public class SiteInfo {
 	private double increase_revenue;
 	private double increase_visit;
 	
-	
+	private int totalSales;
+	private int dayVisit;
 	
 	public double getIncrease_revenue() {
 		return increase_revenue;
@@ -47,6 +48,18 @@ public class SiteInfo {
 	}
 	public void setStat_id(int stat_id) {
 		this.stat_id = stat_id;
+	}
+	public int getTotalSales() {
+		return totalSales;
+	}
+	public void setTotalSales(int totalSales) {
+		this.totalSales = totalSales;
+	}
+	public int getDayVisit() {
+		return dayVisit;
+	}
+	public void setDayVisit(int dayVisit) {
+		this.dayVisit = dayVisit;
 	}
 	
 	
