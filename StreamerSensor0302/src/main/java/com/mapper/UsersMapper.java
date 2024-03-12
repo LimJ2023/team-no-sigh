@@ -18,7 +18,8 @@ public interface UsersMapper {
 	@Select("SELECT * " + "FROM users " + "WHERE user_idx = #{user_idx}")
 	Users getUserByNumber(int user_idx);
 
-	@Select("select * from users")
+	@Select("select * from users "
+			+ "order by user_idx desc")
 	List<Users> getAllUsers();
 
 	@Select("select user_idx, user_id, user_name, user_gender, user_age, user_nation, subscription, user_image "

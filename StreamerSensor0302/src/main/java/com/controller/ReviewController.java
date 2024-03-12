@@ -49,7 +49,7 @@ public class ReviewController {
 	public String review_pro(@ModelAttribute("streamerRating") StreamerRating streamerRating,
 							Model model) {
 		
-		int user_idx = 5;
+		int user_idx = streamerRating.getUser_idx();
 		int streamer_idx = streamerRating.getStreamer_idx();
 		
 		

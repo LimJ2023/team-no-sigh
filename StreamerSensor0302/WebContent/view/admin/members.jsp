@@ -53,7 +53,8 @@
 								<img src="img/user_profile/${users.user_image}" width="100%">
 								<br />
 							</c:if>
-								<p class="id">아이디: ${users.user_id }</p>
+								<p class="id">아이디</p>
+								<p>${users.user_id }</p>
 							<br /> <br />
 							<p class='subscription'>구독 여부: ${users.subscription }</p>
 						</div>
