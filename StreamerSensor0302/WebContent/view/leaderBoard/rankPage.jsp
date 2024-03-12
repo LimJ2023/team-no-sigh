@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var='root' value='${pageContext.request.contextPath}/' />
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 
 <html>
@@ -134,7 +135,11 @@ var rootPath = '${root}';
 		</div>
 
 		<div class="rankContents" style="border-radius: 1rem">
-			<h2 class="tableH2">${ranking.rank_date }순위</h2>
+		<c:forEach var="ranking" items="${rankings}" end="0">
+		<%-- <h2 class="tableH2">${ranking.streaming_date }	순위</h2> --%>
+		
+		<h2 class="tableH2" style="size:10pt">${ranking.streaming_date.substring(0, 10)}	순위</h2>
+		</c:forEach>
 			<div class="table-responsive">
 				<table class="table rank-table">
 					<thead>
