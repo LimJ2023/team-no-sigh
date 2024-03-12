@@ -8,47 +8,47 @@ INSERT INTO streaming_preference VALUES(25800, 17450, 34856, 61020, 3);
 --insert into streamer( streamer_idx, streamer_id, streamer_gender, streamer_grade, streamer_status, streamer_platform, streamer_followers, streamer_image)
 --values ( streamer_idx_seq.nextval, '감스트', '남', '골드', '온라인', '아프리카', '1062000',  'streamer_profile_1');
 INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '스포트츠 파이어', '남', '일반', '오프라인', '유튜브', 37500, 'streamer_profile_17');
-INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '엑스트림 그라운드', '남', '실버', '오프라인', '아프리카', 62800, 'streamer_profile_18');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '엑스트림 그라운드', '남', '실버', '오프라인', '아프리카', 162800, 'streamer_profile_18');
 INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '어드레날린레이서', '여', '일반', '온라인', '아프리카', 25900, 'streamer_profile_19');
 INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '에너지 블래스트', '남', '일반', '오프라인', '치지직', 48300, 'streamer_profile_20');
-INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '피트니스플래쉬', '여', '실버', '오프라인', '유튜브', 55200, 'streamer_profile_21');
-INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '업텐션 스포츠', '남', '실버', '오프라인', '유튜브', 41700, 'streamer_profile_22');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '피트니스플래쉬', '여', '실버', '오프라인', '유튜브', 355200, 'streamer_profile_21');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '업텐션 스포츠', '남', '실버', '오프라인', '유튜브', 541700, 'streamer_profile_22');
 INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '에어본 애스팔트', '남', '일반', '온라인', '유튜브', 30400, 'streamer_profile_23');
-INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '아케이드 아스리트', '남', '실버', '온라인', '유튜브', 67600, 'streamer_profile_24');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '아케이드 아스리트', '남', '실버', '온라인', '유튜브', 667600, 'streamer_profile_24');
 INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '스포츠 스트라이커', '남', '일반', '온라인', '유튜브', 22100, 'streamer_profile_25');
-INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '엑스트림 이뉴스', '남', '실버', '오프라인', '유튜브', 36900, 'streamer_profile_26');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '엑스트림 이뉴스', '남', '골드', '오프라인', '유튜브', 1326900, 'streamer_profile_26');
 
 --스트리머 더미 데이터 (음식 카테고리용)
 INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '맛폭발', '남', '일반', '온라인', '유튜브', 33910, 'streamer_profile_27');
-INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '미식청춘', '여' ,'실버', '오프라인', '유튜브', 68157, 'streamer_profile_28');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '미식청춘', '여' ,'실버', '오프라인', '유튜브', 768157, 'streamer_profile_28');
 INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '트렌디테이스트', '여', '일반', '오프라인', '유튜브', 16429, 'streamer_profile_29');
 INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '간식바이브', '남', '일반', '오프라인', '치지직', 13575, 'streamer_profile_30');
 INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '젠지미식', '남', '일반' ,'오프라인', '치지직', 8513, 'streamer_profile_31');
 INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '요리클립', '여', '일반', '오프라인', '유튜브', 24394, 'streamer_profile_32');
-INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '바이트버즈', '남', '실버', '온라인', '유튜브', 46304, 'streamer_profile_33');
-INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '청춘포크', '남', '실버', '온라인' , '유튜브', 44026, 'streamer_profile_34');
-INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '맛의파도', '남', '실버', '오프라인', '아프리카', 48885, 'streamer_profile_35');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '바이트버즈', '남', '실버', '온라인', '유튜브', 646304, 'streamer_profile_33');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '청춘포크', '남', '실버', '온라인' , '유튜브', 244026, 'streamer_profile_34');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '맛의파도', '남', '실버', '오프라인', '아프리카', 148885, 'streamer_profile_35');
 INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '먹방모멘텀', '여', '일반', '온라인', '아프리카', 23705, 'streamer_profile_36');
 
 --스트리머 더미 데이터 (영화 카테고리 용)
-INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '영화광', '남', '실버', '오프라인', '아프리카', 42546, 'streamer_profile_37');
-INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '시네마청춘', '남', '실버', '오프라인', '치지직', 67658, 'streamer_profile_38');
-INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '필름트렌드', '여', '실버', '온라인', '유튜브', 43549, 'streamer_profile_39');
-INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '무비바이브', '남', '실버', '오프라인', '유튜브', 48215, 'streamer_profile_40');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '영화광', '남', '실버', '오프라인', '아프리카', 342546, 'streamer_profile_37');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '시네마청춘', '남', '실버', '오프라인', '치지직', 567658, 'streamer_profile_38');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '필름트렌드', '여', '실버', '온라인', '유튜브', 843549, 'streamer_profile_39');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '무비바이브', '남', '골드', '오프라인', '유튜브', 1048215, 'streamer_profile_40');
 INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '필름버즈', '남', '일반', '온라인', '유튜브', 16697, 'streamer_profile_41');
 
 --스트리머 더미 데이터 (카테고리 무관-게임)
-INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '게임마스터', '남', '실버', '온라인', '아프리카', 49165,  'streamer_profile_42');
-INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '플레이데이', '여', '실버', '오프라인', '유튜브', 56859, 'streamer_profile_43');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '게임마스터', '남', '실버', '온라인', '아프리카', 449165,  'streamer_profile_42');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '플레이데이', '여', '실버', '오프라인', '유튜브', 356859, 'streamer_profile_43');
 INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '버추얼배틀', '남', '일반', '온라인', '치지직', 27461, 'streamer_profile_44');
 INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '게임뷰', '남', '일반', '온라인', '유튜브', 6859, 'streamer_profile_45');
 INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '조이스틱저널', '남', '일반', '오프라인', '치지직', 18610, 'streamer_profile_46');
 
 INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '엔딩크레딧', '여', '일반', '오프라인', '치지직', 11237, 'streamer_profile_47');
 INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '레벨업라운지', '여', '일반', '온라인', '유튜브', 14955, 'streamer_profile_48');
-INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '픽셀플레이어', '남', '실버', '오프라인', '치지직', 35727, 'streamer_profile_49');
-INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '게이머스그라운드', '남', '실버', '오프라인', '유튜브', 48678, 'streamer_profile_50');
-INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '콘솔커넥트', '남', '실버', '오프라인', '유튜브', 41417, 'streamer_profile_51');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '픽셀플레이어', '남', '골드', '오프라인', '치지직', 1135727, 'streamer_profile_49');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '게이머스그라운드', '남', '실버', '오프라인', '유튜브', 348678, 'streamer_profile_50');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '콘솔커넥트', '남', '실버', '오프라인', '유튜브', 241417, 'streamer_profile_51');
 
 
 --방송 더미 데이터(스포트츠 파이어(idx17)/ 스포츠 카테고리 = 7 / 게임  = 1 / 유튜브 / streaming_image 25 부터)
