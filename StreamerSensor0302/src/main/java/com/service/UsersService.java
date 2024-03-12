@@ -16,6 +16,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.dao.UsersDAO;
 import com.domain.Board;
+import com.domain.Preperences;
 import com.domain.Users;
 
 @Service
@@ -77,6 +78,8 @@ public class UsersService {
 
 	public void addUserInfo(Users joinUserBean) {
 		uDAO.addUserInfo(joinUserBean);
+		//0312이지수
+		uDAO.addUserPreference(joinUserBean.getUser_id());
 	}
 
 	public void getLoginUserInfo(Users tempLoginUserBean) {
@@ -160,5 +163,11 @@ public class UsersService {
 		
 		return result;
 	}
+	
+	/*
+	//0312 이지수
+	public void addUserPreference(Preperences userPreferences) {
+		uDAO.addUserPreference(userPreferences);
+	}*/
 
 }

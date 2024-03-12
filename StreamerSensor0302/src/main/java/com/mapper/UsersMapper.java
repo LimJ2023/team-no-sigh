@@ -8,6 +8,7 @@ import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
 import com.domain.Board;
+import com.domain.Preperences;
 //import com.beans.UsersBean;
 import com.domain.Users;
 
@@ -71,5 +72,10 @@ public interface UsersMapper {
 			+ "FROM users u "
 			+ "ORDER BY user_idx desc")
 	List<Users> getNewJoinUsers();
+	
+	//0312 이지수
+	@Insert("INSERT INTO preferences VALUES(preferences_id_seq.nextval, "
+			+"#{user_id}, '감스트', null, 1, 1)")
+	void addUserPreference(String userId);
 
 }

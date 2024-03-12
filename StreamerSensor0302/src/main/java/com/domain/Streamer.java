@@ -18,6 +18,8 @@ public class Streamer {
 	private String thumbnail_url;
 	private String channel_id;
 	
+	private int favorites;
+	
 	public int getStreamer_idx() {
 		return streamer_idx;
 	}
@@ -105,6 +107,14 @@ public class Streamer {
 	}
 	public void setImg_url(String img_url) {
 		this.img_url = img_url;
+	}
+	
+	//0312 이지수
+	public int getFavorites() {
+		return favorites;
+	}
+	public void setFavorites(int favorites) {
+		this.favorites = favorites;
 	}
 
 }
