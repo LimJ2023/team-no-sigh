@@ -52,6 +52,11 @@ public class ReviewService {
 		return reviewDao.getRatingListByStreamerIdx(streamer_idx);
 	}
 	
+	
+	public StreamerRating getRecentRating() {
+		return reviewDao.getRecentRating();
+	}
+	
 	public int getCommentCount(int streamer_idx) {
 		return reviewDao.getCommentCount(streamer_idx);
 	}

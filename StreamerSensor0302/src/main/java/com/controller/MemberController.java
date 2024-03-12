@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.domain.Admin;
+import com.domain.Board;
 import com.domain.Review;
 import com.domain.SiteInfo;
 import com.domain.Streamer;
@@ -45,7 +46,7 @@ public class MemberController {
 		List<Users> users = uService.getAllUsers();
 		model.addAttribute("users", users);
 
-		Admin admin = adminService.getAdmin();
+		Admin admin = adminService.getAdmin(0);
 		model.addAttribute("admin", admin);
 
 		return "admin/members";
@@ -53,8 +54,8 @@ public class MemberController {
 
 	@GetMapping("/dashBoard")
 	public String dashBoard(Model model) {
-
-		Admin admin = adminService.getAdmin();
+		
+		Admin admin = adminService.getAdmin(0);
 		SiteInfo info = adminService.getSiteInfo();
 		Users user = uService.getUsers();
 		List<Users> subUsers = uService.getSubUsers();
@@ -81,12 +82,17 @@ public class MemberController {
 	}
 
 	@GetMapping("/member_profile")
-	public String member_profile(@RequestParam("user_idx") int user_idx, Model model) {
-		
+	public String member_profile(@RequestParam("user_idx") int user_idx, @RequestParam("user_id") String user_id,
+			Model model) {
+
 		model.addAttribute("user_idx", user_idx);
+		model.addAttribute("user_id", user_id);
 
 		Users users = uService.printOneUser(user_idx);
 		model.addAttribute("users", users);
+
+		List<Board> board = uService.selectBoardInfo(user_id);
+		model.addAttribute("board", board);
 
 		return "admin/member_profile";
 	}

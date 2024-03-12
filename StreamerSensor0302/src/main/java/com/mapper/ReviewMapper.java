@@ -20,14 +20,12 @@ public interface ReviewMapper {
 			+ "order by r.review_creation_date desc")
 	List<Review> getAllReviews();
 	
-	@Select("select s.streaming_id, s.streamer_id, s.streaming_description, s.streaming_time, "
-			+ "c.categorys, s.streaming_date, "
-			+ "i.img_url "
+	@Select("select s.streaming_id, s.streamer_id, s.streaming_description, s.streaming_time, c.categorys, s.streaming_date, "
+			+ "s.streaming_image "
 			+ "from streaming_info s "
-			+ "inner join streaming_img i on s.img_id = i.img_id "
 			+ "INNER JOIN stream_categorys c ON s.stream_categorys_id = c.stream_categorys_id "
 			+ "WHERE s.streaming_date = (SELECT MAX(s2.streaming_date) "
-			+ "    FROM streaming_info s2)")
+			+ "FROM streaming_info s2)")
 	List<Review> getRecentReivew();
 	
 	@Insert("INSERT INTO streamer_rating (comment_id, user_idx, streamer_idx, streamer_rating, "
@@ -36,12 +34,18 @@ public interface ReviewMapper {
 			+ "#{rating_comment}, sysdate)")
 	void insertStreamerRating(StreamerRating rating);
 	
-	@Select("SELECT u.user_name, i.img_url, r.streamer_idx, r.streamer_rating, r.rating_comment, r.streamer_rating_date "
+	@Select("SELECT u.user_name, u.user_image, r.user_idx, r.streamer_idx, r.streamer_rating,r.rating_comment, r.streamer_rating_date "
 			+ "FROM streamer_rating r "
 			+ "INNER JOIN users u ON u.user_idx = r.user_idx "
-			+ "INNER JOIN streaming_img i ON i.img_id = u.user_image "
-			+ "WHERE r.streamer_idx = #{streamer_idx}")
+			+ "WHERE streamer_idx = #{streamer_idx}")
 	List<StreamerRating> getRatingListByStreamerIdx(int streamer_idx);
+	
+	@Select("SELECT r.streamer_rating, r.rating_comment, r.streamer_rating_date, s.streamer_id, s.streamer_image "
+			+ "FROM streamer_rating r "
+			+ "INNER JOIN streamer s ON r.streamer_idx = s.streamer_idx "
+			+ "WHERE r.streamer_rating_date = (SELECT MAX(r2.streamer_rating_date) "
+			+ "	   FROM streamer_rating r2)")
+	StreamerRating getRecentRating();
 	
 	@Select("SELECT COUNT(*) "
 			+ "FROM streamer_rating "

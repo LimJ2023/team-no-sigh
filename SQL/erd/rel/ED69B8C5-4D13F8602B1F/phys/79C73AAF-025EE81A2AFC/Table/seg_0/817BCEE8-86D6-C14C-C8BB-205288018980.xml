@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="SITE_STAT" directorySegmentName="seg_0" id="817BCEE8-86D6-C14C-C8BB-205288018980">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:24 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<schemaObject>6CB19241-2DED-CCCB-5CEE-1412EF700B0A</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>945C9E0E-9588-97DE-BC2E-C15957259645</segment>
+<tableSpace>BFA847D2-7959-B57B-80E6-66494D056F8D</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="TOTAL_MEMBERS" id="123BAEE7-DAFB-9C54-298A-A41F452ED9EA">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:24 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DAY_REVENUE" id="2EE3C32D-2091-AD66-27D8-C3898A47219F">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:24 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SECURITY_EVENTS" id="3935686D-FF7F-E314-86F8-7CD6884963F3">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:24 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="VISIT_COUNT" id="3DC188D2-7A36-935A-CC8F-81B58C3A73C1">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:24 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="BROWSER_STATS" id="5372CE87-A1F0-0863-EEA0-AC86B97D0488">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:24 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SITE_STAT_DATE" id="87146B0D-79D1-F54D-D9AB-7A74B2984DC7">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:24 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TOTAL_REVENUE" id="9A024FAF-2E7E-331D-674F-B8C5BE1EF0C3">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:24 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NEW_MEMBERS" id="D070E9C8-6828-51F8-213D-B8D8EBB2F8D4">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:24 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SERVER_MONITORING" id="E00BC27B-D2CF-860B-D04C-D5E6C5BA2E14">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:24 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PAGE_VIEWS" id="F451FE59-7291-D1F6-86B2-7D5E574B6B4E">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:24 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STAT_ID" id="F4B560EF-863F-A2FD-3B9A-903AABFC7632">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:24 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="SITE_STAT_PK" id="4CC8CEAD-E5E9-858B-EB59-80984C7BE30B">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:24 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<schemaObject>6CB19241-2DED-CCCB-5CEE-1412EF700B0A</schemaObject>
+<segment>A18B7128-5861-EA61-BB1D-171CD678063D</segment>
+<tableSpace>BFA847D2-7959-B57B-80E6-66494D056F8D</tableSpace>
+<indexSegment>A18B7128-5861-EA61-BB1D-171CD678063D</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

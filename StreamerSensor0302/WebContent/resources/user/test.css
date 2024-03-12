@@ -76,7 +76,7 @@ h6{
 }
 p{
     font-size: 0.86rem;
-    color: var(--color-gray-dark);
+    color: var(--color-gray-light);
 }
 small{
     font-weight: 300;
@@ -125,7 +125,7 @@ small{
 /* ==============nav bar============ */
 nav{
     width: 100%;
-    background: var(--color-white);
+    background: var(--body-color);
     padding: 1rem 0;
 }
 nav .container{
@@ -135,7 +135,7 @@ nav .container{
     position: relative;
     width: 96%;
     margin: 0 auto;
-    background: black;
+    background: var(--body-color);
 }
 
 nav img.logo{
@@ -152,14 +152,14 @@ nav img.logo{
     color: var(--main-color);
 }
 nav .search-bar{
-    background: var(--color-light);
+    background: var(--color-gray-dark);
     padding: var(--padding-2) var(--card-padding);
     width: 32vw;
     border-radius: var(--border-radius-2);
     display: flex;
     align-items: center;
     gap: 1rem;
-    color: var(--color-gray-light);
+    color: var(--color-gray-dark);
     position: absolute;
     left: 15%;
 }
@@ -454,6 +454,8 @@ canvas#chart{
 main section.right .investments{
     background: var(--color-white);
     border-radius: var(--car-border-radius);
+    position: relative;
+    top: 100px;
 }
 main section.right .investments img{
     width: 2.4rem;

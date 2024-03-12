@@ -1,0 +1,174 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9B91D6AB-715B-2A3C-8944-2CD4A758904B" schemaObject="6CB19241-2DED-CCCB-5CEE-1412EF700B0A" name="USERS">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>STREAMER</sourceObjSchema>
+<sourceObjName>USERS</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:29 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="USER_IDX" id="64D668B0-440E-2373-D890-63E676AB3896">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>USER_IDX</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:29 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USER_ID" id="8C74EF79-013A-F94E-B6BD-9D99FB1A70DE">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>USER_ID</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:29 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60 BYTE</dataTypeSize>
+<ownDataTypeParameters>60 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USER_PW" id="20D4B9D3-8358-140D-2A34-370C6948C188">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>USER_PW</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:29 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60 BYTE</dataTypeSize>
+<ownDataTypeParameters>60 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USER_NAME" id="DAEE7844-8187-9192-76AD-9B15EBFC1FB9">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>USER_NAME</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:29 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60 BYTE</dataTypeSize>
+<ownDataTypeParameters>60 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USER_GENDER" id="D53E5B04-EC70-C01A-0FDD-3D65A18647B3">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>USER_GENDER</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:29 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USER_AGE" id="E17BC477-B089-DCA6-D1E9-14030190D187">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>USER_AGE</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:29 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USER_NATION" id="C387587D-226B-ED45-7CBB-AB06031D198B">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>USER_NATION</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:29 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60 BYTE</dataTypeSize>
+<ownDataTypeParameters>60 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SUBSCRIPTION" id="2958D767-07AD-3401-5FB8-266A445A3599">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>SUBSCRIPTION</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:29 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USER_IMAGE" id="23B21665-B37A-CEB8-99D3-FC073A47AAEB">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>USER_IMAGE</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:29 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>400 BYTE</dataTypeSize>
+<ownDataTypeParameters>400 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CA0734BF-D03C-7885-62DA-E067CCA94E55" schemaObject="6CB19241-2DED-CCCB-5CEE-1412EF700B0A" name="USERS_PK">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>STREAMER</sourceObjSchema>
+<sourceObjName>SYS_C008817</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:29 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8C74EF79-013A-F94E-B6BD-9D99FB1A70DE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D14BC40A-D4E0-844B-F7EB-105A0F434A74" schemaObject="6CB19241-2DED-CCCB-5CEE-1412EF700B0A" name="USERS_USER_IDX_UN">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>STREAMER</sourceObjSchema>
+<sourceObjName>SYS_C008818</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:29 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="64D668B0-440E-2373-D890-63E676AB3896"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

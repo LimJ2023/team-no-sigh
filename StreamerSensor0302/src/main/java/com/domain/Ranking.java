@@ -2,8 +2,6 @@ package com.domain;
 
 import java.awt.Image;
 
-import org.springframework.web.multipart.MultipartFile;
-
 public class Ranking {
 
 	private int ranking_id;
@@ -28,6 +26,8 @@ public class Ranking {
 	private String streaming_description;
 	private String stream_categorys_id;
 	private String streaming_date;
+	private String categorys;
+	
 	
 	//***************
 	private String video_id;
@@ -42,7 +42,15 @@ public class Ranking {
 	private long comments;
 	private int daily_viewers;
 	
+	private String streamer_image;
+
 	
+	public String getStreamer_image() {
+		return streamer_image;
+	}
+	public void setStreamer_image(String streamer_image) {
+		this.streamer_image = streamer_image;
+	}
 	public int getRanking_id() {
 		return ranking_id;
 	}
@@ -182,6 +190,16 @@ public class Ranking {
 		this.thumbImage = thumbImage;
 	}
 	
+	//
+	public String getCategorys() {
+		return categorys;
+	}
+	public void setCategorys(String categorys) {
+		this.categorys = categorys;
+	}
+	public void setStream_categorys_id(String stream_categorys_id) {
+		this.stream_categorys_id = stream_categorys_id;
+	}
 	
 	
 }

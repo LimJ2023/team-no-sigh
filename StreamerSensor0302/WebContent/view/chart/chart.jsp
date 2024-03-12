@@ -85,7 +85,10 @@
             plugins: {
                 legend: {
                     labels: {
-                        color: 'rgba(125, 141, 161, 1)' // 텍스트 색상을 여기서 지정하세요
+                        color: 'rgba(125, 141, 161, 1)', // 텍스트 색상을 여기서 지정하세요
+                        font: {
+                        	size: 16
+                        }
                     }
                 }
             }
@@ -143,19 +146,28 @@
             plugins: {
                 legend: {
                     labels: {
-                        color: 'rgba(125, 141, 161, 1)' // 범례의 텍스트 색상 변경
+                        color: 'rgba(125, 141, 161, 1)', // 범례의 텍스트 색상 변경
+                        font: {
+                        	size: 16
+                        }
                     }
                 }
             },
             scales: {
                 y: {
                     ticks: {
-                        color: 'rgba(125, 141, 161, 1)' // Y 축 텍스트 색상 변경
+                        color: 'rgba(125, 141, 161, 1)', // Y 축 텍스트 색상 변경
+                        font: {
+                        	size: 16
+                        }
                     }
                 },
                 x: {
                     ticks: {
-                        color: 'rgba(125, 141, 161, 1)' // X 축 텍스트 색상 변경
+                        color: 'rgba(125, 141, 161, 1)', // X 축 텍스트 색상 변경
+                        font: {
+                        	size: 16
+                        }
                     }
                 }
             }
@@ -216,19 +228,28 @@
             plugins: {
                 legend: {
                     labels: {
-                        color: 'rgba(125, 141, 161, 1)' // 범례의 텍스트 색상 변경
+                        color: 'rgba(125, 141, 161, 1)', // 범례의 텍스트 색상 변경
+                        font: {
+                        	size: 16
+                        }
                     }
                 }
             },
             scales: {
                 y: {
                     ticks: {
-                        color: 'rgba(125, 141, 161, 1)' // Y 축 텍스트 색상 변경
+                        color: 'rgba(125, 141, 161, 1)', // Y 축 텍스트 색상 변경
+                        font: {
+                        	size: 16
+                        }
                     }
                 },
                 x: {
                     ticks: {
-                        color: 'rgba(125, 141, 161, 1)' // X 축 텍스트 색상 변경
+                        color: 'rgba(125, 141, 161, 1)', // X 축 텍스트 색상 변경
+                        font: {
+                        	size: 16
+                        }
                     }
                 }
             }

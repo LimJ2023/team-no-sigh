@@ -9,7 +9,10 @@ public class StreamerRating {
 	private String streamer_rating_date;
 	private String user_name;
 	private String user_image;
-	private String img_url;
+	
+	private String streamer_id;
+	private String streamer_image;
+	
 	
 	
 	public int getUser_idx() {
@@ -54,11 +57,17 @@ public class StreamerRating {
 	public void setRating_comment(String rating_comment) {
 		this.rating_comment = rating_comment;
 	}
-	public String getImg_url() {
-		return img_url;
+	public String getStreamer_id() {
+		return streamer_id;
 	}
-	public void setImg_url(String img_url) {
-		this.img_url = img_url;
+	public void setStreamer_id(String streamer_id) {
+		this.streamer_id = streamer_id;
+	}
+	public String getStreamer_image() {
+		return streamer_image;
+	}
+	public void setStreamer_image(String streamer_image) {
+		this.streamer_image = streamer_image;
 	}
 	
 	

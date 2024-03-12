@@ -31,11 +31,13 @@ public class Users {
 		@Size(min = 2, max = 20)
 		@Pattern(regexp = "[a-zA-Z0-9]*")
 		private String user_pw2;
-		
+		@Size(min = 2, max = 4)
+		@Pattern(regexp = "[가-힣]*") // 한글 문자
 		private String user_gender; //성별
 		
 		private int user_age; //나이
-		
+		@Size(min = 2, max = 4)
+		@Pattern(regexp = "[가-힣]*") // 한글 문자
 		private String user_nation; //국적
 		
 		

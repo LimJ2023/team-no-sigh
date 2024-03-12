@@ -7,7 +7,8 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
-import com.beans.UsersBean;
+import com.domain.Board;
+//import com.beans.UsersBean;
 import com.domain.Users;
 
 public interface UsersMapper {
@@ -31,7 +32,7 @@ public interface UsersMapper {
 		//사용자의 이름을 반환하는 쿼리문
 	
 	@Insert("insert into users (user_idx, user_id, user_pw, user_name, user_gender, user_age, user_nation) " +
-			"VALUES (user_seq.nextval, #{user_id}, #{user_pw}, #{user_name}, #{user_gender}, #{user_age}, #{user_nation})")
+			"VALUES (users_seq.nextval, #{user_id}, #{user_pw}, #{user_name}, #{user_gender}, #{user_age}, #{user_nation})")
 	void addUserInfo(Users joinUserBean);
 	
 	//0304 이지수 subscription 추가
@@ -40,16 +41,18 @@ public interface UsersMapper {
 			+ "where user_id=#{user_id} and user_pw=#{user_pw}")
 	Users getLoginUserInfo(Users tempLoginUserBean);
 
-	@Select("select user_id, user_name " + "from users " + "where user_idx = #{user_idx}")
+	@Select("select user_id, user_name, user_gender, user_age, user_nation " + "from users " + "where user_idx = #{user_idx}")
 	Users getmodifyUserinfo(int user_idx);
 
-	@Update("update users " + "set user_name = #{user_name}, user_gender = #{user_gender}, "
-			+ "user_age = #{user_age}, user_nation = #{user_nation}, "
-			+ "subscription = #{subscription}, user_image = #{user_image, jdbcType=VARCHAR} "
-			+ "where user_idx = #{user_idx} ")
+	@Update("update users " +
+			"set user_pw = #{user_pw} " +
+			"where user_idx = #{user_idx}")
 	void modifyUserInfo(Users modifyUserBean);
-
-	@Update("update users " + "set user_name = #{user_name}, user_gender = #{user_gender}, "
+	@Delete("DELETE FROM users WHERE user_idx = #{user_idx}")
+	void deleteInfo(int user_idx);
+	//=======================================================================================
+	@Update("update users "
+			+ "set user_name = #{user_name}, user_gender = #{user_gender}, "
 			+ "user_age = #{user_age}, user_nation = #{user_nation}, "
 			+ "subscription = #{subscription}, user_image = #{user_image, jdbcType=VARCHAR} "
 			+ "where user_idx = #{user_idx} ")
@@ -57,5 +60,16 @@ public interface UsersMapper {
 
 	@Delete("DELETE FROM users WHERE user_idx = #{user_idx}")
 	void deleteMemberInfo(int user_idx);
+	
+	@Select("select b.board_idx, u.user_id, b.title, b.info, b.board_date "
+			+ "from users u "
+			+ "INNER JOIN board b on u.user_id = b.user_id "
+			+ "where u.user_id = #{user_id}")
+	List<Board> selectBoardInfo(String user_id);
+	//-------------------------------------------------------------------------------
+	@Select("SELECT * "
+			+ "FROM users "
+			+ "ORDER BY user_idx desc")
+	List<Users> getNewJoinUsers();
 
 }

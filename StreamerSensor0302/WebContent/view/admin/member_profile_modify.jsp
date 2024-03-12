@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="admin/member_profile_style.css" />
+<link rel="stylesheet" href="admin/member_modify_style.css" />
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script
@@ -55,7 +55,7 @@
 				<div class="button">
 					<form:button class="btn btn-primary">수정완료</form:button>
 					<br> <a
-						href="${root }member_profile?user_idx=${modifyMemberBean.user_idx}">취소</a>
+						href="${root }member_profile?user_idx=${modifyMemberBean.user_idx}&user_id=${modifyMemberBean.user_id}">취소</a>
 				</div>
 			</form:form>
 		</div>

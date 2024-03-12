@@ -2,37 +2,31 @@
 -- 회원 테이블--
 CREATE TABLE users(
     user_idx NUMBER NOT NULL UNIQUE,
-    user_id VARCHAR2(20) PRIMARY KEY,
-    user_pw VARCHAR2(20),
-    user_name VARCHAR2(20),
+    user_id VARCHAR2(60) PRIMARY KEY,
+    user_pw VARCHAR2(60),
+    user_name VARCHAR2(60),
     user_gender VARCHAR2(20),
     user_age NUMBER,
-    user_nation VARCHAR2(20),
+    user_nation VARCHAR2(60),
     subscription VARCHAR2(1),
-    user_image NUMBER
+    user_image VARCHAR2(400) default 'user_profile_1.png'
 );
 
 --스트리머 테이블--
 CREATE TABLE streamer(
     streamer_idx number not null unique,
     streamer_id VARCHAR2(40) PRIMARY KEY,
-    streamer_gender VARCHAR2(20),
-    streamer_grade VARCHAR2(20),
-    streamer_status VARCHAR2(20),
-    streamer_platform VARCHAR2(20), 
+    streamer_gender VARCHAR2(40),
+    streamer_grade VARCHAR2(40),
+    streamer_status VARCHAR2(60),
+    streamer_platform VARCHAR2(60), 
     streamer_followers NUMBER,
-    streamer_img NUMBER
-);
-
---이미지 저장 테이블--
-CREATE TABLE streaming_img(
-    img_id NUMBER PRIMARY KEY,
-    img_url VARCHAR2(400) NOT NULL
+    streamer_image VARCHAR2(400)
 );
 
 CREATE TABLE stream_categorys(
     stream_categorys_id NUMBER PRIMARY KEY,
-    categorys VARCHAR2(40)
+    categorys VARCHAR2(60)
 );
 
 --방송 정보 테이블--
@@ -43,8 +37,8 @@ CREATE TABLE streaming_info(
     streaming_time VARCHAR2(60),
     stream_categorys_id NUMBER,
     streaming_date DATE,
-    streamer_id VARCHAR2(40),
-    img_id NUMBER,
+    streamer_id VARCHAR2(60),
+    streaming_image VARCHAR2(400),
     FOREIGN KEY (streamer_id) REFERENCES streamer(streamer_id) ON DELETE SET NULL,
     FOREIGN KEY (stream_categorys_id) REFERENCES stream_categorys(stream_categorys_id)
 );
@@ -52,7 +46,7 @@ CREATE TABLE streaming_info(
 --리뷰 테이블--
 CREATE table review(
     review_idx NUMBER PRIMARY KEY,
-    user_id VARCHAR2(20),
+    user_id VARCHAR2(60),
     review_streaming_id NUMBER,
     writing_data VARCHAR2(200),
     likes_count NUMBER,
@@ -73,8 +67,8 @@ CREATE TABLE user_review_relation(
 --선호도 테이블 (유저id와 스트리머id로 유저의 각 스트리머에 대한 선호도를 알 수 있도록)
 CREATE TABLE Preferences(
     preferences_idx NUMBER PRIMARY KEY,
-    user_id VARCHAR2(40),
-    streamer_id VARCHAR2(40),
+    user_id VARCHAR2(60),
+    streamer_id VARCHAR2(60),
     review_count NUMBER,
     favorites NUMBER(1,0),
     stream_categorys_id NUMBER,
@@ -88,7 +82,7 @@ CREATE TABLE ranking(
     ranking_id number PRIMARY KEY,
     rank_date DATE, --랭킹 기준일
     rank_place NUMBER, --랭킹 순위
-    rank_method varchar2(20),
+    rank_method varchar2(60),
     streaming_id NUMBER,  --오늘의 선호도에서 가져오기 위한 저장소 고유번호
     FOREIGN KEY(streaming_id) REFERENCES streaming_info(streaming_id) ON DELETE SET NULL
 );
@@ -96,20 +90,21 @@ CREATE TABLE ranking(
 --보드 테이블--
 CREATE TABLE board(
     board_idx number primary key,
-    user_id VARCHAR2(20),
-    title varchar2(20),
+    user_id VARCHAR2(60),
+    title varchar2(60),
     info VARCHAR2(200),
     board_date date,
     view_count number,
     comment_count number,
-    tags VARCHAR2(20),
-    FOREIGN KEY (user_id) REFERENCES USERS(user_id) ON DELETE SET NULL
+    categorys VARCHAR2(60)
 );
+
+
 
 --댓글 테이블--
 CREATE TABLE comments(
     comments_num NUMBER PRIMARY KEY,
-    user_id VARCHAR2(20),
+    user_id VARCHAR2(60),
     info VARCHAR2(200),
     comments_date DATE,
     board_idx NUMBER,
@@ -120,9 +115,10 @@ CREATE TABLE comments(
 --admin 테이블--
 CREATE TABLE admin(
     admin_id NUMBER PRIMARY KEY,
-    admin_name VARCHAR2(50) UNIQUE NOT NULL,
+    admin_name VARCHAR2(60) UNIQUE NOT NULL,
     admin_pw VARCHAR2(100) NOT NULL,
     email VARCHAR2(100),
+    admin_image VARCHAR2(400),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     last_login TIMESTAMP
 );
@@ -131,7 +127,7 @@ CREATE TABLE admin(
 create table admin_notice(
     admin_id NUMBER,
     notice_num number primary key,
-    notice_type varchar2(20),
+    notice_type varchar2(60),
     notice_title varchar2(80),
     notice_content varchar2(400),
     notice_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -225,6 +221,12 @@ CREATE SEQUENCE streamer_idx_seq
     ORDER
     NOCACHE;
 create sequence users_seq
+    start with 0
+    increment by 1
+    minvalue 0
+    ORDER
+    NOCACHE;
+create sequence user_seq
     start with 0
     increment by 1
     minvalue 0

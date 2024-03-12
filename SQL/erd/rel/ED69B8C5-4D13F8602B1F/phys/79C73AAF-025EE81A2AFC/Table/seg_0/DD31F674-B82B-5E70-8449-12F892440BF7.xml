@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="STREAMER_RATING" directorySegmentName="seg_0" id="DD31F674-B82B-5E70-8449-12F892440BF7">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:47 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<schemaObject>6CB19241-2DED-CCCB-5CEE-1412EF700B0A</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>945C9E0E-9588-97DE-BC2E-C15957259645</segment>
+<tableSpace>BFA847D2-7959-B57B-80E6-66494D056F8D</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="STREAMER_RATING_DATE" id="07D0E341-FAFF-CFB0-250A-F9C3367F3CF7">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:47 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STREAMER_RATING" id="38001909-D718-06E6-2C24-13767EC8D5E7">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:47 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="COMMENT_ID" id="3CB42915-4B2D-EF9F-A817-8D6E5DB8541A">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:47 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="USER_IDX" id="3E402D77-1F0C-3645-0946-E82C228206E5">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:47 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STREAMER_IDX" id="C593A795-3DEF-E77C-75DD-6149103648E5">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:47 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="RATING_COMMENT" id="D1FD632F-81C4-4BF0-DACD-EAC9A3B21026">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:47 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="STREAMER_RATING_PK" id="68F01909-224B-2A6B-E036-0F654181DBCE">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:47 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<schemaObject>6CB19241-2DED-CCCB-5CEE-1412EF700B0A</schemaObject>
+<segment>A18B7128-5861-EA61-BB1D-171CD678063D</segment>
+<tableSpace>BFA847D2-7959-B57B-80E6-66494D056F8D</tableSpace>
+<indexSegment>A18B7128-5861-EA61-BB1D-171CD678063D</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

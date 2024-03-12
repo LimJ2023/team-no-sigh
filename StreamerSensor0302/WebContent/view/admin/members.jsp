@@ -31,7 +31,8 @@
 		<!-- 메인 컨텐츠 -->
 		<main>
 			<div class="search">
-				<input type="text" placeholder="검색..." id="searchInput" />
+				<input type="text" placeholder="검색..." id="searchInput"
+					onkeyup="searchFunction()" />
 				<button type="submit">
 					<span class="material-symbols-outlined"> search</span>
 				</button>
@@ -46,11 +47,13 @@
 			</div>
 			<div class="user-profile">
 				<c:forEach var="users" items="${users }">
-					<a href='${root }member_profile?user_idx=${users.user_idx}'>
+					<a href='${root }member_profile?user_idx=${users.user_idx}&user_id=${users.user_id}'>
 						<div class='user'>
-							<p class='id'>
-								<img src='img/admin/profile4.png' />&nbsp; 아이디: ${users.user_id }
-							</p>
+							<c:if test="${users.user_image != null }">
+								<img src="img/user_profile/${users.user_image}" width="100%">
+								<br />
+							</c:if>
+								<p class="id">아이디: ${users.user_id }</p>
 							<br /> <br />
 							<p class='subscription'>구독 여부: ${users.subscription }</p>
 						</div>

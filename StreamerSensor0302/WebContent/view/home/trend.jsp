@@ -29,63 +29,29 @@
 			<div class="rank-content-horizon">
 				<h2>가장 있기있는 방송 목록</h2>
 				<div class="horizon-buttons">
-					<button id="favoriteBtn">추천 영상 목록</button>
-					<button id="categoryBtn">카테고리별 목록</button>
-					<button id="trendBtn">추세별 목록</button>
-					<button id="youtubeBtn">인기 유튜브 목록</button>
+					<button id="refreshBtn">최신 목록</button>
+					<button id="youtubeBtn">유튜브 인기 영상</button>
 				</div>
 			</div>
 			<div class="rank-content-vertical">
-				<div class="rank-ver-list" id="first_list">
-					<div class="list-category"></div>
-					<div class="rank-info">
+			 	<div class="rank-ver-list" id="list">
+					<c:forEach var="item" items="${streamList }">
+						<div class="rank-info">
 						<div class="rank-img">
-							<img src="img/0101.png" />
+						<a href="https://www.youtube.com/watch?v=${item.streaming_url }">
+							<img src="img/thumbnail/${item.streaming_image}.png" />
+						</a>
 						</div>
+						<div class="rank-name">${item.streaming_description }</div>
 						<div class="rank-info-foot">
-							<div class="rank-name">리뷰1</div>
-							<div class="rank-views">100</div>
-							<div class="rank-trend">
-								<i class='bx bx-right-top-arrow-circle bx-md'></i>
-							</div>
+							<div class="rank-views"><p>조회수</p>${item.viewCount}</div>
+							<div class="rank-likes"><p>좋아요</p>${item.likesCount}</div>
 						</div>
 					</div>
+					</c:forEach>
+					
 				</div>
-				<div class="rank-ver-list" id="second_list">
-					<div class="list-category"></div>
-					<div class="rank-info">
-						<div class="rank-img">
-							<img src="img/0106.png" />
-						</div>
-						<div class="rank-info-foot">
-							<div class="rank-name">게임1</div>
-							<div class="rank-views">400</div>
-							<div class="rank-trend">
-								<i class='bx bx-up-arrow-circle bx-md'></i>
-							</div>
-						</div>
-					</div>
-
-
-				</div>
-				<div class="rank-ver-list" id="third_list">
-					<div class="list-category"></div>
-					<div class="rank-info">
-						<div class="rank-img">
-							<img src="img/0101.png" />
-						</div>
-						<div class="rank-info-foot">
-							<div class="rank-name">음악1</div>
-							<div class="rank-views">400</div>
-							<div class="rank-trend">
-								<i class='bx bx-up-arrow-circle bx-md'></i>
-							</div>
-						</div>
-					</div>
-
-
-				</div>
-
+				
 			</div>
 		</div>
 	</section>
@@ -93,7 +59,7 @@
 
 	<c:import url="/view/home_include/footer.jsp" />
 
-
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 	<script src="home/list.js"></script>
 	<script src="home/trend.js"></script>
 

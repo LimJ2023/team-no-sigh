@@ -18,6 +18,12 @@ public class AdminDAO {
 	public Admin getAdminInfo(int admin_id) {
 		return adminMapper.getAdminInfo(admin_id);
 	}
+	public List<Admin> getAllAdmin(){
+		return adminMapper.getAllAdmin();
+	}
+	public void updateAdminInfo(int admin_id) {
+		adminMapper.updateAdminInfo(admin_id);
+	}
 	
 	public List<SiteInfo> getSiteInfo() {
 		return adminMapper.getSiteInfo();

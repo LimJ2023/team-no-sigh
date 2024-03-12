@@ -23,13 +23,16 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import com.beans.UsersBean;
 import com.domain.Admin;
 import com.domain.Users;
 import com.interceptor.CheckLoginInterceptor;
+import com.interceptor.CheckSubsInterceptor;
 import com.interceptor.LoginMenuInterceptor;
 import com.mapper.AdminMapper;
 import com.mapper.BoardMapper;
 import com.mapper.LoginMenuMapper;
+import com.mapper.MainMapper;
 import com.mapper.RankingMapper;
 import com.mapper.ReviewMapper;
 import com.mapper.StreamMapper;
@@ -167,6 +170,14 @@ public class ServletAppContext implements WebMvcConfigurer {
 		return factoryBean;
 	}
 	
+	//0306이지수
+	@Bean
+	public MapperFactoryBean<MainMapper> getMainMapper(SqlSessionFactory factory) throws Exception{
+		MapperFactoryBean<MainMapper> factoryBean = new MapperFactoryBean<MainMapper>(MainMapper.class);
+		factoryBean.setSqlSessionFactory(factory);
+		return factoryBean;
+	}
+	
 	// 쿼리를 전달하는 빈 등록
 	@Bean
 	public JdbcTemplate db(BasicDataSource source) {
@@ -206,6 +217,10 @@ public class ServletAppContext implements WebMvcConfigurer {
 		reg2.addPathPatterns("/user/myPage", "/user/logout");
 		reg2.excludePathPatterns("/board/main");
 		
+		//0311 이지수
+		/*CheckSubsInterceptor checkSubsInterceptor = new CheckSubsInterceptor(loginUserBean);
+		InterceptorRegistration reg3 = registry.addInterceptor(checkSubsInterceptor);
+		reg3.addPathPatterns("/leaderBoard/**");*/
 
 	}
 }

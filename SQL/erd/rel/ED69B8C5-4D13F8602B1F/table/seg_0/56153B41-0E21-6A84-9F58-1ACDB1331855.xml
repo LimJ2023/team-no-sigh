@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="56153B41-0E21-6A84-9F58-1ACDB1331855" schemaObject="6CB19241-2DED-CCCB-5CEE-1412EF700B0A" name="STREAM_CATEGORYS">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>STREAMER</sourceObjSchema>
+<sourceObjName>STREAM_CATEGORYS</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:40 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="STREAM_CATEGORYS_ID" id="DE235848-3432-6C37-E97C-83886C067EE7">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>STREAM_CATEGORYS</sourceObjSchema>
+<sourceObjName>STREAM_CATEGORYS_ID</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:40 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CATEGORYS" id="A5765876-D17B-7963-7D94-FC84F395D652">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>STREAM_CATEGORYS</sourceObjSchema>
+<sourceObjName>CATEGORYS</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:40 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60 BYTE</dataTypeSize>
+<ownDataTypeParameters>60 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6307BC4C-6260-7BBD-ED7C-1667948BFA8C" schemaObject="6CB19241-2DED-CCCB-5CEE-1412EF700B0A" name="STREAM_CATEGORYS_PK">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>STREAMER</sourceObjSchema>
+<sourceObjName>SYS_C008822</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:40 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DE235848-3432-6C37-E97C-83886C067EE7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

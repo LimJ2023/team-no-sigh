@@ -199,6 +199,10 @@ header{
 	background-color:black;
 }
 
+.filter_date{
+	float:right;
+}
+
 
 /*====================================================*/
 
@@ -259,8 +263,10 @@ header{
     border-bottom: 2px solid #00ff9f;
 }
 
-.table-icon > img{
-    width: 100%;
+.table-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 20pt;
 }
 
 .rank-streamer{
@@ -495,4 +501,59 @@ header{
 
 .blackSpace{
 	z-index: 10;
+}
+
+.td-heart{
+	width: 50px;
+	height: 50px;
+}
+
+
+.input-wrapper{
+	position: relative;
+	display: inline-block;
+} 
+.overlay-div{
+	/* background-color: rgba(0, 0, 0, 0.3); */
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 100;
+	text-align: center;
+}
+
+.lockedFilter{
+	width: 20px;
+	height: 20px;
+}
+
+.lockDescription{
+	visibility: hidden;
+	
+}
+
+.overlay-div:hover .lockDescription{
+	visibility: visible;
+	opacity:  1;
+	background-color: rgba(0,0,0, 0.4);
+	border-radius: 10pt;
+}
+
+
+.like{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	
+}
+
+.like-no {
+	background: url("img/leaderBoard/empty_heart.png") no-repeat;
+	
+}
+
+.like-yes {
+	background: url("img/leaderBoard/green_heart.png") no-repeat;
 }

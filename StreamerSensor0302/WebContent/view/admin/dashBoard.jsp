@@ -69,11 +69,11 @@
 				<div class="highlight">
 					<div class="info">
 						<h3>최근 평가된 스트리머</h3>
-						<h3>평점 : ${review.review_rating }점</h3>
-						<h3>제목 : ${review.streaming_description }</h3>
+						<h3>평점 : ${rating.streamer_rating }점</h3>
+						<h3>내용 : ${rating.rating_comment }</h3>
 					</div>
 					<div class="content">
-						<img src="img/thumbnail/${review.img_url}.png">
+						<img src="img/streamer_profile/${rating.streamer_image}.png">
 					</div>
 				</div>
 			</div>
@@ -83,34 +83,20 @@
 			<div class="new-users">
 				<h2>신규 회원</h2>
 				<div class="user-list">
-				<c:forEach var="user" items="">
+				<c:forEach var="item" items="${newUsers }">
 					<div class="user">
-						<img src="img/admin/profile1.png" />
-						<h2>${user.user_name}</h2>
-						<p>${user.user_age}</p>
+						<img src="img/user_profile/${item.user_image}" />
+						<h2>${item.user_name}</h2>
+						<p>${item.user_id}</p>
 					</div>
 				</c:forEach>
 					
-					<div class="user">
-						<img src="img/admin/profile2.png" />
-						<h2>${user.user_name}</h2>
-						<p>${user.user_age}</p>
-					</div>
-					<div class="user">
-						<img src="img/admin/profile3.png" />
-						<h2>${users.user_name}</h2>
-						<p>${users.user_age}</p>
-					</div>
-					<div class="user">
-						<img src="img/admin/profile4.png" />
-						<h2>${users.user_name}</h2>
-						<p>${users.user_age}</p>
-					</div>
 				</div>
 			</div>
 			<!-- 새 유저 끝 -->
 
 			<!-- 최근 주문 시작 -->
+			
 			<div class="recent-orders">
 				<h2>최근 구독</h2>
 				<table>
@@ -134,7 +120,7 @@
 						</c:forEach>
 					</tbody>
 				</table>
-				<a href="#">모두 보기</a>
+				<a href="admin?adminId=5">supersupermember</a>
 			</div>
 			<!-- 최근 주문 끝 -->
 		</main>

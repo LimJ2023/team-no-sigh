@@ -51,14 +51,16 @@ button{
     color: var(--color-danger);
     border: 1px solid var(--color-primary);
     border-radius: 5px;
-    padding: 3px;
+    padding: 5px;
     background: var(--color-text);
     width: 100%;
     border-radius: 5px;
+    font-size: 16pt;
 }
 
 p {
     color: var(--color-primary);
+    font-size: 24pt;
 }
 
 a{
@@ -67,11 +69,10 @@ a{
     border: 1px solid var(--color-primary);
     border-radius: 5px;
     padding: 5px;
+    font-size: 16pt;
 }
 
 .container{
-    top: 150px;
-    left: 1.8%;
     background-color: var(--color-text);
     border-radius: 2.5rem;
     display: flex;
@@ -87,6 +88,8 @@ a{
 
 .container .profile-box img{
     border-radius: 50%;
+    width: 250px;
+    height: 250px;
 }
 
 .profile-box{
@@ -102,11 +105,14 @@ a{
 .memberProfile {
     text-align: center;
     margin: 10px;
+    font-size: 16pt;
+    color: var(--color-dark);
 }
 
 .memberProfile input{
     border-radius: 1.5rem;
     width: 50%;
+    font-size: 16pt;
 }
 
 input:disabled{
@@ -116,4 +122,68 @@ input:disabled{
 .button {
     display: flex;
     flex-direction: column;
+}
+
+.board-info {
+	width: 96%;
+	background-color: var(--color-text);
+	padding: 20px;
+	margin: auto;
+	margin-top: 35px;
+	border-radius: 2.5rem;
+	font-size: 16pt;
+}
+
+.reading-user-board{
+	color: var(--color-primary);
+	margin: auto;
+}
+
+.board-table-thead{
+    height: 50px;
+    color: #00ff9f;
+}
+
+
+.board-table-thead-tr{
+    
+    border-bottom: 3px solid #00ff9f;
+    border-radius: 5px;
+}
+
+.board-table-tbody{
+    margin: 10px;
+}
+.board-table-tbody-tr{
+    margin: 10px;
+    padding: 10px;
+
+}
+
+.board-table-tbody-td{
+
+    height: 30px;
+
+    background-color: rgba(86,96,120,0.2);
+	font-size: 16pt;
+    border-top: 2px solid #2c2c2c;
+    border-bottom: 2px solid #2c2c2c;
+
+    padding: 20px;
+
+}
+
+.td-no{
+    width: 50px;
+    text-align: center;
+}
+
+.td-author{
+    width: 150px;
+    text-align: center;
+}
+
+.td-date{
+    width: 200px;
+    text-align: center;
 }

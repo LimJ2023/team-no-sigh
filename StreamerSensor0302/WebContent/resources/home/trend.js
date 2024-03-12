@@ -1,82 +1,31 @@
-const first_list = document.getElementById("first_list")
-const second_list = document.getElementById("second_list")
-const third_list = document.getElementById("third_list")
 
-const trendBtn = document.getElementById("trendBtn")
 const youtubeBtn = document.getElementById("youtubeBtn")
+const refreshBtn = document.getElementById("refreshBtn")
 
-
-
-trendBtn.addEventListener('click', () => {
-    deleteAll();
-    createListOrderByTrends();
-})
 youtubeBtn.addEventListener('click', () => {
     deleteAll();
     getApi();
 })
 
-function createListOrderByTrends() {
-    let i = 0;
+document.addEventListener('DOMContentLoaded', function() {
+    // 버튼을 클릭했을 때 새로고침하는 함수
+    refreshBtn.addEventListener('click', function() {
+        window.location.reload();
+    });
+});
+$(document).ready(function () { 
+    $(refreshBtn).click(function () { 
+        $.ajax({
+            type: "get",
+            url: window.location.href,
+            success: function (response) {
+                $('html').html();
+            }
+        });
+        
+    });
 
-    List.items.forEach(item => {
-
-        const info = document.createElement("div");
-        info.setAttribute("class","rank-info")
-
-        if(i < 3) {
-            const cont = `
-            <div class="rank-img">
-                <img src="${item.snippet.thumbnails.default.url}" />
-            </div>
-            <div class="rank-info-foot">
-                <div class="rank-name" ></div>
-                <div class="rank-views">조회수 ${item.statistics.viewCount}</div>
-                <div class="rank-likes">좋아요 ${item.statistics.likeCount}</div>
-                <div class="rank-trend"><i class='bx bx-up-arrow-circle bx-md'></i></div>
-            </div>
-            `
-            info.innerHTML = cont;
-    
-            document.querySelector("#first_list").appendChild(info);
-            console.log('i = ' + i);
-        } else if(i < 6) {
-            const cont = `
-            <div class="rank-img">
-                <img src="${item.snippet.thumbnails.default.url}" />
-            </div>
-            <div class="rank-info-foot">
-                <div class="rank-name" ></div>
-                <div class="rank-views">조회수 ${item.statistics.viewCount}</div>
-                <div class="rank-likes">좋아요 ${item.statistics.likeCount}</div>
-                <div class="rank-trend"><i class='bx bx-right-arrow-circle bx-md'></i></div>
-            </div>
-            `
-            info.innerHTML = cont;
-    
-            document.querySelector("#second_list").appendChild(info);
-            console.log('i = ' + i);
-        } else if(i < 9) {
-            const cont = `
-            <div class="rank-img">
-                <img src="${item.snippet.thumbnails.default.url}" />
-            </div>
-            <div class="rank-info-foot">
-                <div class="rank-name" ></div>
-                <div class="rank-views">조회수 ${item.statistics.viewCount}</div>
-                <div class="rank-likes">좋아요 ${item.statistics.likeCount}</div>
-                <div class="rank-trend"><i class='bx bx-right-down-arrow-circle bx-md'></i></div>
-            </div>
-            `
-            info.innerHTML = cont;
-    
-            document.querySelector("#third_list").appendChild(info);
-            console.log('i = ' + i);
-        }
-        i += 1;
-    })
-
-}
+ })
 
 function deleteAll() {
     document.querySelectorAll(".rank-info").forEach(item => {
@@ -86,8 +35,9 @@ function deleteAll() {
 
 
 
+
 function getApi() {
-    const url = 'https://youtube.googleapis.com/youtube/v3/videos?part=snippet&part=statistics&chart=mostPopular&regionCode=kr&maxResults=10&key=AIzaSyAoJiuc-avFKKl9qicmjksHRGbfL5dADEY';
+    const url = 'https://youtube.googleapis.com/youtube/v3/videos?part=snippet&part=statistics&chart=mostPopular&regionCode=kr&maxResults=12&key=AIzaSyAoJiuc-avFKKl9qicmjksHRGbfL5dADEY';
 
     // Ajax 요청 시작
     const xhr = new XMLHttpRequest();
@@ -96,33 +46,27 @@ function getApi() {
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
             const data = JSON.parse(xhr.responseText);
-            let cnt = 1;
 
             data.items.forEach(item => {
                 const info = document.createElement("div"); // 새로운 div 요소 생성
+                info.setAttribute("class","rank-info");
 
                 const cont = `
                     <div class="rank-img">
+                    <a href="https://www.youtube.com/watch?v=${item.id }">
                         <img src="${item.snippet.thumbnails.medium.url}" />
+                    </a>
                     </div>
                     <div class="rank-name" >${item.snippet.title}</div>
                     <div class="rank-info-foot">
-                        <div class="rank-views">조회수 ${item.statistics.viewCount}</div>
-                        <div class="rank-likes">좋아요 ${item.statistics.likeCount}</div>
+                        <div class="rank-views"><p>조회수</p>${item.statistics.viewCount}</div>
+                        <div class="rank-likes"><p>좋아요</p>${item.statistics.likeCount}</div>
                     </div>
                 `;
 
                 info.innerHTML = cont; // 내용 설정
 
-                if (cnt <= 3) {
-                    document.querySelector("#first_list").appendChild(info);
-                } else if (cnt <= 6) {
-                    document.querySelector("#second_list").appendChild(info);
-                } else if (cnt <= 9) {
-                    document.querySelector("#third_list").appendChild(info);
-                }
-
-                cnt += 1;
+                document.querySelector("#list").appendChild(info);
             });
         }
     };

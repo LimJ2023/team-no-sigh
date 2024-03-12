@@ -1,0 +1,128 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="87D68666-C7AB-C994-1599-FF4FABFCADA0" schemaObject="6CB19241-2DED-CCCB-5CEE-1412EF700B0A" name="COMMENTS">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>STREAMER</sourceObjSchema>
+<sourceObjName>COMMENTS</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:46 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="COMMENTS_NUM" id="CBBF35BF-690B-53CB-FB74-558732700A5C">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>COMMENTS</sourceObjSchema>
+<sourceObjName>COMMENTS_NUM</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:46 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USER_ID" id="9451165C-5DB1-D58C-FE19-E58A0C152B29">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>COMMENTS</sourceObjSchema>
+<sourceObjName>USER_ID</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:46 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60 BYTE</dataTypeSize>
+<ownDataTypeParameters>60 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="726442A4-D0C5-46BA-EA6C-EC88D00722AC" referredColumn="8C74EF79-013A-F94E-B6BD-9D99FB1A70DE"/>
+</associations>
+</Column>
+<Column name="INFO" id="3584F6F6-E5A1-5E78-BA1A-96388FFCA38A">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>COMMENTS</sourceObjSchema>
+<sourceObjName>INFO</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:46 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 BYTE</dataTypeSize>
+<ownDataTypeParameters>200 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COMMENTS_DATE" id="1ACCAC19-976D-5B61-F4A4-0A6E6FEB051A">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>COMMENTS</sourceObjSchema>
+<sourceObjName>COMMENTS_DATE</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:46 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BOARD_IDX" id="A67E2286-E859-DB34-728C-F2D737340DFF">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>COMMENTS</sourceObjSchema>
+<sourceObjName>BOARD_IDX</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:46 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B9952A85-8E5D-68D4-CB5F-7F7656786F11" referredColumn="C0D90601-D589-65D9-061E-434BFFB706F3"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6E296D01-1E86-C597-6F28-BA8BC7B243B1" schemaObject="6CB19241-2DED-CCCB-5CEE-1412EF700B0A" name="COMMENTS_PK">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>STREAMER</sourceObjSchema>
+<sourceObjName>SYS_C008837</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:46 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CBBF35BF-690B-53CB-FB74-558732700A5C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F4C981EA-D99E-D93B-2D54-79DF664C16F0" name="SYS_C008838">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:46 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9451165C-5DB1-D58C-FE19-E58A0C152B29"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A64169DC-0D44-F9E7-07F2-A4A03D4B9B1E" name="SYS_C008839">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:46 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A67E2286-E859-DB34-728C-F2D737340DFF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

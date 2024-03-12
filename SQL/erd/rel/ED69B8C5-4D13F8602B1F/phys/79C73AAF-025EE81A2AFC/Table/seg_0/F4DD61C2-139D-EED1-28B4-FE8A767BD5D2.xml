@@ -1,0 +1,40 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="STREAMING_IMG" directorySegmentName="seg_0" id="F4DD61C2-139D-EED1-28B4-FE8A767BD5D2">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:50 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<schemaObject>6CB19241-2DED-CCCB-5CEE-1412EF700B0A</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>945C9E0E-9588-97DE-BC2E-C15957259645</segment>
+<tableSpace>BFA847D2-7959-B57B-80E6-66494D056F8D</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="IMG_ID" id="0B923F06-1E71-8CB7-7CEA-8CD033AE88A6">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:50 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="IMG_URL" id="C13F206A-C600-5D8D-A73D-A29A99A3447C">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:50 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="STREAMING_IMG_PK" id="7C354061-FD73-6168-3D6A-F855DFD9B80F">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:39:50 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<schemaObject>6CB19241-2DED-CCCB-5CEE-1412EF700B0A</schemaObject>
+<segment>A18B7128-5861-EA61-BB1D-171CD678063D</segment>
+<tableSpace>BFA847D2-7959-B57B-80E6-66494D056F8D</tableSpace>
+<indexSegment>A18B7128-5861-EA61-BB1D-171CD678063D</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

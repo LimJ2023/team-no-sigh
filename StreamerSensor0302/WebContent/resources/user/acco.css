@@ -245,7 +245,7 @@ main aside .sidebar a:hover i{
     margin-left: 2rem;
 }
 main aside .sidebar h4{
-    font-weight: 400;
+    font-weight: 400px;
 }
 /* ==========updates */
 main aside .updates{
@@ -274,6 +274,99 @@ main aside .updates a:hover{
     box-shadow: 0 1rem var(--color-primary-light);
 }
 
+/* subscribe,default */
+
+.pricing_section{
+    width: 100%;
+    align-content: center;
+    text-align: center;
+
+    
+}
+
+.pricing_header{
+
+    margin-top: 50px;
+    display: flex;
+
+}
+
+
+.pricing_div{
+    display: inline-block;
+}
+
+.subs_advantages{
+
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.subs_advantages_icon{
+    width: 100px;
+    height: 100px;
+    justify-content: space-between;
+
+    color: white;
+}
+
+.subs_advantages_div_detail{
+    width: 130px;
+}
+
+.subscription_plan_list{
+    border: 2px solid #00fdb6;
+    border-radius: 10px;
+    width: 600px;
+    height: 700px;
+
+    margin-right: 10px;
+
+    background-color: rgba(181, 241, 225, 0.1);
+}
+
+.pricing_text{
+    border-top: 2px solid #00fdb6;
+}
+
+.pricing_default{
+    border-top: 2px solid #566078;
+}
+
+.subs_default{
+    height: 450px;
+    margin-top: 25px;
+    border-color: #566078;
+}
+
+
+.subs_price_month{
+    font-size: 10pt;
+    position: relative;
+    top: 70px;
+}
+ul{
+    position: relative; 
+    top: 50px;
+}
+h3{
+    font-size: 50pt;
+    position: relative;
+    bottom: 0px;
+}
+.subscription_button{
+	font-size: 50px;
+    background-color: #98E8D2;
+    position: absolute;
+    border-color: #00fdb6;
+    border-radius: 5px;
+    width: 250px;
+    height: 150px;
+    bottom: 50px;
+    left: 1150px;
+}
 
 
 

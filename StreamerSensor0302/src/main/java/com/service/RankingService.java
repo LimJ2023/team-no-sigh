@@ -8,18 +8,19 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
+import org.apache.ibatis.annotations.Param;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import com.dao.RankingDAO;
+import com.domain.Likes;
 import com.domain.Ranking;
-import com.domain.Streamer;
 import com.domain.Video;
 import com.mapper.RankingMapper;
 
@@ -31,20 +32,17 @@ public class RankingService {
 	@Autowired
 	RankingDAO rankingDAO;
 	
-	//20240227 이지수 DB API 테스트용
 	@Autowired
 	RankingMapper rankingMapper;
-	
-	@Value("${path.upload}")
-	private String path_upload;
-	//
-
 	public List<Ranking> getRankings() {
 		return rankingDAO.getRanking();
 	}
-	
 	public int getSumAVG() {
 		return rankingDAO.getSumAvg();
+	}
+	
+	public int getSumAvgByDate(String streamingDate) {
+		return rankingDAO.getSumAvgByDate(streamingDate);
 	}
 	
 	public int getSumLikes() {
@@ -146,4 +144,21 @@ public class RankingService {
 		return popRankings;
 	}
 	
+	public List<Ranking> getRankingByDate(String streamingDate) {
+	    return rankingDAO.getRankingByDate(streamingDate);
+	}
+	
+	public void addLikes(Likes addFavorites) {
+		rankingDAO.addLikes(addFavorites);
+	}
+	
+	public int getLikesByDate(String streamingDate) {
+		return rankingDAO.getLikesByDate(streamingDate);
+	}
+	
+	public int getDaily_viewersByDate(String streamingDate) {
+		return rankingDAO.getDaily_viewersByDate(streamingDate);
+	}
+	
+
 }

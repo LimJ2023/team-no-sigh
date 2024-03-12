@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="VISITOR" directorySegmentName="seg_0" id="F9F1EF66-300C-696B-3F2A-B19E3167C134">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:47 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<schemaObject>6CB19241-2DED-CCCB-5CEE-1412EF700B0A</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>D5280445-8828-DE83-3559-E190515FB5AF</segment>
+<tableSpace>BFA847D2-7959-B57B-80E6-66494D056F8D</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="VISIT_ID" id="A679C34A-76BB-7885-4A79-215FF54CF543">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:47 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="VISIT_IP" id="EC9C5A94-15D3-6F47-EC60-79EFF0D75A58">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:47 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="VISIT_AGENT" id="F6C8950D-FCD7-6DDB-8BCB-308075199D87">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:47 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="VISIT_TIME" id="FA55DAF5-6393-287E-AC5D-B7F976057113">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:47 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="VISITOR_PK" id="8FA54A03-B026-003D-1F75-E08E36D1EB1B">
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:40:47 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<schemaObject>6CB19241-2DED-CCCB-5CEE-1412EF700B0A</schemaObject>
+<segment>4F2F2684-50B5-26EA-550A-BED432441844</segment>
+<tableSpace>BFA847D2-7959-B57B-80E6-66494D056F8D</tableSpace>
+<indexSegment>4F2F2684-50B5-26EA-550A-BED432441844</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

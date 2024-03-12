@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="37BE4977-46C1-E84B-B852-DB51A23E2DC3" containerWithKeyObject="FD4D025F-4894-2F40-BD39-42F25482C84E" localFKIndex="16461914-F0AE-FEC0-DF6B-501806EE4B1B" name="SYS_C008833">
+<sourceConnName>streamer</sourceConnName>
+<sourceObjSchema>STREAMER</sourceObjSchema>
+<sourceObjName>SYS_C008833</sourceObjName>
+<createdBy>dmstn</createdBy>
+<createdTime>2024-03-10 12:38:56 UTC</createdTime>
+<ownerDesignName>erd</ownerDesignName>
+<referredTableLongName>STREAMER.STREAM_CATEGORYS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>56153B41-0E21-6A84-9F58-1ACDB1331855</referredTableID>
+<keyObject>6307BC4C-6260-7BBD-ED7C-1667948BFA8C</keyObject>
+<referredKeyID>6307BC4C-6260-7BBD-ED7C-1667948BFA8C</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>STREAM_CATEGORYS_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

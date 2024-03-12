@@ -41,6 +41,7 @@ html::-webkit-scrollbar{
 }
 a{
     text-decoration: none;
+    color: #fff;
 }
 li{
     list-style: none;

@@ -306,20 +306,22 @@ header{
     text-align: center;
 }
 .trend-section .rank-content-vertical{
-    margin-top: 80px;
-    display: flex;
+	margin: 80px auto;
+    width: 1000px;
+   /* display: flex;
     justify-content: center;
+    */
 }
 .trend-section .rank-ver-list{
     width: 350px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .trend-section .rank-img {
     width: 200px;
+    height: 110px;
+    overflow: hidden;
 }
 
 .trend-section .rank-img img{
@@ -327,7 +329,7 @@ header{
 }
 
 .trend-section .rank-content-horizon{
-    margin-top: 100px;
+    margin: 100px;
 }
 .horizon-buttons {
 	display: flex;
@@ -349,7 +351,7 @@ header{
 	background-color: var(--hover-color);
 }
 .trend-section .rank-info{
-    margin: 10px 70px;
+    margin: 10px 30px;
 
 }
 .trend-section .rank-info-foot{
@@ -364,7 +366,7 @@ header{
 .trend-section .rank-name{
     width: 200px;
     height: 50px;
-    
+    text-align: center;
     overflow: hidden;
     text-overflow: ellipsis;
 }

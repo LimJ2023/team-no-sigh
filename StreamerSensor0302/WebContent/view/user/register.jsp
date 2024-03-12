@@ -60,6 +60,7 @@ function resetUserIdExist(){
 							<form:hidden path="userIdExist" />
 							<!-- "유효성 검사 여부 보내기" -->
 							<!-- 사용자에게는 안보이게 하기 위해 hidden(사용자는 백에서 어떻게 돌아가는지 알 필요x) -->
+							<h1>Register</h1>
 							<div class="input-box">
 
 								<form:input path="user_name" class='form-control' placeholder="이름을 입력해 주세요"/>
@@ -72,8 +73,8 @@ function resetUserIdExist(){
 									<form:input path="user_id" class='form-control'
 										onkeypress="resetUserIdExist()" placeholder="아이디를 입력해 주세요"/>
 									<!-- 사용자 입력시 호출 -->
-									<div class="input-group-append">
-										<button type="button" onclick="checkUserIdExist()">중복확인</button>
+									<div >
+										<button class="input-group-append" class="input-group-append" type="button" onclick="checkUserIdExist()">중복확인</button>
 										<!-- 누를시 호출(메서드) -->
 									</div>
 								</div>
@@ -93,7 +94,7 @@ function resetUserIdExist(){
 							</div>
 							
 							<div class="input-box">
-								<form:label path="user_gender"></form:label>
+								
 								<form:input path="user_gender" class='form-control' placeholder="성별을 입력해 주세요"/>
 								<form:errors path='user_gender' style='color:red' />
 							</div>
@@ -105,7 +106,7 @@ function resetUserIdExist(){
 							</div>
 							
 							<div class="input-box">
-								<form:label path="user_nation"></form:label>
+								
 								<form:input path="user_nation" class='form-control' placeholder="국적을 입력해 주세요"/>
 								<form:errors path='user_nation' style='color:red' />
 							</div>

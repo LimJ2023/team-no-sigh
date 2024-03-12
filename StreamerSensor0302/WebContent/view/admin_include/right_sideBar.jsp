@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +21,7 @@
 
 			<div class="profile">
 				<div class="info">
-					<b>요한</b> <small class="text-muted">Admin</small>
+					<b></b> <small class="text-muted">Admin</small>
 				</div>
 				<div class="profile-photo">
 					<img src="img/admin/kitang.jpg" />
@@ -35,66 +36,58 @@
 				<img src="img/admin/KITA2.JPG" />
 				<h2>${admin.admin_name }</h2>
 				<p>${admin.email}</p>
-				
+
 			</div>
 		</div>
 
-		<div class="reminders">
-			<div class="header">
-				<h2>알림</h2>
-				<button>
-					<span class="message-count">30</span> <span
-						class="material-symbols-outlined"> notifications_none </span>
-				</button>
-			</div>
-
-			<div class="notification">
-				<div class="icon">
-					<span class="material-symbols-outlined"> volume_up </span>
+		<c:if test="${admin.superAdmin == true}">
+			<div class="reminders">
+				<div class="header">
+					<h2>알림</h2>
+					<button>
+						<span class="message-count">0</span> <span
+							class="material-symbols-outlined"> notifications_none </span>
+					</button>
 				</div>
-				<div class="content">
-					<div class="info">
-						<h3>호출</h3>
-						<small class="text_muted"> 새 알림 3 건 </small>
+
+				<div class="notification">
+					<div class="icon">
+						<span class="material-symbols-outlined"> manage_search </span>
 					</div>
-					<span class="material-symbols-outlined"> more_vert </span>
-				</div>
-			</div>
-
-			<div class="notification deactive">
-				<div class="icon">
-					<span class="material-symbols-outlined"> edit </span>
-				</div>
-				<div class="content">
-					<div class="info">
-						<h3>공지사항 쓰기</h3>
-						<small class="text_muted"> 최근 1개 등록함 </small>
+					<div class="content">
+						<div class="info">
+							<h3>정보 확인</h3>
+							<small class="text_muted"></small>
+						</div>
+						<span class="material-symbols-outlined"> more_vert </span>
 					</div>
-					<span class="material-symbols-outlined"> more_vert </span>
 				</div>
-			</div>
 
-			<div class="notification deactive" id="addStreamer" onclick="loadClient()">
-				<div class="icon">
-					<span class="material-symbols-outlined"> edit </span>
-				</div>
-				<div class="content" >
-					<div class="info">
-						<h3>스트리머 추가하기</h3>
-						<small class="text_muted"> 최근 1개 가져옴 </small>
+				<div class="notification deactive">
+					<div class="icon">
+						<span class="material-symbols-outlined"> edit </span>
 					</div>
-					<span class="material-symbols-outlined"> more_vert </span>
+					<div class="content">
+						<div class="info">
+							<h3>공지사항 쓰기</h3>
+							<small class="text_muted"> 최근 1개 등록함 </small>
+						</div>
+						<span class="material-symbols-outlined"> more_vert </span>
+					</div>
+				</div>
+
+
+				<div class="notification add-reminders">
+					<div>
+						<span class="material-symbols-outlined"> add </span>
+						<h3>새 기능 추가</h3>
+					</div>
 				</div>
 			</div>
 
-			<div class="notification add-reminders">
-				<div>
-					<span class="material-symbols-outlined"> add </span>
-					<h3>새 기능 추가</h3>
-				</div>
-			</div>
-		</div>
+		</c:if>
 		<!-- 리마인더 종료 -->
+
 	</div>
 	<!-- 오른쪽 섹션 종료 -->
 </body>
