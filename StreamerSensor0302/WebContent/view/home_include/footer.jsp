@@ -17,7 +17,7 @@
 			<div class="footerRow">
 				<div class="footerCol footerCol1">
 					<h2>STREAMER SENSOR</h2>
-					<p>Where you can find your Streame<a href="${root }admin?adminId=0" class="anchor">r</a><a href="${root }admin" class="anchor">.</a></p>
+					<p>Where you can find your Streame<a href="${root }admin?adminId=0" class="anchor">r</a><a href="${root }admin?adminId=0" class="anchor">.</a></p>
 				</div>
 				<div class="footerCol footerCol2">
 					<ul>
