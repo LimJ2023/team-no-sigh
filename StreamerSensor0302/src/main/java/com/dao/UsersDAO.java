@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.domain.Board;
+import com.domain.Preperences;
 //import com.beans.UsersBean;
 import com.domain.Users;
 import com.mapper.UsersMapper;
@@ -67,6 +68,12 @@ public class UsersDAO {
 	//======================================================================================
 	public List<Users> getNewJoinUsers() {
 		return mapper.getNewJoinUsers();
+	}
+	
+	//0312 이지수
+	
+	public void addUserPreference(String userId) {
+		mapper.addUserPreference(userId);
 	}
 	
 }
