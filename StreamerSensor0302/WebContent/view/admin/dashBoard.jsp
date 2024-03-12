@@ -85,7 +85,7 @@
 				<div class="user-list">
 				<c:forEach var="item" items="${newUsers }">
 					<div class="user">
-						<img src="img/user_profile/${item.user_image}" />
+						<img src="img/user_profile/${item.user_image}.png" />
 						<h2>${item.user_name}</h2>
 						<p>${item.user_id}</p>
 					</div>

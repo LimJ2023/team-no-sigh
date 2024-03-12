@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<c:set var='root' value="${pageContext.request.contextPath }/"/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,10 +54,13 @@
 					</div>
 
 					<div class="related_streamers">
-						<p>연관 주제</p>
-
+						<div class="ad-img">
+							<a href="https://www.youtube.com/premium?app=desktop&gl=KR&hl=ko">
+								<img src="${root}img/logo/YTP_logo2.png"/>
+							</a>
+						</div>
+						
 					</div>
-
 				</div>
 				<div class="header_recentComments">
 					<c:forEach var="rating" items="${ratingList }">
@@ -102,8 +106,8 @@
 							<form:textarea path="rating_comment" cols="30"
 								placeholder="스트리머에게 의견을 남겨주세요"></form:textarea>
 						</div>
-						<div class="btn">
-							<form:button>게시</form:button>
+						<div >
+							<form:button class="subBtn">게시</form:button>
 						</div>
 					</form:form>
 				</div>
