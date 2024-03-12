@@ -137,9 +137,9 @@ public class UsersController {
 	public String subscribe(@RequestParam(value = "isSub", defaultValue = "n") String isSub, HttpSession session) {
 		int idx = loginUserBean.getUser_idx();
 		userService.updateUserSub(isSub, idx);
-		loginUserBean =  userService.getUserByIdx(idx);
+		loginUserBean = userService.getUserByIdx(idx);
 		session.setAttribute("loginUserBean", loginUserBean);
-		System.out.println("loginUserBean : " + loginUserBean.getSubscription());
+		System.out.println(" subsc 페이지 loginUserBean : " + loginUserBean.getSubscription());
 		
 		return "user/subscribe";
 	}

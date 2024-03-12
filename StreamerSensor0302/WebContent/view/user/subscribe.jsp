@@ -165,7 +165,7 @@ let jsons = {
 	<nav>
 		<div class="container">
 			<!-- logo -->
-			<a href="${root }/home" class="logo"> Streamer<span>Sensor</span>
+			<a href="${root }home" class="logo"> Streamer<span>Sensor</span>
 			</a>
 			
 			<div class="profile-area">
