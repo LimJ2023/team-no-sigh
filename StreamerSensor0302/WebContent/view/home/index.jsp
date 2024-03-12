@@ -223,9 +223,9 @@
 	</section>
 	<!-- movies section end -->
 	<!-- next page -->
-	<div class="more-page">
+	<!-- <div class="more-page">
 		<a href="home/more_page" class="more-btn">More streamer page</a>
-	</div>
+	</div> -->
 	<c:import url="/view/home_include/footer.jsp" />
 	<script src="home/script.js"></script>
 </body>

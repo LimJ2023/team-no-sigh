@@ -67,7 +67,7 @@
 						<div class="recentComments_item">
 							<div class="cmt_wrap">
 								<div class="profile_area">
-									<img src="img/user_profile/${rating.user_image }.png">
+									<img src="img/user_profile/${rating.user_image }">
 								</div>
 								<div class="cont_area">
 									<div class="cmt_head">${rating.user_name}/ date :
