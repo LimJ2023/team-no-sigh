@@ -50,14 +50,14 @@ var rootPath = '${root}';
 				<tr class="rank-table-filters">
 					<td class="td_filter"></td>
 					<td class="td_filter"><input type="text" id="myInput"
-						onkeyup="filterFunction()" placeholder="스트리머 검색"
+						onkeyup="applyFilters()" placeholder="스트리머 검색"
 						class="searchInput" /></td>
 					<td class="td_filter"><input type="text" id="titleInput"
-						onkeyup="filterTitleFunction()" placeholder="제목 검색"
+						onkeyup="applyFilters()" placeholder="제목 검색"
 						class="searchInput" /></td>
 					<td class="td_filter"></td>
 					<td class="td_filter"><select name="categorySelect"
-						id="categorySelect" onchange="selectFunction()"
+						id="categorySelect" onchange="applyFilters()"
 						class="categorySelect">
 							<option value="" class="categoryOption">Category</option>
 							<option value="영화" class="categoryOption">영화</option>
