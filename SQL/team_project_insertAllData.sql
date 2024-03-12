@@ -94,11 +94,7 @@ insert into streamer( streamer_idx, streamer_id, streamer_gender, streamer_grade
 values ( streamer_idx_seq.nextval, '푸른도시의선장', '여', '실버', '오프라인', '치지직', '57500', 'streamer_profile_11');
 
 
-----방송 제목과 이미지 이름을 같게 만들기
-UPDATE streaming_info SET streaming_image = (SELECT i2.streaming_description
-                                         FROM streaming_info i2
-                                         WHERE i2.streaming_id = streaming_info.streaming_id)
-WHERE streaming_id >= 0;
+
 
 
 
@@ -287,6 +283,21 @@ INSERT INTO streaming_preference(avg_viewers, likes, comments, daily_viewers, st
 
 INSERT INTO streamer_rating (comment_id, user_idx, streamer_idx, streamer_rating, rating_comment, streamer_rating_date)
 VALUES(STREAMER_RATING_ID_SEQ.nextval , 5, 5, 5, '테스트용2', sysdate);
+
+----방송 제목과 이미지 이름을 같게 만들기
+UPDATE streaming_info SET streaming_image = (SELECT i2.streaming_description
+                                         FROM streaming_info i2
+                                         WHERE i2.streaming_id = streaming_info.streaming_id)
+WHERE streaming_id >= 0;
+
+UPDATE streaming_preference SET daily_viewers = 12232 WHERE streaming_id = 11;
+UPDATE streaming_preference SET likes = 10000 WHERE streaming_id = 11;
+
+UPDATE streamer SET streamer_image = 'streamer_profile_66' WHERE streamer_idx = 6;
+
+UPDATE streaming_info SET streaming_description = '코딩 is fun' WHERE streaming_id = 3;
+UPDATE streaming_info SET streaming_description = '코딩유잼' WHERE streaming_id = 4;
+
 
 
 commit;
