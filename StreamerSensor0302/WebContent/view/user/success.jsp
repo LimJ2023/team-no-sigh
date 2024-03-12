@@ -4,5 +4,5 @@
 <c:set var='root' value='${pageContext.request.contextPath}/'/>
 <script>
 	alert('결제 되었습니다')
-	location.href='${root}user/subscribe'
+	location.href='${root}user/subscribe?isSub=y'
 </script>

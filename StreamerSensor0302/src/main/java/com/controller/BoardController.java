@@ -22,7 +22,8 @@ public class BoardController {
 	BoardService boardService;
 
 	@RequestMapping(value = "")
-	public String boardListPage(Model model, @RequestParam(value = "page", defaultValue = "1")int page) {
+	public String boardListPage(Model model, 
+			@RequestParam(value = "page", defaultValue = "1")int page) {
 
 		List<Board> board = boardService.getBoardInfo(page);
 		model.addAttribute("board", board);

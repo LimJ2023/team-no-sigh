@@ -133,8 +133,8 @@ public class UsersController {
 	}
 
 	@GetMapping("/subscribe")
-	public String subscribe() {
-		
+	public String subscribe(@RequestParam(value = "isSub", defaultValue = "n") String isSub) {
+		loginUserBean.setSubscription(isSub);
 		
 		return "user/subscribe";
 	}
