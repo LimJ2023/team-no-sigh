@@ -17,11 +17,11 @@
 			<div class="footerRow">
 				<div class="footerCol footerCol1">
 					<h2>STREAMER SENSOR</h2>
-					<p>Where you can find your Streamer <a href="${root }admin">.</a></p>
+					<p>Where you can find your Streame<a href="${root }admin?adminId=0" class="anchor">r</a><a href="${root }admin" class="anchor">.</a></p>
 				</div>
 				<div class="footerCol footerCol2">
 					<ul>
-						<li><a href="${root }admin?adminId=0">About Us</a></li>
+						<li><a href="#">About Us</a></li>
 						<li><a href="#">Privacy Policy</a></li>
 						<li><a href="#">Q&A</a></li>
 					</ul>
