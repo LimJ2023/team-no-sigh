@@ -306,11 +306,11 @@ header{
 }
 
 .write-button{
-    width: 200px;
-    height: 70px;
+    width: 100px;
+    height: 35px;
 	font-size: 23px;
     background-color: transparent;
-    border: 1px solid #00ff9f;
+    border: 2px solid #00ff9f;
     border-radius: 5px;
     color: white;
 }

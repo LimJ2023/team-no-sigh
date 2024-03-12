@@ -12,8 +12,7 @@
 <!--     Fav icon -->
 <link rel="shortcut icon" href="../img/fav-icon.png" type="image/x-icon">
 <!-- box icons -->
-<link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
-	rel="stylesheet">
+<link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
 
 <title>Streamer Sensor</title>
 </head>
