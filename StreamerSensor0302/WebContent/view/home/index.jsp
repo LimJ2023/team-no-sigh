@@ -15,7 +15,7 @@
 <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
 	rel="stylesheet">
 <link rel="stylesheet" href="home/carousel.css">
-<title>Streamer Sensor1</title>
+<title>Streamer Sensor</title>
 </head>
 <body>
 	<!-- header -->
