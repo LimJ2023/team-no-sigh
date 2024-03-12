@@ -102,3 +102,11 @@
     width: 30px;
     height: 30px;
 }
+
+.anchor:link{
+	color: #5c5c5c;
+}
+
+.anchor:visited{
+	color: #5c5c5c;
+}
