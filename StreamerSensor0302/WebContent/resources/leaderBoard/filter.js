@@ -1,103 +1,96 @@
+function applyFilters(){
+	resetFilters();
+	filterByName();
+	filterByTitle();
+	filterByCategory();
+}
 
-
-function filterFunction() {
-
-	var input, filter, table, tr, td, i, txtValue;
-
-	input = document.getElementById("myInput");
-	filter = input.value.toUpperCase();
-	table = document.getElementsByClassName("rank-table")[0];
-	tr = table.getElementsByTagName("tr");
-
-
-	for (i = 0; i < tr.length; i++) {
-
-		td = tr[i].getElementsByTagName('td')[1];
-
-		if (td) {
-			txtValue = td.textContent || td.innerText;
-
-			if (txtValue.toUpperCase().indexOf(filter) > -1) {
-				tr[i].style.display = "";
-			} else {
-				tr[i].style.display = "none";
-			}
-		}
-
+function resetFilters(){
+	var table = document.getElementsByClassName("rank-table")[0];
+	var tr = table.getElementsByTagName("tr");
+	
+	for (var i = 1; i< tr.length; i++){
+		tr[i].classList.remove('name-filter', 'title-filter', 'category-filter');
+		tr[i].style.display = "";
 	}
-}//filterFunction
+}
 
-
-//03030303030303
-function selectFunction() {
-
-	var selected, filter, table, tr, td, i, selectValue;
-
-	selected = document.getElementById("categorySelect");
-	filter = selected.value.toUpperCase();
-	table = document.getElementsByClassName("rank-table")[0];
-	tr = table.getElementsByTagName("tr");
-
-	for (i = 0; i < tr.length; i++) {
-		td = tr[i].getElementsByTagName('td')[7];
-
-		if (td) {
-			selectValue = td.textContent || td.innerText;
-
-			if (selectValue.toUpperCase().indexOf(filter) > -1) {
-				tr[i].style.display = "";
-
-			} else {
+function filterByName(){
+	var input = document.getElementById("myInput");
+	var filter = input.value.toUpperCase();
+	var table = document.getElementsByClassName("rank-table")[0];
+	var tr = table.getElementsByTagName("tr");
+	
+	for(var i = 1; i < tr.length; i++){
+		var td = tr[i].getElementsByTagName("td")[1];
+		if(td){
+			var txtValue = td.textContent || td.innerText;
+			if(txtValue.toUpperCase().indexOf(filter) > -1 || filter === ""){
+				if(!tr[i].classList.contains('title-filter') && !tr[i].classList.contains('category-filter')){
+					tr[i].style.display = "";
+				}
+			}else{
+				tr[i].classList.add('name-filter');
 				tr[i].style.display = "none";
 			}
 		}
 	}
-
 }
 
 
-
-
-function filterTitleFunction() {
-
-	var input, filter, table, tr, td, i, txtValue;
-
-	input = document.getElementById("titleInput");
-	filter = input.value.toUpperCase();
-	table = document.getElementsByClassName("rank-table")[0];
-	tr = table.getElementsByTagName("tr");
-
-
-	for (i = 0; i < tr.length; i++) {
-
-		td = tr[i].getElementsByTagName('td')[2];
-
-		if (td) {
-			txtValue = td.textContent || td.innerText;
-
-			if (txtValue.toUpperCase().indexOf(filter) > -1) {
-				tr[i].style.display = "";
-			} else {
-				tr[i].style.display = "none";
-			}
+function filterByTitle(){
+	var input = document.getElementById("titleInput")
+	var filter = input.value.toUpperCase();
+	var table = document.getElementsByClassName("rank-table")[0];
+	var tr = table.getElementsByTagName("tr");
+	
+	for (var i = 1; i < tr.length; i++) {
+        if (tr[i].classList.contains('name-filter') || tr[i].classList.contains('category-filter')) {
+			continue;
 		}
 
+        var td = tr[i].getElementsByTagName("td")[2];
+        if (td) {
+            var txtValue = td.textContent || td.innerText.toUpperCase();
+            if (txtValue.toUpperCase().indexOf(filter) === -1) {
+                tr[i].classList.add('title-filter');
+                tr[i].style.display = "none";
+            } else {
+				tr[i].classList.remove('title-filter');
+                if(!tr[i].classList.contains('name-filter') && !tr[i].classList.contains('category-filter')){
+					tr[i].style.display = "";
+				}
+            }
+        }
+    }
+}
+
+
+function filterByCategory(){
+	var select = document.getElementById("categorySelect");
+	var filter = select.value.toUpperCase();
+	var table = document.getElementsByClassName("rank-table")[0];
+	var tr = table.getElementsByTagName("tr");
+	
+	for(var i= 1; i<tr.length; i++){
+		tr[i].classList.remove('category-filter');
+		if (tr[i].classList.contains('name-filter') || tr[i].classList.contains('title-filter')) continue;
+		
+		var td = tr[i].getElementsByTagName("td")[7];
+		if(td) {
+			var txtValue = td.textContent || td.innerText;
+			if(txtValue.toUpperCase().indexOf(filter) === -1 && filter !== ""){
+				tr[i].classList.add('category-filter');
+				tr[i].style.display = "none";
+			} else {
+				tr[i].style.display = "";
+			}
+		}
 	}
-}//filterTitleFunction
-
-
-//=======================================
-
-//=====0304 이지수 : 버튼(정렬용) 테스트
-
-function toggleSortAvgViewer(){
-	
-	var currentSortOrder = document.getElementById('currentSortOrder').value;
-	var newSortOrder = currentSortOrder === 'asc' ? 'desc' : 'asc';
-	document.getElementById('currentSortOrder').value = newSortOrder;
-	this.form.submit();
-	
 	
 }
 
 
+document.getElementById("myInput").onkeyup = applyFilters;
+document.getElementById("titleInput").onkeyup = applyFilters;
+document.getElementById("categorySelect").onchange = applyFilters;
