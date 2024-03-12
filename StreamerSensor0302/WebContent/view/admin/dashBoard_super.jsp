@@ -51,6 +51,30 @@
 						</c:forEach>
 					</tbody>
 				</table>
+				<table>
+					<thead>
+						<tr>
+							<th>유저이름</th>
+							<th>스트리머</th>
+							<th>별점</th>
+							<th>내용</th>
+							<th>작성날짜</th>
+							<th>삭제날짜</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach var="item" items="${delRatingList }">
+							<tr>
+								<td>${item.user_name }</td>
+								<td>${item.streamer_id }</td>
+								<td>${item.streamer_rating }</td>
+								<td>${item.rating_comment }</td>
+								<td>${item.streamer_rating_date }</td>
+								<td>${item.delete_date }</td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</table>
 			</div>
 			<!-- 최근 주문 끝 -->
 		</main>

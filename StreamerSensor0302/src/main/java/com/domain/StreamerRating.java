@@ -14,8 +14,15 @@ public class StreamerRating {
 	private String streamer_id;
 	private String streamer_image;
 	
+	private String delete_date;
 	
 	
+	public String getDelete_date() {
+		return delete_date;
+	}
+	public void setDelete_date(String delete_date) {
+		this.delete_date = delete_date;
+	}
 	public int getUser_idx() {
 		return user_idx;
 	}

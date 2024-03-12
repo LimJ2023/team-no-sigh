@@ -52,6 +52,14 @@ public interface ReviewMapper {
 			+ "WHERE comment_id = #{comment_id}")
 	void deleteRatingById(int comment_id);
 	
+	@Insert("insert into delete_streamer_rating(comment_id, user_idx, streamer_idx, streamer_rating, rating_comment, streamer_rating_date, delete_date) "
+			+ "values(DELETE_STREAMER_RATING_ID_SEQ.nextval,#{user_idx},#{streamer_idx},#{streamer_rating},#{rating_comment},#{streamer_rating_date},sysdate)")
+	void insertDeleteRating(StreamerRating rating);
+	
+	@Select("SELECT comment_id, user_idx, streamer_idx, streamer_rating, rating_comment, streamer_rating_date, delete_date "
+			+ "FROM delete_streamer_rating")
+	List<StreamerRating> getDeleteRatingList();
+	
 	@Select("SELECT COUNT(*) "
 			+ "FROM streamer_rating "
 			+ "WHERE streamer_idx = #{streamer_idx}")

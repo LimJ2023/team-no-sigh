@@ -43,6 +43,7 @@ public class AdminController {
 		
 		StreamerRating rating = reviewService.getRecentRating();
 		
+		
 		int totalSales = (int)session.getServletContext().getAttribute("totalSales");
 		int dayvisit = (int)session.getServletContext().getAttribute("visitorCount");
 		
@@ -50,16 +51,21 @@ public class AdminController {
 		info.setTotalSales(totalSales);
 		info.setDayVisit(dayvisit);
 		
+		
 		model.addAttribute("admin", admin);
 		model.addAttribute("info",info);
 		model.addAttribute("newUsers",newUsers);
 		model.addAttribute("subUsers",subUsers);
 		model.addAttribute("rating",rating);
 		
+		
 		if(adminId == 5) {
 			
 			List<Admin> adminList = adminService.getAllAdmin();
 			model.addAttribute("adminList",adminList);
+			
+			List<StreamerRating> delRatingList = reviewService.getDeleteRatingList();
+			model.addAttribute("delRatingList",delRatingList);
 			
 			return "/admin/dashBoard_super";
 		}
@@ -70,6 +76,8 @@ public class AdminController {
 	public String deleteComment() {
 		
 		int delId = reviewService.getRecentRating().getComment_id();
+		StreamerRating delRating = reviewService.getRecentRating();
+		reviewService.insertDeleteRating(delRating);
 		reviewService.deleteRatingById(delId);
 		
 		return "redirect:/admin";

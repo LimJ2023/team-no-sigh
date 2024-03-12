@@ -182,6 +182,15 @@ CREATE TABLE streamer_rating(
     rating_comment VARCHAR2(200),
     streamer_rating_date DATE
 );
+CREATE TABLE delete_streamer_rating(
+    comment_id NUMBER PRIMARY KEY,
+    user_idx number,
+    streamer_idx number,
+    streamer_rating number,
+    rating_comment VARCHAR2(200),
+    streamer_rating_date DATE,
+    delete_date DATE
+);
 
 ------레코드를 추가할 때마다 idx 값이 1 늘어나게 하는 시퀀스-------------
 CREATE SEQUENCE record_id_seq
@@ -256,6 +265,12 @@ CREATE SEQUENCE visitor_id_seq
     ORDER
     NOCACHE;
 CREATE SEQUENCE streamer_rating_id_seq
+    START WITH 0
+    INCREMENT BY 1
+    MINVALUE 0
+    ORDER
+    NOCACHE;
+CREATE SEQUENCE delete_streamer_rating_id_seq
     START WITH 0
     INCREMENT BY 1
     MINVALUE 0

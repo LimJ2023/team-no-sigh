@@ -40,4 +40,10 @@ public class ReviewDAO {
 	public void deleteRatingById(int comment_id) {
 		mapper.deleteRatingById(comment_id);
 	}
+	public void insertDeleteRating(StreamerRating rating) {
+		mapper.insertDeleteRating(rating);
+	}
+	public List<StreamerRating> getDeleteRatingList(){
+		return mapper.getDeleteRatingList();
+	}
 }

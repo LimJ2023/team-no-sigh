@@ -64,5 +64,11 @@ public class ReviewService {
 	public void deleteRatingById(int comment_id) {
 		reviewDao.deleteRatingById(comment_id);
 	}
+	public void insertDeleteRating(StreamerRating rating) {
+		reviewDao.insertDeleteRating(rating);
+	}
+	public List<StreamerRating> getDeleteRatingList(){
+		return reviewDao.getDeleteRatingList();
+	}
 	
 }
