@@ -9,6 +9,7 @@
 <title>Streamer Sensor</title>
 
 <link rel="stylesheet" href="boardViewStyle.css">
+
 <link rel="stylesheet" href="swiper-bundle.min.css">
 <!--     Fav icon -->
 <link rel="shortcut icon" href="../img/fav-icon.png" type="image/x-icon">
