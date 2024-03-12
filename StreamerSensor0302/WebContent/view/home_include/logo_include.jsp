@@ -16,9 +16,9 @@
 		</a>
 		<!-- search box (검색)-->
 
-		<div class="search-box">
+		<!-- <div class="search-box">
 			<input type="search" name="" id="search-input" placeholder="Search streamer"> <i class='bx bx-search'></i>
-		</div>
+		</div> -->
 
 		
 		<c:choose>
