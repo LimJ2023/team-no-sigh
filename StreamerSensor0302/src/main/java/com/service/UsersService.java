@@ -178,6 +178,8 @@ public class UsersService {
 	public void updateUserSub(String sub, int user_idx) {
 		uDAO.updateUserSub(sub, user_idx);
 	}
+	
+	
 
 	
 }
