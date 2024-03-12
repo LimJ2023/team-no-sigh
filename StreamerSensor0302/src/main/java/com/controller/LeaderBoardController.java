@@ -2,6 +2,8 @@ package com.controller;
 
 import java.util.List;
 
+import javax.annotation.Resource;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -25,6 +27,11 @@ public class LeaderBoardController {
 	UsersService uService;
 	@Autowired
 	RankingService rankingService;
+	
+	@Resource(name = "loginUserBean")
+	private Users loginUserBean;
+	
+	
 	
 	@RequestMapping(value = "/leaderBoard")
 	public String leaderBoardPage(@RequestParam(value = "streaming_date", required = false) String streamingDate, Model model) {
@@ -56,6 +63,8 @@ public class LeaderBoardController {
 	    model.addAttribute("sumLikes", sumLikes);
 	    model.addAttribute("sumDaily", sumDaily);
 	    
+	    
+	    System.out.println("loginUserBean : " + loginUserBean.getSubscription());
 	    return "/leaderBoard/rankPage";
 	}
 	

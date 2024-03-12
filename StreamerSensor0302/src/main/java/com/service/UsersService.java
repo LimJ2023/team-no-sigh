@@ -35,6 +35,11 @@ public class UsersService {
 	@Resource(name = "selectUserImage")
 	private Users selectUserImage;
 
+	public Users getUserByIdx(int user_idx) {
+		Users user = new Users();
+		user = uDAO.getUserByNumber(user_idx);
+		return user;
+	}
 	public Users getUsers() {
 		Users usersBean = new Users();
 		usersBean = uDAO.getUserByNumber(2);
@@ -169,5 +174,9 @@ public class UsersService {
 	public void addUserPreference(Preperences userPreferences) {
 		uDAO.addUserPreference(userPreferences);
 	}*/
+	
+	public void updateUserSub(String sub, int user_idx) {
+		uDAO.updateUserSub(sub, user_idx);
+	}
 
 }

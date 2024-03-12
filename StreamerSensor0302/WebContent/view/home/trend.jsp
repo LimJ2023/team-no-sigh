@@ -35,7 +35,7 @@
 			</div>
 			<div class="rank-content-vertical">
 			 	<div class="rank-ver-list" id="list">
-					<c:forEach var="item" items="${streamList }">
+					<c:forEach var="item" items="${streamList }" begin="0" end="15">
 						<div class="rank-info">
 						<div class="rank-img">
 						<a href="https://www.youtube.com/watch?v=${item.streaming_url }">

@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
@@ -24,7 +25,7 @@ public interface UsersMapper {
 			+ "FROM users " + "WHERE user_idx = #{user_idx}")
 	Users printOneUser(int user_idx);
 
-	@Select("select user_idx, user_id, user_name, user_gender, user_age, user_nation, subscription, user_image "
+	@Select("select user_idx, user_pw, user_id, user_name, user_gender, user_age, user_nation, subscription, user_image "
 			+ "FROM users " + "WHERE user_idx = #{user_idx}")
 	Users printOneUsers(int user_idx);
 	
@@ -33,7 +34,7 @@ public interface UsersMapper {
 		//사용자의 이름을 반환하는 쿼리문
 	
 	@Insert("insert into users (user_idx, user_id, user_pw, user_name, user_gender, user_age, user_nation) " +
-			"VALUES (users_seq.nextval, #{user_id}, #{user_pw}, #{user_name}, #{user_gender}, #{user_age}, #{user_nation})")
+			"VALUES (users_seq.nextval, #{user_id}, #{user_pw, jdbcType=VARCHAR}, #{user_name}, #{user_gender}, #{user_age}, #{user_nation})")
 	void addUserInfo(Users joinUserBean);
 	
 	//0304 이지수 subscription 추가
@@ -46,9 +47,15 @@ public interface UsersMapper {
 	Users getmodifyUserinfo(int user_idx);
 
 	@Update("update users " +
-			"set user_pw = #{user_pw} " +
-			"where user_idx = #{user_idx}")
+			"set user_pw = #{user_pw}, "
+			+ "where user_idx = #{user_idx}")
 	void modifyUserInfo(Users modifyUserBean);
+	
+	@Update("update users "
+			+ "set subscription = #{subscription} "
+			+ "where user_idx = #{user_idx}")
+	void updateUserSub(@Param("subscription") String subscription, @Param("user_idx")int user_idx);
+	
 	@Delete("DELETE FROM users WHERE user_idx = #{user_idx}")
 	void deleteInfo(int user_idx);
 	//=======================================================================================

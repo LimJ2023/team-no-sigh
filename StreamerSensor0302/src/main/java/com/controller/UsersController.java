@@ -11,6 +11,7 @@ import java.util.Base64;
 import java.util.List;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.json.simple.JSONObject;
@@ -133,8 +134,12 @@ public class UsersController {
 	}
 
 	@GetMapping("/subscribe")
-	public String subscribe(@RequestParam(value = "isSub", defaultValue = "n") String isSub) {
-		loginUserBean.setSubscription(isSub);
+	public String subscribe(@RequestParam(value = "isSub", defaultValue = "n") String isSub, HttpSession session) {
+		int idx = loginUserBean.getUser_idx();
+		userService.updateUserSub(isSub, idx);
+		loginUserBean =  userService.getUserByIdx(idx);
+		session.setAttribute("loginUserBean", loginUserBean);
+		System.out.println("loginUserBean : " + loginUserBean.getSubscription());
 		
 		return "user/subscribe";
 	}

@@ -75,5 +75,8 @@ public class UsersDAO {
 	public void addUserPreference(String userId) {
 		mapper.addUserPreference(userId);
 	}
+	public void updateUserSub(String sub,int user_idx ) {
+		mapper.updateUserSub(sub,user_idx);
+	}
 	
 }

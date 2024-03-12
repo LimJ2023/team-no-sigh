@@ -71,7 +71,7 @@ public List<Streamer> getStreamerInfo(){
 			e.printStackTrace();
 		}
 		
-		System.out.println(sb.toString());
+		//System.out.println(sb.toString());
 		
 		List<Streamer> streamerInfo = new ArrayList<>();
 		JSONObject jsonObj = new JSONObject(sb.toString());
