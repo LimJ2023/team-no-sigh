@@ -94,7 +94,7 @@
 	<section class="explore">
 		<div class="explore-content">
 
-			<c:choose>
+			<%-- <c:choose>
 				<c:when test="${loginUserBean.userLogin == true }">
 					<p>${loginUserBean.user_name }님이좋아하실 지도 모르는 방송입니다!</p>
 					<c:out value="${randomSuggstion.streamer_id }"></c:out>
@@ -111,9 +111,9 @@
 							</a>
 						</div>
 					</c:forEach>
-				</c:when>
+				</c:when> --%>
 
-				<c:when test="${loginUserBean.userLogin == false }">
+				<%-- <c:when test="${loginUserBean.userLogin == false }"> --%>
 					<h3>이런 방송은 어떠세요?</h3>
 					<c:forEach var="info" items="${streamerInfo }">
 						<div class="suggestBox">
@@ -129,8 +129,8 @@
 							</a>
 						</div>
 					</c:forEach>
-				</c:when>
-			</c:choose>
+				<%-- </c:when> --%>
+			<%-- </c:choose> --%>
 		</div>
 	</section>
 
