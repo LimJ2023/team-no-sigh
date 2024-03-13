@@ -206,7 +206,7 @@ public class RankingService {
 				String videoTitle = video.getString("videoTitle");
 				//String liveImageUrl = videos.getString("liveImageUrl").replace("{type}", "default");
 				int readCount = video.getInt("readCount");
-				String thumbnailImageUrl = video.getString("thumbnailImageUrl");
+				String thumbnailImageUrl = video.optString("thumbnailImageUrl", "");
 				String categoryType = video.getString("categoryType");
 				
 				JSONObject channel = dataObj.getJSONObject("channel");

@@ -15,9 +15,23 @@ public interface MainMapper {
 	/*@Select("SELECT streamer_idx, streamer_id, streamer_platform, streamer_image FROM streamer WHERE streamer_idx BETWEEN 0 AND 4")
 	List<Streamer> getFiveStreamer();*/
 	
+	/*
 	@Select("SELECT streamer_idx, streamer_id, streamer_platform, streamer_image FROM streamer WHERE streamer_idx IN (0,1,2,5,6)")
+	List<Streamer> getFiveStreamer();*/
+	@Select("SELECT streamer_idx, streamer_id, streamer_platform, streamer_image "
+			+ "FROM streamer "
+			+ "WHERE streamer_idx IN (SELECT streamer_idx FROM (SELECT streamer_idx "
+			+ "FROM streamer "
+			+ "WHERE streamer_idx BETWEEN 1 AND 50 "
+			+ "AND streamer_idx NOT IN (6) "
+			+ "ORDER BY DBMS_RANDOM.VALUE "
+			+ ") "
+			+ "WHERE ROWNUM <= 4 "
+			+ "UNION ALL "
+			+ "SELECT streamer_idx FROM streamer "
+			+ "WHERE streamer_idx IN (6)"
+			+ ")")
 	List<Streamer> getFiveStreamer();
-	
 	
 	/*
 	@Select("SELECT s.streamer_idx, si.streamer_id, s.streamer_image "

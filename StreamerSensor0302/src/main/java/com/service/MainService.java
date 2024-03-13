@@ -110,7 +110,7 @@ public List<Streamer> randomStreamerInfo(){
 	
 	String urlStr = "https://youtube.googleapis.com/youtube/v3/"
 			+ "videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular"
-			+ "&maxResults=5&"
+			+ "&maxResults=12&"
 			+ "regionCode=KR"
 			+ "&videoCategoryId=20" //게임 카테고리
 			+ "&key="
@@ -154,7 +154,7 @@ public List<Streamer> randomStreamerInfo(){
 				+ "?part=snippet%2CcontentDetails%2Cstatistics"
 				+ "&id="
 				+ channelId
-				+ "&maxResults=5"
+				+ "&maxResults=10"
 				+ "&key="
 				+ apiKey;
 		
@@ -194,15 +194,60 @@ public List<Streamer> randomStreamerInfo(){
 		e.printStackTrace();
 	}
 		
+		String urlStr3 = "https://youtube.googleapis.com/youtube/v3/playlists"
+				+ "?part=snippet%2CcontentDetails"
+				+ "&channelId="
+				+ channelId
+				+ "&maxResults=3"
+				+ "&key="
+				+ apiKey;
+		
+		StringBuilder sbPlayList = new StringBuilder();
+		
+		try {
+			URL u3 = new URL(urlStr3);
+			URLConnection conn3 = u3.openConnection();
+			
+			BufferedReader br3 = new BufferedReader(new InputStreamReader(conn3.getInputStream()));
+			String line3;
+			
+			while((line3 = br3.readLine()) != null) {
+				sbPlayList.append(line3 + "\n");
+			}
+			JSONObject jsonObjChannel2 = new JSONObject(sbPlayList.toString());
+			JSONArray itemsChannel2 = jsonObjChannel2.getJSONArray("items");
+			if(itemsChannel2.length() > 0) {
+				JSONObject itemChannel2 = itemsChannel2.getJSONObject(0);
+				//JSONObject statistics2 = itemChannel2.getJSONObject("statistics");
+				
+				String title2 = itemChannel2.getJSONObject("snippet").getString("title");
+				
+				//String thumbUrl = itemChannel.getJSONObject("snippet").getJSONObject("thumbnails").getJSONObject("high").getString("url");
+				//String customUrl = itemChannel.getJSONObject("snippet").getString("customUrl");
+				
+				streamer.setTitle(title2);
+				String videoThumbUrl = itemChannel2.getJSONObject("snippet").getJSONObject("thumbnails").getJSONObject("high").getString("url");
+				streamer.setVideoThumbUrl(videoThumbUrl);
+				String videoId = itemChannel2.getString("id");
+				streamer.setVideoId(videoId);
+			}
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+			
+		
+		
 		randomStreamer.add(streamer);
 		
 		
-	}
+	}//for
 
 	return randomStreamer;
 }
 
-
+/*
 public List<Streamer> totalRandom(){
 	String apiKey = "AIzaSyCuuvr7_KRchH9Mn8atB_S_V_ea2QlMBhM";
 	
@@ -298,6 +343,6 @@ public List<Streamer> totalRandom(){
 	}
 
 	return totalRandomStreamer;
-}
+}*/
 
 }

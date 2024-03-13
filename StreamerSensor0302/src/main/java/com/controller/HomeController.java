@@ -45,6 +45,9 @@ public class HomeController {
 		List<Streamer> randomStreamerInfo = mainService.randomStreamerInfo();
 		model.addAttribute("randomStreamerInfo", randomStreamerInfo);
 		
+	/*	List<Video> chzzkVideos2 = rankingService.chzzkTest2();
+		model.addAttribute("chzzkVideos2", chzzkVideos2);*/
+		
 		
 
 		if(loginUserBean.isUserLogin()) {
@@ -72,8 +75,11 @@ public class HomeController {
 		List<Streamer> randomStreamerInfo = mainService.randomStreamerInfo();
 		model.addAttribute("randomStreamerInfo", randomStreamerInfo);
 		
-		List<Streamer> totalRandomStreamer = mainService.totalRandom();
-		model.addAttribute("totalRandomStreamer", totalRandomStreamer);
+	/*	List<Video> chzzkVideos2 = rankingService.chzzkTest2();
+		model.addAttribute("chzzkVideos2", chzzkVideos2);*/
+		
+		/*List<Streamer> totalRandomStreamer = mainService.totalRandom();
+		model.addAttribute("totalRandomStreamer", totalRandomStreamer);*/
 		
 
 		if(loginUserBean.isUserLogin()) {
