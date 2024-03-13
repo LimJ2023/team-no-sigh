@@ -20,6 +20,10 @@ public class Streamer {
 	
 	private String customUrl;
 	
+	private String title;
+	private String videoThumbUrl;
+	private String videoId;
+	
 	private int favorites;
 	
 	public int getStreamer_idx() {
@@ -123,6 +127,24 @@ public class Streamer {
 	}
 	public void setCustomUrl(String customUrl) {
 		this.customUrl = customUrl;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getVideoThumbUrl() {
+		return videoThumbUrl;
+	}
+	public void setVideoThumbUrl(String videoThumbUrl) {
+		this.videoThumbUrl = videoThumbUrl;
+	}
+	public String getVideoId() {
+		return videoId;
+	}
+	public void setVideoId(String videoId) {
+		this.videoId = videoId;
 	}
 
 }

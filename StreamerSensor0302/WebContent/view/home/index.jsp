@@ -39,7 +39,7 @@
 					<c:set var="radio" value="${radio +1 }" />
 					<div class="item" data-radio-target="radio${radio }">
 						<div class="streamer_box">
-							<img src="img/fiveCarousel/${mainFive.streamer_image }.png"
+							<img src="img/streamer_profile/${mainFive.streamer_image }.png"
 								class="carImg profileBocchi" />
 							<div class="box_text">
 								<h2 class="streamer_title">${mainFive.streamer_id }</h2>
@@ -186,7 +186,7 @@
 	<section class="movies container" id="popular">
 		<!-- heading -->
 		<div class="heading">
-			<h2 class="heading-title">스트리머</h2>
+			<h2 class="heading-title">연관 플레이리스트</h2>
 		</div>
 		<!-- movies content -->
 		<div class="movies-content">
@@ -194,87 +194,92 @@
 			<div class="streamers-content">
 				<!-- streamer box 1 -->
 				
-				<%-- <c:forEach var="totalRandom" items="${totalRandomStreamer }">
-					<c:if test="${status.index == randomIndex }">
-						<div class="streamer-box">
-							<img src="${totalRandom.thumbnail_url }" alt=""  class="streamer-box-img"/>
-							<div class="box-text">
-								<h2 class="streamer-title">${random.channel_title }</h2>
-							</div>
+				 <c:forEach var="randomVideo" items="${randomStreamerInfo }" begin="6" end="11">
+					 
+					 <div class="streamer-box">
+					 <a href="https://www.youtube.com/playlist?list=${randomVideo.videoId }" class="pListAnchor">
+							 <img src="${randomVideo.videoThumbUrl }" alt=""  class="streamer-box-img"/> 
+							 <div class="box-text"> 
+								<h2 class="streamer-title">${randomVideo.title }</h2>
+								<h2></h2>
+							 </div>
+							 </a>
 						</div>
-					</c:if>
-				</c:forEach> --%>
-				 <div class="streamer-box">
+					 
+				</c:forEach> 
+				
+				 
+				 <!-- <div class="streamer-box">
 					<img src="./img/fiveCarousel/streamer_profile_1.png" alt="" class="streamer-box-img">
 					<div class="box-text">
 						<h2 class="streamer-title">감스트</h2>
-						<span class="streamer-type">게임</span> 
+						<span class="streamer-type">게임</span>  -->
 						<!-- 여기에 2번째 html -->
-						 <a href="play-page.html" class="watch-btn play-btn"> <i
+						 <!-- <a href="play-page.html" class="watch-btn play-btn"> <i
 							class='bx bx-right-arrow'></i>
 						</a>
 					</div>
-				</div> 
+				</div>  -->
 				<!-- streamer box 2 -->
-				<div class="streamer-box">
+				<!-- <div class="streamer-box">
 					<img src="./img/fiveCarousel/streamer_profile_2.png" alt="" class="streamer-box-img">
 					<div class="box-text">
 						<h2 class="streamer-title">케인</h2>
-						<span class="streamer-type">게임</span>
+						<span class="streamer-type">게임</span> -->
 						<!-- 여기에 2번째 html -->
-						<a href="play-page.html" class="watch-btn play-btn"> <i
+						<!-- <a href="play-page.html" class="watch-btn play-btn"> <i
 							class='bx bx-right-arrow'></i>
 						</a>
 					</div>
-				</div>
+				</div> -->
 				<!-- streamer box 3 -->
-				<div class="streamer-box">
+				<!-- <div class="streamer-box">
 					<img src="./img/fiveCarousel/streamer_profile_3.png" alt="" class="streamer-box-img">
 					<div class="box-text">
 						<h2 class="streamer-title">머독</h2>
-						<span class="streamer-type">게임</span>
+						<span class="streamer-type">게임</span> -->
 						<!-- 여기에 2번째 html -->
-						<a href="play-page.html" class="watch-btn play-btn"> <i
+						<!-- <a href="play-page.html" class="watch-btn play-btn"> <i
 							class='bx bx-right-arrow'></i>
 						</a>
 					</div>
-				</div>
+				</div> -->
 				<!-- streamer box 4 -->
-				<div class="streamer-box">
+				<!-- <div class="streamer-box">
 					<img src="./img/fiveCarousel/streamer_profile_4.png" alt="" class="streamer-box-img">
 					<div class="box-text">
 						<h2 class="streamer-title">빅헤드</h2>
-						<span class="streamer-type">게임</span>
+						<span class="streamer-type">게임</span> -->
 						<!-- 여기에 2번째 html -->
-						<a href="play-page.html" class="watch-btn play-btn"> <i
+						<!-- <a href="play-page.html" class="watch-btn play-btn"> <i
 							class='bx bx-right-arrow'></i>
 						</a>
 					</div>
-				</div>
+				</div> -->
 				<!-- streamer box 5 -->
-				<div class="streamer-box">
+				<!-- <div class="streamer-box">
 					<img src="./img/fiveCarousel/streamer_profile_5.png" alt="" class="streamer-box-img">
 					<div class="box-text">
 						<h2 class="streamer-title">한동숙</h2>
-						<span class="streamer-type">게임</span>
+						<span class="streamer-type">게임</span> -->
 						<!-- 여기에 2번째 html -->
-						<a href="play-page.html" class="watch-btn play-btn"> <i
+						<!-- <a href="play-page.html" class="watch-btn play-btn"> <i
 							class='bx bx-right-arrow'></i>
 						</a>
 					</div>
-				</div>
+				</div> -->
 				<!-- streamer box 6 -->
-				<div class="streamer-box">
+				<!-- <div class="streamer-box">
 					<img src="./img/carousel_test/281.png" alt="" class="streamer-box-img">
 					<div class="box-text">
 						<h2 class="streamer-title">쿠로미</h2>
-						<span class="streamer-type">게임</span>
+						<span class="streamer-type">게임</span> -->
 						<!-- 여기에 2번째 html -->
-						<a href="play-page.html" class="watch-btn play-btn"> <i
+						<!-- <a href="play-page.html" class="watch-btn play-btn"> <i
 							class='bx bx-right-arrow'></i>
 						</a>
 					</div>
-				</div>
+				</div> -->
 				
 			</div>
 		</div>
