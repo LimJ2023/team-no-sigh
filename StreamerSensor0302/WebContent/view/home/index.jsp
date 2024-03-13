@@ -129,7 +129,7 @@
 	<section class="movies container" id="popular">
 		<!-- heading -->
 		<div class="heading">
-			<h2 class="heading-title">연관 플레이리스트</h2>
+			<h2 class="heading-title">Chzzk 영상</h2>
 		</div>
 		<!-- movies content -->
 		<div class="movies-content">
