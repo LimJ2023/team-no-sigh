@@ -150,7 +150,7 @@ var rootPath = '${root}';
 							<th scope="col">평균 시청자</th>
 							<th scope="col">좋아요</th>
 							<th scope="col">일일 시청자</th>
-							<th scope="col">팔로워</th>
+							<!-- <th scope="col">팔로워</th> -->
 							<th scope="col">카테고리</th>
 						</tr>
 					</thead>
@@ -190,8 +190,10 @@ var rootPath = '${root}';
 										</td>
 										<td class="td td-description">${ranking.streaming_description }</td>
 
-										<td class="td td-avgViewers avgV-bar"
-											style="width:${(ranking.avg_viewers / sumAVG) * 100 }%;">${ranking.avg_viewers }</td>
+										<td class="td td-avgViewers ">
+										<div class="avg-div">
+										<div class="avgV-bar" style="width:${(ranking.avg_viewers / sumAVG) * 100 }%;"></div>
+											${ranking.avg_viewers }</div></td>
 
 										<td class="td td-likes">
 											<div class="likes-div">
@@ -207,7 +209,7 @@ var rootPath = '${root}';
 												<div class="dailyV">${ranking.daily_viewers }</div>
 											</div>
 										</td>
-										<td class="td td-followers">${ranking.streamer_followers }</td>
+										<%-- <td class="td td-followers">${ranking.streamer_followers }</td> --%>
 										<%-- <td class="td td-heart" onclick="toggleHeart('${rankPlace}', '${ranking.streamer_id }', '${ranking.stream_categorys_id }')">
 											<img src="img/leaderBoard/empty_heart.png" alt=""  id="heart-${rankPlace }"/>
 										</td> --%>
