@@ -26,6 +26,7 @@ public class Video {
 	private int followerCount;
 	private String channelImageUrl;
 	private String categoryType;
+	private int videoNo;
 	
 	
 	public String getVideo_title() {
@@ -124,6 +125,13 @@ public class Video {
 	public void setCategoryType(String categoryType) {
 		this.categoryType = categoryType;
 	}
+	public int getVideoNo() {
+		return videoNo;
+	}
+	public void setVideoNo(int videoNo) {
+		this.videoNo = videoNo;
+	}
+
 	
 	
 	
