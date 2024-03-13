@@ -362,6 +362,9 @@ header{
 	color: blue;
 }
 
+.avg-div{
+	display: inline-block;
+}
 
 .avgV-bar{
 	background-color: #00e7ff;
@@ -372,7 +375,7 @@ header{
 	padding-right: 5px;
 	
 	align-self: center;
-	margin: 20px;
+	margin: 2px;
 	
 }
 
@@ -387,6 +390,7 @@ header{
 	align-self: center;
 	margin: 2px;
 }
+
 
 .likes-div{
 	display: inline-block;
