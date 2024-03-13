@@ -200,7 +200,7 @@ header{
 .board-view-table-info{
     text-align: center;
     background-color: rgba(86,96,120,0.1);
-    
+    font-size: 23px;
 }
 
 .info-author{
@@ -237,7 +237,7 @@ header{
 
 .board-view-table-content{
     padding-top: 50px;
-
+	font-size: 20px;
 }
 
 .board-view-table-info{

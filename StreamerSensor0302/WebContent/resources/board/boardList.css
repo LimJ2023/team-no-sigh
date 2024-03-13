@@ -206,6 +206,7 @@ header{
     
     border-bottom: 3px solid #00ff9f;
     border-radius: 5px;
+    font-size: 30px;
 }
 
 
@@ -231,7 +232,7 @@ header{
 .board-table-tbody-td{
 
     height: 30px;
-
+	font-size: 20px;
     background-color: rgba(86,96,120,0.2);
     border-top: 2px solid #2c2c2c;
     border-bottom: 2px solid #2c2c2c;
@@ -295,6 +296,7 @@ header{
     align-self: center;
     margin-left: auto;
     margin-right: auto;
+    font-size: 20px;
 }
 
 .board_write{

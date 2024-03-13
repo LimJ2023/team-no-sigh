@@ -28,12 +28,12 @@
 				</div>
 				<div class="footerCol footerCol2">
 					<div class="linkIcons">
-						<a href="#"><img src="${root }img/logo/facebook_logo_black.png"
-							class="footerIcon f_facebookLogo"></a> <a href="#"><img
+						<a href="https://www.facebook.com/?locale=ko_KR"><img src="${root }img/logo/facebook_logo_black.png"
+							class="footerIcon f_facebookLogo"></a> <a href="https://www.instagram.com/"><img
 							src="${root }img/logo/instagram_logo_black.png"
-							class="footerIcon f_facebookLogo"></a> <a href="#"><img
+							class="footerIcon f_facebookLogo"></a> <a href="https://www.youtube.com/"><img
 							src="${root }img/logo/youube_logo_black.png"
-							class="footerIcon f_facebookLogo"></a> <a href="#"><img
+							class="footerIcon f_facebookLogo"></a> <a href="https://twitter.com/?lang=ko"><img
 							src="${root }img/logo/x_logo_black.png" class="footerIcon f_facebookLogo"></a>
 					</div>
 				</div>

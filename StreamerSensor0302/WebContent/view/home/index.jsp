@@ -91,6 +91,32 @@
 		</div>
 	</section>
 
+<%
+	int randomIndex = (int)(Math.random() * 5);
+	request.setAttribute("randomIndex", randomIndex);
+%>
+
+<%-- <section class="test">
+	<c:forEach var="random" items="${randomStreamerInfo }" varStatus = "status">
+		<c:if test="${status.index == randomIndex }">
+	<h3>${random.channel_title }</h3>
+	<h3>${random.channel_id }</h3>
+	<h3>${random.channel_subscriber_count }</h3>
+	<h3>${random.channel_video_count }</h3>
+	<h3>${random.thumbnail_url }</h3>
+	</c:if>
+	</c:forEach>
+</section>  --%>
+
+ <%-- <section class="test">
+	<c:forEach var="random" items="${randomStreamerInfo }">
+	<h3>${random.channel_title }</h3>
+	<h3>${random.channel_id }</h3>
+	<h3>${random.channel_subscriber_count }</h3>
+	<h3>${random.channel_video_count }</h3>
+	</c:forEach>
+</section>  --%>
+
 	<section class="explore">
 		<div class="explore-content">
 
@@ -114,7 +140,7 @@
 				</c:when> --%>
 
 				<%-- <c:when test="${loginUserBean.userLogin == false }"> --%>
-					<h3>이런 방송은 어떠세요?</h3>
+					<%-- <h3>이런 방송은 어떠세요?</h3>
 					<c:forEach var="info" items="${streamerInfo }">
 						<div class="suggestBox">
 							<a href="http://www.youtube.com/${info.channel_id }">
@@ -128,9 +154,30 @@
 								</figure>
 							</a>
 						</div>
-					</c:forEach>
+					</c:forEach> --%>
 				<%-- </c:when> --%>
 			<%-- </c:choose> --%>
+			
+			<h3>이런 방송은 어떠세요?</h3>
+			<c:forEach var="random" items="${randomStreamerInfo }" varStatus = "status">
+			<c:if test="${status.index == randomIndex }">
+				<div class="suggestBox">
+				<a href="http://www.youtube.com/${random.customUrl }">
+				<figure>
+			<div>
+						<img src="${random.thumbnail_url }" class="suggest_Img" />
+						</div>
+							<div>${random.channel_title }</div>
+							<div>구독자 : ${random.channel_subscriber_count } 명</div>
+							<div>영상 : ${random.channel_video_count } 개</div>
+						</figure>
+					</a>
+				</div>
+
+	</c:if>
+	</c:forEach>
+			
+			
 		</div>
 	</section>
 
@@ -146,17 +193,28 @@
 			<!-- streamers content -->
 			<div class="streamers-content">
 				<!-- streamer box 1 -->
-				<div class="streamer-box">
+				
+				<%-- <c:forEach var="totalRandom" items="${totalRandomStreamer }">
+					<c:if test="${status.index == randomIndex }">
+						<div class="streamer-box">
+							<img src="${totalRandom.thumbnail_url }" alt=""  class="streamer-box-img"/>
+							<div class="box-text">
+								<h2 class="streamer-title">${random.channel_title }</h2>
+							</div>
+						</div>
+					</c:if>
+				</c:forEach> --%>
+				 <div class="streamer-box">
 					<img src="./img/fiveCarousel/streamer_profile_1.png" alt="" class="streamer-box-img">
 					<div class="box-text">
 						<h2 class="streamer-title">감스트</h2>
-						<span class="streamer-type">게임</span>
+						<span class="streamer-type">게임</span> 
 						<!-- 여기에 2번째 html -->
-						<a href="play-page.html" class="watch-btn play-btn"> <i
+						 <a href="play-page.html" class="watch-btn play-btn"> <i
 							class='bx bx-right-arrow'></i>
 						</a>
 					</div>
-				</div>
+				</div> 
 				<!-- streamer box 2 -->
 				<div class="streamer-box">
 					<img src="./img/fiveCarousel/streamer_profile_2.png" alt="" class="streamer-box-img">
