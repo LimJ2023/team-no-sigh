@@ -47,7 +47,7 @@
 					<td class="content-title" colspan="1"><c:out value="${data.categorys}" /></td>
 					<td class="content-title" colspan="7"><c:out value="${data.title}" /></td>
 				</tr>
-				<tr class="btable board-view-table-content">
+				<tr class="table board-view-table-content">
 					<td class="content-text" colspan="8"><c:out value="${data.info}" /></td>
 				</tr>
 			</table>
