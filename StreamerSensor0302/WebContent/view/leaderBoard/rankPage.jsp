@@ -147,10 +147,10 @@ var rootPath = '${root}';
 							<th scope="col" class="rankPlace">순위</th>
 							<th scope="col" colspan="1">스트리머</th>
 							<th scope="col">방송이름</th>
-							<th scope="col">평균 시청자 수</th>
-							<th scope="col">좋아요 수</th>
-							<th scope="col">일일 시청자 수</th>
-							<th scope="col">팔로워 수</th>
+							<th scope="col">평균 시청자</th>
+							<th scope="col">좋아요</th>
+							<th scope="col">일일 시청자</th>
+							<th scope="col">팔로워</th>
 							<th scope="col">카테고리</th>
 						</tr>
 					</thead>
