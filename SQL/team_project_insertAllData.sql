@@ -464,7 +464,11 @@ INSERT INTO streaming_preference VALUES(8451, 7415, 5640, 10402, 51);
 INSERT INTO streaming_preference VALUES(9312, 5414, 8251, 10403, 52);
 INSERT INTO streaming_preference VALUES(3452, 1023, 1045, 3540, 53);
 
-
+----방송 제목과 이미지 이름을 같게 만들기
+UPDATE streaming_info SET streaming_image = (SELECT i2.streaming_description
+                                         FROM streaming_info i2
+                                         WHERE i2.streaming_id = streaming_info.streaming_id)
+WHERE streaming_id >= 0;
 
 
 commit;
