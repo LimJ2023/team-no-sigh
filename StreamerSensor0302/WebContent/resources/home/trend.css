@@ -338,14 +338,15 @@ header{
 	height: 150px;
 }
 .horizon-buttons button{
-	width: 100px;
-	height: 70px;
+	width: 150px;
+	height: 120px;
 	margin: 20px 40px;
 	background-color: #566078;
 	color: #fff;
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
+	font-size: 26px;
 }
 .horizon-buttons button:hover{
 	background-color: var(--hover-color);

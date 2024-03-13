@@ -43,10 +43,10 @@
 						</a>
 						</div>
 						<div class="rank-name">${item.streaming_description }</div>
-						<div class="rank-info-foot">
+						<%-- <div class="rank-info-foot">
 							<div class="rank-views"><p>조회수</p>${item.viewCount}</div>
 							<div class="rank-likes"><p>좋아요</p>${item.likesCount}</div>
-						</div>
+						</div> --%>
 					</div>
 					</c:forEach>
 					
