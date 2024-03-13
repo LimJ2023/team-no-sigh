@@ -46,7 +46,7 @@ public class AdminController {
 		
 		int totalSales = (int)session.getServletContext().getAttribute("totalSales");
 		int dayvisit = (int)session.getServletContext().getAttribute("visitorCount");
-		
+		System.out.println("어드민 컨트롤러의 토탈 세일즈 : " + totalSales);
 		
 		info.setTotalSales(totalSales);
 		info.setDayVisit(dayvisit);
@@ -57,7 +57,7 @@ public class AdminController {
 		model.addAttribute("newUsers",newUsers);
 		model.addAttribute("subUsers",subUsers);
 		model.addAttribute("rating",rating);
-		
+		model.addAttribute("totalSales",totalSales);
 		
 		if(adminId == 5) {
 			

@@ -134,19 +134,25 @@ public class UsersController {
 	}
 
 	@GetMapping("/subscribe")
-	public String subscribe(@RequestParam(value = "isSub", defaultValue = "n") String isSub, HttpSession session) {
+	public String subscribe(@RequestParam(value = "isSub", defaultValue = "n") String isSub,
+							@RequestParam(value = "sales", defaultValue = "0") int sales, 
+							HttpSession session) {
 		int idx = loginUserBean.getUser_idx();
 		userService.updateUserSub(isSub, idx);
+		
+		int daySales = (int) session.getServletContext().getAttribute("totalSales");
+		
+		daySales += (int) sales;
+		session.getServletContext().setAttribute("totalSales", daySales);
+		System.out.println("유저컨트롤러의 데이 세일즈 : " + daySales);
 		
 		Users updatedUser = userService.getUserByIdx(idx);
 		loginUserBean.setUser_id(updatedUser.getUser_id());
 		loginUserBean.setSubscription(updatedUser.getSubscription());
 		
+		
 		//loginUserBean = userService.getUserByIdx(idx);
 		session.setAttribute("loginUserBean", loginUserBean);
-		System.out.println(" subsc 페이지 loginUserBean : " + loginUserBean.getSubscription());
-		
-		System.out.println("Updated subscription: " + loginUserBean.getSubscription());
 		return "user/subscribe";
 	}
 	
