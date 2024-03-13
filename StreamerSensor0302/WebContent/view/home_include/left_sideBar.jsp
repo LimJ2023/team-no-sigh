@@ -26,9 +26,6 @@
                 <i class='bx bx-message-detail'></i>
                 <span class="nav-link-title">community</span>
             </a> -->
-		<a href="#home" class="nav-link"> <i class='bx bx-news'></i> <span
-			class="nav-link-title">notice</span>
-		</a>
 	</div>
 </body>
 </html>
