@@ -18,11 +18,11 @@ public interface RankingMapper {
 			+ "INNER JOIN streaming_info si ON si.streamer_id = s.streamer_id "
 			+ "INNER JOIN streaming_preference sp ON sp.streaming_id = si.streaming_id "
 			+ "INNER JOIN stream_categorys sc ON sc.stream_categorys_id = si.stream_categorys_id "
-			+ "WHERE si.streaming_date = '2024-03-12' ORDER BY sp.avg_viewers DESC")
+			+ "WHERE si.streaming_date = TRUNC(SYSDATE) ORDER BY sp.avg_viewers DESC")
 	List<Ranking> getRanking();
 	@Select("SELECT SUM(avg_viewers) AS sumAVG FROM streaming_preference sp "
 			+ "INNER JOIN streaming_info si ON sp.streaming_id = si.streaming_id "
-			+ "WHERE si.streaming_date = '2024-03-12'")
+			+ "WHERE si.streaming_date = TRUNC(SYSDATE)")
 	int getSumAvg();
 	
 	@Select("SELECT SUM(avg_viewers) AS sumAVG FROM streaming_preference sp "
@@ -31,7 +31,7 @@ public interface RankingMapper {
 	int getSumAvgByDate(@Param("streamingDate") String streamingDate);
 	
 	@Select("SELECT SUM(likes) AS sumAVG FROM streaming_preference sp "
-			+ "INNER JOIN streaming_info si ON sp.streaming_id = si.streaming_id WHERE si.streaming_date= '2024-03-12'")
+			+ "INNER JOIN streaming_info si ON sp.streaming_id = si.streaming_id WHERE si.streaming_date= TRUNC(SYSDATE)")
 	int getLikes();
 
 	@Select("SELECT SUM(likes) AS sumAVG FROM streaming_preference sp "
@@ -40,7 +40,7 @@ public interface RankingMapper {
 	int getLikesByDate(@Param("streamingDate") String streamingDate);
 	
 	@Select("SELECT SUM(daily_viewers) AS sumAVG FROM streaming_preference sp "
-			+ "INNER JOIN streaming_info si ON sp.streaming_id = si.streaming_id WHERE si.streaming_date = '2024-03-12'")
+			+ "INNER JOIN streaming_info si ON sp.streaming_id = si.streaming_id WHERE si.streaming_date = TRUNC(SYSDATE)")
 	int getDaily_viewers();
 	
 	@Select("SELECT SUM(daily_viewers) AS sumAVG FROM streaming_preference sp\r\n"

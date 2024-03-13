@@ -303,7 +303,7 @@ public List<Video> chzzkTest2(){
 			JSONObject channel = dataObj.getJSONObject("channel");
 			String channelName = channel.getString("channelName");
 			String channelId = channel.getString("channelId");
-			String channelImageUrl = channel.getString("channelImageUrl");
+			//String channelImageUrl = channel.getString("channelImageUrl");
 			int videoNo = video.getInt("videoNo");
 			
 			Video videoObj = new Video();
@@ -316,7 +316,7 @@ public List<Video> chzzkTest2(){
 			videoObj.setChannelName(channelName);
 			videoObj.setChannelId(channelId);
 			videoObj.setThumbnail_url(thumbnailImageUrl);
-			videoObj.setChannelImageUrl(channelImageUrl);
+			//videoObj.setChannelImageUrl(channelImageUrl);
 			//String categoryType = video.optString("categoryType", "");
 			videoObj.setVideoNo(videoNo);
 			

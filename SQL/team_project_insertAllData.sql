@@ -504,5 +504,27 @@ UPDATE streaming_info SET streaming_image = (SELECT i2.streaming_description
                                          WHERE i2.streaming_id = streaming_info.streaming_id)
 WHERE streaming_id >= 0;
 
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '감스트 격파 30단계 챌린지', 'http://www.youtube.com', '0시간 22분', 6, '2024-03-14', '감스트', '감스트 격파 30단계 챌린지');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '화제의 버섯커 키우기', 'http://www.youtube.com', '2시간 13분', 1, '2024-03-14', '머독', '화제의 버섯커 키우기');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '봄 노래 합니다', 'http://www.youtube.com', '1시간 08분', 2, '2024-03-14', '김지섭', '봄 노래 합니다');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '노래 들어라', 'http://www.youtube.com', '3시간 28분', 2, '2024-03-14', '짭지섭', '노래 들어라');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '이 노래 불러줬으면 좋겠다', 'http://www.youtube.com', '5시간 04분', 2, '2024-03-14', '김지섭팬', '이 노래 불러줬으면 좋겠다');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '야구의 기초', 'http://www.youtube.com', '3시간 34분', 7, '2024-03-14', '아케이드 아스리트', '야구의 기초');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '식탁 대화', 'http://www.youtube.com', '5시간 07분', 6, '2024-03-14', '맛의파도', '식탁 대화');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '콘솔 고쳐서 게임해보기', 'http://www.youtube.com', '4시간 47분', 1, '2024-03-14', '콘솔커넥트', '콘솔 고쳐서 게임해보기');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '근본으로 돌아가', 'http://www.youtube.com', '2시간 27분', 1, '2024-03-14', '게이머스그라운드', '근본으로 돌아가');
+
+--방송 선호도 정보 ( 44~ 53 / 지섭s 48 49 50 / 평균/좋아요/댓글/일일/아이디)
+INSERT INTO streaming_preference VALUES(51800, 39000, 4915, 64500, 54);
+
+INSERT INTO streaming_preference VALUES(21300, 20500, 2041, 31200, 55);
+INSERT INTO streaming_preference VALUES(130785, 101245, 10324, 205748, 56);
+INSERT INTO streaming_preference VALUES(14520, 10145, 1421, 24536, 57);
+INSERT INTO streaming_preference VALUES(12589, 8751, 1214, 22153, 58);
+INSERT INTO streaming_preference VALUES(10254, 8120, 1002, 20142, 59);
+INSERT INTO streaming_preference VALUES(7541, 5021, 842, 10352, 60);
+INSERT INTO streaming_preference VALUES(7102, 4695, 756, 8752, 61);
+INSERT INTO streaming_preference VALUES(5102, 3652, 561, 6210, 62);
+
 
 commit;
