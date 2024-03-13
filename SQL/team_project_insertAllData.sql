@@ -286,7 +286,7 @@ INSERT INTO streaming_preference(avg_viewers, likes, comments, daily_viewers, st
 -----스트리머에게 의견 하나 남기기
 
 INSERT INTO streamer_rating (comment_id, user_idx, streamer_idx, streamer_rating, rating_comment, streamer_rating_date)
-VALUES(STREAMER_RATING_ID_SEQ.nextval , 5, 5, 5, '테스트용2', sysdate);
+VALUES(STREAMER_RATING_ID_SEQ.nextval , 5, 5, 5, '나는 기타가 좋아', sysdate);
 
 
 --오전 추가 정보
@@ -463,5 +463,8 @@ INSERT INTO streaming_preference VALUES(420, 57, 256, 471, 50);
 INSERT INTO streaming_preference VALUES(8451, 7415, 5640, 10402, 51);
 INSERT INTO streaming_preference VALUES(9312, 5414, 8251, 10403, 52);
 INSERT INTO streaming_preference VALUES(3452, 1023, 1045, 3540, 53);
+
+
+
 
 commit;
