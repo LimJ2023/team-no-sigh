@@ -140,13 +140,13 @@
 				 <c:forEach var="chzzk" items="${chzzkVideos2 }">
 					 
 					 <div class="streamer-box">
-					 <%-- <a href="https://www.youtube.com/playlist?list=${randomVideo.videoId }" class="pListAnchor"> --%>
+					 <a href="https://chzzk.naver.com/video/${chzzk.videoNo }" class="pListAnchor"> 
 							 <img src="${chzzk.thumbnail_url }" alt=""  class="streamer-box-img"/> 
 							 <div class="box-text"> 
 								<h2 class="streamer-title">${chzzk.video_title }</h2>
 								
 							 </div>
-							<!--  </a> -->
+							 </a> 
 						</div>
 					 
 				</c:forEach> 
