@@ -266,7 +266,7 @@ var rootPath = '${root}';
 												<div class="dailyV">${ranking.daily_viewers }</div>
 											</div>
 										</td>
-										<td class="td td-followers">${ranking.streamer_followers }</td>
+										<%-- <td class="td td-followers">${ranking.streamer_followers }</td> --%>
 
 										<td class="td td-category">${ranking.categorys }</td>
 									</c:when>
@@ -321,7 +321,7 @@ var rootPath = '${root}';
 												<div class="dailyV">${ranking.daily_viewers }</div>
 											</div>
 										</td>
-										<td class="td td-followers">${ranking.streamer_followers }</td>
+										<%-- <td class="td td-followers">${ranking.streamer_followers }</td> --%>
 
 										<td class="td td-category">${ranking.categorys }</td>
 									</c:when>
