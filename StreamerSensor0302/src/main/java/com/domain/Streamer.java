@@ -18,6 +18,8 @@ public class Streamer {
 	private String thumbnail_url;
 	private String channel_id;
 	
+	private String customUrl;
+	
 	private int favorites;
 	
 	public int getStreamer_idx() {
@@ -115,6 +117,12 @@ public class Streamer {
 	}
 	public void setFavorites(int favorites) {
 		this.favorites = favorites;
+	}
+	public String getCustomUrl() {
+		return customUrl;
+	}
+	public void setCustomUrl(String customUrl) {
+		this.customUrl = customUrl;
 	}
 
 }

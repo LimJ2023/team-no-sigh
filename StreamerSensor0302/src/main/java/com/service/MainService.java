@@ -104,4 +104,200 @@ public List<Streamer> getStreamerInfo(){
 		
 	}
 
+
+public List<Streamer> randomStreamerInfo(){
+	String apiKey = "AIzaSyCuuvr7_KRchH9Mn8atB_S_V_ea2QlMBhM";
+	
+	String urlStr = "https://youtube.googleapis.com/youtube/v3/"
+			+ "videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular"
+			+ "&maxResults=5&"
+			+ "regionCode=KR"
+			+ "&videoCategoryId=20" //게임 카테고리
+			+ "&key="
+			+ apiKey;		
+	
+	StringBuilder sb = new StringBuilder();
+	
+	try {
+		URL u = new URL(urlStr);
+		URLConnection conn = u.openConnection();
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+		String line;
+		while((line = br.readLine()) != null){
+			sb.append(line + "\n");
+		}
+	} catch (MalformedURLException e) {
+		e.printStackTrace();
+	} catch (IOException e) {
+		System.out.println("IO 예외: " + e.getMessage());
+		e.printStackTrace();
+	}
+	
+	System.out.println("API 응답: " + sb.toString());
+	
+	List<Streamer> randomStreamer = new ArrayList<>();
+	JSONObject jsonObj = new JSONObject(sb.toString());
+	JSONArray items = jsonObj.getJSONArray("items");
+	
+	for(int i=0; i < items.length(); i++) {
+		JSONObject item = items.getJSONObject(i);
+		String channelId = item.getJSONObject("snippet").getString("channelId");
+		String channelTitle = item.getJSONObject("snippet").getString("channelTitle");
+		
+		Streamer streamer= new Streamer();
+		streamer.setChannel_id(channelId);
+		streamer.setChannel_title(channelTitle);
+		
+		
+		String urlStr2 = "https://youtube.googleapis.com/youtube/v3/channels"
+				+ "?part=snippet%2CcontentDetails%2Cstatistics"
+				+ "&id="
+				+ channelId
+				+ "&maxResults=5"
+				+ "&key="
+				+ apiKey;
+		
+		StringBuilder sbChannel = new StringBuilder();
+		try {
+			URL u2 = new URL(urlStr2);
+			URLConnection conn2 = u2.openConnection();
+			
+			BufferedReader br2 = new BufferedReader(new InputStreamReader(conn2.getInputStream()));
+			String line2;
+			
+			while((line2 = br2.readLine()) != null) {
+				sbChannel.append(line2 + "\n");
+			}
+		
+		
+		JSONObject jsonObjChannel = new JSONObject(sbChannel.toString());
+		JSONArray itemsChannel = jsonObjChannel.getJSONArray("items");
+		
+		if(itemsChannel.length() > 0) {
+			JSONObject itemChannel = itemsChannel.getJSONObject(0);
+			JSONObject statistics = itemChannel.getJSONObject("statistics");
+			long videoCount = statistics.optLong("videoCount", 0);
+			long subscriberCount = statistics.optLong("subscriberCount", 0);
+			
+			String thumbUrl = itemChannel.getJSONObject("snippet").getJSONObject("thumbnails").getJSONObject("high").getString("url");
+			String customUrl = itemChannel.getJSONObject("snippet").getString("customUrl");
+			
+			streamer.setChannel_video_count(videoCount);
+			streamer.setChannel_subscriber_count(subscriberCount);
+			streamer.setThumbnail_url(thumbUrl);
+			streamer.setCustomUrl(customUrl);
+		}
+		
+		
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+		
+		randomStreamer.add(streamer);
+		
+		
+	}
+
+	return randomStreamer;
+}
+
+
+public List<Streamer> totalRandom(){
+	String apiKey = "AIzaSyCuuvr7_KRchH9Mn8atB_S_V_ea2QlMBhM";
+	
+	String urlStr = "https://youtube.googleapis.com/youtube/v3/"
+			+ "videos?part=snippet%2CcontentDetails%2Cstatistics&chart=chartUnspecified"
+			+ "&maxResults=20&"
+			+ "regionCode=KR"
+			+ "&videoCategoryId=20" //게임 카테고리
+			+ "&key="
+			+ apiKey;		
+	
+	StringBuilder sb = new StringBuilder();
+	
+	try {
+		URL u = new URL(urlStr);
+		URLConnection conn = u.openConnection();
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+		String line;
+		while((line = br.readLine()) != null){
+			sb.append(line + "\n");
+		}
+	} catch (MalformedURLException e) {
+		e.printStackTrace();
+	} catch (IOException e) {
+		System.out.println("IO 예외: " + e.getMessage());
+		e.printStackTrace();
+	}
+	
+	System.out.println("API 응답: " + sb.toString());
+	
+	List<Streamer> totalRandomStreamer = new ArrayList<>();
+	JSONObject jsonObj = new JSONObject(sb.toString());
+	JSONArray items = jsonObj.getJSONArray("items");
+	
+	for(int i=0; i < items.length(); i++) {
+		JSONObject item = items.getJSONObject(i);
+		String channelId = item.getJSONObject("snippet").getString("channelId");
+		String channelTitle = item.getJSONObject("snippet").getString("channelTitle");
+		
+		Streamer streamer= new Streamer();
+		streamer.setChannel_id(channelId);
+		streamer.setChannel_title(channelTitle);
+		
+		
+		String urlStr2 = "https://youtube.googleapis.com/youtube/v3/channels"
+				+ "?part=snippet%2CcontentDetails%2Cstatistics"
+				+ "&id="
+				+ channelId
+				+ "&maxResults=5"
+				+ "&key="
+				+ apiKey;
+		
+		StringBuilder sbChannel = new StringBuilder();
+		try {
+			URL u2 = new URL(urlStr2);
+			URLConnection conn2 = u2.openConnection();
+			
+			BufferedReader br2 = new BufferedReader(new InputStreamReader(conn2.getInputStream()));
+			String line2;
+			
+			while((line2 = br2.readLine()) != null) {
+				sbChannel.append(line2 + "\n");
+			}
+		
+		
+		JSONObject jsonObjChannel = new JSONObject(sbChannel.toString());
+		JSONArray itemsChannel = jsonObjChannel.getJSONArray("items");
+		
+		if(itemsChannel.length() > 0) {
+			JSONObject itemChannel = itemsChannel.getJSONObject(0);
+			JSONObject statistics = itemChannel.getJSONObject("statistics");
+			long videoCount = statistics.optLong("videoCount", 0);
+			long subscriberCount = statistics.optLong("subscriberCount", 0);
+			
+			String thumbUrl = itemChannel.getJSONObject("snippet").getJSONObject("thumbnails").getJSONObject("high").getString("url");
+			String customUrl = itemChannel.getJSONObject("snippet").getString("customUrl");
+			
+			streamer.setChannel_video_count(videoCount);
+			streamer.setChannel_subscriber_count(subscriberCount);
+			streamer.setThumbnail_url(thumbUrl);
+			streamer.setCustomUrl(customUrl);
+		}
+		
+		
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+		
+		totalRandomStreamer.add(streamer);
+		
+		
+	}
+
+	return totalRandomStreamer;
+}
+
 }

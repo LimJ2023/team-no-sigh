@@ -42,6 +42,9 @@ public class HomeController {
 		
 		List<Streamer> fiveStreamer = mainService.getFiveStreamer();
 		model.addAttribute("fiveStreamer", fiveStreamer);
+		List<Streamer> randomStreamerInfo = mainService.randomStreamerInfo();
+		model.addAttribute("randomStreamerInfo", randomStreamerInfo);
+		
 		
 
 		if(loginUserBean.isUserLogin()) {
@@ -65,6 +68,12 @@ public class HomeController {
 	
 		List<Streamer> fiveStreamer = mainService.getFiveStreamer();
 		model.addAttribute("fiveStreamer", fiveStreamer);
+		
+		List<Streamer> randomStreamerInfo = mainService.randomStreamerInfo();
+		model.addAttribute("randomStreamerInfo", randomStreamerInfo);
+		
+		List<Streamer> totalRandomStreamer = mainService.totalRandom();
+		model.addAttribute("totalRandomStreamer", totalRandomStreamer);
 		
 
 		if(loginUserBean.isUserLogin()) {
