@@ -357,14 +357,14 @@ h3{
     bottom: 0px;
 }
 .subscription_button{
-	font-size: 50px;
+	font-size: 35px;
     background-color: #98E8D2;
     position: absolute;
     border-color: #00fdb6;
     border-radius: 5px;
-    width: 250px;
-    height: 150px;
-    bottom: 50px;
+    width: 180px;
+    height: 80px;
+    bottom: 65px;
     left: 1150px;
 }
 
