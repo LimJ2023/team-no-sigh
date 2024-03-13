@@ -96,67 +96,10 @@
 	request.setAttribute("randomIndex", randomIndex);
 %>
 
-<%-- <section class="test">
-	<c:forEach var="random" items="${randomStreamerInfo }" varStatus = "status">
-		<c:if test="${status.index == randomIndex }">
-	<h3>${random.channel_title }</h3>
-	<h3>${random.channel_id }</h3>
-	<h3>${random.channel_subscriber_count }</h3>
-	<h3>${random.channel_video_count }</h3>
-	<h3>${random.thumbnail_url }</h3>
-	</c:if>
-	</c:forEach>
-</section>  --%>
-
- <%-- <section class="test">
-	<c:forEach var="random" items="${randomStreamerInfo }">
-	<h3>${random.channel_title }</h3>
-	<h3>${random.channel_id }</h3>
-	<h3>${random.channel_subscriber_count }</h3>
-	<h3>${random.channel_video_count }</h3>
-	</c:forEach>
-</section>  --%>
 
 	<section class="explore">
 		<div class="explore-content">
 
-			<%-- <c:choose>
-				<c:when test="${loginUserBean.userLogin == true }">
-					<p>${loginUserBean.user_name }님이좋아하실 지도 모르는 방송입니다!</p>
-					<c:out value="${randomSuggstion.streamer_id }"></c:out>
-					<c:forEach var="random" items="${randomSuggestion }" end="0">
-						<div class="suggestBox">
-							<a href="review?streamer_idx=${random.streamer_idx }">
-								<figure>
-									<div>
-										<img src="img/streamer_profile/${random.streamer_image }.png"
-											class="suggest_Img" />
-									</div>
-									<div>${random.streamer_id }</div>
-								</figure>
-							</a>
-						</div>
-					</c:forEach>
-				</c:when> --%>
-
-				<%-- <c:when test="${loginUserBean.userLogin == false }"> --%>
-					<%-- <h3>이런 방송은 어떠세요?</h3>
-					<c:forEach var="info" items="${streamerInfo }">
-						<div class="suggestBox">
-							<a href="http://www.youtube.com/${info.channel_id }">
-								<figure>
-									<div>
-										<img src="${info.thumbnail_url }" class="suggest_Img" />
-									</div>
-									<div>${info.channel_title }</div>
-									<div>구독자 : ${info.channel_subscriber_count } 명</div>
-									<div>영상 : ${info.channel_video_count } 개</div>
-								</figure>
-							</a>
-						</div>
-					</c:forEach> --%>
-				<%-- </c:when> --%>
-			<%-- </c:choose> --%>
 			
 			<h3>이런 방송은 어떠세요?</h3>
 			<c:forEach var="random" items="${randomStreamerInfo }" varStatus = "status">
@@ -194,92 +137,21 @@
 			<div class="streamers-content">
 				<!-- streamer box 1 -->
 				
-				 <c:forEach var="randomVideo" items="${randomStreamerInfo }" begin="6" end="11">
+				 <c:forEach var="chzzk" items="${chzzkVideos2 }">
 					 
 					 <div class="streamer-box">
-					 <a href="https://www.youtube.com/playlist?list=${randomVideo.videoId }" class="pListAnchor">
-							 <img src="${randomVideo.videoThumbUrl }" alt=""  class="streamer-box-img"/> 
+					 <%-- <a href="https://www.youtube.com/playlist?list=${randomVideo.videoId }" class="pListAnchor"> --%>
+							 <img src="${chzzk.thumbnail_url }" alt=""  class="streamer-box-img"/> 
 							 <div class="box-text"> 
-								<h2 class="streamer-title">${randomVideo.title }</h2>
-								<h2></h2>
+								<h2 class="streamer-title">${chzzk.video_title }</h2>
+								
 							 </div>
-							 </a>
+							<!--  </a> -->
 						</div>
 					 
 				</c:forEach> 
 				
-				 
-				 <!-- <div class="streamer-box">
-					<img src="./img/fiveCarousel/streamer_profile_1.png" alt="" class="streamer-box-img">
-					<div class="box-text">
-						<h2 class="streamer-title">감스트</h2>
-						<span class="streamer-type">게임</span>  -->
-						<!-- 여기에 2번째 html -->
-						 <!-- <a href="play-page.html" class="watch-btn play-btn"> <i
-							class='bx bx-right-arrow'></i>
-						</a>
-					</div>
-				</div>  -->
-				<!-- streamer box 2 -->
-				<!-- <div class="streamer-box">
-					<img src="./img/fiveCarousel/streamer_profile_2.png" alt="" class="streamer-box-img">
-					<div class="box-text">
-						<h2 class="streamer-title">케인</h2>
-						<span class="streamer-type">게임</span> -->
-						<!-- 여기에 2번째 html -->
-						<!-- <a href="play-page.html" class="watch-btn play-btn"> <i
-							class='bx bx-right-arrow'></i>
-						</a>
-					</div>
-				</div> -->
-				<!-- streamer box 3 -->
-				<!-- <div class="streamer-box">
-					<img src="./img/fiveCarousel/streamer_profile_3.png" alt="" class="streamer-box-img">
-					<div class="box-text">
-						<h2 class="streamer-title">머독</h2>
-						<span class="streamer-type">게임</span> -->
-						<!-- 여기에 2번째 html -->
-						<!-- <a href="play-page.html" class="watch-btn play-btn"> <i
-							class='bx bx-right-arrow'></i>
-						</a>
-					</div>
-				</div> -->
-				<!-- streamer box 4 -->
-				<!-- <div class="streamer-box">
-					<img src="./img/fiveCarousel/streamer_profile_4.png" alt="" class="streamer-box-img">
-					<div class="box-text">
-						<h2 class="streamer-title">빅헤드</h2>
-						<span class="streamer-type">게임</span> -->
-						<!-- 여기에 2번째 html -->
-						<!-- <a href="play-page.html" class="watch-btn play-btn"> <i
-							class='bx bx-right-arrow'></i>
-						</a>
-					</div>
-				</div> -->
-				<!-- streamer box 5 -->
-				<!-- <div class="streamer-box">
-					<img src="./img/fiveCarousel/streamer_profile_5.png" alt="" class="streamer-box-img">
-					<div class="box-text">
-						<h2 class="streamer-title">한동숙</h2>
-						<span class="streamer-type">게임</span> -->
-						<!-- 여기에 2번째 html -->
-						<!-- <a href="play-page.html" class="watch-btn play-btn"> <i
-							class='bx bx-right-arrow'></i>
-						</a>
-					</div>
-				</div> -->
-				<!-- streamer box 6 -->
-				<!-- <div class="streamer-box">
-					<img src="./img/carousel_test/281.png" alt="" class="streamer-box-img">
-					<div class="box-text">
-						<h2 class="streamer-title">쿠로미</h2>
-						<span class="streamer-type">게임</span> -->
-						<!-- 여기에 2번째 html -->
-						<!-- <a href="play-page.html" class="watch-btn play-btn"> <i
-							class='bx bx-right-arrow'></i>
-						</a>
-					</div>
-				</div> -->
+				
 				
 			</div>
 		</div>

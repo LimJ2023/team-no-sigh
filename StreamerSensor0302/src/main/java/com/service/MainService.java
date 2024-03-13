@@ -3,6 +3,7 @@ package com.service;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
@@ -10,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,6 +19,7 @@ import org.springframework.stereotype.Service;
 import com.dao.MainDAO;
 import com.domain.Carousel_Test;
 import com.domain.Streamer;
+import com.domain.Video;
 
 @Service
 public class MainService {
@@ -245,6 +248,90 @@ public List<Streamer> randomStreamerInfo(){
 	}//for
 
 	return randomStreamer;
+}
+
+public List<Video> chzzkTest2(){
+	String chzzkUrl = "https://api.chzzk.naver.com/service/v1/"
+			+ "search/videos?"
+			+ "keyword=game"
+			+ "&offset=0"
+			+ "&size=9"; //50 가능
+	StringBuilder sb = new StringBuilder();
+	
+	try {
+		URL u = new URL(chzzkUrl);
+		//URLConnection conn = u.openConnection();
+		HttpURLConnection conn = (HttpURLConnection)u.openConnection();
+		int statusCode = conn.getResponseCode();
+		System.out.println("HTTP Status Code: " + statusCode);
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+		String line;
+		
+		while((line = br.readLine()) != null){
+			sb.append(line + "\n");
+		}
+	} catch (MalformedURLException e) {
+		System.out.println("URL 형식 오류: " + e.getMessage());
+		e.printStackTrace();
+	} catch (IOException e) {
+		System.out.println("IO 예외: " + e.getMessage());
+		e.printStackTrace();
+	}
+	
+	System.out.println("API 응답: " + sb.toString());
+	
+	
+	List<Video> chzzkVideos2 = new ArrayList<>();
+	
+	
+	try {
+		String responseStr = sb.toString();
+		JSONObject jsonResponse = new JSONObject(responseStr);
+		JSONObject content = jsonResponse.getJSONObject("content");
+		JSONArray data = content.getJSONArray("data");
+		
+		for(int i = 0; i <data.length(); i++) {
+			JSONObject dataObj = data.getJSONObject(i);
+			JSONObject video = dataObj.getJSONObject("video");
+			String videoTitle = video.getString("videoTitle");
+			//String liveImageUrl = videos.getString("liveImageUrl").replace("{type}", "default");
+			int readCount = video.getInt("readCount");
+			String thumbnailImageUrl = video.optString("thumbnailImageUrl", "img/2nd_Person.png");
+			
+			
+			JSONObject channel = dataObj.getJSONObject("channel");
+			String channelName = channel.getString("channelName");
+			String channelId = channel.getString("channelId");
+			String channelImageUrl = channel.getString("channelImageUrl");
+			
+			Video videoObj = new Video();
+			
+			
+			videoObj.setVideo_title(videoTitle);
+			//video.setThumbnail_url(liveImageUrl);
+			
+			videoObj.setReadCount(readCount);
+			videoObj.setChannelName(channelName);
+			videoObj.setChannelId(channelId);
+			videoObj.setThumbnail_url(thumbnailImageUrl);
+			videoObj.setChannelImageUrl(channelImageUrl);
+			String categoryType = video.optString("categoryType", "");
+			
+			chzzkVideos2.add(videoObj);
+			
+			
+			
+		}
+	}catch (JSONException e) {
+		System.out.println("JSON 파싱 오류: " + e.getMessage());
+		e.printStackTrace();
+	}
+	
+	 chzzkVideos2.sort((v1, v2) -> Integer.compare(v2.getReadCount(), v1.getReadCount()));
+	
+	 System.out.println("size: "+chzzkVideos2.size() );
+	return chzzkVideos2;
 }
 
 /*
