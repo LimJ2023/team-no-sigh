@@ -44,7 +44,7 @@ public class MainService {
 public List<Streamer> getStreamerInfo(){
 		
 		
-		String apiKey = "AIzaSyCNUTsRVT4N2-lGyPxsWtzq97yIfPIi4zA";
+		String apiKey = "AIzaSyCwFnwxzyfa7m1MI5huBVUBuAnUzKKyUQ8";
 		
 		String urlStr = "https://youtube.googleapis.com/youtube/v3/channels"
 				+ "?part=snippet%2Cstatistics"

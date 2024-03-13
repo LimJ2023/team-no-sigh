@@ -58,7 +58,7 @@ public class RankingService {
 	//20240229 이지수
 	public List<Video> popVideoApi(){
 		
-		String apiKey = "AIzaSyCNUTsRVT4N2-lGyPxsWtzq97yIfPIi4zA";
+		String apiKey = "AIzaSyCwFnwxzyfa7m1MI5huBVUBuAnUzKKyUQ8";
 		
 		String urlStr = "https://youtube.googleapis.com/youtube/v3/"
 				+ "videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular"
