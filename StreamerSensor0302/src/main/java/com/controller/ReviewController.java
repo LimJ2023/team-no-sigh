@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.domain.StreamInfo;
 import com.domain.Streamer;
 import com.domain.StreamerRating;
+import com.domain.Users;
 import com.service.ReviewService;
 
 @Controller
@@ -19,13 +20,18 @@ public class ReviewController {
 
 	@Autowired
 	ReviewService reviewService;
+	@Autowired
+	Users loginUserBean;
 	
 	@GetMapping("/review")
 	public String review(@ModelAttribute("streamerRating") StreamerRating streamerRating,
-						@RequestParam("streamer_idx") int streamer_idx, 
+						@RequestParam("streamer_idx") int streamer_idx,
 						Model model) {
 		
+		int user_idx = loginUserBean.getUser_idx();
+		
 		streamerRating.setStreamer_idx(streamer_idx);
+		streamerRating.setUser_idx(user_idx);
 		
 		Streamer streamer = reviewService.getStreamerByIdx(streamer_idx);
 		model.addAttribute("streamer", streamer);
@@ -49,7 +55,7 @@ public class ReviewController {
 	public String review_pro(@ModelAttribute("streamerRating") StreamerRating streamerRating,
 							Model model) {
 		
-		int user_idx = streamerRating.getUser_idx();
+		int user_idx = loginUserBean.getUser_idx();
 		int streamer_idx = streamerRating.getStreamer_idx();
 		
 		

@@ -38,10 +38,11 @@ public interface ReviewMapper {
 	@Select("SELECT u.user_name, u.user_image, r.user_idx, r.streamer_idx, r.streamer_rating,r.rating_comment, r.streamer_rating_date "
 			+ "FROM streamer_rating r "
 			+ "INNER JOIN users u ON u.user_idx = r.user_idx "
-			+ "WHERE streamer_idx = #{streamer_idx}")
+			+ "WHERE streamer_idx = #{streamer_idx} "
+			+ "ORDER BY r.streamer_rating_date")
 	List<StreamerRating> getRatingListByStreamerIdx(int streamer_idx);
 	
-	@Select("SELECT r.comment_id ,r.streamer_rating, r.rating_comment, r.streamer_rating_date, s.streamer_id, s.streamer_image "
+	@Select("SELECT r.comment_id,r.user_idx, r.streamer_idx, r.streamer_rating, r.rating_comment, r.streamer_rating_date, s.streamer_id, s.streamer_image "
 			+ "FROM streamer_rating r "
 			+ "INNER JOIN streamer s ON r.streamer_idx = s.streamer_idx "
 			+ "WHERE r.streamer_rating_date = (SELECT MAX(r2.streamer_rating_date) "
@@ -53,11 +54,14 @@ public interface ReviewMapper {
 	void deleteRatingById(int comment_id);
 	
 	@Insert("insert into delete_streamer_rating(comment_id, user_idx, streamer_idx, streamer_rating, rating_comment, streamer_rating_date, delete_date) "
-			+ "values(DELETE_STREAMER_RATING_ID_SEQ.nextval,#{user_idx},#{streamer_idx},#{streamer_rating},#{rating_comment},#{streamer_rating_date},sysdate)")
+			+ "values(DELETE_STREAMER_RATING_ID_SEQ.nextval,#{user_idx}, #{streamer_idx}, #{streamer_rating}, #{rating_comment}, TO_DATE(#{streamer_rating_date}, 'YYYY-MM-DD HH24:MI:SS'), sysdate)")
 	void insertDeleteRating(StreamerRating rating);
 	
-	@Select("SELECT comment_id, user_idx, streamer_idx, streamer_rating, rating_comment, streamer_rating_date, delete_date "
-			+ "FROM delete_streamer_rating")
+	@Select("select u.user_name, s.streamer_id, r.streamer_rating, r.rating_comment, r.streamer_rating_date, r.delete_date "
+			+ "from delete_streamer_rating r "
+			+ "INNER JOIN users u ON u.user_idx = r.user_idx "
+			+ "INNER JOIN streamer s ON s.streamer_idx = r.streamer_idx "
+			+ "ORDER BY r.delete_date DESC")
 	List<StreamerRating> getDeleteRatingList();
 	
 	@Select("SELECT COUNT(*) "

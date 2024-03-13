@@ -185,7 +185,9 @@ CREATE TABLE streamer_rating(
 CREATE TABLE delete_streamer_rating(
     comment_id NUMBER PRIMARY KEY,
     user_idx number,
+    user_name VARCHAR2(60),
     streamer_idx number,
+    streamer_id VARCHAR2(60),
     streamer_rating number,
     rating_comment VARCHAR2(200),
     streamer_rating_date DATE,
@@ -276,4 +278,5 @@ CREATE SEQUENCE delete_streamer_rating_id_seq
     MINVALUE 0
     ORDER
     NOCACHE;
+    
 commit;

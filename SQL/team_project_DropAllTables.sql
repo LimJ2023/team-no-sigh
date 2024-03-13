@@ -12,7 +12,7 @@ DROP TABLE login_info_table;
 DROP TABLE visitor;
 DROP TABLE streamer_rating;
 DROP TABLE main_carousel_test;
-
+DROP TABLE delete_streamer_rating;
 
 -----0306에 있던 테스트 테이블 드랍
 DROP TABLE test_user_streaming_likes;
@@ -44,7 +44,7 @@ DROP SEQUENCE ranking_id_seq;
 DROP SEQUENCE preferences_id_seq;
 DROP SEQUENCE visitor_id_seq;
 DROP SEQUENCE streamer_rating_id_seq;
-
+DROP SEQUENCE delete_streamer_rating_id_seq;
 
 DROP SEQUENCE test_pref_seq;
 DROP SEQUENCE main_carousel_test_seq;
