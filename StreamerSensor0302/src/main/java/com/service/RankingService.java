@@ -158,7 +158,7 @@ public class RankingService {
 	public int getDaily_viewersByDate(String streamingDate) {
 		return rankingDAO.getDaily_viewersByDate(streamingDate);
 	}
-	
+	/*
 	public List<Video> chzzkTest2(){
 		String chzzkUrl = "https://api.chzzk.naver.com/service/v1/"
 				+ "search/videos?"
@@ -280,7 +280,7 @@ public class RankingService {
 		 chzzkVideos2.sort((v1, v2) -> Integer.compare(v2.getReadCount(), v1.getReadCount()));
 		
 		return chzzkVideos2;
-	}
+	}*/
 	
 
 }

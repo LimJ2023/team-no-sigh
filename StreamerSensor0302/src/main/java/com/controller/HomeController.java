@@ -47,6 +47,8 @@ public class HomeController {
 		
 	/*	List<Video> chzzkVideos2 = rankingService.chzzkTest2();
 		model.addAttribute("chzzkVideos2", chzzkVideos2);*/
+		List<Video> chzzkVideos2 = mainService.chzzkTest2();
+	    model.addAttribute("chzzkVideos2", chzzkVideos2);
 		
 		
 
@@ -74,7 +76,8 @@ public class HomeController {
 		
 		List<Streamer> randomStreamerInfo = mainService.randomStreamerInfo();
 		model.addAttribute("randomStreamerInfo", randomStreamerInfo);
-		
+		List<Video> chzzkVideos2 = mainService.chzzkTest2();
+	    model.addAttribute("chzzkVideos2", chzzkVideos2);
 	/*	List<Video> chzzkVideos2 = rankingService.chzzkTest2();
 		model.addAttribute("chzzkVideos2", chzzkVideos2);*/
 		

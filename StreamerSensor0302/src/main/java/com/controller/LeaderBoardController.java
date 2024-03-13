@@ -63,8 +63,8 @@ public class LeaderBoardController {
 	    model.addAttribute("sumLikes", sumLikes);
 	    model.addAttribute("sumDaily", sumDaily);
 	    
-	    List<Video> chzzkVideos2 = rankingService.chzzkTest2();
-	    model.addAttribute("chzzkVideos2", chzzkVideos2);
+	   /* List<Video> chzzkVideos2 = rankingService.chzzkTest2();
+	    model.addAttribute("chzzkVideos2", chzzkVideos2);*/
 	    
 	    
 	    System.out.println("loginUserBean : " + loginUserBean.getSubscription());
