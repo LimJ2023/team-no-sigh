@@ -94,7 +94,11 @@ insert into streamer( streamer_idx, streamer_id, streamer_gender, streamer_grade
 values ( streamer_idx_seq.nextval, '푸른도시의선장', '여', '실버', '오프라인', '치지직', '57500', 'streamer_profile_11');
 
 
-
+----방송 제목과 이미지 이름을 같게 만들기
+UPDATE streaming_info SET streaming_image = (SELECT i2.streaming_description
+                                         FROM streaming_info i2
+                                         WHERE i2.streaming_id = streaming_info.streaming_id)
+WHERE streaming_id >= 0;
 
 
 
@@ -284,11 +288,140 @@ INSERT INTO streaming_preference(avg_viewers, likes, comments, daily_viewers, st
 INSERT INTO streamer_rating (comment_id, user_idx, streamer_idx, streamer_rating, rating_comment, streamer_rating_date)
 VALUES(STREAMER_RATING_ID_SEQ.nextval , 5, 5, 5, '테스트용2', sysdate);
 
-----방송 제목과 이미지 이름을 같게 만들기
-UPDATE streaming_info SET streaming_image = (SELECT i2.streaming_description
-                                         FROM streaming_info i2
-                                         WHERE i2.streaming_id = streaming_info.streaming_id)
-WHERE streaming_id >= 0;
+
+--오전 추가 정보
+INSERT INTO streamer VALUES (streamer_idx_seq.nextval, '게임ZONE', '남', '일반', '오프라인', '유튜브', 50000, 'streamer_profile_12');
+INSERT INTO streamer VALUES (streamer_idx_seq.nextval, '플레이뷰', '남', '일반', '온라인', '치지직', 47500, 'streamer_profile_13');
+INSERT INTO streamer VALUES (streamer_idx_seq.nextval, '조이스틱코어', '여', '일반', '온라인', '아프리카', 47300, 'streamer_profile_14');
+INSERT INTO streamer VALUES (streamer_idx_seq.nextval, '버튼승부', '여', '일반', '온라인', '아프리카', 47200, 'streamer_profile_15');
+INSERT INTO streamer VALUES (streamer_idx_seq.nextval, '에코웨이브', '여', '일반', '오프라인', '유튜브', 47000, 'streamer_profile_16');
+
+INSERT INTO streaming_info VALUES (streaming_id_seq.nextval, '게임플렉스', 'http://www.youtube.com', '2시간 22분', 1, '2024-01-09', '게임ZONE', 6);
+INSERT INTO streaming_info VALUES (streaming_id_seq.nextval, '버추얼퀘스트', 'http://www.chzzk.com', '4시간 32분', 1, '2024-01-09', '플레이뷰', 7);
+INSERT INTO streaming_info VALUES (streaming_id_seq.nextval, '조이패드진지', 'http://www.afreecatv.com', '4시간 22분', 1, '2024-01-09', '조이스틱코어', 8);
+INSERT INTO streaming_info VALUES (streaming_id_seq.nextval, '엑스플레이어', 'http://www.afreecatv.com', '5시간 34분', 1, '2024-01-09', '버튼승부', 9);
+INSERT INTO streaming_info VALUES (streaming_id_seq.nextval, '이런코딩', 'http://www.youtube.com', '6시간 19분', 6, '2024-01-09', '에코웨이브', 10);
+
+INSERT INTO streaming_preference VALUES(2300, 1752, 35000, 3600, 18);
+INSERT INTO streaming_preference VALUES(2200, 1240, 27500, 1980, 19);
+INSERT INTO streaming_preference VALUES(2500, 1500, 32500, 4100, 20);
+INSERT INTO streaming_preference VALUES(2100, 1200, 25000, 1900, 21);
+INSERT INTO streaming_preference VALUES(1950, 1300, 25100, 2000, 22);
+
+INSERT INTO streaming_info VALUES (streaming_id_seq.nextval, '1월 8일 게임', 'http://www.afreecatv.com', '2시간 28분', 1, '2024-01-08', '머독', 6);
+INSERT INTO streaming_preference VALUES(12300, 11752, 315000, 31600, 23);
+
+--15:56 추가 정보
+INSERT INTO preferences (preferences_idx, user_id, streamer_id, review_count, favorites, stream_categorys_id)
+    VALUES(PREFERENCES_ID_SEQ.nextval, 'qwer', '머독', null, 1, 1);
+
+--회원가입 후 구독상태(subscription) 기본 n 상태로 만들기 위해 디폴트 추가
+ALTER TABLE users MODIFY (subscription DEFAULT 'n');
+
+--테스트용 방송 더미 추가
+INSERT INTO streaming_preference VALUES(25800, 17450, 34856, 61020, 3);
+
+--스트리머 더미 추가(스포츠 카테고리) // profile 17 부터
+--insert into streamer( streamer_idx, streamer_id, streamer_gender, streamer_grade, streamer_status, streamer_platform, streamer_followers, streamer_image)
+--values ( streamer_idx_seq.nextval, '감스트', '남', '골드', '온라인', '아프리카', '1062000',  'streamer_profile_1');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '스포트츠 파이어', '남', '일반', '오프라인', '유튜브', 37500, 'streamer_profile_17');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '엑스트림 그라운드', '남', '실버', '오프라인', '아프리카', 62800, 'streamer_profile_18');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '어드레날린레이서', '여', '일반', '온라인', '아프리카', 25900, 'streamer_profile_19');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '에너지 블래스트', '남', '일반', '오프라인', '치지직', 48300, 'streamer_profile_20');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '피트니스플래쉬', '여', '실버', '오프라인', '유튜브', 55200, 'streamer_profile_21');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '업텐션 스포츠', '남', '실버', '오프라인', '유튜브', 41700, 'streamer_profile_22');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '에어본 애스팔트', '남', '일반', '온라인', '유튜브', 30400, 'streamer_profile_23');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '아케이드 아스리트', '남', '실버', '온라인', '유튜브', 67600, 'streamer_profile_24');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '스포츠 스트라이커', '남', '일반', '온라인', '유튜브', 22100, 'streamer_profile_25');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '엑스트림 이뉴스', '남', '실버', '오프라인', '유튜브', 36900, 'streamer_profile_26');
+
+--스트리머 더미 데이터 (음식 카테고리용)
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '맛폭발', '남', '일반', '온라인', '유튜브', 33910, 'streamer_profile_27');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '미식청춘', '여' ,'실버', '오프라인', '유튜브', 68157, 'streamer_profile_28');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '트렌디테이스트', '여', '일반', '오프라인', '유튜브', 16429, 'streamer_profile_29');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '간식바이브', '남', '일반', '오프라인', '치지직', 13575, 'streamer_profile_30');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '젠지미식', '남', '일반' ,'오프라인', '치지직', 8513, 'streamer_profile_31');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '요리클립', '여', '일반', '오프라인', '유튜브', 24394, 'streamer_profile_32');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '바이트버즈', '남', '실버', '온라인', '유튜브', 46304, 'streamer_profile_33');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '청춘포크', '남', '실버', '온라인' , '유튜브', 44026, 'streamer_profile_34');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '맛의파도', '남', '실버', '오프라인', '아프리카', 48885, 'streamer_profile_35');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '먹방모멘텀', '여', '일반', '온라인', '아프리카', 23705, 'streamer_profile_36');
+
+--스트리머 더미 데이터 (영화 카테고리 용)
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '영화광', '남', '실버', '오프라인', '아프리카', 42546, 'streamer_profile_37');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '시네마청춘', '남', '실버', '오프라인', '치지직', 67658, 'streamer_profile_38');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '필름트렌드', '여', '실버', '온라인', '유튜브', 43549, 'streamer_profile_39');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '무비바이브', '남', '실버', '오프라인', '유튜브', 48215, 'streamer_profile_40');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '필름버즈', '남', '일반', '온라인', '유튜브', 16697, 'streamer_profile_41');
+
+--스트리머 더미 데이터 (카테고리 무관-게임)
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '게임마스터', '남', '실버', '온라인', '아프리카', 49165,  'streamer_profile_42');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '플레이데이', '여', '실버', '오프라인', '유튜브', 56859, 'streamer_profile_43');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '버추얼배틀', '남', '일반', '온라인', '치지직', 27461, 'streamer_profile_44');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '게임뷰', '남', '일반', '온라인', '유튜브', 6859, 'streamer_profile_45');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '조이스틱저널', '남', '일반', '오프라인', '치지직', 18610, 'streamer_profile_46');
+
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '엔딩크레딧', '여', '일반', '오프라인', '치지직', 11237, 'streamer_profile_47');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '레벨업라운지', '여', '일반', '온라인', '유튜브', 14955, 'streamer_profile_48');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '픽셀플레이어', '남', '실버', '오프라인', '치지직', 35727, 'streamer_profile_49');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '게이머스그라운드', '남', '실버', '오프라인', '유튜브', 48678, 'streamer_profile_50');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '콘솔커넥트', '남', '실버', '오프라인', '유튜브', 41417, 'streamer_profile_51');
+
+
+--방송 더미 데이터(스포트츠 파이어(idx17)/ 스포츠 카테고리 = 7 / 게임  = 1 / 유튜브 / streaming_image 25 부터)
+--INSERT INTO streaming_info (streaming_id ,streaming_description, streaming_url,streaming_time, stream_categorys_id, streaming_date, streamer_id, streaming_image)
+--VALUES (streaming_id_seq.nextval,'타르코프 초기화', 'http://www.youtube.com', '7시간 12분', 1, '2024-01-09', '빅헤드', 'thumbnail_1');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '스포츠 엑스', 'http://www.youtube.com', '6시간 35분', 7, '2024-02-05', '스포트츠 파이어', 'thumbnail_25');
+
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '파이어 골', 'http://www.youtube.com', '17시간 10분', 7, '2024-02-07', '스포트츠 파이어', 'thumbnail_26');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '매치데이 라이브', 'http://www.youtube.com', '20시간 23분', 7, '2024-02-19', '스포트츠 파이어', 'thumbnail_27');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '플레이 그라운드', 'http://www.youtube.com', '9시간 1분', 1, '2024-03-09', '스포트츠 파이어', 'thumbnail_28');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '윈닝 스트릭', 'http://www.youtube.com', '17시간 43분', 1, '2024-01-25', '스포트츠 파이어', 'thumbnail_29');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '게임 플랜', 'http://www.youtube.com', '6시간 27분', 1, '2024-01-30', '스포트츠 파이어', 'thumbnail_30');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '올림픽 드림', 'http://www.youtube.com', '9시간 22분', 7, '2024-03-10', '스포트츠 파이어', 'thumbnail_31');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '스포츠 리얼리티', 'http://www.youtube.com', '14시간 12분', 7, '2024-02-08', '스포트츠 파이어', 'thumbnail_32');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '토크 앤 플레이', 'http://www.youtube.com', '9시간 42분', 6, '2024-03-05', '스포트츠 파이어', 'thumbnail_33');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '승부사의 선택', 'http://www.youtube.com', '6시간 25분', 7, '2024-02-21', '스포트츠 파이어', 'thumbnail_34');
+
+--방송 선호도 더미 데이터 (스포트츠 파이어/ 25-34)
+--AVG_VIEWERS, LIKES, COMMENTS, DAILY_VIEWERS, STREAMING_ID
+--INSERT INTO streaming_preference VALUES( 9800, 7500, 130000, 100000, 1);
+INSERT INTO streaming_preference VALUES(4998, 91, 133, 5034, 25);
+INSERT INTO streaming_preference VALUES(5355, 150, 92, 5485, 26);
+INSERT INTO streaming_preference VALUES(3701, 167, 75, 3873, 27);
+INSERT INTO streaming_preference VALUES(1516, 72, 27, 1650, 28);
+INSERT INTO streaming_preference VALUES(5215, 69, 85, 5562, 29);
+INSERT INTO streaming_preference VALUES(1491, 19, 42, 1603, 30);
+INSERT INTO streaming_preference VALUES(1039, 13, 31, 1094, 31);
+INSERT INTO streaming_preference VALUES(2328, 65, 32, 2367, 32);
+INSERT INTO streaming_preference VALUES(5832, 154, 75, 6238, 33);
+--INSERT INTO streaming_preference VALUES(1615, 72, 29, 1776, 34);
+
+--방송 더미 데이터(엑스트림 그라운드(27)스포츠 카테고리 = 7 / 게임  = 1 / 아프리카 / streaming_image 35 부터)
+--INSERT INTO streaming_info (streaming_id ,streaming_description, streaming_url,streaming_time, stream_categorys_id, streaming_date, streamer_id, streaming_image)
+--VALUES (streaming_id_seq.nextval,'타르코프 초기화', 'http://www.youtube.com', '7시간 12분', 1, '2024-01-09', '빅헤드', 'thumbnail_1');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '엑스트림 라이브', 'http://www.afreecatv.com', '00시간 05분', 7, '2024-01-14', '엑스트림 그라운드', 'thumbnail_35');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '어드벤처 매니아', 'http://www.afreecatv.com', '12시간 03분', 7, '2024-02-09', '엑스트림 그라운드', 'thumbnail_36');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '레이스 투 더 리미트', 'http://www.afreecatv.com', '18시간 55분', 7, '2024-02-16', '엑스트림 그라운드', 'thumbnail_37');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '액션 플래닛', 'http://www.afreecatv.com', '04시간 40분', 7, '2024-02-03', '엑스트림 그라운드', 'thumbnail_38');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '스릴 챌린지', 'http://www.afreecatv.com', '00시간 45분', 7, '2024-03-04', '엑스트림 그라운드', 'thumbnail_39');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '어드벤처 퀘스트', 'http://www.afreecatv.com', '11시간 18분', 7, '2024-01-28', '엑스트림 그라운드', 'thumbnail_40');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '리스크 타커스', 'http://www.afreecatv.com', '22시간 12분', 7, '2024-02-13', '엑스트림 그라운드', 'thumbnail_41');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '에지 오브 엑스트림', 'http://www.afreecatv.com', '02시간 49분', 7, '2024-02-07', '엑스트림 그라운드', 'thumbnail_42');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '스턴트 스페셜', 'http://www.afreecatv.com', '10시간 34분', 7, '2024-02-29', '엑스트림 그라운드', 'thumbnail_43');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '드레날린 러시', 'http://www.afreecatv.com', '12시간 08분', 7, '2024-01-29', '엑스트림 그라운드', 'thumbnail_44');
+
+--(35~44)
+INSERT INTO streaming_preference VALUES(6095, 255, 365, 6423, 35);
+INSERT INTO streaming_preference VALUES(11311, 115, 720, 11577, 36);
+INSERT INTO streaming_preference VALUES(9208, 196, 798, 9519, 37);
+INSERT INTO streaming_preference VALUES(13116, 511, 526, 14221, 38);
+INSERT INTO streaming_preference VALUES(14077, 284, 1120, 15234, 39);
+INSERT INTO streaming_preference VALUES(5490, 101, 155, 5533, 40);
+INSERT INTO streaming_preference VALUES(3972, 100, 96, 4054, 41);
+INSERT INTO streaming_preference VALUES(14956, 377, 886, 15399, 42);
+INSERT INTO streaming_preference VALUES(11488, 478, 403, 12186, 43);
+--INSERT INTO streaming_preference VALUES(9170, 368, 395, 9287, 44);
 
 
 UPDATE streaming_preference SET daily_viewers = 12232 WHERE streaming_id = 11;
@@ -299,5 +432,36 @@ UPDATE streamer SET streamer_image = 'streamer_profile_66' WHERE streamer_idx = 
 UPDATE streaming_info SET streaming_description = '코딩 is fun' WHERE streaming_id = 3;
 UPDATE streaming_info SET streaming_description = '코딩유잼' WHERE streaming_id = 4;
 
+INSERT INTO preferences (preferences_idx, user_id, streamer_id, review_count, favorites, stream_categorys_id)
+    VALUES(PREFERENCES_ID_SEQ.nextval, 'soldesk', '감스트', null, 1, 1);
+
+
+--스트리머 정보 추가
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '김지섭팬', '남', '일반', '오프라인', '유튜브', 5, 'streamer_profile_67');
+INSERT INTO streamer VALUES(streamer_idx_seq.nextval, '짭지섭', '남', '일반', '오프라인', '유튜브', 10, 'streamer_profile_68');
+
+--방송 정보 (3월 12일)
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '이런 게임은 좀', 'http://www.youtube.com', '4시간 22분', 1, '2024-03-12', '감스트', 'thumbnail_45');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '게임이 망해도 돼', 'http://www.afreecatv.com', '7시간 10분', 1, '2024-03-12', '머독', 'thumbnail_46');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '게임 작작... 아니 더 하고 싶음', 'http://www.youtube.com', '4시간 22분', 1, '2024-03-12', '빅헤드', 'thumbnail_47');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '노래 기타로 쟝쟝', 'http://www.youtube.com', '2시간 22분', 2, '2024-03-12', '기타히어로', 'thumbnail_48');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '봄 노래합니다', 'http://www.youtube.com', '1시간 21분', 2, '2024-03-12', '김지섭', 'thumbnail_49');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '이 노래 들어주셈', 'http://www.youtube.com', '1시간 2분', 2, '2024-03-12', '김지섭팬', 'thumbnail_50');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '좋은 노래 흑흑', 'http://www.youtube.com', '0시간 42분', 2, '2024-03-12', '짭지섭', 'thumbnail_51');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '별빛이 게임해요', 'http://www.youtube.com', '5시간 47분', 1, '2024-03-12', '별빛쟁이', 'thumbnail_52');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '등갈비를 먹어야해', 'http://www.youtube.com', '3시간 17분', 5, '2024-03-12', '맛폭발', 'thumbnail_53');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval, '돼지 갈비 소갈비', 'http://www.youtube.com', '4시간 4분', 5, '2024-03-12', '미식청춘', 'thumbnail_54');
+
+--방송 선호도 정보 ( 44~ 53 / 지섭s 48 49 50 / 평균/좋아요/댓글/일일/아이디)
+INSERT INTO streaming_preference VALUES(54105, 38451, 132450, 67500, 44);
+INSERT INTO streaming_preference VALUES(32014, 29047, 114872, 58874, 45);
+INSERT INTO streaming_preference VALUES(45574, 30045, 124554, 60154, 46);
+INSERT INTO streaming_preference VALUES(10014, 12451, 84512, 30142, 47);
+INSERT INTO streaming_preference VALUES(71452, 58479, 154263, 85496, 48);
+INSERT INTO streaming_preference VALUES(4457, 1032, 574, 5241, 49);
+INSERT INTO streaming_preference VALUES(420, 57, 256, 471, 50);
+INSERT INTO streaming_preference VALUES(8451, 7415, 5640, 10402, 51);
+INSERT INTO streaming_preference VALUES(9312, 5414, 8251, 10403, 52);
+INSERT INTO streaming_preference VALUES(3452, 1023, 1045, 3540, 53);
 
 commit;
