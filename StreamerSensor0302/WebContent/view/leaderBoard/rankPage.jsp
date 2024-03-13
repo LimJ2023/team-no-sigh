@@ -247,8 +247,10 @@ var rootPath = '${root}';
 										</td>
 										<td class="td td-description"><div class="rank_desc">${ranking.streaming_description }</div></td>
 
-										<td class="td td-avgViewers avgV-bar"
-											style="width:${(ranking.avg_viewers / sumAVG) * 100 }%;">${ranking.avg_viewers }</td>
+										<td class="td td-avgViewers ">
+										<div class="avg-div">
+										<div class="avgV-bar" style="width:${(ranking.avg_viewers / sumAVG) * 100 }%;"></div>
+											${ranking.avg_viewers }</div></td>
 
 										<td class="td td-likes">
 											<div class="likes-div">
@@ -300,8 +302,10 @@ var rootPath = '${root}';
 										</td>
 										<td class="td td-description">${ranking.streaming_description }</td>
 
-										<td class="td td-avgViewers avgV-bar"
-											style="width:${(ranking.avg_viewers / sumAVG) * 100 }%;">${ranking.avg_viewers }</td>
+										<td class="td td-avgViewers ">
+										<div class="avg-div">
+										<div class="avgV-bar" style="width:${(ranking.avg_viewers / sumAVG) * 100 }%;"></div>
+											${ranking.avg_viewers }</div></td>
 
 										<td class="td td-likes">
 											<div class="likes-div">
