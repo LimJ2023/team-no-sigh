@@ -225,8 +225,42 @@ INSERT INTO streaming_info (streaming_id ,streaming_description, streaming_url,s
 
 ---게시판 데이터---
 INSERT INTO board (board_idx, user_id, title, info, board_date, view_count, comment_count, categorys)
-    VALUES(board_seq.nextval, 'soldesk', '제목이요', '이거 맞추기는 했는데, 이게 컨트롤 부족인지 설명 좀.', sysdate, 1, 1, '방송');
+    VALUES(board_seq.nextval, 'soldesk', '제목이요', '이거 맞추기는 했는데, 이게 컨트롤 부족인지 설명 좀.', sysdate, 1, 0, '게임');
 
+insert into board(board_idx, user_id, title, info, board_date, view_count, comment_count, categorys)
+VALUES(board_seq.nextval, '임요환', '질럿은 야마토 한방에 안죽어', '질럿이 소형에 야마토가 폭발형 대미지에 반감되서 결과적으로 체력 1됨', sysdate, 0, 0, '게임');
+
+insert into board(board_idx, user_id, title, info, board_date, view_count, comment_count, categorys)
+VALUES(board_seq.nextval, '강무성', '크리스마스 영화 특', '나홀로 집에는 무조건 방송함', sysdate, 0, 0, '영화');
+
+insert into board(board_idx, user_id, title, info, board_date, view_count, comment_count, categorys)
+VALUES(board_seq.nextval, '마두식', '이로마 음악 추천', 'Kiss the Rain, river Flows In you 등등', sysdate, 0, 0, '음악');
+
+insert into board(board_idx, user_id, title, info, board_date, view_count, comment_count, categorys)
+VALUES(board_seq.nextval, '김하루', '종로 길거리 음식', '여기 저기 먹어봤는데 불백당, 쏘핫 마라탕 먹어 볼만해요', sysdate, 0, 0, '리뷰');
+
+insert into board(board_idx, user_id, title, info, board_date, view_count, comment_count, categorys)
+VALUES(board_seq.nextval, '한태수', '주식 투자 할때 참고 할 것', '말도 안되는 이자율 보이면 그거 사기일 가능성 높음. 적당히 천천히 오르는 주식 잘 찾아보셈', sysdate, 0, 0, '주식');
+
+insert into board(board_idx, user_id, title, info, board_date, view_count, comment_count, categorys)
+VALUES(board_seq.nextval, '이정재', '이 집 해장국은 일품임', '해장국이 국물도 뻑뻑하고 고기도 많이 들어가 있음. 어릴 때도 있었는데 아직도 운영함.', sysdate, 0, 0, '음식');
+
+insert into board(board_idx, user_id, title, info, board_date, view_count, comment_count, categorys)
+VALUES(board_seq.nextval, '김장민', '아재 개그', '세상에서 제일 착한 사자는 자원봉사자, 소가 회전하는 방향은 우회전, 가장 가난한 왕은 최저임금', sysdate, 0, 0, '수다');
+
+insert into board(board_idx, user_id, title, info, board_date, view_count, comment_count, categorys)
+VALUES(board_seq.nextval, '김정민', '브라질 축구 요약', '7777777', sysdate, 0, 0, '스포츠');
+
+insert into board(board_idx, user_id, title, info, board_date, view_count, comment_count, categorys)
+VALUES(board_seq.nextval, '강호순', '나루토 vs 사스케 전 봤냐', '가슴이 웅장해진다.', sysdate, 0, 0, '수다');
+
+insert into board(board_idx, user_id, title, info, board_date, view_count, comment_count, categorys)
+VALUES(board_seq.nextval, '남상우', '산나비 명작인데', '나한테는 좀 많이 어려운 것 같다.', sysdate, 0, 0, '게임');
+
+insert into board(board_idx, user_id, title, info, board_date, view_count, comment_count, categorys)
+VALUES(board_seq.nextval, '김씨', '김씨표류기에 한장면', '진심으로 그 장면만 보면 짜장면이 먹고 싶어져서 중국집 짜장면 시킴', sysdate, 0, 0, '영화');
+
+select * from board;
 
 ---랭킹 데이터---
 INSERT INTO ranking(ranking_id, rank_date, rank_place, rank_method, streaming_id) VALUES (ranking_id_seq.nextval, '2024-01-09', 1, 'dailyViewers', 1);
