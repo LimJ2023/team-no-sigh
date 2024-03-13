@@ -134,6 +134,11 @@ public class UsersController {
 	}
 
 	@GetMapping("/subscribe")
+	public String subScribe2() {
+		return "user/subscribe";
+	}
+	
+	@GetMapping("/subscribe2")
 	public String subscribe(@RequestParam(value = "isSub", defaultValue = "n") String isSub,
 							@RequestParam(value = "sales", defaultValue = "0") int sales, 
 							HttpSession session) {
@@ -153,8 +158,10 @@ public class UsersController {
 		
 		//loginUserBean = userService.getUserByIdx(idx);
 		session.setAttribute("loginUserBean", loginUserBean);
-		return "user/subscribe";
+		return "user/subscribe2";
 	}
+	
+	
 	
 	@InitBinder
 	public void initBinder(WebDataBinder binder) {
