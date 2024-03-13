@@ -76,7 +76,7 @@ function filterByCategory(){
 		tr[i].classList.remove('category-filter');
 		if (tr[i].classList.contains('name-filter') || tr[i].classList.contains('title-filter')) continue;
 		
-		var td = tr[i].getElementsByTagName("td")[7];
+		var td = tr[i].getElementsByTagName("td")[6];
 		if(td) {
 			var txtValue = td.textContent || td.innerText;
 			if(txtValue.toUpperCase().indexOf(filter) === -1 && filter !== ""){
