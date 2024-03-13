@@ -18,8 +18,7 @@ public interface UsersMapper {
 	@Select("SELECT * " + "FROM users " + "WHERE user_idx = #{user_idx}")
 	Users getUserByNumber(int user_idx);
 
-	@Select("select * from users "
-			+ "order by user_idx desc")
+	@Select("select * from users")
 	List<Users> getAllUsers();
 
 	@Select("select user_idx, user_id, user_name, user_gender, user_age, user_nation, subscription, user_image "
@@ -48,7 +47,8 @@ public interface UsersMapper {
 	Users getmodifyUserinfo(int user_idx);
 
 	@Update("update users " +
-			"set user_pw = #{user_pw}, "
+			"set user_pw = #{user_pw}, user_gender = #{user_gender}, "
+			+ "user_age = #{user_age}, user_nation = #{user_nation} "
 			+ "where user_idx = #{user_idx}")
 	void modifyUserInfo(Users modifyUserBean);
 	
@@ -85,5 +85,9 @@ public interface UsersMapper {
 	@Insert("INSERT INTO preferences VALUES(preferences_id_seq.nextval, "
 			+"#{user_id}, '감스트', null, 1, 1)")
 	void addUserPreference(String userId);
-
+	//---------------------------------------------------------------------------------
+	@Update("update site_stat "
+			+ "set day_revenue = #{day_revenue} "
+			+ "where stat_id = #{stat_id}")
+	void amonuntInfo(int stat_id);
 }
