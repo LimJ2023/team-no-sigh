@@ -431,3 +431,6 @@ input#rate-5:checked ~ label{
 .ad-img img{
 	width: 100%;
 }
+.red-heart {
+        color: var(--color-danger);
+    }

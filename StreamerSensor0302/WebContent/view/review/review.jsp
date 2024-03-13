@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<c:set var='root' value="${pageContext.request.contextPath }/"/>
+<c:set var='root' value="${pageContext.request.contextPath }/" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -56,10 +56,10 @@
 					<div class="related_streamers">
 						<div class="ad-img">
 							<a href="https://www.youtube.com/premium?app=desktop&gl=KR&hl=ko">
-								<img src="${root}img/logo/YTP_logo2.png"/>
+								<img src="${root}img/logo/YTP_logo2.png" />
 							</a>
 						</div>
-						
+
 					</div>
 				</div>
 				<div class="header_recentComments">
@@ -70,13 +70,13 @@
 									<img src="img/user_profile/${rating.user_image }">
 								</div>
 								<div class="cont_area">
-									<div class="cmt_head">${rating.user_name}/ date :
+									<div class="cmt_head">${rating.user_name}/date:
 										${rating.streamer_rating_date }</div>
 									<div class="cmt_cont">${rating.rating_comment }</div>
 								</div>
 								<c:forEach var="i" begin="1" end="${rating.streamer_rating}">
-										<i class="bx bxs-star"></i>
-									</c:forEach>
+									<i class="bx bxs-star"></i>
+								</c:forEach>
 							</div>
 						</div>
 					</c:forEach>
@@ -106,7 +106,7 @@
 							<form:textarea path="rating_comment" cols="30"
 								placeholder="스트리머에게 의견을 남겨주세요"></form:textarea>
 						</div>
-						<div >
+						<div>
 							<form:button class="subBtn">게시</form:button>
 						</div>
 					</form:form>
@@ -129,15 +129,23 @@
 								</div>
 								<div class="streaming_info_right">
 									<div class="like">
-										<i class='bx bx-heart bx-md'></i> <span>0</span>
-									</div>
-									<div class="list">
-										<i class='bx bxs-comment-detail bx-md'></i> <span>0</span>
+										<i class='bx bx-heart bx-md' id="heartIcon"></i> <span></span>
 									</div>
 								</div>
 							</div>
 						</div>
 					</c:forEach>
+					<script>
+						const heartIcons = document
+								.querySelectorAll('.bx-heart');
+
+						heartIcons.forEach(function(heartIcon) {
+							heartIcon.addEventListener('click', function() {
+								// 하트 아이콘의 클래스를 변경하여 색상 변경
+								heartIcon.classList.toggle('red-heart');
+							});
+						});
+					</script>
 				</div>
 			</div>
 		</div>
