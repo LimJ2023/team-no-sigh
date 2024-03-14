@@ -123,20 +123,10 @@
 				<form:errors path="user_pw2" style="color:red"/>
 				</div>
 				
-				<form:button class="btn">수정하기</a> <br>
+				<form:button class="btn" style="color: #DB4455;">수정하기</a> <br>
 				</form:button>
 				
-				<br /> <br> 계정 삭제 <br /> <br />
-				<div style="color: red;">
-					<h4>한번 삭제한 계정은 복구할 수 없습니다.</h4>
-				</div>
-				<br />
-				<li>즐겨찾기 목록 등 개인 편의를 위해 저장한 모든 데이터가 영구적으로 삭제됩니다.</li>
-				<li>이용중인 모든 유료서비스가 해지되며 결제한 금액은 환불되지 않습니다.</li> <br />
-				<form:button class="btn">
-					<a href="${root }account_delete" style="text-decoration-line: none;">계정
-						삭제</a>
-				</form:button>
+				
 			</div>
 		</form:form>
         

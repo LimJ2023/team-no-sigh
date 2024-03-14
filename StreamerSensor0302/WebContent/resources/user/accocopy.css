@@ -284,6 +284,9 @@ main aside .updates a:hover{
     background-color: white;
 }
 .btn{
+	cursor: pointer;
+	border: 2px solid #00fdb6;
+	background: var(--color-text);
     font-size: 30px;
     width: 30%;
     height: 50px;

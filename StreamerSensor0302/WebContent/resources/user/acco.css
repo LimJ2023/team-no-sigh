@@ -357,6 +357,7 @@ h3{
     bottom: 0px;
 }
 .subscription_button{
+	cursor: pointer;
 	font-size: 35px;
     background-color: #98E8D2;
     position: absolute;
@@ -366,6 +367,7 @@ h3{
     height: 80px;
     bottom: 65px;
     left: 1150px;
+    border: 2px solid #00fdb6;
 }
 
 

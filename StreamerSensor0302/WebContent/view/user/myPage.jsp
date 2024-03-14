@@ -255,15 +255,15 @@
         <!-- end middle -->
         <section class="right">
             <div class="investments">
-                <div class="header">
+                <div class="header" style="color: white;">
                     <h1>순위</h1>
                     <!-- 여기에 스트리머 순위로 넘어가는 페이지 삽입확인 -->
                     <a href="#">more <i class='bx bx-chevron-right'></i></a>
                 </div>
 
-                <div class="investment">
-                    <img src="">
-                    <h4>감스트</h4>
+                <div class="investment" style="color: white;">
+                    <img src="../img/fiveCarousel/streamer_profile_66.png">
+                    <h4>김지섭</h4>
                     <div class="data-time">
                         <p>7 nov, 2021</p>
                         <small class="text-muted">9:14px</small>
@@ -278,9 +278,9 @@
                     </div>
                 </div>
                 <!-- end of investments -->
-                <div class="investment">
-                    <img src="">
-                    <h4>Uniliver</h4>
+                <div class="investment" style="color: white;">
+                    <img src="../img/streamer_profile/streamer_profile_1.png">
+                    <h4>감스트</h4>
                     <div class="data-time">
                         <p>7 nov, 2021</p>
                         <small class="text-muted">9:14px</small>
