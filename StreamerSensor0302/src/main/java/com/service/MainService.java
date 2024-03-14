@@ -250,6 +250,7 @@ public List<Streamer> randomStreamerInfo(){
 	return randomStreamer;
 }
 
+/*
 public List<Video> chzzkTest2(){
 	String chzzkUrl = "https://api.chzzk.naver.com/service/v1/"
 			+ "search/videos?"
@@ -336,30 +337,31 @@ public List<Video> chzzkTest2(){
 	return chzzkVideos2;
 }
 
-/*
-public List<Streamer> totalRandom(){
-	String apiKey = "AIzaSyCuuvr7_KRchH9Mn8atB_S_V_ea2QlMBhM";
-	
-	String urlStr = "https://youtube.googleapis.com/youtube/v3/"
-			+ "videos?part=snippet%2CcontentDetails%2Cstatistics&chart=chartUnspecified"
-			+ "&maxResults=20&"
-			+ "regionCode=KR"
-			+ "&videoCategoryId=20" //게임 카테고리
-			+ "&key="
-			+ apiKey;		
-	
+*/
+
+public List<Video> chzzkTest2(){
+	String chzzkUrl = "https://api.chzzk.naver.com/service/v1/"
+			+ "search/videos?"
+			+ "keyword=game"
+			+ "&offset=0"
+			+ "&size=6"; //50 가능
 	StringBuilder sb = new StringBuilder();
 	
 	try {
-		URL u = new URL(urlStr);
-		URLConnection conn = u.openConnection();
+		URL u = new URL(chzzkUrl);
+		//URLConnection conn = u.openConnection();
+		HttpURLConnection conn = (HttpURLConnection)u.openConnection();
+		int statusCode = conn.getResponseCode();
+		System.out.println("HTTP Status Code: " + statusCode);
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
 		String line;
+		
 		while((line = br.readLine()) != null){
 			sb.append(line + "\n");
 		}
 	} catch (MalformedURLException e) {
+		System.out.println("URL 형식 오류: " + e.getMessage());
 		e.printStackTrace();
 	} catch (IOException e) {
 		System.out.println("IO 예외: " + e.getMessage());
@@ -368,70 +370,137 @@ public List<Streamer> totalRandom(){
 	
 	System.out.println("API 응답: " + sb.toString());
 	
-	List<Streamer> totalRandomStreamer = new ArrayList<>();
-	JSONObject jsonObj = new JSONObject(sb.toString());
-	JSONArray items = jsonObj.getJSONArray("items");
 	
-	for(int i=0; i < items.length(); i++) {
-		JSONObject item = items.getJSONObject(i);
-		String channelId = item.getJSONObject("snippet").getString("channelId");
-		String channelTitle = item.getJSONObject("snippet").getString("channelTitle");
+	List<Video> chzzkVideos2 = new ArrayList<>();
+	
+	
+	try {
+		String responseStr = sb.toString();
+		JSONObject jsonResponse = new JSONObject(responseStr);
+		JSONObject content = jsonResponse.getJSONObject("content");
+		JSONArray data = content.getJSONArray("data");
 		
-		Streamer streamer= new Streamer();
-		streamer.setChannel_id(channelId);
-		streamer.setChannel_title(channelTitle);
-		
-		
-		String urlStr2 = "https://youtube.googleapis.com/youtube/v3/channels"
-				+ "?part=snippet%2CcontentDetails%2Cstatistics"
-				+ "&id="
-				+ channelId
-				+ "&maxResults=5"
-				+ "&key="
-				+ apiKey;
-		
-		StringBuilder sbChannel = new StringBuilder();
-		try {
-			URL u2 = new URL(urlStr2);
-			URLConnection conn2 = u2.openConnection();
+		for(int i = 0; i <data.length(); i++) {
+			JSONObject dataObj = data.getJSONObject(i);
+			JSONObject video = dataObj.getJSONObject("video");
+			String videoTitle = video.getString("videoTitle");
+			int readCount = video.getInt("readCount");
+			String thumbnailImageUrl = video.optString("thumbnailImageUrl", "img/2nd_Person.png");
 			
-			BufferedReader br2 = new BufferedReader(new InputStreamReader(conn2.getInputStream()));
-			String line2;
 			
-			while((line2 = br2.readLine()) != null) {
-				sbChannel.append(line2 + "\n");
-			}
-		
-		
-		JSONObject jsonObjChannel = new JSONObject(sbChannel.toString());
-		JSONArray itemsChannel = jsonObjChannel.getJSONArray("items");
-		
-		if(itemsChannel.length() > 0) {
-			JSONObject itemChannel = itemsChannel.getJSONObject(0);
-			JSONObject statistics = itemChannel.getJSONObject("statistics");
-			long videoCount = statistics.optLong("videoCount", 0);
-			long subscriberCount = statistics.optLong("subscriberCount", 0);
+			JSONObject channel = dataObj.getJSONObject("channel");
+			String channelName = channel.getString("channelName");
+			String channelId = channel.getString("channelId");
+			int videoNo = video.getInt("videoNo");
 			
-			String thumbUrl = itemChannel.getJSONObject("snippet").getJSONObject("thumbnails").getJSONObject("high").getString("url");
-			String customUrl = itemChannel.getJSONObject("snippet").getString("customUrl");
+			Video videoObj = new Video();
 			
-			streamer.setChannel_video_count(videoCount);
-			streamer.setChannel_subscriber_count(subscriberCount);
-			streamer.setThumbnail_url(thumbUrl);
-			streamer.setCustomUrl(customUrl);
+			
+			videoObj.setVideo_title(videoTitle);
+			//video.setThumbnail_url(liveImageUrl);
+			
+			videoObj.setReadCount(readCount);
+			videoObj.setChannelName(channelName);
+			videoObj.setChannelId(channelId);
+			videoObj.setThumbnail_url(thumbnailImageUrl);
+			//videoObj.setChannelImageUrl(channelImageUrl);
+			//String categoryType = video.optString("categoryType", "");
+			videoObj.setVideoNo(videoNo);
+			
+			chzzkVideos2.add(videoObj);
+			
+			
+			
 		}
-		
-		
-	} catch (Exception e) {
+	}catch (JSONException e) {
+		System.out.println("JSON 파싱 오류: " + e.getMessage());
 		e.printStackTrace();
 	}
-		
-		totalRandomStreamer.add(streamer);
-		
-		
-	}
+	
+	 chzzkVideos2.sort((v1, v2) -> Integer.compare(v2.getReadCount(), v1.getReadCount()));
+	
+	 System.out.println("size: "+chzzkVideos2.size() );
+	return chzzkVideos2;
+}
 
-	return totalRandomStreamer;
+/*
+public List<Video> chzzkLive(){
+	String chzzkUrl = "https://api.chzzk.naver.com/service/v1/search/lives"
+			+ "?keyword=game"
+			+ "&offset=0"
+			+ "&size=3"; //50 가능
+	StringBuilder sb = new StringBuilder();
+	
+	try {
+		URL u = new URL(chzzkUrl);
+		//URLConnection conn = u.openConnection();
+		HttpURLConnection conn = (HttpURLConnection)u.openConnection();
+		int statusCode = conn.getResponseCode();
+		System.out.println("HTTP Status Code: " + statusCode);
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+		String line;
+		
+		while((line = br.readLine()) != null){
+			sb.append(line + "\n");
+		}
+	} catch (MalformedURLException e) {
+		System.out.println("URL 형식 오류: " + e.getMessage());
+		e.printStackTrace();
+	} catch (IOException e) {
+		System.out.println("IO 예외: " + e.getMessage());
+		e.printStackTrace();
+	}
+	
+	System.out.println("API 응답: " + sb.toString());
+	
+	
+	List<Video> chzzkLive = new ArrayList<>();
+	
+	
+	try {
+		String responseStr = sb.toString();
+		JSONObject jsonResponse = new JSONObject(responseStr);
+		JSONObject content = jsonResponse.getJSONObject("content");
+		JSONArray data = content.getJSONArray("data");
+		
+		for(int i = 0; i <data.length(); i++) {
+			JSONObject dataObj = data.getJSONObject(i);
+			JSONObject live = dataObj.getJSONObject("live");
+			String videoTitle = live.getString("liveTitle");
+			String thumbnailImageUrl = live.optString("defaultThumbnailImageUrl", "img/2nd_Person.png");
+			
+			int concurrentUserCount = 
+			
+			JSONObject channel = dataObj.getJSONObject("channel");
+			String channelName = channel.getString("channelName");
+			String channelId = channel.getString("channelId");
+			int videoNo = live.getInt("videoNo");
+			
+			Video videoObj = new Video();
+			
+			
+			videoObj.setVideo_title(videoTitle);
+			
+			videoObj.setChannelName(channelName);
+			videoObj.setChannelId(channelId);
+			videoObj.setThumbnail_url(thumbnailImageUrl);
+			videoObj.setVideoNo(videoNo);
+			
+			chzzkLive.add(videoObj);
+			
+			
+			
+		}
+	}catch (JSONException e) {
+		System.out.println("JSON 파싱 오류: " + e.getMessage());
+		e.printStackTrace();
+	}
+	
+	chzzkLive.sort((v1, v2) -> Integer.compare(v2.getReadCount(), v1.getReadCount()));
+	
+	 System.out.println("size: "+chzzkLive.size() );
+	return chzzkLive;
 }*/
 
 }

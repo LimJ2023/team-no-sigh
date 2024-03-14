@@ -144,11 +144,14 @@
 							 <img src="${chzzk.thumbnail_url }" alt=""  class="streamer-box-img"/> 
 							 <div class="box-text"> 
 								<h2 class="streamer-title">${chzzk.video_title }</h2>
-								<span class="streamer-type">${chzzk.readCount }</span>
+								
 							 </div>
 							 </a> 
 						</div>
+					 
 				</c:forEach> 
+				
+				
 				
 			</div>
 		</div>
