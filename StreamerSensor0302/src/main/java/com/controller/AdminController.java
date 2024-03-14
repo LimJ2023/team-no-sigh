@@ -36,7 +36,9 @@ public class AdminController {
 		
 		
 		Admin admin = adminService.getAdmin(adminId);
-		SiteInfo info = adminService.getSiteInfo();
+		int sales = (int)session.getServletContext().getAttribute("totalSales");
+		int visitCount = (int)session.getServletContext().getAttribute("visitorCount");
+		SiteInfo info = adminService.getSiteInfo(sales,visitCount);
 		
 		List<Users> subUsers = usersService.getSubUsers();
 		List<Users> newUsers = usersService.getNewJoinUsers(3);
@@ -44,20 +46,12 @@ public class AdminController {
 		StreamerRating rating = reviewService.getRecentRating();
 		
 		
-		int totalSales = (int)session.getServletContext().getAttribute("totalSales");
-		int dayvisit = (int)session.getServletContext().getAttribute("visitorCount");
-		System.out.println("어드민 컨트롤러의 토탈 세일즈 : " + totalSales);
-		
-		info.setTotalSales(totalSales);
-		info.setDayVisit(dayvisit);
-		
-		
+				
 		model.addAttribute("admin", admin);
 		model.addAttribute("info",info);
 		model.addAttribute("newUsers",newUsers);
 		model.addAttribute("subUsers",subUsers);
 		model.addAttribute("rating",rating);
-		model.addAttribute("totalSales",totalSales);
 		
 		if(adminId == 5) {
 			

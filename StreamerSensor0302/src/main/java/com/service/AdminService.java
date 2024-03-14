@@ -17,8 +17,6 @@ public class AdminService {
 	
 	public Admin getAdmin(int adminId) {
 		
-		
-		
 		Admin admin = dao.getAdminInfo(adminId);
 		
 		if(adminId == 5) {
@@ -31,11 +29,11 @@ public class AdminService {
 		return admin;
 	}
 	
-	
 	public List<Admin> getAllAdmin(){
 		return dao.getAllAdmin();
 	}
-	public SiteInfo getSiteInfo() {
+	
+	public SiteInfo getSiteInfo(int sales, int visitCount) {
 		
 		SiteInfo info1 = new SiteInfo();
 		SiteInfo info2 = new SiteInfo();
@@ -56,9 +54,16 @@ public class AdminService {
 		increase_revenue = (float) compare_total_revenue / info2.getTotal_revenue() * 100;
 		increase_visit = (float) compare_visit_count / info2.getVisit_count() * 100;
 		
-		result_info.setTotal_revenue(info2.getTotal_revenue());
-		result_info.setVisit_count(info2.getVisit_count());
 		
+		int total_revenue = info2.getTotal_revenue();
+		total_revenue += sales;
+		int total_visit = info2.getVisit_count();
+		total_visit += visitCount;
+		result_info.setTotal_revenue(total_revenue);
+		result_info.setVisit_count(total_visit);
+		
+		result_info.setDayVisit(visitCount);
+		result_info.setTotalSales(sales);
 		result_info.setIncrease_revenue( Math.round(increase_revenue * 100.0) / 100.0);
 		result_info.setIncrease_visit(Math.round(increase_visit * 100.0)/ 100.0);
 		

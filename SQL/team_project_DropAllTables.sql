@@ -45,7 +45,7 @@ DROP SEQUENCE preferences_id_seq;
 DROP SEQUENCE visitor_id_seq;
 DROP SEQUENCE streamer_rating_id_seq;
 DROP SEQUENCE delete_streamer_rating_id_seq;
-
+DROP SEQUENCE site_stat_id_seq;
 DROP SEQUENCE test_pref_seq;
 DROP SEQUENCE main_carousel_test_seq;
 

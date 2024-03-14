@@ -38,8 +38,8 @@
 					<div class="status">
 						<div class="info">
 							<h3>총 매출</h3>
-							<h1>누적 : ${info.total_revenue + totalSales} 원</h1>
-							<h1>오늘 : ${totalSales } 원</h1>
+							<h1>누적 : ${info.total_revenue} 원</h1>
+							<h1>오늘 : ${info.totalSales } 원</h1>
 						</div>
 						<div class="progress">
 							<svg>
@@ -55,7 +55,7 @@
 					<div class="status">
 						<div class="info">
 							<h3>사이트 방문수</h3>
-							<h1>누적 : ${info.visit_count + visitorCount} 명</h1>
+							<h1>누적 : ${info.visit_count} 명</h1>
 							<h1>오늘 : ${info.dayVisit } 명</h1>
 						</div>
 						<div class="progress">

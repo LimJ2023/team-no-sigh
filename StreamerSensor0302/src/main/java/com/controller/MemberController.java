@@ -2,6 +2,7 @@ package com.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,10 +54,12 @@ public class MemberController {
 	}
 
 	@GetMapping("/dashBoard")
-	public String dashBoard(Model model) {
+	public String dashBoard(Model model, HttpSession session) {
 		
+		int sales = (int)session.getServletContext().getAttribute("totalSales");
+		int visitCount = (int)session.getServletContext().getAttribute("visitorCount");
 		Admin admin = adminService.getAdmin(0);
-		SiteInfo info = adminService.getSiteInfo();
+		SiteInfo info = adminService.getSiteInfo(sales, visitCount);
 		Users user = uService.getUsers();
 		List<Users> subUsers = uService.getSubUsers();
 		Review review = reviewService.getRecentReview();

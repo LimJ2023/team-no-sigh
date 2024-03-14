@@ -278,5 +278,10 @@ CREATE SEQUENCE delete_streamer_rating_id_seq
     MINVALUE 0
     ORDER
     NOCACHE;
-    
+CREATE SEQUENCE site_stat_id_seq
+    START WITH 7
+    INCREMENT BY 1
+    MINVALUE 0
+    ORDER
+    NOCACHE;
 commit;
