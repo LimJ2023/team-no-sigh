@@ -106,8 +106,10 @@ a{
 }
 
 .memberProfile {
-    text-align: center;
+	width: 500px;
+    text-align: left;
     margin: 10px;
+    padding-left: 100px;
     font-size: 16pt;
     color: var(--color-dark);
 }

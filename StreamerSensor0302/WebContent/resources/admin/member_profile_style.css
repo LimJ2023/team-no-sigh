@@ -103,10 +103,14 @@ a{
 }
 
 .memberProfile {
-    text-align: center;
+    text-align: left;
     margin: 10px;
     font-size: 16pt;
     color: var(--color-dark);
+}
+
+.memberProfile-image{
+	text-align: center;
 }
 
 .memberProfile input{

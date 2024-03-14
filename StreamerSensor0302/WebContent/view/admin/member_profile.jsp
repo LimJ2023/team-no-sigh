@@ -20,7 +20,7 @@
 	<div class="container">
 		<div class="profile-box">
 			<c:if test="${users.user_image != null }">
-				<div class="memberProfile">
+				<div class="memberProfile-image">
 					<img src="img/user_profile/${users.user_image}" width="100%">
 				</div>
 			</c:if>
