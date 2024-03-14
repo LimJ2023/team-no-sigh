@@ -260,6 +260,7 @@ main .user-profile {
     grid-template-columns: repeat(6, 1fr);
     grid-auto-flow: dense;
     gap: 1.6rem;
+    align-items: center;
 }
 
 main .select {
