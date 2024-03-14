@@ -260,8 +260,6 @@ VALUES(board_seq.nextval, '남상우', '산나비 명작인데', '나한테는 �
 insert into board(board_idx, user_id, title, info, board_date, view_count, comment_count, categorys)
 VALUES(board_seq.nextval, '김씨', '김씨표류기에 한장면', '진심으로 그 장면만 보면 짜장면이 먹고 싶어져서 중국집 짜장면 시킴', sysdate, 0, 0, '영화');
 
-select * from board;
-
 ---랭킹 데이터---
 INSERT INTO ranking(ranking_id, rank_date, rank_place, rank_method, streaming_id) VALUES (ranking_id_seq.nextval, '2024-01-09', 1, 'dailyViewers', 1);
 INSERT INTO ranking(ranking_id, rank_date, rank_place, rank_method, streaming_id) VALUES (ranking_id_seq.nextval, '2024-01-09', 1, 'dailyViewers', 12);
@@ -321,7 +319,6 @@ INSERT INTO streaming_preference(avg_viewers, likes, comments, daily_viewers, st
 
 INSERT INTO streamer_rating (comment_id, user_idx, streamer_idx, streamer_rating, rating_comment, streamer_rating_date)
 VALUES(STREAMER_RATING_ID_SEQ.nextval , 5, 5, 5, '나는 기타가 좋아', sysdate);
-
 
 --오전 추가 정보
 INSERT INTO streamer VALUES (streamer_idx_seq.nextval, '게임ZONE', '남', '일반', '오프라인', '유튜브', 50000, 'streamer_profile_12');
@@ -526,5 +523,26 @@ INSERT INTO streaming_preference VALUES(7541, 5021, 842, 10352, 60);
 INSERT INTO streaming_preference VALUES(7102, 4695, 756, 8752, 61);
 INSERT INTO streaming_preference VALUES(5102, 3652, 561, 6210, 62);
 
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval,'감스트 제발 한번만 부탁드립니다', 'http://www.youtube.com', '1시간 27분', 6, '2024-03-15', '감스트', '감스트 제발 한번만 부탁드립니다');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval,'아프리카TV 8년만에 방송 켰습니다', 'http://www.afreecatv.com', '1시간 58분', 6, '2024-03-15', '머독', '아프리카TV 8년만에 방송 켰습니다');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval,'밤에 듣는 노래', 'http://www.youtube.com', '1시간 58분', 2, '2024-03-15', '김지섭', '밤에 듣는 노래');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval,'제발 노래 이거 해줘', 'http://www.youtube.com', '3시간 22분', 2, '2024-03-15', '김지섭팬', '제발 노래 이거 해줘');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval,'이런 노래도 있다', 'http://www.youtube.com', '2시간 12분', 2, '2024-03-15', '짭지섭', '이런 노래도 있다');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval,'야구장 매너', 'http://www.youtube.com', '2시간 08분', 7, '2024-03-15', '업텐션 스포츠', '야구장 매너');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval,'이번 축구 하이라이트', 'http://www.youtube.com', '3시간 15분', 7, '2024-03-15', '스포츠 스트라이커', '이번 축구 하이라이트');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval,'신상 도넛 나왔다', 'http://www.youtube.com', '1시간 25분', 5, '2024-03-15', '간식바이브', '신상 도넛 나왔다');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval,'스파게티 이렇게만 하세요', 'http://www.youtube.com', '0시간 14분', 5, '2024-03-15', '젠지미식', '스파게티 이렇게만 하세요');
+INSERT INTO streaming_info VALUES(streaming_id_seq.nextval,'인자부터 니이름은 춘식이여', 'http://www.youtube.com', '0시간 24분', 1, '2024-03-15', '빅헤드', '인자부터 니이름은 춘식이여');
+
+INSERT INTO streaming_preference VALUES(31300, 20500, 2041, 31200, 63);
+INSERT INTO streaming_preference VALUES(21745, 18962, 1985, 29500, 64);
+INSERT INTO streaming_preference VALUES(147541, 123545, 10071, 223738, 65);
+INSERT INTO streaming_preference VALUES(12975, 11044, 1384, 25321, 66);
+INSERT INTO streaming_preference VALUES(12074, 8557, 1111, 21047, 67);
+INSERT INTO streaming_preference VALUES(11178, 8047, 992, 19147, 68);
+INSERT INTO streaming_preference VALUES(7041, 4821, 741, 10032, 69);
+INSERT INTO streaming_preference VALUES(6802, 4594, 720, 8143, 70);
+INSERT INTO streaming_preference VALUES(6583, 3548, 542, 6023, 71);
+INSERT INTO streaming_preference VALUES(5742, 2598, 357, 6031, 72);
 
 commit;
