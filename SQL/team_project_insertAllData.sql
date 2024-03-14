@@ -260,8 +260,6 @@ VALUES(board_seq.nextval, '남상우', '산나비 명작인데', '나한테는 �
 insert into board(board_idx, user_id, title, info, board_date, view_count, comment_count, categorys)
 VALUES(board_seq.nextval, '김씨', '김씨표류기에 한장면', '진심으로 그 장면만 보면 짜장면이 먹고 싶어져서 중국집 짜장면 시킴', sysdate, 0, 0, '영화');
 
-select * from board;
-
 ---랭킹 데이터---
 INSERT INTO ranking(ranking_id, rank_date, rank_place, rank_method, streaming_id) VALUES (ranking_id_seq.nextval, '2024-01-09', 1, 'dailyViewers', 1);
 INSERT INTO ranking(ranking_id, rank_date, rank_place, rank_method, streaming_id) VALUES (ranking_id_seq.nextval, '2024-01-09', 1, 'dailyViewers', 12);
@@ -321,7 +319,6 @@ INSERT INTO streaming_preference(avg_viewers, likes, comments, daily_viewers, st
 
 INSERT INTO streamer_rating (comment_id, user_idx, streamer_idx, streamer_rating, rating_comment, streamer_rating_date)
 VALUES(STREAMER_RATING_ID_SEQ.nextval , 5, 5, 5, '나는 기타가 좋아', sysdate);
-
 
 --오전 추가 정보
 INSERT INTO streamer VALUES (streamer_idx_seq.nextval, '게임ZONE', '남', '일반', '오프라인', '유튜브', 50000, 'streamer_profile_12');
