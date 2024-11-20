@@ -41,7 +41,7 @@
 						<div class="streamer_box">
 							<img src="img/streamer_profile/${mainFive.streamer_image }.png"
 								class="carImg profileBocchi" />
-							<div class="box_text">
+							<div class="box_text">:
 								<h2 class="streamer_title">${mainFive.streamer_id }</h2>
 								<a href="review?streamer_idx=${mainFive.streamer_idx }">
 									<div class="watch-btn play-btn">
